@@ -17,7 +17,7 @@ async function loadPart(file, target) {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-    loadPart('src/sites/imports/head.html', 'head');
-    loadPart('src/sites/imports/header.html', 'header');
-    loadPart('src/sites/imports/footer.html', 'footer');
+    loadPart('/src/sites/imports/head.html', 'head');
+    loadPart('/src/sites/imports/header.html', 'header');
+    loadPart('/src/sites/imports/footer.html', 'footer');
 });
