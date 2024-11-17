@@ -1,33 +1,23 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Heiko Kerschnitzki</title>
-    <link rel="stylesheet" href="style.css">
+    <script src="loader.js" defer></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            document.querySelector('#page-title').textContent = "Mein Lebenslauf";
+        });
+    </script>
 </head>
 <body>
-    <header>
-        <h1>Willkommen auf meiner Website!</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="projekte.html">Projekte</a></li>
-                <li><a href="lebenslauf.html">Lebenslauf</a></li>
-                <li><a href="kontakt.html">Kontakt</a></li>
-            </ul>
-        </nav>
-    </header>
+    <header></header>
     <main>
-        <section>
-            <h2>Mein Lebenslauf</h2>
-            <p>Aus Datenschutzgründen ist der Genau Lebenslauf Password geschützt.</p>
-            <p>Bei Interesse bitte via <a href="mailto:kerschnitzki.heiko87@gmail.com">E-Mail</a> bei mir melden.</p>
-        </section>
-        <a href="src/lebenslauf.pdf" target="_blank">Lebenslauf</a>
+      <section>
+        <h2>Mein Lebenslauf</h2>
+        <p>Aus Datenschutzgründen ist der Genau Lebenslauf Password geschützt.</p>
+        <p>Bei Interesse bitte via <a href="mailto:kerschnitzki.heiko87@gmail.com">E-Mail</a> bei mir melden.</p>
+    </section>
+    <a href="src/lebenslauf.pdf" target="_blank">Lebenslauf</a>
     </main>
-    <footer>
-        <p>&copy; 2024 Heiko</p>
-    </footer>
+    <footer></footer>
 </body>
 </html>
