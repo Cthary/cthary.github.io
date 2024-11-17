@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lebenslauf</title>
+  <script>
+    if (localStorage.getItem("authenticated") !== "true") {
+        window.location.href = "password-protected.html";
+    }
+</script>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      font-size: 10px;
+      line-height: 1.5;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #f4f4f4;
+      padding: 10px 20px;
+      border-bottom: 2px solid #ccc;
+    }
+
+    header h1 {
+      font-size: 24px;
+      margin: 0;
+      color: #000ba1;
+    }
+
+    nav ul {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      gap: 15px;
+    }
+
+    nav ul li {
+      display: inline;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: #000ba1;
+      font-size: 12px;
+    }
+
+    .contact-info {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin: 20px;
+    }
+
+    .contact-info .text {
+      flex: 1;
+    }
+
+    .contact-info img {
+      width: 150px;
+      height: 200px;
+      object-fit: cover;
+      margin-left: 15px;
+    }
+
+    h2 {
+      color: #6e0099;
+      font-size: 16px;
+      border-bottom: 1px solid #6e0099;
+      margin-top: 20px;
+    }
+
+    h3 {
+      color: #008000;
+      font-size: 14px;
+      margin-top: 15px;
+    }
+
+    ul {
+      margin: 10px 0;
+      padding-left: 20px;
+    }
+
+    li {
+      margin-bottom: 5px;
+    }
+
+    a {
+      color: blue;
+    }
+
+    .page-break {
+      page-break-after: always;
+    }
+
+    footer {
+      text-align: center;
+      margin: 20px 0;
+      font-size: 10px;
+      color: #555;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Lebenslauf</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="projekte.html">Projekte</a></li>
+        <li><a href="lebenslauf.html">Lebenslauf</a></li>
+        <li><a href="kontakt.html">Kontakt</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="contact-info">
+    <div class="text">
+      <h2>Heiko Kerschnitzki</h2>
+      Adresse: Vorm Buchholz 1, 53489 Sinzig<br>
+      Mobil: 01512 8942842<br>
+      E-Mail: <a href="mailto:kerschnitzki.heiko87@gmail.com">kerschnitzki.heiko87@gmail.com</a><br>
+      Geburtsdatum: 01.08.1987 in Andernach<br>
+      Familienstand: Ledig<br>
+      Staatsangehörigkeit: Deutsch
+    </div>
+    <img src="src\this.png" alt="Mein Bewerbungsfoto">
+  </div>
+
+  <div class="section">
+    <h2>* Beruflicher Werdegang</h2>
+    <h3>07/2022 – Aktuell: Fachinformatiker für Anwendungsentwicklung</h3>
+    <p><strong>CISS TDI GmbH</strong>, 53489 Sinzig</p>
+    <ul>
+      <li>Entwicklung und Wartung einer Java-basierten Applikation zur Auftragsverwaltung</li>
+      <li>Implementierung einer selbstentwickelten PHP-API zur Integration mit GeoShop</li>
+      <li>Dockerisierung der Anwendung zur Skalierbarkeit</li>
+    </ul>
+
+    <h3>07/2012 – 04/2015: Versandmitarbeiter</h3>
+    <p><strong>Amazon Koblenz GmbH</strong>, 56330 Kobern-Gondorf</p>
+    <ul>
+      <li>Mitarbeitereinteilung</li>
+      <li>Packen & Versenden</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2>* Ausbildung</h2>
+    <h3>08/2019 – 07/2022: Ausbildung als Fachinformatiker</h3>
+    <p><strong>CISS TDI GmbH</strong>, 53489 Sinzig</p>
+    <ul>
+      <li>Abschluss: Fachinformatiker für Anwendungsentwicklung</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2>* Besondere Kenntnisse</h2>
+    <ul>
+      <li>Programmiersprachen: Java, Python, PHP</li>
+      <li>Datenbanken: MySQL, MariaDB</li>
+      <li>Docker, Git, CI/CD</li>
+    </ul>
+  </div>
+
+  <div class="page-break"></div>
+
+  <div class="section">
+    <h2>* Persönliche Stärken</h2>
+    <ul>
+      <li>Teamarbeit</li>
+      <li>Problemlösungskompetenz</li>
+      <li>Flexibilität</li>
+    </ul>
+  </div>
+
+  <footer>
+    <p>&copy; 2024 Heiko Kerschnitzki. Alle Rechte vorbehalten.</p>
+  </footer>
+</body>
+</html>
