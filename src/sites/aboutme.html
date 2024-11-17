@@ -11,12 +11,30 @@
     <header></header>
     <main>
         <section>
-            <h2>Erreiche mich</h2>
+            <h2>Heiko Kerschnitzki</h2>
             <ul>
-                <li><a href="mailto:kerschnitzki.heiko87@gmail.com">E-Mail senden</a></li>
-                <li><a href="https://github.com/Cthary">GitHub</a></li>
-                <li><a href="https://www.linkedin.com/in/heiko-kerschnitzki-10854a237/">LinkedIn</a></li>
+                <li id="age"></li>
+                <li>Fachinformatiker für Anwendungsentwicklung</li>
             </ul>
+            <script>
+                const birthDate = new Date("1987-08-01");
+                const today = new Date();
+
+                const calculateAge = (birthDate, today) => {
+                let age = today.getFullYear() - birthDate.getFullYear();
+                const isBirthdayPassed = 
+                    today.getMonth() > birthDate.getMonth() || 
+                    (today.getMonth() === birthDate.getMonth() && today.getDate() >= birthDate.getDate());
+
+                if (!isBirthdayPassed) {
+                    age -= 1;
+                }
+                return age;
+                };
+
+                const age = calculateAge(birthDate, today);
+                document.getElementById("age").textContent = `${age} Jahre alt`;
+            </script>
         </section>
     </main>
     <footer></footer>
