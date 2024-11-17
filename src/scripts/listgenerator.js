@@ -1,61 +1,93 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const armyContainer = document.getElementById('army-container');
+    const tabsContainer = document.getElementById('tabs-container');
+    const contentContainer = document.getElementById('content-container');
 
-    // Lade die Indexdatei mit der neuen Struktur
     fetch('/src/files/armylists/index.json')
         .then(response => response.json())
         .then(data => {
-            // Iteriere über die Armeelisten in der Indexdatei
-            Object.values(data).forEach(army => {
-                const armyDiv = document.createElement('div');
-                armyDiv.classList.add('army');
+            const armiesByFaction = groupArmiesByFaction(data);
 
-                // Basisinformationen aus der Indexdatei anzeigen
-                armyDiv.innerHTML = `
-                    <h2>${army.name}</h2>
-                    <p>Fraktion: ${army.faction}</p>
-                    <p>Detachment: ${army.detachment}</p>
-                    <p>Größe: ${army.size} Punkte</p>
-                `;
-
-                // Lade die spezifische Armee-JSON und füge Details hinzu
-                fetch(`/src/files/armylists/${army.path}`)
-                    .then(response => response.json())
-                    .then(rosterData => renderArmyDetails(rosterData, armyDiv))
-                    .catch(error => console.error(`Fehler beim Laden von ${army.path}:`, error));
-
-                armyContainer.appendChild(armyDiv);
+            Object.keys(armiesByFaction).forEach(faction => {
+                const factionTab = createFactionTab(faction, armiesByFaction[faction]);
+                tabsContainer.appendChild(factionTab);
             });
+
+            if (Object.keys(armiesByFaction).length > 0) {
+                const firstFaction = Object.keys(armiesByFaction)[0];
+                const firstDetachment = armiesByFaction[firstFaction][0];
+                loadArmyDetails(firstDetachment.path, contentContainer);
+            }
         })
-        .catch(error => console.error('Fehler beim Laden der Indexdatei:', error));
+        .catch(error => console.error('Fehler beim Laden der Armeeliste:', error));
 });
 
-// Funktion zum Rendern von Armee-Details
-function renderArmyDetails(data, container) {
-    const forces = data.roster.forces;
+function groupArmiesByFaction(data) {
+    const grouped = {};
+    Object.values(data).forEach(army => {
+        if (!grouped[army.faction]) {
+            grouped[army.faction] = [];
+        }
+        grouped[army.faction].push(army);
+    });
+    return grouped;
+}
 
-    forces.forEach(force => {
-        const forceDiv = document.createElement('div');
-        forceDiv.classList.add('force');
+function createFactionTab(faction, armies) {
+    const tab = document.createElement('div');
+    tab.classList.add('tab');
 
-        // Liste der Einheiten
-        const unitList = document.createElement('ul');
-        force.selections.forEach(selection => {
-            if (selection.type === 'model' || selection.type === 'unit') {
-                const unitItem = document.createElement('li');
-                const costs = selection.costs.find(cost => cost.name === 'pts')?.value || 0;
+    const title = document.createElement('h2');
+    title.textContent = faction;
+    tab.appendChild(title);
 
-                unitItem.innerHTML = `
-                    <strong>${selection.name}</strong> (Punkte: ${costs})
-                    <ul>
-                        ${selection.selections.map(opt => `<li>${opt.name}</li>`).join('')}
-                    </ul>
-                `;
-                unitList.appendChild(unitItem);
-            }
+    const detachmentList = document.createElement('ul');
+    armies.forEach(army => {
+        const detachmentItem = document.createElement('li');
+        detachmentItem.textContent = army.Detachment;
+
+        detachmentItem.addEventListener('click', () => {
+            const contentContainer = document.getElementById('content-container');
+            contentContainer.innerHTML = '';
+            loadArmyDetails(army.path, contentContainer);
         });
 
-        forceDiv.appendChild(unitList);
-        container.appendChild(forceDiv);
+        detachmentList.appendChild(detachmentItem);
     });
+
+    tab.appendChild(detachmentList);
+    return tab;
+}
+
+function loadArmyDetails(filePath, container) {
+    fetch(`/src/files/armylists/${filePath}`)
+        .then(response => response.json())
+        .then(data => {
+            const roster = data.roster;
+            const forces = roster.forces;
+
+            forces.forEach(force => {
+                const forceDiv = document.createElement('div');
+                forceDiv.classList.add('force');
+
+                const unitList = document.createElement('ul');
+                force.selections.forEach(selection => {
+                    if (selection.type === 'model' || selection.type === 'unit') {
+                        const unitItem = document.createElement('li');
+                        const costs = selection.costs.find(cost => cost.name === 'pts')?.value || 0;
+
+                        unitItem.innerHTML = `
+                            <strong>${selection.name}</strong> (Punkte: ${costs})
+                            <ul>
+                                ${selection.selections.map(opt => `<li>${opt.name}</li>`).join('')}
+                            </ul>
+                        `;
+                        unitList.appendChild(unitItem);
+                    }
+                });
+
+                forceDiv.appendChild(unitList);
+                container.appendChild(forceDiv);
+            });
+        })
+        .catch(error => console.error(`Fehler beim Laden von ${filePath}:`, error));
 }
