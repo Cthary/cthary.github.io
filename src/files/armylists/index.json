@@ -12,5 +12,12 @@
         "size": 2000,
         "faction": "Blood Angels",
         "detachment": "Liberator Assault Group"
+    },
+    "2": {
+        "name": "Lictor ? Hardly know her !",
+        "path": "Lictor_Hardly_know_her.json",
+        "size": 2000,
+        "faction": "Tyranids",
+        "detachment": "Invasion Fleet"
     }
 }
