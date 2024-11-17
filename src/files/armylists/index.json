@@ -1,1 +1,16 @@
-["BA_ThriceNaught.json"]
+{
+    "0": {
+        "name": "BA ThriceNaught",
+        "path": "BA_ThriceNaught.json",
+        "size": 2000,
+        "faction": "Blood Angels",
+        "detachment": "Liberator Assault Group"
+    },
+    "1": {
+        "name": "Moe Event",
+        "path": "Moe_Event.json",
+        "size": 2000,
+        "faction": "Blood Angels",
+        "detachment": "Liberator Assault Group"
+    }
+}

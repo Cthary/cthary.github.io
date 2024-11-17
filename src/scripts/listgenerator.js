@@ -1,42 +1,50 @@
 document.addEventListener('DOMContentLoaded', () => {
     const armyContainer = document.getElementById('army-container');
 
-    // Lade die Indexdatei mit der Liste aller JSON-Dateien
+    // Lade die Indexdatei mit der neuen Struktur
     fetch('/src/files/armylists/index.json')
         .then(response => response.json())
-        .then(files => {
-            files.forEach(file => {
-                fetch(`/src/files/armylists/${file}`)
+        .then(data => {
+            // Iteriere über die Armeelisten in der Indexdatei
+            Object.values(data).forEach(army => {
+                const armyDiv = document.createElement('div');
+                armyDiv.classList.add('army');
+
+                // Basisinformationen aus der Indexdatei anzeigen
+                armyDiv.innerHTML = `
+                    <h2>${army.name}</h2>
+                    <p>Fraktion: ${army.faction}</p>
+                    <p>Detachment: ${army.detachment}</p>
+                    <p>Größe: ${army.size} Punkte</p>
+                `;
+
+                // Lade die spezifische Armee-JSON und füge Details hinzu
+                fetch(`/src/files/armylists/${army.path}`)
                     .then(response => response.json())
-                    .then(data => renderArmyList(data, armyContainer))
-                    .catch(error => console.error(`Fehler beim Verarbeiten von ${file}:`, error));
+                    .then(rosterData => renderArmyDetails(rosterData, armyDiv))
+                    .catch(error => console.error(`Fehler beim Laden von ${army.path}:`, error));
+
+                armyContainer.appendChild(armyDiv);
             });
         })
-        .catch(error => console.error('Fehler beim Abrufen der Indexdatei:', error));
+        .catch(error => console.error('Fehler beim Laden der Indexdatei:', error));
 });
 
-// Funktion, um eine Armee-Liste zu rendern
-function renderArmyList(data, container) {
-    const roster = data.roster;
-    const forces = roster.forces;
+// Funktion zum Rendern von Armee-Details
+function renderArmyDetails(data, container) {
+    const forces = data.roster.forces;
 
     forces.forEach(force => {
         const forceDiv = document.createElement('div');
         forceDiv.classList.add('force');
 
-        // Fraktion und Detachment
-        const detachmentName = force.selections.find(sel => sel.type === 'upgrade')?.name || 'Unbekannt';
-        forceDiv.innerHTML = `
-            <h3>Fraktion: ${force.categories.find(cat => cat.name.startsWith('Faction'))?.name || 'Unbekannt'}</h3>
-            <p>Detachment: ${detachmentName}</p>
-        `;
-
-        // Einheitenübersicht
+        // Liste der Einheiten
         const unitList = document.createElement('ul');
         force.selections.forEach(selection => {
             if (selection.type === 'model' || selection.type === 'unit') {
                 const unitItem = document.createElement('li');
                 const costs = selection.costs.find(cost => cost.name === 'pts')?.value || 0;
+
                 unitItem.innerHTML = `
                     <strong>${selection.name}</strong> (Punkte: ${costs})
                     <ul>
