@@ -12,6 +12,28 @@ header {
     text-align: center;
 }
 
+sub-header {
+    background: #34004d;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+}
+
+sub-header ul {
+    list-style: none;
+    padding: 0;
+}
+
+sub-header ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+sub-header ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
 header ul {
     list-style: none;
     padding: 0;
