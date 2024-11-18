@@ -1,23 +1,47 @@
-async function loadPart(file, target) {
-    const response = await fetch(file);
-    if (response.ok) {
-        const content = await response.text();
-        if (target === 'head') {
-            // Parse and append head content
-            const tempDiv = document.createElement('div');
-            tempDiv.innerHTML = content;
-            const headElements = tempDiv.querySelectorAll('link, meta, title, script, style');
-            headElements.forEach((el) => document.head.appendChild(el));
-        } else {
-            document.querySelector(target).innerHTML = content;
-        }
-    } else {
-        console.error(`Error loading ${file}:`, response.status);
-    }
-}
+document.addEventListener("DOMContentLoaded", () => {
+    const header = document.getElementById("main-header");
+    const currentPath = window.location.pathname;
 
-document.addEventListener('DOMContentLoaded', () => {
-    loadPart('/src/sites/imports/head.html', 'head');
-    loadPart('/src/sites/imports/header.html', 'header');
-    loadPart('/src/sites/imports/footer.html', 'footer');
+    // Hauptnavigation einfügen
+    header.innerHTML = `
+        <nav>
+            <ul>
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="/src/sites/projekte.html">Projekte</a></li>
+                <li><a href="/src/sites/lebenslauf.html">Lebenslauf</a></li>
+                <li><a href="/src/sites/kontakt.html">Kontakt</a></li>
+                <li><a href="/src/sites/armylists.html">Warhammer 40k Armee-Listen</a></li>
+            </ul>
+        </nav>
+        <div class="sub-header">
+            <nav>
+                <ul id="sub-menu"></ul>
+            </nav>
+        </div>
+    `;
+
+    // Subheader-Inhalte basierend auf der Seite
+    const subMenu = document.getElementById("sub-menu");
+    const subHeaderContent = {
+        "/src/sites/armylists/bloodangels.html": [
+            { name: "Blood Angels", link: "/src/sites/armylists/bloodangels.html" },
+            { name: "Tyranids", link: "/src/sites/armylists/tyranids.html" },
+        ],
+        "/src/sites/armylists/tyranids.html": [
+            { name: "Blood Angels", link: "/src/sites/armylists/bloodangels.html" },
+            { name: "Tyranids", link: "/src/sites/armylists/tyranids.html" },
+        ]
+    };
+
+    const items = subHeaderContent[currentPath];
+    if (items) {
+        items.forEach(item => {
+            const li = document.createElement("li");
+            const a = document.createElement("a");
+            a.href = item.link;
+            a.textContent = item.name;
+            li.appendChild(a);
+            subMenu.appendChild(li);
+        });
+    }
 });
