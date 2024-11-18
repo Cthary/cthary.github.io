@@ -1,8 +1,10 @@
 <!DOCTYPE html>
 <html lang="de">
+
 <head>
     <script src="/src/scripts/loader.js" defer></script>
 </head>
+
 <body>
     <header></header>
     <main>
@@ -17,15 +19,15 @@
                 const today = new Date();
 
                 const calculateAge = (birthDate, today) => {
-                let age = today.getFullYear() - birthDate.getFullYear();
-                const isBirthdayPassed = 
-                    today.getMonth() > birthDate.getMonth() || 
-                    (today.getMonth() === birthDate.getMonth() && today.getDate() >= birthDate.getDate());
+                    let age = today.getFullYear() - birthDate.getFullYear();
+                    const isBirthdayPassed =
+                        today.getMonth() > birthDate.getMonth() ||
+                        (today.getMonth() === birthDate.getMonth() && today.getDate() >= birthDate.getDate());
 
-                if (!isBirthdayPassed) {
-                    age -= 1;
-                }
-                return age;
+                    if (!isBirthdayPassed) {
+                        age -= 1;
+                    }
+                    return age;
                 };
 
                 const age = calculateAge(birthDate, today);
@@ -35,4 +37,5 @@
     </main>
     <footer></footer>
 </body>
+
 </html>

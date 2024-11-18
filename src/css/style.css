@@ -28,7 +28,7 @@ header ul li a {
 }
 
 footer {
-    background: #47003e;
+    background: #34004d;
     color: #fff;
     text-align: center;
     padding: 3px 0;
@@ -57,9 +57,9 @@ main {
 }
 
 .heading-secondary {
-    color: #6e0099;
+    color: #34004d;
     font-size: 16px;
-    border-bottom: 1px solid #6e0099;
+    border-bottom: 1px solid #34004d;
 }
 
 .text-muted {
