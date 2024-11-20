@@ -27,6 +27,11 @@ header ul li a {
     text-decoration: none;
 }
 
+body {
+    color: #fff;
+    background-color: #0a0027;
+  }
+
 footer {
     background: #34004d;
     color: #fff;
