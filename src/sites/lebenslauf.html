@@ -11,7 +11,12 @@
         <section>
             <h2>Mein Lebenslauf</h2>
             <p>Aus Datenschutzgründen ist der Genau Lebenslauf Passwort geschützt.</p>
-            <p>Bei Interesse bitte via <a href="mailto:kerschnitzki.heiko87@gmail.com">E-Mail</a> bei mir melden.</p>
+            <p>Bei Interesse bitte via   <a href="#" id="email-link">E-Mail</a>
+                <script>
+                  document.getElementById('email-link').addEventListener('click', function () {
+                    window.location.href = "mailto:" + "kerschnitzki.heiko87" + "@" + "gmail.com";
+                  });
+                </script> bei mir melden.</p>
         </section>
         <a href="/src/files/lebenslauf.pdf" target="_blank">Lebenslauf</a>
     </main>
