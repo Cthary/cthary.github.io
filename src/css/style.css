@@ -27,11 +27,6 @@ header ul li a {
     text-decoration: none;
 }
 
-body {
-    color: #fff;
-    background-color: #252525;
-  }
-
 footer {
     background: #34004d;
     color: #fff;
@@ -44,7 +39,7 @@ footer {
 
 main {
     color: #fff;
-    background-color: #0e0027;
+    background-color: #252525;
     padding: 20px;
 }
 
