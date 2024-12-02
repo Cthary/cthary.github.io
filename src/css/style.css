@@ -67,3 +67,12 @@ main {
 .text-muted {
     color: #555555;
 }
+
+.text-center {
+    text-align: center;
+}
+
+.fixed-width {
+    width: 300px;
+    margin: 0 auto;
+}
