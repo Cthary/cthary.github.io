@@ -15,6 +15,7 @@
     <div id="app"></div>
     <script type="module">
         import dice40k from './dice40k.js';
+
         document.getElementById('fileInput').addEventListener('change', event => {
             const file = event.target.files[0];
 
@@ -25,8 +26,21 @@
                     try {
                         const jsonData = JSON.parse(e.target.result);
                         console.log(jsonData); // Process the JSON data here
+
+                        const processedData = dice40k(jsonData);
                         document.getElementById('output').textContent = 'JSON successfully loaded!';
-                        document.getElementById('app').innerHTML = `<pre>${JSON.stringify(dice40k(jsonData), null, 4)}</pre>`;
+                        document.getElementById('app').innerHTML = `<pre>${JSON.stringify(processedData, null, 4)}</pre>`;
+
+                        // Create a new window with the JSON content
+                        const jsonBlob = new Blob([JSON.stringify(processedData, null, 4)], { type: 'application/json' });
+                        const jsonURL = URL.createObjectURL(jsonBlob);
+                        const newWindow = window.open();
+                        if (newWindow) {
+                            newWindow.document.write(`<pre>${JSON.stringify(processedData, null, 4)}</pre>`);
+                        } else {
+                            alert('Pop-up blocked! Please allow pop-ups to view the JSON.');
+                        }
+
                     } catch (error) {
                         console.error('Error parsing JSON:', error);
                         document.getElementById('output').textContent = 'Invalid JSON file.';
