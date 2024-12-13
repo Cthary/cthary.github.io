@@ -28,8 +28,7 @@
                         console.log(jsonData); // Process the JSON data here
 
                         const processedData = dice40k(jsonData);
-                        document.getElementById('output').textContent = 'JSON successfully loaded!';
-                        document.getElementById('app').innerHTML = `<pre>${JSON.stringify(processedData, null, 4)}</pre>`;
+                        document.getElementById('output').textContent = 'JSON successfully loaded! Please Reload this Page for a new Upload.';
 
                         // Create a new window with the JSON content
                         const jsonBlob = new Blob([JSON.stringify(processedData, null, 4)], { type: 'application/json' });
