@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Homepage</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css">
+    <script src="https://unpkg.com/vue@3"></script>
+</head>
+
+<body>
+    <input type="file" id="fileInput" accept=".json">
+    <div id="output"></div>
+    <div id="app"></div>
+    <script type="module">
+        import dice40k from './dice40k.js';
+        document.getElementById('fileInput').addEventListener('change', event => {
+            const file = event.target.files[0];
+
+            if (file && file.type === "application/json") {
+                const reader = new FileReader();
+
+                reader.onload = e => {
+                    try {
+                        const jsonData = JSON.parse(e.target.result);
+                        console.log(jsonData); // Process the JSON data here
+                        document.getElementById('output').textContent = 'JSON successfully loaded!';
+                        document.getElementById('app').innerHTML = `<pre>${JSON.stringify(dice40k(jsonData), null, 4)}</pre>`;
+                    } catch (error) {
+                        console.error('Error parsing JSON:', error);
+                        document.getElementById('output').textContent = 'Invalid JSON file.';
+                    }
+                };
+
+                reader.readAsText(file);
+            } else {
+                document.getElementById('output').textContent = 'Please upload a valid JSON file.';
+            }
+        });
+    </script>
+</body>
+
+</html>
