@@ -197,7 +197,7 @@ function start(jsonData) {
         jsonData = {"json": "data"};
     }
 
-    let amount = 1;
+    let amount = 100;
 
     let jsonResult = {}
 
