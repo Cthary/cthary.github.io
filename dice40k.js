@@ -75,7 +75,7 @@ function rollWounds(hits, weapon, defender) {
     return { wounds, damage };
 }
 
-function rollHits(weapon) {
+function rollHits(weapon, defender) {
     let hits = 0;
     let wounds = 0;
     let attacks = weapon["attacks"];
@@ -86,6 +86,10 @@ function rollHits(weapon) {
 
     if (keywords.includes("+1 hit")) {
         toHit -= 1;
+    }
+
+    if (keywords.includes("blast")) {
+        attacks = attacks + Math.floor(defender["models"] / 5);
     }
 
     if (attacks.match(/(\d+)d(\d+)/i)) {
@@ -221,7 +225,7 @@ function start(jsonData) {
                 let totalDamage = 0;
                 for (let i = 0; i < amount; i++) {
                     const weapon = attacker["weapons"][weaponKey];
-                    const hitResult = rollHits(weapon);
+                    const hitResult = rollHits(weapon, defender);
                     totalHits += hitResult.hits;
                     const woundResult = rollWounds(hitResult.hits, weapon, defender);
                     totalWounds += (woundResult.wounds + hitResult.wounds);

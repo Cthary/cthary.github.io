@@ -1,0 +1,89 @@
+{
+    "Attackers": {
+        "1": {
+            "name": "10 Attacker Dummies",
+            "weapons": {
+                "Heavy Bolt Pistol": {
+                    "attacks": 1,
+                    "to_hit": 3,
+                    "strength": 4,
+                    "ap": 1,
+                    "damage": 1,
+                    "amount": 10,
+                    "Keywords": [
+                        "HRMiss"
+                    ]
+                },
+                "Power Fist": {
+                    "attacks": 5,
+                    "to_hit": 3,
+                    "strength": 10,
+                    "ap": 2,
+                    "damage": 2,
+                    "amount": 10,
+                    "Keywords": [
+                        "HRMiss",
+                        "lance",
+                        "lethal hits",
+                        "devastating wounds"
+                    ]
+                }
+            }
+        },        
+        "2": {
+            "name": "5 Tank Dummies",
+            "weapons": {
+                "Lascannon": {
+                    "attacks": 2,
+                    "to_hit": 3,
+                    "strength": 12,
+                    "ap": 3,
+                    "damage": "D6+1",
+                    "amount": 5,
+                    "Keywords": [
+                        "HRMiss"
+                    ]
+                },
+                "Missile Launcher Frag": {
+                    "attacks": "2D6",
+                    "to_hit": 3,
+                    "strength": 10,
+                    "ap": 0,
+                    "damage": 1,
+                    "amount": 5,
+                    "Keywords": [
+                        "HRMiss",
+                        "lance",
+                        "lethal hits",
+                        "devastating wounds",
+                        "blast"
+                    ]
+                }
+            }
+        }
+    },
+    "Defenders": {
+        "1": {
+            "name": "Target Dummy 1",
+            "toughness": 5,
+            "wounds": 4,
+            "models": 5,
+            "save": 2,
+            "invulnerable": 4,
+            "Keywords": [
+                "-1 dmg"
+            ]
+        },
+        "2": {
+            "name": "Target Dummy 2",
+            "toughness": 5,
+            "wounds": 4,
+            "models": 5,
+            "save": 2,
+            "invulnerable": 4,
+            "Keywords": [
+                
+            ]
+        }
+    }
+}
