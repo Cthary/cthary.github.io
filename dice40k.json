@@ -31,7 +31,7 @@
             }
         },        
         "2": {
-            "name": "5 Tank Dummies",
+            "name": "Tank Dummy",
             "weapons": {
                 "Lascannon": {
                     "attacks": 2,
@@ -39,7 +39,7 @@
                     "strength": 12,
                     "ap": 3,
                     "damage": "D6+1",
-                    "amount": 5,
+                    "amount": 1,
                     "Keywords": [
                         "HRMiss"
                     ]
@@ -50,7 +50,7 @@
                     "strength": 10,
                     "ap": 0,
                     "damage": 1,
-                    "amount": 5,
+                    "amount": 1,
                     "Keywords": [
                         "HRMiss",
                         "lance",

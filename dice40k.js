@@ -79,8 +79,24 @@ function rollHits(weapon, defender) {
     let hits = 0;
     let wounds = 0;
     let attacks = weapon["attacks"];
-    attacks = attacks * weapon["amount"];
-    attacks = attacks.toString();
+    if (Number.isInteger(attacks)) {
+        attacks = attacks.toString();
+    }
+    if (attacks.includes("D")) {
+        attacks = attacks.split("D");
+        let dice = parseInt(attacks[0]) * weapon["amount"];
+        console.log("Dice", dice);
+        let sides = parseInt(attacks[1]);
+        console.log("Sides", sides);
+        attacks = 0;
+        for (let i = 0; i < dice; i++) {
+            attacks += rollDice(sides);
+        } 
+        console.log("Attacks", attacks);       
+    } else {
+        attacks = attacks * weapon["amount"];
+    }
+    //attacks = attacks.toString();
     let toHit = weapon["to_hit"];
     let keywords = weapon["Keywords"];
 
@@ -89,13 +105,7 @@ function rollHits(weapon, defender) {
     }
 
     if (keywords.includes("blast")) {
-        attacks = attacks + Math.floor(defender["models"] / 5);
-    }
-
-    if (attacks.match(/(\d+)d(\d+)/i)) {
-        attacks = parseAndRollDice(attacks);
-    } else if (/^\d+$/.test(attacks)) {
-        attacks = parseInt(attacks);
+        attacks = parseInt(attacks) + Math.floor(defender['models'] / 5);
     }
 
     let rolls = [];
@@ -201,7 +211,7 @@ function start(jsonData) {
         jsonData = {"json": "data"};
     }
 
-    let amount = 100;
+    let amount = 1;
 
     let jsonResult = {}
 
