@@ -206,7 +206,13 @@ function damage(damage, weapon, defender) {
             if (dice === 0 || isNaN(dice)) {
                 dice = 1;
             }
-            let sides = parseInt(weaponDamages[1]);
+            let sides = weaponDamages[1];
+            let bonus = 0;
+            if (sides.includes("+")) {
+                sides = sides.split("+");
+                bonus = parseInt(sides[1]);
+                sides = parseInt(sides[0]);
+            }
             weaponDamage = 0;
             for (let i = 0; i < dice; i++) {
                 weaponDamage += rollDice(sides);
