@@ -85,14 +85,11 @@ function rollHits(weapon, defender) {
     if (attacks.includes("D")) {
         attacks = attacks.split("D");
         let dice = parseInt(attacks[0]) * weapon["amount"];
-        console.log("Dice", dice);
         let sides = parseInt(attacks[1]);
-        console.log("Sides", sides);
         attacks = 0;
         for (let i = 0; i < dice; i++) {
             attacks += rollDice(sides);
-        } 
-        console.log("Attacks", attacks);       
+        }      
     } else {
         attacks = attacks * weapon["amount"];
     }
