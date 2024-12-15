@@ -197,8 +197,20 @@ function savingThrow(wounds, weapon, defender) {
 function damage(damage, weapon, defender) {
     let keywordsWeapon = weapon["Keywords"];
     let keywordsDefender = defender["Keywords"];
-    let weaponDamage = parseAndRollDice(weapon["damage"]);
-    
+    let weaponDamage = weapon["damage"];
+
+    if (weaponDamage.includes("D")) {
+        let weaponDamages = weaponDamage.split("D");
+        let dice = parseInt(weaponDamages[0]) 
+        if (dice === 0 || isNaN(dice)) {
+            dice = 1;
+        }
+        let sides = parseInt(weaponDamages[1]);
+        for (let i = 0; i < dice; i++) {
+            weaponDamage += rollDice(sides);
+        }      
+    }
+
     if (keywordsWeapon.includes("+1 damage")) {
         weaponDamage += 1;
     }
