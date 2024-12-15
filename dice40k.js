@@ -47,8 +47,8 @@ function rollWounds(hits, weapon, defender) {
     }
 
     if (keywords.includes("WRMiss")) {
-        rolls = rolls.filter((roll) => roll >= toHit).concat(
-            rolls.filter((roll) => roll < toHit).map(() => rollDice())
+        rolls = rolls.filter((roll) => roll >= toWound).concat(
+            rolls.filter((roll) => roll < toWound).map(() => rollDice())
         );
     } else if (keywords.includes("WR1")) {
         rolls = rolls.filter((roll) => roll !== 1).concat(
