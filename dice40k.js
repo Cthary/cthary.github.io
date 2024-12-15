@@ -7,14 +7,16 @@ function parseAndRollDice(input) {
         return parseInt(input);
     }
 
-    const match = input.match(/(\d+)d(\d+)/i);
+    const match = input.match(/(\d+)d(\d+)([+-]\d+)?/i);
     if (!match) {
         return null;
     }
-    const [_, count, sides] = match;
-    return Array.from({ length: parseInt(count) }, () =>
+    const [_, count, sides, modifier] = match;
+    const baseRoll = Array.from({ length: parseInt(count) }, () =>
         rollDice(parseInt(sides))
     ).reduce((total, num) => total + num, 0);
+    
+    return baseRoll + (modifier ? parseInt(modifier) : 0);
 }
 
 function rollWounds(hits, weapon, defender) {
