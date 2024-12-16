@@ -15,7 +15,7 @@ function parseAndRollDice(input) {
     const baseRoll = Array.from({ length: parseInt(count) }, () =>
         rollDice(parseInt(sides))
     ).reduce((total, num) => total + num, 0);
-    
+
     return baseRoll + (modifier ? parseInt(modifier) : 0);
 }
 
@@ -81,24 +81,10 @@ function rollHits(weapon, defender) {
     let hits = 0;
     let wounds = 0;
     let attacks = weapon["attacks"];
-    if (Number.isInteger(attacks)) {
-        attacks = attacks.toString();
-    }
-    if (attacks.includes("D")) {
-        attacks = attacks.split("D");
-        let dice = parseInt(attacks[0]) 
-        if (dice === 0 || isNaN(dice)) {
-            dice = 1;
-        }
-        dice = dice * weapon["amount"];
-        let sides = parseInt(attacks[1]);
-        attacks = 0;
-        for (let i = 0; i < dice; i++) {
-            attacks += rollDice(sides);
-        }      
-    } else {
-        attacks = attacks * weapon["amount"];
-    }
+
+    attacks = parseD(attacks);
+    attacks = attacks * weapon["amount"];
+
     //attacks = attacks.toString();
     let toHit = weapon["to_hit"];
     let keywords = weapon["Keywords"];
@@ -130,7 +116,15 @@ function rollHits(weapon, defender) {
         );
     }
 
-    const sustainedHitsMatch = keywords.find((keyword) => keyword.startsWith("sustained hits"))?.match(/sustained hits (\d+)/);
+    const sustainedHitsMatch = keywords
+        .find((keyword) => keyword.startsWith("sustained hits"))
+        ?.match(/sustained hits (\d+|D\d+)/);
+
+    let sustainedAmount = 0;
+    if (sustainedHitsMatch) {
+        const value = sustainedHitsMatch[1];
+        sustainedAmount = parseD(value);
+    }
 
     for (const roll of rolls) {
         if (roll >= toHit) {
@@ -142,7 +136,7 @@ function rollHits(weapon, defender) {
                 wounds++;
             }
             if (sustainedHitsMatch) {
-                hits += parseInt(sustainedHitsMatch[1]);
+                hits += parseInt(sustainedAmount);
             }
         }
     }
@@ -157,17 +151,23 @@ function savingThrow(wounds, weapon, defender) {
     let keywordsDefender = defender["Keywords"];
     let ap = weapon["ap"];
 
-    if(keywordsWeapon.includes("-1 ap")) {
+    if (keywordsWeapon.includes("-1 ap")) {
         ap -= 1;
+    }
+
+    if (keywordsWeapon.includes("+1 ap / infantry")) {
+        if (defender["type"] === "infantry") {
+            ap += 1;
+        }
     }
 
     if (keywordsDefender.includes("cover")) {
         let tempAp = ap - 1;
-        if (save - tempAp >= 3){
+        if (save - tempAp >= 3) {
             ap = tempAp;
         }
     }
-    
+
     if (keywordsWeapon.includes("-1 save")) {
         save -= 1;
     }
@@ -177,7 +177,7 @@ function savingThrow(wounds, weapon, defender) {
     }
 
     save = save + ap;
-    if(save > invulnerableSave) {
+    if (save > invulnerableSave) {
         save = invulnerableSave;
     }
 
@@ -194,18 +194,15 @@ function savingThrow(wounds, weapon, defender) {
     return failedSaves;
 }
 
-function damage(damage, weapon, defender) {
-    let keywordsWeapon = weapon["Keywords"];
-    let keywordsDefender = defender["Keywords"];
-    let weaponDamage = weapon["damage"];
-
-    if (typeof weaponDamage === "string") {
-        if (weaponDamage.includes("D")) {
-            let weaponDamages = weaponDamage.split("D");
-            let dice = parseInt(weaponDamages[0]) || 1;
-            let sidesAndBonus = weaponDamages[1];
+function parseD(value) {
+    let result = 0;
+    if (typeof value === "string") {
+        if (value.includes("D")) {
+            let valueArray = value.split("D");
+            let dice = parseInt(valueArray[0]) || 1;
+            let sidesAndBonus = valueArray[1];
             let sides, bonus = 0;
-    
+
             if (sidesAndBonus.includes("+")) {
                 let parts = sidesAndBonus.split("+");
                 sides = parseInt(parts[0]);
@@ -213,15 +210,25 @@ function damage(damage, weapon, defender) {
             } else {
                 sides = parseInt(sidesAndBonus);
             }
-    
-            weaponDamage = 0;
-            for (let i = 0; i < dice; i++) {
-                weaponDamage += rollDice(sides);
-            }
-            weaponDamage += bonus; // Add the bonus after rolling dice
-        }
-    }
 
+           
+            for (let i = 0; i < dice; i++) {
+                result += rollDice(sides);
+            }
+            result += bonus;
+        } 
+    } else {
+        result = value;
+    }
+    return result;
+}
+
+function damage(weapon, defender) {
+    let keywordsWeapon = weapon["Keywords"];
+    let keywordsDefender = defender["Keywords"];
+    let weaponDamage = weapon["damage"];
+
+    weaponDamage = parseD(weaponDamage);
 
     if (keywordsWeapon.includes("+1 damage")) {
         weaponDamage += 1;
@@ -230,12 +237,12 @@ function damage(damage, weapon, defender) {
         weaponDamage -= 1;
     }
 
-    return damage * weaponDamage;
+    return weaponDamage;
 }
 
 function start(jsonData) {
-    if(jsonData == null) {
-        jsonData = {"json": "data"};
+    if (jsonData == null) {
+        jsonData = { "json": "data" };
     }
 
     let amount = jsonData["amount"] ?? 100;
@@ -260,6 +267,12 @@ function start(jsonData) {
                 let totalWounds = 0;
                 let totalFailedSaves = 0;
                 let totalDamage = 0;
+
+
+                const maxWounds = defender["wounds"];
+                let kills = 0;
+                let tmpDamage = 0;
+
                 for (let i = 0; i < amount; i++) {
                     const weapon = attacker["weapons"][weaponKey];
                     const hitResult = rollHits(weapon, defender);
@@ -268,7 +281,14 @@ function start(jsonData) {
                     totalWounds += (woundResult.wounds + hitResult.wounds);
                     const failedSaves = savingThrow((woundResult.wounds + hitResult.wounds), weapon, defender);
                     totalFailedSaves += failedSaves;
-                    const damageResult = damage((failedSaves + woundResult.damage), weapon, defender);
+                    const damageResult = damage(weapon, defender);
+                    for (let woundingAttack in (woundResult.wounds + hitResult.damage)) {
+                        tmpDamage += damageResult;
+                        if (tmpDamage >= maxWounds) {
+                            kills++;
+                            tmpDamage = 0;
+                        }
+                    }
                     totalDamage += damageResult;
                 }
 
@@ -279,17 +299,6 @@ function start(jsonData) {
                     "Damage": totalDamage / amount
                 };
                 overallDamage.push(totalDamage / amount);
-            }
-
-            const maxWounds = defender["wounds"];
-            let kills = 0;
-            let tmpDamage = 0;
-            for (let dmg in overallDamage) {
-                tmpDamage += overallDamage[dmg];
-                if (tmpDamage >= maxWounds) {
-                    kills++;
-                    tmpDamage = 0;
-                }
             }
             defenderJsonResult['Kills'] = kills;
             attackerJsonResult[defender["name"]] = defenderJsonResult;
