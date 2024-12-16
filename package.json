@@ -1,0 +1,13 @@
+{
+  "name": "cthary.github.io",
+  "version": "1.0.0",
+  "description": "Welcome to my GitHub Pages site!",
+  "main": "dice40k.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "mocha"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
