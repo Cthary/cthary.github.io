@@ -199,24 +199,26 @@ function damage(damage, weapon, defender) {
     let keywordsDefender = defender["Keywords"];
     let weaponDamage = weapon["damage"];
 
-    if (weaponDamage instanceof String) {
+    if (typeof weaponDamage === "string") {
         if (weaponDamage.includes("D")) {
             let weaponDamages = weaponDamage.split("D");
-            let dice = parseInt(weaponDamages[0]) 
-            if (dice === 0 || isNaN(dice)) {
-                dice = 1;
+            let dice = parseInt(weaponDamages[0]) || 1;
+            let sidesAndBonus = weaponDamages[1];
+            let sides, bonus = 0;
+    
+            if (sidesAndBonus.includes("+")) {
+                let parts = sidesAndBonus.split("+");
+                sides = parseInt(parts[0]);
+                bonus = parseInt(parts[1]);
+            } else {
+                sides = parseInt(sidesAndBonus);
             }
-            let sides = weaponDamages[1];
-            let bonus = 0;
-            if (sides.includes("+")) {
-                sides = sides.split("+");
-                bonus = parseInt(sides[1]);
-                sides = parseInt(sides[0]);
-            }
+    
             weaponDamage = 0;
             for (let i = 0; i < dice; i++) {
                 weaponDamage += rollDice(sides);
-            }      
+            }
+            weaponDamage += bonus; // Add the bonus after rolling dice
         }
     }
 
