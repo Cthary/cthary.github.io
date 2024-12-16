@@ -3,11 +3,18 @@
   "version": "1.0.0",
   "description": "Welcome to my GitHub Pages site!",
   "main": "dice40k.js",
-  "devDependencies": {},
+  "devDependencies": {
+    "ava": "^6.2.0"
+  },
   "scripts": {
     "test": "mocha"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "ava": {
+    "extensions": [
+        "js"
+    ]
+}
 }
