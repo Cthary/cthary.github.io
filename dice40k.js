@@ -268,11 +268,9 @@ function start(jsonData) {
                 let totalWounds = 0;
                 let totalFailedSaves = 0;
                 let totalDamage = 0;
-
-
                 const maxWounds = defender["wounds"];
                 let tmpDamage = 0;
-
+                let tmpWounds = 0;
                 for (let i = 0; i < amount; i++) {
                     const weapon = attacker["weapons"][weaponKey];
                     const hitResult = rollHits(weapon, defender);
@@ -283,12 +281,15 @@ function start(jsonData) {
                     totalFailedSaves += failedSaves;
                     const damageResult = damage(weapon, defender);
                     for (let woundingAttack in (woundResult.wounds + hitResult.damage)) {
+                        tmpDamage += tmpWounds;
+                        tmpWounds = 0;
                         tmpDamage += damageResult;
                         if (tmpDamage >= maxWounds) {
                             kills++;
                             tmpDamage = 0;
                         }
                     }
+                    tmpWounds = tmpDamage;
                     totalDamage += damageResult;
                 }
 
