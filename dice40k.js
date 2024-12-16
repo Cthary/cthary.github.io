@@ -256,6 +256,7 @@ function start(jsonData) {
         const attacker = attackers[attackerIndex];
         let attackerJsonResult = {}
         for (const defenderIndex in defenders) {
+            let kills = 0;
             const defender = defenders[defenderIndex];
             let defenderJsonResult = {
                 "Kills": 0,
@@ -270,7 +271,6 @@ function start(jsonData) {
 
 
                 const maxWounds = defender["wounds"];
-                let kills = 0;
                 let tmpDamage = 0;
 
                 for (let i = 0; i < amount; i++) {
