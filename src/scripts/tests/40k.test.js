@@ -277,7 +277,3 @@ test('Simulator.createResults', (t) => {
     t.true(results.Target[0].MaximumModels === 5);
     t.true(results.Target[0].Weapons.length === 1);
 });
-
-test('Run', (t) => {
-
-});
