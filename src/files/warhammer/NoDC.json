@@ -1,0 +1,270 @@
+{
+    "amount": 100,
+    "Attackers": [
+        {
+            "Name": "Commander Dante & 6 Sanguinary Guard",
+            "Weapons": [
+                {
+                    "name": "Perdition",
+                    "type": "R",
+                    "attacks": 1,
+                    "to_hit": 2,
+                    "strength": 9,
+                    "ap": 4,
+                    "damage": "D6+2",
+                    "amount": 1,
+                    "Keywords": [
+                        "sustained hits D3"
+                    ]
+                },
+                {
+                    "name": "Angelus Boltgun",
+                    "type": "R",
+                    "attacks": 2,
+                    "to_hit": 3,
+                    "strength": 4,
+                    "ap": 0,
+                    "damage": 1,
+                    "amount": 6,
+                    "Keywords": [
+                        "+1 hit"
+                    ]
+                },
+                {
+                    "name": "The Axe Mortalis",
+                    "type": "M",
+                    "attacks": 8,
+                    "to_hit": 2,
+                    "strength": 8,
+                    "ap": 3,
+                    "damage": 2,
+                    "amount": 1,
+                    "Keywords": [
+                        "BA Charge",
+                        "lethal hits"
+                    ]
+                },
+                {
+                    "name": "Encarmine Blade",
+                    "type": "M",
+                    "attacks": 4,
+                    "to_hit": 3,
+                    "strength": 6,
+                    "ap": 3,
+                    "damage": 2,
+                    "amount": 6,
+                    "Keywords": [
+                        "BA Charge",
+                        "+1 hit"
+                    ]
+                }
+            ]
+        },
+        {
+            "Name": "Commander Dante & 6 Sanguinary Guard (OoM)",
+            "Weapons": [
+                {
+                    "name": "Perdition",
+                    "type": "R",
+                    "attacks": 1,
+                    "to_hit": 2,
+                    "strength": 9,
+                    "ap": 4,
+                    "damage": "D6+2",
+                    "amount": 1,
+                    "Keywords": [
+                        "sustained hits D3",
+                        "HRMiss"
+                    ]
+                },
+                {
+                    "name": "Angelus Boltgun",
+                    "type": "R",
+                    "attacks": 2,
+                    "to_hit": 3,
+                    "strength": 4,
+                    "ap": 0,
+                    "damage": 1,
+                    "amount": 6,
+                    "Keywords": [
+                        "+1 hit",
+                        "HRMiss"
+                    ]
+                },
+                {
+                    "name": "The Axe Mortalis",
+                    "type": "M",
+                    "attacks": 8,
+                    "to_hit": 2,
+                    "strength": 8,
+                    "ap": 3,
+                    "damage": 2,
+                    "amount": 1,
+                    "Keywords": [
+                        "BA Charge",
+                        "lethal hits",
+                        "HRMiss"
+                    ]
+                },
+                {
+                    "name": "Encarmine Blade",
+                    "type": "M",
+                    "attacks": 4,
+                    "to_hit": 3,
+                    "strength": 6,
+                    "ap": 3,
+                    "damage": 2,
+                    "amount": 6,
+                    "Keywords": [
+                        "BA Charge",
+                        "+1 hit",
+                        "HRMiss"
+                    ]
+                }
+            ]
+        },
+        {
+            "Name": "Commander Dante & 6 Sanguinary Guard (RR)",
+            "Weapons": [
+                {
+                    "name": "Perdition",
+                    "type": "R",
+                    "attacks": 1,
+                    "to_hit": 2,
+                    "strength": 9,
+                    "ap": 4,
+                    "damage": "D6+2",
+                    "amount": 1,
+                    "Keywords": [
+                        "sustained hits D3",
+                        "lethal hits"
+                    ]
+                },
+                {
+                    "name": "Angelus Boltgun",
+                    "type": "R",
+                    "attacks": 2,
+                    "to_hit": 3,
+                    "strength": 4,
+                    "ap": 0,
+                    "damage": 1,
+                    "amount": 6,
+                    "Keywords": [
+                        "+1 hit",
+                        "lethal hits"
+                    ]
+                },
+                {
+                    "name": "The Axe Mortalis",
+                    "type": "M",
+                    "attacks": 8,
+                    "to_hit": 2,
+                    "strength": 8,
+                    "ap": 3,
+                    "damage": 2,
+                    "amount": 1,
+                    "Keywords": [
+                        "BA Charge",
+                        "lethal hits",
+                        "lance"
+                    ]
+                },
+                {
+                    "name": "Encarmine Blade",
+                    "type": "M",
+                    "attacks": 4,
+                    "to_hit": 3,
+                    "strength": 6,
+                    "ap": 3,
+                    "damage": 2,
+                    "amount": 6,
+                    "Keywords": [
+                        "BA Charge",
+                        "+1 hit",
+                        "lance",
+                        "lethal hits"
+                    ]
+                }
+            ]
+        },
+        {
+            "Name": "Commander Dante & 6 Sanguinary Guard (OoM & RR)",
+            "Weapons": [
+                {
+                    "name": "Perdition",
+                    "type": "R",
+                    "attacks": 1,
+                    "to_hit": 2,
+                    "strength": 9,
+                    "ap": 4,
+                    "damage": "D6+2",
+                    "amount": 1,
+                    "Keywords": [
+                        "sustained hits D3",
+                        "HRMiss",
+                        "lethal hits"
+                    ]
+                },
+                {
+                    "name": "Angelus Boltgun",
+                    "type": "R",
+                    "attacks": 2,
+                    "to_hit": 3,
+                    "strength": 4,
+                    "ap": 0,
+                    "damage": 1,
+                    "amount": 6,
+                    "Keywords": [
+                        "+1 hit",
+                        "HRMiss",
+                        "lethal hits"
+                    ]
+                },
+                {
+                    "name": "The Axe Mortalis",
+                    "type": "M",
+                    "attacks": 8,
+                    "to_hit": 2,
+                    "strength": 8,
+                    "ap": 3,
+                    "damage": 2,
+                    "amount": 1,
+                    "Keywords": [
+                        "BA Charge",
+                        "lethal hits",
+                        "HRMiss",
+                        "lance"
+                    ]
+                },
+                {
+                    "name": "Encarmine Blade",
+                    "type": "M",
+                    "attacks": 4,
+                    "to_hit": 3,
+                    "strength": 6,
+                    "ap": 3,
+                    "damage": 2,
+                    "amount": 6,
+                    "Keywords": [
+                        "BA Charge",
+                        "+1 hit",
+                        "HRMiss",
+                        "lance",
+                        "lethal hits"
+                    ]
+                }
+            ]
+        }
+    ],
+    "Defenders": [
+        {
+            "Name": "Test Dummy",
+            "toughness": 5,
+            "wounds": 4,
+            "models": 5,
+            "save": 2,
+            "invulnerable": 4,
+            "Keywords": []
+        }
+    ]
+}

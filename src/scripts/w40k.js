@@ -300,9 +300,11 @@ function run(jsonData) {
     const jsonParser = new JsonParser(jsonData);
     const defenders = jsonParser.getDefenders();
     let results = [];
+    let amount = jsonParser.json["Amount"] || 100;
     for (let i = 0; i < jsonParser.json["Attackers"].length; i++) {
         const attacker = jsonParser.getAttacker(i);
-        const simulator = new Simulator(1);
+
+        const simulator = new Simulator(amount);
         let result = simulator.createResults(attacker, defenders, 1);
         console.log(result);
         results.push(result);
