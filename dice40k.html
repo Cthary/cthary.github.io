@@ -72,7 +72,7 @@
     });
 </script>
 <script type="module">
-    import dice40k from './dice40k.js';
+    import w40k from './src/scripts/w40k.js';
     document.getElementById('fileInput').addEventListener('change', event => {
         const file = event.target.files[0];
 
@@ -84,7 +84,7 @@
                     const jsonData = JSON.parse(e.target.result);
                     console.log(jsonData); // Process the JSON data here
 
-                    const processedData = dice40k(jsonData);
+                    const processedData = w40k(jsonData);
                     document.getElementById('output').textContent = 'JSON successfully loaded! Please Reload this Page for a new Upload.';
 
                     // Create a new window with the JSON content

@@ -14,7 +14,8 @@
   "license": "ISC",
   "ava": {
     "extensions": [
-        "js"
+      "js"
     ]
-}
+  },
+  "type": "module"
 }

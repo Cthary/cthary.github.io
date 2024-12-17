@@ -25,7 +25,9 @@ export class Dice {
                     result += this.roll(sides);
                 }
                 result += bonus;
-            } 
+            } else {
+                result = parseInt(value);
+            }
         } else {
             result = value;
         }
