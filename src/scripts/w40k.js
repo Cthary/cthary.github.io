@@ -63,7 +63,7 @@ export class Calculator {
         for (const roll of rolls) {
             if (roll >= to_hit) {
                 hits++;
-                if (roll === 6 || keywords.includes("improved crit")) {
+                if (roll === 6 || roll === 5 && weapon.betterCrits) {
                     if (weapon.sustainedHits) {
                         let sustainedHits = dice.parseAndRoll(weapon.sustainedHits);
                         hits += sustainedHits;
