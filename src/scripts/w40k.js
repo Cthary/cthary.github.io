@@ -183,22 +183,17 @@ export class Simulator {
     const hitRolls = calculator.rollDice(weapon.attacks, 1, []);
     const hitResult = calculator.hits(weapon, defender, hitRolls);
 
-    // WOUND phase
-    const woundRolls = calculator.rollDice(hitResult.hits, 1, []);
-    const woundResult = calculator.wounds(weapon, defender, woundRolls);
+    const woundResult = calculator.wounds(weapon, defender, hitResult.hits);
 
-    // SAVE phase
-    const saveRolls = calculator.rollDice(woundResult.wounds, 1, []);
-    const saveResult = calculator.saves(weapon, defender, saveRolls);
+    const saveResult = calculator.saves(weapon, defender, woundResult.wounds);
 
-    // DAMAGE phase
     const damageArray = [];
     for (let i = 0; i < saveResult.failedSaves; i++) {
-        const damageRoll = calculator.rollDice(1, 1, [])[0]; // one roll per failed save
-        const damage = calculator.damage(weapon, defender, damageRoll);
+        const damage = calculator.damage(weapon, defender);
         damageArray.push(damage);
     }
-
+    damageArray.push(woundResult.damage);
+        
     return [{
         hits: hitResult.hits,
         wounds: woundResult.wounds,
