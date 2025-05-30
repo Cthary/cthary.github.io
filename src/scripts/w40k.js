@@ -284,7 +284,7 @@ export class Simulator {
                     "Hits": parsedResults.hits,
                     "Wounds": parsedResults.wounds,
                     "FailedSaves": parsedResults.failedSaves,
-                    //"Damage": parsedResults.damage,
+                    "Damage": parsedResults.damage,
                 });
             }
             result.Target.push(target);
