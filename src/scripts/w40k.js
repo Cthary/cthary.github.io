@@ -177,33 +177,35 @@ export class Simulator {
     }
 
     simulateOne(weapon, defender) {
-        let results = [];
-        let calculator = new Calculator([weapon], [defender]);
-        let rolls = calculator.rollDice(weapon.attacks, 1, []);
-        let hits = calculator.hits(weapon, defender, rolls);
-        rolls = calculator.rollDice(hits.hits, 1, []);
-        let wounds = calculator.wounds(weapon, defender, rolls);
-        rolls = calculator.rollDice(wounds.wounds, 1, []);
-        for (let j = 0; j < hits.wounds; j++) {
-            rolls.push(calculator.rollDice(1, 1, [])[0]);
-        }
-        let saves = calculator.saves(weapon, defender, rolls);
-        rolls = calculator.rollDice(saves.failedSaves, 1, []);
-        for (let j = 0; j < wounds.damage; j++) {
-            rolls.push(calculator.rollDice(1, 1, [])[0]);
-        }
-        let damageArray = [];
-        for (let roll of rolls) {
-            damageArray.push(calculator.damage(weapon, defender));
-        }
-        results.push({
-            "hits": hits.hits,
-            "wounds": wounds.wounds,
-            "failedSaves": saves.failedSaves,
-            "damage": damageArray
-        });
-        return results;
+    const calculator = new Calculator([weapon], [defender]);
+
+    // HIT phase
+    const hitRolls = calculator.rollDice(weapon.attacks, 1, []);
+    const hitResult = calculator.hits(weapon, defender, hitRolls);
+
+    // WOUND phase
+    const woundRolls = calculator.rollDice(hitResult.hits, 1, []);
+    const woundResult = calculator.wounds(weapon, defender, woundRolls);
+
+    // SAVE phase
+    const saveRolls = calculator.rollDice(woundResult.wounds, 1, []);
+    const saveResult = calculator.saves(weapon, defender, saveRolls);
+
+    // DAMAGE phase
+    const damageArray = [];
+    for (let i = 0; i < saveResult.failedSaves; i++) {
+        const damageRoll = calculator.rollDice(1, 1, [])[0]; // one roll per failed save
+        const damage = calculator.damage(weapon, defender, damageRoll);
+        damageArray.push(damage);
     }
+
+    return [{
+        hits: hitResult.hits,
+        wounds: woundResult.wounds,
+        failedSaves: saveResult.failedSaves,
+        damage: damageArray
+    }];
+}
 
     simulateAmount(weapon, defender, amount) {
         let results = [];
