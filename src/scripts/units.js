@@ -69,6 +69,6 @@ export class Weapon {
 
         this.lethalHits = this.Keywords.includes("lethal hits");
         this.devastatingWounds = this.Keywords.includes("devastating wounds");
-        
+        this.betterCrits = this.Keywords.includes("better crits");
     }
 }
