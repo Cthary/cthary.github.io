@@ -192,6 +192,7 @@ export class Simulator {
         let wounds = calculator.wounds(weapon, defender, this.createNewRolls(hits.hits));
         let saves = calculator.saves(weapon, defender, this.createNewRolls(wounds.wounds + hits.wounds));
         let damage = saves.failedSaves + wounds.damage
+        let damageArray = [];
         for (let i = 0; i < damage; i++) {
             damageArray.push(calculator.damage(weapon, defender));
         }
