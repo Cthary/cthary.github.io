@@ -182,9 +182,9 @@ export class Simulator {
     // HIT phase
     const hitRolls = calculator.rollDice(weapon.attacks, 1, []);
     const hitResult = calculator.hits(weapon, defender, hitRolls);
-    let rolls = createNewResults(hitResult.hits);
+    let rolls = this.createNewResults(hitResult.hits);
     const woundResult = calculator.wounds(weapon, defender, rolls);
-    rolls = createNewResults(woundResult.wounds);
+    rolls = this.createNewResults(woundResult.wounds);
     const saveResult = calculator.saves(weapon, defender, rolls);
     damageArray.push(woundResult.damage);
         
