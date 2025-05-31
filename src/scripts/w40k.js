@@ -37,7 +37,7 @@ export class Calculator {
         let toHit = weapon.to_hit;
         const dice = new Dice();
 
-        if (defender.Keywords.includes("-1 hit")) {
+        if (Array.isArray(defender.Keywords) && defender.Keywords.includes("-1 hit")) {
             toHit += 1;
         }
 
