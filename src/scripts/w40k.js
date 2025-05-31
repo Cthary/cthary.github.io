@@ -24,27 +24,31 @@ export class Calculator {
             let roll = dice.roll();
             rolls.push(roll);
         }
-        return rolls;
+        return this.rerollDice(rolls, toBeat, keywords);
     }
 
     rerollDice(rolls, toBeat, keywords) {
-        if (keywords.some(keyword => keyword.endsWith("RMiss"))) {
+        if (keywords === "miss") {
             rolls = rolls.filter((roll) => roll >= toBeat).concat(
                 rolls.filter((roll) => roll < toBeat).map(() => this.rollDice(1, toBeat, keywords)[0])
             );
-        } else if (keywords.some(keyword => keyword.endsWith("R1"))) {
+        } else if (keywords === "1") {
             rolls = rolls.filter((roll) => roll !== 1).concat(
                 rolls.filter((roll) => roll === 1).map(() => this.rollDice(1, toBeat, keywords)[0])
             );
-        } else if (keywords.some(keyword => keyword.endsWith("RCrit"))) {
+        } else if (keywords === "crit6") {
             rolls = rolls.filter((roll) => roll === 6).concat(
                 rolls.filter((roll) => roll !== 6).map(() => this.rollDice(1, toBeat, keywords)[0])
+            );
+        } else if (keywords === "crit5") {
+            rolls = rolls.filter((roll) => roll >= 5).concat(
+                rolls.filter((roll) => roll < 5).map(() => this.rollDice(1, toBeat, keywords)[0])
             );
         }
         return rolls;
     }
 
-    hits(weapon, defender, rolls) {
+    hits(weapon, defender) {
         let hits = 0;
         let wounds = 0;
         let attacks = weapon.attacks;
@@ -55,11 +59,24 @@ export class Calculator {
             "wounds": 0
         };
 
+
         if (defender.Keywords.includes("-1 hit")) {
             to_hit += 1;
         }
         const dice = new Dice();
-        rolls = this.rerollDice(rolls, to_hit, keywords);
+        let reroll = "";
+        if(weapon.Keywords.includes("HR1")){
+            reroll = "1";
+        } else if(weapon.Keywords.includes("HRMiss")){
+            reroll = "miss";
+        } else if(weapon.Keywords.includes("HRCrit")){
+            if(weapon.Keywords.includes("better crits")){
+                reroll = "crit5";
+            } else {
+                reroll = "crit6";
+            }
+        }
+        let rolls = this.rollDice(rolls, to_hit, reroll);
         for (const roll of rolls) {
             if (roll >= to_hit) {
                 hits++;
@@ -106,7 +123,15 @@ export class Calculator {
             toWound -= 1;
         }
 
-        rolls = this.rerollDice(rolls, toWound, keywords);
+        let reroll = "";
+        if(weapon.Keywords.includes("WR1")){
+            reroll = "1";
+        } else if(weapon.Keywords.includes("WRMiss")){
+            reroll = "miss";
+        } else if(weapon.Keywords.includes("WRCrit")){
+                reroll = "crit6";
+        }
+        rolls = this.rerollDice(rolls, toWound, reroll);
         for (const roll of rolls) {
             if (keywords.includes("WOUND")) {
                 wounds++;
@@ -187,8 +212,7 @@ export class Simulator {
     simulateOne(weapon, defender) {
         let results = [];
         let calculator = new Calculator([weapon], [defender]);
-        let rolls = calculator.rollDice(weapon.attacks, 1, []);
-        let hits = calculator.hits(weapon, defender, rolls);
+        let hits = calculator.hits(weapon, defender);
         let wounds = calculator.wounds(weapon, defender, this.createNewRolls(hits.hits));
         let saves = calculator.saves(weapon, defender, this.createNewRolls(wounds.wounds + hits.wounds));
         let damage = saves.failedSaves + wounds.damage
