@@ -176,13 +176,21 @@ export class Simulator {
         this.amount = amount;
     }
 
+    createNewRolls(rolls) {
+        let result = [];
+        for (let i = 0; o < rolls; i++) {
+            result.push(1);
+        }
+        return result;
+    } 
+
     simulateOne(weapon, defender) {
         let results = [];
         let calculator = new Calculator([weapon], [defender]);
         let rolls = calculator.rollDice(weapon.attacks, 1, []);
         let hits = calculator.hits(weapon, defender, rolls);
-        let wounds = calculator.wounds(weapon, defender, hits.hits);
-        let saves = calculator.saves(weapon, defender, wounds.wounds + hits.wounds);
+        let wounds = calculator.wounds(weapon, defender, this.createNewRolls(hits.hits));
+        let saves = calculator.saves(weapon, defender, this.createNewRolls(wounds.wounds + hits.wounds));
         let damage = saves.failedSaves + wounds.damage
         for (let i = 0; o < damage; i++) {
             damageArray.push(calculator.damage(weapon, defender));
