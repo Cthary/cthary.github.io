@@ -200,7 +200,7 @@ export class Simulator {
             "hits": hits.hits,
             "wounds": wounds.wounds,
             "failedSaves": saves.failedSaves,
-            //"damage": damageArray
+            "damage": damageArray
         });
         return results;
     }
@@ -287,7 +287,7 @@ export class Simulator {
                     "Hits": parsedResults.hits,
                     "Wounds": parsedResults.wounds,
                     "FailedSaves": parsedResults.failedSaves,
-                    "Damage": parsedResults.damage,
+                    //"Damage": parsedResults.damage,
                 });
             }
             result.Target.push(target);
