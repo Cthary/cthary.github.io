@@ -200,7 +200,7 @@ export class Simulator {
             "hits": hits.hits,
             "wounds": wounds.wounds,
             "failedSaves": saves.failedSaves,
-            "damage": damageArray
+            //"damage": damageArray
         });
         return results;
     }
