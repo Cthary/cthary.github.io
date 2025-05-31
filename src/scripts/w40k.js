@@ -178,7 +178,7 @@ export class Simulator {
 
     createNewRolls(rolls) {
         let result = [];
-        for (let i = 0; o < rolls; i++) {
+        for (let i = 0; i < rolls; i++) {
             result.push(1);
         }
         return result;
@@ -192,7 +192,7 @@ export class Simulator {
         let wounds = calculator.wounds(weapon, defender, this.createNewRolls(hits.hits));
         let saves = calculator.saves(weapon, defender, this.createNewRolls(wounds.wounds + hits.wounds));
         let damage = saves.failedSaves + wounds.damage
-        for (let i = 0; o < damage; i++) {
+        for (let i = 0; i < damage; i++) {
             damageArray.push(calculator.damage(weapon, defender));
         }
         results.push({
