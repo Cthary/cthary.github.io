@@ -1,5 +1,6 @@
 import { Attacker, Defender, Weapon } from './units.js';
 import { Dice } from './dice.js';
+import { JsonParser } from './jsonparser.js';
 
 export class Calculator {
     constructor(attackers, defenders) {
