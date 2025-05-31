@@ -181,19 +181,10 @@ export class Simulator {
         let calculator = new Calculator([weapon], [defender]);
         let rolls = calculator.rollDice(weapon.attacks, 1, []);
         let hits = calculator.hits(weapon, defender, rolls);
-        rolls = calculator.rollDice(hits.hits, 1, []);
-        let wounds = calculator.wounds(weapon, defender, rolls);
-        rolls = calculator.rollDice(wounds.wounds, 1, []);
-        for (let j = 0; j < hits.wounds; j++) {
-            rolls.push(calculator.rollDice(1, 1, [])[0]);
-        }
-        let saves = calculator.saves(weapon, defender, rolls);
-        rolls = calculator.rollDice(saves.failedSaves, 1, []);
-        for (let j = 0; j < wounds.damage; j++) {
-            rolls.push(calculator.rollDice(1, 1, [])[0]);
-        }
-        let damageArray = [];
-        for (let roll of rolls) {
+        let wounds = calculator.wounds(weapon, defender, hits.hits);
+        let saves = calculator.saves(weapon, defender, wounds.wounds + hits.wounds);
+        let damage = saves.failedSaves + wounds.damage
+        for (let i = 0; o < damage; i++) {
             damageArray.push(calculator.damage(weapon, defender));
         }
         results.push({
@@ -305,7 +296,7 @@ function run(jsonData) {
         const attacker = jsonParser.getAttacker(i);
 
         const simulator = new Simulator(amount);
-        let result = simulator.createResults(attacker, defenders, 1);
+        let result = simulator.createResults(attacker, defenders, amount);
         console.log(result);
         results.push(result);
     }
