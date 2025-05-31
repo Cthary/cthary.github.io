@@ -190,7 +190,7 @@ function run(jsonData) {
         const attacker = jsonParser.getAttacker(i);
 
         const simulator = new Simulator(amount);
-        let result = simulator.createResults(attacker, defenders, amount);
+        let result = simulator.simulateAmount(attacker, defenders);
         console.log(result);
         results.push(result);
     }
