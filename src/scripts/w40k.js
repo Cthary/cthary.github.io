@@ -22,10 +22,10 @@ export class Calculator {
     }
 
     rerollDice(rolls, toBeat, keywords) {
-        if (keywords.includes("RerollHits")) {
+        if (Array.isArray(keywords) && keywords.includes("RerollHits")) {
             return rolls.map(roll => (roll < toBeat ? new Dice().roll() : roll));
         }
-        if (keywords.includes("Reroll1s")) {
+        if (Array.isArray(keywords) && keywords.includes("Reroll1s")) {
             return rolls.map(roll => (roll === 1 ? new Dice().roll() : roll));
         }
         return rolls;
@@ -76,7 +76,7 @@ export class Calculator {
             toWound = 5;
         }
 
-        if (weapon.Keywords.includes("+1 wound") || weapon.Keywords.includes("lance")) {
+        if (Array.isArray(weapon.Keywords) && (weapon.Keywords.includes("+1 wound") || weapon.Keywords.includes("lance"))) {
             toWound -= 1;
         }
 
@@ -100,8 +100,8 @@ export class Calculator {
         let save = defender.save;
         let ap = weapon.ap;
 
-        if (defender.Keywords.includes("-1 ap")) ap = Math.max(0, ap - 1);
-        if (weapon.Keywords.includes("+1 ap")) ap++;
+        if (Array.isArray(defender.Keywords) && defender.Keywords.includes("-1 ap")) ap = Math.max(0, ap - 1);
+        if (Array.isArray(weapon.Keywords) && weapon.Keywords.includes("+1 ap")) ap++;
 
         save += ap;
         if (defender.invulnerable && defender.invulnerable < save) {
@@ -120,7 +120,7 @@ export class Calculator {
     damage(weapon, defender) {
         const dice = new Dice();
         let dmg = dice.parseAndRoll(weapon.damage);
-        if (defender.Keywords.includes("-1 dmg")) dmg = Math.max(1, dmg - 1);
+        if (Array.isArray(defender.Keywords) && defender.Keywords.includes("-1 dmg")) dmg = Math.max(1, dmg - 1);
         return dmg;
     }
 }
