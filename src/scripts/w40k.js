@@ -194,7 +194,7 @@ export class Simulator {
         failedSaves: saveResult.failedSaves,
         damage: damageArray
     }];
-}
+    }
 
     createNewResults(amount) {
         const damageArray = [];
