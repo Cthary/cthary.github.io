@@ -30,9 +30,7 @@
   "author": "Warhammer 40k Battle Simulator Team",
   "license": "MIT",
   "devDependencies": {
-    "c8": "^8.0.1",
-    "eslint": "^8.57.0",
-    "husky": "^8.0.3"
+    "c8": "^8.0.1"
   },
   "engines": {
     "node": ">=18.0.0"
