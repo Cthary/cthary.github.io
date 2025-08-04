@@ -1,5 +1,5 @@
-import test from 'ava';
-import { Attacker, Defender, Weapon } from '../units.js';
+import test from "ava";
+import { Attacker, Defender, Weapon } from "../units.js";
 
 const attackerJson = {
     "Name": "Space Marine",
@@ -46,10 +46,10 @@ const defenderJson = {
     "invulnerable": 4,
     "Keywords": [
         "-1 dmg"
-    ],
+    ]
 };
 
-test('Weapon without Keywords', (t) => {
+test("Weapon without Keywords", (t) => {
     const weapon = new Weapon(attackerJson["Weapons"][0]);
     t.truthy(weapon);
     t.is(weapon.name, "Bolt Rifle");
@@ -63,7 +63,7 @@ test('Weapon without Keywords', (t) => {
     t.deepEqual(weapon.Keywords, []);
 });
 
-test('Weapon with Keywords', (t) => {
+test("Weapon with Keywords", (t) => {
     const weapon = new Weapon(attackerJson["Weapons"][1]);
     t.truthy(weapon);
     t.is(weapon.attacks, 2);
@@ -76,21 +76,21 @@ test('Weapon with Keywords', (t) => {
     t.truthy(weapon.devastatingWounds);
 });
 
-test('Attacker', (t) => {
+test("Attacker", (t) => {
     const attacker = new Attacker(attackerJson);
     t.truthy(attacker);
     t.deepEqual(attacker.json, attackerJson);
     t.deepEqual(attacker.Name, "Space Marine");
 });
 
-test('Attacker getWeapon', (t) => {
+test("Attacker getWeapon", (t) => {
     const attacker = new Attacker(attackerJson);
     const weapon = attacker.getWeapon(0);
     t.truthy(weapon);
     t.deepEqual(weapon, new Weapon(attackerJson["Weapons"][0]));
 });
 
-test('Defender', (t) => {
+test("Defender", (t) => {
     const defender = new Defender(defenderJson);
     t.truthy(defender);
     t.deepEqual(defender.Name, "Chaos Space Marine");

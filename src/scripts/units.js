@@ -1,4 +1,4 @@
-import { Dice } from './dice.js';
+import { Dice } from "./dice.js";
 
 export class Attacker {
 
@@ -26,6 +26,18 @@ export class Defender {
         this.save = json["save"];
         this.invulnerable = json["invulnerable"];
         this.Keywords = json["Keywords"] || [];
+        this.processDefenderKeywords();
+    }
+
+    processDefenderKeywords() {
+        // Process damage reduction keywords
+        if (this.Keywords.includes("/2D")) {
+            this.Keywords.push("halve damage");
+        }
+
+        if (this.Keywords.includes("-1D")) {
+            this.Keywords.push("-1 dmg");
+        }
     }
 }
 
@@ -65,8 +77,22 @@ export class Weapon {
 
     calculateKeywords() {
         // Hit Modifier
-        if (this.Keywords.includes("+1 hit")) {
+        if (this.Keywords.includes("+1 hit") || this.Keywords.includes("+1 to hit")) {
             this.to_hit -= 1;
+        }
+
+        if (this.Keywords.includes("-1 hit") || this.Keywords.includes("-1 to hit")) {
+            this.to_hit += 1;
+        }
+
+        // Wound Modifier - werden in der Wound-Phase angewendet
+        // Diese werden als separate Keywords markiert für spätere Anwendung
+        if (this.Keywords.includes("+1 wound") || this.Keywords.includes("+1 to wound")) {
+            this.Keywords.push("WoundBonus+1");
+        }
+
+        if (this.Keywords.includes("-1 wound") || this.Keywords.includes("-1 to wound")) {
+            this.Keywords.push("WoundPenalty-1");
         }
 
         // Blood Angels Charge
@@ -79,7 +105,7 @@ export class Weapon {
 
         // Sustained Hits - Dynamische Parsing
         for (const keyword of this.Keywords) {
-            if (keyword.startsWith("sustained hits")) {
+            if (keyword.toLowerCase().startsWith("sustained hits")) {
                 const match = keyword.match(/sustained hits\s+(\d+|D\d+(?:\+\d+)?)/i);
                 if (match) {
                     this.sustainedHits = match[1];
@@ -160,9 +186,14 @@ export class Weapon {
         if (this.Keywords.includes("-1D")) {
             this.Keywords.push("-1 dmg");
         }
-        
+
         if (this.Keywords.includes("/2D")) {
             this.Keywords.push("halve damage");
+        }
+
+        // Damage Increase Keywords (NEW)
+        if (this.Keywords.includes("+1D")) {
+            this.Keywords.push("+1 dmg");
         }
     }
 

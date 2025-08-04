@@ -1,5 +1,5 @@
-import test from 'ava';
-import { JsonParser } from '../jsonparser.js';
+import test from "ava";
+import { JsonParser } from "../jsonparser.js";
 
 const json = {
     "Attackers": [
@@ -49,14 +49,14 @@ const json = {
             "invulnerable": 4,
             "Keywords": [
                 "-1 dmg"
-            ],
+            ]
         }
     ]
 };
 
 const jsonParser = new JsonParser(json);
 
-test('Attacker without Keywords', (t) => {
+test("Attacker without Keywords", (t) => {
     const attacker = jsonParser.getAttacker(0);
     t.truthy(attacker);
     t.is(attacker.Name, "Space Marine");
@@ -70,7 +70,7 @@ test('Attacker without Keywords', (t) => {
     t.is(weapon.damage, "D6+2");
 });
 
-test('Attacker with Keywords', (t) => {
+test("Attacker with Keywords", (t) => {
     const attacker = jsonParser.getAttacker(0);
     const weapon = attacker.getWeapon(1);
     t.truthy(weapon);
@@ -90,7 +90,7 @@ test('Attacker with Keywords', (t) => {
     t.true(weapon.Keywords.includes("devastating wounds"));
 });
 
-test('Defender', (t) => {
+test("Defender", (t) => {
     const defenders = jsonParser.getDefenders();
     const defender = defenders[0];
     t.truthy(defender);
@@ -104,7 +104,7 @@ test('Defender', (t) => {
     t.true(defender.Keywords.includes("-1 dmg"));
 });
 
-test('JsonParser.getAttacker', (t) => {
+test("JsonParser.getAttacker", (t) => {
     const attacker = jsonParser.getAttacker(0);
     t.truthy(attacker);
     t.is(attacker.Name, "Space Marine");

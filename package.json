@@ -1,21 +1,44 @@
 {
-  "name": "cthary.github.io",
+  "name": "warhammer-40k-battle-simulator",
   "version": "1.0.0",
-  "description": "Welcome to my GitHub Pages site!",
-  "main": "dice40k.js",
-  "devDependencies": {
-    "ava": "^6.2.0"
-  },
+  "description": "Warhammer 40k 10th Edition Battle Simulator",
+  "type": "module",
+  "main": "src/scripts/w40k.js",
   "scripts": {
-    "test": "mocha"
+    "test": "node --test test/**/*.test.js",
+    "test:watch": "node --test --watch test/**/*.test.js",
+    "test:coverage": "c8 node --test test/**/*.test.js",
+    "test:unit": "node --test test/unit/**/*.test.js",
+    "test:integration": "node --test test/integration/**/*.test.js",
+    "test:performance": "node --test test/performance/**/*.test.js",
+    "lint": "eslint src/**/*.js test/**/*.test.js",
+    "lint:fix": "eslint src/**/*.js test/**/*.test.js --fix",
+    "pre-commit": "npm run lint && npm run test",
+    "serve": "python -m http.server 8000",
+    "build": "echo 'No build step required for vanilla JS project'",
+    "validate": "npm run lint && npm run test && echo 'All checks passed!'",
+    "prepare": "husky install"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "ava": {
-    "extensions": [
-      "js"
-    ]
+  "keywords": [
+    "warhammer",
+    "40k",
+    "battle-simulator",
+    "gaming",
+    "dice",
+    "simulation"
+  ],
+  "author": "Warhammer 40k Battle Simulator Team",
+  "license": "MIT",
+  "devDependencies": {
+    "c8": "^8.0.1",
+    "eslint": "^8.57.0",
+    "husky": "^8.0.3"
   },
-  "type": "module"
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "."
+  }
 }

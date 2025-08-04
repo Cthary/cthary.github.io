@@ -7,31 +7,63 @@ export class Dice {
     }
 
     parseAndRoll(value) {
-        let result = 0;
+        if (!value) {
+            return 0;
+        }
+
+        if (typeof value === "number") {
+            return value;
+        }
+
         if (typeof value === "string") {
-            if (value.includes("D")) {
-                let valueArray = value.split("D");
-                let dice = parseInt(valueArray[0]) || 1;
-                let sidesAndBonus = valueArray[1];
-                let sides, bonus = 0;
-                if (sidesAndBonus.includes("+")) {
-                    let parts = sidesAndBonus.split("+");
-                    sides = parseInt(parts[0]);
-                    bonus = parseInt(parts[1]);
-                } else {
-                    sides = parseInt(sidesAndBonus);
-                }
-                for (let i = 0; i < dice; i++) {
+            // Handle simple numbers
+            if (/^\d+$/.test(value)) {
+                return parseInt(value);
+            }
+
+            // Handle dice expressions like "D6", "2D6", "D3+1", "2D6+3", "D6-1", etc.
+            const dicePattern = /^(\d*)[Dd](\d+)(?:([+-])(\d+))?$/;
+            const match = value.match(dicePattern);
+
+            if (match) {
+                const numDice = parseInt(match[1]) || 1;
+                const sides = parseInt(match[2]);
+                const operator = match[3];
+                const modifier = parseInt(match[4]) || 0;
+
+                let result = 0;
+                for (let i = 0; i < numDice; i++) {
                     result += this.roll(sides);
                 }
-                result += bonus;
-            } else {
-                result = parseInt(value);
+
+                if (operator === "+") {
+                    result += modifier;
+                } else if (operator === "-") {
+                    result -= modifier;
+                }
+
+                return result;
             }
-        } else {
-            result = value;
+
+            // Handle complex expressions like "1+1", "2+3", etc.
+            const simpleAddPattern = /^(\d+)\+(\d+)$/;
+            const addMatch = value.match(simpleAddPattern);
+            if (addMatch) {
+                return parseInt(addMatch[1]) + parseInt(addMatch[2]);
+            }
+
+            const simpleSubPattern = /^(\d+)-(\d+)$/;
+            const subMatch = value.match(simpleSubPattern);
+            if (subMatch) {
+                return parseInt(subMatch[1]) - parseInt(subMatch[2]);
+            }
+
+            // If no pattern matches, try to parse as integer
+            const num = parseInt(value);
+            return isNaN(num) ? 0 : num;
         }
-        return result;
+
+        return 0;
     }
 }
 

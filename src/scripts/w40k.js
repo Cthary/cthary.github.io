@@ -1,6 +1,6 @@
-import { Attacker, Defender, Weapon } from './units.js';
-import { Dice } from './dice.js';
-import { JsonParser } from './jsonparser.js';
+import { Attacker, Defender } from "./units.js";
+import { Dice } from "./dice.js";
+import { JsonParser } from "./jsonparser.js";
 
 export class Calculator {
 
@@ -18,18 +18,18 @@ export class Calculator {
     }
 
     rollDice(amount, toBeat, rerollType, isHit = false) {
-        let rolls = [];
+        const rolls = [];
         const dice = new Dice();
         for (let i = 0; i < amount; i++) {
-            let roll = dice.roll();
+            const roll = dice.roll();
             rolls.push(roll);
         }
         return this.rerollDice(rolls, toBeat, rerollType, isHit);
     }
 
-    rerollDice(rolls, toBeat, rerollType, isHit = false) {
+    rerollDice(rolls, toBeat, rerollType, _isHit = false) {
         const dice = new Dice();
-        
+
         if (rerollType === "miss") {
             const failed = rolls.filter((roll) => roll < toBeat);
             const passed = rolls.filter((roll) => roll >= toBeat);
@@ -41,17 +41,17 @@ export class Calculator {
             const newRolls = ones.map(() => dice.roll());
             rolls = others.concat(newRolls);
         } else if (rerollType === "nocrit") {
-            const critThreshold = this.getCritThreshold(toBeat, isHit);
+            // const critThreshold = this.getCritThreshold(toBeat, isHit);
             const nonCrits = rolls.filter((roll) => roll === 1);
             const others = rolls.filter((roll) => roll !== 1);
             const newRolls = nonCrits.map(() => dice.roll());
             rolls = others.concat(newRolls);
         }
-        
+
         return rolls;
     }
 
-    getCritThreshold(toBeat, isHit) {
+    getCritThreshold(_toBeat, _isHit) {
         // Standard ist 6+ für Critical Hits/Wounds
         return 6;
     }
@@ -59,21 +59,27 @@ export class Calculator {
     hits(weapon, defender) {
         let hits = 0;
         let wounds = 0;
-        let attacks = weapon.getAttacks();
+        const attacks = weapon.getAttacks();
         let toHit = weapon.to_hit;
-        let keywords = weapon.Keywords;
-        let result = {
+        const result = {
             "hits": 0,
             "wounds": 0
         };
 
         // Modifier durch Verteidiger
-        if (defender.Keywords.includes("-1 hit")) {
+        if (defender.Keywords.includes("-1 hit") || defender.Keywords.includes("-1 to hit")) {
             toHit += 1;
         }
 
+        if (defender.Keywords.includes("+1 hit") || defender.Keywords.includes("+1 to hit")) {
+            toHit -= 1;
+        }
+
+        // Minimum 2+, Maximum 6+
+        toHit = Math.max(2, Math.min(6, toHit));
+
         const dice = new Dice();
-        
+
         // Reroll-Logik für Hit-Würfe
         let reroll = "";
         if (weapon.Keywords.includes("RH1")) {
@@ -95,20 +101,20 @@ export class Calculator {
             }
         }
 
-        let rolls = this.rollDice(attacks, toHit, reroll, true);
-        
+        const rolls = this.rollDice(attacks, toHit, reroll, true);
+
         for (const roll of rolls) {
             if (roll >= toHit) {
                 hits++;
-                
+
                 // Critical Hit Check
                 if (roll >= critHitThreshold) {
                     // Sustained Hits
                     if (weapon.sustainedHits) {
-                        let sustainedHits = dice.parseAndRoll(weapon.sustainedHits);
+                        const sustainedHits = dice.parseAndRoll(weapon.sustainedHits);
                         hits += sustainedHits;
                     }
-                    
+
                     // Lethal Hits
                     if (weapon.lethalHits) {
                         hits--;
@@ -117,7 +123,7 @@ export class Calculator {
                 }
             }
         }
-        
+
         result.hits = hits;
         result.wounds = wounds;
         return result;
@@ -127,8 +133,8 @@ export class Calculator {
         let wounds = 0;
         let mortalWounds = 0;
         let toWound = 0;
-        let keywords = weapon.Keywords;
-        let result = {
+        const keywords = weapon.Keywords;
+        const result = {
             "wounds": 0,
             "damage": 0
         };
@@ -146,10 +152,26 @@ export class Calculator {
             toWound = 5;
         }
 
-        // Modifier
-        if (keywords.includes("+1 wound") || keywords.includes("lance")) {
+        // Modifier von Waffe
+        if (keywords.includes("+1 wound") || keywords.includes("lance") || keywords.includes("WoundBonus+1")) {
             toWound -= 1;
         }
+
+        if (keywords.includes("-1 wound") || keywords.includes("WoundPenalty-1")) {
+            toWound += 1;
+        }
+
+        // Modifier vom Verteidiger
+        if (defender.Keywords.includes("-1 wound") || defender.Keywords.includes("-1 to wound")) {
+            toWound += 1;
+        }
+
+        if (defender.Keywords.includes("+1 wound") || defender.Keywords.includes("+1 to wound")) {
+            toWound -= 1;
+        }
+
+        // Minimum 2+, Maximum 6+
+        toWound = Math.max(2, Math.min(6, toWound));
 
         // Reroll-Logik für Wound-Würfe
         let reroll = "";
@@ -173,8 +195,8 @@ export class Calculator {
         }
 
         // Würfle für jede Treffer
-        let rolls = this.rollDice(hitCount, toWound, reroll, false);
-        
+        const rolls = this.rollDice(hitCount, toWound, reroll, false);
+
         for (const roll of rolls) {
             if (keywords.includes("WOUND")) {
                 wounds++;
@@ -189,9 +211,9 @@ export class Calculator {
                 } else {
                     wounds++;
                 }
-            } 
+            }
         }
-        
+
         result.wounds = wounds;
         result.damage = mortalWounds;
         return result;
@@ -199,12 +221,12 @@ export class Calculator {
 
     saves(weapon, defender, woundCount) {
         let failedSaves = 0;
-        let result = {
+        const result = {
             "failedSaves": 0
         };
         let save = defender.save;
         let ap = weapon.ap;
-        let invulnerable = defender.invulnerable;
+        const invulnerable = defender.invulnerable;
 
         if (defender.Keywords.includes("-1 ap")) {
             ap = Math.max(0, ap - 1);
@@ -218,10 +240,10 @@ export class Calculator {
         if (save > invulnerable) {
             save = invulnerable;
         }
-        
+
         // Würfle für jede Verwundung
-        let rolls = this.rollDice(woundCount, save, "", false);
-        
+        const rolls = this.rollDice(woundCount, save, "", false);
+
         for (const roll of rolls) {
             if (roll < save) {
                 failedSaves++;
@@ -234,16 +256,28 @@ export class Calculator {
     damage(weapon, defender) {
         const dice = new Dice();
         let damage = dice.parseAndRoll(weapon.damage);
-        
-        // Damage Reduction
-        if (defender.Keywords.includes("-1 dmg")) {
-            damage = Math.max(1, damage - 1);
-        }
-        
+
+        // Apply damage modifiers in correct order:
+        // 1. Base damage (already calculated)
+        // 2. Halve damage (/2D)
+        // 3. Increase damage (+1D)
+        // 4. Reduce damage (-1D)
+
+        // Step 2: Halve damage first
         if (defender.Keywords.includes("halve damage")) {
             damage = Math.max(1, Math.floor(damage / 2));
         }
-        
+
+        // Step 3: Apply damage increase
+        if (weapon.Keywords.includes("+1 dmg")) {
+            damage += 1;
+        }
+
+        // Step 4: Apply damage reduction last
+        if (defender.Keywords.includes("-1 dmg")) {
+            damage = Math.max(1, damage - 1);
+        }
+
         return damage;
     }
 }
@@ -254,39 +288,39 @@ export class Simulator {
     }
 
     createNewRolls(rolls) {
-        let result = [];
+        const result = [];
         for (let i = 0; i < rolls; i++) {
             result.push(1);
         }
         return result;
-    } 
+    }
 
     simulateOne(weapon, defender) {
-        let results = [];
-        let calculator = new Calculator([weapon], [defender]);
-        
+        const results = [];
+        const calculator = new Calculator([weapon], [defender]);
+
         // Hit Phase
-        let hitResult = calculator.hits(weapon, defender);
-        let totalHits = hitResult.hits;
-        let automaticWounds = hitResult.wounds; // Von Lethal Hits
-        
+        const hitResult = calculator.hits(weapon, defender);
+        const totalHits = hitResult.hits;
+        const automaticWounds = hitResult.wounds; // Von Lethal Hits
+
         // Wound Phase für normale Hits
-        let woundResult = calculator.wounds(weapon, defender, totalHits);
-        let totalWounds = woundResult.wounds + automaticWounds;
-        let mortalWounds = woundResult.damage; // Von Devastating Wounds
-        
+        const woundResult = calculator.wounds(weapon, defender, totalHits);
+        const totalWounds = woundResult.wounds + automaticWounds;
+        const mortalWounds = woundResult.damage; // Von Devastating Wounds
+
         // Save Phase
-        let saveResult = calculator.saves(weapon, defender, totalWounds);
-        let failedSaves = saveResult.failedSaves;
-        
+        const saveResult = calculator.saves(weapon, defender, totalWounds);
+        const failedSaves = saveResult.failedSaves;
+
         // Damage Phase
-        let totalDamageInstances = failedSaves + mortalWounds;
-        let damageArray = [];
+        const totalDamageInstances = failedSaves + mortalWounds;
+        const damageArray = [];
         for (let i = 0; i < totalDamageInstances; i++) {
-            let damageValue = calculator.damage(weapon, defender);
+            const damageValue = calculator.damage(weapon, defender);
             damageArray.push(damageValue);
         }
-        
+
         results.push({
             "hits": totalHits,
             "wounds": totalWounds,
@@ -297,9 +331,9 @@ export class Simulator {
     }
 
     simulateAmount(weapon, defender, amount) {
-        let results = [];
+        const results = [];
         for (let i = 0; i < amount; i++) {
-            let result = this.simulateOne(weapon, defender);
+            const result = this.simulateOne(weapon, defender);
             results.push(result);
         }
         return results;
@@ -310,18 +344,18 @@ export class Simulator {
         let wounds = 0;
         let failedSaves = 0;
         let totalDamage = 0;
-        
+
         for (let i = 0; i < amount; i++) {
             hits += results[i][0].hits;
             wounds += results[i][0].wounds;
             failedSaves += results[i][0].failedSaves;
-            
+
             // Schaden summieren
             for (let j = 0; j < results[i][0].damage.length; j++) {
                 totalDamage += results[i][0].damage[j];
             }
         }
-        
+
         return {
             "hits": hits / amount,
             "wounds": wounds / amount,
@@ -333,28 +367,28 @@ export class Simulator {
     parseModelsDestroyed(results, defender) {
         let modelsDestroyed = 0;
         let currentModelWounds = 0;
-        
+
         // Alle Simulationen durchgehen und Schaden sammeln
-        let allDamageValues = [];
+        const allDamageValues = [];
         for (let i = 0; i < results.length; i++) {
             for (let j = 0; j < results[i][0].damage.length; j++) {
                 allDamageValues.push(results[i][0].damage[j]);
             }
         }
-        
+
         // Schaden auf Modelle anwenden
-        for (let damage of allDamageValues) {
+        for (const damage of allDamageValues) {
             currentModelWounds += damage;
             if (currentModelWounds >= defender.wounds) {
                 modelsDestroyed++;
                 currentModelWounds = 0;
             }
         }
-        
+
         return modelsDestroyed / results.length; // Durchschnitt über alle Simulationen
     }
 
-    getNewTargetJson(){
+    getNewTargetJson() {
         return {
             "Name": "",
             "ModelsDestroyed": 0,
@@ -364,29 +398,29 @@ export class Simulator {
     }
 
     createResults(attacker, defenders, amount) {
-        let result = {
+        const result = {
             "Name": attacker.Name,
-            "Target": [],
+            "Target": []
         };
         for (let i = 0; i < defenders.length; i++) {
-            let defender = defenders[i];
-            let target = this.getNewTargetJson();
+            const defender = defenders[i];
+            const target = this.getNewTargetJson();
             target.Name = defender.Name;
             target.MaximumModels = defender.models;
-            
+
             // Sammle detaillierte Ergebnisse für Diagramme
-            let allSimulationResults = [];
-            let modelKillCounts = new Array(defender.models + 1).fill(0);
-            
+            const allSimulationResults = [];
+            const modelKillCounts = new Array(defender.models + 1).fill(0);
+
             for (let j = 0; j < attacker.Weapons.length; j++) {
-                let weapon = attacker.getWeapon(j);
-                let simulator = new Simulator(amount);
-                let results = simulator.simulateAmount(weapon, defender, amount);
-                let parsedResults = simulator.parseSimulatedResultsByAmount(amount, results);
-                
+                const weapon = attacker.getWeapon(j);
+                const simulator = new Simulator(amount);
+                const results = simulator.simulateAmount(weapon, defender, amount);
+                const parsedResults = simulator.parseSimulatedResultsByAmount(amount, results);
+
                 // Detaillierte Analyse für jede Simulation
                 for (let sim = 0; sim < results.length; sim++) {
-                    let modelsKilled = this.calculateModelsKilledInSingleSim(results[sim][0], defender);
+                    const modelsKilled = this.calculateModelsKilledInSingleSim(results[sim][0], defender);
                     modelKillCounts[modelsKilled]++;
                     allSimulationResults.push({
                         modelsKilled: modelsKilled,
@@ -396,10 +430,10 @@ export class Simulator {
                         failedSaves: results[sim][0].failedSaves
                     });
                 }
-                
-                let averageDestroyed = allSimulationResults.reduce((sum, r) => sum + r.modelsKilled, 0) / allSimulationResults.length;
+
+                const averageDestroyed = allSimulationResults.reduce((sum, r) => sum + r.modelsKilled, 0) / allSimulationResults.length;
                 target.ModelsDestroyed += averageDestroyed;
-                
+
                 target.Weapons.push({
                     "Name": weapon.name,
                     "Hits": parsedResults.hits,
@@ -408,16 +442,16 @@ export class Simulator {
                     "AverageDamage": parsedResults.totalDamage
                 });
             }
-            
+
             // Berechne Wahrscheinlichkeiten
             target.KillDistribution = modelKillCounts.map((count, kills) => ({
                 kills: kills,
                 probability: (count / amount) * 100,
                 count: count
             }));
-            
+
             target.CompleteWipeoutChance = (modelKillCounts[defender.models] / amount) * 100;
-            
+
             result.Target.push(target);
         }
         return result;
@@ -426,15 +460,15 @@ export class Simulator {
     calculateModelsKilledInSingleSim(simResult, defender) {
         let modelsKilled = 0;
         let currentModelWounds = 0;
-        
-        for (let damage of simResult.damage) {
+
+        for (const damage of simResult.damage) {
             currentModelWounds += damage;
             if (currentModelWounds >= defender.wounds) {
                 modelsKilled++;
                 currentModelWounds = 0;
             }
         }
-        
+
         return Math.min(modelsKilled, defender.models);
     }
 }
@@ -442,14 +476,14 @@ export class Simulator {
 function run(jsonData) {
     const jsonParser = new JsonParser(jsonData);
     const defenders = jsonParser.getDefenders();
-    let results = [];
-    let amount = jsonParser.json["Amount"] || 100;
+    const results = [];
+    const amount = jsonParser.json["Amount"] || 100;
     for (let i = 0; i < jsonParser.json["Attackers"].length; i++) {
         const attacker = jsonParser.getAttacker(i);
 
         const simulator = new Simulator(amount);
-        let result = simulator.createResults(attacker, defenders, amount);
-        console.log(result);
+        const result = simulator.createResults(attacker, defenders, amount);
+        // console.log(result);  // Commented out for production
         results.push(result);
     }
     return results;
