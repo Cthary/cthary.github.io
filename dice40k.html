@@ -660,7 +660,6 @@
                     <label>Save (Armor Save):</label>
                     <input type="number" id="defenderSave" value="6" min="2" max="7">
                 </div>
-
                 <div class="form-group">
                     <label>Invulnerable Save (leer lassen wenn nicht vorhanden):</label>
                     <input type="number" id="defenderInvul" min="2" max="6" placeholder="z.B. 5">
@@ -696,8 +695,12 @@
                 </div>
 
                 <div class="form-group">
-                    <label>Waffenname:</label>
-                    <input type="text" id="weaponName" placeholder="z.B. Bolter">
+                <label>Waffenname:</label>
+                <input type="text" id="weaponName" placeholder="z.B. Bolter">
+            </div>
+            <div class="form-group">
+                <label>Anzahl identischer Waffen (Amount):</label>
+                <input type="number" id="weaponAmount" value="1" min="1" max="20">
                 </div>
 
                 <div class="form-group">
@@ -975,6 +978,7 @@
             const strength = parseInt(document.getElementById('weaponStrength').value);
             const ap = parseInt(document.getElementById('weaponAP').value);
             const damage = document.getElementById('weaponDamage').value.trim();
+            const amount = parseInt(document.getElementById('weaponAmount').value) || 1;
 
             if (isNaN(attackerIndex)) {
                 showError('Bitte wählen Sie einen Angreifer aus.');
@@ -994,7 +998,7 @@
                 strength: strength,
                 ap: ap,
                 damage: damage,
-                amount: 1,
+                amount: amount,
                 Keywords: [...window.currentWeaponKeywords]
             };
 
@@ -1166,6 +1170,7 @@
             document.getElementById('weaponStrength').value = '4';
             document.getElementById('weaponAP').value = '0';
             document.getElementById('weaponDamage').value = '1';
+            document.getElementById('weaponAmount').value = '1';
             window.currentWeaponKeywords = [];
             updateWeaponKeywordsDisplay();
         };

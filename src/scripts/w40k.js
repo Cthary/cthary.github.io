@@ -507,36 +507,40 @@ export class Simulator {
 
             for (let j = 0; j < attacker.Weapons.length; j++) {
                 const weapon = attacker.getWeapon(j);
-                const simulator = new Simulator(amount);
-                const results = simulator.simulateAmount(weapon, defender, amount);
-                const parsedResults = simulator.parseSimulatedResultsByAmount(amount, results);
+                // Berücksichtige die Anzahl identischer Waffen (amount)
+                const weaponAmount = weapon.amount || 1;
+                for (let w = 0; w < weaponAmount; w++) {
+                    const simulator = new Simulator(amount);
+                    const results = simulator.simulateAmount(weapon, defender, amount);
+                    const parsedResults = simulator.parseSimulatedResultsByAmount(amount, results);
 
-                // Detaillierte Analyse für jede Simulation
-                for (let sim = 0; sim < results.length; sim++) {
-                    const modelsKilled = this.calculateModelsKilledInSingleSim(results[sim][0], defender);
-                    modelKillCounts[modelsKilled]++;
-                    allSimulationResults.push({
-                        modelsKilled: modelsKilled,
-                        totalDamage: results[sim][0].damage.reduce((sum, dmg) => sum + dmg, 0),
-                        hits: results[sim][0].hits,
-                        wounds: results[sim][0].wounds,
-                        failedSaves: results[sim][0].failedSaves
+                    // Detaillierte Analyse für jede Simulation
+                    for (let sim = 0; sim < results.length; sim++) {
+                        const modelsKilled = this.calculateModelsKilledInSingleSim(results[sim][0], defender);
+                        modelKillCounts[modelsKilled]++;
+                        allSimulationResults.push({
+                            modelsKilled: modelsKilled,
+                            totalDamage: results[sim][0].damage.reduce((sum, dmg) => sum + dmg, 0),
+                            hits: results[sim][0].hits,
+                            wounds: results[sim][0].wounds,
+                            failedSaves: results[sim][0].failedSaves
+                        });
+                    }
+
+                    const averageDestroyed = allSimulationResults.reduce((sum, r) => sum + r.modelsKilled, 0) / allSimulationResults.length;
+                    const averageTotalDamage = allSimulationResults.reduce((sum, r) => sum + r.totalDamage, 0) / allSimulationResults.length;
+
+                    target.ModelsDestroyed += averageDestroyed;
+                    target.TotalDamage += averageTotalDamage;
+
+                    target.Weapons.push({
+                        "Name": weapon.name + (weaponAmount > 1 ? ` x${weaponAmount}` : ""),
+                        "Hits": parsedResults.hits,
+                        "Wounds": parsedResults.wounds,
+                        "FailedSaves": parsedResults.failedSaves,
+                        "AverageDamage": parsedResults.totalDamage
                     });
                 }
-
-                const averageDestroyed = allSimulationResults.reduce((sum, r) => sum + r.modelsKilled, 0) / allSimulationResults.length;
-                const averageTotalDamage = allSimulationResults.reduce((sum, r) => sum + r.totalDamage, 0) / allSimulationResults.length;
-
-                target.ModelsDestroyed += averageDestroyed;
-                target.TotalDamage += averageTotalDamage;
-
-                target.Weapons.push({
-                    "Name": weapon.name,
-                    "Hits": parsedResults.hits,
-                    "Wounds": parsedResults.wounds,
-                    "FailedSaves": parsedResults.failedSaves,
-                    "AverageDamage": parsedResults.totalDamage
-                });
             }
 
             // Berechne Wahrscheinlichkeiten

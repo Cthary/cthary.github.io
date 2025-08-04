@@ -94,7 +94,8 @@ export class Weapon {
 
     getAttacks() {
         const dice = new Dice();
-        return dice.parseAndRoll(this.attacks);
+        // Multipliziere die Attacken mit der Anzahl identischer Waffen
+        return dice.parseAndRoll(this.attacks) * (this.amount || 1);
     }
 
     getDamage() {
