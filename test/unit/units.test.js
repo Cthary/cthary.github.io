@@ -170,8 +170,9 @@ describe("Weapon Class", () => {
 
         const weapon = new Weapon(weaponData);
 
-        // Anti-X sollte CritHit4 hinzufügen
-        assert.ok(weapon.Keywords.includes("CritHit4"));
+        // Anti-X sollte CritWound4 hinzufügen, nicht CritHit4
+        assert.ok(weapon.Keywords.includes("CritWound4"));
+        assert.ok(weapon.Keywords.includes("Anti-infantry"));
     });
 
     test("should handle lance keyword", () => {

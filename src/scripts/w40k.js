@@ -59,12 +59,20 @@ export class Calculator {
     hits(weapon, defender) {
         let hits = 0;
         let wounds = 0;
-        const attacks = weapon.getAttacks();
+        let mortalWounds = 0; // Für Hazardous
+        let attacksToUse = weapon.getAttacks();
         let toHit = weapon.to_hit;
         const result = {
             "hits": 0,
-            "wounds": 0
+            "wounds": 0,
+            "mortalWounds": 0
         };
+
+        // Blast: +1 Attack pro 5 Modelle (1-4=+0, 5-9=+1, 10-14=+2, etc.)
+        if (weapon.Keywords.includes("blast-effect")) {
+            const bonusAttacks = Math.floor(defender.models / 5);
+            attacksToUse += bonusAttacks;
+        }
 
         // Modifier durch Verteidiger
         if (defender.Keywords.includes("-1 hit") || defender.Keywords.includes("-1 to hit")) {
@@ -73,6 +81,12 @@ export class Calculator {
 
         if (defender.Keywords.includes("+1 hit") || defender.Keywords.includes("+1 to hit")) {
             toHit -= 1;
+        }
+
+        // Indirect Fire: -1 to hit und maximal 4+
+        if (weapon.Keywords.includes("indirect-fire-effect")) {
+            toHit += 1; // -1 to hit penalty
+            toHit = Math.max(toHit, 4); // Nie besser als 4+
         }
 
         // Minimum 2+, Maximum 6+
@@ -101,24 +115,35 @@ export class Calculator {
             }
         }
 
-        const rolls = this.rollDice(attacks, toHit, reroll, true);
+        // Torrent: Automatische Hits, keine Hit-Würfe
+        if (weapon.Keywords.includes("torrent-effect")) {
+            hits = attacksToUse; // Alle Attacks treffen automatisch
+        } else {
+            // Normale Hit-Würfe
+            const rolls = this.rollDice(attacksToUse, toHit, reroll, true);
 
-        for (const roll of rolls) {
-            if (roll >= toHit) {
-                hits++;
+            for (const roll of rolls) {
+                // Hazardous: Bei 1er Würfen = 1 Mortal Wound
+                if (weapon.Keywords.includes("hazardous-effect") && roll === 1) {
+                    mortalWounds++;
+                }
 
-                // Critical Hit Check
-                if (roll >= critHitThreshold) {
-                    // Sustained Hits
-                    if (weapon.sustainedHits) {
-                        const sustainedHits = dice.parseAndRoll(weapon.sustainedHits);
-                        hits += sustainedHits;
-                    }
+                if (roll >= toHit) {
+                    hits++;
 
-                    // Lethal Hits
-                    if (weapon.lethalHits) {
-                        hits--;
-                        wounds++;
+                    // Critical Hit Check
+                    if (roll >= critHitThreshold) {
+                        // Sustained Hits
+                        if (weapon.sustainedHits) {
+                            const sustainedHits = dice.parseAndRoll(weapon.sustainedHits);
+                            hits += sustainedHits;
+                        }
+
+                        // Lethal Hits
+                        if (weapon.lethalHits) {
+                            hits--;
+                            wounds++;
+                        }
                     }
                 }
             }
@@ -126,6 +151,7 @@ export class Calculator {
 
         result.hits = hits;
         result.wounds = wounds;
+        result.mortalWounds = mortalWounds;
         return result;
     }
 
@@ -183,13 +209,30 @@ export class Calculator {
             reroll = "nocrit";
         }
 
-        // Critical Wound Threshold bestimmen
+        // Critical Wound Threshold bestimmen (für Anti-X Keywords)
         let critWoundThreshold = 6;
         for (const keyword of weapon.Keywords) {
             if (keyword.startsWith("CritWound")) {
                 const match = keyword.match(/CritWound(\d+)/);
                 if (match) {
                     critWoundThreshold = parseInt(match[1]);
+                }
+            }
+        }
+
+        // Anti-X Keywords: Prüfe ob Defender den entsprechenden Typ hat
+        let antiBonus = false;
+        for (const keyword of weapon.Keywords) {
+            if (keyword.startsWith("Anti-")) {
+                const targetType = keyword.substring(5).toLowerCase(); // Entferne "Anti-"
+                if (defender.type && defender.type.toLowerCase() === targetType) {
+                    antiBonus = true;
+                    break;
+                }
+                // Auch Keywords des Defenders prüfen
+                if (defender.Keywords.some(k => k.toLowerCase() === targetType)) {
+                    antiBonus = true;
+                    break;
                 }
             }
         }
@@ -201,7 +244,10 @@ export class Calculator {
             if (keywords.includes("WOUND")) {
                 wounds++;
             } else if (roll >= toWound) {
-                if (roll >= critWoundThreshold) {
+                // Prüfe für Critical Wound (Anti-X Keywords berücksichtigen)
+                const isCriticalWound = antiBonus ? roll >= critWoundThreshold : roll >= 6;
+
+                if (isCriticalWound) {
                     // Critical Wound - Devastating Wounds
                     if (weapon.devastatingWounds) {
                         mortalWounds++;
@@ -237,6 +283,11 @@ export class Calculator {
 
         save += ap;
 
+        // Cover: +1 Save (außer gegen Weapons mit "Ignores Cover")
+        if (defender.Keywords.includes("cover") && !weapon.Keywords.includes("ignores-cover-effect")) {
+            save -= 1; // Besserer Save durch Cover
+        }
+
         if (save > invulnerable) {
             save = invulnerable;
         }
@@ -250,6 +301,31 @@ export class Calculator {
             }
         }
         result.failedSaves = failedSaves;
+        return result;
+    }
+
+    feelNoPain(defender, failedSaves) {
+        let survivedDamage = 0;
+        const result = {
+            "survivedDamage": 0,
+            "remainingDamage": failedSaves
+        };
+
+        // Prüfe ob Feel No Pain vorhanden ist
+        if (defender.feelNoPainValue) {
+            const fnpTarget = defender.feelNoPainValue;
+            const rolls = this.rollDice(failedSaves, fnpTarget, "", false);
+
+            for (const roll of rolls) {
+                if (roll >= fnpTarget) {
+                    survivedDamage++;
+                }
+            }
+
+            result.survivedDamage = survivedDamage;
+            result.remainingDamage = failedSaves - survivedDamage;
+        }
+
         return result;
     }
 
@@ -303,28 +379,42 @@ export class Simulator {
         const hitResult = calculator.hits(weapon, defender);
         const totalHits = hitResult.hits;
         const automaticWounds = hitResult.wounds; // Von Lethal Hits
+        const hazardousMortalWounds = hitResult.mortalWounds || 0; // Von Hazardous
 
         // Wound Phase für normale Hits
         const woundResult = calculator.wounds(weapon, defender, totalHits);
         const totalWounds = woundResult.wounds + automaticWounds;
-        const mortalWounds = woundResult.damage; // Von Devastating Wounds
+        const devastatingMortalWounds = woundResult.damage; // Von Devastating Wounds
 
         // Save Phase
         const saveResult = calculator.saves(weapon, defender, totalWounds);
         const failedSaves = saveResult.failedSaves;
 
+        // Feel No Pain Phase
+        const fnpResult = calculator.feelNoPain(defender, failedSaves);
+        const finalFailedSaves = fnpResult.remainingDamage;
+
         // Damage Phase
-        const totalDamageInstances = failedSaves + mortalWounds;
+        const totalMortalWounds = hazardousMortalWounds + devastatingMortalWounds;
         const damageArray = [];
-        for (let i = 0; i < totalDamageInstances; i++) {
+
+        // Normale Damage Instances
+        for (let i = 0; i < finalFailedSaves; i++) {
             const damageValue = calculator.damage(weapon, defender);
             damageArray.push(damageValue);
+        }
+
+        // Mortal Wounds (immer 1 Damage, ignorieren alle Modifiers)
+        for (let i = 0; i < totalMortalWounds; i++) {
+            damageArray.push(1);
         }
 
         results.push({
             "hits": totalHits,
             "wounds": totalWounds,
             "failedSaves": failedSaves,
+            "feelNoPainSaves": fnpResult.survivedDamage,
+            "finalFailedSaves": finalFailedSaves,
             "damage": damageArray
         });
         return results;
@@ -393,6 +483,8 @@ export class Simulator {
             "Name": "",
             "ModelsDestroyed": 0,
             "MaximumModels": 0,
+            "TotalDamage": 0, // Neu für einzelne große Einheiten
+            "MaxWounds": 0, // Neu für Wounds-Information
             "Weapons": []
         };
     }
@@ -407,6 +499,7 @@ export class Simulator {
             const target = this.getNewTargetJson();
             target.Name = defender.Name;
             target.MaximumModels = defender.models;
+            target.MaxWounds = defender.wounds; // Wounds pro Modell
 
             // Sammle detaillierte Ergebnisse für Diagramme
             const allSimulationResults = [];
@@ -432,7 +525,10 @@ export class Simulator {
                 }
 
                 const averageDestroyed = allSimulationResults.reduce((sum, r) => sum + r.modelsKilled, 0) / allSimulationResults.length;
+                const averageTotalDamage = allSimulationResults.reduce((sum, r) => sum + r.totalDamage, 0) / allSimulationResults.length;
+
                 target.ModelsDestroyed += averageDestroyed;
+                target.TotalDamage += averageTotalDamage;
 
                 target.Weapons.push({
                     "Name": weapon.name,

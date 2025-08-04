@@ -825,21 +825,25 @@
 
         // Keyword-Definitionen
         const standardKeywords = {
-            'lethal hits': 'Critical hits automatisch verwunden',
-            'sustained hits X': 'Critical hits erzeugen X zusätzliche Hits (X kann Zahl oder Würfel sein)',
-            'devastating wounds': 'Critical wounds ignorieren alle Saves',
-            'anti-KEYWORD X+': 'Gegen Units mit KEYWORD: Critical hits bei X+',
-            'twin-linked': 'Reroll alle failed wound rolls',
-            'rapid fire X': 'Bei Range ≤ Hälfte: +X Attacks',
-            'blast': 'Gegen Units mit 6+ Modellen: Maximum Attacks',
-            'hazardous': 'Bei Critical Fails: 1 Mortal Wound',
-            'lance': 'Charge: +1 to wound, +1 AP',
-            'precision': 'Critical hits können Charaktere zuweisen',
-            'melta X': 'Bei Range ≤ Hälfte: +X Damage',
-            '+1 to hit': 'Verbessert Hit-Würfe um 1 (z.B. 4+ wird zu 3+)',
-            '-1 to hit': 'Verschlechtert Hit-Würfe um 1 (z.B. 3+ wird zu 4+)',
-            '+1 to wound': 'Verbessert Wound-Würfe um 1 (z.B. 4+ wird zu 3+)',
-            '-1 to wound': 'Verschlechtert Wound-Würfe um 1 (z.B. 3+ wird zu 4+)'
+            'lethal hits': 'Critical hits automatisch verwunden (case-insensitive)',
+            'sustained hits X': 'Critical hits erzeugen X zusätzliche Hits (X kann Zahl oder Würfel sein, case-insensitive)',
+            'devastating wounds': 'Critical wounds ignorieren alle Saves (case-insensitive)',
+            'anti-KEYWORD X+': 'Gegen Units mit KEYWORD: Critical wounds bei X+ (z.B. "anti-vehicle 5" oder "anti-infantry 4+", case-insensitive)',
+            'twin-linked': 'Reroll alle failed wound rolls (case-insensitive)',
+            'rapid fire X': 'Bei Range ≤ Hälfte: +X Attacks (case-insensitive)',
+            'blast': '+1 Attack pro 5 Modelle im Ziel (1-4=+0, 5-9=+1, 10-14=+2, etc., case-insensitive)',
+            'hazardous': 'Bei Critical Fails: 1 Mortal Wound (case-insensitive, implementiert)',
+            'lance': 'Charge: +1 to wound, +1 AP (case-insensitive)',
+            'precision': 'Critical hits können Charaktere zuweisen (case-insensitive, implementiert)',
+            'torrent': 'Automatische Hits, keine Hit-Würfe erforderlich (case-insensitive, implementiert)',
+            'ignores cover': 'Umgeht Cover-Save Bonus des Ziels (case-insensitive, implementiert)',
+            'indirect fire': '-1 to hit, maximal 4+ to hit (case-insensitive, implementiert)',
+            'psychic': 'Kann durch Deny the Witch gestoppt werden (case-insensitive, implementiert)',
+            'melta X': 'Bei Range ≤ Hälfte: +X Damage (case-insensitive)',
+            '+1 to hit': 'Verbessert Hit-Würfe um 1 (z.B. 4+ wird zu 3+, case-insensitive)',
+            '-1 to hit': 'Verschlechtert Hit-Würfe um 1 (z.B. 3+ wird zu 4+, case-insensitive)',
+            '+1 to wound': 'Verbessert Wound-Würfe um 1 (z.B. 4+ wird zu 3+, case-insensitive)',
+            '-1 to wound': 'Verschlechtert Wound-Würfe um 1 (z.B. 3+ wird zu 4+, case-insensitive)'
         };
 
         const customKeywords = {
@@ -851,9 +855,12 @@
             'RWNoCrit': 'Reroll 1s beim Wound-Wurf wenn kein Critical Wound',
             'CritHitX': 'Critical Hits bei X+ statt 6+ (z.B. CritHit5+)',
             'CritWoundX': 'Critical Wounds bei X+ statt 6+ (z.B. CritWound4+)',
-            '+1D': 'Erhöht ausgehenden Schaden um 1',
-            '-1D': 'Reduziert eingehenden Schaden um 1 (minimum 1)',
-            '/2D': 'Halbiert eingehenden Schaden (minimum 1, abgerundet)'
+            '+1D': 'Erhöht ausgehenden Schaden um 1 (case-insensitive)',
+            '-1D': 'Reduziert eingehenden Schaden um 1 (minimum 1, case-insensitive)',
+            '/2D': 'Halbiert eingehenden Schaden (minimum 1, abgerundet, case-insensitive)',
+            'feel no pain X': 'Ignoriert Schaden bei X+ auf 1W6 (z.B. "feel no pain 6", case-insensitive)',
+            'feel no pain psychic X': 'Ignoriert Psychic Schaden bei X+ auf 1W6 (case-insensitive)',
+            'cover': '+1 Save (außer gegen "ignores cover" Weapons, case-insensitive)'
         };
 
         // Initialisierung
@@ -1231,12 +1238,16 @@
                                 🛡️ vs ${target.Name}
                             </div>
                             <div class="stat-row">
-                                <span class="stat-label">Vernichtete Modelle:</span>
-                                <span class="stat-value">${target.ModelsDestroyed.toFixed(2)} / ${target.MaximumModels}</span>
+                                <span class="stat-label">${target.MaximumModels === 1 ? 'Durchschnittsschaden:' : 'Vernichtete Modelle:'}</span>
+                                <span class="stat-value">${target.MaximumModels === 1 ? 
+                                    target.TotalDamage.toFixed(2) + ' / ' + target.MaxWounds + ' Wounds' :
+                                    target.ModelsDestroyed.toFixed(2) + ' / ' + target.MaximumModels}</span>
                             </div>
                             <div class="stat-row">
-                                <span class="stat-label">Vernichtungsrate:</span>
-                                <span class="stat-value">${((target.ModelsDestroyed / target.MaximumModels) * 100).toFixed(1)}%</span>
+                                <span class="stat-label">${target.MaximumModels === 1 ? 'Lebensenergie verloren:' : 'Vernichtungsrate:'}</span>
+                                <span class="stat-value">${target.MaximumModels === 1 ? 
+                                    ((target.TotalDamage / target.MaxWounds) * 100).toFixed(1) + '%' :
+                                    ((target.ModelsDestroyed / target.MaximumModels) * 100).toFixed(1) + '%'}</span>
                             </div>
                             
                             ${target.CompleteWipeoutChance !== undefined ? `

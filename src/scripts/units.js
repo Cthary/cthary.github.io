@@ -30,13 +30,40 @@ export class Defender {
     }
 
     processDefenderKeywords() {
-        // Process damage reduction keywords
-        if (this.Keywords.includes("/2D")) {
+        // Helper function für case-insensitive keyword checks
+        const hasKeyword = (keyword) => this.Keywords.some(k => k.toLowerCase() === keyword.toLowerCase());
+
+        // Process damage reduction keywords (case-insensitive)
+        if (hasKeyword("/2D")) {
             this.Keywords.push("halve damage");
         }
 
-        if (this.Keywords.includes("-1D")) {
+        if (hasKeyword("-1D")) {
             this.Keywords.push("-1 dmg");
+        }
+
+        // Process feel no pain keywords (case-insensitive)
+        this.feelNoPainValue = null;
+        this.feelNoPainPsychicValue = null;
+
+        for (const keyword of this.Keywords) {
+            const fnpMatch = keyword.match(/^feel no pain (\d+)$/i);
+            if (fnpMatch) {
+                this.feelNoPainValue = parseInt(fnpMatch[1]);
+                continue;
+            }
+
+            // Feel No Pain Psychic
+            const fnpPsychicMatch = keyword.match(/^feel no pain psychic (\d+)$/i);
+            if (fnpPsychicMatch) {
+                this.feelNoPainPsychicValue = parseInt(fnpPsychicMatch[1]);
+                continue;
+            }
+        }
+
+        // Cover keyword (case-insensitive)
+        if (this.Keywords.some(k => k.toLowerCase() === "cover")) {
+            // Cover ist bereits im Keywords Array, keine weitere Verarbeitung nötig
         }
     }
 }
@@ -76,34 +103,39 @@ export class Weapon {
     }
 
     calculateKeywords() {
-        // Hit Modifier
-        if (this.Keywords.includes("+1 hit") || this.Keywords.includes("+1 to hit")) {
+        // Normalisiere alle Keywords zu lowercase für case-insensitive Vergleiche
+        const normalizedKeywords = this.Keywords.map(k => k.toLowerCase());
+
+        // Helper function für case-insensitive keyword checks
+        const hasKeyword = (keyword) => normalizedKeywords.includes(keyword.toLowerCase());
+
+        // Hit Modifier (case-insensitive)
+        if (hasKeyword("+1 hit") || hasKeyword("+1 to hit")) {
             this.to_hit -= 1;
         }
 
-        if (this.Keywords.includes("-1 hit") || this.Keywords.includes("-1 to hit")) {
+        if (hasKeyword("-1 hit") || hasKeyword("-1 to hit")) {
             this.to_hit += 1;
         }
 
-        // Wound Modifier - werden in der Wound-Phase angewendet
-        // Diese werden als separate Keywords markiert für spätere Anwendung
-        if (this.Keywords.includes("+1 wound") || this.Keywords.includes("+1 to wound")) {
+        // Wound Modifier - werden in der Wound-Phase angewendet (case-insensitive)
+        if (hasKeyword("+1 wound") || hasKeyword("+1 to wound")) {
             this.Keywords.push("WoundBonus+1");
         }
 
-        if (this.Keywords.includes("-1 wound") || this.Keywords.includes("-1 to wound")) {
+        if (hasKeyword("-1 wound") || hasKeyword("-1 to wound")) {
             this.Keywords.push("WoundPenalty-1");
         }
 
-        // Blood Angels Charge
-        if (this.Keywords.includes("BA Charge")) {
+        // Blood Angels Charge (case-insensitive)
+        if (hasKeyword("ba charge")) {
             if (this.type === "Melee" || this.type === "M") {
                 this.attacks = this.addToValue(this.attacks, 1);
                 this.strength += 2;
             }
         }
 
-        // Sustained Hits - Dynamische Parsing
+        // Sustained Hits - Dynamische Parsing (case-insensitive)
         for (const keyword of this.Keywords) {
             if (keyword.toLowerCase().startsWith("sustained hits")) {
                 const match = keyword.match(/sustained hits\s+(\d+|D\d+(?:\+\d+)?)/i);
@@ -113,19 +145,19 @@ export class Weapon {
             }
         }
 
-        // Standard Keywords
-        this.lethalHits = this.Keywords.includes("lethal hits");
-        this.devastatingWounds = this.Keywords.includes("devastating wounds");
-        this.betterCrits = this.Keywords.includes("better crits");
+        // Standard Keywords (case-insensitive)
+        this.lethalHits = hasKeyword("lethal hits");
+        this.devastatingWounds = hasKeyword("devastating wounds");
+        this.betterCrits = hasKeyword("better crits");
 
-        // Twin-linked
-        if (this.Keywords.includes("twin-linked")) {
+        // Twin-linked (case-insensitive)
+        if (hasKeyword("twin-linked")) {
             this.Keywords.push("RWMiss");
         }
 
-        // Rapid Fire - Dynamische Parsing
+        // Rapid Fire - Dynamische Parsing (case-insensitive)
         for (const keyword of this.Keywords) {
-            if (keyword.startsWith("rapid fire")) {
+            if (keyword.toLowerCase().startsWith("rapid fire")) {
                 const match = keyword.match(/rapid fire\s+(\d+)/i);
                 if (match) {
                     const bonusAttacks = parseInt(match[1]);
@@ -136,9 +168,9 @@ export class Weapon {
             }
         }
 
-        // Melta - Dynamische Parsing
+        // Melta - Dynamische Parsing (case-insensitive)
         for (const keyword of this.Keywords) {
-            if (keyword.startsWith("melta")) {
+            if (keyword.toLowerCase().startsWith("melta")) {
                 const match = keyword.match(/melta\s+(\d+)/i);
                 if (match) {
                     const bonusDamage = parseInt(match[1]);
@@ -149,50 +181,78 @@ export class Weapon {
             }
         }
 
-        // Lance (Charge Bonus)
-        if (this.Keywords.includes("lance") && (this.type === "Melee" || this.type === "M")) {
+        // Lance (Charge Bonus) (case-insensitive)
+        if (hasKeyword("lance") && (this.type === "Melee" || this.type === "M")) {
             this.Keywords.push("+1 wound");
             this.ap += 1;
         }
 
-        // Anti-X Keywords - Dynamische Parsing
+        // Anti-X Keywords - Dynamische Parsing (case-insensitive, mit und ohne +)
+        // Anti-X sollte Critical Wounds bei X+ verursachen, nicht Critical Hits
         for (const keyword of this.Keywords) {
-            if (keyword.startsWith("anti-")) {
-                const match = keyword.match(/anti-(\w+)\s+(\d+)\+/i);
+            if (keyword.toLowerCase().startsWith("anti-")) {
+                // Versuche zuerst das Standard-Pattern mit +
+                let match = keyword.match(/anti-(\w+)\s+(\d+)\+/i);
+                if (!match) {
+                    // Falls kein + vorhanden, versuche ohne +
+                    match = keyword.match(/anti-(\w+)\s+(\d+)/i);
+                }
                 if (match) {
+                    const targetType = match[1].toLowerCase();
                     const threshold = parseInt(match[2]);
-                    this.Keywords.push(`CritHit${threshold}`);
+                    this.Keywords.push(`CritWound${threshold}`);
+                    this.Keywords.push(`Anti-${targetType}`);
                 }
             }
         }
 
-        // Blast - Maximum Attacks gegen große Units
-        if (this.Keywords.includes("blast")) {
-            // Würde gegen Units mit 6+ Modellen Maximum Attacks geben
-            // Dies würde in der Simulation berücksichtigt werden müssen
+        // Blast - +1 Attack pro 5 Modelle (case-insensitive)
+        if (hasKeyword("blast")) {
+            this.Keywords.push("blast-effect");
+            // Blast wird in der Hit-Phase angewendet - +1 Attack pro 5 Modelle im Ziel
         }
 
-        // Hazardous
-        if (this.Keywords.includes("hazardous")) {
-            // Bei Critical Fails: 1 Mortal Wound (würde in hit phase implementiert)
+        // Hazardous (case-insensitive)
+        if (hasKeyword("hazardous")) {
+            this.Keywords.push("hazardous-effect");
+            // Hazardous wird in der Hit-Phase angewendet - bei 1er Würfen = 1 Mortal Wound
         }
 
-        // Precision
-        if (this.Keywords.includes("precision")) {
-            // Critical hits können Charaktere zuweisen (UI Feature)
+        // Torrent (case-insensitive)
+        if (hasKeyword("torrent")) {
+            this.Keywords.push("torrent-effect");
+            // Torrent: Automatische Hits, keine Hit-Würfe erforderlich
         }
 
-        // Damage Reduction Keywords
-        if (this.Keywords.includes("-1D")) {
+        // Ignores Cover (case-insensitive)
+        if (hasKeyword("ignores cover")) {
+            this.Keywords.push("ignores-cover-effect");
+            // Ignores Cover: Ziele erhalten keinen Cover-Save Bonus
+        }
+
+        // Indirect Fire (case-insensitive)
+        if (hasKeyword("indirect fire")) {
+            this.Keywords.push("indirect-fire-effect");
+            // Indirect Fire: -1 to hit, maximal 4+ to hit
+        }
+
+        // Psychic - nur mit Feel No Pain Psychic relevant (case-insensitive)
+        if (hasKeyword("psychic")) {
+            this.Keywords.push("psychic-effect");
+            // Psychic: Kann durch Deny the Witch gestoppt werden
+        }
+
+        // Damage Reduction Keywords (case-insensitive)
+        if (hasKeyword("-1d")) {
             this.Keywords.push("-1 dmg");
         }
 
-        if (this.Keywords.includes("/2D")) {
+        if (hasKeyword("/2d")) {
             this.Keywords.push("halve damage");
         }
 
-        // Damage Increase Keywords (NEW)
-        if (this.Keywords.includes("+1D")) {
+        // Damage Increase Keywords (case-insensitive)
+        if (hasKeyword("+1d")) {
             this.Keywords.push("+1 dmg");
         }
     }
