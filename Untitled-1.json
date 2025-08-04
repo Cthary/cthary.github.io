@@ -1,0 +1,86 @@
+{
+  "Amount": 1000,
+  "Attackers": [
+    {
+      "Name": "Death Company Marines with Jump Packs",
+      "Weapons": [
+        {
+          "name": "Astartes Chainsword",
+          "type": "Melee",
+          "attacks": "5",
+          "to_hit": 3,
+          "strength": 6,
+          "ap": 1,
+          "damage": "1",
+          "amount": 2,
+          "Keywords": ["RHMiss", "+1 to wound"]
+        },
+        {
+          "name": "Astartes Power Fist",
+          "type": "Melee",
+          "attacks": "4",
+          "to_hit": 3,
+          "strength": 10,
+          "ap": 2,
+          "damage": "2",
+          "amount": 2,
+          "Keywords": ["RHMiss", "+1 to wound"]
+        },
+        {
+          "name": "Power Fist",
+          "type": "Melee",
+          "attacks": "5",
+          "to_hit": 2,
+          "strength": 10,
+          "ap": 2,
+          "damage": "2",
+          "amount": 2,
+          "Keywords": ["+1 to wound"]
+        },
+        {
+          "name": "Eviscerator",
+          "type": "Melee",
+          "attacks": "4",
+          "to_hit": 4,
+          "strength": 9,
+          "ap": 2,
+          "damage": "2",
+          "amount": 2,
+          "Keywords": ["RHMiss", "+1 to wound", "sustained hits 1"]
+        }
+      ]
+    }
+  ],
+  "Defenders": [
+    {
+      "Name": "Canis Rex",
+      "type": "Vehicle",
+      "models": 1,
+      "toughness": 11,
+      "wounds": 26,
+      "save": 3,
+      "invulnerable": 7,
+      "Keywords": ["feel no pain 5"]
+    },
+    {
+      "Name": "Angron",
+      "type": "Monster",
+      "models": 1,
+      "toughness": 11,
+      "wounds": 16,
+      "save": 2,
+      "invulnerable": 4,
+      "Keywords": []
+    },
+    {
+      "Name": "Custodian Guard",
+      "type": "Infantry",
+      "models": 5,
+      "toughness": 6,
+      "wounds": 3,
+      "save": 2,
+      "invulnerable": 4,
+      "Keywords": []
+    }
+  ]
+}
