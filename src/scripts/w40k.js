@@ -17,74 +17,99 @@ export class Calculator {
         return new Defender(this.defenders[index]);
     }
 
-    rollDice(amount, toBeat, keywords) {
+    rollDice(amount, toBeat, rerollType, isHit = false) {
         let rolls = [];
         const dice = new Dice();
         for (let i = 0; i < amount; i++) {
             let roll = dice.roll();
             rolls.push(roll);
         }
-        return this.rerollDice(rolls, toBeat, keywords);
+        return this.rerollDice(rolls, toBeat, rerollType, isHit);
     }
 
-    rerollDice(rolls, toBeat, keywords) {
-        if (keywords === "miss") {
-            rolls = rolls.filter((roll) => roll >= toBeat).concat(
-                rolls.filter((roll) => roll < toBeat).map(() => this.rollDice(1, toBeat, keywords)[0])
-            );
-        } else if (keywords === "1") {
-            rolls = rolls.filter((roll) => roll !== 1).concat(
-                rolls.filter((roll) => roll === 1).map(() => this.rollDice(1, toBeat, keywords)[0])
-            );
-        } else if (keywords === "crit6") {
-            rolls = rolls.filter((roll) => roll === 6).concat(
-                rolls.filter((roll) => roll !== 6).map(() => this.rollDice(1, toBeat, keywords)[0])
-            );
-        } else if (keywords === "crit5") {
-            rolls = rolls.filter((roll) => roll >= 5).concat(
-                rolls.filter((roll) => roll < 5).map(() => this.rollDice(1, toBeat, keywords)[0])
-            );
+    rerollDice(rolls, toBeat, rerollType, isHit = false) {
+        const dice = new Dice();
+        
+        if (rerollType === "miss") {
+            const failed = rolls.filter((roll) => roll < toBeat);
+            const passed = rolls.filter((roll) => roll >= toBeat);
+            const newRolls = failed.map(() => dice.roll());
+            rolls = passed.concat(newRolls);
+        } else if (rerollType === "1") {
+            const ones = rolls.filter((roll) => roll === 1);
+            const others = rolls.filter((roll) => roll !== 1);
+            const newRolls = ones.map(() => dice.roll());
+            rolls = others.concat(newRolls);
+        } else if (rerollType === "nocrit") {
+            const critThreshold = this.getCritThreshold(toBeat, isHit);
+            const nonCrits = rolls.filter((roll) => roll === 1);
+            const others = rolls.filter((roll) => roll !== 1);
+            const newRolls = nonCrits.map(() => dice.roll());
+            rolls = others.concat(newRolls);
         }
+        
         return rolls;
+    }
+
+    getCritThreshold(toBeat, isHit) {
+        // Standard ist 6+ für Critical Hits/Wounds
+        return 6;
     }
 
     hits(weapon, defender) {
         let hits = 0;
         let wounds = 0;
-        let attacks = weapon.attacks;
-        let to_hit = weapon.to_hit;
+        let attacks = weapon.getAttacks();
+        let toHit = weapon.to_hit;
         let keywords = weapon.Keywords;
         let result = {
             "hits": 0,
             "wounds": 0
         };
 
-
+        // Modifier durch Verteidiger
         if (defender.Keywords.includes("-1 hit")) {
-            to_hit += 1;
+            toHit += 1;
         }
+
         const dice = new Dice();
+        
+        // Reroll-Logik für Hit-Würfe
         let reroll = "";
-        if(weapon.Keywords.includes("HR1")){
+        if (weapon.Keywords.includes("RH1")) {
             reroll = "1";
-        } else if(weapon.Keywords.includes("HRMiss")){
+        } else if (weapon.Keywords.includes("RHMiss")) {
             reroll = "miss";
-        } else if(weapon.Keywords.includes("HRCrit")){
-            if(weapon.Keywords.includes("better crits")){
-                reroll = "crit5";
-            } else {
-                reroll = "crit6";
+        } else if (weapon.Keywords.includes("RHNoCrit")) {
+            reroll = "nocrit";
+        }
+
+        // Critical Hit Threshold bestimmen
+        let critHitThreshold = 6;
+        for (const keyword of weapon.Keywords) {
+            if (keyword.startsWith("CritHit")) {
+                const match = keyword.match(/CritHit(\d+)/);
+                if (match) {
+                    critHitThreshold = parseInt(match[1]);
+                }
             }
         }
-        let rolls = this.rollDice(rolls, to_hit, reroll);
+
+        let rolls = this.rollDice(attacks, toHit, reroll, true);
+        
         for (const roll of rolls) {
-            if (roll >= to_hit) {
+            if (roll >= toHit) {
                 hits++;
-                if (roll === 6 || (roll === 5 && weapon.Keywords.includes("better crits"))) {
+                
+                // Critical Hit Check
+                if (roll >= critHitThreshold) {
+                    // Sustained Hits
                     if (weapon.sustainedHits) {
                         let sustainedHits = dice.parseAndRoll(weapon.sustainedHits);
                         hits += sustainedHits;
                     }
+                    
+                    // Lethal Hits
                     if (weapon.lethalHits) {
                         hits--;
                         wounds++;
@@ -92,14 +117,15 @@ export class Calculator {
                 }
             }
         }
+        
         result.hits = hits;
         result.wounds = wounds;
         return result;
     }
 
-    wounds(weapon, defender, rolls) {
+    wounds(weapon, defender, hitCount) {
         let wounds = 0;
-        let damage = 0;
+        let mortalWounds = 0;
         let toWound = 0;
         let keywords = weapon.Keywords;
         let result = {
@@ -107,6 +133,7 @@ export class Calculator {
             "damage": 0
         };
 
+        // To Wound basierend auf Strength vs Toughness
         if (weapon.strength >= 2 * defender.toughness) {
             toWound = 2;
         } else if (weapon.strength > defender.toughness) {
@@ -119,38 +146,58 @@ export class Calculator {
             toWound = 5;
         }
 
+        // Modifier
         if (keywords.includes("+1 wound") || keywords.includes("lance")) {
             toWound -= 1;
         }
 
+        // Reroll-Logik für Wound-Würfe
         let reroll = "";
-        if(weapon.Keywords.includes("WR1")){
+        if (weapon.Keywords.includes("RW1")) {
             reroll = "1";
-        } else if(weapon.Keywords.includes("WRMiss")){
+        } else if (weapon.Keywords.includes("RWMiss")) {
             reroll = "miss";
-        } else if(weapon.Keywords.includes("WRCrit")){
-                reroll = "crit6";
+        } else if (weapon.Keywords.includes("RWNoCrit")) {
+            reroll = "nocrit";
         }
-        rolls = this.rerollDice(rolls, toWound, reroll);
+
+        // Critical Wound Threshold bestimmen
+        let critWoundThreshold = 6;
+        for (const keyword of weapon.Keywords) {
+            if (keyword.startsWith("CritWound")) {
+                const match = keyword.match(/CritWound(\d+)/);
+                if (match) {
+                    critWoundThreshold = parseInt(match[1]);
+                }
+            }
+        }
+
+        // Würfle für jede Treffer
+        let rolls = this.rollDice(hitCount, toWound, reroll, false);
+        
         for (const roll of rolls) {
             if (keywords.includes("WOUND")) {
                 wounds++;
             } else if (roll >= toWound) {
-                if (roll === 6) {
+                if (roll >= critWoundThreshold) {
+                    // Critical Wound - Devastating Wounds
                     if (weapon.devastatingWounds) {
-                        damage++;
+                        mortalWounds++;
+                    } else {
+                        wounds++;
                     }
                 } else {
                     wounds++;
                 }
             } 
         }
+        
         result.wounds = wounds;
-        result.damage = damage;
+        result.damage = mortalWounds;
         return result;
     }
 
-    saves(weapon, defender, rolls) {
+    saves(weapon, defender, woundCount) {
         let failedSaves = 0;
         let result = {
             "failedSaves": 0
@@ -171,7 +218,10 @@ export class Calculator {
         if (save > invulnerable) {
             save = invulnerable;
         }
-        rolls = this.rerollDice(rolls, save, defender.Keywords);
+        
+        // Würfle für jede Verwundung
+        let rolls = this.rollDice(woundCount, save, "", false);
+        
         for (const roll of rolls) {
             if (roll < save) {
                 failedSaves++;
@@ -182,17 +232,19 @@ export class Calculator {
     }
 
     damage(weapon, defender) {
-        let damage = 0;
         const dice = new Dice();
-        let result = {
-            "damage": 0
-        };
-        damage = dice.parseAndRoll(weapon.damage);
+        let damage = dice.parseAndRoll(weapon.damage);
+        
+        // Damage Reduction
         if (defender.Keywords.includes("-1 dmg")) {
             damage = Math.max(1, damage - 1);
         }
-        result = damage;
-        return result;
+        
+        if (defender.Keywords.includes("halve damage")) {
+            damage = Math.max(1, Math.floor(damage / 2));
+        }
+        
+        return damage;
     }
 }
 
@@ -212,18 +264,33 @@ export class Simulator {
     simulateOne(weapon, defender) {
         let results = [];
         let calculator = new Calculator([weapon], [defender]);
-        let hits = calculator.hits(weapon, defender);
-        let wounds = calculator.wounds(weapon, defender, this.createNewRolls(hits.hits));
-        let saves = calculator.saves(weapon, defender, this.createNewRolls(wounds.wounds + hits.wounds));
-        let damage = saves.failedSaves + wounds.damage
+        
+        // Hit Phase
+        let hitResult = calculator.hits(weapon, defender);
+        let totalHits = hitResult.hits;
+        let automaticWounds = hitResult.wounds; // Von Lethal Hits
+        
+        // Wound Phase für normale Hits
+        let woundResult = calculator.wounds(weapon, defender, totalHits);
+        let totalWounds = woundResult.wounds + automaticWounds;
+        let mortalWounds = woundResult.damage; // Von Devastating Wounds
+        
+        // Save Phase
+        let saveResult = calculator.saves(weapon, defender, totalWounds);
+        let failedSaves = saveResult.failedSaves;
+        
+        // Damage Phase
+        let totalDamageInstances = failedSaves + mortalWounds;
         let damageArray = [];
-        for (let i = 0; i < damage; i++) {
-            damageArray.push(calculator.damage(weapon, defender));
+        for (let i = 0; i < totalDamageInstances; i++) {
+            let damageValue = calculator.damage(weapon, defender);
+            damageArray.push(damageValue);
         }
+        
         results.push({
-            "hits": hits.hits,
-            "wounds": wounds.wounds,
-            "failedSaves": saves.failedSaves,
+            "hits": totalHits,
+            "wounds": totalWounds,
+            "failedSaves": failedSaves,
             "damage": damageArray
         });
         return results;
@@ -242,42 +309,49 @@ export class Simulator {
         let hits = 0;
         let wounds = 0;
         let failedSaves = 0;
-        let damage = [];
+        let totalDamage = 0;
+        
         for (let i = 0; i < amount; i++) {
             hits += results[i][0].hits;
             wounds += results[i][0].wounds;
             failedSaves += results[i][0].failedSaves;
+            
+            // Schaden summieren
             for (let j = 0; j < results[i][0].damage.length; j++) {
-                damage.push(0);
-                damage[j] += results[i][0].damage[j];
+                totalDamage += results[i][0].damage[j];
             }
         }
-        for (let i = 0; i < damage.length; i++) {
-            damage[i] /= amount;
-        }
+        
         return {
             "hits": hits / amount,
             "wounds": wounds / amount,
             "failedSaves": failedSaves / amount,
-            "damage": damage
+            "totalDamage": totalDamage / amount
         };
     }
 
     parseModelsDestroyed(results, defender) {
         let modelsDestroyed = 0;
-        let damages = results.damage;
-        let tempWounds = 0;
+        let currentModelWounds = 0;
+        
+        // Alle Simulationen durchgehen und Schaden sammeln
+        let allDamageValues = [];
         for (let i = 0; i < results.length; i++) {
-            let damage = results[i];
-            damage += tempWounds; 
-            if (damage >= defender.wounds) {
-                modelsDestroyed++;
-                tempWounds = 0;
-            } else {
-                tempWounds += results[i];
+            for (let j = 0; j < results[i][0].damage.length; j++) {
+                allDamageValues.push(results[i][0].damage[j]);
             }
         }
-        return modelsDestroyed;
+        
+        // Schaden auf Modelle anwenden
+        for (let damage of allDamageValues) {
+            currentModelWounds += damage;
+            if (currentModelWounds >= defender.wounds) {
+                modelsDestroyed++;
+                currentModelWounds = 0;
+            }
+        }
+        
+        return modelsDestroyed / results.length; // Durchschnitt über alle Simulationen
     }
 
     getNewTargetJson(){
@@ -299,24 +373,69 @@ export class Simulator {
             let target = this.getNewTargetJson();
             target.Name = defender.Name;
             target.MaximumModels = defender.models;
+            
+            // Sammle detaillierte Ergebnisse für Diagramme
+            let allSimulationResults = [];
+            let modelKillCounts = new Array(defender.models + 1).fill(0);
+            
             for (let j = 0; j < attacker.Weapons.length; j++) {
                 let weapon = attacker.getWeapon(j);
                 let simulator = new Simulator(amount);
                 let results = simulator.simulateAmount(weapon, defender, amount);
                 let parsedResults = simulator.parseSimulatedResultsByAmount(amount, results);
-                let amountDestroyed = simulator.parseModelsDestroyed(results[0][0].damage, defender);
-                target.ModelsDestroyed += amountDestroyed
+                
+                // Detaillierte Analyse für jede Simulation
+                for (let sim = 0; sim < results.length; sim++) {
+                    let modelsKilled = this.calculateModelsKilledInSingleSim(results[sim][0], defender);
+                    modelKillCounts[modelsKilled]++;
+                    allSimulationResults.push({
+                        modelsKilled: modelsKilled,
+                        totalDamage: results[sim][0].damage.reduce((sum, dmg) => sum + dmg, 0),
+                        hits: results[sim][0].hits,
+                        wounds: results[sim][0].wounds,
+                        failedSaves: results[sim][0].failedSaves
+                    });
+                }
+                
+                let averageDestroyed = allSimulationResults.reduce((sum, r) => sum + r.modelsKilled, 0) / allSimulationResults.length;
+                target.ModelsDestroyed += averageDestroyed;
+                
                 target.Weapons.push({
                     "Name": weapon.name,
                     "Hits": parsedResults.hits,
                     "Wounds": parsedResults.wounds,
                     "FailedSaves": parsedResults.failedSaves,
-                    //"Damage": parsedResults.damage,
+                    "AverageDamage": parsedResults.totalDamage
                 });
             }
+            
+            // Berechne Wahrscheinlichkeiten
+            target.KillDistribution = modelKillCounts.map((count, kills) => ({
+                kills: kills,
+                probability: (count / amount) * 100,
+                count: count
+            }));
+            
+            target.CompleteWipeoutChance = (modelKillCounts[defender.models] / amount) * 100;
+            
             result.Target.push(target);
         }
         return result;
+    }
+
+    calculateModelsKilledInSingleSim(simResult, defender) {
+        let modelsKilled = 0;
+        let currentModelWounds = 0;
+        
+        for (let damage of simResult.damage) {
+            currentModelWounds += damage;
+            if (currentModelWounds >= defender.wounds) {
+                modelsKilled++;
+                currentModelWounds = 0;
+            }
+        }
+        
+        return Math.min(modelsKilled, defender.models);
     }
 }
 
