@@ -135,13 +135,14 @@ export class Calculator {
                     if (roll >= critHitThreshold) {
                         // Sustained Hits
                         if (weapon.sustainedHits) {
+                            const dice = new Dice();
                             const sustainedHits = dice.parseAndRoll(weapon.sustainedHits);
                             hits += sustainedHits;
                         }
 
                         // Lethal Hits
                         if (weapon.lethalHits) {
-                            hits--;
+                            // Lethal Hit bleibt ein Hit aber wird automatisch zur Wound
                             wounds++;
                         }
                     }
@@ -288,9 +289,13 @@ export class Calculator {
             save -= 1; // Besserer Save durch Cover
         }
 
-        if (save > invulnerable) {
+        // FIX: Invulnerable Save verwenden wenn besser als normaler Save
+        if (invulnerable < save) {
             save = invulnerable;
         }
+
+        // Minimum 2+, Maximum 6+
+        save = Math.max(2, Math.min(6, save));
 
         // Würfle für jede Verwundung
         const rolls = this.rollDice(woundCount, save, "", false);
@@ -317,6 +322,8 @@ export class Calculator {
             const rolls = this.rollDice(failedSaves, fnpTarget, "", false);
 
             for (const roll of rolls) {
+                // FIX: Bei Feel No Pain gilt - niedrigere Werte sind BESSER
+                // D.h. FNP 5+ ist besser als FNP 6+
                 if (roll >= fnpTarget) {
                     survivedDamage++;
                 }
@@ -539,12 +546,14 @@ export class Simulator {
 
             if (isSingleModel) {
                 // Für Einzelmodelle: Schadenverteilung
-                const maxPossibleDamage = Math.max(...simulationResults.map(r => r.totalDamage), defender.wounds);
+                const maxPossibleDamage = defender.wounds;
                 distributionCounts = new Array(maxPossibleDamage + 1).fill(0);
                 maxValue = defender.wounds;
                 
                 simulationResults.forEach(result => {
-                    distributionCounts[result.totalDamage]++;
+                    // FIX: Begrenze Schaden auf maximale Wounds des Ziels
+                    const cappedDamage = Math.min(result.totalDamage, defender.wounds);
+                    distributionCounts[cappedDamage]++;
                 });
             } else {
                 // Für Multi-Modell Units: Vernichtete Modelle
