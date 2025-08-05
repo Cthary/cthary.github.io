@@ -14,8 +14,18 @@ export class CombatCalculator {
         let critHitThreshold = 6;
         let rerollType = "none";
         
+        if (attackCount <= 0) {
+            return { normalHits: 0, criticalHits: 0, mortalWounds: 0 };
+        }
+        
         // Blast: +1 Attack pro 5 Modelle (1-4=+0, 5-9=+1, 10-14=+2, etc.)
         if (weapon.Keywords.some(k => k.toLowerCase().includes("blast"))) {
+            const bonusAttacks = Math.floor(defender.models / 5);
+            attackCount += bonusAttacks;
+        }
+
+            for (let amount = 0; amount < weaponAmount; amount++) {
+                const weaponResult = simulator.simulateSingleCombat(tempWeapon, standardDefender);
             const bonusAttacks = Math.floor(defender.models / 5);
             attackCount += bonusAttacks;
         }
@@ -648,23 +658,23 @@ function simulateGroupCombat(weaponGroups, defenderGroup, simulationCount) {
 
         // Simuliere alle Waffen kombiniert
         uniqueWeapons.forEach((weapon, weaponIndex) => {
-            console.log(`Processing weapon ${weaponIndex}:`, weapon);
-            
             // Erstelle Weapon-Objekt direkt mit der Weapon-Klasse für bessere Kompatibilität
+            let tempWeapon;
+            
             try {
                 // Versuche die richtige Weapon-Klasse zu verwenden, falls verfügbar
-                let tempWeapon;
                 if (typeof Weapon !== 'undefined') {
-                    tempWeapon = new Weapon(
-                        weapon.name,
-                        weapon.type,
-                        weapon.attacks,
-                        weapon.to_hit,
-                        weapon.strength,
-                        weapon.ap,
-                        weapon.damage,
-                        weapon.Keywords || []
-                    );
+                    tempWeapon = new Weapon({
+                        name: weapon.name,
+                        type: weapon.type,
+                        attacks: weapon.attacks,
+                        to_hit: weapon.to_hit,
+                        strength: weapon.strength,
+                        ap: weapon.ap,
+                        damage: weapon.damage,
+                        Keywords: weapon.Keywords || [],
+                        amount: weapon.amount
+                    });
                 } else {
                     // Fallback auf manuelles Objekt
                     tempWeapon = {
@@ -719,6 +729,12 @@ function simulateGroupCombat(weaponGroups, defenderGroup, simulationCount) {
                 return; // Skip this weapon
             }
 
+            // Prüfe ob tempWeapon erfolgreich erstellt wurde
+            if (!tempWeapon) {
+                console.error('Failed to create tempWeapon for:', weapon);
+                return;
+            }
+
             // Erstelle Standard-Verteidiger für Waffen-Simulation
             const standardDefender = {
                 models: Math.max(1, defenderState.reduce((sum, d) => sum + d.currentModels, 0)),
@@ -731,40 +747,23 @@ function simulateGroupCombat(weaponGroups, defenderGroup, simulationCount) {
 
             console.log(`Simulating weapon: ${weapon.displayName}, Amount: ${weapon.amount}, Defender:`, standardDefender);
 
-            // Simuliere diese Waffe basierend auf amount (mehrfache Ausführung)
-            let weaponTotalHits = 0;
-            let weaponTotalWounds = 0;
-            let weaponTotalFailedSaves = 0;
-            let weaponTotalDamage = 0;
+            // Simuliere diese Waffe nur einmal - amount wird bereits in getAttacks() berücksichtigt
+            const weaponResult = simulator.simulateSingleCombat(tempWeapon, standardDefender);
 
-            for (let amount = 0; amount < weapon.amount; amount++) {
-                const weaponResult = simulator.simulateSingleCombat(tempWeapon, standardDefender);
-                
-                weaponTotalHits += weaponResult.hits;
-                weaponTotalWounds += weaponResult.wounds;
-                weaponTotalFailedSaves += weaponResult.failedSaves;
-                weaponTotalDamage += weaponResult.totalDamage;
-            }
-
-            console.log(`Weapon ${weapon.displayName} total result (${weapon.amount}x):`, {
-                hits: weaponTotalHits,
-                wounds: weaponTotalWounds,
-                failedSaves: weaponTotalFailedSaves,
-                totalDamage: weaponTotalDamage
-            });
+            console.log(`Weapon ${weapon.displayName} result:`, weaponResult);
 
             // Sammle Waffen-Statistiken
-            weaponStats[weaponIndex].totalHits += weaponTotalHits;
-            weaponStats[weaponIndex].totalWounds += weaponTotalWounds;
-            weaponStats[weaponIndex].totalFailedSaves += weaponTotalFailedSaves;
-            weaponStats[weaponIndex].totalDamage += weaponTotalDamage;
+            weaponStats[weaponIndex].totalHits += weaponResult.hits;
+            weaponStats[weaponIndex].totalWounds += weaponResult.wounds;
+            weaponStats[weaponIndex].totalFailedSaves += weaponResult.failedSaves;
+            weaponStats[weaponIndex].totalDamage += weaponResult.totalDamage;
 
-            totalHits += weaponTotalHits;
-            totalWounds += weaponTotalWounds;
-            totalFailedSaves += weaponTotalFailedSaves;
+            totalHits += weaponResult.hits;
+            totalWounds += weaponResult.wounds;
+            totalFailedSaves += weaponResult.failedSaves;
 
             // Verteile Schaden mit Leader-System
-            let remainingDamage = weaponTotalDamage;
+            let remainingDamage = weaponResult.totalDamage;
             
             for (const defender of defenderState) {
                 if (remainingDamage <= 0) break;
@@ -783,7 +782,7 @@ function simulateGroupCombat(weaponGroups, defenderGroup, simulationCount) {
                 }
             }
 
-            totalDamage += (weaponTotalDamage - remainingDamage);
+            totalDamage += (weaponResult.totalDamage - remainingDamage);
         });
 
         // Sammle Ergebnisse für diese Simulation
