@@ -194,6 +194,45 @@
             background: linear-gradient(45deg, #e74c3c 0%, #c0392b 100%);
         }
 
+        .collapsible-btn {
+            background: rgba(255, 215, 0, 0.1);
+            border: 2px solid rgba(255, 215, 0, 0.3);
+            color: #ffd700;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            margin: 10px 0;
+            transition: all 0.3s ease;
+            font-weight: bold;
+        }
+
+        .collapsible-btn:hover {
+            background: rgba(255, 215, 0, 0.2);
+            border-color: rgba(255, 215, 0, 0.5);
+        }
+
+        .collapsible-content {
+            display: none;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .collapsible-content.active {
+            display: block;
+        }
+
+        .toggle-icon {
+            transition: transform 0.3s ease;
+        }
+
+        .collapsible-btn.active .toggle-icon {
+            transform: rotate(180deg);
+        }
+
         .keywords-section {
             margin-top: 15px;
         }
@@ -407,6 +446,70 @@
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 10px;
+        }
+
+        .weapons-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 15px;
+            margin: 10px 0;
+        }
+
+        .defenders-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 15px;
+            margin: 10px 0;
+        }
+
+        .weapon-card, .defender-card {
+            background: rgba(255, 255, 255, 0.07);
+            border: 2px solid rgba(255, 215, 0, 0.3);
+            border-radius: 8px;
+            padding: 15px;
+            transition: all 0.3s ease;
+        }
+
+        .weapon-card:hover, .defender-card:hover {
+            background: rgba(255, 255, 255, 0.1);
+            border-color: rgba(255, 215, 0, 0.5);
+            transform: translateY(-2px);
+        }
+
+        .defender-card.leader {
+            border-color: rgba(255, 215, 0, 0.6);
+            background: rgba(255, 215, 0, 0.05);
+        }
+
+        .weapon-card h5, .defender-card h6 {
+            color: #ffd700;
+            margin: 0 0 10px 0;
+            font-size: 1.1rem;
+        }
+
+        .weapon-stats, .defender-stats {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .stat-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 5px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .stat-label {
+            color: #b8c6db;
+            font-size: 0.9rem;
+        }
+
+        .stat-value {
+            color: #fff;
+            font-weight: bold;
+            font-size: 0.95rem;
         }
 
         .keyword-item {
@@ -744,6 +847,51 @@
         .btn-large {
             font-size: 1.2rem !important;
             padding: 15px 30px !important;
+        }
+
+        /* Chart Styles */
+        .distribution-chart {
+            margin: 10px 0;
+            padding: 10px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 5px;
+        }
+
+        .chart-bar-container {
+            display: flex;
+            align-items: center;
+            margin: 5px 0;
+            height: 25px;
+        }
+
+        .chart-bar {
+            height: 20px;
+            border-radius: 3px;
+            position: relative;
+            min-width: 2%;
+            display: flex;
+            align-items: center;
+            transition: all 0.3s ease;
+        }
+
+        .chart-bar:hover {
+            transform: scale(1.02);
+            box-shadow: 0 2px 8px rgba(76, 175, 80, 0.3);
+        }
+
+        .bar-label {
+            color: white;
+            font-size: 0.8rem;
+            font-weight: bold;
+            margin-left: 5px;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.8);
+        }
+
+        .bar-text {
+            margin-left: 10px;
+            font-size: 0.9rem;
+            color: #e0e6ed;
+            min-width: 40px;
         }
     </style>
     <style>
@@ -1161,7 +1309,15 @@
         window.toggleCollapsible = function(element) {
             element.classList.toggle('active');
             const content = element.nextElementSibling;
-            content.classList.toggle('active');
+            const icon = element.querySelector('.toggle-icon');
+            
+            if (content.classList.contains('active')) {
+                content.classList.remove('active');
+                if (icon) icon.textContent = '▼';
+            } else {
+                content.classList.add('active');
+                if (icon) icon.textContent = '▲';
+            }
         };
 
         // Keyword-Definitionen
@@ -1882,7 +2038,7 @@
             document.getElementById('weaponName').value = weapon.name;
             document.getElementById('weaponType').value = weapon.type;
             document.getElementById('weaponAttacks').value = weapon.attacks;
-            document.getElementById('weaponHit').value = weapon.to_hit;
+            document.getElementById('weaponToHit').value = weapon.to_hit;
             document.getElementById('weaponStrength').value = weapon.strength;
             document.getElementById('weaponAP').value = weapon.ap;
             document.getElementById('weaponDamage').value = weapon.damage;
@@ -1906,11 +2062,25 @@
                 addButton.textContent = originalText;
                 addButton.onclick = window.addWeapon;
                 // Schließe das Menü nach dem Update
-                document.getElementById('weaponMenu').classList.remove('open');
+                const weaponCollapsible = document.querySelector('.collapsible');
+                if (weaponCollapsible && weaponCollapsible.textContent.includes('Waffe hinzufügen')) {
+                    const content = weaponCollapsible.nextElementSibling;
+                    if (content && content.style.display === 'block') {
+                        weaponCollapsible.classList.remove('active');
+                        content.style.display = 'none';
+                    }
+                }
             };
             
             // Öffne das Waffen-Menü
-            document.getElementById('weaponMenu').classList.add('open');
+            const weaponCollapsible = document.querySelector('.collapsible');
+            if (weaponCollapsible && weaponCollapsible.textContent.includes('Waffe hinzufügen')) {
+                const content = weaponCollapsible.nextElementSibling;
+                if (content) {
+                    weaponCollapsible.classList.add('active');
+                    content.style.display = 'block';
+                }
+            }
             
             showSuccess('Waffen-Daten in das Formular geladen. Bearbeiten Sie die Werte und klicken Sie "Waffe aktualisieren".');
         };
@@ -1934,6 +2104,8 @@
             weapon.name = document.getElementById('weaponName').value.trim();
             weapon.type = document.getElementById('weaponType').value;
             weapon.attacks = document.getElementById('weaponAttacks').value;
+            weapon.to_hit = parseInt(document.getElementById('weaponToHit').value);
+            weapon.strength = parseInt(document.getElementById('weaponStrength').value);
             weapon.ap = parseInt(document.getElementById('weaponAP').value);
             weapon.damage = document.getElementById('weaponDamage').value;
             weapon.amount = parseInt(document.getElementById('weaponAmount').value) || 1;
@@ -1947,6 +2119,495 @@
             updateAttackersList();
             resetWeaponForm();
             showSuccess('Waffe wurde erfolgreich aktualisiert!');
+        }
+
+        // Waffen-Formular zurücksetzen
+        function resetWeaponForm() {
+            document.getElementById('weaponName').value = '';
+            document.getElementById('weaponType').value = 'Ranged';
+            document.getElementById('weaponAttacks').value = '1';
+            document.getElementById('weaponToHit').value = 4;
+            document.getElementById('weaponStrength').value = 4;
+            document.getElementById('weaponAP').value = 0;
+            document.getElementById('weaponDamage').value = '1';
+            document.getElementById('weaponAmount').value = 1;
+            
+            // Reset Keywords
+            window.currentWeaponKeywords = [];
+            updateWeaponKeywordsDisplay();
+            
+            // Reset Attacker Selection to first option
+            const attackerSelect = document.getElementById('weaponAttackerSelect');
+            if (attackerSelect && attackerSelect.options.length > 0) {
+                attackerSelect.selectedIndex = 0;
+            }
+        }
+
+        // JSON Import/Export Funktionen
+        window.exportJson = function() {
+            const data = {
+                attackers: window.attackers,
+                defenders: window.defenders,
+                version: "2.0",
+                timestamp: new Date().toISOString()
+            };
+            
+            const jsonString = JSON.stringify(data, null, 2);
+            const blob = new Blob([jsonString], { type: 'application/json' });
+            const url = URL.createObjectURL(blob);
+            
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = `warhammer40k_simulation_${new Date().toISOString().split('T')[0]}.json`;
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            URL.revokeObjectURL(url);
+            
+            showSuccess('JSON-Datei wurde heruntergeladen!');
+        };
+
+        window.importJson = function() {
+            const input = document.createElement('input');
+            input.type = 'file';
+            input.accept = '.json';
+            input.onchange = function(event) {
+                const file = event.target.files[0];
+                if (!file) return;
+                
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    try {
+                        const data = JSON.parse(e.target.result);
+                        
+                        if (data.attackers && data.defenders) {
+                            window.attackers = data.attackers;
+                            window.defenders = data.defenders;
+                            
+                            // Migration für neue Struktur ausführen
+                            migrateAttackerData();
+                            
+                            updateAttackersList();
+                            updateDefendersList();
+                            updateAttackerSelect();
+                            showSuccess('JSON-Daten erfolgreich importiert!');
+                        } else {
+                            showError('Ungültiges JSON-Format. Bitte stellen Sie sicher, dass die Datei Angreifer und Verteidiger enthält.');
+                        }
+                    } catch (error) {
+                        showError('Fehler beim Parsen der JSON-Datei: ' + error.message);
+                    }
+                };
+                reader.readAsText(file);
+            };
+            input.click();
+        };
+
+        // PDF Export Funktion  
+        window.exportResultsToPDF = function() {
+            if (!window.simulationResults || window.simulationResults.length === 0) {
+                showError('Keine Simulationsergebnisse zum Exportieren vorhanden. Führen Sie zuerst eine Simulation durch.');
+                return;
+            }
+
+            const { jsPDF } = window.jspdf;
+            const doc = new jsPDF();
+            
+            let yPos = 20;
+            const pageHeight = doc.internal.pageSize.height;
+            const margin = 20;
+            
+            // Titel
+            doc.setFontSize(16);
+            doc.text('Warhammer 40k Simulationsergebnisse', margin, yPos);
+            yPos += 15;
+            
+            // Datum
+            doc.setFontSize(10);
+            doc.text(`Erstellt am: ${new Date().toLocaleString('de-DE')}`, margin, yPos);
+            yPos += 15;
+
+            // Durchlaufe alle Ergebnisse
+            window.simulationResults.forEach((attackerResult, attackerIndex) => {
+                // Neue Seite wenn nötig
+                if (yPos > pageHeight - 60) {
+                    doc.addPage();
+                    yPos = margin;
+                }
+                
+                // Angreifer-Gruppe
+                doc.setFontSize(14);
+                doc.text(`Angreifer: ${attackerResult.Name}`, margin, yPos);
+                yPos += 10;
+                
+                attackerResult.Target.forEach((targetResult, targetIndex) => {
+                    // Verteidiger-Gruppe
+                    doc.setFontSize(12);
+                    doc.text(`vs. ${targetResult.Name}`, margin + 10, yPos);
+                    yPos += 8;
+                    
+                    // Waffen-Ergebnisse
+                    if (targetResult.Weapons && targetResult.Weapons.length > 0) {
+                        doc.setFontSize(10);
+                        doc.text('Waffen-Statistiken:', margin + 20, yPos);
+                        yPos += 6;
+                        
+                        targetResult.Weapons.forEach(weapon => {
+                            if (yPos > pageHeight - 30) {
+                                doc.addPage();
+                                yPos = margin;
+                            }
+                            
+                            doc.text(`${weapon.Name}:`, margin + 25, yPos);
+                            yPos += 5;
+                            doc.text(`  Treffer: ${weapon.Hits.toFixed(2)}, Wunden: ${weapon.Wounds.toFixed(2)}`, margin + 30, yPos);
+                            yPos += 4;
+                            doc.text(`  Saves: ${weapon.FailedSaves.toFixed(2)}, Schaden: ${weapon.AverageDamage.toFixed(2)}`, margin + 30, yPos);
+                            yPos += 8;
+                        });
+                    }
+                    
+                    // Member-Ergebnisse
+                    if (targetResult.Members && targetResult.Members.length > 0) {
+                        doc.text('Ergebnisse pro Verteidiger:', margin + 20, yPos);
+                        yPos += 6;
+                        
+                        targetResult.Members.forEach(member => {
+                            if (yPos > pageHeight - 25) {
+                                doc.addPage();
+                                yPos = margin;
+                            }
+                            
+                            const leaderText = member.IsLeader ? ' (Leader)' : '';
+                            doc.text(`${member.Name}${leaderText}:`, margin + 25, yPos);
+                            yPos += 5;
+                            doc.text(`  Modelle vernichtet: ${member.ModelsDestroyed.toFixed(2)}/${member.MaximumModels}`, margin + 30, yPos);
+                            yPos += 4;
+                            doc.text(`  Komplette Vernichtung: ${member.CompleteWipeoutChance.toFixed(1)}%`, margin + 30, yPos);
+                            yPos += 8;
+                        });
+                    }
+                    
+                    yPos += 5;
+                });
+                
+                yPos += 10;
+            });
+            
+            // PDF speichern
+            doc.save(`warhammer40k_simulation_${new Date().toISOString().split('T')[0]}.pdf`);
+            showSuccess('PDF-Report wurde heruntergeladen!');
+        };
+
+        // Export Simulation Results to JSON
+        window.exportResultsToJson = function() {
+            if (!window.simulationResults || window.simulationResults.length === 0) {
+                showError('Keine Simulationsergebnisse zum Exportieren vorhanden.');
+                return;
+            }
+            
+            const data = {
+                simulationResults: window.simulationResults,
+                attackers: window.attackers,
+                defenders: window.defenders,
+                version: "2.0",
+                timestamp: new Date().toISOString()
+            };
+            
+            const jsonString = JSON.stringify(data, null, 2);
+            const blob = new Blob([jsonString], { type: 'application/json' });
+            const url = URL.createObjectURL(blob);
+            
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = `warhammer40k_simulation_results_${new Date().toISOString().split('T')[0]}.json`;
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            URL.revokeObjectURL(url);
+            
+            showSuccess('Simulationsergebnisse als JSON-Datei heruntergeladen!');
+        };
+
+        // Simulation ausführen
+        window.runSimulation = function() {
+            console.log('runSimulation called');
+            console.log('Attackers:', window.attackers);
+            console.log('Defenders:', window.defenders);
+            
+            if (window.attackers.length === 0) {
+                showError('Bitte fügen Sie mindestens einen Angreifer hinzu.');
+                return;
+            }
+
+            if (window.defenders.length === 0) {
+                showError('Bitte fügen Sie mindestens einen Verteidiger hinzu.');
+                return;
+            }
+
+            // Prüfen ob alle Angreifer Waffen haben
+            const attackersWithoutWeapons = [];
+            window.attackers.forEach(group => {
+                group.Members.forEach(member => {
+                    if (!member.Weapons || member.Weapons.length === 0) {
+                        attackersWithoutWeapons.push(`${member.Name} (${group.GroupName})`);
+                    }
+                });
+            });
+            
+            if (attackersWithoutWeapons.length > 0) {
+                showError(`Die folgenden Angreifer haben keine Waffen: ${attackersWithoutWeapons.join(', ')}`);
+                return;
+            }
+
+            const amount = parseInt(document.getElementById('simulationAmount').value);
+            console.log('Simulation amount:', amount);
+            
+            // Loading anzeigen
+            document.getElementById('loadingSpinner').classList.add('active');
+
+            // Simulation in nächstem Frame starten (für Loading-Animation)
+            setTimeout(() => {
+                try {
+                    // Konvertiere UI-Gruppen in das für die Simulation erwartete Format
+                    const simulationData = {
+                        Amount: amount,
+                        Attackers: [],
+                        Defenders: []
+                    };
+
+                    // Transformiere Verteidiger-Gruppen in das erwartete Format
+                    window.defenders.forEach(group => {
+                        simulationData.Defenders.push({
+                            Name: group.GroupName,
+                            Members: group.Members.map(member => ({
+                                Name: member.Name,
+                                type: member.type,
+                                isLeader: member.isLeader || false,
+                                toughness: member.toughness,
+                                wounds: member.wounds,
+                                models: member.models,
+                                save: member.save,
+                                invulnerable: member.invulnerable,
+                                Keywords: member.Keywords
+                            }))
+                        });
+                    });
+
+                    // Transformiere Angreifer-Gruppen in das erwartete Format
+                    window.attackers.forEach(group => {
+                        group.Members.forEach(member => {
+                            // Erstelle einen Angreifer für die gesamte Gruppe dieses Mitglieds
+                            const attackerName = `${member.Name} (${group.GroupName})`;
+                                
+                            simulationData.Attackers.push({
+                                Name: attackerName,
+                                Weapons: member.Weapons.map(weapon => ({
+                                    name: weapon.name,
+                                    type: weapon.type,
+                                    attacks: weapon.attacks,
+                                    to_hit: weapon.to_hit,
+                                    strength: weapon.strength,
+                                    ap: weapon.ap,
+                                    damage: weapon.damage,
+                                    Keywords: weapon.Keywords,
+                                    amount: weapon.amount // Don't multiply here - the amount field already represents total weapons
+                                }))
+                            });
+                        });
+                    });
+
+                    console.log('Simulation data:', simulationData);
+                    console.log('runCombatSimulation function type:', typeof window.runCombatSimulation);
+
+                    if (typeof window.runCombatSimulation !== 'function') {
+                        throw new Error('Simulation-Engine nicht verfügbar. Bitte laden Sie die Seite neu.');
+                    }
+
+                    window.simulationResults = window.runCombatSimulation(simulationData);
+                    console.log('Simulation results:', window.simulationResults);
+                    displayResults();
+                    document.getElementById('resultsPanel').style.display = 'block';
+                    
+                    // Zu Ergebnissen scrollen
+                    document.getElementById('resultsPanel').scrollIntoView({ behavior: 'smooth' });
+                    
+                    showSuccess('Simulation erfolgreich abgeschlossen!');
+                } catch (error) {
+                    console.error('Simulation Error:', error);
+                    showError('Fehler bei der Simulation: ' + error.message);
+                } finally {
+                    document.getElementById('loadingSpinner').classList.remove('active');
+                }
+            }, 100);
+        };
+
+        // Ergebnisse anzeigen (komplett neu - sicher gegen undefined-Werte)
+        function displayResults() {
+            const container = document.getElementById('resultsContainer');
+            container.innerHTML = '';
+
+            if (!window.simulationResults || window.simulationResults.length === 0) {
+                container.innerHTML = '<p>Keine Ergebnisse verfügbar.</p>';
+                return;
+            }
+
+            window.simulationResults.forEach((attackerResult, attackerIndex) => {
+                const attackerDiv = document.createElement('div');
+                attackerDiv.className = 'result-section';
+                
+                let attackerHtml = `
+                    <h3>🗡️ ${safeString(attackerResult.Name || 'Unbekannter Angreifer')}</h3>
+                `;
+
+                if (attackerResult.Target && attackerResult.Target.length > 0) {
+                    attackerResult.Target.forEach((targetResult, targetIndex) => {
+                        attackerHtml += `
+                            <div class="target-result">
+                                <h4>🎯 vs. ${safeString(targetResult.Name || 'Unbekannter Verteidiger')}</h4>
+                        `;
+
+                        // Waffen-Ergebnisse (kollabierbar)
+                        if (targetResult.Weapons && targetResult.Weapons.length > 0) {
+                            attackerHtml += `
+                                <div class="weapons-section">
+                                    <button class="collapsible-btn" onclick="toggleCollapsible(this)">
+                                        ⚔️ Waffen-Statistiken (${targetResult.Weapons.length}) 
+                                        <span class="toggle-icon">▼</span>
+                                    </button>
+                                    <div class="collapsible-content">
+                                        <div class="weapons-grid">
+                            `;
+
+                            targetResult.Weapons.forEach((weapon, weaponIndex) => {
+                                attackerHtml += `
+                                    <div class="weapon-card">
+                                        <h5>${safeString(weapon.Name || 'Unbekannte Waffe')}</h5>
+                                        <div class="weapon-stats">
+                                            <div class="stat-item">
+                                                <span class="stat-label">Durchschn. Treffer:</span>
+                                                <span class="stat-value">${safeNumber(weapon.Hits).toFixed(2)}</span>
+                                            </div>
+                                            <div class="stat-item">
+                                                <span class="stat-label">Durchschn. Verwundungen:</span>
+                                                <span class="stat-value">${safeNumber(weapon.Wounds).toFixed(2)}</span>
+                                            </div>
+                                            <div class="stat-item">
+                                                <span class="stat-label">Fehlgeschlagene Saves:</span>
+                                                <span class="stat-value">${safeNumber(weapon.FailedSaves).toFixed(2)}</span>
+                                            </div>
+                                            <div class="stat-item">
+                                                <span class="stat-label">Durchschn. Schaden:</span>
+                                                <span class="stat-value">${safeNumber(weapon.AverageDamage).toFixed(2)}</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                `;
+                            });
+
+                            attackerHtml += `
+                                        </div>
+                                    </div>
+                                </div>
+                            `;
+                        }
+
+                        // Verteidiger-Ergebnisse
+                        if (targetResult.Members && targetResult.Members.length > 0) {
+                            attackerHtml += `
+                                <div class="defenders-section">
+                                    <h5>🛡️ Ergebnisse pro Verteidiger</h5>
+                                    <div class="defenders-grid">
+                            `;
+
+                            targetResult.Members.forEach((member, memberIndex) => {
+                                const leaderIcon = member.IsLeader ? '🎖️ ' : '';
+                                attackerHtml += `
+                                    <div class="defender-card ${member.IsLeader ? 'leader' : ''}">
+                                        <h6>${leaderIcon}${safeString(member.Name || 'Unbekannter Verteidiger')}</h6>
+                                        <div class="defender-stats">
+                                            <div class="stat-item">
+                                                <span class="stat-label">Modelle vernichtet:</span>
+                                                <span class="stat-value">${safeNumber(member.ModelsDestroyed).toFixed(2)}/${safeNumber(member.MaximumModels)}</span>
+                                            </div>
+                                            <div class="stat-item">
+                                                <span class="stat-label">Durchschn. Schaden:</span>
+                                                <span class="stat-value">${safeNumber(member.TotalDamage).toFixed(2)}</span>
+                                            </div>
+                                            <div class="stat-item">
+                                                <span class="stat-label">Komplette Vernichtung:</span>
+                                                <span class="stat-value">${safeNumber(member.CompleteWipeoutChance).toFixed(1)}%</span>
+                                            </div>
+                                        </div>
+                                `;
+
+                                // Kill-Distribution anzeigen
+                                if (member.KillDistribution && member.KillDistribution.length > 0) {
+                                    attackerHtml += `
+                                        <div class="kill-distribution">
+                                            <h6>Wahrscheinlichkeitsverteilung (≥X Kills)</h6>
+                                            <div class="distribution-chart">
+                                    `;
+
+                                    member.KillDistribution.forEach(dist => {
+                                        const barWidth = Math.max(2, dist.percentage); // Mindestens 2% Breite
+                                        attackerHtml += `
+                                            <div class="chart-bar-container">
+                                                <div class="chart-bar" style="width: ${barWidth}%; background-color: #4CAF50;">
+                                                    <span class="bar-label">${dist.percentage.toFixed(1)}%</span>
+                                                </div>
+                                                <span class="bar-text">≥${dist.value}</span>
+                                            </div>
+                                        `;
+                                    });
+
+                                    attackerHtml += `
+                                            </div>
+                                            <div class="distribution-list">
+                                    `;
+
+                                    member.KillDistribution.forEach(dist => {
+                                        attackerHtml += `
+                                            <div class="distribution-item">
+                                                <span>≥${dist.value} Modelle:</span>
+                                                <span>${dist.percentage.toFixed(1)}%</span>
+                                            </div>
+                                        `;
+                                    });
+
+                                    attackerHtml += `
+                                            </div>
+                                        </div>
+                                    `;
+                                }
+
+                                attackerHtml += `</div>`;
+                            });
+
+                            attackerHtml += `
+                                    </div>
+                                </div>
+                            `;
+                        }
+
+                        attackerHtml += `</div>`;
+                    });
+                } else {
+                    attackerHtml += '<p>Keine Ziele verfügbar.</p>';
+                }
+
+                attackerDiv.innerHTML = attackerHtml;
+                container.appendChild(attackerDiv);
+            });
+        }
+
+        // Hilfsfunktionen für sichere Werte
+        function safeString(value) {
+            return (value !== undefined && value !== null) ? String(value) : 'N/A';
+        }
+
+        function safeNumber(value, defaultValue = 0) {
+            return (value !== undefined && value !== null && !isNaN(value)) ? value : defaultValue;
         }
     </script>
 </body>
