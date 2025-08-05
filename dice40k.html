@@ -1090,6 +1090,15 @@
         </div>
     </div>
 
+    <script>
+        // Einfacher Test ohne Module
+        console.log('Basic script loading...');
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log('DOM loaded');
+            document.body.style.backgroundColor = 'red'; // Visueller Test
+        });
+    </script>
+    
     <script type="module">
         import { Dice } from './src/scripts/dice.js';
         import { Attacker, Defender, Weapon } from './src/scripts/units.js';
@@ -1097,6 +1106,17 @@
 
         console.log('Scripts loaded successfully');
         console.log('run function:', typeof run);
+        console.log('Dice class:', typeof Dice);
+        console.log('Attacker class:', typeof Attacker);
+        
+        // Test basic functionality
+        try {
+            const testDice = new Dice();
+            console.log('Dice test roll:', testDice.roll());
+        } catch (error) {
+            console.error('Error testing modules:', error);
+            alert('Fehler beim Testen der JavaScript-Module: ' + error.message);
+        }
 
         // Globale Variablen
         window.attackers = [];
@@ -1104,6 +1124,9 @@
         window.simulationResults = [];
         window.currentWeaponKeywords = [];
         window.currentDefenderKeywords = [];
+
+        // Mache run-Funktion global verfügbar
+        window.runCombatSimulation = run;
 
         // Migration: Stelle sicher, dass alle Angreifer-Mitglieder ein Weapons-Array haben
         function migrateAttackerData() {
@@ -2173,9 +2196,13 @@
                     });
 
                     console.log('Simulation data:', simulationData);
-                    console.log('run function type:', typeof run);
+                    console.log('runCombatSimulation function type:', typeof window.runCombatSimulation);
 
-                    window.simulationResults = run(simulationData);
+                    if (typeof window.runCombatSimulation !== 'function') {
+                        throw new Error('Simulation-Engine nicht verfügbar. Bitte laden Sie die Seite neu.');
+                    }
+
+                    window.simulationResults = window.runCombatSimulation(simulationData);
                     console.log('Simulation results:', window.simulationResults);
                     displayResults();
                     document.getElementById('resultsPanel').style.display = 'block';
