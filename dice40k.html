@@ -1646,7 +1646,7 @@
                 ap: ap,
                 damage: damage,
                 amount: amount,
-                Keywords: [...window.currentWeaponKeywords]
+                Keywords: [...new Set(window.currentWeaponKeywords)] // Entferne Duplikate
             };
 
             // Waffe zum spezifischen Angreifer hinzufügen
@@ -2044,8 +2044,9 @@
             document.getElementById('weaponDamage').value = weapon.damage;
             document.getElementById('weaponAmount').value = weapon.amount;
             
-            // Lade Keywords
-            window.currentWeaponKeywords = [...(weapon.Keywords || [])];
+            // Lade Keywords - entferne Duplikate
+            const uniqueKeywords = [...new Set(weapon.Keywords || [])];
+            window.currentWeaponKeywords = uniqueKeywords;
             updateWeaponKeywordsDisplay();
             
             // Speichere die Indizes für das Update
@@ -2109,7 +2110,7 @@
             weapon.ap = parseInt(document.getElementById('weaponAP').value);
             weapon.damage = document.getElementById('weaponDamage').value;
             weapon.amount = parseInt(document.getElementById('weaponAmount').value) || 1;
-            weapon.Keywords = [...window.currentWeaponKeywords];
+            weapon.Keywords = [...new Set(window.currentWeaponKeywords)]; // Entferne Duplikate
             
             // Reset die Editing-Indizes
             delete window.editingWeaponGroupIndex;
@@ -2181,11 +2182,38 @@
                         const data = JSON.parse(e.target.result);
                         
                         if (data.attackers && data.defenders) {
+                            // Bereinige Keywords vor dem Import
+                            cleanupKeywords(data);
+                            
                             window.attackers = data.attackers;
                             window.defenders = data.defenders;
                             
                             // Migration für neue Struktur ausführen
                             migrateAttackerData();
+                            
+                            updateAttackersList();
+                            updateDefendersList();
+                            updateAttackerSelect();
+                            showSuccess('JSON-Daten erfolgreich importiert!');
+                        } else if (data.Attackers && data.Defenders) {
+                            // Support für das neue Format
+                            // Bereinige Keywords vor dem Import
+                            cleanupKeywords(data);
+                            
+                            // Konvertiere das neue Format in das alte
+                            window.attackers = data.Attackers.map(attacker => ({
+                                GroupName: attacker.Name,
+                                Members: [{
+                                    Name: attacker.Name,
+                                    Count: 1,
+                                    Weapons: attacker.Weapons || []
+                                }]
+                            }));
+                            
+                            window.defenders = data.Defenders.map(defender => ({
+                                GroupName: defender.Name,
+                                Members: [defender]
+                            }));
                             
                             updateAttackersList();
                             updateDefendersList();
@@ -2202,6 +2230,60 @@
             };
             input.click();
         };
+
+        // Funktion zum Bereinigen von Keywords
+        function cleanupKeywords(data) {
+            // Bereinige Angreifer Keywords
+            if (data.attackers) {
+                data.attackers.forEach(group => {
+                    if (group.Members) {
+                        group.Members.forEach(member => {
+                            if (member.Weapons) {
+                                member.Weapons.forEach(weapon => {
+                                    if (weapon.Keywords) {
+                                        weapon.Keywords = [...new Set(weapon.Keywords)];
+                                    }
+                                });
+                            }
+                        });
+                    }
+                });
+            }
+            
+            // Bereinige neues Format
+            if (data.Attackers) {
+                data.Attackers.forEach(attacker => {
+                    if (attacker.Weapons) {
+                        attacker.Weapons.forEach(weapon => {
+                            if (weapon.Keywords) {
+                                weapon.Keywords = [...new Set(weapon.Keywords)];
+                            }
+                        });
+                    }
+                });
+            }
+            
+            // Bereinige Verteidiger Keywords
+            if (data.defenders) {
+                data.defenders.forEach(group => {
+                    if (group.Members) {
+                        group.Members.forEach(member => {
+                            if (member.Keywords) {
+                                member.Keywords = [...new Set(member.Keywords)];
+                            }
+                        });
+                    }
+                });
+            }
+            
+            if (data.Defenders) {
+                data.Defenders.forEach(defender => {
+                    if (defender.Keywords) {
+                        defender.Keywords = [...new Set(defender.Keywords)];
+                    }
+                });
+            }
+        }
 
         // PDF Export Funktion  
         window.exportResultsToPDF = function() {
@@ -2522,14 +2604,33 @@
 
                             targetResult.Members.forEach((member, memberIndex) => {
                                 const leaderIcon = member.IsLeader ? '🎖️ ' : '';
+                                const isSingleModel = member.MaximumModels === 1;
+                                
                                 attackerHtml += `
                                     <div class="defender-card ${member.IsLeader ? 'leader' : ''}">
                                         <h6>${leaderIcon}${safeString(member.Name || 'Unbekannter Verteidiger')}</h6>
                                         <div class="defender-stats">
+                                `;
+                                
+                                if (isSingleModel) {
+                                    // Für Einzelmodelle: Zeige Wunden statt Modelle
+                                    attackerHtml += `
+                                            <div class="stat-item">
+                                                <span class="stat-label">Durchschn. Wunden zugefügt:</span>
+                                                <span class="stat-value">${safeNumber(member.TotalDamage).toFixed(2)}/${member.MaxWounds || 'N/A'}</span>
+                                            </div>
+                                    `;
+                                } else {
+                                    // Für Mehrfachmodelle: Zeige Modelle vernichtet
+                                    attackerHtml += `
                                             <div class="stat-item">
                                                 <span class="stat-label">Modelle vernichtet:</span>
                                                 <span class="stat-value">${safeNumber(member.ModelsDestroyed).toFixed(2)}/${safeNumber(member.MaximumModels)}</span>
                                             </div>
+                                    `;
+                                }
+                                
+                                attackerHtml += `
                                             <div class="stat-item">
                                                 <span class="stat-label">Durchschn. Schaden:</span>
                                                 <span class="stat-value">${safeNumber(member.TotalDamage).toFixed(2)}</span>
@@ -2543,9 +2644,13 @@
 
                                 // Kill-Distribution anzeigen
                                 if (member.KillDistribution && member.KillDistribution.length > 0) {
+                                    const distributionTitle = isSingleModel ? 
+                                        "Wahrscheinlichkeitsverteilung (≥X Wunden)" : 
+                                        "Wahrscheinlichkeitsverteilung (≥X Kills)";
+                                    
                                     attackerHtml += `
                                         <div class="kill-distribution">
-                                            <h6>Wahrscheinlichkeitsverteilung (≥X Kills)</h6>
+                                            <h6>${distributionTitle}</h6>
                                             <div class="distribution-chart">
                                     `;
 
@@ -2567,9 +2672,10 @@
                                     `;
 
                                     member.KillDistribution.forEach(dist => {
+                                        const unit = isSingleModel ? "Wunden" : "Modelle";
                                         attackerHtml += `
                                             <div class="distribution-item">
-                                                <span>≥${dist.value} Modelle:</span>
+                                                <span>≥${dist.value} ${unit}:</span>
                                                 <span>${dist.percentage.toFixed(1)}%</span>
                                             </div>
                                         `;

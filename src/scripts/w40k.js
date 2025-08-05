@@ -10,7 +10,6 @@ export class CombatCalculator {
     // Optimierte Hit-Phase mit besserem Keyword-Handling
     calculateHits(weapon, defender) {
         let attackCount = weapon.getAttacks();
-        console.log(`calculateHits: weapon ${weapon.name}, base attacks: ${attackCount}`);
         let hitTarget = weapon.to_hit;
         let critHitThreshold = 6;
         let rerollType = "none";
@@ -23,7 +22,6 @@ export class CombatCalculator {
         if (weapon.Keywords.some(k => k.toLowerCase().includes("blast"))) {
             const bonusAttacks = Math.floor(defender.models / 5);
             attackCount += bonusAttacks;
-            console.log(`calculateHits: added ${bonusAttacks} blast attacks, total: ${attackCount}`);
         }
         
         // Sammle alle Modifikatoren
@@ -394,19 +392,14 @@ export class OptimizedSimulator {
 
     // Komplett optimierte Einzel-Simulation
     simulateSingleCombat(weapon, defender) {
-        console.log('Starting simulateSingleCombat with:', { weapon: weapon.name, defender });
-        
         // Hit Phase
         const hitResult = this.calculator.calculateHits(weapon, defender);
-        console.log('Hit result:', hitResult);
         
         // Wound Phase
         const woundResult = this.calculator.calculateWounds(weapon, defender, hitResult);
-        console.log('Wound result:', woundResult);
         
         // Save Phase
         const saveResult = this.calculator.calculateSaves(weapon, defender, woundResult);
-        console.log('Save result:', saveResult);
         
         // Feel No Pain Phase
         const fnpResult = this.calculator.calculateFeelNoPain(defender, saveResult.failedSaves);
@@ -673,8 +666,8 @@ function simulateGroupCombat(weaponGroups, defenderGroup, simulationCount) {
                         strength: weapon.strength,
                         ap: weapon.ap,
                         damage: weapon.damage,
-                        Keywords: weapon.Keywords || [],
-                        amount: weapon.amount
+                        Keywords: weapon.Keywords || []
+                        // Don't include amount here - it's handled in the simulation loop
                     });
                 } else {
                     console.log('Using fallback weapon object');
@@ -747,9 +740,7 @@ function simulateGroupCombat(weaponGroups, defenderGroup, simulationCount) {
                 Keywords: sortedMembers[0].Keywords || []
             };
 
-            console.log(`Simulating weapon: ${weapon.displayName}, Amount: ${weapon.amount}, Defender:`, standardDefender);
-            console.log(`Weapon attacks value:`, tempWeapon.attacks);
-            console.log(`getAttacks() result:`, tempWeapon.getAttacks());
+            console.log(`Simulating weapon: ${weapon.displayName}, Amount: ${weapon.amount}`);
 
             // Simuliere diese Waffe entsprechend ihrer amount
             let weaponTotalHits = 0;
@@ -757,25 +748,15 @@ function simulateGroupCombat(weaponGroups, defenderGroup, simulationCount) {
             let weaponTotalFailedSaves = 0;
             let weaponTotalDamage = 0;
 
-            console.log(`Starting simulation loop for ${weapon.amount} weapon instances`);
             // Simuliere die Waffe so oft wie amount angibt
             for (let weaponInstance = 0; weaponInstance < weapon.amount; weaponInstance++) {
-                console.log(`Simulating weapon instance ${weaponInstance + 1}/${weapon.amount}`);
                 const weaponResult = simulator.simulateSingleCombat(tempWeapon, standardDefender);
-                console.log(`Instance ${weaponInstance + 1} result:`, weaponResult);
                 
                 weaponTotalHits += weaponResult.hits;
                 weaponTotalWounds += weaponResult.wounds;
                 weaponTotalFailedSaves += weaponResult.failedSaves;
                 weaponTotalDamage += weaponResult.totalDamage;
             }
-
-            console.log(`Weapon ${weapon.displayName} total result (${weapon.amount}x):`, {
-                hits: weaponTotalHits,
-                wounds: weaponTotalWounds,
-                failedSaves: weaponTotalFailedSaves,
-                totalDamage: weaponTotalDamage
-            });
 
             // Sammle Waffen-Statistiken
             weaponStats[weaponIndex].totalHits += weaponTotalHits;
@@ -802,7 +783,11 @@ function simulateGroupCombat(weaponGroups, defenderGroup, simulationCount) {
 
                     if (defender.currentWounds <= 0) {
                         defender.currentModels--;
-                        defender.currentWounds = defender.wounds; // Nächstes Modell hat volle Wounds
+                        if (defender.currentModels > 0) {
+                            defender.currentWounds = defender.wounds; // Nächstes Modell hat volle Wounds
+                        } else {
+                            defender.currentWounds = 0; // Keine Modelle mehr übrig
+                        }
                     }
                 }
             }
@@ -827,8 +812,22 @@ function simulateGroupCombat(weaponGroups, defenderGroup, simulationCount) {
             }
 
             const modelsKilled = member.models - defenderState[index].currentModels;
-            const damageDealt = (member.models - defenderState[index].currentModels) * member.wounds + 
+            let damageDealt;
+            
+            if (member.models === 1) {
+                // Für Einzelmodelle: Berechne totale Wunden basierend auf verbleibendem Zustand
+                if (defenderState[index].currentModels === 0) {
+                    // Modell ist tot - es hat seine vollen Wunden genommen
+                    damageDealt = member.wounds;
+                } else {
+                    // Modell lebt noch - berechne wie viele Wunden es genommen hat
+                    damageDealt = member.wounds - defenderState[index].currentWounds;
+                }
+            } else {
+                // Für Mehrfachmodelle: Berücksichtige getötete Modelle plus Wunden am aktuellen Modell
+                damageDealt = (member.models - defenderState[index].currentModels) * member.wounds + 
                               (member.wounds - defenderState[index].currentWounds);
+            }
 
             groupTargetResult.Members[index].SimulationResults.push({
                 modelsKilled: modelsKilled,
@@ -854,18 +853,22 @@ function simulateGroupCombat(weaponGroups, defenderGroup, simulationCount) {
         member.TotalDamage = results.reduce((sum, r) => sum + r.damageDealt, 0) / results.length;
         member.CompleteWipeoutChance = (results.filter(r => r.completeWipeout).length / results.length) * 100;
 
-        // Erstelle Kill-Distribution
-        const killCounts = {};
+        // Erstelle Kill-Distribution (oder Wound-Distribution für Einzelmodelle)
+        const isSingleModel = member.MaximumModels === 1;
+        const distributionCounts = {};
+        
         results.forEach(r => {
-            const kills = r.modelsKilled;
-            killCounts[kills] = (killCounts[kills] || 0) + 1;
+            const value = isSingleModel ? Math.min(r.damageDealt, member.MaxWounds) : r.modelsKilled;
+            distributionCounts[value] = (distributionCounts[value] || 0) + 1;
         });
-
+        
         const distributionArray = [];
-        for (let i = 0; i <= member.MaximumModels; i++) {
-            const cumulativeCount = Object.keys(killCounts)
+        const maxValue = isSingleModel ? member.MaxWounds : member.MaximumModels;
+        
+        for (let i = 0; i <= maxValue; i++) {
+            const cumulativeCount = Object.keys(distributionCounts)
                 .filter(k => parseInt(k) >= i)
-                .reduce((sum, k) => sum + killCounts[k], 0);
+                .reduce((sum, k) => sum + distributionCounts[k], 0);
             
             if (cumulativeCount > 0) {
                 const percentage = (cumulativeCount / simulationCount) * 100;
