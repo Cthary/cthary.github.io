@@ -1125,6 +1125,32 @@
             }
         });
 
+        // Utility Functions für UI-Feedback
+        window.showError = function(message) {
+            console.error(message);
+            alert('Fehler: ' + message);
+        };
+
+        window.showSuccess = function(message) {
+            console.log(message);
+            // Temporärer visueller Indikator (könnte später durch Toast-Nachricht ersetzt werden)
+            const tempDiv = document.createElement('div');
+            tempDiv.style.cssText = `
+                position: fixed; top: 20px; right: 20px; 
+                background: linear-gradient(45deg, #28a745, #20c997); 
+                color: white; padding: 10px 15px; border-radius: 5px; 
+                z-index: 10000; font-weight: bold; box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+            `;
+            tempDiv.textContent = message;
+            document.body.appendChild(tempDiv);
+            
+            setTimeout(() => {
+                if (tempDiv.parentNode) {
+                    tempDiv.parentNode.removeChild(tempDiv);
+                }
+            }, 3000);
+        };
+
         // Keyword Modal Functions
         window.showKeywordHelp = function() {
             document.getElementById('keywordModal').style.display = 'block';
@@ -1921,24 +1947,7 @@
                     // Konvertiere UI-Gruppen in das für die Simulation erwartete Format
                     const simulationData = {
                         Amount: amount,
-                        Attackers: window.attackers.map(group => ({
-                            Name: group.GroupName,
-                            Members: group.Members.map(member => ({
-                                Name: member.Name,
-                                Count: member.Count,
-                                Weapons: member.Weapons.map(weapon => ({
-                                    name: weapon.name,
-                                    type: weapon.type,
-                                    attacks: weapon.attacks,
-                                    to_hit: weapon.to_hit,
-                                    strength: weapon.strength,
-                                    ap: weapon.ap,
-                                    damage: weapon.damage,
-                                    Keywords: weapon.Keywords,
-                                    amount: weapon.amount
-                                }))
-                            }))
-                        })),
+                        Attackers: [],
                         Defenders: window.defenders.map(group => ({
                             Name: group.GroupName,
                             Members: group.Members.map(member => ({
@@ -1953,6 +1962,33 @@
                             }))
                         }))
                     };
+
+                    // Transformiere Angreifer-Gruppen in individuelle Angreifer für die Simulation
+                    window.attackers.forEach(group => {
+                        group.Members.forEach(member => {
+                            // Erstelle für jede Instanz des Mitglieds einen separaten Angreifer
+                            for (let i = 0; i < member.Count; i++) {
+                                const attackerName = member.Count > 1 ? 
+                                    `${member.Name} ${i + 1} (${group.GroupName})` : 
+                                    `${member.Name} (${group.GroupName})`;
+                                    
+                                simulationData.Attackers.push({
+                                    Name: attackerName,
+                                    Weapons: member.Weapons.map(weapon => ({
+                                        name: weapon.name,
+                                        type: weapon.type,
+                                        attacks: weapon.attacks,
+                                        to_hit: weapon.to_hit,
+                                        strength: weapon.strength,
+                                        ap: weapon.ap,
+                                        damage: weapon.damage,
+                                        Keywords: weapon.Keywords,
+                                        amount: weapon.amount
+                                    }))
+                                });
+                            }
+                        });
+                    });
 
                     console.log('Simulation data:', simulationData);
                     console.log('run function type:', typeof run);
