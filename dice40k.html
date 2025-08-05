@@ -1039,6 +1039,9 @@
         import { Attacker, Defender, Weapon } from './src/scripts/units.js';
         import run from './src/scripts/w40k.js';
 
+        console.log('Scripts loaded successfully');
+        console.log('run function:', typeof run);
+
         // Globale Variablen
         window.attackers = [];
         window.defenders = [];
@@ -1404,6 +1407,10 @@
 
         // Simulation
         window.runSimulation = function() {
+            console.log('runSimulation called');
+            console.log('Attackers:', window.attackers);
+            console.log('Defenders:', window.defenders);
+            
             if (window.attackers.length === 0) {
                 showError('Bitte fügen Sie mindestens einen Angreifer hinzu.');
                 return;
@@ -1415,13 +1422,14 @@
             }
 
             // Prüfen ob alle Angreifer Waffen haben
-            const attackersWithoutWeapons = window.attackers.filter(a => a.weapons.length === 0);
+            const attackersWithoutWeapons = window.attackers.filter(a => a.Weapons.length === 0);
             if (attackersWithoutWeapons.length > 0) {
-                showError(`Die folgenden Angreifer haben keine Waffen: ${attackersWithoutWeapons.map(a => a.name).join(', ')}`);
+                showError(`Die folgenden Angreifer haben keine Waffen: ${attackersWithoutWeapons.map(a => a.Name).join(', ')}`);
                 return;
             }
 
             const amount = parseInt(document.getElementById('simulationAmount').value);
+            console.log('Simulation amount:', amount);
             
             // Loading anzeigen
             document.getElementById('loadingSpinner').classList.add('active');
@@ -1433,32 +1441,36 @@
                     const simulationData = {
                         Amount: amount,
                         Attackers: window.attackers.map(attacker => ({
-                            Name: attacker.name,
-                            Weapons: attacker.weapons.map(weapon => ({
+                            Name: attacker.Name,
+                            Weapons: attacker.Weapons.map(weapon => ({
                                 name: weapon.name,
                                 type: weapon.type,
                                 attacks: weapon.attacks,
-                                to_hit: weapon.toHit,
+                                to_hit: weapon.to_hit,
                                 strength: weapon.strength,
                                 ap: weapon.ap,
                                 damage: weapon.damage,
-                                Keywords: weapon.keywords,
+                                Keywords: weapon.Keywords,
                                 amount: weapon.amount
                             }))
                         })),
                         Defenders: window.defenders.map(defender => ({
-                            Name: defender.name,
+                            Name: defender.Name,
                             type: "Infantry", // Default type, kann später erweitert werden
                             toughness: defender.toughness,
                             wounds: defender.wounds,
                             models: defender.models,
                             save: defender.save,
-                            invulnerable: defender.invul,
-                            Keywords: defender.keywords
+                            invulnerable: defender.invulnerable,
+                            Keywords: defender.Keywords
                         }))
                     };
 
+                    console.log('Simulation data:', simulationData);
+                    console.log('run function type:', typeof run);
+
                     window.simulationResults = run(simulationData);
+                    console.log('Simulation results:', window.simulationResults);
                     displayResults();
                     document.getElementById('resultsPanel').style.display = 'block';
                     
@@ -1817,434 +1829,7 @@
             setTimeout(() => successDiv.remove(), 3000);
         }
 
-        function showError(message) {
-            const errorDiv = document.createElement('div');
-            errorDiv.className = 'error';
-            errorDiv.textContent = message;
-            document.body.appendChild(errorDiv);
-            setTimeout(() => errorDiv.remove(), 5000);
-        }
 
-        // Neue Klassen-Wrapper für UI-Kompatibilität
-        class UIAttacker {
-            constructor(name) {
-                this.name = name;
-                this.weapons = [];
-            }
-
-            addWeapon(weapon) {
-                this.weapons.push(weapon);
-            }
-
-            removeWeapon(index) {
-                this.weapons.splice(index, 1);
-            }
-
-            toJson() {
-                return {
-                    name: this.name,
-                    weapons: this.weapons.map(w => w.toJson())
-                };
-            }
-        }
-
-        class UIDefender {
-            constructor(name, models, toughness, wounds, save, invul, keywords) {
-                this.name = name;
-                this.models = models;
-                this.toughness = toughness;
-                this.wounds = wounds;
-                this.save = save;
-                this.invul = invul;
-                this.keywords = keywords || [];
-            }
-
-            toJson() {
-                return {
-                    name: this.name,
-                    models: this.models,
-                    toughness: this.toughness,
-                    wounds: this.wounds,
-                    save: this.save,
-                    invul: this.invul,
-                    keywords: this.keywords
-                };
-            }
-        }
-
-        class UIWeapon {
-            constructor(name, type, attacks, toHit, strength, ap, damage, keywords, amount) {
-                this.name = name;
-                this.type = type;
-                this.attacks = attacks;
-                this.toHit = toHit;
-                this.strength = strength;
-                this.ap = ap;
-                this.damage = damage;
-                this.keywords = keywords || [];
-                this.amount = amount || 1;
-            }
-
-            toJson() {
-                return {
-                    name: this.name,
-                    type: this.type,
-                    attacks: this.attacks,
-                    toHit: this.toHit,
-                    strength: this.strength,
-                    ap: this.ap,
-                    damage: this.damage,
-                    keywords: this.keywords,
-                    amount: this.amount
-                };
-            }
-        }
-
-        // UI-Management Funktionen
-        window.addAttacker = function() {
-            const name = document.getElementById('attackerName').value.trim();
-            if (!name) {
-                showError('Bitte geben Sie einen Namen für den Angreifer ein.');
-                return;
-            }
-
-            if (window.attackers.some(a => a.name === name)) {
-                showError('Ein Angreifer mit diesem Namen existiert bereits.');
-                return;
-            }
-
-            const attacker = new UIAttacker(name);
-            window.attackers.push(attacker);
-            document.getElementById('attackerName').value = '';
-            updateAttackersList();
-            updateWeaponAttackerSelect();
-            showSuccess(`Angreifer "${name}" hinzugefügt.`);
-        };
-
-        window.addDefender = function() {
-            const name = document.getElementById('defenderName').value.trim();
-            const models = parseInt(document.getElementById('defenderModels').value) || 1;
-            const toughness = parseInt(document.getElementById('defenderToughness').value) || 4;
-            const wounds = parseInt(document.getElementById('defenderWounds').value) || 1;
-            const save = parseInt(document.getElementById('defenderSave').value) || 6;
-            const invul = parseInt(document.getElementById('defenderInvul').value) || null;
-
-            if (!name) {
-                showError('Bitte geben Sie einen Namen für den Verteidiger ein.');
-                return;
-            }
-
-            if (window.defenders.some(d => d.name === name)) {
-                showError('Ein Verteidiger mit diesem Namen existiert bereits.');
-                return;
-            }
-
-            const defender = new UIDefender(name, models, toughness, wounds, save, invul, [...window.currentDefenderKeywords]);
-            window.defenders.push(defender);
-            
-            // Reset form
-            document.getElementById('defenderName').value = '';
-            document.getElementById('defenderModels').value = '10';
-            document.getElementById('defenderToughness').value = '4';
-            document.getElementById('defenderWounds').value = '1';
-            document.getElementById('defenderSave').value = '6';
-            document.getElementById('defenderInvul').value = '';
-            window.currentDefenderKeywords = [];
-            updateDefenderKeywordsDisplay();
-            updateDefendersList();
-            showSuccess(`Verteidiger "${name}" hinzugefügt.`);
-        };
-
-        window.addWeapon = function() {
-            const attackerName = document.getElementById('weaponAttackerSelect').value;
-            const name = document.getElementById('weaponName').value.trim();
-            const amount = parseInt(document.getElementById('weaponAmount').value) || 1;
-            const type = document.getElementById('weaponType').value;
-            const attacks = document.getElementById('weaponAttacks').value.trim();
-            const toHit = parseInt(document.getElementById('weaponToHit').value) || 4;
-            const strength = parseInt(document.getElementById('weaponStrength').value) || 4;
-            const ap = parseInt(document.getElementById('weaponAP').value) || 0;
-            const damage = document.getElementById('weaponDamage').value.trim();
-
-            if (!attackerName) {
-                showError('Bitte wählen Sie einen Angreifer aus.');
-                return;
-            }
-
-            if (!name) {
-                showError('Bitte geben Sie einen Namen für die Waffe ein.');
-                return;
-            }
-
-            const attacker = window.attackers.find(a => a.name === attackerName);
-            if (!attacker) {
-                showError('Angreifer nicht gefunden.');
-                return;
-            }
-
-            const weapon = new UIWeapon(name, type, attacks, toHit, strength, ap, damage, [...window.currentWeaponKeywords], amount);
-            attacker.addWeapon(weapon);
-
-            // Reset weapon form
-            clearWeaponForm();
-            updateAttackersList();
-            showSuccess(`Waffe "${name}" zu "${attackerName}" hinzugefügt.`);
-        };
-
-        window.clearWeaponForm = function() {
-            document.getElementById('weaponName').value = '';
-            document.getElementById('weaponAmount').value = '1';
-            document.getElementById('weaponType').value = 'Ranged';
-            document.getElementById('weaponAttacks').value = '1';
-            document.getElementById('weaponToHit').value = '4';
-            document.getElementById('weaponStrength').value = '4';
-            document.getElementById('weaponAP').value = '0';
-            document.getElementById('weaponDamage').value = '1';
-            window.currentWeaponKeywords = [];
-            updateWeaponKeywordsDisplay();
-        };
-
-        function updateAttackersList() {
-            const container = document.getElementById('attackersList');
-            container.innerHTML = '';
-
-            window.attackers.forEach((attacker, attackerIndex) => {
-                const attackerDiv = document.createElement('div');
-                attackerDiv.className = 'unit-item';
-                
-                let weaponsHtml = '';
-                attacker.weapons.forEach((weapon, weaponIndex) => {
-                    const keywordsStr = weapon.keywords.length > 0 ? weapon.keywords.join(', ') : 'Keine';
-                    weaponsHtml += `
-                        <div class="weapon-item">
-                            <strong>${weapon.name}</strong> (${weapon.amount}x)<br>
-                            <small>
-                                ${weapon.attacks} Att, ${weapon.toHit}+ Hit, S${weapon.strength}, AP-${weapon.ap}, ${weapon.damage} Dmg<br>
-                                Keywords: ${keywordsStr}
-                            </small>
-                            <button class="btn btn-small btn-danger" onclick="removeWeapon(${attackerIndex}, ${weaponIndex})">Entfernen</button>
-                        </div>
-                    `;
-                });
-
-                attackerDiv.innerHTML = `
-                    <div class="unit-header">
-                        <h3>${attacker.name}</h3>
-                        <button class="btn btn-danger" onclick="removeAttacker(${attackerIndex})">Entfernen</button>
-                    </div>
-                    <div class="weapons-list">
-                        ${weaponsHtml || '<p>Keine Waffen</p>'}
-                    </div>
-                `;
-
-                container.appendChild(attackerDiv);
-            });
-        }
-
-        function updateDefendersList() {
-            const container = document.getElementById('defendersList');
-            container.innerHTML = '';
-
-            window.defenders.forEach((defender, index) => {
-                const defenderDiv = document.createElement('div');
-                defenderDiv.className = 'unit-item';
-                
-                const keywordsStr = defender.keywords.length > 0 ? defender.keywords.join(', ') : 'Keine';
-                const invulStr = defender.invul ? `${defender.invul}++` : 'Keine';
-                
-                defenderDiv.innerHTML = `
-                    <div class="unit-header">
-                        <h3>${defender.name}</h3>
-                        <button class="btn btn-danger" onclick="removeDefender(${index})">Entfernen</button>
-                    </div>
-                    <div class="unit-stats">
-                        <p><strong>Modelle:</strong> ${defender.models}</p>
-                        <p><strong>T${defender.toughness} W${defender.wounds} Sv${defender.save}+ Inv${invulStr}</strong></p>
-                        <p><strong>Keywords:</strong> ${keywordsStr}</p>
-                    </div>
-                `;
-
-                container.appendChild(defenderDiv);
-            });
-        }
-
-        function updateWeaponAttackerSelect() {
-            const select = document.getElementById('weaponAttackerSelect');
-            select.innerHTML = '<option value="">Bitte Angreifer auswählen</option>';
-
-            window.attackers.forEach(attacker => {
-                const option = document.createElement('option');
-                option.value = attacker.name;
-                option.textContent = attacker.name;
-                select.appendChild(option);
-            });
-        }
-
-        window.removeAttacker = function(index) {
-            const attacker = window.attackers[index];
-            if (confirm(`Möchten Sie "${attacker.name}" wirklich entfernen?`)) {
-                window.attackers.splice(index, 1);
-                updateAttackersList();
-                updateWeaponAttackerSelect();
-                showSuccess('Angreifer entfernt.');
-            }
-        };
-
-        window.removeDefender = function(index) {
-            const defender = window.defenders[index];
-            if (confirm(`Möchten Sie "${defender.name}" wirklich entfernen?`)) {
-                window.defenders.splice(index, 1);
-                updateDefendersList();
-                showSuccess('Verteidiger entfernt.');
-            }
-        };
-
-        window.removeWeapon = function(attackerIndex, weaponIndex) {
-            const attacker = window.attackers[attackerIndex];
-            const weapon = attacker.weapons[weaponIndex];
-            if (confirm(`Möchten Sie die Waffe "${weapon.name}" wirklich entfernen?`)) {
-                attacker.removeWeapon(weaponIndex);
-                updateAttackersList();
-                showSuccess('Waffe entfernt.');
-            }
-        };
-
-        window.clearAll = function() {
-            if (confirm('Möchten Sie wirklich alle Angreifer und Verteidiger entfernen?')) {
-                window.attackers = [];
-                window.defenders = [];
-                window.simulationResults = [];
-                window.currentWeaponKeywords = [];
-                window.currentDefenderKeywords = [];
-                updateAttackersList();
-                updateDefendersList();
-                updateWeaponAttackerSelect();
-                updateWeaponKeywordsDisplay();
-                updateDefenderKeywordsDisplay();
-                document.getElementById('resultsPanel').style.display = 'none';
-                showSuccess('Alle Daten zurückgesetzt.');
-            }
-        };
-
-        // JSON Import/Export Funktionen
-        window.exportToFile = function() {
-            const data = {
-                attackers: window.attackers.map(attacker => attacker.toJson()),
-                defenders: window.defenders.map(defender => defender.toJson()),
-                timestamp: new Date().toISOString(),
-                version: "1.0"
-            };
-
-            const jsonString = JSON.stringify(data, null, 2);
-            const blob = new Blob([jsonString], { type: 'application/json' });
-            const url = URL.createObjectURL(blob);
-            
-            const a = document.createElement('a');
-            a.href = url;
-            a.download = `warhammer40k_config_${new Date().toISOString().slice(0,10)}.json`;
-            document.body.appendChild(a);
-            a.click();
-            document.body.removeChild(a);
-            URL.revokeObjectURL(url);
-            
-            showSuccess('Konfiguration erfolgreich als Datei exportiert!');
-        };
-
-        window.importFromFile = function() {
-            const fileInput = document.getElementById('jsonFileInput');
-            const file = fileInput.files[0];
-            
-            if (!file) {
-                showError('Bitte wählen Sie eine Datei aus.');
-                return;
-            }
-
-            const reader = new FileReader();
-            reader.onload = function(e) {
-                try {
-                    const data = JSON.parse(e.target.result);
-                    importConfigData(data);
-                    showSuccess('Konfiguration erfolgreich aus Datei geladen!');
-                    fileInput.value = ''; // Reset file input
-                } catch (error) {
-                    showError('Fehler beim Lesen der Datei: ' + error.message);
-                }
-            };
-            
-            reader.readAsText(file);
-        };
-
-        window.importJson = function() {
-            const jsonText = document.getElementById('jsonImport').value.trim();
-            if (!jsonText) {
-                showError('Bitte geben Sie JSON-Daten ein.');
-                return;
-            }
-
-            try {
-                const data = JSON.parse(jsonText);
-                importConfigData(data);
-                showSuccess('JSON-Konfiguration erfolgreich importiert!');
-                document.getElementById('jsonImport').value = '';
-            } catch (error) {
-                showError('Ungültiges JSON-Format: ' + error.message);
-            }
-        };
-
-        function importConfigData(data) {
-            // Clear existing data
-            window.attackers = [];
-            window.defenders = [];
-            updateAttackersList();
-            updateDefendersList();
-            updateWeaponAttackerSelect();
-
-            // Import attackers
-            if (data.attackers && Array.isArray(data.attackers)) {
-                data.attackers.forEach(attackerData => {
-                    const attacker = new UIAttacker(attackerData.name);
-                    
-                    if (attackerData.weapons && Array.isArray(attackerData.weapons)) {
-                        attackerData.weapons.forEach(weaponData => {
-                            const weapon = new UIWeapon(
-                                weaponData.name,
-                                weaponData.type || 'Ranged',
-                                weaponData.attacks || '1',
-                                weaponData.toHit || 4,
-                                weaponData.strength || 4,
-                                weaponData.ap || 0,
-                                weaponData.damage || '1',
-                                weaponData.keywords || [],
-                                weaponData.amount || 1
-                            );
-                            attacker.addWeapon(weapon);
-                        });
-                    }
-                    
-                    window.attackers.push(attacker);
-                });
-            }
-
-            // Import defenders
-            if (data.defenders && Array.isArray(data.defenders)) {
-                data.defenders.forEach(defenderData => {
-                    const defender = new UIDefender(
-                        defenderData.name,
-                        defenderData.models || 1,
-                        defenderData.toughness || 4,
-                        defenderData.wounds || 1,
-                        defenderData.save || 6,
-                        defenderData.invul || null,
-                        defenderData.keywords || []
-                    );
-                    window.defenders.push(defender);
-                });
-            }
-
-            updateAttackersList();
-            updateDefendersList();
-            updateWeaponAttackerSelect();
-        }
 
         window.showFullJson = function() {
             const data = {
