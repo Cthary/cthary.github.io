@@ -982,6 +982,13 @@
                 </div>
 
                 <div class="form-group">
+                    <label style="display: flex; align-items: center; gap: 10px;">
+                        <input type="checkbox" id="defenderIsLeader" style="margin: 0;">
+                        <span>🎖️ Leader (erhält Schaden zuletzt)</span>
+                    </label>
+                </div>
+
+                <div class="form-group">
                     <label>Anzahl Modelle:</label>
                     <input type="number" id="defenderModels" value="10" min="1">
                 </div>
@@ -1371,6 +1378,7 @@
         window.addDefender = function() {
             const groupName = document.getElementById('defenderGroupName').value.trim();
             const name = document.getElementById('defenderName').value.trim();
+            const isLeader = document.getElementById('defenderIsLeader').checked;
             const models = parseInt(document.getElementById('defenderModels').value);
             const toughness = parseInt(document.getElementById('defenderToughness').value);
             const wounds = parseInt(document.getElementById('defenderWounds').value);
@@ -1402,6 +1410,7 @@
             const member = {
                 Name: name,
                 type: 'Infantry',
+                isLeader: isLeader,
                 models: models,
                 toughness: toughness,
                 wounds: wounds,
@@ -1414,7 +1423,8 @@
 
             clearDefenderForm();
             updateDefendersList();
-            showSuccess(`${models}x ${name} wurde zur Gruppe "${groupName}" hinzugefügt.`);
+            const leaderText = isLeader ? ' (Leader)' : '';
+            showSuccess(`${models}x ${name}${leaderText} wurde zur Gruppe "${groupName}" hinzugefügt.`);
         };
 
         // Waffe hinzufügen
@@ -1523,6 +1533,7 @@
         function clearDefenderForm() {
             document.getElementById('defenderGroupName').value = '';
             document.getElementById('defenderName').value = '';
+            document.getElementById('defenderIsLeader').checked = false;
             document.getElementById('defenderModels').value = '1';
             document.getElementById('defenderToughness').value = '4';
             document.getElementById('defenderWounds').value = '1';
@@ -1755,7 +1766,7 @@
                         <strong>Mitglieder:</strong><br>
                         ${group.Members.map((member, mIndex) => `
                             <div style="margin: 5px 0; padding: 8px; background: rgba(255,255,255,0.03); border-radius: 3px;">
-                                <strong>${member.models}x ${member.Name}</strong><br>
+                                <strong>${member.models}x ${member.Name}${member.isLeader ? ' 🎖️ (Leader)' : ''}</strong><br>
                                 T: ${member.toughness} | W: ${member.wounds} | Save: ${member.save}+ | 
                                 Inv: ${member.invulnerable < 7 ? member.invulnerable + '+' : 'Keine'}<br>
                                 Keywords: ${member.Keywords.join(', ') || 'Keine'}
@@ -2113,11 +2124,17 @@
                     const simulationData = {
                         Amount: amount,
                         Attackers: [],
-                        Defenders: window.defenders.map(group => ({
+                        Defenders: []
+                    };
+
+                    // Transformiere Verteidiger-Gruppen in das erwartete Format
+                    window.defenders.forEach(group => {
+                        simulationData.Defenders.push({
                             Name: group.GroupName,
                             Members: group.Members.map(member => ({
                                 Name: member.Name,
                                 type: member.type,
+                                isLeader: member.isLeader || false,
                                 toughness: member.toughness,
                                 wounds: member.wounds,
                                 models: member.models,
@@ -2125,8 +2142,8 @@
                                 invulnerable: member.invulnerable,
                                 Keywords: member.Keywords
                             }))
-                        }))
-                    };
+                        });
+                    });
 
                     // Transformiere Angreifer-Gruppen in individuelle Angreifer für die Simulation
                     window.attackers.forEach(group => {
@@ -2214,7 +2231,7 @@
                                         const isIndividualModel = safeNumber(member.MaximumModels, 1) === 1;
                                         return `
                                             <div style="background: rgba(255,255,255,0.03); border-radius: 5px; padding: 10px;">
-                                                <strong>${member.Name || 'Unbekannt'}</strong><br>
+                                                <strong>${member.Name || 'Unbekannt'}${member.IsLeader ? ' 🎖️ (Leader)' : ''}</strong><br>
                                                 <div class="stat-row">
                                                     <span class="stat-label">${isIndividualModel ? 'Durchschnittsschaden:' : 'Vernichtete Modelle:'}</span>
                                                     <span class="stat-value">${isIndividualModel ? 

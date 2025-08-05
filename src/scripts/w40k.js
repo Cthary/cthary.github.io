@@ -500,151 +500,230 @@ export class OptimizedSimulator {
     }
 }
 
-// Neue, optimierte Hauptfunktion
+// Neue, optimierte Hauptfunktion mit Gruppen-Support
 function run(jsonData) {
-    const jsonParser = new JsonParser(jsonData);
-    const defenders = jsonParser.getDefenders();
     const simulationCount = jsonData.Amount || 1000;
     const results = [];
 
-    for (let attackerIndex = 0; attackerIndex < jsonData.Attackers.length; attackerIndex++) {
-        const attacker = jsonParser.getAttacker(attackerIndex);
-        const simulator = new OptimizedSimulator();
+    console.log('Simulation Input:', jsonData);
+
+    // Gruppiere Angreifer nach Gruppen zusammen
+    const attackerGroups = {};
+    jsonData.Attackers.forEach(attacker => {
+        // Extrahiere Gruppen-Namen aus dem Angreifer-Namen
+        const match = attacker.Name.match(/\((.*?)\)$/);
+        const groupName = match ? match[1] : 'Einzelkämpfer';
         
-        const attackerResult = {
-            Name: attacker.Name,
+        if (!attackerGroups[groupName]) {
+            attackerGroups[groupName] = {
+                GroupName: groupName,
+                Attackers: [],
+                CombinedWeapons: []
+            };
+        }
+        
+        attackerGroups[groupName].Attackers.push(attacker);
+        attackerGroups[groupName].CombinedWeapons.push(...attacker.Weapons);
+    });
+
+    // Simuliere jeden Angreifer-Gruppe gegen jeden Verteidiger-Gruppe
+    for (const [groupName, attackerGroup] of Object.entries(attackerGroups)) {
+        const groupResult = {
+            Name: `${groupName} (${attackerGroup.Attackers.length} Angreifer)`,
             Target: []
         };
 
-        for (const defender of defenders) {
-            const targetResult = {
-                Name: defender.Name,
-                MaximumModels: defender.models,
-                MaxWounds: defender.wounds,
-                ModelsDestroyed: 0,
-                TotalDamage: 0,
-                CompleteWipeoutChance: 0,
-                KillDistribution: [],
-                Weapons: []
-            };
-
-            let totalDefenderStats = null;
-            let combinedResults = [];
-
-            // Simuliere alle Waffen gemeinsam für korrekte Kombination
-            for (let sim = 0; sim < simulationCount; sim++) {
-                let totalHits = 0;
-                let totalWounds = 0;
-                let totalFailedSaves = 0;
-                let totalDamage = 0;
-                let allDamageInstances = [];
-
-                // Kombiniere alle Waffen in einer Simulation
-                for (let weaponIndex = 0; weaponIndex < attacker.Weapons.length; weaponIndex++) {
-                    const weapon = attacker.getWeapon(weaponIndex);
-                    const weaponResult = simulator.simulateSingleCombat(weapon, defender);
-                    
-                    totalHits += weaponResult.hits;
-                    totalWounds += weaponResult.wounds;
-                    totalFailedSaves += weaponResult.failedSaves;
-                    totalDamage += weaponResult.totalDamage;
-                    allDamageInstances.push(...weaponResult.finalDamageInstances);
-
-                    // Sammle Waffen-Statistiken (nur beim ersten Durchlauf)
-                    if (sim === 0) {
-                        targetResult.Weapons.push({
-                            Name: weapon.name,
-                            Hits: 0, // Wird später berechnet
-                            Wounds: 0,
-                            FailedSaves: 0,
-                            AverageDamage: 0
-                        });
-                    }
-                }
-
-                combinedResults.push({
-                    hits: totalHits,
-                    wounds: totalWounds,
-                    failedSaves: totalFailedSaves,
-                    totalDamage: totalDamage,
-                    finalDamageInstances: allDamageInstances
-                });
-            }
-
-            // Berechne kombinierte Statistiken
-            totalDefenderStats = simulator.calculateStatistics(combinedResults, defender);
-
-            // Aktualisiere Waffen-Statistiken separat
-            for (let weaponIndex = 0; weaponIndex < attacker.Weapons.length; weaponIndex++) {
-                const weapon = attacker.getWeapon(weaponIndex);
-                const weaponResults = simulator.simulateBatch(weapon, defender, simulationCount);
-                const weaponStats = simulator.calculateStatistics(weaponResults, defender);
-
-                targetResult.Weapons[weaponIndex].Hits = weaponStats.averageHits;
-                targetResult.Weapons[weaponIndex].Wounds = weaponStats.averageWounds;
-                targetResult.Weapons[weaponIndex].FailedSaves = weaponStats.averageFailedSaves;
-                targetResult.Weapons[weaponIndex].AverageDamage = weaponStats.averageTotalDamage;
-            }
-
-            if (totalDefenderStats) {
-                targetResult.ModelsDestroyed = totalDefenderStats.averageKills;
-                targetResult.TotalDamage = totalDefenderStats.averageTotalDamage;
-                targetResult.CompleteWipeoutChance = totalDefenderStats.completeWipeoutChance;
-
-                // Konvertiere Kill-Distribution für UI
-                const distributionArray = [];
+        const defenderGroups = jsonData.Defenders || [];
+        
+        for (const defenderGroup of defenderGroups) {
+            if (defenderGroup.Members && defenderGroup.Members.length > 0) {
+                // Simuliere Gruppen-Kampf mit Leader-System
+                const groupTargetResult = simulateGroupCombat(
+                    attackerGroup.CombinedWeapons, 
+                    defenderGroup, 
+                    simulationCount
+                );
                 
-                // Für einzelne Modelle: verwende Damage-Distribution für bessere Granularität
-                if (defender.models === 1 && totalDefenderStats.damageDistribution.size > 0) {
-                    const sortedDamage = Array.from(totalDefenderStats.damageDistribution.keys()).sort((a, b) => a - b);
-                    const maxDamage = Math.max(...sortedDamage);
-                    
-                    for (let i = 0; i <= maxDamage; i++) {
-                        const cumulativeCount = sortedDamage
-                            .filter(d => d >= i)
-                            .reduce((sum, d) => sum + (totalDefenderStats.damageDistribution.get(d) || 0), 0);
-                        
-                        if (cumulativeCount > 0) {
-                            const probability = (cumulativeCount / simulationCount) * 100;
-                            distributionArray.push({
-                                kills: i,
-                                probability: probability,
-                                count: cumulativeCount,
-                                label: `≥${i} Wounds`
-                            });
-                        }
-                    }
-                } else {
-                    // Für Multi-Model-Units: verwende Kill-Distribution
-                    const sortedKills = Array.from(totalDefenderStats.killDistribution.keys()).sort((a, b) => a - b);
-                    
-                    for (let i = 0; i <= Math.max(...sortedKills); i++) {
-                        const cumulativeCount = sortedKills
-                            .filter(k => k >= i)
-                            .reduce((sum, k) => sum + (totalDefenderStats.killDistribution.get(k) || 0), 0);
-                        
-                        if (cumulativeCount > 0) {
-                            const probability = (cumulativeCount / simulationCount) * 100;
-                            distributionArray.push({
-                                kills: i,
-                                probability: probability,
-                                count: cumulativeCount,
-                                label: `≥${i} Models`
-                            });
-                        }
-                    }
-                }
-
-                targetResult.KillDistribution = distributionArray;
+                groupResult.Target.push(groupTargetResult);
             }
-
-            attackerResult.Target.push(targetResult);
         }
 
-        results.push(attackerResult);
+        results.push(groupResult);
     }
 
+    console.log('Simulation Results:', results);
     return results;
+}
+
+// Neue Funktion für Gruppen-Kämpfe mit Leader-System
+function simulateGroupCombat(combinedWeapons, defenderGroup, simulationCount) {
+    const simulator = new OptimizedSimulator();
+    
+    // Sortiere Verteidiger: Leader zuletzt
+    const sortedMembers = [...defenderGroup.Members].sort((a, b) => {
+        if (a.isLeader && !b.isLeader) return 1;
+        if (!a.isLeader && b.isLeader) return -1;
+        return 0;
+    });
+
+    const groupTargetResult = {
+        Name: defenderGroup.Name,
+        Members: [],
+        Weapons: combinedWeapons.map(weapon => ({
+            Name: weapon.name,
+            Hits: 0,
+            Wounds: 0,
+            FailedSaves: 0,
+            AverageDamage: 0
+        }))
+    };
+
+    // Simuliere jede Runde
+    for (let sim = 0; sim < simulationCount; sim++) {
+        // Erstelle Kopie der Verteidiger für diese Simulation
+        const defenderState = sortedMembers.map(member => ({
+            ...member,
+            currentModels: member.models,
+            currentWounds: member.wounds
+        }));
+
+        let totalHits = 0;
+        let totalWounds = 0;
+        let totalFailedSaves = 0;
+        let totalDamage = 0;
+
+        // Simuliere alle Waffen kombiniert
+        for (const weapon of combinedWeapons) {
+            // Erstelle temporäres Weapon-Objekt für Simulation
+            const tempWeapon = {
+                name: weapon.name,
+                type: weapon.type,
+                attacks: weapon.attacks,
+                to_hit: weapon.to_hit,
+                strength: weapon.strength,
+                ap: weapon.ap,
+                damage: weapon.damage,
+                Keywords: weapon.Keywords || [],
+                getAttacks: function() {
+                    if (typeof this.attacks === 'string') {
+                        if (this.attacks.includes('d')) {
+                            // Parse Würfel (z.B. "2d6", "d3")
+                            const parts = this.attacks.toLowerCase().split('d');
+                            const numDice = parts[0] === '' ? 1 : parseInt(parts[0]) || 1;
+                            const sides = parseInt(parts[1]) || 6;
+                            let total = 0;
+                            for (let i = 0; i < numDice; i++) {
+                                total += Math.floor(Math.random() * sides) + 1;
+                            }
+                            return total;
+                        }
+                        return parseInt(this.attacks) || 1;
+                    }
+                    return this.attacks || 1;
+                }
+            };
+
+            // Simuliere diese Waffe
+            const weaponResult = simulator.simulateSingleCombat(tempWeapon, {
+                models: defenderState.reduce((sum, d) => sum + d.currentModels, 0),
+                toughness: sortedMembers[0].toughness, // Nehme erste Toughness als Standard
+                wounds: 1, // Wird später durch Leader-System überschrieben
+                save: sortedMembers[0].save,
+                invulnerable: sortedMembers[0].invulnerable,
+                Keywords: sortedMembers[0].Keywords
+            });
+
+            totalHits += weaponResult.hits;
+            totalWounds += weaponResult.wounds;
+            totalFailedSaves += weaponResult.failedSaves;
+
+            // Verteile Schaden mit Leader-System
+            let remainingDamage = weaponResult.totalDamage;
+            
+            for (const defender of defenderState) {
+                if (remainingDamage <= 0) break;
+                if (defender.currentModels <= 0) continue;
+
+                // Verteile Schaden auf diesen Verteidiger
+                while (remainingDamage > 0 && defender.currentModels > 0) {
+                    const damageToApply = Math.min(remainingDamage, defender.currentWounds);
+                    defender.currentWounds -= damageToApply;
+                    remainingDamage -= damageToApply;
+
+                    if (defender.currentWounds <= 0) {
+                        defender.currentModels--;
+                        defender.currentWounds = defender.wounds; // Nächstes Modell hat volle Wounds
+                    }
+                }
+            }
+
+            totalDamage += (weaponResult.totalDamage - remainingDamage);
+        }
+
+        // Sammle Ergebnisse für diese Simulation
+        sortedMembers.forEach((member, index) => {
+            if (!groupTargetResult.Members[index]) {
+                groupTargetResult.Members[index] = {
+                    Name: member.Name,
+                    MaximumModels: member.models,
+                    MaxWounds: member.wounds,
+                    IsLeader: member.isLeader,
+                    ModelsDestroyed: 0,
+                    TotalDamage: 0,
+                    CompleteWipeoutChance: 0,
+                    KillDistribution: [],
+                    SimulationResults: []
+                };
+            }
+
+            const modelsKilled = member.models - defenderState[index].currentModels;
+            const damageDealt = (member.models - defenderState[index].currentModels) * member.wounds + 
+                              (member.wounds - defenderState[index].currentWounds);
+
+            groupTargetResult.Members[index].SimulationResults.push({
+                modelsKilled: modelsKilled,
+                damageDealt: damageDealt,
+                completeWipeout: defenderState[index].currentModels === 0
+            });
+        });
+    }
+
+    // Berechne finale Statistiken für jedes Member
+    groupTargetResult.Members.forEach(member => {
+        const results = member.SimulationResults;
+        
+        member.ModelsDestroyed = results.reduce((sum, r) => sum + r.modelsKilled, 0) / results.length;
+        member.TotalDamage = results.reduce((sum, r) => sum + r.damageDealt, 0) / results.length;
+        member.CompleteWipeoutChance = (results.filter(r => r.completeWipeout).length / results.length) * 100;
+
+        // Erstelle Kill-Distribution
+        const killCounts = {};
+        results.forEach(r => {
+            const kills = r.modelsKilled;
+            killCounts[kills] = (killCounts[kills] || 0) + 1;
+        });
+
+        const distributionArray = [];
+        for (let i = 0; i <= member.MaximumModels; i++) {
+            const cumulativeCount = Object.keys(killCounts)
+                .filter(k => parseInt(k) >= i)
+                .reduce((sum, k) => sum + killCounts[k], 0);
+            
+            if (cumulativeCount > 0) {
+                const percentage = (cumulativeCount / simulationCount) * 100;
+                distributionArray.push({
+                    value: i,
+                    percentage: percentage,
+                    count: cumulativeCount
+                });
+            }
+        }
+
+        member.KillDistribution = distributionArray;
+        delete member.SimulationResults; // Entferne temporäre Daten
+    });
+
+    return groupTargetResult;
 }
 
 export default run;
