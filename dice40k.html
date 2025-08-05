@@ -813,8 +813,18 @@
                 <h2>🗡️ Angreifer verwalten</h2>
                 
                 <div class="form-group">
+                    <label>Gruppen-Name (z.B. "Space Marine Squad"):</label>
+                    <input type="text" id="attackerGroupName" placeholder="z.B. Space Marine Squad">
+                </div>
+
+                <div class="form-group">
                     <label>Name des Angreifers:</label>
-                    <input type="text" id="attackerName" placeholder="z.B. Space Marine Squad">
+                    <input type="text" id="attackerName" placeholder="z.B. Sergeant, Marine">
+                </div>
+
+                <div class="form-group">
+                    <label>Anzahl dieses Modell-Typs:</label>
+                    <input type="number" id="attackerCount" value="1" min="1" max="20">
                 </div>
 
                 <div class="button-group">
@@ -905,8 +915,13 @@
                 <h2>🛡️ Verteidiger verwalten</h2>
                 
                 <div class="form-group">
+                    <label>Gruppen-Name (z.B. "Space Marine Squad"):</label>
+                    <input type="text" id="defenderGroupName" placeholder="z.B. Space Marine Squad">
+                </div>
+                
+                <div class="form-group">
                     <label>Name des Verteidigers:</label>
-                    <input type="text" id="defenderName" placeholder="z.B. Ork Boyz">
+                    <input type="text" id="defenderName" placeholder="z.B. Sergeant, Marine">
                 </div>
 
                 <div class="form-group">
@@ -1200,26 +1215,53 @@
 
         // Angreifer hinzufügen
         window.addAttacker = function() {
+            const groupName = document.getElementById('attackerGroupName').value.trim();
             const name = document.getElementById('attackerName').value.trim();
+            const count = parseInt(document.getElementById('attackerCount').value) || 1;
+            
+            if (!groupName) {
+                showError('Bitte geben Sie einen Gruppen-Namen ein.');
+                return;
+            }
             if (!name) {
                 showError('Bitte geben Sie einen Namen für den Angreifer ein.');
                 return;
             }
 
-            const attacker = {
+            // Prüfe ob Gruppe bereits existiert
+            let group = window.attackers.find(g => g.GroupName === groupName);
+            
+            if (!group) {
+                // Neue Gruppe erstellen
+                group = {
+                    GroupName: groupName,
+                    Members: [],
+                    Weapons: []
+                };
+                window.attackers.push(group);
+            }
+            
+            // Mitglied zur Gruppe hinzufügen
+            const member = {
                 Name: name,
-                Weapons: []
+                Count: count
             };
-
-            window.attackers.push(attacker);
+            
+            group.Members.push(member);
+            
+            // Formular leeren
+            document.getElementById('attackerGroupName').value = '';
             document.getElementById('attackerName').value = '';
+            document.getElementById('attackerCount').value = '1';
+            
             updateAttackersList();
             updateAttackerSelect();
-            showSuccess(`Angreifer "${name}" wurde hinzugefügt.`);
+            showSuccess(`${count}x ${name} wurde zur Gruppe "${groupName}" hinzugefügt.`);
         };
 
         // Verteidiger hinzufügen
         window.addDefender = function() {
+            const groupName = document.getElementById('defenderGroupName').value.trim();
             const name = document.getElementById('defenderName').value.trim();
             const models = parseInt(document.getElementById('defenderModels').value);
             const toughness = parseInt(document.getElementById('defenderToughness').value);
@@ -1227,12 +1269,29 @@
             const save = parseInt(document.getElementById('defenderSave').value);
             const invul = document.getElementById('defenderInvul').value;
 
+            if (!groupName) {
+                showError('Bitte geben Sie einen Gruppen-Namen ein.');
+                return;
+            }
             if (!name) {
                 showError('Bitte geben Sie einen Namen für den Verteidiger ein.');
                 return;
             }
 
-            const defender = {
+            // Prüfe ob Gruppe bereits existiert
+            let group = window.defenders.find(g => g.GroupName === groupName);
+            
+            if (!group) {
+                // Neue Gruppe erstellen
+                group = {
+                    GroupName: groupName,
+                    Members: []
+                };
+                window.defenders.push(group);
+            }
+            
+            // Mitglied zur Gruppe hinzufügen
+            const member = {
                 Name: name,
                 type: 'Infantry',
                 models: models,
@@ -1242,16 +1301,17 @@
                 invulnerable: invul ? parseInt(invul) : 7,
                 Keywords: [...window.currentDefenderKeywords]
             };
+            
+            group.Members.push(member);
 
-            window.defenders.push(defender);
             clearDefenderForm();
             updateDefendersList();
-            showSuccess(`Verteidiger "${name}" wurde hinzugefügt.`);
+            showSuccess(`${models}x ${name} wurde zur Gruppe "${groupName}" hinzugefügt.`);
         };
 
         // Waffe hinzufügen
         window.addWeapon = function() {
-            const attackerIndex = parseInt(document.getElementById('weaponAttackerSelect').value);
+            const groupIndex = parseInt(document.getElementById('weaponAttackerSelect').value);
             const name = document.getElementById('weaponName').value.trim();
             const type = document.getElementById('weaponType').value;
             const attacks = document.getElementById('weaponAttacks').value.trim();
@@ -1261,8 +1321,8 @@
             const damage = document.getElementById('weaponDamage').value.trim();
             const amount = parseInt(document.getElementById('weaponAmount').value) || 1;
 
-            if (isNaN(attackerIndex)) {
-                showError('Bitte wählen Sie einen Angreifer aus.');
+            if (isNaN(groupIndex)) {
+                showError('Bitte wählen Sie eine Angreifer-Gruppe aus.');
                 return;
             }
 
@@ -1283,19 +1343,28 @@
                 Keywords: [...window.currentWeaponKeywords]
             };
 
-            window.attackers[attackerIndex].Weapons.push(weapon);
+            window.attackers[groupIndex].Weapons.push(weapon);
             clearWeaponForm();
             updateAttackersList();
             
             // Waffen-Menü zuklappen nach dem Hinzufügen
-            const weaponCollapsible = document.querySelector('.collapsible[onclick*="Waffe hinzufügen"]');
-            const weaponContent = weaponCollapsible.nextElementSibling;
-            if (weaponCollapsible.classList.contains('active')) {
-                weaponCollapsible.classList.remove('active');
+            const weaponCollapsible = document.querySelector('button.collapsible');
+            const weaponCollapsibles = document.querySelectorAll('button.collapsible');
+            let weaponMenuCollapsible = null;
+            
+            weaponCollapsibles.forEach(collapsible => {
+                if (collapsible.textContent.includes('Waffe hinzufügen')) {
+                    weaponMenuCollapsible = collapsible;
+                }
+            });
+            
+            if (weaponMenuCollapsible && weaponMenuCollapsible.classList.contains('active')) {
+                const weaponContent = weaponMenuCollapsible.nextElementSibling;
+                weaponMenuCollapsible.classList.remove('active');
                 weaponContent.classList.remove('active');
             }
             
-            showSuccess(`Waffe "${name}" wurde zu ${window.attackers[attackerIndex].Name} hinzugefügt.`);
+            showSuccess(`Waffe "${name}" wurde zur Gruppe "${window.attackers[groupIndex].GroupName}" hinzugefügt.`);
         };
 
         // Keyword-Funktionen
@@ -1476,20 +1545,29 @@
             const container = document.getElementById('attackersList');
             container.innerHTML = '';
 
-            window.attackers.forEach((attacker, index) => {
+            window.attackers.forEach((group, groupIndex) => {
                 const div = document.createElement('div');
                 div.className = 'unit-item';
                 div.innerHTML = `
                     <div class="unit-header">
-                        <div class="unit-name">${attacker.Name}</div>
+                        <div class="unit-name">${group.GroupName}</div>
                         <div class="unit-controls">
-                            <button class="btn btn-small" onclick="editAttacker(${index})">Bearbeiten</button>
-                            <button class="btn btn-small btn-danger" onclick="removeAttacker(${index})">Entfernen</button>
+                            <button class="btn btn-small" onclick="editAttackerGroup(${groupIndex})">Bearbeiten</button>
+                            <button class="btn btn-small btn-danger" onclick="removeAttackerGroup(${groupIndex})">Entfernen</button>
                         </div>
                     </div>
                     <div class="unit-details">
-                        <strong>Waffen (${attacker.Weapons.length}):</strong>
-                        ${attacker.Weapons.map((weapon, wIndex) => `
+                        <strong>Mitglieder:</strong><br>
+                        ${group.Members.map((member, mIndex) => `
+                            <div style="margin: 5px 0; padding: 5px; background: rgba(255,255,255,0.03); border-radius: 3px;">
+                                ${member.Count}x ${member.Name}
+                                <button class="btn btn-small" onclick="editAttackerMember(${groupIndex}, ${mIndex})" style="float: right; margin-left: 5px;">Bearbeiten</button>
+                                <button class="btn btn-small btn-danger" onclick="removeAttackerMember(${groupIndex}, ${mIndex})" style="float: right;">Entfernen</button>
+                            </div>
+                        `).join('')}
+                        
+                        <strong>Waffen (${group.Weapons.length}):</strong>
+                        ${group.Weapons.map((weapon, wIndex) => `
                             <div class="weapon-item">
                                 <div class="weapon-info">
                                     <strong>${weapon.name}</strong> (${weapon.type})<br>
@@ -1497,8 +1575,8 @@
                                     Keywords: ${weapon.Keywords.join(', ') || 'Keine'}
                                 </div>
                                 <div class="weapon-controls">
-                                    <button class="btn btn-small" onclick="editWeapon(${index}, ${wIndex})">Bearbeiten</button>
-                                    <button class="btn btn-small btn-danger" onclick="removeWeapon(${index}, ${wIndex})">Entfernen</button>
+                                    <button class="btn btn-small" onclick="editWeapon(${groupIndex}, ${wIndex})">Bearbeiten</button>
+                                    <button class="btn btn-small btn-danger" onclick="removeWeapon(${groupIndex}, ${wIndex})">Entfernen</button>
                                 </div>
                             </div>
                         `).join('')}
@@ -1512,21 +1590,31 @@
             const container = document.getElementById('defendersList');
             container.innerHTML = '';
 
-            window.defenders.forEach((defender, index) => {
+            window.defenders.forEach((group, groupIndex) => {
                 const div = document.createElement('div');
                 div.className = 'unit-item';
                 div.innerHTML = `
                     <div class="unit-header">
-                        <div class="unit-name">${defender.Name}</div>
+                        <div class="unit-name">${group.GroupName}</div>
                         <div class="unit-controls">
-                            <button class="btn btn-small" onclick="editDefender(${index})">Bearbeiten</button>
-                            <button class="btn btn-small btn-danger" onclick="removeDefender(${index})">Entfernen</button>
+                            <button class="btn btn-small" onclick="editDefenderGroup(${groupIndex})">Bearbeiten</button>
+                            <button class="btn btn-small btn-danger" onclick="removeDefenderGroup(${groupIndex})">Entfernen</button>
                         </div>
                     </div>
                     <div class="unit-details">
-                        Models: ${defender.models} | T: ${defender.toughness} | W: ${defender.wounds} | 
-                        Save: ${defender.save}+ | Inv: ${defender.invulnerable < 7 ? defender.invulnerable + '+' : 'Keine'}<br>
-                        Keywords: ${defender.Keywords.join(', ') || 'Keine'}
+                        <strong>Mitglieder:</strong><br>
+                        ${group.Members.map((member, mIndex) => `
+                            <div style="margin: 5px 0; padding: 8px; background: rgba(255,255,255,0.03); border-radius: 3px;">
+                                <strong>${member.models}x ${member.Name}</strong><br>
+                                T: ${member.toughness} | W: ${member.wounds} | Save: ${member.save}+ | 
+                                Inv: ${member.invulnerable < 7 ? member.invulnerable + '+' : 'Keine'}<br>
+                                Keywords: ${member.Keywords.join(', ') || 'Keine'}
+                                <div style="margin-top: 5px;">
+                                    <button class="btn btn-small" onclick="editDefenderMember(${groupIndex}, ${mIndex})">Bearbeiten</button>
+                                    <button class="btn btn-small btn-danger" onclick="removeDefenderMember(${groupIndex}, ${mIndex})">Entfernen</button>
+                                </div>
+                            </div>
+                        `).join('')}
                     </div>
                 `;
                 container.appendChild(div);
@@ -1535,29 +1623,62 @@
 
         function updateAttackerSelect() {
             const select = document.getElementById('weaponAttackerSelect');
-            select.innerHTML = '<option value="">Bitte Angreifer auswählen</option>';
-            window.attackers.forEach((attacker, index) => {
+            select.innerHTML = '<option value="">Bitte Angreifer-Gruppe auswählen</option>';
+            window.attackers.forEach((group, index) => {
                 const option = document.createElement('option');
                 option.value = index;
-                option.textContent = attacker.Name;
+                option.textContent = group.GroupName;
                 select.appendChild(option);
             });
         }
 
-        // Entfernen-Funktionen
-        window.removeAttacker = function(index) {
-            window.attackers.splice(index, 1);
-            updateAttackersList();
-            updateAttackerSelect();
+        // Entfernen-Funktionen für Gruppen
+        window.removeAttackerGroup = function(groupIndex) {
+            const group = window.attackers[groupIndex];
+            if (confirm(`Möchten Sie die gesamte Gruppe "${group.GroupName}" entfernen?`)) {
+                window.attackers.splice(groupIndex, 1);
+                updateAttackersList();
+                updateAttackerSelect();
+            }
         };
 
-        window.removeDefender = function(index) {
-            window.defenders.splice(index, 1);
-            updateDefendersList();
+        window.removeDefenderGroup = function(groupIndex) {
+            const group = window.defenders[groupIndex];
+            if (confirm(`Möchten Sie die gesamte Gruppe "${group.GroupName}" entfernen?`)) {
+                window.defenders.splice(groupIndex, 1);
+                updateDefendersList();
+            }
         };
 
-        window.removeWeapon = function(attackerIndex, weaponIndex) {
-            window.attackers[attackerIndex].Weapons.splice(weaponIndex, 1);
+        window.removeAttackerMember = function(groupIndex, memberIndex) {
+            const group = window.attackers[groupIndex];
+            const member = group.Members[memberIndex];
+            if (confirm(`Möchten Sie ${member.Count}x ${member.Name} entfernen?`)) {
+                group.Members.splice(memberIndex, 1);
+                // Wenn keine Mitglieder mehr, Gruppe entfernen
+                if (group.Members.length === 0) {
+                    window.attackers.splice(groupIndex, 1);
+                    updateAttackerSelect();
+                }
+                updateAttackersList();
+            }
+        };
+
+        window.removeDefenderMember = function(groupIndex, memberIndex) {
+            const group = window.defenders[groupIndex];
+            const member = group.Members[memberIndex];
+            if (confirm(`Möchten Sie ${member.models}x ${member.Name} entfernen?`)) {
+                group.Members.splice(memberIndex, 1);
+                // Wenn keine Mitglieder mehr, Gruppe entfernen
+                if (group.Members.length === 0) {
+                    window.defenders.splice(groupIndex, 1);
+                }
+                updateDefendersList();
+            }
+        };
+
+        window.removeWeapon = function(groupIndex, weaponIndex) {
+            window.attackers[groupIndex].Weapons.splice(weaponIndex, 1);
             updateAttackersList();
         };
 
@@ -1605,158 +1726,89 @@
             showSuccess('Verteidiger-Daten in das Formular geladen. Bearbeiten Sie die Werte und klicken Sie "Änderungen speichern".');
         };
 
-        window.updateDefender = function(index) {
-            const name = document.getElementById('defenderName').value.trim();
-            const models = parseInt(document.getElementById('defenderModels').value);
-            const toughness = parseInt(document.getElementById('defenderToughness').value);
-            const wounds = parseInt(document.getElementById('defenderWounds').value);
-            const save = parseInt(document.getElementById('defenderSave').value);
-            const invul = document.getElementById('defenderInvul').value;
-
-            if (!name) {
-                showError('Bitte geben Sie einen Namen für den Verteidiger ein.');
-                return;
+        // Bearbeitungs-Funktionen für Gruppen-Mitglieder
+        window.editAttackerMember = function(groupIndex, memberIndex) {
+            const group = window.attackers[groupIndex];
+            const member = group.Members[memberIndex];
+            
+            const newName = prompt('Neuer Name für den Angreifer:', member.Name);
+            if (newName && newName.trim() !== '') {
+                const newCount = parseInt(prompt('Neue Anzahl:', member.Count));
+                if (!isNaN(newCount) && newCount > 0) {
+                    group.Members[memberIndex].Name = newName.trim();
+                    group.Members[memberIndex].Count = newCount;
+                    updateAttackersList();
+                    showSuccess(`Angreifer wurde aktualisiert: ${newCount}x ${newName.trim()}`);
+                }
             }
+        };
 
-            window.defenders[index] = {
-                Name: name,
-                type: 'Infantry',
-                models: models,
-                toughness: toughness,
-                wounds: wounds,
-                save: save,
-                invulnerable: invul ? parseInt(invul) : 7,
-                Keywords: [...window.currentDefenderKeywords]
+        window.editDefenderMember = function(groupIndex, memberIndex) {
+            const group = window.defenders[groupIndex];
+            const member = group.Members[memberIndex];
+            
+            const newName = prompt('Neuer Name für den Verteidiger:', member.Name);
+            if (!newName || newName.trim() === '') return;
+            
+            const newModels = parseInt(prompt('Neue Anzahl Modelle:', member.models));
+            if (isNaN(newModels) || newModels <= 0) return;
+            
+            const newToughness = parseInt(prompt('Neue Toughness:', member.toughness));
+            if (isNaN(newToughness) || newToughness <= 0) return;
+            
+            const newWounds = parseInt(prompt('Neue Wounds:', member.wounds));
+            if (isNaN(newWounds) || newWounds <= 0) return;
+            
+            const newSave = parseInt(prompt('Neuer Save (z.B. 3 für 3+):', member.save));
+            if (isNaN(newSave) || newSave < 2 || newSave > 6) return;
+            
+            const newInvul = prompt('Neuer Invulnerable Save (oder leer für keinen):', member.invulnerable < 7 ? member.invulnerable : '');
+            const invulValue = newInvul && newInvul.trim() !== '' ? parseInt(newInvul) : 7;
+            
+            // Keywords bearbeiten
+            const keywordsString = prompt('Keywords (kommagetrennt):', member.Keywords.join(', '));
+            const keywords = keywordsString ? keywordsString.split(',').map(k => k.trim()).filter(k => k !== '') : [];
+            
+            // Aktualisiere Mitglied
+            group.Members[memberIndex] = {
+                Name: newName.trim(),
+                type: member.type, // Typ bleibt unverändert
+                models: newModels,
+                toughness: newToughness,
+                wounds: newWounds,
+                save: newSave,
+                invulnerable: invulValue,
+                Keywords: keywords
             };
-
-            clearDefenderForm();
+            
             updateDefendersList();
-            showSuccess(`Verteidiger "${name}" wurde aktualisiert.`);
+            showSuccess(`Verteidiger wurde aktualisiert: ${newModels}x ${newName.trim()}`);
         };
 
-        window.editWeapon = function(attackerIndex, weaponIndex) {
-            const weapon = window.attackers[attackerIndex].Weapons[weaponIndex];
+        window.editAttackerGroup = function(groupIndex) {
+            const group = window.attackers[groupIndex];
+            const newName = prompt('Neuer Gruppen-Name:', group.GroupName);
             
-            // Laden der aktuellen Werte in das Formular
-            document.getElementById('weaponAttackerSelect').value = attackerIndex;
-            document.getElementById('weaponName').value = weapon.name;
-            document.getElementById('weaponType').value = weapon.type;
-            document.getElementById('weaponAttacks').value = weapon.attacks;
-            document.getElementById('weaponToHit').value = weapon.to_hit;
-            document.getElementById('weaponStrength').value = weapon.strength;
-            document.getElementById('weaponAP').value = weapon.ap;
-            document.getElementById('weaponDamage').value = weapon.damage;
-            document.getElementById('weaponAmount').value = weapon.amount || 1;
-            
-            // Keywords laden
-            window.currentWeaponKeywords = [...weapon.Keywords];
-            updateWeaponKeywordsDisplay();
-            
-            // Waffen-Menü öffnen
-            const weaponCollapsible = document.querySelector('.collapsible[onclick*="Waffe hinzufügen"]');
-            const weaponContent = weaponCollapsible.nextElementSibling;
-            if (!weaponCollapsible.classList.contains('active')) {
-                weaponCollapsible.classList.add('active');
-                weaponContent.classList.add('active');
-            }
-            
-            // Button-Text ändern
-            const addButton = document.querySelector('button[onclick="addWeapon()"]');
-            const originalText = addButton.textContent;
-            addButton.textContent = 'Änderungen speichern';
-            addButton.onclick = function() {
-                updateWeapon(attackerIndex, weaponIndex);
-                addButton.textContent = originalText;
-                addButton.onclick = window.addWeapon;
-            };
-            
-            showSuccess('Waffen-Daten in das Formular geladen. Bearbeiten Sie die Werte und klicken Sie "Änderungen speichern".');
-        };
-
-        window.updateWeapon = function(attackerIndex, weaponIndex) {
-            const selectedAttackerIndex = parseInt(document.getElementById('weaponAttackerSelect').value);
-            const name = document.getElementById('weaponName').value.trim();
-            const type = document.getElementById('weaponType').value;
-            const attacks = document.getElementById('weaponAttacks').value.trim();
-            const toHit = parseInt(document.getElementById('weaponToHit').value);
-            const strength = parseInt(document.getElementById('weaponStrength').value);
-            const ap = parseInt(document.getElementById('weaponAP').value);
-            const damage = document.getElementById('weaponDamage').value.trim();
-            const amount = parseInt(document.getElementById('weaponAmount').value) || 1;
-
-            if (isNaN(selectedAttackerIndex)) {
-                showError('Bitte wählen Sie einen Angreifer aus.');
-                return;
-            }
-
-            if (!name) {
-                showError('Bitte geben Sie einen Namen für die Waffe ein.');
-                return;
-            }
-
-            const updatedWeapon = {
-                name: name,
-                type: type,
-                attacks: attacks,
-                to_hit: toHit,
-                strength: strength,
-                ap: ap,
-                damage: damage,
-                amount: amount,
-                Keywords: [...window.currentWeaponKeywords]
-            };
-
-            // Falls Angreifer gewechselt wurde, Waffe verschieben
-            if (selectedAttackerIndex !== attackerIndex) {
-                // Waffe vom alten Angreifer entfernen
-                window.attackers[attackerIndex].Weapons.splice(weaponIndex, 1);
-                // Waffe zum neuen Angreifer hinzufügen
-                window.attackers[selectedAttackerIndex].Weapons.push(updatedWeapon);
-                showSuccess(`Waffe "${name}" wurde zu ${window.attackers[selectedAttackerIndex].Name} verschoben und aktualisiert.`);
-            } else {
-                // Waffe beim gleichen Angreifer aktualisieren
-                window.attackers[attackerIndex].Weapons[weaponIndex] = updatedWeapon;
-                showSuccess(`Waffe "${name}" wurde aktualisiert.`);
-            }
-
-            clearWeaponForm();
-            updateAttackersList();
-            
-            // Waffen-Menü zuklappen
-            const weaponCollapsible = document.querySelector('.collapsible[onclick*="Waffe hinzufügen"]');
-            const weaponContent = weaponCollapsible.nextElementSibling;
-            if (weaponCollapsible.classList.contains('active')) {
-                weaponCollapsible.classList.remove('active');
-                weaponContent.classList.remove('active');
+            if (newName && newName.trim() !== '') {
+                window.attackers[groupIndex].GroupName = newName.trim();
+                updateAttackersList();
+                updateAttackerSelect();
+                showSuccess(`Angreifer-Gruppe wurde umbenannt zu "${newName.trim()}".`);
             }
         };
 
-        // Formular-Funktionen
-        function clearDefenderForm() {
-            document.getElementById('defenderName').value = '';
-            document.getElementById('defenderModels').value = '10';
-            document.getElementById('defenderToughness').value = '4';
-            document.getElementById('defenderWounds').value = '1';
-            document.getElementById('defenderSave').value = '6';
-            document.getElementById('defenderInvul').value = '';
-            window.currentDefenderKeywords = [];
-            updateDefenderKeywordsDisplay();
-        }
-
-        window.clearWeaponForm = function() {
-            document.getElementById('weaponName').value = '';
-            document.getElementById('weaponType').value = 'Ranged';
-            document.getElementById('weaponAttacks').value = '1';
-            document.getElementById('weaponToHit').value = '4';
-            document.getElementById('weaponStrength').value = '4';
-            document.getElementById('weaponAP').value = '0';
-            document.getElementById('weaponDamage').value = '1';
-            document.getElementById('weaponAmount').value = '1';
-            window.currentWeaponKeywords = [];
-            updateWeaponKeywordsDisplay();
+        window.editDefenderGroup = function(groupIndex) {
+            const group = window.defenders[groupIndex];
+            const newName = prompt('Neuer Gruppen-Name:', group.GroupName);
+            
+            if (newName && newName.trim() !== '') {
+                window.defenders[groupIndex].GroupName = newName.trim();
+                updateDefendersList();
+                showSuccess(`Verteidiger-Gruppe wurde umbenannt zu "${newName.trim()}".`);
+            }
         };
 
-        // Simulation
+        // Simulation ausführen
         window.runSimulation = function() {
             console.log('runSimulation called');
             console.log('Attackers:', window.attackers);
@@ -1773,9 +1825,9 @@
             }
 
             // Prüfen ob alle Angreifer Waffen haben
-            const attackersWithoutWeapons = window.attackers.filter(a => a.Weapons.length === 0);
-            if (attackersWithoutWeapons.length > 0) {
-                showError(`Die folgenden Angreifer haben keine Waffen: ${attackersWithoutWeapons.map(a => a.Name).join(', ')}`);
+            const groupsWithoutWeapons = window.attackers.filter(g => g.Weapons.length === 0);
+            if (groupsWithoutWeapons.length > 0) {
+                showError(`Die folgenden Angreifer-Gruppen haben keine Waffen: ${groupsWithoutWeapons.map(g => g.GroupName).join(', ')}`);
                 return;
             }
 
@@ -1788,12 +1840,13 @@
             // Simulation in nächstem Frame starten (für Loading-Animation)
             setTimeout(() => {
                 try {
-                    // Konvertiere UI-Klassen in das für die Simulation erwartete Format
+                    // Konvertiere UI-Gruppen in das für die Simulation erwartete Format
                     const simulationData = {
                         Amount: amount,
-                        Attackers: window.attackers.map(attacker => ({
-                            Name: attacker.Name,
-                            Weapons: attacker.Weapons.map(weapon => ({
+                        Attackers: window.attackers.map(group => ({
+                            Name: group.GroupName,
+                            Members: group.Members,
+                            Weapons: group.Weapons.map(weapon => ({
                                 name: weapon.name,
                                 type: weapon.type,
                                 attacks: weapon.attacks,
@@ -1805,15 +1858,18 @@
                                 amount: weapon.amount
                             }))
                         })),
-                        Defenders: window.defenders.map(defender => ({
-                            Name: defender.Name,
-                            type: "Infantry", // Default type, kann später erweitert werden
-                            toughness: defender.toughness,
-                            wounds: defender.wounds,
-                            models: defender.models,
-                            save: defender.save,
-                            invulnerable: defender.invulnerable,
-                            Keywords: defender.Keywords
+                        Defenders: window.defenders.map(group => ({
+                            Name: group.GroupName,
+                            Members: group.Members.map(member => ({
+                                Name: member.Name,
+                                type: member.type,
+                                toughness: member.toughness,
+                                wounds: member.wounds,
+                                models: member.models,
+                                save: member.save,
+                                invulnerable: member.invulnerable,
+                                Keywords: member.Keywords
+                            }))
                         }))
                     };
 
@@ -1850,60 +1906,127 @@
                 let content = `<div class="result-header">🗡️ ${result.Name}</div>`;
                 
                 result.Target.forEach(target => {
-                    content += `
-                        <div style="margin-bottom: 15px; border-left: 3px solid #667eea; padding-left: 10px;">
-                            <div class="result-header" style="font-size: 1rem; margin-bottom: 8px;">
-                                🛡️ vs ${target.Name}
-                            </div>
-                            <div class="stat-row">
-                                <span class="stat-label">${target.MaximumModels === 1 ? 'Durchschnittsschaden:' : 'Vernichtete Modelle:'}</span>
-                                <span class="stat-value">${target.MaximumModels === 1 ? 
-                                    target.TotalDamage.toFixed(2) + ' / ' + target.MaxWounds + ' Wounds' :
-                                    target.ModelsDestroyed.toFixed(2) + ' / ' + target.MaximumModels}</span>
-                            </div>
-                            <div class="stat-row">
-                                <span class="stat-label">${target.MaximumModels === 1 ? 'Lebensenergie verloren:' : 'Vernichtungsrate:'}</span>
-                                <span class="stat-value">${target.MaximumModels === 1 ? 
-                                    ((target.TotalDamage / target.MaxWounds) * 100).toFixed(1) + '%' :
-                                    ((target.ModelsDestroyed / target.MaximumModels) * 100).toFixed(1) + '%'}</span>
-                            </div>
-                            
-                            <div class="stat-row">
-                                <span class="stat-label">${target.MaximumModels === 1 ? 'Komplette Vernichtung:' : 'Komplette Vernichtung:'}</span>
-                                <span class="stat-value">${target.CompleteWipeoutChance.toFixed(1)}%</span>
-                            </div>
-                            
-                            ${target.KillDistribution ? createKillDistributionChart(target) : ''}
-                            
-                            <!-- Aufklappbare Waffen-Details -->
-                            <button class="collapsible" onclick="toggleCollapsible(this)" style="margin-top: 15px;">
-                                ⚔️ Waffen-Details
-                            </button>
-                            <div class="collapsible-content">
-                                ${target.Weapons.map(weapon => `
-                                    <div style="margin: 5px 0; padding: 8px; background: rgba(255,255,255,0.05); border-radius: 3px;">
-                                        <strong>${weapon.Name}:</strong><br>
-                                        <div class="stat-row">
-                                            <span class="stat-label">Durchschn. Treffer:</span>
-                                            <span class="stat-value">${weapon.Hits.toFixed(2)}</span>
+                    // Wenn target.Members existiert (Gruppe), zeige alle Mitglieder nebeneinander
+                    if (target.Members && target.Members.length > 0) {
+                        content += `
+                            <div style="margin-bottom: 20px; border-left: 3px solid #667eea; padding-left: 10px;">
+                                <div class="result-header" style="font-size: 1rem; margin-bottom: 8px;">
+                                    🛡️ vs ${target.Name} (Gruppe)
+                                </div>
+                                
+                                <!-- Gruppen-Mitglieder nebeneinander -->
+                                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 15px; margin-bottom: 15px;">
+                                    ${target.Members.map(member => `
+                                        <div style="background: rgba(255,255,255,0.03); border-radius: 5px; padding: 10px;">
+                                            <strong>${member.Name}</strong><br>
+                                            <div class="stat-row">
+                                                <span class="stat-label">${member.MaximumModels === 1 ? 'Durchschnittsschaden:' : 'Vernichtete Modelle:'}</span>
+                                                <span class="stat-value">${member.MaximumModels === 1 ? 
+                                                    member.TotalDamage.toFixed(2) + ' / ' + member.MaxWounds + ' Wounds' :
+                                                    member.ModelsDestroyed.toFixed(2) + ' / ' + member.MaximumModels}</span>
+                                            </div>
+                                            <div class="stat-row">
+                                                <span class="stat-label">${member.MaximumModels === 1 ? 'Lebensenergie verloren:' : 'Vernichtungsrate:'}</span>
+                                                <span class="stat-value">${member.MaximumModels === 1 ? 
+                                                    ((member.TotalDamage / member.MaxWounds) * 100).toFixed(1) + '%' :
+                                                    ((member.ModelsDestroyed / member.MaximumModels) * 100).toFixed(1) + '%'}</span>
+                                            </div>
+                                            <div class="stat-row">
+                                                <span class="stat-label">Komplette Vernichtung:</span>
+                                                <span class="stat-value">${member.CompleteWipeoutChance.toFixed(1)}%</span>
+                                            </div>
+                                            
+                                            ${member.KillDistribution ? createKillDistributionChart(member) : ''}
                                         </div>
-                                        <div class="stat-row">
-                                            <span class="stat-label">Durchschn. Verwundungen:</span>
-                                            <span class="stat-value">${weapon.Wounds.toFixed(2)}</span>
+                                    `).join('')}
+                                </div>
+                                
+                                <!-- Aufklappbare Waffen-Details -->
+                                <button class="collapsible" onclick="toggleCollapsible(this)" style="margin-top: 15px;">
+                                    ⚔️ Waffen-Details
+                                </button>
+                                <div class="collapsible-content">
+                                    ${target.Weapons.map(weapon => `
+                                        <div style="margin: 5px 0; padding: 8px; background: rgba(255,255,255,0.05); border-radius: 3px;">
+                                            <strong>${weapon.Name}:</strong><br>
+                                            <div class="stat-row">
+                                                <span class="stat-label">Durchschn. Treffer:</span>
+                                                <span class="stat-value">${weapon.Hits.toFixed(2)}</span>
+                                            </div>
+                                            <div class="stat-row">
+                                                <span class="stat-label">Durchschn. Verwundungen:</span>
+                                                <span class="stat-value">${weapon.Wounds.toFixed(2)}</span>
+                                            </div>
+                                            <div class="stat-row">
+                                                <span class="stat-label">Fehlgeschlagene Saves:</span>
+                                                <span class="stat-value">${weapon.FailedSaves.toFixed(2)}</span>
+                                            </div>
+                                            <div class="stat-row">
+                                                <span class="stat-label">Durchschn. Schaden:</span>
+                                                <span class="stat-value">${weapon.AverageDamage.toFixed(2)}</span>
+                                            </div>
                                         </div>
-                                        <div class="stat-row">
-                                            <span class="stat-label">Fehlgeschlagene Saves:</span>
-                                            <span class="stat-value">${weapon.FailedSaves.toFixed(2)}</span>
-                                        </div>
-                                        <div class="stat-row">
-                                            <span class="stat-label">Durchschn. Schaden:</span>
-                                            <span class="stat-value">${weapon.AverageDamage.toFixed(2)}</span>
-                                        </div>
-                                    </div>
-                                `).join('')}
+                                    `).join('')}
+                                </div>
                             </div>
-                        </div>
-                    `;
+                        `;
+                    } else {
+                        // Altes Format für Einzelziele (Rückwärtskompatibilität)
+                        content += `
+                            <div style="margin-bottom: 15px; border-left: 3px solid #667eea; padding-left: 10px;">
+                                <div class="result-header" style="font-size: 1rem; margin-bottom: 8px;">
+                                    🛡️ vs ${target.Name}
+                                </div>
+                                <div class="stat-row">
+                                    <span class="stat-label">${target.MaximumModels === 1 ? 'Durchschnittsschaden:' : 'Vernichtete Modelle:'}</span>
+                                    <span class="stat-value">${target.MaximumModels === 1 ? 
+                                        target.TotalDamage.toFixed(2) + ' / ' + target.MaxWounds + ' Wounds' :
+                                        target.ModelsDestroyed.toFixed(2) + ' / ' + target.MaximumModels}</span>
+                                </div>
+                                <div class="stat-row">
+                                    <span class="stat-label">${target.MaximumModels === 1 ? 'Lebensenergie verloren:' : 'Vernichtungsrate:'}</span>
+                                    <span class="stat-value">${target.MaximumModels === 1 ? 
+                                        ((target.TotalDamage / target.MaxWounds) * 100).toFixed(1) + '%' :
+                                        ((target.ModelsDestroyed / target.MaximumModels) * 100).toFixed(1) + '%'}</span>
+                                </div>
+                                
+                                <div class="stat-row">
+                                    <span class="stat-label">Komplette Vernichtung:</span>
+                                    <span class="stat-value">${target.CompleteWipeoutChance.toFixed(1)}%</span>
+                                </div>
+                                
+                                ${target.KillDistribution ? createKillDistributionChart(target) : ''}
+                                
+                                <!-- Aufklappbare Waffen-Details -->
+                                <button class="collapsible" onclick="toggleCollapsible(this)" style="margin-top: 15px;">
+                                    ⚔️ Waffen-Details
+                                </button>
+                                <div class="collapsible-content">
+                                    ${target.Weapons.map(weapon => `
+                                        <div style="margin: 5px 0; padding: 8px; background: rgba(255,255,255,0.05); border-radius: 3px;">
+                                            <strong>${weapon.Name}:</strong><br>
+                                            <div class="stat-row">
+                                                <span class="stat-label">Durchschn. Treffer:</span>
+                                                <span class="stat-value">${weapon.Hits.toFixed(2)}</span>
+                                            </div>
+                                            <div class="stat-row">
+                                                <span class="stat-label">Durchschn. Verwundungen:</span>
+                                                <span class="stat-value">${weapon.Wounds.toFixed(2)}</span>
+                                            </div>
+                                            <div class="stat-row">
+                                                <span class="stat-label">Fehlgeschlagene Saves:</span>
+                                                <span class="stat-value">${weapon.FailedSaves.toFixed(2)}</span>
+                                            </div>
+                                            <div class="stat-row">
+                                                <span class="stat-label">Durchschn. Schaden:</span>
+                                                <span class="stat-value">${weapon.AverageDamage.toFixed(2)}</span>
+                                            </div>
+                                        </div>
+                                    `).join('')}
+                                </div>
+                            </div>
+                        `;
+                    }
                 });
                 
                 resultDiv.innerHTML = content;
@@ -1911,54 +2034,40 @@
             });
         }
 
-        // Schadenverteilungs-Diagramm erstellen
+        // Chart für Kill/Damage Distribution erstellen
         function createKillDistributionChart(target) {
-            if (!target.KillDistribution || target.KillDistribution.length === 0) return '';
-            
-            console.log('Chart data for', target.Name, ':', target.KillDistribution);
-            
-            // Für einzelne Modelle: niedrigere Schwelle und mehr Details
-            const isSingleModel = target.MaximumModels === 1;
-            const threshold = isSingleModel ? 0.01 : 0.1; // 0.01% für einzelne Modelle, 0.1% für Multi-Model
-            
-            let significantData = target.KillDistribution.filter(d => d.probability > threshold);
-            
-            // Falls immer noch zu wenig Daten: nimm mindestens die top 10 wahrscheinlichsten Werte
-            if (significantData.length < 3 && target.KillDistribution.length > 0) {
-                const sortedData = [...target.KillDistribution]
-                    .sort((a, b) => b.probability - a.probability)
-                    .slice(0, Math.min(10, target.KillDistribution.length));
-                
-                // Merge mit bereits gefilterten Daten
-                const existingKills = new Set(significantData.map(d => d.kills));
-                sortedData.forEach(d => {
-                    if (!existingKills.has(d.kills)) {
-                        significantData.push(d);
-                    }
-                });
+            if (!target.KillDistribution || target.KillDistribution.length === 0) {
+                return '';
             }
+
+            const chartId = 'chart_' + Math.random().toString(36).substr(2, 9);
+            const isIndividualModel = target.MaximumModels === 1;
             
-            // Sortiere nach kills für bessere Darstellung
-            significantData.sort((a, b) => a.kills - b.kills);
+            // Sortiere nach value (kills/damage)
+            const sortedDistribution = [...target.KillDistribution].sort((a, b) => a.value - b.value);
             
-            console.log('Significant data:', significantData);
-            
-            if (significantData.length === 0) return '';
-            
-            const maxProbability = Math.max(...significantData.map(d => d.probability));
-            
+            // Erstelle HTML für das Chart
             let chartHtml = `
                 <div class="chart-container">
-                    <div class="chart-title">${isSingleModel ? 'Kumulative Schadenverteilung (≥X Wounds)' : 'Kumulative Vernichtungsverteilung (≥X Modelle)'}</div>
-                    <div class="bar-chart">
+                    <div class="chart-title">
+                        ${isIndividualModel ? 'Schaden-Verteilung' : 'Vernichtungs-Verteilung'}
+                    </div>
+                    <div class="bar-chart" id="${chartId}">
             `;
             
-            significantData.forEach(data => {
-                const height = Math.max(5, (data.probability / maxProbability) * 90); // Min 5px Höhe
-                const label = `≥${data.kills}`;
+            // Finde Maximalwert für Skalierung
+            const maxPercentage = Math.max(...sortedDistribution.map(d => d.percentage));
+            
+            // Erstelle Balken
+            sortedDistribution.forEach(item => {
+                const barHeight = Math.max(5, (item.percentage / maxPercentage) * 100);
+                const label = isIndividualModel ? 
+                    (item.value === 0 ? '0' : `≥${item.value}`) : 
+                    `${item.value}`;
+                
                 chartHtml += `
-                    <div class="bar" style="height: ${height}px;" title="${data.label}: ${data.probability.toFixed(1)}%">
-                        <span class="bar-label">${label}</span>
+                    <div class="bar" style="height: ${barHeight}%;" title="${item.percentage.toFixed(1)}%">
+                        <div class="bar-label">${label}</div>
                     </div>
                 `;
             });
@@ -1966,20 +2075,13 @@
             chartHtml += `
                     </div>
                     <div class="probability-text">
-                        ${isSingleModel ? '≥X = Mindestens X Wounds verursacht' : '≥X = Mindestens X Modelle getötet'} | Y-Achse: Wahrscheinlichkeit (%)
-                    </div>
-                    
-                    <!-- Detaillierte Werte-Liste -->
-                    <div style="margin-top: 15px;">
-                        <strong>📊 Detaillierte Wahrscheinlichkeiten:</strong>
-                        <div style="margin-top: 10px; max-height: 200px; overflow-y: auto; background: rgba(255,255,255,0.05); border-radius: 5px; padding: 10px;">
-                            ${significantData.map(data => `
-                                <div style="display: flex; justify-content: space-between; padding: 2px 0; border-bottom: 1px solid rgba(255,255,255,0.1);">
-                                    <span>${data.label}:</span>
-                                    <span style="font-weight: bold;">${data.probability.toFixed(1)}%</span>
-                                </div>
-                            `).join('')}
-                        </div>
+                        Wahrscheinlichkeiten (in %):<br>
+                        ${sortedDistribution.map(item => {
+                            const label = isIndividualModel ? 
+                                (item.value === 0 ? '0 Wounds' : `≥${item.value} Wounds`) : 
+                                `${item.value} ${item.value === 1 ? 'Modell' : 'Modelle'}`;
+                            return `${label}: ${item.percentage.toFixed(1)}%`;
+                        }).join(' | ')}
                     </div>
                 </div>
             `;
@@ -1987,505 +2089,6 @@
             return chartHtml;
         }
 
-        // JSON-Funktionen
-        window.importFromFile = function() {
-            const fileInput = document.getElementById('jsonFileInput');
-            const file = fileInput.files[0];
-            
-            if (!file) {
-                showError('Bitte wählen Sie eine JSON-Datei aus.');
-                return;
-            }
-
-            const reader = new FileReader();
-            reader.onload = function(e) {
-                try {
-                    const data = JSON.parse(e.target.result);
-                    
-                    if (data.Attackers) {
-                        window.attackers = data.Attackers;
-                        updateAttackersList();
-                        updateAttackerSelect();
-                    }
-                    
-                    if (data.Defenders) {
-                        window.defenders = data.Defenders;
-                        updateDefendersList();
-                    }
-                    
-                    if (data.Amount) {
-                        document.getElementById('simulationAmount').value = data.Amount;
-                    }
-                    
-                    showSuccess('Konfiguration erfolgreich aus Datei geladen!');
-                    fileInput.value = ''; // Reset file input
-                } catch (error) {
-                    showError('Fehler beim Lesen der Datei: ' + error.message);
-                }
-            };
-            reader.readAsText(file);
-        };
-
-        window.exportToFile = function() {
-            const fullData = {
-                Amount: parseInt(document.getElementById('simulationAmount').value),
-                Attackers: window.attackers,
-                Defenders: window.defenders
-            };
-
-            if (window.attackers.length === 0 && window.defenders.length === 0) {
-                showError('Keine Daten zum Exportieren vorhanden.');
-                return;
-            }
-
-            const dataStr = JSON.stringify(fullData, null, 2);
-            const dataBlob = new Blob([dataStr], {type: 'application/json'});
-            const url = URL.createObjectURL(dataBlob);
-            const link = document.createElement('a');
-            link.href = url;
-            link.download = 'warhammer40k_configuration.json';
-            link.click();
-            URL.revokeObjectURL(url);
-            
-            showSuccess('Konfiguration als Datei gespeichert!');
-        };
-
-        window.showFullJson = function() {
-            const fullData = {
-                Amount: parseInt(document.getElementById('simulationAmount').value),
-                Attackers: window.attackers,
-                Defenders: window.defenders
-            };
-            const json = JSON.stringify(fullData, null, 2);
-            document.getElementById('jsonImport').value = json;
-        };
-
-        window.importJson = function() {
-            const jsonText = document.getElementById('jsonImport').value.trim();
-            if (!jsonText) {
-                showError('Bitte geben Sie JSON-Daten ein.');
-                return;
-            }
-
-            try {
-                const data = JSON.parse(jsonText);
-                
-                if (data.Attackers) {
-                    window.attackers = data.Attackers;
-                    updateAttackersList();
-                    updateAttackerSelect();
-                }
-                
-                if (data.Defenders) {
-                    window.defenders = data.Defenders;
-                    updateDefendersList();
-                }
-                
-                if (data.Amount) {
-                    document.getElementById('simulationAmount').value = data.Amount;
-                }
-                
-                showSuccess('JSON-Daten erfolgreich importiert!');
-            } catch (error) {
-                showError('Fehler beim Parsen der JSON-Daten: ' + error.message);
-            }
-        };
-
-        window.loadExample = function() {
-            const exampleData = {
-                "Amount": 1000,
-                "Attackers": [
-                    {
-                        "Name": "Space Marine Tactical Squad",
-                        "Weapons": [
-                            {
-                                "name": "Bolter",
-                                "type": "Ranged",
-                                "attacks": "2",
-                                "to_hit": 3,
-                                "strength": 4,
-                                "ap": 0,
-                                "damage": "1",
-                                "amount": 1,
-                                "Keywords": ["rapid fire 1"]
-                            },
-                            {
-                                "name": "Chainsword",
-                                "type": "Melee",
-                                "attacks": "3",
-                                "to_hit": 3,
-                                "strength": 4,
-                                "ap": 0,
-                                "damage": "1",
-                                "amount": 1,
-                                "Keywords": []
-                            }
-                        ]
-                    }
-                ],
-                "Defenders": [
-                    {
-                        "Name": "Ork Boyz",
-                        "type": "Infantry",
-                        "models": 10,
-                        "toughness": 5,
-                        "wounds": 1,
-                        "save": 6,
-                        "invulnerable": 7,
-                        "Keywords": []
-                    },
-                    {
-                        "Name": "Chaos Space Marines",
-                        "type": "Infantry",
-                        "models": 5,
-                        "toughness": 4,
-                        "wounds": 2,
-                        "save": 3,
-                        "invulnerable": 7,
-                        "Keywords": []
-                    }
-                ]
-            };
-
-            document.getElementById('jsonImport').value = JSON.stringify(exampleData, null, 2);
-            showSuccess('Beispiel-Daten geladen! Klicken Sie auf "JSON importieren" um sie zu verwenden.');
-        };
-
-        // Export-Funktionen
-        window.exportResults = function() {
-            if (window.simulationResults.length === 0) {
-                showError('Keine Simulationsergebnisse zum Exportieren vorhanden.');
-                return;
-            }
-
-            const dataStr = JSON.stringify(window.simulationResults, null, 2);
-            const dataBlob = new Blob([dataStr], {type: 'application/json'});
-            const url = URL.createObjectURL(dataBlob);
-            const link = document.createElement('a');
-            link.href = url;
-            link.download = 'warhammer40k_simulation_results.json';
-            link.click();
-            URL.revokeObjectURL(url);
-            
-            showSuccess('Ergebnisse erfolgreich exportiert!');
-        };
-
-        // PDF Export-Funktion
-        window.exportResultsToPDF = function() {
-            if (window.simulationResults.length === 0) {
-                showError('Keine Simulationsergebnisse zum Exportieren vorhanden.');
-                return;
-            }
-
-            try {
-                const { jsPDF } = window.jspdf;
-                const doc = new jsPDF();
-                
-                let pageNumber = 1;
-                const pageHeight = doc.internal.pageSize.height;
-                const pageWidth = doc.internal.pageSize.width;
-                const margin = 20;
-                const contentWidth = pageWidth - 2 * margin;
-                
-                // Hilfsfunktionen für PDF-Layout
-                function addHeader(title) {
-                    doc.setFontSize(20);
-                    doc.setFont(undefined, 'bold');
-                    doc.setTextColor(200, 50, 50); // Rot für Warhammer-Theme
-                    // Entferne Emojis für bessere Kompatibilität
-                    const cleanTitle = title.replace(/[⚔️🗡️🛡️📊📈⚔️📄🎯🚀]/g, '');
-                    doc.text(cleanTitle, margin, 30);
-                    
-                    doc.setFontSize(12);
-                    doc.setFont(undefined, 'normal');
-                    doc.setTextColor(100, 100, 100);
-                    doc.text(`Generiert am: ${new Date().toLocaleDateString('de-DE')}`, margin, 40);
-                    doc.text(`Seite ${pageNumber}`, pageWidth - margin - 30, 40);
-                    
-                    return 50; // Return Y-position for content start
-                }
-                
-                function addFooter() {
-                    doc.setFontSize(10);
-                    doc.setTextColor(150, 150, 150);
-                    doc.text('Warhammer 40k 10th Edition Kampfsimulator', margin, pageHeight - 10);
-                    pageNumber++;
-                }
-                
-                function checkPageBreak(currentY, neededSpace) {
-                    if (currentY + neededSpace > pageHeight - 30) {
-                        addFooter();
-                        doc.addPage();
-                        return addHeader('Fortsetzung');
-                    }
-                    return currentY;
-                }
-                
-                function addSectionTitle(title, y) {
-                    doc.setFontSize(14);
-                    doc.setFont(undefined, 'bold');
-                    doc.setTextColor(0, 0, 0);
-                    // Entferne Emojis
-                    const cleanTitle = title.replace(/[⚔️🗡️🛡️📊📈⚔️📄🎯🚀]/g, '');
-                    doc.text(cleanTitle, margin, y);
-                    return y + 10;
-                }
-                
-                function addText(text, x, y, maxWidth = contentWidth) {
-                    doc.setFontSize(10);
-                    doc.setFont(undefined, 'normal');
-                    doc.setTextColor(0, 0, 0);
-                    // Bessere Textverarbeitung mit Umbruch
-                    const lines = doc.splitTextToSize(text, maxWidth);
-                    doc.text(lines, x, y);
-                    return y + (lines.length * 5) + 2;
-                }
-                
-                function addKeyValuePair(key, value, x, y, maxWidth = contentWidth - 50) {
-                    doc.setFont(undefined, 'bold');
-                    doc.setFontSize(10);
-                    const keyText = `${key}:`;
-                    doc.text(keyText, x, y);
-                    
-                    doc.setFont(undefined, 'normal');
-                    const valueText = value.toString();
-                    // Prüfe ob der Text zu lang ist
-                    const keyWidth = doc.getTextWidth(keyText);
-                    const availableWidth = maxWidth - keyWidth - 5;
-                    
-                    if (doc.getTextWidth(valueText) > availableWidth) {
-                        const lines = doc.splitTextToSize(valueText, availableWidth);
-                        doc.text(lines, x + keyWidth + 5, y);
-                        return y + (lines.length * 5) + 1;
-                    } else {
-                        doc.text(valueText, x + keyWidth + 5, y);
-                        return y + 6;
-                    }
-                }
-
-                // Seite 1: Angreifer-Übersicht
-                let currentY = addHeader('Warhammer 40k Simulation Report');
-                
-                currentY = addSectionTitle('Angreifer-Uebersicht', currentY + 10);
-                
-                window.attackers.forEach((attacker, index) => {
-                    currentY = checkPageBreak(currentY, 80);
-                    
-                    // Angreifer-Name
-                    doc.setFontSize(12);
-                    doc.setFont(undefined, 'bold');
-                    doc.setTextColor(50, 50, 150);
-                    doc.text(`${index + 1}. ${attacker.Name}`, margin, currentY);
-                    currentY += 10;
-                    
-                    // Waffen
-                    if (attacker.Weapons.length > 0) {
-                        currentY = addText('Waffen:', margin + 5, currentY);
-                        
-                        attacker.Weapons.forEach((weapon, wIndex) => {
-                            currentY = checkPageBreak(currentY, 35);
-                            
-                            doc.setFontSize(10);
-                            doc.setFont(undefined, 'bold');
-                            doc.text(`• ${weapon.name} (${weapon.type})`, margin + 10, currentY);
-                            currentY += 6;
-                            
-                            currentY = addKeyValuePair('Attacks', weapon.attacks, margin + 15, currentY);
-                            currentY = addKeyValuePair('To Hit', `${weapon.to_hit}+`, margin + 15, currentY);
-                            currentY = addKeyValuePair('Strength', weapon.strength, margin + 15, currentY);
-                            currentY = addKeyValuePair('AP', `-${weapon.ap}`, margin + 15, currentY);
-                            currentY = addKeyValuePair('Damage', weapon.damage, margin + 15, currentY);
-                            currentY = addKeyValuePair('Amount', weapon.amount, margin + 15, currentY);
-                            
-                            if (weapon.Keywords.length > 0) {
-                                currentY = addKeyValuePair('Keywords', weapon.Keywords.join(', '), margin + 15, currentY, contentWidth - 60);
-                            }
-                            currentY += 5;
-                        });
-                    } else {
-                        currentY = addText('Keine Waffen definiert', margin + 5, currentY);
-                    }
-                    currentY += 10;
-                });
-                
-                // Verteidiger-Übersicht
-                currentY = checkPageBreak(currentY, 40);
-                currentY = addSectionTitle('Verteidiger-Uebersicht', currentY + 10);
-                
-                window.defenders.forEach((defender, index) => {
-                    currentY = checkPageBreak(currentY, 40);
-                    
-                    doc.setFontSize(12);
-                    doc.setFont(undefined, 'bold');
-                    doc.setTextColor(50, 150, 50);
-                    doc.text(`${index + 1}. ${defender.Name}`, margin, currentY);
-                    currentY += 10;
-                    
-                    currentY = addKeyValuePair('Models', defender.models, margin + 5, currentY);
-                    currentY = addKeyValuePair('Toughness', defender.toughness, margin + 5, currentY);
-                    currentY = addKeyValuePair('Wounds', defender.wounds, margin + 5, currentY);
-                    currentY = addKeyValuePair('Save', `${defender.save}+`, margin + 5, currentY);
-                    if (defender.invulnerable < 7) {
-                        currentY = addKeyValuePair('Invulnerable', `${defender.invulnerable}+`, margin + 5, currentY);
-                    }
-                    if (defender.Keywords.length > 0) {
-                        currentY = addKeyValuePair('Keywords', defender.Keywords.join(', '), margin + 5, currentY, contentWidth - 40);
-                    }
-                    currentY += 10;
-                });
-
-                // Für jedes Simulationsergebnis eine neue Seite
-                window.simulationResults.forEach((result, resultIndex) => {
-                    result.Target.forEach((target, targetIndex) => {
-                        addFooter();
-                        doc.addPage();
-                        
-                        currentY = addHeader(`${result.Name} vs ${target.Name}`);
-                        
-                        // Kernstatistiken
-                        currentY = addSectionTitle('Ergebnisse', currentY + 10);
-                        
-                        const isSingleModel = target.MaximumModels === 1;
-                        
-                        if (isSingleModel) {
-                            currentY = addKeyValuePair('Durchschnittsschaden', `${target.TotalDamage.toFixed(2)} / ${target.MaxWounds} Wounds`, margin, currentY);
-                            currentY = addKeyValuePair('Lebensenergie verloren', `${((target.TotalDamage / target.MaxWounds) * 100).toFixed(1)}%`, margin, currentY);
-                        } else {
-                            currentY = addKeyValuePair('Vernichtete Modelle', `${target.ModelsDestroyed.toFixed(2)} / ${target.MaximumModels}`, margin, currentY);
-                            currentY = addKeyValuePair('Vernichtungsrate', `${((target.ModelsDestroyed / target.MaximumModels) * 100).toFixed(1)}%`, margin, currentY);
-                        }
-                        
-                        currentY = addKeyValuePair('Komplette Vernichtung', `${target.CompleteWipeoutChance.toFixed(1)}%`, margin, currentY);
-                        currentY += 10;
-                        
-                        // Waffen-Details
-                        currentY = addSectionTitle('Waffen-Performance', currentY);
-                        
-                        target.Weapons.forEach((weapon, wIndex) => {
-                            currentY = checkPageBreak(currentY, 50);
-                            
-                            doc.setFontSize(11);
-                            doc.setFont(undefined, 'bold');
-                            doc.text(`${weapon.Name}:`, margin, currentY);
-                            currentY += 8;
-                            
-                            currentY = addKeyValuePair('Durchschn. Treffer', weapon.Hits.toFixed(2), margin + 5, currentY);
-                            currentY = addKeyValuePair('Durchschn. Verwundungen', weapon.Wounds.toFixed(2), margin + 5, currentY);
-                            currentY = addKeyValuePair('Fehlgeschlagene Saves', weapon.FailedSaves.toFixed(2), margin + 5, currentY);
-                            currentY = addKeyValuePair('Durchschn. Schaden', weapon.AverageDamage.toFixed(2), margin + 5, currentY);
-                            currentY += 5;
-                        });
-                        
-                        // Verteilungsdiagramm als Text
-                        if (target.KillDistribution && target.KillDistribution.length > 0) {
-                            currentY = checkPageBreak(currentY, 80);
-                            currentY = addSectionTitle('Wahrscheinlichkeitsverteilung', currentY + 10);
-                            
-                            const threshold = isSingleModel ? 0.01 : 0.1;
-                            let significantData = target.KillDistribution.filter(d => d.probability > threshold);
-                            
-                            if (significantData.length < 3 && target.KillDistribution.length > 0) {
-                                const sortedData = [...target.KillDistribution]
-                                    .sort((a, b) => b.probability - a.probability)
-                                    .slice(0, Math.min(10, target.KillDistribution.length));
-                                
-                                const existingKills = new Set(significantData.map(d => d.kills));
-                                sortedData.forEach(d => {
-                                    if (!existingKills.has(d.kills)) {
-                                        significantData.push(d);
-                                    }
-                                });
-                            }
-                            
-                            significantData.sort((a, b) => a.kills - b.kills);
-                            
-                            significantData.forEach(data => {
-                                currentY = checkPageBreak(currentY, 8);
-                                const label = isSingleModel ? 
-                                    `>=${data.kills} Wounds` : 
-                                    `>=${data.kills} Modelle`;
-                                currentY = addKeyValuePair(label, `${data.probability.toFixed(1)}%`, margin, currentY);
-                            });
-                        }
-                    });
-                });
-                
-                addFooter();
-                
-                // PDF speichern
-                const timestamp = new Date().toISOString().slice(0, 19).replace(/[T:]/g, '_');
-                const filename = `Warhammer40k_Report_${timestamp}.pdf`;
-                doc.save(filename);
-                
-                showSuccess('PDF-Report erfolgreich erstellt und heruntergeladen!');
-                
-            } catch (error) {
-                console.error('PDF Export Error:', error);
-                showError('Fehler beim Erstellen des PDF-Reports: ' + error.message);
-            }
-        };
-
-        // Utility-Funktionen
-        window.clearAll = function() {
-            if (confirm('Möchten Sie wirklich alle Daten zurücksetzen?')) {
-                window.attackers = [];
-                window.defenders = [];
-                window.simulationResults = [];
-                window.currentWeaponKeywords = [];
-                window.currentDefenderKeywords = [];
-                
-                updateAttackersList();
-                updateDefendersList();
-                updateAttackerSelect();
-                updateWeaponKeywordsDisplay();
-                updateDefenderKeywordsDisplay();
-                
-                document.getElementById('jsonImport').value = '';
-                document.getElementById('resultsPanel').style.display = 'none';
-                
-                showSuccess('Alle Daten wurden zurückgesetzt.');
-            }
-        };
-
-        function showError(message) {
-            const errorDiv = document.createElement('div');
-            errorDiv.className = 'error';
-            errorDiv.textContent = message;
-            document.body.appendChild(errorDiv);
-            setTimeout(() => errorDiv.remove(), 5000);
-        }
-
-        function showSuccess(message) {
-            const successDiv = document.createElement('div');
-            successDiv.className = 'success';
-            successDiv.textContent = message;
-            document.body.appendChild(successDiv);
-            setTimeout(() => successDiv.remove(), 3000);
-        }
-
-
-
-        // Enter-Taste für Keyword-Eingaben (nach DOM-Load)
-        document.addEventListener('DOMContentLoaded', function() {
-            const weaponKeywordInput = document.getElementById('weaponKeywordInput');
-            const defenderKeywordInput = document.getElementById('defenderKeywordInput');
-            
-            if (weaponKeywordInput) {
-                weaponKeywordInput.addEventListener('keypress', function(e) {
-                    if (e.key === 'Enter') {
-                        window.addWeaponKeyword();
-                    }
-                });
-            }
-            
-            if (defenderKeywordInput) {
-                defenderKeywordInput.addEventListener('keypress', function(e) {
-                    if (e.key === 'Enter') {
-                        window.addDefenderKeyword();
-                    }
-                });
-            }
-        });
     </script>
 </body>
 </html>
