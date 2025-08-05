@@ -295,6 +295,29 @@
             padding: 10px;
             margin: 5px 0;
             border-radius: 0 5px 5px 0;
+            position: relative;
+            min-height: 60px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .weapon-info {
+            flex: 1;
+            margin-bottom: 8px;
+        }
+
+        .weapon-controls {
+            display: flex;
+            gap: 5px;
+            justify-content: flex-end;
+            align-items: center;
+        }
+
+        .weapon-controls .btn-small {
+            padding: 4px 8px;
+            font-size: 11px;
+            min-width: 60px;
         }
 
         .results-panel {
@@ -1468,10 +1491,12 @@
                         <strong>Waffen (${attacker.Weapons.length}):</strong>
                         ${attacker.Weapons.map((weapon, wIndex) => `
                             <div class="weapon-item">
-                                <strong>${weapon.name}</strong> (${weapon.type})<br>
-                                A: ${weapon.attacks} | Hit: ${weapon.to_hit}+ | S: ${weapon.strength} | AP: -${weapon.ap} | D: ${weapon.damage} | Amount: ${weapon.amount}<br>
-                                Keywords: ${weapon.Keywords.join(', ') || 'Keine'}
-                                <div style="float: right; margin-top: 5px;">
+                                <div class="weapon-info">
+                                    <strong>${weapon.name}</strong> (${weapon.type})<br>
+                                    A: ${weapon.attacks} | Hit: ${weapon.to_hit}+ | S: ${weapon.strength} | AP: -${weapon.ap} | D: ${weapon.damage} | Amount: ${weapon.amount}<br>
+                                    Keywords: ${weapon.Keywords.join(', ') || 'Keine'}
+                                </div>
+                                <div class="weapon-controls">
                                     <button class="btn btn-small" onclick="editWeapon(${index}, ${wIndex})">Bearbeiten</button>
                                     <button class="btn btn-small btn-danger" onclick="removeWeapon(${index}, ${wIndex})">Entfernen</button>
                                 </div>
@@ -2167,13 +2192,15 @@
                     doc.setFontSize(20);
                     doc.setFont(undefined, 'bold');
                     doc.setTextColor(200, 50, 50); // Rot für Warhammer-Theme
-                    doc.text(title, margin, 30);
+                    // Entferne Emojis für bessere Kompatibilität
+                    const cleanTitle = title.replace(/[⚔️🗡️🛡️📊📈⚔️📄🎯🚀]/g, '');
+                    doc.text(cleanTitle, margin, 30);
                     
                     doc.setFontSize(12);
                     doc.setFont(undefined, 'normal');
                     doc.setTextColor(100, 100, 100);
                     doc.text(`Generiert am: ${new Date().toLocaleDateString('de-DE')}`, margin, 40);
-                    doc.text(`Seite ${pageNumber}`, pageWidth - margin - 20, 40);
+                    doc.text(`Seite ${pageNumber}`, pageWidth - margin - 30, 40);
                     
                     return 50; // Return Y-position for content start
                 }
@@ -2198,7 +2225,9 @@
                     doc.setFontSize(14);
                     doc.setFont(undefined, 'bold');
                     doc.setTextColor(0, 0, 0);
-                    doc.text(title, margin, y);
+                    // Entferne Emojis
+                    const cleanTitle = title.replace(/[⚔️🗡️🛡️📊📈⚔️📄🎯🚀]/g, '');
+                    doc.text(cleanTitle, margin, y);
                     return y + 10;
                 }
                 
@@ -2206,45 +2235,60 @@
                     doc.setFontSize(10);
                     doc.setFont(undefined, 'normal');
                     doc.setTextColor(0, 0, 0);
+                    // Bessere Textverarbeitung mit Umbruch
                     const lines = doc.splitTextToSize(text, maxWidth);
                     doc.text(lines, x, y);
-                    return y + (lines.length * 5);
+                    return y + (lines.length * 5) + 2;
                 }
                 
-                function addKeyValuePair(key, value, x, y) {
+                function addKeyValuePair(key, value, x, y, maxWidth = contentWidth - 50) {
                     doc.setFont(undefined, 'bold');
-                    doc.text(`${key}:`, x, y);
+                    doc.setFontSize(10);
+                    const keyText = `${key}:`;
+                    doc.text(keyText, x, y);
+                    
                     doc.setFont(undefined, 'normal');
-                    doc.text(value.toString(), x + 40, y);
-                    return y + 6;
+                    const valueText = value.toString();
+                    // Prüfe ob der Text zu lang ist
+                    const keyWidth = doc.getTextWidth(keyText);
+                    const availableWidth = maxWidth - keyWidth - 5;
+                    
+                    if (doc.getTextWidth(valueText) > availableWidth) {
+                        const lines = doc.splitTextToSize(valueText, availableWidth);
+                        doc.text(lines, x + keyWidth + 5, y);
+                        return y + (lines.length * 5) + 1;
+                    } else {
+                        doc.text(valueText, x + keyWidth + 5, y);
+                        return y + 6;
+                    }
                 }
 
                 // Seite 1: Angreifer-Übersicht
-                let currentY = addHeader('⚔️ Warhammer 40k Simulation Report');
+                let currentY = addHeader('Warhammer 40k Simulation Report');
                 
-                currentY = addSectionTitle('🗡️ Angreifer-Übersicht', currentY + 10);
+                currentY = addSectionTitle('Angreifer-Uebersicht', currentY + 10);
                 
                 window.attackers.forEach((attacker, index) => {
-                    currentY = checkPageBreak(currentY, 60);
+                    currentY = checkPageBreak(currentY, 80);
                     
                     // Angreifer-Name
                     doc.setFontSize(12);
                     doc.setFont(undefined, 'bold');
                     doc.setTextColor(50, 50, 150);
                     doc.text(`${index + 1}. ${attacker.Name}`, margin, currentY);
-                    currentY += 8;
+                    currentY += 10;
                     
                     // Waffen
                     if (attacker.Weapons.length > 0) {
                         currentY = addText('Waffen:', margin + 5, currentY);
                         
                         attacker.Weapons.forEach((weapon, wIndex) => {
-                            currentY = checkPageBreak(currentY, 25);
+                            currentY = checkPageBreak(currentY, 35);
                             
                             doc.setFontSize(10);
                             doc.setFont(undefined, 'bold');
                             doc.text(`• ${weapon.name} (${weapon.type})`, margin + 10, currentY);
-                            currentY += 5;
+                            currentY += 6;
                             
                             currentY = addKeyValuePair('Attacks', weapon.attacks, margin + 15, currentY);
                             currentY = addKeyValuePair('To Hit', `${weapon.to_hit}+`, margin + 15, currentY);
@@ -2254,7 +2298,7 @@
                             currentY = addKeyValuePair('Amount', weapon.amount, margin + 15, currentY);
                             
                             if (weapon.Keywords.length > 0) {
-                                currentY = addKeyValuePair('Keywords', weapon.Keywords.join(', '), margin + 15, currentY);
+                                currentY = addKeyValuePair('Keywords', weapon.Keywords.join(', '), margin + 15, currentY, contentWidth - 60);
                             }
                             currentY += 5;
                         });
@@ -2266,16 +2310,16 @@
                 
                 // Verteidiger-Übersicht
                 currentY = checkPageBreak(currentY, 40);
-                currentY = addSectionTitle('🛡️ Verteidiger-Übersicht', currentY + 10);
+                currentY = addSectionTitle('Verteidiger-Uebersicht', currentY + 10);
                 
                 window.defenders.forEach((defender, index) => {
-                    currentY = checkPageBreak(currentY, 30);
+                    currentY = checkPageBreak(currentY, 40);
                     
                     doc.setFontSize(12);
                     doc.setFont(undefined, 'bold');
                     doc.setTextColor(50, 150, 50);
                     doc.text(`${index + 1}. ${defender.Name}`, margin, currentY);
-                    currentY += 8;
+                    currentY += 10;
                     
                     currentY = addKeyValuePair('Models', defender.models, margin + 5, currentY);
                     currentY = addKeyValuePair('Toughness', defender.toughness, margin + 5, currentY);
@@ -2285,7 +2329,7 @@
                         currentY = addKeyValuePair('Invulnerable', `${defender.invulnerable}+`, margin + 5, currentY);
                     }
                     if (defender.Keywords.length > 0) {
-                        currentY = addKeyValuePair('Keywords', defender.Keywords.join(', '), margin + 5, currentY);
+                        currentY = addKeyValuePair('Keywords', defender.Keywords.join(', '), margin + 5, currentY, contentWidth - 40);
                     }
                     currentY += 10;
                 });
@@ -2296,10 +2340,10 @@
                         addFooter();
                         doc.addPage();
                         
-                        currentY = addHeader(`📊 ${result.Name} vs ${target.Name}`);
+                        currentY = addHeader(`${result.Name} vs ${target.Name}`);
                         
                         // Kernstatistiken
-                        currentY = addSectionTitle('📈 Ergebnisse', currentY + 10);
+                        currentY = addSectionTitle('Ergebnisse', currentY + 10);
                         
                         const isSingleModel = target.MaximumModels === 1;
                         
@@ -2315,10 +2359,10 @@
                         currentY += 10;
                         
                         // Waffen-Details
-                        currentY = addSectionTitle('⚔️ Waffen-Performance', currentY);
+                        currentY = addSectionTitle('Waffen-Performance', currentY);
                         
                         target.Weapons.forEach((weapon, wIndex) => {
-                            currentY = checkPageBreak(currentY, 40);
+                            currentY = checkPageBreak(currentY, 50);
                             
                             doc.setFontSize(11);
                             doc.setFont(undefined, 'bold');
@@ -2334,8 +2378,8 @@
                         
                         // Verteilungsdiagramm als Text
                         if (target.KillDistribution && target.KillDistribution.length > 0) {
-                            currentY = checkPageBreak(currentY, 60);
-                            currentY = addSectionTitle('📊 Wahrscheinlichkeitsverteilung', currentY + 10);
+                            currentY = checkPageBreak(currentY, 80);
+                            currentY = addSectionTitle('Wahrscheinlichkeitsverteilung', currentY + 10);
                             
                             const threshold = isSingleModel ? 0.01 : 0.1;
                             let significantData = target.KillDistribution.filter(d => d.probability > threshold);
@@ -2358,8 +2402,8 @@
                             significantData.forEach(data => {
                                 currentY = checkPageBreak(currentY, 8);
                                 const label = isSingleModel ? 
-                                    `≥${data.kills} Wounds` : 
-                                    `≥${data.kills} Modelle`;
+                                    `>=${data.kills} Wounds` : 
+                                    `>=${data.kills} Modelle`;
                                 currentY = addKeyValuePair(label, `${data.probability.toFixed(1)}%`, margin, currentY);
                             });
                         }
