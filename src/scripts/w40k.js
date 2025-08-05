@@ -577,21 +577,45 @@ function run(jsonData) {
 
                 // Konvertiere Kill-Distribution für UI
                 const distributionArray = [];
-                const sortedKills = Array.from(totalDefenderStats.killDistribution.keys()).sort((a, b) => a - b);
                 
-                for (let i = 0; i <= Math.max(...sortedKills); i++) {
-                    const cumulativeCount = sortedKills
-                        .filter(k => k >= i)
-                        .reduce((sum, k) => sum + (totalDefenderStats.killDistribution.get(k) || 0), 0);
+                // Für einzelne Modelle: verwende Damage-Distribution für bessere Granularität
+                if (defender.models === 1 && totalDefenderStats.damageDistribution.size > 0) {
+                    const sortedDamage = Array.from(totalDefenderStats.damageDistribution.keys()).sort((a, b) => a - b);
+                    const maxDamage = Math.max(...sortedDamage);
                     
-                    if (cumulativeCount > 0) {
-                        const probability = (cumulativeCount / simulationCount) * 100;
-                        distributionArray.push({
-                            kills: i,
-                            probability: probability,
-                            count: cumulativeCount,
-                            label: defender.models === 1 ? `≥${i} Wounds` : `≥${i} Models`
-                        });
+                    for (let i = 0; i <= maxDamage; i++) {
+                        const cumulativeCount = sortedDamage
+                            .filter(d => d >= i)
+                            .reduce((sum, d) => sum + (totalDefenderStats.damageDistribution.get(d) || 0), 0);
+                        
+                        if (cumulativeCount > 0) {
+                            const probability = (cumulativeCount / simulationCount) * 100;
+                            distributionArray.push({
+                                kills: i,
+                                probability: probability,
+                                count: cumulativeCount,
+                                label: `≥${i} Wounds`
+                            });
+                        }
+                    }
+                } else {
+                    // Für Multi-Model-Units: verwende Kill-Distribution
+                    const sortedKills = Array.from(totalDefenderStats.killDistribution.keys()).sort((a, b) => a - b);
+                    
+                    for (let i = 0; i <= Math.max(...sortedKills); i++) {
+                        const cumulativeCount = sortedKills
+                            .filter(k => k >= i)
+                            .reduce((sum, k) => sum + (totalDefenderStats.killDistribution.get(k) || 0), 0);
+                        
+                        if (cumulativeCount > 0) {
+                            const probability = (cumulativeCount / simulationCount) * 100;
+                            distributionArray.push({
+                                kills: i,
+                                probability: probability,
+                                count: cumulativeCount,
+                                label: `≥${i} Models`
+                            });
+                        }
                     }
                 }
 

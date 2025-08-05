@@ -1100,6 +1100,12 @@
         document.addEventListener('DOMContentLoaded', function() {
             populateKeywordModal();
             updateAttackerSelect();
+            
+            // Sicherstellen, dass der Loading-Spinner beim Start versteckt ist
+            const loadingSpinner = document.getElementById('loadingSpinner');
+            if (loadingSpinner) {
+                loadingSpinner.classList.remove('active');
+            }
         });
 
         // Keyword Modal Functions
@@ -1564,9 +1570,37 @@
         function createKillDistributionChart(target) {
             if (!target.KillDistribution || target.KillDistribution.length === 0) return '';
             
-            const significantData = target.KillDistribution.filter(d => d.probability > 0.1); // Nur Werte > 0.1% anzeigen
-            const maxProbability = Math.max(...significantData.map(d => d.probability));
+            console.log('Chart data for', target.Name, ':', target.KillDistribution);
+            
+            // Für einzelne Modelle: niedrigere Schwelle und mehr Details
             const isSingleModel = target.MaximumModels === 1;
+            const threshold = isSingleModel ? 0.01 : 0.1; // 0.01% für einzelne Modelle, 0.1% für Multi-Model
+            
+            let significantData = target.KillDistribution.filter(d => d.probability > threshold);
+            
+            // Falls immer noch zu wenig Daten: nimm mindestens die top 10 wahrscheinlichsten Werte
+            if (significantData.length < 3 && target.KillDistribution.length > 0) {
+                const sortedData = [...target.KillDistribution]
+                    .sort((a, b) => b.probability - a.probability)
+                    .slice(0, Math.min(10, target.KillDistribution.length));
+                
+                // Merge mit bereits gefilterten Daten
+                const existingKills = new Set(significantData.map(d => d.kills));
+                sortedData.forEach(d => {
+                    if (!existingKills.has(d.kills)) {
+                        significantData.push(d);
+                    }
+                });
+            }
+            
+            // Sortiere nach kills für bessere Darstellung
+            significantData.sort((a, b) => a.kills - b.kills);
+            
+            console.log('Significant data:', significantData);
+            
+            if (significantData.length === 0) return '';
+            
+            const maxProbability = Math.max(...significantData.map(d => d.probability));
             
             let chartHtml = `
                 <div class="chart-container">
@@ -1830,76 +1864,6 @@
         }
 
 
-
-        window.showFullJson = function() {
-            const data = {
-                attackers: window.attackers.map(attacker => attacker.toJson()),
-                defenders: window.defenders.map(defender => defender.toJson()),
-                timestamp: new Date().toISOString(),
-                version: "1.0"
-            };
-
-            const jsonText = JSON.stringify(data, null, 2);
-            
-            // Show in a modal or new window
-            const popup = window.open('', '_blank', 'width=800,height=600,scrollbars=yes');
-            popup.document.write(`
-                <html>
-                <head>
-                    <title>Aktuelle Konfiguration - JSON</title>
-                    <style>
-                        body { font-family: monospace; margin: 20px; background: #1a1a2e; color: #e0e6ed; }
-                        pre { white-space: pre-wrap; word-wrap: break-word; background: #16213e; padding: 20px; border-radius: 8px; }
-                        .copy-btn { background: #ffd700; color: #1a1a2e; border: none; padding: 10px 20px; margin: 10px 0; border-radius: 5px; cursor: pointer; }
-                    </style>
-                </head>
-                <body>
-                    <h2>Aktuelle Konfiguration</h2>
-                    <button class="copy-btn" onclick="navigator.clipboard.writeText(document.getElementById('jsonContent').textContent)">JSON kopieren</button>
-                    <pre id="jsonContent">${jsonText}</pre>
-                </body>
-                </html>
-            `);
-        };
-
-        window.loadExample = function() {
-            const exampleData = {
-                "attackers": [
-                    {
-                        "name": "Space Marine Squad",
-                        "weapons": [
-                            {
-                                "name": "Bolter",
-                                "type": "Ranged",
-                                "attacks": "2",
-                                "toHit": 3,
-                                "strength": 4,
-                                "ap": 0,
-                                "damage": "1",
-                                "keywords": ["rapid fire 1"],
-                                "amount": 1
-                            }
-                        ]
-                    }
-                ],
-                "defenders": [
-                    {
-                        "name": "Ork Boyz",
-                        "models": 10,
-                        "toughness": 4,
-                        "wounds": 1,
-                        "save": 6,
-                        "invul": null,
-                        "keywords": []
-                    }
-                ],
-                "timestamp": new Date().toISOString(),
-                "version": "1.0"
-            };
-
-            document.getElementById('jsonImport').value = JSON.stringify(exampleData, null, 2);
-            showSuccess('Beispielkonfiguration geladen!');
-        };
 
         // Enter-Taste für Keyword-Eingaben (nach DOM-Load)
         document.addEventListener('DOMContentLoaded', function() {
