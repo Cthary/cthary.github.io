@@ -548,6 +548,59 @@
             animation: slideIn 0.3s ease-out;
         }
 
+        /* Loading Overlay */
+        .loading {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            backdrop-filter: blur(5px);
+            z-index: 9999;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .loading.active {
+            display: flex;
+        }
+
+        .spinner {
+            width: 60px;
+            height: 60px;
+            border: 6px solid rgba(255, 215, 0, 0.2);
+            border-top: 6px solid #ffd700;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+            margin-bottom: 20px;
+        }
+
+        .loading-text {
+            color: #ffd700;
+            font-size: 1.2rem;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        @keyframes slideIn {
+            from {
+                transform: translateX(100%);
+                opacity: 0;
+            }
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+
         @keyframes slideIn {
             from {
                 transform: translateX(100%);
@@ -770,6 +823,10 @@
 
             <div class="loading" id="loadingSpinner">
                 <div class="spinner"></div>
+                <div class="loading-text">
+                    Simulation läuft...<br>
+                    <small>Bitte warten Sie, während die Berechnung durchgeführt wird.</small>
+                </div>
             </div>
 
             <!-- JSON Import/Export als aufklappbar -->
@@ -786,7 +843,7 @@
                 <div class="form-group">
                     <label>📤 Aktuelle Konfiguration speichern:</label>
                     <div class="button-group">
-                        <button class="btn btn-secondary" onclick="exportToFile()">Als Datei exportieren</button>
+                        <button class="btn btn-secondary" onclick="exportJson()">Als Datei exportieren</button>
                         <button class="btn" onclick="showFullJson()">JSON anzeigen</button>
                     </div>
                 </div>
@@ -991,7 +1048,7 @@
             <!-- Export Button am Ende der Ergebnisse -->
             <div class="button-group" style="margin-top: 20px;">
                 <button class="btn btn-secondary" onclick="exportResultsToPDF()">📄 PDF-Report erstellen</button>
-                <button class="btn btn-secondary" onclick="exportResults()">📄 JSON exportieren</button>
+                <button class="btn btn-secondary" onclick="exportResultsToJson()">📄 JSON exportieren</button>
             </div>
         </div>
     </div>
@@ -1904,6 +1961,114 @@
             }
         };
 
+        // JSON Import/Export Funktionen
+        window.exportJson = function() {
+            const data = {
+                attackers: window.attackers,
+                defenders: window.defenders,
+                version: "2.0",
+                timestamp: new Date().toISOString()
+            };
+            
+            const jsonString = JSON.stringify(data, null, 2);
+            const blob = new Blob([jsonString], { type: 'application/json' });
+            const url = URL.createObjectURL(blob);
+            
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = `warhammer40k_simulation_${new Date().toISOString().split('T')[0]}.json`;
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            URL.revokeObjectURL(url);
+            
+            showSuccess('JSON-Datei wurde heruntergeladen!');
+        };
+
+        window.importJson = function() {
+            const input = document.createElement('input');
+            input.type = 'file';
+            input.accept = '.json';
+            input.onchange = function(event) {
+                const file = event.target.files[0];
+                if (!file) return;
+                
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    try {
+                        const data = JSON.parse(e.target.result);
+                        
+                        if (data.attackers && data.defenders) {
+                            window.attackers = data.attackers;
+                            window.defenders = data.defenders;
+                            
+                            // Migration für neue Struktur ausführen
+                            migrateAttackerData();
+                            
+                            updateAttackersList();
+                            updateDefendersList();
+                            updateAttackerSelect();
+                            
+                            showSuccess('JSON-Daten erfolgreich importiert!');
+                        } else {
+                            showError('Ungültige JSON-Datei: Fehlende Angreifer oder Verteidiger.');
+                        }
+                    } catch (error) {
+                        showError('Fehler beim Lesen der JSON-Datei: ' + error.message);
+                    }
+                };
+                reader.readAsText(file);
+            };
+            input.click();
+        };
+
+        window.showFullJson = function() {
+            const data = {
+                attackers: window.attackers,
+                defenders: window.defenders,
+                version: "2.0",
+                timestamp: new Date().toISOString()
+            };
+            
+            const jsonString = JSON.stringify(data, null, 2);
+            const newWindow = window.open('', '_blank');
+            newWindow.document.write(`
+                <html>
+                    <head><title>Warhammer 40k Simulation Data</title></head>
+                    <body style="font-family: monospace; padding: 20px; background: #1a1a2e; color: #e0e6ed;">
+                        <h2>Vollständige JSON-Daten</h2>
+                        <pre style="background: #16213e; padding: 15px; border-radius: 5px; overflow: auto;">${jsonString}</pre>
+                    </body>
+                </html>
+            `);
+        };
+
+        window.clearAll = function() {
+            if (confirm('Möchten Sie wirklich alle Daten löschen? Diese Aktion kann nicht rückgängig gemacht werden.')) {
+                window.attackers = [];
+                window.defenders = [];
+                window.simulationResults = [];
+                window.currentWeaponKeywords = [];
+                window.currentDefenderKeywords = [];
+                
+                updateAttackersList();
+                updateDefendersList();
+                updateAttackerSelect();
+                document.getElementById('resultsPanel').style.display = 'none';
+                
+                showSuccess('Alle Daten wurden gelöscht.');
+            }
+        };
+
+        // Sichere Hilfsfunktionen für undefined-Werte
+        function safeToFixed(value, decimals = 2) {
+            return (value !== undefined && value !== null && !isNaN(value)) ? value.toFixed(decimals) : '0.00';
+        }
+
+        function safeNumber(value, defaultValue = 0) {
+            return (value !== undefined && value !== null && !isNaN(value)) ? value : defaultValue;
+        }
+
         // Simulation ausführen
         window.runSimulation = function() {
             console.log('runSimulation called');
@@ -2011,16 +2176,28 @@
             }, 100);
         };
 
-        // Ergebnisse anzeigen
+        // Ergebnisse anzeigen (komplett neu - sicher gegen undefined-Werte)
         function displayResults() {
             const container = document.getElementById('resultsContainer');
             container.innerHTML = '';
+
+            if (!window.simulationResults || window.simulationResults.length === 0) {
+                container.innerHTML = '<div class="result-item">Keine Simulationsergebnisse verfügbar.</div>';
+                return;
+            }
 
             window.simulationResults.forEach(result => {
                 const resultDiv = document.createElement('div');
                 resultDiv.className = 'result-item';
                 
-                let content = `<div class="result-header">🗡️ ${result.Name}</div>`;
+                let content = `<div class="result-header">🗡️ ${result.Name || 'Unbekannter Angreifer'}</div>`;
+                
+                if (!result.Target || result.Target.length === 0) {
+                    content += '<div>Keine Ziele verfügbar</div>';
+                    resultDiv.innerHTML = content;
+                    container.appendChild(resultDiv);
+                    return;
+                }
                 
                 result.Target.forEach(target => {
                     // Wenn target.Members existiert (Gruppe), zeige alle Mitglieder nebeneinander
@@ -2028,34 +2205,37 @@
                         content += `
                             <div style="margin-bottom: 20px; border-left: 3px solid #667eea; padding-left: 10px;">
                                 <div class="result-header" style="font-size: 1rem; margin-bottom: 8px;">
-                                    🛡️ vs ${target.Name} (Gruppe)
+                                    🛡️ vs ${target.Name || 'Unbekannte Gruppe'} (Gruppe)
                                 </div>
                                 
                                 <!-- Gruppen-Mitglieder nebeneinander -->
                                 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 15px; margin-bottom: 15px;">
-                                    ${target.Members.map(member => `
-                                        <div style="background: rgba(255,255,255,0.03); border-radius: 5px; padding: 10px;">
-                                            <strong>${member.Name}</strong><br>
-                                            <div class="stat-row">
-                                                <span class="stat-label">${member.MaximumModels === 1 ? 'Durchschnittsschaden:' : 'Vernichtete Modelle:'}</span>
-                                                <span class="stat-value">${member.MaximumModels === 1 ? 
-                                                    member.TotalDamage.toFixed(2) + ' / ' + member.MaxWounds + ' Wounds' :
-                                                    member.ModelsDestroyed.toFixed(2) + ' / ' + member.MaximumModels}</span>
+                                    ${target.Members.map(member => {
+                                        const isIndividualModel = safeNumber(member.MaximumModels, 1) === 1;
+                                        return `
+                                            <div style="background: rgba(255,255,255,0.03); border-radius: 5px; padding: 10px;">
+                                                <strong>${member.Name || 'Unbekannt'}</strong><br>
+                                                <div class="stat-row">
+                                                    <span class="stat-label">${isIndividualModel ? 'Durchschnittsschaden:' : 'Vernichtete Modelle:'}</span>
+                                                    <span class="stat-value">${isIndividualModel ? 
+                                                        safeToFixed(member.TotalDamage) + ' / ' + safeNumber(member.MaxWounds, 1) + ' Wounds' :
+                                                        safeToFixed(member.ModelsDestroyed) + ' / ' + safeNumber(member.MaximumModels, 1)}</span>
+                                                </div>
+                                                <div class="stat-row">
+                                                    <span class="stat-label">${isIndividualModel ? 'Lebensenergie verloren:' : 'Vernichtungsrate:'}</span>
+                                                    <span class="stat-value">${isIndividualModel ? 
+                                                        safeToFixed((safeNumber(member.TotalDamage) / safeNumber(member.MaxWounds, 1)) * 100, 1) + '%' :
+                                                        safeToFixed((safeNumber(member.ModelsDestroyed) / safeNumber(member.MaximumModels, 1)) * 100, 1) + '%'}</span>
+                                                </div>
+                                                <div class="stat-row">
+                                                    <span class="stat-label">Komplette Vernichtung:</span>
+                                                    <span class="stat-value">${safeToFixed(member.CompleteWipeoutChance, 1)}%</span>
+                                                </div>
+                                                
+                                                ${member.KillDistribution ? createKillDistributionChart(member) : ''}
                                             </div>
-                                            <div class="stat-row">
-                                                <span class="stat-label">${member.MaximumModels === 1 ? 'Lebensenergie verloren:' : 'Vernichtungsrate:'}</span>
-                                                <span class="stat-value">${member.MaximumModels === 1 ? 
-                                                    ((member.TotalDamage / member.MaxWounds) * 100).toFixed(1) + '%' :
-                                                    ((member.ModelsDestroyed / member.MaximumModels) * 100).toFixed(1) + '%'}</span>
-                                            </div>
-                                            <div class="stat-row">
-                                                <span class="stat-label">Komplette Vernichtung:</span>
-                                                <span class="stat-value">${member.CompleteWipeoutChance.toFixed(1)}%</span>
-                                            </div>
-                                            
-                                            ${member.KillDistribution ? createKillDistributionChart(member) : ''}
-                                        </div>
-                                    `).join('')}
+                                        `;
+                                    }).join('')}
                                 </div>
                                 
                                 <!-- Aufklappbare Waffen-Details -->
@@ -2063,53 +2243,54 @@
                                     ⚔️ Waffen-Details
                                 </button>
                                 <div class="collapsible-content">
-                                    ${target.Weapons.map(weapon => `
+                                    ${target.Weapons && target.Weapons.length > 0 ? target.Weapons.map(weapon => `
                                         <div style="margin: 5px 0; padding: 8px; background: rgba(255,255,255,0.05); border-radius: 3px;">
-                                            <strong>${weapon.Name}:</strong><br>
+                                            <strong>${weapon.Name || 'Unbekannte Waffe'}:</strong><br>
                                             <div class="stat-row">
                                                 <span class="stat-label">Durchschn. Treffer:</span>
-                                                <span class="stat-value">${weapon.Hits.toFixed(2)}</span>
+                                                <span class="stat-value">${safeToFixed(weapon.Hits)}</span>
                                             </div>
                                             <div class="stat-row">
                                                 <span class="stat-label">Durchschn. Verwundungen:</span>
-                                                <span class="stat-value">${weapon.Wounds.toFixed(2)}</span>
+                                                <span class="stat-value">${safeToFixed(weapon.Wounds)}</span>
                                             </div>
                                             <div class="stat-row">
                                                 <span class="stat-label">Fehlgeschlagene Saves:</span>
-                                                <span class="stat-value">${weapon.FailedSaves.toFixed(2)}</span>
+                                                <span class="stat-value">${safeToFixed(weapon.FailedSaves)}</span>
                                             </div>
                                             <div class="stat-row">
                                                 <span class="stat-label">Durchschn. Schaden:</span>
-                                                <span class="stat-value">${weapon.AverageDamage.toFixed(2)}</span>
+                                                <span class="stat-value">${safeToFixed(weapon.AverageDamage)}</span>
                                             </div>
                                         </div>
-                                    `).join('')}
+                                    `).join('') : '<div>Keine Waffen-Daten verfügbar</div>'}
                                 </div>
                             </div>
                         `;
                     } else {
                         // Altes Format für Einzelziele (Rückwärtskompatibilität)
+                        const isIndividualModel = safeNumber(target.MaximumModels, 1) === 1;
                         content += `
                             <div style="margin-bottom: 15px; border-left: 3px solid #667eea; padding-left: 10px;">
                                 <div class="result-header" style="font-size: 1rem; margin-bottom: 8px;">
-                                    🛡️ vs ${target.Name}
+                                    🛡️ vs ${target.Name || 'Unbekanntes Ziel'}
                                 </div>
                                 <div class="stat-row">
-                                    <span class="stat-label">${target.MaximumModels === 1 ? 'Durchschnittsschaden:' : 'Vernichtete Modelle:'}</span>
-                                    <span class="stat-value">${target.MaximumModels === 1 ? 
-                                        target.TotalDamage.toFixed(2) + ' / ' + target.MaxWounds + ' Wounds' :
-                                        target.ModelsDestroyed.toFixed(2) + ' / ' + target.MaximumModels}</span>
+                                    <span class="stat-label">${isIndividualModel ? 'Durchschnittsschaden:' : 'Vernichtete Modelle:'}</span>
+                                    <span class="stat-value">${isIndividualModel ? 
+                                        safeToFixed(target.TotalDamage) + ' / ' + safeNumber(target.MaxWounds, 1) + ' Wounds' :
+                                        safeToFixed(target.ModelsDestroyed) + ' / ' + safeNumber(target.MaximumModels, 1)}</span>
                                 </div>
                                 <div class="stat-row">
-                                    <span class="stat-label">${target.MaximumModels === 1 ? 'Lebensenergie verloren:' : 'Vernichtungsrate:'}</span>
-                                    <span class="stat-value">${target.MaximumModels === 1 ? 
-                                        ((target.TotalDamage / target.MaxWounds) * 100).toFixed(1) + '%' :
-                                        ((target.ModelsDestroyed / target.MaximumModels) * 100).toFixed(1) + '%'}</span>
+                                    <span class="stat-label">${isIndividualModel ? 'Lebensenergie verloren:' : 'Vernichtungsrate:'}</span>
+                                    <span class="stat-value">${isIndividualModel ? 
+                                        safeToFixed((safeNumber(target.TotalDamage) / safeNumber(target.MaxWounds, 1)) * 100, 1) + '%' :
+                                        safeToFixed((safeNumber(target.ModelsDestroyed) / safeNumber(target.MaximumModels, 1)) * 100, 1) + '%'}</span>
                                 </div>
                                 
                                 <div class="stat-row">
                                     <span class="stat-label">Komplette Vernichtung:</span>
-                                    <span class="stat-value">${target.CompleteWipeoutChance.toFixed(1)}%</span>
+                                    <span class="stat-value">${safeToFixed(target.CompleteWipeoutChance, 1)}%</span>
                                 </div>
                                 
                                 ${target.KillDistribution ? createKillDistributionChart(target) : ''}
@@ -2119,27 +2300,27 @@
                                     ⚔️ Waffen-Details
                                 </button>
                                 <div class="collapsible-content">
-                                    ${target.Weapons.map(weapon => `
+                                    ${target.Weapons && target.Weapons.length > 0 ? target.Weapons.map(weapon => `
                                         <div style="margin: 5px 0; padding: 8px; background: rgba(255,255,255,0.05); border-radius: 3px;">
-                                            <strong>${weapon.Name}:</strong><br>
+                                            <strong>${weapon.Name || 'Unbekannte Waffe'}:</strong><br>
                                             <div class="stat-row">
                                                 <span class="stat-label">Durchschn. Treffer:</span>
-                                                <span class="stat-value">${weapon.Hits.toFixed(2)}</span>
+                                                <span class="stat-value">${safeToFixed(weapon.Hits)}</span>
                                             </div>
                                             <div class="stat-row">
                                                 <span class="stat-label">Durchschn. Verwundungen:</span>
-                                                <span class="stat-value">${weapon.Wounds.toFixed(2)}</span>
+                                                <span class="stat-value">${safeToFixed(weapon.Wounds)}</span>
                                             </div>
                                             <div class="stat-row">
                                                 <span class="stat-label">Fehlgeschlagene Saves:</span>
-                                                <span class="stat-value">${weapon.FailedSaves.toFixed(2)}</span>
+                                                <span class="stat-value">${safeToFixed(weapon.FailedSaves)}</span>
                                             </div>
                                             <div class="stat-row">
                                                 <span class="stat-label">Durchschn. Schaden:</span>
-                                                <span class="stat-value">${weapon.AverageDamage.toFixed(2)}</span>
+                                                <span class="stat-value">${safeToFixed(weapon.AverageDamage)}</span>
                                             </div>
                                         </div>
-                                    `).join('')}
+                                    `).join('') : '<div>Keine Waffen-Daten verfügbar</div>'}
                                 </div>
                             </div>
                         `;
@@ -2183,7 +2364,7 @@
                     `${item.value}`;
                 
                 chartHtml += `
-                    <div class="bar" style="height: ${barHeight}%;" title="${item.percentage.toFixed(1)}%">
+                    <div class="bar" style="height: ${barHeight}%;" title="${safeToFixed(item.percentage, 1)}%">
                         <div class="bar-label">${label}</div>
                     </div>
                 `;
@@ -2197,7 +2378,7 @@
                             const label = isIndividualModel ? 
                                 (item.value === 0 ? '0 Wounds' : `≥${item.value} Wounds`) : 
                                 `${item.value} ${item.value === 1 ? 'Modell' : 'Modelle'}`;
-                            return `${label}: ${item.percentage.toFixed(1)}%`;
+                            return `${label}: ${safeToFixed(item.percentage, 1)}%`;
                         }).join(' | ')}
                     </div>
                 </div>
@@ -2206,6 +2387,37 @@
             return chartHtml;
         }
 
+        window.exportResultsToJson = function() {
+            if (!window.simulationResults || window.simulationResults.length === 0) {
+                showError('Keine Simulationsergebnisse vorhanden. Führen Sie zuerst eine Simulation durch.');
+                return;
+            }
+            
+            const data = {
+                attackers: window.attackers,
+                defenders: window.defenders,
+                simulationResults: window.simulationResults,
+                simulationSettings: {
+                    amount: parseInt(document.getElementById('simulationAmount').value)
+                },
+                version: "2.0",
+                timestamp: new Date().toISOString()
+            };
+            
+            const jsonString = JSON.stringify(data, null, 2);
+            const blob = new Blob([jsonString], { type: 'application/json' });
+            const url = URL.createObjectURL(blob);
+            
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = `warhammer40k_simulation_results_${new Date().toISOString().split('T')[0]}.json`;
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            URL.revokeObjectURL(url);
+            
+            showSuccess('Simulationsergebnisse als JSON-Datei heruntergeladen!');
+        };
     </script>
 </body>
 </html>
