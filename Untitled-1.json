@@ -34,7 +34,7 @@
           "strength": 10,
           "ap": 2,
           "damage": "2",
-          "amount": 2,
+          "amount": 1,
           "Keywords": ["+1 to wound"]
         },
         {
@@ -45,7 +45,7 @@
           "strength": 9,
           "ap": 2,
           "damage": "2",
-          "amount": 2,
+          "amount": 1,
           "Keywords": ["RHMiss", "+1 to wound", "sustained hits 1"]
         }
       ]
@@ -60,7 +60,7 @@
       "wounds": 26,
       "save": 3,
       "invulnerable": 7,
-      "Keywords": ["feel no pain 5"]
+      "Keywords": ["feel no pain 6"]
     },
     {
       "Name": "Angron",
