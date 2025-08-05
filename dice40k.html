@@ -46,11 +46,68 @@
             opacity: 0.9;
         }
 
+        .simulation-panel {
+            margin-bottom: 30px;
+        }
+
         .main-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 20px;
             margin-bottom: 30px;
+        }
+
+        .collapsible {
+            background: rgba(255, 255, 255, 0.1);
+            color: #e0e6ed;
+            cursor: pointer;
+            padding: 15px;
+            width: 100%;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 5px;
+            text-align: left;
+            outline: none;
+            font-size: 16px;
+            font-weight: 600;
+            margin-top: 15px;
+            transition: all 0.3s ease;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .collapsible:hover {
+            background: rgba(255, 255, 255, 0.15);
+        }
+
+        .collapsible.active {
+            background: rgba(255, 215, 0, 0.1);
+            border-color: rgba(255, 215, 0, 0.3);
+        }
+
+        .collapsible:after {
+            content: '▼';
+            font-size: 14px;
+            color: #ffd700;
+            transition: transform 0.3s ease;
+        }
+
+        .collapsible.active:after {
+            transform: rotate(180deg);
+        }
+
+        .collapsible-content {
+            padding: 0;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 0 0 5px 5px;
+        }
+
+        .collapsible-content.active {
+            padding: 20px;
+            max-height: 1000px;
         }
 
         .panel {
@@ -606,12 +663,109 @@
             color: #ffd700;
         }
     </style>
+    <style>
+        .collapsible {
+            background: rgba(255, 255, 255, 0.1);
+            color: #e0e6ed;
+            cursor: pointer;
+            padding: 15px;
+            width: 100%;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 5px;
+            text-align: left;
+            outline: none;
+            font-size: 16px;
+            font-weight: 600;
+            margin-top: 15px;
+            transition: all 0.3s ease;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .collapsible:hover {
+            background: rgba(255, 255, 255, 0.15);
+        }
+
+        .collapsible.active {
+            background: rgba(255, 215, 0, 0.1);
+            border-color: rgba(255, 215, 0, 0.3);
+        }
+
+        .collapsible:after {
+            content: '▼';
+            font-size: 14px;
+            color: #ffd700;
+            transition: transform 0.3s ease;
+        }
+
+        .collapsible.active:after {
+            transform: rotate(180deg);
+        }
+
+        .collapsible-content {
+            padding: 0;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 0 0 5px 5px;
+        }
+
+        .collapsible-content.active {
+            padding: 20px;
+            max-height: 1000px;
+        }
+
+        .simulation-panel {
+            margin-bottom: 30px;
+        }
+    </style>
 </head>
 <body>
     <div class="container">
         <div class="header">
             <h1>⚔️ Warhammer 40k 10th Edition Kampfsimulator ⚔️</h1>
             <p>Simuliere Kämpfe zwischen Angreifern und Verteidigern mit allen 10th Edition Regeln</p>
+        </div>
+
+        <!-- Simulation Panel -->
+        <div class="panel simulation-panel">
+            <h2>🎯 Simulation</h2>
+            
+            <div class="simulation-controls">
+                <label>Anzahl Simulationen:</label>
+                <input type="number" id="simulationAmount" value="1000" min="10" max="100000">
+                
+                <button class="btn btn-primary" onclick="runSimulation()">Simulation starten</button>
+            </div>
+
+            <div class="loading" id="loadingSpinner">
+                <div class="spinner"></div>
+                <p>Simulation läuft...</p>
+            </div>
+
+            <div class="button-group">
+                <button class="btn" onclick="exportResults()">Ergebnisse exportieren</button>
+                <button class="btn" onclick="showFullJson()">Vollständige JSON anzeigen</button>
+                <button class="btn btn-danger" onclick="clearAll()">Alles zurücksetzen</button>
+            </div>
+
+            <!-- JSON Import/Export als aufklappbar -->
+            <button class="collapsible" onclick="toggleCollapsible(this)">
+                📄 JSON Import/Export
+            </button>
+            <div class="collapsible-content">
+                <div class="json-section">
+                    <label>JSON-Konfiguration importieren:</label>
+                    <textarea class="json-textarea" id="jsonImport" placeholder="Fügen Sie hier Ihre JSON-Konfiguration ein..."></textarea>
+                </div>
+
+                <div class="button-group">
+                    <button class="btn btn-secondary" onclick="importJson()">JSON importieren</button>
+                    <button class="btn" onclick="loadExample()">Beispiel laden</button>
+                </div>
+            </div>
         </div>
 
         <div class="main-grid">
@@ -630,6 +784,78 @@
                 </div>
 
                 <div class="unit-list" id="attackersList"></div>
+
+                <!-- Waffe hinzufügen als aufklappbar -->
+                <button class="collapsible" onclick="toggleCollapsible(this)">
+                    ⚔️ Waffe hinzufügen
+                </button>
+                <div class="collapsible-content">
+                    <div class="form-group">
+                        <label>Angreifer auswählen:</label>
+                        <select id="weaponAttackerSelect">
+                            <option value="">Bitte Angreifer auswählen</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Waffenname:</label>
+                        <input type="text" id="weaponName" placeholder="z.B. Bolter">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Anzahl identischer Waffen (Amount):</label>
+                        <input type="number" id="weaponAmount" value="1" min="1" max="20">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Waffentyp:</label>
+                        <select id="weaponType">
+                            <option value="Ranged">Ranged</option>
+                            <option value="Melee">Melee</option>
+                            <option value="Psychic">Psychic</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Attacks (kann D6, 2D3+1, etc. sein):</label>
+                        <input type="text" id="weaponAttacks" value="1" placeholder="z.B. 2D6+3">
+                    </div>
+
+                    <div class="form-group">
+                        <label>To Hit (Würfelwurf benötigt):</label>
+                        <input type="number" id="weaponToHit" value="4" min="2" max="6">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Strength:</label>
+                        <input type="number" id="weaponStrength" value="4" min="1" max="20">
+                    </div>
+
+                    <div class="form-group">
+                        <label>AP (Armor Penetration):</label>
+                        <input type="number" id="weaponAP" value="0" min="0" max="6">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Damage (kann D6, D3+1, etc. sein):</label>
+                        <input type="text" id="weaponDamage" value="1" placeholder="z.B. D6+2">
+                    </div>
+
+                    <div class="keywords-section">
+                        <label>Keywords:</label>
+                        <div class="keywords-input">
+                            <input type="text" id="weaponKeywordInput" placeholder="Keyword eingeben">
+                            <button class="btn btn-small" onclick="addWeaponKeyword()">+</button>
+                            <button class="help-btn" onclick="showKeywordHelp()" title="Keyword-Hilfe anzeigen">?</button>
+                        </div>
+                        <div class="keywords-list" id="weaponKeywords"></div>
+                    </div>
+
+                    <div class="button-group">
+                        <button class="btn btn-secondary" onclick="addWeapon()">Waffe hinzufügen</button>
+                        <button class="btn" onclick="clearWeaponForm()">Formular leeren</button>
+                    </div>
+                </div>
             </div>
 
             <!-- Verteidiger Panel -->
@@ -682,114 +908,6 @@
 
                 <div class="unit-list" id="defendersList"></div>
             </div>
-
-            <!-- Waffen Panel -->
-            <div class="panel">
-                <h2>⚔️ Waffe hinzufügen</h2>
-                
-                <div class="form-group">
-                    <label>Angreifer auswählen:</label>
-                    <select id="weaponAttackerSelect">
-                        <option value="">Bitte Angreifer auswählen</option>
-                    </select>
-                </div>
-
-                <div class="form-group">
-                <label>Waffenname:</label>
-                <input type="text" id="weaponName" placeholder="z.B. Bolter">
-            </div>
-            <div class="form-group">
-                <label>Anzahl identischer Waffen (Amount):</label>
-                <input type="number" id="weaponAmount" value="1" min="1" max="20">
-                </div>
-
-                <div class="form-group">
-                    <label>Waffentyp:</label>
-                    <select id="weaponType">
-                        <option value="Ranged">Ranged</option>
-                        <option value="Melee">Melee</option>
-                        <option value="Psychic">Psychic</option>
-                    </select>
-                </div>
-
-                <div class="form-group">
-                    <label>Attacks (kann D6, 2D3+1, etc. sein):</label>
-                    <input type="text" id="weaponAttacks" value="1" placeholder="z.B. 2D6+3">
-                </div>
-
-                <div class="form-group">
-                    <label>To Hit (Würfelwurf benötigt):</label>
-                    <input type="number" id="weaponToHit" value="4" min="2" max="6">
-                </div>
-
-                <div class="form-group">
-                    <label>Strength:</label>
-                    <input type="number" id="weaponStrength" value="4" min="1" max="20">
-                </div>
-
-                <div class="form-group">
-                    <label>AP (Armor Penetration):</label>
-                    <input type="number" id="weaponAP" value="0" min="0" max="6">
-                </div>
-
-                <div class="form-group">
-                    <label>Damage (kann D6, D3+1, etc. sein):</label>
-                    <input type="text" id="weaponDamage" value="1" placeholder="z.B. D6+2">
-                </div>
-
-                <div class="keywords-section">
-                    <label>Keywords:</label>
-                    <div class="keywords-input">
-                        <input type="text" id="weaponKeywordInput" placeholder="Keyword eingeben">
-                        <button class="btn btn-small" onclick="addWeaponKeyword()">+</button>
-                        <button class="help-btn" onclick="showKeywordHelp()" title="Keyword-Hilfe anzeigen">?</button>
-                    </div>
-                    <div class="keywords-list" id="weaponKeywords"></div>
-                </div>
-
-                <div class="button-group">
-                    <button class="btn btn-secondary" onclick="addWeapon()">Waffe hinzufügen</button>
-                    <button class="btn" onclick="clearWeaponForm()">Formular leeren</button>
-                </div>
-            </div>
-
-            <!-- Simulation Panel -->
-            <div class="panel">
-                <h2>🎯 Simulation</h2>
-                
-                <div class="simulation-controls">
-                    <label>Anzahl Simulationen:</label>
-                    <input type="number" id="simulationAmount" value="1000" min="10" max="100000">
-                    
-                    <button class="btn btn-primary" onclick="runSimulation()">Simulation starten</button>
-                </div>
-
-                <div class="loading" id="loadingSpinner">
-                    <div class="spinner"></div>
-                    <p>Simulation läuft...</p>
-                </div>
-
-                <div class="button-group">
-                    <button class="btn" onclick="exportResults()">Ergebnisse exportieren</button>
-                    <button class="btn" onclick="showFullJson()">Vollständige JSON anzeigen</button>
-                    <button class="btn btn-danger" onclick="clearAll()">Alles zurücksetzen</button>
-                </div>
-            </div>
-
-            <!-- JSON Import/Export Panel -->
-            <div class="panel">
-                <h2>📄 JSON Import/Export</h2>
-                
-                <div class="json-section">
-                    <label>JSON-Konfiguration importieren:</label>
-                    <textarea class="json-textarea" id="jsonImport" placeholder="Fügen Sie hier Ihre JSON-Konfiguration ein..."></textarea>
-                </div>
-
-                <div class="button-group">
-                    <button class="btn btn-secondary" onclick="importJson()">JSON importieren</button>
-                    <button class="btn" onclick="loadExample()">Beispiel laden</button>
-                </div>
-            </div>
         </div>
 
         <!-- Ergebnisse Panel -->
@@ -825,6 +943,13 @@
         window.simulationResults = [];
         window.currentWeaponKeywords = [];
         window.currentDefenderKeywords = [];
+
+        // Collapsible-Funktionalität
+        window.toggleCollapsible = function(element) {
+            element.classList.toggle('active');
+            const content = element.nextElementSibling;
+            content.classList.toggle('active');
+        };
 
         // Keyword-Definitionen
         const standardKeywords = {
