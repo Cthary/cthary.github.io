@@ -462,27 +462,28 @@ export class Simulator {
     }
 
     parseModelsDestroyed(results, defender) {
-        let modelsDestroyed = 0;
-        let currentModelWounds = 0;
+        let totalModelsDestroyed = 0;
 
-        // Alle Simulationen durchgehen und Schaden sammeln
-        const allDamageValues = [];
+        // Jede Simulation separat berechnen
         for (let i = 0; i < results.length; i++) {
+            let modelsDestroyedThisSimulation = 0;
+            let currentModelWounds = 0;
+
+            // Schaden aus dieser einen Simulation anwenden
             for (let j = 0; j < results[i][0].damage.length; j++) {
-                allDamageValues.push(results[i][0].damage[j]);
+                const damage = results[i][0].damage[j];
+                currentModelWounds += damage;
+                
+                if (currentModelWounds >= defender.wounds) {
+                    modelsDestroyedThisSimulation++;
+                    currentModelWounds = 0; // Neues Modell beginnt
+                }
             }
+
+            totalModelsDestroyed += modelsDestroyedThisSimulation;
         }
 
-        // Schaden auf Modelle anwenden
-        for (const damage of allDamageValues) {
-            currentModelWounds += damage;
-            if (currentModelWounds >= defender.wounds) {
-                modelsDestroyed++;
-                currentModelWounds = 0;
-            }
-        }
-
-        return modelsDestroyed / results.length; // Durchschnitt über alle Simulationen
+        return totalModelsDestroyed / results.length; // Durchschnitt über alle Simulationen
     }
 
     getNewTargetJson() {
