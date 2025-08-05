@@ -1255,11 +1255,10 @@
                                     ((target.ModelsDestroyed / target.MaximumModels) * 100).toFixed(1) + '%'}</span>
                             </div>
                             
-                            ${target.CompleteWipeoutChance !== undefined ? `
-                                <div class="wipeout-chance">
-                                    🔥 Komplette Vernichtung: ${target.CompleteWipeoutChance.toFixed(1)}%
-                                </div>
-                            ` : ''}
+                            <div class="stat-row">
+                                <span class="stat-label">${target.MaximumModels === 1 ? 'Komplette Vernichtung:' : 'Komplette Vernichtung:'}</span>
+                                <span class="stat-value">${target.CompleteWipeoutChance.toFixed(1)}%</span>
+                            </div>
                             
                             ${target.KillDistribution ? createKillDistributionChart(target) : ''}
                             
@@ -1298,22 +1297,24 @@
 
         // Schadenverteilungs-Diagramm erstellen
         function createKillDistributionChart(target) {
-            if (!target.KillDistribution) return '';
+            if (!target.KillDistribution || target.KillDistribution.length === 0) return '';
             
-            const maxProbability = Math.max(...target.KillDistribution.map(d => d.probability));
             const significantData = target.KillDistribution.filter(d => d.probability > 0.1); // Nur Werte > 0.1% anzeigen
+            const maxProbability = Math.max(...significantData.map(d => d.probability));
+            const isSingleModel = target.MaximumModels === 1;
             
             let chartHtml = `
                 <div class="chart-container">
-                    <div class="chart-title">Schadenverteilung (Vernichtete Modelle)</div>
+                    <div class="chart-title">${isSingleModel ? 'Schadenverteilung (Wounds)' : 'Schadenverteilung (Vernichtete Modelle)'}</div>
                     <div class="bar-chart">
             `;
             
             significantData.forEach(data => {
                 const height = Math.max(5, (data.probability / maxProbability) * 90); // Min 5px Höhe
+                const label = isSingleModel ? `${data.kills}W` : `${data.kills}M`;
                 chartHtml += `
-                    <div class="bar" style="height: ${height}px;" title="${data.kills} Modelle: ${data.probability.toFixed(1)}%">
-                        <span class="bar-label">${data.kills}</span>
+                    <div class="bar" style="height: ${height}px;" title="${data.label}: ${data.probability.toFixed(1)}%">
+                        <span class="bar-label">${label}</span>
                     </div>
                 `;
             });
@@ -1321,7 +1322,7 @@
             chartHtml += `
                     </div>
                     <div class="probability-text">
-                        X-Achse: Vernichtete Modelle | Y-Achse: Wahrscheinlichkeit
+                        ${isSingleModel ? 'W = Wounds verursacht' : 'M = Vernichtete Modelle'} | Y-Achse: Wahrscheinlichkeit
                     </div>
                 </div>
             `;

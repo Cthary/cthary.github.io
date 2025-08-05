@@ -501,60 +501,144 @@ export class Simulator {
             target.MaximumModels = defender.models;
             target.MaxWounds = defender.wounds; // Wounds pro Modell
 
-            // Sammle detaillierte Ergebnisse für Diagramme
-            const allSimulationResults = [];
-            const modelKillCounts = new Array(defender.models + 1).fill(0);
+            // Für jede Simulation sammeln wir alle Waffen-Ergebnisse
+            const simulationResults = [];
+            
+            // Führe alle Simulationen durch
+            for (let sim = 0; sim < amount; sim++) {
+                let totalDamageThisSim = 0;
+                const weaponResults = [];
 
-            for (let j = 0; j < attacker.Weapons.length; j++) {
-                const weapon = attacker.getWeapon(j);
-                // Berücksichtige die Anzahl identischer Waffen (amount)
-                const weaponAmount = weapon.amount || 1;
-                for (let w = 0; w < weaponAmount; w++) {
-                    const simulator = new Simulator(amount);
-                    const results = simulator.simulateAmount(weapon, defender, amount);
-                    const parsedResults = simulator.parseSimulatedResultsByAmount(amount, results);
-
-                    // Detaillierte Analyse für jede Simulation
-                    for (let sim = 0; sim < results.length; sim++) {
-                        const modelsKilled = this.calculateModelsKilledInSingleSim(results[sim][0], defender);
-                        modelKillCounts[modelsKilled]++;
-                        allSimulationResults.push({
-                            modelsKilled: modelsKilled,
-                            totalDamage: results[sim][0].damage.reduce((sum, dmg) => sum + dmg, 0),
-                            hits: results[sim][0].hits,
-                            wounds: results[sim][0].wounds,
-                            failedSaves: results[sim][0].failedSaves
-                        });
-                    }
-
-                    const averageDestroyed = allSimulationResults.reduce((sum, r) => sum + r.modelsKilled, 0) / allSimulationResults.length;
-                    const averageTotalDamage = allSimulationResults.reduce((sum, r) => sum + r.totalDamage, 0) / allSimulationResults.length;
-
-                    target.ModelsDestroyed += averageDestroyed;
-                    target.TotalDamage += averageTotalDamage;
-
-                    target.Weapons.push({
-                        "Name": weapon.name + (weaponAmount > 1 ? ` x${weaponAmount}` : ""),
-                        "Hits": parsedResults.hits,
-                        "Wounds": parsedResults.wounds,
-                        "FailedSaves": parsedResults.failedSaves,
-                        "AverageDamage": parsedResults.totalDamage
+                for (let j = 0; j < attacker.Weapons.length; j++) {
+                    const weapon = attacker.getWeapon(j);
+                    // getAttacks() multipliziert bereits mit amount, daher nur einmal simulieren
+                    const simulator = new Simulator(1); // Nur eine Simulation pro Durchgang
+                    const results = simulator.simulateOne(weapon, defender);
+                    const weaponDamage = results[0].damage.reduce((sum, dmg) => sum + dmg, 0);
+                    totalDamageThisSim += weaponDamage;
+                    
+                    weaponResults.push({
+                        name: weapon.name,
+                        hits: results[0].hits,
+                        wounds: results[0].wounds,
+                        failedSaves: results[0].failedSaves,
+                        damage: weaponDamage
                     });
                 }
+
+                simulationResults.push({
+                    totalDamage: totalDamageThisSim,
+                    weapons: weaponResults
+                });
             }
 
-            // Berechne Wahrscheinlichkeiten
-            target.KillDistribution = modelKillCounts.map((count, kills) => ({
-                kills: kills,
-                probability: (count / amount) * 100,
-                count: count
-            }));
+            // Bestimme ob Einzelmodell oder Multi-Modell Unit
+            const isSingleModel = defender.models === 1;
+            let distributionCounts;
+            let maxValue;
 
-            target.CompleteWipeoutChance = (modelKillCounts[defender.models] / amount) * 100;
+            if (isSingleModel) {
+                // Für Einzelmodelle: Schadenverteilung
+                const maxPossibleDamage = Math.max(...simulationResults.map(r => r.totalDamage), defender.wounds);
+                distributionCounts = new Array(maxPossibleDamage + 1).fill(0);
+                maxValue = defender.wounds;
+                
+                simulationResults.forEach(result => {
+                    distributionCounts[result.totalDamage]++;
+                });
+            } else {
+                // Für Multi-Modell Units: Vernichtete Modelle
+                distributionCounts = new Array(defender.models + 1).fill(0);
+                maxValue = defender.models;
+                
+                simulationResults.forEach(result => {
+                    const modelsKilled = this.calculateModelsKilledFromDamage(result.totalDamage, defender);
+                    distributionCounts[modelsKilled]++;
+                });
+            }
+
+            // Berechne Durchschnittswerte
+            const averageTotalDamage = simulationResults.reduce((sum, r) => sum + r.totalDamage, 0) / amount;
+            const averageModelsDestroyed = isSingleModel ? 
+                (averageTotalDamage / defender.wounds) : 
+                simulationResults.reduce((sum, r) => sum + this.calculateModelsKilledFromDamage(r.totalDamage, defender), 0) / amount;
+
+            target.ModelsDestroyed = averageModelsDestroyed;
+            target.TotalDamage = averageTotalDamage;
+
+            // Sammle Waffen-Statistiken
+            const weaponStats = {};
+            simulationResults.forEach(result => {
+                result.weapons.forEach(weapon => {
+                    if (!weaponStats[weapon.name]) {
+                        weaponStats[weapon.name] = {
+                            hits: 0,
+                            wounds: 0,
+                            failedSaves: 0,
+                            damage: 0,
+                            count: 0
+                        };
+                    }
+                    weaponStats[weapon.name].hits += weapon.hits;
+                    weaponStats[weapon.name].wounds += weapon.wounds;
+                    weaponStats[weapon.name].failedSaves += weapon.failedSaves;
+                    weaponStats[weapon.name].damage += weapon.damage;
+                    weaponStats[weapon.name].count++;
+                });
+            });
+
+            Object.keys(weaponStats).forEach(weaponName => {
+                const stats = weaponStats[weaponName];
+                const count = stats.count;
+                target.Weapons.push({
+                    "Name": weaponName,
+                    "Hits": stats.hits / count,
+                    "Wounds": stats.wounds / count,
+                    "FailedSaves": stats.failedSaves / count,
+                    "AverageDamage": stats.damage / count
+                });
+            });
+
+            // Berechne Wahrscheinlichkeiten
+            if (isSingleModel) {
+                // Für Einzelmodelle: Schadenverteilung
+                target.KillDistribution = distributionCounts.map((count, damage) => ({
+                    kills: damage,
+                    probability: (count / amount) * 100,
+                    count: count,
+                    label: `${damage} Wounds`
+                })).filter(item => item.count > 0);
+
+                // Komplette Vernichtung = Schaden >= maximale Wounds
+                const completeKillCount = distributionCounts.slice(defender.wounds).reduce((sum, count) => sum + count, 0);
+                target.CompleteWipeoutChance = (completeKillCount / amount) * 100;
+            } else {
+                // Für Multi-Modell Units: Vernichtete Modelle
+                target.KillDistribution = distributionCounts.map((count, kills) => ({
+                    kills: kills,
+                    probability: (count / amount) * 100,
+                    count: count,
+                    label: `${kills} Models`
+                })).filter(item => item.count > 0);
+
+                target.CompleteWipeoutChance = (distributionCounts[defender.models] / amount) * 100;
+            }
 
             result.Target.push(target);
         }
         return result;
+    }
+
+    calculateModelsKilledFromDamage(totalDamage, defender) {
+        let modelsKilled = 0;
+        let remainingDamage = totalDamage;
+
+        while (remainingDamage >= defender.wounds && modelsKilled < defender.models) {
+            modelsKilled++;
+            remainingDamage -= defender.wounds;
+        }
+
+        return modelsKilled;
     }
 
     calculateModelsKilledInSingleSim(simResult, defender) {
