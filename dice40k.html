@@ -495,173 +495,6 @@
         .close:hover {
             color: #ffd700;
         }
-            .main-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .header h1 {
-                font-size: 2rem;
-            }
-
-            .container {
-                padding: 10px;
-            }
-
-            .button-group {
-                flex-direction: column;
-            }
-
-            .btn {
-                width: 100%;
-            }
-
-            .simulation-controls {
-                flex-direction: column;
-                align-items: stretch;
-            }
-
-            .simulation-controls input {
-                width: 100%;
-            }
-        }
-
-        .loading {
-            display: none;
-            text-align: center;
-            padding: 20px;
-        }
-
-        .loading.active {
-            display: block;
-        }
-
-        .spinner {
-            width: 40px;
-            height: 40px;
-            border: 4px solid rgba(255, 215, 0, 0.3);
-            border-top: 4px solid #ffd700;
-            border-radius: 50%;
-            animation: spin 1s linear infinite;
-            margin: 0 auto 10px;
-        }
-
-        @keyframes spin {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
-        }
-
-        .error {
-            background: rgba(231, 76, 60, 0.2);
-            border: 1px solid rgba(231, 76, 60, 0.5);
-            color: #e74c3c;
-            padding: 15px;
-            border-radius: 5px;
-            margin: 10px 0;
-        }
-
-        .success {
-            background: rgba(46, 204, 113, 0.2);
-            border: 1px solid rgba(46, 204, 113, 0.5);
-            color: #2ecc71;
-            padding: 15px;
-            border-radius: 5px;
-            margin: 10px 0;
-        }
-
-        .chart-container {
-            margin: 15px 0;
-            background: rgba(255, 255, 255, 0.05);
-            border-radius: 5px;
-            padding: 15px;
-        }
-
-        .chart-title {
-            color: #ffd700;
-            font-weight: bold;
-            margin-bottom: 10px;
-            text-align: center;
-        }
-
-        .bar-chart {
-            display: flex;
-            align-items: end;
-            gap: 2px;
-            height: 100px;
-            margin: 10px 0;
-        }
-
-        .bar {
-            background: linear-gradient(to top, #667eea 0%, #764ba2 100%);
-            border-radius: 2px 2px 0 0;
-            min-width: 12px;
-            display: flex;
-            align-items: end;
-            justify-content: center;
-            color: white;
-            font-size: 10px;
-            font-weight: bold;
-            position: relative;
-        }
-
-        .bar-label {
-            position: absolute;
-            bottom: -15px;
-            font-size: 9px;
-            color: #b8c6db;
-        }
-
-        .probability-text {
-            text-align: center;
-            margin-top: 10px;
-            font-size: 14px;
-        }
-
-        .wipeout-chance {
-            background: linear-gradient(45deg, #e74c3c 0%, #c0392b 100%);
-            color: white;
-            padding: 8px 12px;
-            border-radius: 5px;
-            text-align: center;
-            font-weight: bold;
-            margin-top: 10px;
-        }
-
-        .modal {
-            display: none;
-            position: fixed;
-            z-index: 1000;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            overflow: auto;
-            background-color: rgba(0,0,0,0.8);
-        }
-
-        .modal-content {
-            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
-            margin: 5% auto;
-            padding: 20px;
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            border-radius: 10px;
-            width: 80%;
-            max-width: 800px;
-            max-height: 80vh;
-            overflow-y: auto;
-            color: #e0e6ed;
-        }
-
-        .close {
-            color: #aaa;
-            float: right;
-            font-size: 28px;
-            font-weight: bold;
-            cursor: pointer;
-        }
-
-        .close:hover {
-            color: #ffd700;
-        }
 
         /* Success and Error Messages */
         .success {
@@ -749,6 +582,91 @@
             padding: 3px 8px;
             font-size: 0.8rem;
         }
+
+        .keyword-selection-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        .keyword-selection-item {
+            background: rgba(255, 255, 255, 0.05);
+            border: 2px solid rgba(255, 215, 0, 0.3);
+            border-radius: 5px;
+            padding: 10px;
+            margin: 5px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .keyword-selection-item:hover {
+            background: rgba(255, 215, 0, 0.1);
+            border-color: rgba(255, 215, 0, 0.6);
+            transform: translateY(-2px);
+        }
+
+        .keyword-selection-item.selected {
+            background: rgba(255, 215, 0, 0.2);
+            border-color: #ffd700;
+        }
+
+        .keyword-selection-name {
+            font-weight: bold;
+            color: #ffd700;
+            margin-bottom: 5px;
+        }
+
+        .keyword-selection-desc {
+            font-size: 0.85rem;
+            color: #b8c6db;
+        }
+
+        .keyword-parameter-inputs {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 215, 0, 0.2);
+            border-radius: 5px;
+            padding: 10px;
+        }
+
+        .keyword-parameter-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 8px;
+            gap: 10px;
+        }
+
+        .keyword-parameter-label {
+            min-width: 120px;
+            font-size: 0.9rem;
+            color: #ffd700;
+        }
+
+        .keyword-parameter-input {
+            width: 80px;
+            padding: 4px 8px;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            border-radius: 3px;
+            background: rgba(255, 255, 255, 0.1);
+            color: #e0e6ed;
+            font-size: 0.9rem;
+        }
+
+        .simulation-start-panel {
+            text-align: center;
+            margin: 30px 0;
+        }
+
+        .simulation-final-controls p {
+            margin-bottom: 15px;
+            font-size: 1.1rem;
+            color: #b8c6db;
+        }
+
+        .btn-large {
+            font-size: 1.2rem !important;
+            padding: 15px 30px !important;
+        }
     </style>
     <style>
         .collapsible {
@@ -818,23 +736,16 @@
 
         <!-- Simulation Panel -->
         <div class="panel simulation-panel">
-            <h2>🎯 Simulation</h2>
+            <h2>🎯 Simulation Setup</h2>
             
             <div class="simulation-controls">
                 <label>Anzahl Simulationen:</label>
                 <input type="number" id="simulationAmount" value="1000" min="10" max="100000">
-                
-                <button class="btn btn-primary" onclick="runSimulation()">Simulation starten</button>
             </div>
 
             <div class="loading" id="loadingSpinner">
                 <div class="spinner"></div>
                 <p>Simulation läuft...</p>
-            </div>
-
-            <div class="button-group">
-                <button class="btn" onclick="showFullJson()">Vollständige JSON anzeigen</button>
-                <button class="btn btn-danger" onclick="clearAll()">Alles zurücksetzen</button>
             </div>
 
             <!-- JSON Import/Export als aufklappbar -->
@@ -864,6 +775,11 @@
                         <button class="btn" onclick="loadExample()">Beispiel laden</button>
                     </div>
                 </div>
+            </div>
+
+            <div class="button-group">
+                <button class="btn" onclick="showFullJson()">Vollständige JSON anzeigen</button>
+                <button class="btn btn-danger" onclick="clearAll()">Alles zurücksetzen</button>
             </div>
         </div>
 
@@ -937,17 +853,21 @@
                     <div class="form-group">
                         <label>Damage (kann D6, D3+1, etc. sein):</label>
                         <input type="text" id="weaponDamage" value="1" placeholder="z.B. D6+2">
+                    </div>                <div class="keywords-section">
+                    <label>Keywords:</label>
+                    <div class="keywords-input">
+                        <input type="text" id="weaponKeywordInput" placeholder="Keyword eingeben oder aus Liste wählen">
+                        <button class="btn btn-small" onclick="addWeaponKeyword()">+</button>
+                        <button class="btn btn-small" onclick="showKeywordSelector('weapon')" title="Aus Keyword-Liste auswählen">📋</button>
+                        <button class="help-btn" onclick="showKeywordHelp()" title="Keyword-Hilfe anzeigen">?</button>
                     </div>
-
-                    <div class="keywords-section">
-                        <label>Keywords:</label>
-                        <div class="keywords-input">
-                            <input type="text" id="weaponKeywordInput" placeholder="Keyword eingeben">
-                            <button class="btn btn-small" onclick="addWeaponKeyword()">+</button>
-                            <button class="help-btn" onclick="showKeywordHelp()" title="Keyword-Hilfe anzeigen">?</button>
-                        </div>
-                        <div class="keywords-list" id="weaponKeywords"></div>
+                    <div class="keywords-list" id="weaponKeywords"></div>
+                    
+                    <!-- Parameter-Input für Keywords wie "Melta X", "Anti-X Y+", etc. -->
+                    <div id="weaponKeywordParameters" style="margin-top: 10px; display: none;">
+                        <div class="keyword-parameter-inputs"></div>
                     </div>
+                </div>
 
                     <div class="button-group">
                         <button class="btn btn-secondary" onclick="addWeapon()">Waffe hinzufügen</button>
@@ -992,11 +912,17 @@
                 <div class="keywords-section">
                     <label>Keywords:</label>
                     <div class="keywords-input">
-                        <input type="text" id="defenderKeywordInput" placeholder="Keyword eingeben">
+                        <input type="text" id="defenderKeywordInput" placeholder="Keyword eingeben oder aus Liste wählen">
                         <button class="btn btn-small" onclick="addDefenderKeyword()">+</button>
+                        <button class="btn btn-small" onclick="showKeywordSelector('defender')" title="Aus Keyword-Liste auswählen">📋</button>
                         <button class="help-btn" onclick="showKeywordHelp()" title="Keyword-Hilfe anzeigen">?</button>
                     </div>
                     <div class="keywords-list" id="defenderKeywords"></div>
+                    
+                    <!-- Parameter-Input für Keywords -->
+                    <div id="defenderKeywordParameters" style="margin-top: 10px; display: none;">
+                        <div class="keyword-parameter-inputs"></div>
+                    </div>
                 </div>
 
                 <div class="button-group">
@@ -1004,6 +930,17 @@
                 </div>
 
                 <div class="unit-list" id="defendersList"></div>
+            </div>
+        </div>
+
+        <!-- Simulation starten -->
+        <div class="panel simulation-start-panel">
+            <h2>🚀 Simulation starten</h2>
+            <div class="simulation-final-controls">
+                <p>Alle Angreifer und Verteidiger sind konfiguriert? Dann kann die Simulation gestartet werden!</p>
+                <button class="btn btn-primary btn-large" onclick="runSimulation()" style="font-size: 1.2rem; padding: 15px 30px;">
+                    ⚔️ Simulation starten
+                </button>
             </div>
         </div>
 
@@ -1030,6 +967,21 @@
                 
                 <h3>Custom Keywords:</h3>
                 <div class="keyword-grid" id="modalCustomKeywords"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Keyword Selector Modal -->
+    <div id="keywordSelectorModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeKeywordSelector()">&times;</span>
+            <h2>🔖 Keywords auswählen</h2>
+            <div class="keyword-selector">
+                <h3>Standard 10th Edition Keywords:</h3>
+                <div class="keyword-selection-grid" id="selectorStandardKeywords"></div>
+                
+                <h3>Custom Keywords:</h3>
+                <div class="keyword-selection-grid" id="selectorCustomKeywords"></div>
             </div>
         </div>
     </div>
@@ -1072,7 +1024,7 @@
             'ignores cover': 'Umgeht Cover-Save Bonus des Ziels (case-insensitive, implementiert)',
             'indirect fire': '-1 to hit, maximal 4+ to hit (case-insensitive, implementiert)',
             'psychic': 'Kann durch Deny the Witch gestoppt werden (case-insensitive, implementiert)',
-            'melta X': 'Bei Range ≤ Hälfte: +X Damage (case-insensitive)',
+            'melta X': 'Bei Range ≤ Hälfte: +X Damage (case-insensitive, benötigt Parameter X)',
             '+1 to hit': 'Verbessert Hit-Würfe um 1 (z.B. 4+ wird zu 3+, case-insensitive)',
             '-1 to hit': 'Verschlechtert Hit-Würfe um 1 (z.B. 3+ wird zu 4+, case-insensitive)',
             '+1 to wound': 'Verbessert Wound-Würfe um 1 (z.B. 4+ wird zu 3+, case-insensitive)',
@@ -1093,7 +1045,8 @@
             '/2D': 'Halbiert eingehenden Schaden (minimum 1, abgerundet, case-insensitive)',
             'feel no pain X': 'Ignoriert Schaden bei X+ auf 1W6 (z.B. "feel no pain 6", case-insensitive)',
             'feel no pain psychic X': 'Ignoriert Psychic Schaden bei X+ auf 1W6 (case-insensitive)',
-            'cover': '+1 Save (außer gegen "ignores cover" Weapons, case-insensitive)'
+            'cover': '+1 Save (außer gegen "ignores cover" Weapons, case-insensitive)',
+            '-1 wound when stronger': 'Wenn Stärke > Toughness: -1 to wound (case-insensitive)'
         };
 
         // Initialisierung
@@ -1117,11 +1070,78 @@
             document.getElementById('keywordModal').style.display = 'none';
         };
 
+        // Keyword Selector Functions
+        let currentKeywordTarget = null; // 'weapon' or 'defender'
+
+        window.showKeywordSelector = function(target) {
+            currentKeywordTarget = target;
+            populateKeywordSelector();
+            document.getElementById('keywordSelectorModal').style.display = 'block';
+        };
+
+        window.closeKeywordSelector = function() {
+            document.getElementById('keywordSelectorModal').style.display = 'none';
+            currentKeywordTarget = null;
+        };
+
+        function populateKeywordSelector() {
+            const standardContainer = document.getElementById('selectorStandardKeywords');
+            const customContainer = document.getElementById('selectorCustomKeywords');
+            
+            // Clear existing content
+            standardContainer.innerHTML = '';
+            customContainer.innerHTML = '';
+
+            // Standard Keywords
+            for (const [keyword, description] of Object.entries(standardKeywords)) {
+                const keywordElement = document.createElement('div');
+                keywordElement.className = 'keyword-selection-item';
+                keywordElement.onclick = () => selectKeyword(keyword);
+                keywordElement.innerHTML = `
+                    <div class="keyword-selection-name">${keyword}</div>
+                    <div class="keyword-selection-desc">${description}</div>
+                `;
+                standardContainer.appendChild(keywordElement);
+            }
+
+            // Custom Keywords
+            for (const [keyword, description] of Object.entries(customKeywords)) {
+                const keywordElement = document.createElement('div');
+                keywordElement.className = 'keyword-selection-item';
+                keywordElement.onclick = () => selectKeyword(keyword);
+                keywordElement.innerHTML = `
+                    <div class="keyword-selection-name">${keyword}</div>
+                    <div class="keyword-selection-desc">${description}</div>
+                `;
+                customContainer.appendChild(keywordElement);
+            }
+        }
+
+        function selectKeyword(keyword) {
+            if (currentKeywordTarget === 'weapon') {
+                if (!window.currentWeaponKeywords.includes(keyword)) {
+                    window.currentWeaponKeywords.push(keyword);
+                    updateWeaponKeywordsDisplay();
+                }
+            } else if (currentKeywordTarget === 'defender') {
+                if (!window.currentDefenderKeywords.includes(keyword)) {
+                    window.currentDefenderKeywords.push(keyword);
+                    updateDefenderKeywordsDisplay();
+                }
+            }
+            closeKeywordSelector();
+        }
+
         // Click outside modal to close
         window.onclick = function(event) {
-            const modal = document.getElementById('keywordModal');
-            if (event.target == modal) {
-                modal.style.display = 'none';
+            const keywordModal = document.getElementById('keywordModal');
+            const selectorModal = document.getElementById('keywordSelectorModal');
+            if (event.target == keywordModal) {
+                keywordModal.style.display = 'none';
+            }
+            if (event.target == selectorModal) {
+                selectorModal.style.display = 'none';
+                currentKeywordTarget = null;
             }
         };
 
@@ -1265,9 +1285,42 @@
             }
         };
 
+        // Keywords mit Parametern (benötigen X-Werte)
+        const parametricKeywords = {
+            'melta': { pattern: /^melta\s*(\d+)?$/i, description: 'Bei Range ≤ Hälfte: +X Damage', paramName: 'Bonus-Damage' },
+            'anti-': { pattern: /^anti-([^0-9]+)\s*(\d+)\+?$/i, description: 'Gegen KEYWORD: Critical wounds bei X+', paramName: 'Critical-Threshold' },
+            'sustained hits': { pattern: /^sustained\s+hits\s*(\d+|d\d+)?$/i, description: 'Critical hits erzeugen X zusätzliche Hits', paramName: 'Extra-Hits' },
+            'rapid fire': { pattern: /^rapid\s+fire\s*(\d+)?$/i, description: 'Bei Range ≤ Hälfte: +X Attacks', paramName: 'Bonus-Attacks' },
+            'feel no pain': { pattern: /^feel\s+no\s+pain\s*(\d+)\+?$/i, description: 'Ignoriert Schaden bei X+ auf 1W6', paramName: 'Save-Threshold' },
+            'crithit': { pattern: /^crithit(\d+)\+?$/i, description: 'Critical Hits bei X+ statt 6+', paramName: 'Hit-Threshold' },
+            'critwound': { pattern: /^critwound(\d+)\+?$/i, description: 'Critical Wounds bei X+ statt 6+', paramName: 'Wound-Threshold' }
+        };
+
+        function needsParameter(keyword) {
+            const keywordLower = keyword.toLowerCase();
+            for (const [key, config] of Object.entries(parametricKeywords)) {
+                if (keywordLower.includes(key.toLowerCase()) || config.pattern.test(keyword)) {
+                    // Prüfe ob bereits ein Parameter vorhanden ist
+                    const match = config.pattern.exec(keyword);
+                    if (match && match[1]) {
+                        return null; // Bereits parametrisiert
+                    }
+                    return config;
+                }
+            }
+            return null;
+        }
+
         function updateWeaponKeywordsDisplay() {
             const container = document.getElementById('weaponKeywords');
+            const paramContainer = document.getElementById('weaponKeywordParameters');
+            const paramInputs = paramContainer.querySelector('.keyword-parameter-inputs');
+            
             container.innerHTML = '';
+            paramInputs.innerHTML = '';
+            
+            let hasParameters = false;
+            
             window.currentWeaponKeywords.forEach((keyword, index) => {
                 const tag = document.createElement('div');
                 tag.className = 'keyword-tag';
@@ -1276,12 +1329,37 @@
                     <span class="remove" onclick="removeWeaponKeyword(${index})">×</span>
                 `;
                 container.appendChild(tag);
+                
+                // Prüfe ob Parameter benötigt wird
+                const paramConfig = needsParameter(keyword);
+                if (paramConfig) {
+                    hasParameters = true;
+                    const paramItem = document.createElement('div');
+                    paramItem.className = 'keyword-parameter-item';
+                    paramItem.innerHTML = `
+                        <span class="keyword-parameter-label">${keyword} - ${paramConfig.paramName}:</span>
+                        <input type="text" class="keyword-parameter-input" 
+                               id="weaponParam_${index}" 
+                               placeholder="X" 
+                               onchange="updateParametricKeyword('weapon', ${index}, this.value)">
+                    `;
+                    paramInputs.appendChild(paramItem);
+                }
             });
+            
+            paramContainer.style.display = hasParameters ? 'block' : 'none';
         }
 
         function updateDefenderKeywordsDisplay() {
             const container = document.getElementById('defenderKeywords');
+            const paramContainer = document.getElementById('defenderKeywordParameters');
+            const paramInputs = paramContainer.querySelector('.keyword-parameter-inputs');
+            
             container.innerHTML = '';
+            paramInputs.innerHTML = '';
+            
+            let hasParameters = false;
+            
             window.currentDefenderKeywords.forEach((keyword, index) => {
                 const tag = document.createElement('div');
                 tag.className = 'keyword-tag';
@@ -1290,8 +1368,64 @@
                     <span class="remove" onclick="removeDefenderKeyword(${index})">×</span>
                 `;
                 container.appendChild(tag);
+                
+                // Prüfe ob Parameter benötigt wird
+                const paramConfig = needsParameter(keyword);
+                if (paramConfig) {
+                    hasParameters = true;
+                    const paramItem = document.createElement('div');
+                    paramItem.className = 'keyword-parameter-item';
+                    paramItem.innerHTML = `
+                        <span class="keyword-parameter-label">${keyword} - ${paramConfig.paramName}:</span>
+                        <input type="text" class="keyword-parameter-input" 
+                               id="defenderParam_${index}" 
+                               placeholder="X" 
+                               onchange="updateParametricKeyword('defender', ${index}, this.value)">
+                    `;
+                    paramInputs.appendChild(paramItem);
+                }
             });
+            
+            paramContainer.style.display = hasParameters ? 'block' : 'none';
         }
+
+        window.updateParametricKeyword = function(type, index, value) {
+            const keywords = type === 'weapon' ? window.currentWeaponKeywords : window.currentDefenderKeywords;
+            const keyword = keywords[index];
+            const paramConfig = needsParameter(keyword);
+            
+            if (paramConfig && value) {
+                // Ersetze das Keyword mit dem parametrisierten Wert
+                let newKeyword = keyword;
+                if (keyword.toLowerCase().includes('melta')) {
+                    newKeyword = `melta ${value}`;
+                } else if (keyword.toLowerCase().includes('anti-')) {
+                    // Extrahiere das Anti-Target und füge den Wert hinzu
+                    const match = keyword.match(/anti-([^0-9]+)/i);
+                    if (match) {
+                        newKeyword = `anti-${match[1].trim()} ${value}+`;
+                    }
+                } else if (keyword.toLowerCase().includes('sustained hits')) {
+                    newKeyword = `sustained hits ${value}`;
+                } else if (keyword.toLowerCase().includes('rapid fire')) {
+                    newKeyword = `rapid fire ${value}`;
+                } else if (keyword.toLowerCase().includes('feel no pain')) {
+                    newKeyword = `feel no pain ${value}+`;
+                } else if (keyword.toLowerCase().includes('crithit')) {
+                    newKeyword = `CritHit${value}+`;
+                } else if (keyword.toLowerCase().includes('critwound')) {
+                    newKeyword = `CritWound${value}+`;
+                }
+                
+                keywords[index] = newKeyword;
+                
+                if (type === 'weapon') {
+                    updateWeaponKeywordsDisplay();
+                } else {
+                    updateDefenderKeywordsDisplay();
+                }
+            }
+        };
 
         window.removeWeaponKeyword = function(index) {
             window.currentWeaponKeywords.splice(index, 1);

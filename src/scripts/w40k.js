@@ -242,6 +242,13 @@ export class CombatCalculator {
             woundModifier += 1;
         }
 
+        // "-1 wound when stronger" - wenn Stärke > Toughness
+        if (weapon.Keywords.some(k => k.toLowerCase().includes("-1 wound when stronger"))) {
+            if (weapon.strength > defender.toughness) {
+                woundModifier += 1;
+            }
+        }
+
         // Lance (bei Charge)
         if (weapon.Keywords.some(k => k.toLowerCase().includes("lance"))) {
             woundModifier -= 1;
@@ -321,6 +328,15 @@ export class CombatCalculator {
         // Reihenfolge: Halve -> Increase -> Decrease
         if (defender.Keywords.some(k => k.toLowerCase().includes("halve damage") || k.toLowerCase().includes("/2d"))) {
             damage = Math.max(1, Math.floor(damage / 2));
+        }
+
+        // Melta X: +X Damage bei Range ≤ Hälfte (simulieren als immer aktiv)
+        for (const keyword of weapon.Keywords) {
+            const meltaMatch = keyword.match(/melta\s+(\d+)/i);
+            if (meltaMatch) {
+                const bonusDamage = parseInt(meltaMatch[1]);
+                damage += bonusDamage;
+            }
         }
 
         if (weapon.Keywords.some(k => k.toLowerCase().includes("+1 dmg") || k.toLowerCase().includes("+1 damage"))) {
