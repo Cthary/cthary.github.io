@@ -180,7 +180,12 @@ export class CombatCalculator {
 
         // Normale Damage Instances
         for (let i = 0; i < remainingWounds; i++) {
-            let damage = this.dice.parseAndRoll(weapon.damage);
+            let damage;
+            if (typeof weapon.getDamage === 'function') {
+                damage = weapon.getDamage();
+            } else {
+                damage = this.dice.parseAndRoll(weapon.damage);
+            }
             damage = this.applyDamageModifiers(damage, weapon, defender);
             damageInstances.push(damage);
         }
@@ -578,6 +583,14 @@ function simulateGroupCombat(combinedWeapons, defenderGroup, simulationCount) {
         }))
     };
 
+    // Sammle Waffen-Statistiken separat
+    const weaponStats = combinedWeapons.map(() => ({
+        totalHits: 0,
+        totalWounds: 0,
+        totalFailedSaves: 0,
+        totalDamage: 0
+    }));
+
     // Simuliere jede Runde
     for (let sim = 0; sim < simulationCount; sim++) {
         // Erstelle Kopie der Verteidiger für diese Simulation
@@ -593,7 +606,7 @@ function simulateGroupCombat(combinedWeapons, defenderGroup, simulationCount) {
         let totalDamage = 0;
 
         // Simuliere alle Waffen kombiniert
-        for (const weapon of combinedWeapons) {
+        combinedWeapons.forEach((weapon, weaponIndex) => {
             // Erstelle temporäres Weapon-Objekt für Simulation
             const tempWeapon = {
                 name: weapon.name,
@@ -604,6 +617,8 @@ function simulateGroupCombat(combinedWeapons, defenderGroup, simulationCount) {
                 ap: weapon.ap,
                 damage: weapon.damage,
                 Keywords: weapon.Keywords || [],
+                
+                // Methode für Attack-Parsing (wird von CombatCalculator erwartet)
                 getAttacks: function() {
                     if (typeof this.attacks === 'string') {
                         if (this.attacks.includes('d')) {
@@ -620,18 +635,48 @@ function simulateGroupCombat(combinedWeapons, defenderGroup, simulationCount) {
                         return parseInt(this.attacks) || 1;
                     }
                     return this.attacks || 1;
+                },
+
+                // Damage-Parsing Methode
+                getDamage: function() {
+                    if (typeof this.damage === 'string') {
+                        if (this.damage.includes('d')) {
+                            // Parse Würfel (z.B. "2d6", "d3")
+                            const parts = this.damage.toLowerCase().split('d');
+                            const numDice = parts[0] === '' ? 1 : parseInt(parts[0]) || 1;
+                            const sides = parseInt(parts[1]) || 6;
+                            let total = 0;
+                            for (let i = 0; i < numDice; i++) {
+                                total += Math.floor(Math.random() * sides) + 1;
+                            }
+                            return total;
+                        }
+                        return parseInt(this.damage) || 1;
+                    }
+                    return this.damage || 1;
                 }
             };
 
-            // Simuliere diese Waffe
-            const weaponResult = simulator.simulateSingleCombat(tempWeapon, {
+            // Erstelle Standard-Verteidiger für Waffen-Simulation
+            const standardDefender = {
                 models: defenderState.reduce((sum, d) => sum + d.currentModels, 0),
-                toughness: sortedMembers[0].toughness, // Nehme erste Toughness als Standard
-                wounds: 1, // Wird später durch Leader-System überschrieben
+                toughness: sortedMembers[0].toughness,
+                wounds: sortedMembers[0].wounds,
                 save: sortedMembers[0].save,
                 invulnerable: sortedMembers[0].invulnerable,
                 Keywords: sortedMembers[0].Keywords
-            });
+            };
+
+            // Simuliere diese Waffe
+            const weaponResult = simulator.simulateSingleCombat(tempWeapon, standardDefender);
+
+            console.log(`Weapon ${weapon.name} result:`, weaponResult);
+
+            // Sammle Waffen-Statistiken
+            weaponStats[weaponIndex].totalHits += weaponResult.hits;
+            weaponStats[weaponIndex].totalWounds += weaponResult.wounds;
+            weaponStats[weaponIndex].totalFailedSaves += weaponResult.failedSaves;
+            weaponStats[weaponIndex].totalDamage += weaponResult.totalDamage;
 
             totalHits += weaponResult.hits;
             totalWounds += weaponResult.wounds;
@@ -658,7 +703,7 @@ function simulateGroupCombat(combinedWeapons, defenderGroup, simulationCount) {
             }
 
             totalDamage += (weaponResult.totalDamage - remainingDamage);
-        }
+        });
 
         // Sammle Ergebnisse für diese Simulation
         sortedMembers.forEach((member, index) => {
@@ -687,6 +732,14 @@ function simulateGroupCombat(combinedWeapons, defenderGroup, simulationCount) {
             });
         });
     }
+
+    // Berechne finale Waffen-Statistiken
+    weaponStats.forEach((stats, index) => {
+        groupTargetResult.Weapons[index].Hits = stats.totalHits / simulationCount;
+        groupTargetResult.Weapons[index].Wounds = stats.totalWounds / simulationCount;
+        groupTargetResult.Weapons[index].FailedSaves = stats.totalFailedSaves / simulationCount;
+        groupTargetResult.Weapons[index].AverageDamage = stats.totalDamage / simulationCount;
+    });
 
     // Berechne finale Statistiken für jedes Member
     groupTargetResult.Members.forEach(member => {
