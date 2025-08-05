@@ -839,9 +839,9 @@
                 </button>
                 <div class="collapsible-content">
                     <div class="form-group">
-                        <label>Angreifer auswählen:</label>
+                        <label>Angreifer-Gruppe auswählen:</label>
                         <select id="weaponAttackerSelect">
-                            <option value="">Bitte Angreifer auswählen</option>
+                            <option value="">Bitte Angreifer-Gruppe auswählen</option>
                         </select>
                     </div>
 
@@ -1388,6 +1388,39 @@
             }
         };
 
+        // Form clearing functions
+        window.clearWeaponForm = function() {
+            document.getElementById('weaponAttackerSelect').value = '';
+            document.getElementById('weaponName').value = '';
+            document.getElementById('weaponAmount').value = '1';
+            document.getElementById('weaponType').value = 'Ranged';
+            document.getElementById('weaponAttacks').value = '1';
+            document.getElementById('weaponToHit').value = '4';
+            document.getElementById('weaponStrength').value = '4';
+            document.getElementById('weaponAP').value = '0';
+            document.getElementById('weaponDamage').value = '1';
+            document.getElementById('weaponKeywordInput').value = '';
+            
+            // Keywords leeren
+            window.currentWeaponKeywords = [];
+            updateWeaponKeywordsDisplay();
+        };
+
+        function clearDefenderForm() {
+            document.getElementById('defenderGroupName').value = '';
+            document.getElementById('defenderName').value = '';
+            document.getElementById('defenderModels').value = '1';
+            document.getElementById('defenderToughness').value = '4';
+            document.getElementById('defenderWounds').value = '1';
+            document.getElementById('defenderSave').value = '3';
+            document.getElementById('defenderInvul').value = '';
+            document.getElementById('defenderKeywordInput').value = '';
+            
+            // Keywords leeren
+            window.currentDefenderKeywords = [];
+            updateDefenderKeywordsDisplay();
+        };
+
         // Keywords mit Parametern (benötigen X-Werte)
         const parametricKeywords = {
             'melta': { pattern: /^melta\s*(\d+)?$/i, description: 'Bei Range ≤ Hälfte: +X Damage', paramName: 'Bonus-Damage' },
@@ -1627,7 +1660,8 @@
             window.attackers.forEach((group, index) => {
                 const option = document.createElement('option');
                 option.value = index;
-                option.textContent = group.GroupName;
+                const memberCount = group.Members.reduce((sum, member) => sum + member.Count, 0);
+                option.textContent = `${group.GroupName} (${memberCount} Modelle)`;
                 select.appendChild(option);
             });
         }
