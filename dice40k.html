@@ -1430,36 +1430,32 @@
             setTimeout(() => {
                 try {
                     // Konvertiere UI-Klassen in das für die Simulation erwartete Format
-                    const simulationAttackers = window.attackers.map(attacker => ({
-                        Name: attacker.name,
-                        Weapons: attacker.weapons.map(weapon => ({
-                            name: weapon.name,
-                            type: weapon.type,
-                            attacks: weapon.attacks,
-                            to_hit: weapon.toHit,
-                            strength: weapon.strength,
-                            ap: weapon.ap,
-                            damage: weapon.damage,
-                            Keywords: weapon.keywords,
-                            amount: weapon.amount
-                        }))
-                    }));
-
-                    const simulationDefenders = window.defenders.map(defender => ({
-                        Name: defender.name,
-                        type: "Infantry", // Default type
-                        toughness: defender.toughness,
-                        wounds: defender.wounds,
-                        models: defender.models,
-                        save: defender.save,
-                        invulnerable: defender.invul,
-                        Keywords: defender.keywords
-                    }));
-
                     const simulationData = {
                         Amount: amount,
-                        Attackers: simulationAttackers,
-                        Defenders: simulationDefenders
+                        Attackers: window.attackers.map(attacker => ({
+                            Name: attacker.name,
+                            Weapons: attacker.weapons.map(weapon => ({
+                                name: weapon.name,
+                                type: weapon.type,
+                                attacks: weapon.attacks,
+                                to_hit: weapon.toHit,
+                                strength: weapon.strength,
+                                ap: weapon.ap,
+                                damage: weapon.damage,
+                                Keywords: weapon.keywords,
+                                amount: weapon.amount
+                            }))
+                        })),
+                        Defenders: window.defenders.map(defender => ({
+                            Name: defender.name,
+                            type: "Infantry", // Default type, kann später erweitert werden
+                            toughness: defender.toughness,
+                            wounds: defender.wounds,
+                            models: defender.models,
+                            save: defender.save,
+                            invulnerable: defender.invul,
+                            Keywords: defender.keywords
+                        }))
                     };
 
                     window.simulationResults = run(simulationData);
@@ -2320,16 +2316,25 @@
             showSuccess('Beispielkonfiguration geladen!');
         };
 
-        // Enter-Taste für Keyword-Eingaben
-        document.getElementById('weaponKeywordInput').addEventListener('keypress', function(e) {
-            if (e.key === 'Enter') {
-                window.addWeaponKeyword();
+        // Enter-Taste für Keyword-Eingaben (nach DOM-Load)
+        document.addEventListener('DOMContentLoaded', function() {
+            const weaponKeywordInput = document.getElementById('weaponKeywordInput');
+            const defenderKeywordInput = document.getElementById('defenderKeywordInput');
+            
+            if (weaponKeywordInput) {
+                weaponKeywordInput.addEventListener('keypress', function(e) {
+                    if (e.key === 'Enter') {
+                        window.addWeaponKeyword();
+                    }
+                });
             }
-        });
-
-        document.getElementById('defenderKeywordInput').addEventListener('keypress', function(e) {
-            if (e.key === 'Enter') {
-                window.addDefenderKeyword();
+            
+            if (defenderKeywordInput) {
+                defenderKeywordInput.addEventListener('keypress', function(e) {
+                    if (e.key === 'Enter') {
+                        window.addDefenderKeyword();
+                    }
+                });
             }
         });
     </script>
