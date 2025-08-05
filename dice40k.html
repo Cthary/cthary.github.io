@@ -839,9 +839,9 @@
                 </button>
                 <div class="collapsible-content">
                     <div class="form-group">
-                        <label>Angreifer-Gruppe auswählen:</label>
+                        <label>Angreifer auswählen:</label>
                         <select id="weaponAttackerSelect">
-                            <option value="">Bitte Angreifer-Gruppe auswählen</option>
+                            <option value="">Bitte Angreifer auswählen</option>
                         </select>
                     </div>
 
@@ -1041,6 +1041,29 @@
         window.currentWeaponKeywords = [];
         window.currentDefenderKeywords = [];
 
+        // Migration: Stelle sicher, dass alle Angreifer-Mitglieder ein Weapons-Array haben
+        function migrateAttackerData() {
+            window.attackers.forEach(group => {
+                // Migriere alte Struktur mit Waffen auf Gruppen-Ebene
+                if (group.Weapons && !group.Members.some(m => m.Weapons)) {
+                    // Teile Waffen auf alle Mitglieder auf (alte Struktur)
+                    group.Members.forEach(member => {
+                        if (!member.Weapons) {
+                            member.Weapons = [...group.Weapons];
+                        }
+                    });
+                    delete group.Weapons; // Entferne alte Waffen-Referenz
+                }
+                
+                // Stelle sicher, dass alle Mitglieder ein Weapons-Array haben
+                group.Members.forEach(member => {
+                    if (!member.Weapons) {
+                        member.Weapons = [];
+                    }
+                });
+            });
+        }
+
         // Collapsible-Funktionalität
         window.toggleCollapsible = function(element) {
             element.classList.toggle('active');
@@ -1093,6 +1116,7 @@
         document.addEventListener('DOMContentLoaded', function() {
             populateKeywordModal();
             updateAttackerSelect();
+            migrateAttackerData(); // Migration der Angreifer-Daten
             
             // Sicherstellen, dass der Loading-Spinner beim Start versteckt ist
             const loadingSpinner = document.getElementById('loadingSpinner');
@@ -1235,8 +1259,8 @@
                 // Neue Gruppe erstellen
                 group = {
                     GroupName: groupName,
-                    Members: [],
-                    Weapons: []
+                    Members: []
+                    // Waffen sind jetzt bei den einzelnen Mitgliedern
                 };
                 window.attackers.push(group);
             }
@@ -1244,7 +1268,8 @@
             // Mitglied zur Gruppe hinzufügen
             const member = {
                 Name: name,
-                Count: count
+                Count: count,
+                Weapons: []  // Jedes Mitglied hat seine eigenen Waffen
             };
             
             group.Members.push(member);
@@ -1311,7 +1336,7 @@
 
         // Waffe hinzufügen
         window.addWeapon = function() {
-            const groupIndex = parseInt(document.getElementById('weaponAttackerSelect').value);
+            const attackerValue = document.getElementById('weaponAttackerSelect').value;
             const name = document.getElementById('weaponName').value.trim();
             const type = document.getElementById('weaponType').value;
             const attacks = document.getElementById('weaponAttacks').value.trim();
@@ -1321,8 +1346,8 @@
             const damage = document.getElementById('weaponDamage').value.trim();
             const amount = parseInt(document.getElementById('weaponAmount').value) || 1;
 
-            if (isNaN(groupIndex)) {
-                showError('Bitte wählen Sie eine Angreifer-Gruppe aus.');
+            if (!attackerValue) {
+                showError('Bitte wählen Sie einen Angreifer aus.');
                 return;
             }
 
@@ -1330,6 +1355,9 @@
                 showError('Bitte geben Sie einen Namen für die Waffe ein.');
                 return;
             }
+
+            // Parse groupIndex und memberIndex aus dem Wert "groupIndex-memberIndex"
+            const [groupIndex, memberIndex] = attackerValue.split('-').map(i => parseInt(i));
 
             const weapon = {
                 name: name,
@@ -1343,7 +1371,8 @@
                 Keywords: [...window.currentWeaponKeywords]
             };
 
-            window.attackers[groupIndex].Weapons.push(weapon);
+            // Waffe zum spezifischen Angreifer hinzufügen
+            window.attackers[groupIndex].Members[memberIndex].Weapons.push(weapon);
             clearWeaponForm();
             updateAttackersList();
             
@@ -1364,7 +1393,9 @@
                 weaponContent.classList.remove('active');
             }
             
-            showSuccess(`Waffe "${name}" wurde zur Gruppe "${window.attackers[groupIndex].GroupName}" hinzugefügt.`);
+            const attackerName = window.attackers[groupIndex].Members[memberIndex].Name;
+            const groupName = window.attackers[groupIndex].GroupName;
+            showSuccess(`Waffe "${name}" wurde zu ${attackerName} (${groupName}) hinzugefügt.`);
         };
 
         // Keyword-Funktionen
@@ -1593,24 +1624,27 @@
                         <strong>Mitglieder:</strong><br>
                         ${group.Members.map((member, mIndex) => `
                             <div style="margin: 5px 0; padding: 5px; background: rgba(255,255,255,0.03); border-radius: 3px;">
-                                ${member.Count}x ${member.Name}
-                                <button class="btn btn-small" onclick="editAttackerMember(${groupIndex}, ${mIndex})" style="float: right; margin-left: 5px;">Bearbeiten</button>
-                                <button class="btn btn-small btn-danger" onclick="removeAttackerMember(${groupIndex}, ${mIndex})" style="float: right;">Entfernen</button>
-                            </div>
-                        `).join('')}
-                        
-                        <strong>Waffen (${group.Weapons.length}):</strong>
-                        ${group.Weapons.map((weapon, wIndex) => `
-                            <div class="weapon-item">
-                                <div class="weapon-info">
-                                    <strong>${weapon.name}</strong> (${weapon.type})<br>
-                                    A: ${weapon.attacks} | Hit: ${weapon.to_hit}+ | S: ${weapon.strength} | AP: -${weapon.ap} | D: ${weapon.damage} | Amount: ${weapon.amount}<br>
-                                    Keywords: ${weapon.Keywords.join(', ') || 'Keine'}
+                                <div style="margin-bottom: 5px;">
+                                    ${member.Count}x ${member.Name}
+                                    <button class="btn btn-small" onclick="editAttackerMember(${groupIndex}, ${mIndex})" style="float: right; margin-left: 5px;">Bearbeiten</button>
+                                    <button class="btn btn-small btn-danger" onclick="removeAttackerMember(${groupIndex}, ${mIndex})" style="float: right;">Entfernen</button>
                                 </div>
-                                <div class="weapon-controls">
-                                    <button class="btn btn-small" onclick="editWeapon(${groupIndex}, ${wIndex})">Bearbeiten</button>
-                                    <button class="btn btn-small btn-danger" onclick="removeWeapon(${groupIndex}, ${wIndex})">Entfernen</button>
-                                </div>
+                                ${member.Weapons && member.Weapons.length > 0 ? `
+                                    <div style="margin-left: 10px; font-size: 0.9em; color: #b8c6db;">
+                                        <strong>Waffen (${member.Weapons.length}):</strong><br>
+                                        ${member.Weapons.map((weapon, wIndex) => `
+                                            <div style="margin: 2px 0; padding: 3px; background: rgba(255,255,255,0.05); border-radius: 2px;">
+                                                <strong>${weapon.name}</strong> (${weapon.type})<br>
+                                                A: ${weapon.attacks} | Hit: ${weapon.to_hit}+ | S: ${weapon.strength} | AP: -${weapon.ap} | D: ${weapon.damage} | Amount: ${weapon.amount}<br>
+                                                Keywords: ${weapon.Keywords.join(', ') || 'Keine'}
+                                                <div style="margin-top: 3px;">
+                                                    <button class="btn btn-small" onclick="editWeapon(${groupIndex}, ${mIndex}, ${wIndex})">Bearbeiten</button>
+                                                    <button class="btn btn-small btn-danger" onclick="removeWeapon(${groupIndex}, ${mIndex}, ${wIndex})">Entfernen</button>
+                                                </div>
+                                            </div>
+                                        `).join('')}
+                                    </div>
+                                ` : '<div style="margin-left: 10px; font-size: 0.9em; color: #888;">Keine Waffen</div>'}
                             </div>
                         `).join('')}
                     </div>
@@ -1656,13 +1690,15 @@
 
         function updateAttackerSelect() {
             const select = document.getElementById('weaponAttackerSelect');
-            select.innerHTML = '<option value="">Bitte Angreifer-Gruppe auswählen</option>';
-            window.attackers.forEach((group, index) => {
-                const option = document.createElement('option');
-                option.value = index;
-                const memberCount = group.Members.reduce((sum, member) => sum + member.Count, 0);
-                option.textContent = `${group.GroupName} (${memberCount} Modelle)`;
-                select.appendChild(option);
+            select.innerHTML = '<option value="">Bitte Angreifer auswählen</option>';
+            
+            window.attackers.forEach((group, groupIndex) => {
+                group.Members.forEach((member, memberIndex) => {
+                    const option = document.createElement('option');
+                    option.value = `${groupIndex}-${memberIndex}`;
+                    option.textContent = `${member.Name} (${group.GroupName}) - ${member.Count}x`;
+                    select.appendChild(option);
+                });
             });
         }
 
@@ -1711,8 +1747,8 @@
             }
         };
 
-        window.removeWeapon = function(groupIndex, weaponIndex) {
-            window.attackers[groupIndex].Weapons.splice(weaponIndex, 1);
+        window.removeWeapon = function(groupIndex, memberIndex, weaponIndex) {
+            window.attackers[groupIndex].Members[memberIndex].Weapons.splice(weaponIndex, 1);
             updateAttackersList();
         };
 
@@ -1859,9 +1895,17 @@
             }
 
             // Prüfen ob alle Angreifer Waffen haben
-            const groupsWithoutWeapons = window.attackers.filter(g => g.Weapons.length === 0);
-            if (groupsWithoutWeapons.length > 0) {
-                showError(`Die folgenden Angreifer-Gruppen haben keine Waffen: ${groupsWithoutWeapons.map(g => g.GroupName).join(', ')}`);
+            const attackersWithoutWeapons = [];
+            window.attackers.forEach(group => {
+                group.Members.forEach(member => {
+                    if (!member.Weapons || member.Weapons.length === 0) {
+                        attackersWithoutWeapons.push(`${member.Name} (${group.GroupName})`);
+                    }
+                });
+            });
+            
+            if (attackersWithoutWeapons.length > 0) {
+                showError(`Die folgenden Angreifer haben keine Waffen: ${attackersWithoutWeapons.join(', ')}`);
                 return;
             }
 
@@ -1879,17 +1923,20 @@
                         Amount: amount,
                         Attackers: window.attackers.map(group => ({
                             Name: group.GroupName,
-                            Members: group.Members,
-                            Weapons: group.Weapons.map(weapon => ({
-                                name: weapon.name,
-                                type: weapon.type,
-                                attacks: weapon.attacks,
-                                to_hit: weapon.to_hit,
-                                strength: weapon.strength,
-                                ap: weapon.ap,
-                                damage: weapon.damage,
-                                Keywords: weapon.Keywords,
-                                amount: weapon.amount
+                            Members: group.Members.map(member => ({
+                                Name: member.Name,
+                                Count: member.Count,
+                                Weapons: member.Weapons.map(weapon => ({
+                                    name: weapon.name,
+                                    type: weapon.type,
+                                    attacks: weapon.attacks,
+                                    to_hit: weapon.to_hit,
+                                    strength: weapon.strength,
+                                    ap: weapon.ap,
+                                    damage: weapon.damage,
+                                    Keywords: weapon.Keywords,
+                                    amount: weapon.amount
+                                }))
                             }))
                         })),
                         Defenders: window.defenders.map(group => ({
