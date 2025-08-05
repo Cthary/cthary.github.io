@@ -9,10 +9,16 @@ export class CombatCalculator {
 
     // Optimierte Hit-Phase mit besserem Keyword-Handling
     calculateHits(weapon, defender) {
-        const attackCount = weapon.getAttacks();
+        let attackCount = weapon.getAttacks();
         let hitTarget = weapon.to_hit;
         let critHitThreshold = 6;
         let rerollType = "none";
+        
+        // Blast: +1 Attack pro 5 Modelle (1-4=+0, 5-9=+1, 10-14=+2, etc.)
+        if (weapon.Keywords.some(k => k.toLowerCase().includes("blast"))) {
+            const bonusAttacks = Math.floor(defender.models / 5);
+            attackCount += bonusAttacks;
+        }
         
         // Sammle alle Modifikatoren
         const modifiers = this.gatherHitModifiers(weapon, defender);
@@ -21,7 +27,7 @@ export class CombatCalculator {
         rerollType = modifiers.rerollType;
 
         // Torrent: Automatische Hits
-        if (weapon.Keywords.includes("torrent-effect")) {
+        if (weapon.Keywords.some(k => k.toLowerCase().includes("torrent"))) {
             return {
                 normalHits: attackCount,
                 criticalHits: 0,
@@ -38,7 +44,7 @@ export class CombatCalculator {
 
         for (const roll of rolls) {
             // Hazardous prüfen (nur bei ursprünglichen 1ern)
-            if (weapon.Keywords.includes("hazardous-effect") && roll === 1) {
+            if (weapon.Keywords.some(k => k.toLowerCase().includes("hazardous")) && roll === 1) {
                 mortalWounds++;
             }
 
@@ -122,7 +128,8 @@ export class CombatCalculator {
         let saveTarget = defender.save + weapon.ap;
         
         // Cover-Bonus (wenn nicht ignoriert)
-        if (defender.Keywords.includes("cover") && !weapon.Keywords.includes("ignores-cover-effect")) {
+        if (defender.Keywords.some(k => k.toLowerCase().includes("cover")) && 
+            !weapon.Keywords.some(k => k.toLowerCase().includes("ignores cover"))) {
             saveTarget -= 1;
         }
 
@@ -193,9 +200,8 @@ export class CombatCalculator {
         let rerollType = "none";
 
         // Waffen-Modifikatoren
-        if (weapon.Keywords.includes("indirect-fire-effect")) {
+        if (weapon.Keywords.some(k => k.toLowerCase().includes("indirect fire"))) {
             hitModifier += 1; // -1 to hit
-            hitModifier = Math.max(hitModifier, 2); // Nie besser als 4+
         }
 
         // Verteidiger-Modifikatoren
@@ -237,7 +243,7 @@ export class CombatCalculator {
         }
 
         // Lance (bei Charge)
-        if (weapon.Keywords.includes("lance")) {
+        if (weapon.Keywords.some(k => k.toLowerCase().includes("lance"))) {
             woundModifier -= 1;
         }
 
@@ -255,7 +261,7 @@ export class CombatCalculator {
         else if (weapon.Keywords.includes("RWNoCrit")) rerollType = "nocrit";
 
         // Twin-linked
-        if (weapon.Keywords.includes("twin-linked")) {
+        if (weapon.Keywords.some(k => k.toLowerCase().includes("twin-linked") || k.toLowerCase().includes("twin linked"))) {
             rerollType = "miss";
         }
 
@@ -313,15 +319,15 @@ export class CombatCalculator {
         let damage = baseDamage;
 
         // Reihenfolge: Halve -> Increase -> Decrease
-        if (defender.Keywords.includes("halve damage")) {
+        if (defender.Keywords.some(k => k.toLowerCase().includes("halve damage") || k.toLowerCase().includes("/2d"))) {
             damage = Math.max(1, Math.floor(damage / 2));
         }
 
-        if (weapon.Keywords.includes("+1 dmg")) {
+        if (weapon.Keywords.some(k => k.toLowerCase().includes("+1 dmg") || k.toLowerCase().includes("+1 damage"))) {
             damage += 1;
         }
 
-        if (defender.Keywords.includes("-1 dmg")) {
+        if (defender.Keywords.some(k => k.toLowerCase().includes("-1 dmg") || k.toLowerCase().includes("-1 damage"))) {
             damage = Math.max(1, damage - 1);
         }
 
@@ -507,35 +513,61 @@ function run(jsonData) {
             };
 
             let totalDefenderStats = null;
+            let combinedResults = [];
 
-            // Simuliere jede Waffe separat
+            // Simuliere alle Waffen gemeinsam für korrekte Kombination
+            for (let sim = 0; sim < simulationCount; sim++) {
+                let totalHits = 0;
+                let totalWounds = 0;
+                let totalFailedSaves = 0;
+                let totalDamage = 0;
+                let allDamageInstances = [];
+
+                // Kombiniere alle Waffen in einer Simulation
+                for (let weaponIndex = 0; weaponIndex < attacker.Weapons.length; weaponIndex++) {
+                    const weapon = attacker.getWeapon(weaponIndex);
+                    const weaponResult = simulator.simulateSingleCombat(weapon, defender);
+                    
+                    totalHits += weaponResult.hits;
+                    totalWounds += weaponResult.wounds;
+                    totalFailedSaves += weaponResult.failedSaves;
+                    totalDamage += weaponResult.totalDamage;
+                    allDamageInstances.push(...weaponResult.finalDamageInstances);
+
+                    // Sammle Waffen-Statistiken (nur beim ersten Durchlauf)
+                    if (sim === 0) {
+                        targetResult.Weapons.push({
+                            Name: weapon.name,
+                            Hits: 0, // Wird später berechnet
+                            Wounds: 0,
+                            FailedSaves: 0,
+                            AverageDamage: 0
+                        });
+                    }
+                }
+
+                combinedResults.push({
+                    hits: totalHits,
+                    wounds: totalWounds,
+                    failedSaves: totalFailedSaves,
+                    totalDamage: totalDamage,
+                    finalDamageInstances: allDamageInstances
+                });
+            }
+
+            // Berechne kombinierte Statistiken
+            totalDefenderStats = simulator.calculateStatistics(combinedResults, defender);
+
+            // Aktualisiere Waffen-Statistiken separat
             for (let weaponIndex = 0; weaponIndex < attacker.Weapons.length; weaponIndex++) {
                 const weapon = attacker.getWeapon(weaponIndex);
-                
-                // Führe Simulation durch
                 const weaponResults = simulator.simulateBatch(weapon, defender, simulationCount);
                 const weaponStats = simulator.calculateStatistics(weaponResults, defender);
 
-                // Waffen-Statistiken hinzufügen
-                targetResult.Weapons.push({
-                    Name: weapon.name,
-                    Hits: weaponStats.averageHits,
-                    Wounds: weaponStats.averageWounds,
-                    FailedSaves: weaponStats.averageFailedSaves,
-                    AverageDamage: weaponStats.averageTotalDamage
-                });
-
-                // Kombiniere Statistiken aller Waffen
-                if (!totalDefenderStats) {
-                    totalDefenderStats = weaponStats;
-                } else {
-                    // Addiere Waffen-Effekte (vereinfacht)
-                    totalDefenderStats.averageKills += weaponStats.averageKills;
-                    totalDefenderStats.averageTotalDamage += weaponStats.averageTotalDamage;
-                    
-                    // Kombiniere Kill-Distributionen (komplexer, hier vereinfacht)
-                    // In einer vollständigen Implementierung würde man hier alle Waffen gemeinsam simulieren
-                }
+                targetResult.Weapons[weaponIndex].Hits = weaponStats.averageHits;
+                targetResult.Weapons[weaponIndex].Wounds = weaponStats.averageWounds;
+                targetResult.Weapons[weaponIndex].FailedSaves = weaponStats.averageFailedSaves;
+                targetResult.Weapons[weaponIndex].AverageDamage = weaponStats.averageTotalDamage;
             }
 
             if (totalDefenderStats) {
