@@ -1430,13 +1430,13 @@
             
             let chartHtml = `
                 <div class="chart-container">
-                    <div class="chart-title">${isSingleModel ? 'Schadenverteilung (Wounds)' : 'Schadenverteilung (Vernichtete Modelle)'}</div>
+                    <div class="chart-title">${isSingleModel ? 'Schadenverteilung (Wounds)' : 'Kumulative Verteilung (≥X Modelle getötet)'}</div>
                     <div class="bar-chart">
             `;
             
             significantData.forEach(data => {
                 const height = Math.max(5, (data.probability / maxProbability) * 90); // Min 5px Höhe
-                const label = isSingleModel ? `${data.kills}W` : `${data.kills}M`;
+                const label = isSingleModel ? `${data.kills}W` : `≥${data.kills}`;
                 chartHtml += `
                     <div class="bar" style="height: ${height}px;" title="${data.label}: ${data.probability.toFixed(1)}%">
                         <span class="bar-label">${label}</span>
@@ -1447,10 +1447,40 @@
             chartHtml += `
                     </div>
                     <div class="probability-text">
-                        ${isSingleModel ? 'W = Wounds verursacht' : 'M = Vernichtete Modelle'} | Y-Achse: Wahrscheinlichkeit
+                        ${isSingleModel ? 'W = Wounds verursacht' : '≥X = Mindestens X Modelle getötet'} | Y-Achse: Wahrscheinlichkeit
                     </div>
-                </div>
             `;
+
+            // Zusätzlich absolute Verteilung für Multi-Model Units anzeigen
+            if (!isSingleModel && target.AbsoluteDistribution) {
+                const absoluteData = target.AbsoluteDistribution.filter(d => d.probability > 0.1);
+                if (absoluteData.length > 0) {
+                    const maxAbsoluteProbability = Math.max(...absoluteData.map(d => d.probability));
+                    
+                    chartHtml += `
+                        <div class="chart-title" style="margin-top: 20px;">Absolute Verteilung (Exakt X Modelle getötet)</div>
+                        <div class="bar-chart">
+                    `;
+                    
+                    absoluteData.forEach(data => {
+                        const height = Math.max(5, (data.probability / maxAbsoluteProbability) * 90);
+                        chartHtml += `
+                            <div class="bar" style="height: ${height}px;" title="Exakt ${data.kills} Modelle: ${data.probability.toFixed(1)}%">
+                                <span class="bar-label">${data.kills}</span>
+                            </div>
+                        `;
+                    });
+                    
+                    chartHtml += `
+                        </div>
+                        <div class="probability-text">
+                            Exakte Anzahl getöteter Modelle | Y-Achse: Wahrscheinlichkeit
+                        </div>
+                    `;
+                }
+            }
+
+            chartHtml += `</div>`;
             
             return chartHtml;
         }

@@ -1,0 +1,33 @@
+{
+  "Amount": 10000,
+  "Attackers": [
+    {
+      "Name": "Extremer Test Angreifer",
+      "Weapons": [
+        {
+          "name": "Variable Waffe",
+          "type": "Ranged",
+          "attacks": "D6",
+          "to_hit": 4,
+          "strength": 4,
+          "ap": 0,
+          "damage": "D3",
+          "amount": 1,
+          "Keywords": []
+        }
+      ]
+    }
+  ],
+  "Defenders": [
+    {
+      "Name": "3 Standard Marines",
+      "type": "Infantry",
+      "models": 3,
+      "toughness": 4,
+      "wounds": 2,
+      "save": 3,
+      "invulnerable": 7,
+      "Keywords": []
+    }
+  ]
+}

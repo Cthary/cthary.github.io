@@ -557,12 +557,26 @@ export class Simulator {
                 });
             } else {
                 // Für Multi-Modell Units: Vernichtete Modelle
-                distributionCounts = new Array(defender.models + 1).fill(0);
-                maxValue = defender.models;
+                // KEIN DECKEL - zeige alle möglichen Ergebnisse, auch über die Anzahl Modelle hinaus
+                const maxObservedKills = Math.max(...simulationResults.map(r => 
+                    this.calculateModelsKilledFromDamage(r.totalDamage, defender)
+                ));
+                const maxPossibleKills = Math.max(defender.models, maxObservedKills);
+                distributionCounts = new Array(maxPossibleKills + 1).fill(0);
+                maxValue = maxPossibleKills;
                 
                 simulationResults.forEach(result => {
                     const modelsKilled = this.calculateModelsKilledFromDamage(result.totalDamage, defender);
                     distributionCounts[modelsKilled]++;
+                });
+
+                // Debug: Log der Distribution für Multi-Model Units
+                console.log(`Debug ${defender.Name}:`, {
+                    distributionCounts,
+                    totalSimulations: amount,
+                    sumCheck: distributionCounts.reduce((a, b) => a + b, 0),
+                    maxObservedKills,
+                    defenderModels: defender.models
                 });
             }
 
@@ -616,19 +630,39 @@ export class Simulator {
                     probability: (count / amount) * 100,
                     count: count,
                     label: `${damage} Wounds`
-                })).filter(item => item.count > 0);
+                })).filter(item => item.probability > 0.1); // Nur Ergebnisse > 0.1% anzeigen
 
                 // Komplette Vernichtung = Schaden >= maximale Wounds
                 const completeKillCount = distributionCounts.slice(defender.wounds).reduce((sum, count) => sum + count, 0);
                 target.CompleteWipeoutChance = (completeKillCount / amount) * 100;
             } else {
-                // Für Multi-Modell Units: Vernichtete Modelle
-                target.KillDistribution = distributionCounts.map((count, kills) => ({
+                // Für Multi-Modell Units: Vernichtete Modelle - zeige ALLE Ergebnisse
+                // Erstelle sowohl absolute als auch kumulative Verteilung
+                const absoluteDistribution = distributionCounts.map((count, kills) => ({
                     kills: kills,
                     probability: (count / amount) * 100,
                     count: count,
-                    label: `${kills} Models`
-                })).filter(item => item.count > 0);
+                    label: `Exactly ${kills} Models`
+                }));
+
+                // Kumulative Verteilung: "Mindestens X Modelle getötet"
+                const cumulativeDistribution = [];
+                for (let i = 0; i <= maxValue; i++) {
+                    const cumulativeCount = distributionCounts.slice(i).reduce((sum, count) => sum + count, 0);
+                    const probability = (cumulativeCount / amount) * 100;
+                    if (probability > 0.01) { // Nur Wahrscheinlichkeiten > 0.01% anzeigen
+                        cumulativeDistribution.push({
+                            kills: i,
+                            probability: probability,
+                            count: cumulativeCount,
+                            label: `≥${i} Models`
+                        });
+                    }
+                }
+
+                // Verwende kumulative Verteilung für bessere Analyse
+                target.KillDistribution = cumulativeDistribution;
+                target.AbsoluteDistribution = absoluteDistribution.filter(item => item.count > 0);
 
                 target.CompleteWipeoutChance = (distributionCounts[defender.models] / amount) * 100;
             }
