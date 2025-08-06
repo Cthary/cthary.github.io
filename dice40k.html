@@ -857,36 +857,37 @@
             border-radius: 5px;
             display: flex;
             flex-direction: column;
+            overflow-x: auto; /* Allow horizontal scrolling if needed */
         }
 
         .chart-bar-container {
             display: flex;
             flex-direction: column;
             align-items: center;
-            margin: 0 5px;
-            min-width: 40px;
+            margin: 0 3px;
+            min-width: 30px;
+            max-width: 60px;
             flex: 1;
         }
 
         .chart-bars-row {
             display: flex;
             align-items: flex-end;
-            height: 150px;
+            height: 120px;
             margin-bottom: 10px;
-            padding: 0 10px;
+            padding: 0 5px;
+            min-width: fit-content;
         }
 
         .chart-bar {
             width: 100%;
             border-radius: 3px 3px 0 0;
             position: relative;
-            min-height: 5px;
+            min-height: 3px;
             display: flex;
             align-items: flex-start;
             justify-content: center;
             transition: all 0.3s ease;
-            writing-mode: vertical-rl;
-            text-orientation: mixed;
         }
 
         .chart-bar:hover {
@@ -896,20 +897,23 @@
 
         .bar-label {
             color: white;
-            font-size: 0.7rem;
+            font-size: 0.65rem;
             font-weight: bold;
-            padding: 2px;
+            padding: 1px;
             text-shadow: 1px 1px 2px rgba(0,0,0,0.8);
-            writing-mode: horizontal-tb;
-            text-orientation: upright;
-            transform: rotate(0deg);
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
         }
 
         .bar-text {
             color: #ccc;
-            font-size: 0.8rem;
-            margin-top: 5px;
+            font-size: 0.7rem;
+            margin-top: 3px;
             text-align: center;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
         }
     </style>
     <style>
@@ -2674,11 +2678,11 @@
                                     `;
 
                                     member.KillDistribution.forEach(dist => {
-                                        const barHeight = Math.max(5, (dist.percentage / 100) * 120); // 120px max height
+                                        const barHeight = Math.max(3, (dist.percentage / 100) * 100); // 100px max height
                                         attackerHtml += `
                                             <div class="chart-bar-container">
                                                 <div class="chart-bar" style="height: ${barHeight}px; background-color: #4CAF50;">
-                                                    <span class="bar-label">${dist.percentage.toFixed(1)}%</span>
+                                                    <span class="bar-label">${dist.percentage.toFixed(0)}%</span>
                                                 </div>
                                                 <span class="bar-text">≥${dist.value}</span>
                                             </div>
