@@ -182,6 +182,10 @@ export class CombatCalculator {
     calculateDamage(weapon, defender, remainingWounds, mortalWounds) {
         const damageInstances = [];
 
+        // Check for damage reroll keywords
+        const hasKnightDamageReroll = weapon.Keywords.includes("KnightDamageReroll");
+        const hasRerollLowDamage = weapon.Keywords.includes("RerollDamageLow3");
+
         // Normale Damage Instances
         for (let i = 0; i < remainingWounds; i++) {
             let damage;
@@ -190,6 +194,26 @@ export class CombatCalculator {
             } else {
                 damage = this.dice.parseAndRoll(weapon.damage);
             }
+
+            // Apply damage rerolls
+            if (hasKnightDamageReroll) {
+                // Knight damage reroll: exactly 1 reroll per model, use it on any damage
+                let rerollDamage;
+                if (typeof weapon.getDamage === 'function') {
+                    rerollDamage = weapon.getDamage();
+                } else {
+                    rerollDamage = this.dice.parseAndRoll(weapon.damage);
+                }
+                damage = Math.max(damage, rerollDamage); // Take the better result
+            } else if (hasRerollLowDamage && damage < 3) {
+                // Reroll damage if it's less than 3
+                if (typeof weapon.getDamage === 'function') {
+                    damage = weapon.getDamage();
+                } else {
+                    damage = this.dice.parseAndRoll(weapon.damage);
+                }
+            }
+
             damage = this.applyDamageModifiers(damage, weapon, defender);
             damageInstances.push(damage);
         }
@@ -225,6 +249,7 @@ export class CombatCalculator {
         if (weapon.Keywords.includes("RHMiss")) rerollType = "miss";
         else if (weapon.Keywords.includes("RH1")) rerollType = "ones";
         else if (weapon.Keywords.includes("RHNoCrit")) rerollType = "nocrit";
+        else if (weapon.Keywords.includes("KnightHitReroll")) rerollType = "knight"; // 1x Reroll pro Model
 
         // Critical Hit Threshold
         for (const keyword of weapon.Keywords) {
@@ -275,6 +300,7 @@ export class CombatCalculator {
         if (weapon.Keywords.includes("RWMiss")) rerollType = "miss";
         else if (weapon.Keywords.includes("RW1")) rerollType = "ones";
         else if (weapon.Keywords.includes("RWNoCrit")) rerollType = "nocrit";
+        else if (weapon.Keywords.includes("KnightWoundReroll")) rerollType = "knight"; // 1x Reroll pro Model
 
         // Twin-linked
         if (weapon.Keywords.some(k => k.toLowerCase().includes("twin-linked") || k.toLowerCase().includes("twin linked"))) {
@@ -371,6 +397,12 @@ export class CombatCalculator {
         } else if (rerollType === "nocrit") {
             const nonCritIndices = rolls.map((roll, i) => roll === 1 ? i : -1).filter(i => i !== -1);
             nonCritIndices.forEach(i => rolls[i] = this.dice.roll());
+        } else if (rerollType === "knight") {
+            // Knight reroll: exactly 1 reroll per model, use it on the worst roll
+            if (rolls.length > 0) {
+                const worstRollIndex = rolls.indexOf(Math.min(...rolls));
+                rolls[worstRollIndex] = this.dice.roll();
+            }
         }
 
         return rolls;
