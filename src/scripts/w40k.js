@@ -40,7 +40,7 @@ export class CombatCalculator {
         }
 
         // Würfelwürfe mit Rerolls
-        const rolls = this.rollWithRerolls(attackCount, hitTarget, rerollType);
+        const rolls = this.rollWithRerolls(attackCount, hitTarget, rerollType, critHitThreshold);
         
         let normalHits = 0;
         let criticalHits = 0;
@@ -97,7 +97,7 @@ export class CombatCalculator {
 
         // Würfle für normale Hits (+ Critical Hits wenn kein Lethal Hits)
         const hitsToRoll = weapon.lethalHits ? normalHits : totalHits;
-        const rolls = this.rollWithRerolls(hitsToRoll, woundTarget, rerollType);
+        const rolls = this.rollWithRerolls(hitsToRoll, woundTarget, rerollType, critWoundThreshold);
 
         let normalWounds = autoWounds; // Lethal Hits als normale Wounds
         let criticalWounds = 0;
@@ -385,7 +385,7 @@ export class CombatCalculator {
         return damage;
     }
 
-    rollWithRerolls(count, target, rerollType) {
+    rollWithRerolls(count, target, rerollType, critThreshold = 6) {
         let rolls = this.rollDice(count);
 
         if (rerollType === "miss") {
@@ -395,7 +395,8 @@ export class CombatCalculator {
             const onesIndices = rolls.map((roll, i) => roll === 1 ? i : -1).filter(i => i !== -1);
             onesIndices.forEach(i => rolls[i] = this.dice.roll());
         } else if (rerollType === "nocrit") {
-            const nonCritIndices = rolls.map((roll, i) => roll === 1 ? i : -1).filter(i => i !== -1);
+            // Reroll alle Würfe die KEINE Critical Hits/Wounds sind (< critThreshold)
+            const nonCritIndices = rolls.map((roll, i) => roll < critThreshold ? i : -1).filter(i => i !== -1);
             nonCritIndices.forEach(i => rolls[i] = this.dice.roll());
         } else if (rerollType === "knight") {
             // Knight reroll: exactly 1 reroll per model, use it on the worst roll
