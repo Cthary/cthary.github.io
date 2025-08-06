@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Warhammer 40k Combat Simulator v2.1 - Test</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background: #1a1a1a;
+            color: #e0e0e0;
+        }
+        .upload-section {
+            border: 2px dashed #555;
+            padding: 20px;
+            margin: 20px 0;
+            text-align: center;
+            border-radius: 8px;
+        }
+        .upload-section:hover {
+            border-color: #d4af37;
+        }
+        input[type="file"] {
+            margin: 10px;
+            padding: 8px;
+            background: #333;
+            color: #e0e0e0;
+            border: 1px solid #555;
+            border-radius: 4px;
+        }
+        .roster-info {
+            background: #2a2a2a;
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 8px;
+            border-left: 4px solid #d4af37;
+        }
+        .error {
+            background: #4a1a1a;
+            border-left-color: #e74c3c;
+            color: #ffaaaa;
+        }
+        .debug {
+            background: #1a2a1a;
+            border-left-color: #3498db;
+            font-family: monospace;
+            font-size: 12px;
+            white-space: pre-wrap;
+        }
+    </style>
+</head>
+<body>
+    <h1>🎲 Warhammer 40k Combat Simulator v2.1 - Test</h1>
+    
+    <div class="upload-section">
+        <h3>📂 Test BattleScribe Roster Upload</h3>
+        <input type="file" id="test-upload" accept=".json,.ros,.rosz" />
+        <p>Laden Sie eine BattleScribe Roster-Datei (.json) hoch</p>
+    </div>
+    
+    <div id="results"></div>
+    <div id="debug" class="debug roster-info"></div>
+
+    <script>
+        document.getElementById('test-upload').addEventListener('change', async function(event) {
+            const file = event.target.files[0];
+            if (!file) return;
+            
+            const resultsDiv = document.getElementById('results');
+            const debugDiv = document.getElementById('debug');
+            
+            try {
+                debugDiv.innerHTML = `Loading file: ${file.name} (${file.size} bytes)\n`;
+                
+                const text = await file.text();
+                const jsonData = JSON.parse(text);
+                
+                debugDiv.innerHTML += `JSON parsed successfully\n`;
+                debugDiv.innerHTML += `Top-level keys: ${Object.keys(jsonData).join(', ')}\n`;
+                
+                // Validate BattleScribe format
+                const isValidBattleScribe = 
+                    jsonData.roster ||
+                    jsonData.catalogue ||
+                    jsonData.gameSystemName ||
+                    (jsonData.forces && Array.isArray(jsonData.forces)) ||
+                    (jsonData.selections && Array.isArray(jsonData.selections)) ||
+                    jsonData.name;
+                
+                if (!isValidBattleScribe) {
+                    throw new Error('Not a valid BattleScribe roster file');
+                }
+                
+                debugDiv.innerHTML += `Validation passed ✅\n`;
+                
+                // Parse the roster
+                const parsedData = parseBattleScribeFile(jsonData);
+                
+                resultsDiv.innerHTML = `
+                    <div class="roster-info">
+                        <h3>✅ Roster erfolgreich geladen!</h3>
+                        <p><strong>Name:</strong> ${parsedData.rosterName}</p>
+                        <p><strong>System:</strong> ${parsedData.gameSystem}</p>
+                        <p><strong>Punkte:</strong> ${parsedData.points}</p>
+                        <p><strong>Waffen:</strong> ${parsedData.weapons.length}</p>
+                        <p><strong>Einheiten:</strong> ${parsedData.defenders.length}</p>
+                    </div>
+                `;
+                
+                debugDiv.innerHTML += `\nParsing complete ✅\n`;
+                debugDiv.innerHTML += `Weapons found: ${parsedData.weapons.length}\n`;
+                debugDiv.innerHTML += `Defenders found: ${parsedData.defenders.length}\n`;
+                
+                if (parsedData.weapons.length > 0) {
+                    debugDiv.innerHTML += `\nFirst weapon: ${parsedData.weapons[0].name}\n`;
+                }
+                if (parsedData.defenders.length > 0) {
+                    debugDiv.innerHTML += `First defender: ${parsedData.defenders[0].name}\n`;
+                }
+                
+            } catch (error) {
+                console.error('Error:', error);
+                resultsDiv.innerHTML = `
+                    <div class="roster-info error">
+                        <h3>❌ Fehler beim Laden</h3>
+                        <p>${error.message}</p>
+                    </div>
+                `;
+                debugDiv.innerHTML += `\nERROR: ${error.message}\n`;
+            }
+        });
+        
+        function parseBattleScribeFile(jsonData) {
+            console.log('Parsing BattleScribe roster data...');
+            
+            let roster = jsonData.roster || jsonData;
+            let selections = [];
+            
+            // Try different ways to find selections
+            if (roster && roster.forces && roster.forces[0] && roster.forces[0].selections) {
+                selections = roster.forces[0].selections;
+            } else if (roster && roster.selections) {
+                selections = roster.selections;
+            } else if (jsonData.forces && jsonData.forces[0] && jsonData.forces[0].selections) {
+                selections = jsonData.forces[0].selections;
+            } else if (jsonData.selections) {
+                selections = jsonData.selections;
+            }
+            
+            console.log(`Found ${selections.length} selections to parse`);
+            
+            const weapons = [];
+            const defenders = [];
+            
+            // Parse selections recursively
+            function parseSelections(selections, parentName = '') {
+                if (!selections || !Array.isArray(selections)) return;
+                
+                selections.forEach(selection => {
+                    // Check if it's a unit
+                    if (selection.type === 'unit' || selection.type === 'model') {
+                        parseUnit(selection, parentName);
+                    }
+                    
+                    // Recursively parse sub-selections
+                    if (selection.selections) {
+                        parseSelections(selection.selections, selection.name || parentName);
+                    }
+                });
+            }
+            
+            function parseUnit(unit, parentName) {
+                // Extract defender stats from profiles
+                if (unit.profiles) {
+                    unit.profiles.forEach(profile => {
+                        if (profile.typeName === 'Unit') {
+                            const defender = parseDefenderProfile(profile, unit.name, parentName);
+                            if (defender) {
+                                defenders.push(defender);
+                            }
+                        }
+                    });
+                }
+                
+                // Extract weapons from selections
+                if (unit.selections) {
+                    parseWeaponSelections(unit.selections, unit.name);
+                }
+            }
+            
+            function parseWeaponSelections(selections, unitName) {
+                selections.forEach(selection => {
+                    if (selection.profiles) {
+                        selection.profiles.forEach(profile => {
+                            if (profile.typeName === 'Ranged Weapons' || profile.typeName === 'Melee Weapons') {
+                                const weapon = parseWeaponProfile(profile, unitName);
+                                if (weapon) {
+                                    weapons.push(weapon);
+                                }
+                            }
+                        });
+                    }
+                    
+                    // Recursive weapon parsing
+                    if (selection.selections) {
+                        parseWeaponSelections(selection.selections, unitName);
+                    }
+                });
+            }
+            
+            function parseDefenderProfile(profile, unitName, parentName) {
+                if (!profile.characteristics) return null;
+                
+                const stats = {};
+                profile.characteristics.forEach(char => {
+                    stats[char.name] = char.$text || char.value;
+                });
+                
+                return {
+                    id: `defender_${Date.now()}_${Math.random()}`,
+                    name: unitName || profile.name,
+                    type: determineUnitType(unitName),
+                    toughness: parseInt(stats.T) || 4,
+                    save: parseInt(stats.SV?.replace('+', '')) || 7,
+                    wounds: parseInt(stats.W) || 1,
+                    invulnSave: null,
+                    feelNoPain: null,
+                    keywords: extractKeywords(unitName, parentName)
+                };
+            }
+            
+            function parseWeaponProfile(profile, unitName) {
+                if (!profile.characteristics) return null;
+                
+                const stats = {};
+                profile.characteristics.forEach(char => {
+                    stats[char.name] = char.$text || char.value;
+                });
+                
+                const weaponType = profile.typeName === 'Ranged Weapons' ? 'Ranged' : 'Melee';
+                
+                return {
+                    id: `weapon_${Date.now()}_${Math.random()}`,
+                    name: profile.name || `${unitName} Weapon`,
+                    type: weaponType,
+                    attacks: stats.A || '1',
+                    skill: parseInt(stats.BS || stats.WS?.replace('+', '')) || 4,
+                    strength: parseInt(stats.S) || 4,
+                    ap: parseInt(stats.AP?.replace('-', '')) || 0,
+                    damage: stats.D || '1',
+                    keywords: stats.Keywords || '',
+                    unitName: unitName
+                };
+            }
+            
+            function extractKeywords(unitName, parentName) {
+                const keywords = [];
+                
+                if (unitName) {
+                    const name = unitName.toLowerCase();
+                    
+                    if (name.includes('daemon')) keywords.push('DAEMON');
+                    if (name.includes('khorne') || name.includes('blood')) keywords.push('KHORNE');
+                    if (name.includes('tzeentch')) keywords.push('TZEENTCH');
+                    if (name.includes('nurgle')) keywords.push('NURGLE');
+                    if (name.includes('slaanesh')) keywords.push('SLAANESH');
+                    if (name.includes('character')) keywords.push('CHARACTER');
+                    if (name.includes('monster')) keywords.push('MONSTER');
+                    
+                    keywords.push('CHAOS');
+                }
+                
+                return keywords.join(', ');
+            }
+            
+            function determineUnitType(unitName) {
+                if (!unitName) return 'Infantry';
+                
+                const name = unitName.toLowerCase();
+                
+                if (name.includes('vehicle') || name.includes('tank')) {
+                    return 'Vehicle';
+                } else if (name.includes('monster') || name.includes('daemon')) {
+                    return 'Monster';
+                } else if (name.includes('character') || name.includes('prince') || name.includes('thirster')) {
+                    return 'Character';
+                } else {
+                    return 'Infantry';
+                }
+            }
+            
+            // Parse the main structure
+            parseSelections(selections);
+            
+            console.log(`BattleScribe Parser: ${weapons.length} weapons and ${defenders.length} defenders found`);
+            
+            // Extract roster information
+            let rosterName = 'BattleScribe Roster';
+            let gameSystem = 'Warhammer 40,000';
+            let points = 0;
+            
+            if (roster && roster.name) {
+                rosterName = roster.name;
+            } else if (jsonData.name) {
+                rosterName = jsonData.name;
+            }
+            
+            if (jsonData.gameSystemName) {
+                gameSystem = jsonData.gameSystemName;
+            } else if (roster && roster.gameSystemName) {
+                gameSystem = roster.gameSystemName;
+            }
+            
+            if (roster && roster.costs) {
+                const pointsCost = roster.costs.find(c => c.name === 'pts' || c.name === 'points');
+                points = pointsCost ? pointsCost.value : 0;
+            }
+            
+            return {
+                weapons: weapons,
+                defenders: defenders,
+                rosterName: rosterName,
+                gameSystem: gameSystem,
+                points: points
+            };
+        }
+    </script>
+</body>
+</html>

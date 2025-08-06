@@ -742,6 +742,163 @@
             gap: var(--space-xl);
         }
         
+        .keyword-header {
+            margin-bottom: var(--space-lg);
+        }
+        
+        .keyword-description {
+            color: var(--text-secondary);
+            margin-bottom: var(--space-md);
+            line-height: 1.6;
+        }
+        
+        .keyword-search {
+            position: relative;
+            max-width: 400px;
+            margin: 0 auto var(--space-lg);
+        }
+        
+        .keyword-search .search-icon {
+            position: absolute;
+            right: var(--space-md);
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--text-secondary);
+        }
+        
+        .keyword-section {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-lg);
+            padding: var(--space-lg);
+            margin-bottom: var(--space-lg);
+        }
+        
+        .keyword-section h4 {
+            display: flex;
+            align-items: center;
+            gap: var(--space-sm);
+            margin-bottom: var(--space-md);
+            color: var(--primary-gold);
+            font-weight: var(--font-weight-semibold);
+        }
+        
+        .keyword-help {
+            color: var(--text-secondary);
+            font-size: var(--font-size-sm);
+            margin-bottom: var(--space-md);
+            line-height: 1.5;
+        }
+        
+        .custom-keyword-input {
+            display: flex;
+            gap: var(--space-md);
+            margin-bottom: var(--space-md);
+        }
+        
+        .custom-keyword-input .form-input {
+            flex: 1;
+        }
+        
+        .keyword-examples {
+            display: flex;
+            flex-wrap: wrap;
+            gap: var(--space-sm);
+            align-items: center;
+        }
+        
+        .keyword-examples strong {
+            color: var(--text-primary);
+            margin-right: var(--space-sm);
+        }
+        
+        .keyword-example {
+            background: var(--secondary-bg);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-md);
+            padding: var(--space-xs) var(--space-sm);
+            color: var(--text-primary);
+            font-family: var(--font-family-mono);
+            font-size: var(--font-size-sm);
+            cursor: pointer;
+            transition: all var(--transition-fast);
+        }
+        
+        .keyword-example:hover {
+            background: var(--primary-gold);
+            color: var(--primary-bg);
+            border-color: var(--primary-gold);
+            transform: translateY(-1px);
+        }
+        
+        .assignment-controls {
+            display: flex;
+            gap: var(--space-md);
+            margin-bottom: var(--space-lg);
+            flex-wrap: wrap;
+        }
+        
+        .assignment-controls select,
+        .assignment-controls .form-input {
+            flex: 1;
+            min-width: 200px;
+        }
+        
+        .keyword-assignments {
+            max-height: 300px;
+            overflow-y: auto;
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-md);
+            background: var(--secondary-bg);
+        }
+        
+        .assignment-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: var(--space-md);
+            border-bottom: 1px solid var(--border-color);
+        }
+        
+        .assignment-item:last-child {
+            border-bottom: none;
+        }
+        
+        .assignment-info {
+            flex: 1;
+        }
+        
+        .assignment-target {
+            font-weight: var(--font-weight-medium);
+            color: var(--text-primary);
+            margin-bottom: var(--space-xs);
+        }
+        
+        .assignment-keyword {
+            font-family: var(--font-family-mono);
+            font-size: var(--font-size-sm);
+            color: var(--primary-gold);
+            background: var(--primary-bg);
+            padding: var(--space-xs) var(--space-sm);
+            border-radius: var(--radius-sm);
+            display: inline-block;
+        }
+        
+        .remove-assignment {
+            background: var(--error-color);
+            color: white;
+            border: none;
+            border-radius: var(--radius-sm);
+            padding: var(--space-xs);
+            cursor: pointer;
+            transition: all var(--transition-fast);
+        }
+        
+        .remove-assignment:hover {
+            background: var(--error-dark);
+            transform: scale(1.1);
+        }
+        
         .keyword-filters {
             background: var(--secondary-bg);
             padding: var(--space-xl);
@@ -827,39 +984,221 @@
         .unit-item {
             display: flex;
             justify-content: space-between;
-            align-items: center;
-            padding: var(--space-md);
-            margin-bottom: var(--space-sm);
+            align-items: flex-start;
+            padding: var(--space-lg);
+            margin-bottom: var(--space-lg);
             background: var(--panel-bg);
-            border: 1px solid var(--border-color);
-            border-radius: var(--radius-md);
+            border: 2px solid var(--border-color);
+            border-radius: var(--radius-lg);
             cursor: pointer;
             transition: all var(--transition-fast);
+            position: relative;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        
+        .unit-item:last-child {
+            margin-bottom: 0;
         }
         
         .unit-item:hover {
             border-color: var(--primary-gold);
-            transform: translateY(-1px);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(212, 175, 55, 0.3);
         }
         
         .unit-item.selected {
-            background: linear-gradient(45deg, rgba(212, 175, 55, 0.2), rgba(212, 175, 55, 0.1));
+            background: linear-gradient(135deg, rgba(212, 175, 55, 0.15), rgba(255, 215, 0, 0.1));
             border-color: var(--primary-gold);
+            border-width: 3px;
+            box-shadow: 0 4px 16px rgba(212, 175, 55, 0.4);
+        }
+        
+        .unit-item.selected::before {
+            content: '';
+            position: absolute;
+            top: var(--space-md);
+            right: var(--space-md);
+            width: 28px;
+            height: 28px;
+            background: var(--primary-gold);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .unit-item.selected::after {
+            content: '✓';
+            position: absolute;
+            top: var(--space-md);
+            right: var(--space-md);
+            width: 28px;
+            height: 28px;
+            color: var(--primary-bg);
+            font-weight: bold;
+            font-size: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 1;
         }
         
         .unit-info {
             flex: 1;
+            padding-right: var(--space-lg);
         }
         
         .unit-name {
-            font-weight: var(--font-weight-medium);
+            font-weight: var(--font-weight-semibold);
             color: var(--text-primary);
+            font-size: var(--font-size-lg);
+            margin-bottom: var(--space-sm);
         }
         
         .unit-stats {
             font-size: var(--font-size-sm);
             color: var(--text-secondary);
-            margin-top: var(--space-xs);
+            margin-bottom: var(--space-md);
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(40px, 1fr));
+            gap: var(--space-sm);
+            background: var(--secondary-bg);
+            padding: var(--space-md);
+            border-radius: var(--radius-md);
+        }
+        
+        .stat-item {
+            text-align: center;
+        }
+        
+        .stat-label {
+            font-size: var(--font-size-xs);
+            color: var(--text-secondary);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: var(--space-xs);
+        }
+        
+        .stat-value {
+            font-weight: var(--font-weight-bold);
+            color: var(--text-primary);
+            font-size: var(--font-size-md);
+        }
+        
+        .unit-weapons {
+            margin-top: var(--space-md);
+        }
+        
+        .weapon-count {
+            font-size: var(--font-size-sm);
+            color: var(--text-secondary);
+            margin-bottom: var(--space-sm);
+        }
+        
+        .weapon-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: var(--space-xs);
+        }
+        
+        .weapon-tag {
+            background: var(--accent-bg);
+            color: var(--text-primary);
+            padding: var(--space-xs) var(--space-sm);
+            border-radius: var(--radius-sm);
+            font-size: var(--font-size-xs);
+            border: 1px solid var(--border-color);
+        }
+        
+        .unit-keywords {
+            margin-top: var(--space-md);
+        }
+        
+        .keyword-count {
+            font-size: var(--font-size-sm);
+            color: var(--text-secondary);
+            margin-bottom: var(--space-sm);
+        }
+        
+        .selection-summary {
+            background: var(--accent-bg);
+            border: 2px solid var(--primary-gold);
+            border-radius: var(--radius-lg);
+            padding: var(--space-lg);
+            margin-bottom: var(--space-lg);
+            text-align: center;
+        }
+        
+        .selection-count {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+        
+        .count-item {
+            text-align: center;
+        }
+        
+        .count-number {
+            font-size: var(--font-size-xl);
+            font-weight: var(--font-weight-bold);
+            color: var(--primary-gold);
+            display: block;
+        }
+        
+        .count-label {
+            font-size: var(--font-size-sm);
+            color: var(--text-secondary);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        
+        .selection-actions {
+            display: flex;
+            gap: var(--space-md);
+            margin-top: var(--space-lg);
+        }
+        
+        .select-all-btn,
+        .clear-selection-btn {
+            flex: 1;
+            padding: var(--space-md);
+            border-radius: var(--radius-lg);
+            font-weight: var(--font-weight-medium);
+            cursor: pointer;
+            transition: all var(--transition-fast);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: var(--space-sm);
+            font-size: var(--font-size-md);
+        }
+        
+        .select-all-btn {
+            background: var(--primary-gold);
+            color: var(--primary-bg);
+            border: 2px solid var(--primary-gold);
+        }
+        
+        .select-all-btn:hover {
+            background: var(--secondary-gold);
+            border-color: var(--secondary-gold);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(212, 175, 55, 0.4);
+        }
+        
+        .clear-selection-btn {
+            background: transparent;
+            color: var(--text-primary);
+            border: 2px solid var(--border-color);
+        }
+        
+        .clear-selection-btn:hover {
+            background: var(--error-color);
+            color: white;
+            border-color: var(--error-color);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(220, 53, 69, 0.4);
         }
         
         .unit-keywords {
@@ -1641,6 +1980,239 @@
                 opacity: 1;
             }
         }
+        
+        /* ===== WEAPON SELECTION MODAL ===== */
+        
+        .weapon-modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            z-index: 10000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .modal-content {
+            background: var(--card-bg);
+            border-radius: var(--radius-lg);
+            max-width: 800px;
+            width: 90%;
+            max-height: 80vh;
+            overflow: hidden;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+        }
+        
+        .modal-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: var(--space-lg);
+            border-bottom: 1px solid var(--border-color);
+            background: linear-gradient(135deg, var(--primary-gold), var(--secondary-gold));
+            color: var(--primary-bg);
+        }
+        
+        .modal-header h4 {
+            margin: 0;
+            font-size: var(--font-size-lg);
+        }
+        
+        .modal-close {
+            background: none;
+            border: none;
+            color: var(--primary-bg);
+            font-size: 24px;
+            cursor: pointer;
+            padding: var(--space-xs);
+            border-radius: var(--radius-sm);
+            transition: background var(--transition-fast);
+        }
+        
+        .modal-close:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+        
+        .modal-body {
+            padding: var(--space-lg);
+            max-height: 60vh;
+            overflow-y: auto;
+        }
+        
+        .weapon-selection-list {
+            display: grid;
+            gap: var(--space-md);
+        }
+        
+        .weapon-option {
+            display: flex;
+            align-items: center;
+            padding: var(--space-md);
+            border: 2px solid var(--border-color);
+            border-radius: var(--radius-lg);
+            cursor: pointer;
+            transition: all var(--transition-fast);
+            background: var(--secondary-bg);
+        }
+        
+        .weapon-option:hover {
+            border-color: var(--primary-gold);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(212, 175, 55, 0.3);
+        }
+        
+        .weapon-option.selected {
+            border-color: var(--primary-gold);
+            background: linear-gradient(135deg, rgba(212, 175, 55, 0.15), rgba(255, 215, 0, 0.1));
+        }
+        
+        .weapon-checkbox {
+            margin-right: var(--space-md);
+            transform: scale(1.2);
+            accent-color: var(--primary-gold);
+        }
+        
+        .weapon-info {
+            flex: 1;
+        }
+        
+        .weapon-name {
+            font-weight: var(--font-weight-semibold);
+            color: var(--text-primary);
+            margin-bottom: var(--space-xs);
+        }
+        
+        .weapon-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(60px, 1fr));
+            gap: var(--space-sm);
+            margin-top: var(--space-sm);
+        }
+        
+        .weapon-stat {
+            text-align: center;
+            font-size: var(--font-size-sm);
+        }
+        
+        .weapon-stat-label {
+            color: var(--text-secondary);
+            font-size: var(--font-size-xs);
+            text-transform: uppercase;
+        }
+        
+        .weapon-stat-value {
+            color: var(--text-primary);
+            font-weight: var(--font-weight-bold);
+        }
+        
+        .modal-footer {
+            display: flex;
+            justify-content: flex-end;
+            gap: var(--space-md);
+            padding: var(--space-lg);
+            border-top: 1px solid var(--border-color);
+            background: var(--secondary-bg);
+        }
+        
+        /* ===== NOTIFICATION SYSTEM ===== */
+        
+        .notification-container {
+            position: fixed;
+            top: var(--space-lg);
+            right: var(--space-lg);
+            z-index: 9999;
+            display: flex;
+            flex-direction: column;
+            gap: var(--space-md);
+            max-width: 400px;
+        }
+        
+        .notification {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-lg);
+            padding: var(--space-lg);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+            display: flex;
+            align-items: flex-start;
+            gap: var(--space-md);
+            animation: slideInRight 0.3s ease;
+        }
+        
+        .notification-success {
+            border-left: 4px solid var(--success-color);
+        }
+        
+        .notification-warning {
+            border-left: 4px solid var(--warning-color);
+        }
+        
+        .notification-error {
+            border-left: 4px solid var(--error-color);
+        }
+        
+        .notification-info {
+            border-left: 4px solid var(--primary-gold);
+        }
+        
+        .notification-content {
+            display: flex;
+            align-items: flex-start;
+            gap: var(--space-sm);
+            flex: 1;
+        }
+        
+        .notification-icon {
+            color: var(--primary-gold);
+            font-size: 20px;
+            margin-top: 2px;
+        }
+        
+        .notification-success .notification-icon {
+            color: var(--success-color);
+        }
+        
+        .notification-warning .notification-icon {
+            color: var(--warning-color);
+        }
+        
+        .notification-error .notification-icon {
+            color: var(--error-color);
+        }
+        
+        .notification-message {
+            color: var(--text-primary);
+            line-height: 1.5;
+        }
+        
+        .notification-close {
+            background: none;
+            border: none;
+            color: var(--text-secondary);
+            cursor: pointer;
+            padding: var(--space-xs);
+            border-radius: var(--radius-sm);
+            transition: all var(--transition-fast);
+        }
+        
+        .notification-close:hover {
+            background: var(--secondary-bg);
+            color: var(--text-primary);
+        }
+        
+        @keyframes slideInRight {
+            from {
+                transform: translateX(100%);
+                opacity: 0;
+            }
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
     </style>
 </head>
 
@@ -1672,7 +2244,7 @@
                         <h2 id="import-heading" class="card-title">
                             <span class="step-number">1</span>
                             <i class="material-icons" aria-hidden="true">upload_file</i>
-                            BattleScribe-Roster importieren
+                            Import BattleScribe Rosters
                         </h2>
                     </header>
                     
@@ -1746,7 +2318,7 @@
                         <h2 id="keywords-heading" class="card-title">
                             <span class="step-number">2</span>
                             <i class="material-icons" aria-hidden="true">label</i>
-                            Keyword-Management
+                            Keyword Management
                         </h2>
                     </header>
                     
@@ -1754,7 +2326,11 @@
                         <div class="keyword-management">
                             <div class="keyword-filters">
                                 <div class="keyword-header">
-                                    <h3>Verfügbare Keywords aus beiden Rosters</h3>
+                                    <h3>Keyword-Verwaltung</h3>
+                                    <p class="keyword-description">
+                                        Verwalten Sie Keywords für bessere Filterung und Kategorisierung. 
+                                        Verwenden Sie Custom Keywords wie RH1, RW1, etc. für spezielle Modifikationen.
+                                    </p>
                                     <div class="keyword-search">
                                         <input 
                                             type="text" 
@@ -1766,7 +2342,44 @@
                                         <i class="material-icons search-icon" aria-hidden="true">search</i>
                                     </div>
                                 </div>
-                                <div id="available-keywords" class="keyword-list"></div>
+                                
+                                <div class="keyword-section">
+                                    <h4><i class="material-icons" aria-hidden="true">auto_awesome</i> Extrahierte Keywords</h4>
+                                    <div id="available-keywords" class="keyword-list"></div>
+                                </div>
+                                
+                                <div class="keyword-section">
+                                    <h4><i class="material-icons" aria-hidden="true">edit</i> Custom Keywords hinzufügen</h4>
+                                    <p class="keyword-help">
+                                        Fügen Sie spezielle Keywords hinzu (z.B. RH1 für +1 Trefferbonus, RW1 für +1 Verwundungsbonus)
+                                    </p>
+                                    <div class="custom-keyword-input">
+                                        <input 
+                                            type="text" 
+                                            id="custom-keyword" 
+                                            class="form-input"
+                                            placeholder="z.B. RH1, RW1, COVER_IGNORE..."
+                                            onkeydown="handleKeywordEnter(event)"
+                                            maxlength="50"
+                                        >
+                                        <button 
+                                            class="btn btn-primary btn-small"
+                                            onclick="addCustomKeyword()"
+                                            title="Keyword hinzufügen"
+                                        >
+                                            <i class="material-icons" aria-hidden="true">add</i>
+                                            Hinzufügen
+                                        </button>
+                                    </div>
+                                    <div class="keyword-examples">
+                                        <strong>Beispiele:</strong>
+                                        <button class="keyword-example" onclick="addPredefinedKeyword('RH1')">RH1</button>
+                                        <button class="keyword-example" onclick="addPredefinedKeyword('RW1')">RW1</button>
+                                        <button class="keyword-example" onclick="addPredefinedKeyword('RS1')">RS1</button>
+                                        <button class="keyword-example" onclick="addPredefinedKeyword('RAP1')">RAP1</button>
+                                        <button class="keyword-example" onclick="addPredefinedKeyword('RD1')">RD1</button>
+                                    </div>
+                                </div>
                                 
                                 <div class="keyword-editor">
                                     <h4>Eigene Keywords hinzufügen</h4>
@@ -1786,6 +2399,39 @@
                                 </div>
                             </div>
                         </div>
+
+                                <div class="keyword-assignment-section">
+                                    <h4><i class="material-icons" aria-hidden="true">link</i> Keywords zu Einheiten/Waffen zuweisen</h4>
+                                    <p class="keyword-help">
+                                        Weisen Sie Custom Keywords zu bestimmten Einheiten oder Waffen zu für spezielle Modifikationen.
+                                    </p>
+                                    
+                                    <div class="assignment-controls">
+                                        <select id="assignment-target" class="form-select">
+                                            <option value="">Ziel auswählen...</option>
+                                        </select>
+                                        <select id="assignment-keyword" class="form-select">
+                                            <option value="">Keyword auswählen...</option>
+                                        </select>
+                                        <button 
+                                            class="btn btn-secondary btn-small"
+                                            onclick="assignKeyword()"
+                                            title="Keyword zuweisen"
+                                        >
+                                            <i class="material-icons" aria-hidden="true">link</i>
+                                            Zuweisen
+                                        </button>
+                                    </div>
+                                    
+                                    <div class="keyword-assignments" id="keyword-assignments">
+                                        <!-- Zugewiesene Keywords werden hier angezeigt -->
+                                    </div>
+                                </div>
+                                
+                                <div class="keyword-section">
+                                    <h4><i class="material-icons" aria-hidden="true">list</i> Alle Keywords</h4>
+                                    <div id="all-keywords" class="keyword-list"></div>
+                                </div>
 
                         <div class="workflow-actions">
                             <button 
@@ -1813,46 +2459,85 @@
                         <h2 id="selection-heading" class="card-title">
                             <span class="step-number">3</span>
                             <i class="material-icons" aria-hidden="true">checklist</i>
-                            Einheiten für den Kampf auswählen
+                            Select Units for Combat
                         </h2>
                     </header>
                     
                     <div class="card-body">
                         <div class="main-grid">
-                            <!-- Angreifer Selection -->
+                            <!-- Attacker Selection -->
                             <div class="selection-panel">
-                                <h3><i class="material-icons" aria-hidden="true">gps_fixed</i> Angreifer auswählen</h3>
+                                <h3><i class="material-icons" aria-hidden="true">gps_fixed</i> Select Attackers</h3>
+                                
+                                <div id="attacker-selection-summary" class="selection-summary">
+                                    <div class="selection-count">
+                                        <div class="count-item">
+                                            <span class="count-number">0</span>
+                                            <span class="count-label">Selected</span>
+                                        </div>
+                                        <div class="count-item">
+                                            <span class="count-number">0</span>
+                                            <span class="count-label">Available</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                
                                 <div class="unit-filter">
                                     <input 
                                         type="text" 
                                         id="attacker-search" 
                                         class="form-input"
-                                        placeholder="Angreifer suchen..."
+                                        placeholder="Search attackers..."
                                         onkeyup="filterUnits('attacker')"
                                     >
                                 </div>
                                 <div id="attacker-units" class="unit-list"></div>
-                                <div id="selected-attackers" class="selected-units">
-                                    <h4>Ausgewählte Angreifer</h4>
+                                
+                                <!-- Weapon Selection Modal -->
+                                <div id="weapon-selection-modal" class="weapon-modal" style="display: none;">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h4>Select Weapons for <span id="selected-unit-name"></span></h4>
+                                            <button class="modal-close" onclick="closeWeaponModal()">&times;</button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <div id="weapon-list" class="weapon-selection-list"></div>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button class="btn btn-secondary" onclick="closeWeaponModal()">Cancel</button>
+                                            <button class="btn btn-primary" onclick="confirmWeaponSelection()">Confirm Selection</button>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
 
-                            <!-- Verteidiger Selection -->
+                            <!-- Defender Selection -->
                             <div class="selection-panel">
-                                <h3><i class="material-icons" aria-hidden="true">shield</i> Verteidiger auswählen</h3>
+                                <h3><i class="material-icons" aria-hidden="true">shield</i> Select Defenders</h3>
+                                
+                                <div id="defender-selection-summary" class="selection-summary">
+                                    <div class="selection-count">
+                                        <div class="count-item">
+                                            <span class="count-number">0</span>
+                                            <span class="count-label">Selected</span>
+                                        </div>
+                                        <div class="count-item">
+                                            <span class="count-number">0</span>
+                                            <span class="count-label">Available</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                
                                 <div class="unit-filter">
                                     <input 
                                         type="text" 
                                         id="defender-search" 
                                         class="form-input"
-                                        placeholder="Verteidiger suchen..."
+                                        placeholder="Search defenders..."
                                         onkeyup="filterUnits('defender')"
                                     >
                                 </div>
                                 <div id="defender-units" class="unit-list"></div>
-                                <div id="selected-defenders" class="selected-units">
-                                    <h4>Ausgewählte Verteidiger</h4>
-                                </div>
                             </div>
                         </div>
 
@@ -1883,7 +2568,7 @@
                         <h2 id="simulation-heading" class="card-title">
                             <span class="step-number">4</span>
                             <i class="material-icons" aria-hidden="true">analytics</i>
-                            Schlacht konfigurieren
+                            Configure Battle
                         </h2>
                     </header>
                     
@@ -1954,7 +2639,7 @@
                         <h2 id="results-heading" class="card-title">
                             <span class="step-number">5</span>
                             <i class="material-icons" aria-hidden="true">assessment</i>
-                            Schlachtergebnisse & Analyse
+                            Battle Results & Analysis
                         </h2>
                     </header>
                     
@@ -2150,11 +2835,11 @@
                 // Step-specific initialization
                 switch(stepName) {
                     case 'keywords':
-                        displayAvailableKeywords();
+                        displayKeywords();
                         validateKeywordStep();
                         break;
                     case 'selection':
-                        prepareUnitSelection();
+                        populateUnitSelection();
                         break;
                     case 'simulation':
                         prepareBattleSimulation();
@@ -2221,9 +2906,21 @@
                 const text = await file.text();
                 const jsonData = JSON.parse(text);
                 
-                // Validate BattleScribe format
-                if (!jsonData.roster || !jsonData.gameSystemName) {
-                    throw new Error('Dies ist keine gültige BattleScribe-Roster-Datei');
+                // Validate BattleScribe format - be more flexible
+                console.log('Attacker JSON structure:', Object.keys(jsonData));
+                
+                // Check for various BattleScribe formats
+                const isValidBattleScribe = 
+                    jsonData.roster ||  // Standard format
+                    jsonData.catalogue ||  // Catalogue format
+                    jsonData.gameSystemName ||  // Direct game system
+                    (jsonData.forces && Array.isArray(jsonData.forces)) ||  // Forces array
+                    (jsonData.selections && Array.isArray(jsonData.selections)) ||  // Selections array
+                    jsonData.name;  // Basic name field
+                
+                if (!isValidBattleScribe) {
+                    console.error('Invalid attacker file structure:', jsonData);
+                    throw new Error('Dies ist keine gültige BattleScribe-Roster-Datei. Unterstützte Formate: .ros, .rosz (BattleScribe Roster)');
                 }
                 
                 const parsedData = parseBattleScribeFile(jsonData);
@@ -2242,7 +2939,17 @@
                 
             } catch (error) {
                 console.error('Error loading attacker roster:', error);
-                showErrorToast(`Fehler beim Laden des Angreifer-Rosters: ${error.message}`);
+                console.error('File name:', file.name);
+                console.error('File size:', file.size, 'bytes');
+                console.error('File type:', file.type);
+                
+                // Verbesserte Fehlermeldung
+                let errorMessage = `Fehler beim Laden des Angreifer-Rosters: ${error.message}`;
+                if (error.message.includes('JSON')) {
+                    errorMessage += '\n\nTipp: Stellen Sie sicher, dass die Datei eine gültige JSON-Datei (.ros) aus BattleScribe ist.';
+                }
+                
+                showErrorToast(errorMessage);
                 attackerRoster = null;
                 document.getElementById('attacker-roster-info').style.display = 'none';
             } finally {
@@ -2260,9 +2967,21 @@
                 const text = await file.text();
                 const jsonData = JSON.parse(text);
                 
-                // Validate BattleScribe format
-                if (!jsonData.roster || !jsonData.gameSystemName) {
-                    throw new Error('Dies ist keine gültige BattleScribe-Roster-Datei');
+                // Validate BattleScribe format - be more flexible
+                console.log('Defender JSON structure:', Object.keys(jsonData));
+                
+                // Check for various BattleScribe formats
+                const isValidBattleScribe = 
+                    jsonData.roster ||  // Standard format
+                    jsonData.catalogue ||  // Catalogue format
+                    jsonData.gameSystemName ||  // Direct game system
+                    (jsonData.forces && Array.isArray(jsonData.forces)) ||  // Forces array
+                    (jsonData.selections && Array.isArray(jsonData.selections)) ||  // Selections array
+                    jsonData.name;  // Basic name field
+                
+                if (!isValidBattleScribe) {
+                    console.error('Invalid defender file structure:', jsonData);
+                    throw new Error('Dies ist keine gültige BattleScribe-Roster-Datei. Unterstützte Formate: .ros, .rosz (BattleScribe Roster)');
                 }
                 
                 const parsedData = parseBattleScribeFile(jsonData);
@@ -2281,7 +3000,17 @@
                 
             } catch (error) {
                 console.error('Error loading defender roster:', error);
-                showErrorToast(`Fehler beim Laden des Verteidiger-Rosters: ${error.message}`);
+                console.error('File name:', file.name);
+                console.error('File size:', file.size, 'bytes');
+                console.error('File type:', file.type);
+                
+                // Verbesserte Fehlermeldung
+                let errorMessage = `Fehler beim Laden des Verteidiger-Rosters: ${error.message}`;
+                if (error.message.includes('JSON')) {
+                    errorMessage += '\n\nTipp: Stellen Sie sicher, dass die Datei eine gültige JSON-Datei (.ros) aus BattleScribe ist.';
+                }
+                
+                showErrorToast(errorMessage);
                 defenderRoster = null;
                 document.getElementById('defender-roster-info').style.display = 'none';
             } finally {
@@ -2355,55 +3084,95 @@
 
         // ===== KEYWORD MANAGEMENT SYSTEM =====
         
-        function displayAvailableKeywords() {
-            const keywordContainer = document.getElementById('available-keywords');
-            if (!keywordContainer) return;
+        let customKeywords = new Set();
+        let keywordAssignments = new Map(); // targetId -> Set of keywords
+        
+        function extractKeywords() {
+            const keywords = new Set();
             
-            keywordContainer.innerHTML = '';
-            
-            if (availableKeywords.size === 0) {
-                keywordContainer.innerHTML = `
-                    <div class="keyword-empty">
-                        <i class="material-icons" aria-hidden="true">info</i>
-                        <p>Keine Keywords in den geladenen Rosters gefunden.</p>
-                        <p class="text-muted">Sie können eigene Keywords unten hinzufügen.</p>
-                    </div>
-                `;
-                return;
-            }
-            
-            const sortedKeywords = Array.from(availableKeywords).sort();
-            
-            sortedKeywords.forEach(keyword => {
-                const keywordTag = createKeywordTag(keyword);
-                keywordContainer.appendChild(keywordTag);
+            // Extrahiere Keywords aus beiden Rosters
+            [attackerRoster, defenderRoster].forEach(roster => {
+                if (!roster) return;
+                
+                function extractFromUnit(unit) {
+                    // Unit Keywords
+                    if (unit.keywords) {
+                        unit.keywords.forEach(keyword => keywords.add(keyword.trim()));
+                    }
+                    
+                    // Weapon Keywords
+                    if (unit.weapons) {
+                        unit.weapons.forEach(weapon => {
+                            if (weapon.keywords) {
+                                weapon.keywords.forEach(keyword => keywords.add(keyword.trim()));
+                            }
+                        });
+                    }
+                    
+                    // Wargear Keywords
+                    if (unit.wargear) {
+                        unit.wargear.forEach(gear => {
+                            if (gear.keywords) {
+                                gear.keywords.forEach(keyword => keywords.add(keyword.trim()));
+                            }
+                        });
+                    }
+                    
+                    // Nested units (für komplexe Strukturen)
+                    if (unit.units) {
+                        unit.units.forEach(subUnit => extractFromUnit(subUnit));
+                    }
+                }
+                
+                if (roster.forces) {
+                    roster.forces.forEach(force => {
+                        if (force.selections) {
+                            force.selections.forEach(selection => extractFromUnit(selection));
+                        }
+                    });
+                }
             });
             
-            announceToScreenReader(`${availableKeywords.size} Keywords verfügbar`);
+            // Update display if we're on the keywords step
+            if (currentStep === 'keywords') {
+                displayKeywords();
+            }
+            
+            return Array.from(keywords).filter(k => k && k.length > 0).sort();
         }
         
-        function createKeywordTag(keyword, isCustom = false) {
-            const tag = document.createElement('div');
-            tag.className = `keyword-tag ${isCustom ? 'custom' : 'extracted'}`;
-            tag.setAttribute('data-keyword', keyword);
+        function displayKeywords() {
+            const availableKeywords = document.getElementById('available-keywords');
+            const allKeywords = document.getElementById('all-keywords');
             
-            const icon = isCustom ? 'edit' : 'auto_awesome';
-            const title = isCustom ? 'Benutzerdefiniertes Keyword' : 'Aus Roster extrahiert';
+            const extractedKeywords = extractKeywords();
+            const allKeywordsList = [...new Set([...extractedKeywords, ...customKeywords])].sort();
             
-            tag.innerHTML = `
-                <i class="material-icons keyword-icon" aria-hidden="true" title="${title}">${icon}</i>
-                <span class="keyword-text">${keyword}</span>
-                <button 
-                    class="keyword-remove" 
-                    onclick="removeKeyword('${keyword}')"
-                    aria-label="Keyword ${keyword} entfernen"
-                    title="Keyword entfernen"
-                >
-                    <i class="material-icons" aria-hidden="true">close</i>
-                </button>
-            `;
+            // Extrahierte Keywords anzeigen
+            if (availableKeywords) {
+                availableKeywords.innerHTML = extractedKeywords.length > 0 
+                    ? extractedKeywords.map(keyword => 
+                        `<span class="keyword-tag" data-keyword="${keyword}">${keyword}</span>`
+                    ).join('')
+                    : '<p class="no-keywords">Keine Keywords in den Rosters gefunden.</p>';
+            }
             
-            return tag;
+            // Alle Keywords anzeigen (extrahiert + custom)
+            if (allKeywords) {
+                allKeywords.innerHTML = allKeywordsList.length > 0
+                    ? allKeywordsList.map(keyword => {
+                        const isCustom = customKeywords.has(keyword);
+                        return `<span class="keyword-tag ${isCustom ? 'custom' : ''}" data-keyword="${keyword}">
+                            ${keyword}
+                            ${isCustom ? '<i class="material-icons remove" onclick="removeCustomKeyword(\'' + keyword + '\')" title="Entfernen">close</i>' : ''}
+                        </span>`;
+                    }).join('')
+                    : '<p class="no-keywords">Keine Keywords verfügbar.</p>';
+            }
+            
+            // Assignment-Dropdowns aktualisieren
+            updateAssignmentTargets();
+            updateAssignmentKeywords();
         }
         
         function addCustomKeyword() {
@@ -2411,18 +3180,220 @@
             const keyword = input.value.trim().toUpperCase();
             
             if (!keyword) {
-                showErrorToast('Bitte geben Sie ein Keyword ein');
-                input.focus();
+                showNotification('Bitte geben Sie ein Keyword ein.', 'warning');
                 return;
             }
             
-            if (availableKeywords.has(keyword)) {
-                showErrorToast('Dieses Keyword existiert bereits');
-                input.focus();
+            if (keyword.length > 50) {
+                showNotification('Keyword ist zu lang (max. 50 Zeichen).', 'error');
                 return;
             }
             
-            // Validate keyword format (no special characters except underscore)
+            if (customKeywords.has(keyword)) {
+                showNotification('Keyword bereits vorhanden.', 'warning');
+                return;
+            }
+            
+            customKeywords.add(keyword);
+            input.value = '';
+            displayKeywords();
+            showNotification(`Keyword "${keyword}" hinzugefügt.`, 'success');
+        }
+        
+        function addPredefinedKeyword(keyword) {
+            if (customKeywords.has(keyword)) {
+                showNotification(`Keyword "${keyword}" bereits vorhanden.`, 'warning');
+                return;
+            }
+            
+            customKeywords.add(keyword);
+            displayKeywords();
+            showNotification(`Keyword "${keyword}" hinzugefügt.`, 'success');
+        }
+        
+        function removeCustomKeyword(keyword) {
+            customKeywords.delete(keyword);
+            
+            // Auch aus Zuweisungen entfernen
+            for (let [targetId, keywords] of keywordAssignments) {
+                keywords.delete(keyword);
+                if (keywords.size === 0) {
+                    keywordAssignments.delete(targetId);
+                }
+            }
+            
+            displayKeywords();
+            updateAssignmentsList();
+            showNotification(`Keyword "${keyword}" entfernt.`, 'success');
+        }
+        
+        function handleKeywordEnter(event) {
+            if (event.key === 'Enter') {
+                event.preventDefault();
+                addCustomKeyword();
+            }
+        }
+        
+        function updateAssignmentTargets() {
+            const targetSelect = document.getElementById('assignment-target');
+            if (!targetSelect) return;
+            
+            const targets = [];
+            
+            // Sammle alle verfügbaren Einheiten und Waffen
+            [attackerRoster, defenderRoster].forEach((roster, rosterIndex) => {
+                if (!roster) return;
+                
+                const rosterName = rosterIndex === 0 ? 'Angreifer' : 'Verteidiger';
+                
+                function collectTargets(unit, path = '') {
+                    const unitName = unit.name || 'Unbenannte Einheit';
+                    const unitId = `${rosterIndex}-unit-${unit.id || Math.random()}`;
+                    const fullPath = path ? `${path} > ${unitName}` : `${rosterName} > ${unitName}`;
+                    
+                    targets.push({
+                        id: unitId,
+                        name: fullPath,
+                        type: 'unit',
+                        data: unit
+                    });
+                    
+                    // Waffen sammeln
+                    if (unit.weapons) {
+                        unit.weapons.forEach((weapon, weaponIndex) => {
+                            const weaponName = weapon.name || 'Unbenannte Waffe';
+                            const weaponId = `${unitId}-weapon-${weaponIndex}`;
+                            targets.push({
+                                id: weaponId,
+                                name: `${fullPath} > ${weaponName}`,
+                                type: 'weapon',
+                                data: weapon
+                            });
+                        });
+                    }
+                    
+                    // Verschachtelte Einheiten
+                    if (unit.units) {
+                        unit.units.forEach(subUnit => collectTargets(subUnit, fullPath));
+                    }
+                }
+                
+                if (roster.forces) {
+                    roster.forces.forEach(force => {
+                        if (force.selections) {
+                            force.selections.forEach(selection => collectTargets(selection));
+                        }
+                    });
+                }
+            });
+            
+            targetSelect.innerHTML = '<option value="">Ziel auswählen...</option>' +
+                targets.map(target => 
+                    `<option value="${target.id}">${target.name} (${target.type === 'unit' ? 'Einheit' : 'Waffe'})</option>`
+                ).join('');
+        }
+        
+        function updateAssignmentKeywords() {
+            const keywordSelect = document.getElementById('assignment-keyword');
+            if (!keywordSelect) return;
+            
+            const allKeywordsList = [...new Set([...extractKeywords(), ...customKeywords])].sort();
+            
+            keywordSelect.innerHTML = '<option value="">Keyword auswählen...</option>' +
+                allKeywordsList.map(keyword => 
+                    `<option value="${keyword}">${keyword}</option>`
+                ).join('');
+        }
+        
+        function assignKeyword() {
+            const targetSelect = document.getElementById('assignment-target');
+            const keywordSelect = document.getElementById('assignment-keyword');
+            
+            const targetId = targetSelect.value;
+            const keyword = keywordSelect.value;
+            
+            if (!targetId || !keyword) {
+                showNotification('Bitte wählen Sie sowohl ein Ziel als auch ein Keyword aus.', 'warning');
+                return;
+            }
+            
+            if (!keywordAssignments.has(targetId)) {
+                keywordAssignments.set(targetId, new Set());
+            }
+            
+            const targetKeywords = keywordAssignments.get(targetId);
+            if (targetKeywords.has(keyword)) {
+                showNotification('Keyword bereits diesem Ziel zugewiesen.', 'warning');
+                return;
+            }
+            
+            targetKeywords.add(keyword);
+            updateAssignmentsList();
+            
+            // Dropdowns zurücksetzen
+            targetSelect.value = '';
+            keywordSelect.value = '';
+            
+            const targetName = targetSelect.options[targetSelect.selectedIndex]?.text || 'Unbekanntes Ziel';
+            showNotification(`Keyword "${keyword}" zu "${targetName}" zugewiesen.`, 'success');
+        }
+        
+        function updateAssignmentsList() {
+            const assignmentsList = document.getElementById('keyword-assignments');
+            if (!assignmentsList) return;
+            
+            if (keywordAssignments.size === 0) {
+                assignmentsList.innerHTML = '<div class="no-assignments">Keine Keyword-Zuweisungen vorhanden.</div>';
+                return;
+            }
+            
+            let html = '';
+            for (let [targetId, keywords] of keywordAssignments) {
+                const targetSelect = document.getElementById('assignment-target');
+                const targetOption = Array.from(targetSelect.options).find(opt => opt.value === targetId);
+                const targetName = targetOption ? targetOption.text : 'Unbekanntes Ziel';
+                
+                for (let keyword of keywords) {
+                    html += `
+                        <div class="assignment-item">
+                            <div class="assignment-info">
+                                <div class="assignment-target">${targetName}</div>
+                                <div class="assignment-keyword">${keyword}</div>
+                            </div>
+                            <button class="remove-assignment" onclick="removeAssignment('${targetId}', '${keyword}')" title="Zuweisung entfernen">
+                                <i class="material-icons">close</i>
+                            </button>
+                        </div>
+                    `;
+                }
+            }
+            
+            assignmentsList.innerHTML = html;
+        }
+        
+        function removeAssignment(targetId, keyword) {
+            const targetKeywords = keywordAssignments.get(targetId);
+            if (targetKeywords) {
+                targetKeywords.delete(keyword);
+                if (targetKeywords.size === 0) {
+                    keywordAssignments.delete(targetId);
+                }
+            }
+            
+            updateAssignmentsList();
+            showNotification(`Keyword-Zuweisung entfernt.`, 'success');
+        }
+        
+        function searchKeywords() {
+            const searchTerm = document.getElementById('keyword-search').value.toLowerCase();
+            const keywordTags = document.querySelectorAll('.keyword-tag');
+            
+            keywordTags.forEach(tag => {
+                const keyword = tag.dataset.keyword.toLowerCase();
+                const matches = keyword.includes(searchTerm);
+                tag.style.display = matches ? 'inline-flex' : 'none';
+            });
+        }
             if (!/^[A-Z0-9_\s]+$/.test(keyword)) {
                 showErrorToast('Keywords dürfen nur Buchstaben, Zahlen, Unterstriche und Leerzeichen enthalten');
                 input.focus();
@@ -2523,7 +3494,481 @@
             }
         }
 
-        // ===== UNIT SELECTION SYSTEM =====
+        // ===== ENHANCED UNIT SELECTION SYSTEM =====
+        
+        let selectedUnitForWeapons = null;
+        let selectedWeapons = [];
+        
+        function populateUnitSelection() {
+            const attackerUnits = document.getElementById('attacker-units');
+            const defenderUnits = document.getElementById('defender-units');
+            
+            if (attackerUnits && attackerRoster) {
+                attackerUnits.innerHTML = createUnitSelectionHTML(attackerRoster, 'attacker');
+                updateSelectionSummary('attacker');
+            }
+            
+            if (defenderUnits && defenderRoster) {
+                defenderUnits.innerHTML = createUnitSelectionHTML(defenderRoster, 'defender');
+                updateSelectionSummary('defender');
+            }
+            
+            // Add selection event listeners
+            document.querySelectorAll('.unit-item').forEach(item => {
+                item.addEventListener('click', function() {
+                    const role = this.dataset.role;
+                    const unitIndex = this.dataset.unitIndex;
+                    
+                    if (role === 'attacker') {
+                        selectUnitForWeapons(this, unitIndex, role);
+                    } else {
+                        toggleUnitSelection(this);
+                    }
+                });
+            });
+        }
+        
+        function selectUnitForWeapons(unitElement, unitIndex, role) {
+            const roster = role === 'attacker' ? attackerRoster : defenderRoster;
+            if (!roster || !roster.forces) return;
+            
+            // Find the unit
+            let targetUnit = null;
+            let currentIndex = 0;
+            
+            for (let force of roster.forces) {
+                if (force.selections) {
+                    for (let unit of force.selections) {
+                        if (currentIndex == unitIndex) {
+                            targetUnit = unit;
+                            break;
+                        }
+                        currentIndex++;
+                    }
+                }
+                if (targetUnit) break;
+            }
+            
+            if (!targetUnit) return;
+            
+            selectedUnitForWeapons = {
+                unit: targetUnit,
+                element: unitElement,
+                role: role,
+                index: unitIndex
+            };
+            
+            showWeaponSelectionModal(targetUnit);
+        }
+        
+        function showWeaponSelectionModal(unit) {
+            const modal = document.getElementById('weapon-selection-modal');
+            const unitNameSpan = document.getElementById('selected-unit-name');
+            const weaponList = document.getElementById('weapon-list');
+            
+            unitNameSpan.textContent = unit.name || 'Unnamed Unit';
+            
+            // Extract weapons from unit
+            const weapons = extractUnitWeaponsDetailed(unit);
+            
+            weaponList.innerHTML = '';
+            selectedWeapons = [];
+            
+            if (weapons.length === 0) {
+                weaponList.innerHTML = '<p class="no-weapons">No weapons found for this unit.</p>';
+            } else {
+                weapons.forEach((weapon, index) => {
+                    const weaponOption = createWeaponOption(weapon, index);
+                    weaponList.appendChild(weaponOption);
+                });
+            }
+            
+            modal.style.display = 'flex';
+        }
+        
+        function extractUnitWeaponsDetailed(unit) {
+            const weapons = [];
+            
+            // Check selections for weapons
+            if (unit.selections) {
+                unit.selections.forEach(selection => {
+                    if (selection.type === 'upgrade' || selection.name) {
+                        // Try to extract weapon stats
+                        const weapon = {
+                            name: selection.name,
+                            type: selection.type || 'weapon',
+                            characteristics: selection.characteristics || [],
+                            range: getCharacteristic(selection, 'Range') || '-',
+                            attacks: getCharacteristic(selection, 'A') || getCharacteristic(selection, 'Attacks') || '1',
+                            skill: getCharacteristic(selection, 'WS') || getCharacteristic(selection, 'BS') || '4+',
+                            strength: getCharacteristic(selection, 'S') || getCharacteristic(selection, 'Strength') || '3',
+                            ap: getCharacteristic(selection, 'AP') || '0',
+                            damage: getCharacteristic(selection, 'D') || getCharacteristic(selection, 'Damage') || '1',
+                            keywords: selection.keywords || []
+                        };
+                        weapons.push(weapon);
+                    }
+                });
+            }
+            
+            // Check if unit itself has weapon characteristics
+            if (unit.characteristics) {
+                const hasWeaponStats = unit.characteristics.some(char => 
+                    ['Range', 'A', 'Attacks', 'WS', 'BS'].includes(char.name)
+                );
+                
+                if (hasWeaponStats) {
+                    const weapon = {
+                        name: (unit.name || 'Unit') + ' (Integrated Weapons)',
+                        type: 'integrated',
+                        characteristics: unit.characteristics,
+                        range: getCharacteristic(unit, 'Range') || '-',
+                        attacks: getCharacteristic(unit, 'A') || getCharacteristic(unit, 'Attacks') || '1',
+                        skill: getCharacteristic(unit, 'WS') || getCharacteristic(unit, 'BS') || '4+',
+                        strength: getCharacteristic(unit, 'S') || getCharacteristic(unit, 'Strength') || '3',
+                        ap: getCharacteristic(unit, 'AP') || '0',
+                        damage: getCharacteristic(unit, 'D') || getCharacteristic(unit, 'Damage') || '1',
+                        keywords: unit.keywords || []
+                    };
+                    weapons.push(weapon);
+                }
+            }
+            
+            return weapons;
+        }
+        
+        function getCharacteristic(unit, charName) {
+            if (!unit.characteristics) return null;
+            const char = unit.characteristics.find(c => c.name === charName);
+            return char ? char.value : null;
+        }
+        
+        function createWeaponOption(weapon, index) {
+            const option = document.createElement('div');
+            option.className = 'weapon-option';
+            option.dataset.weaponIndex = index;
+            
+            option.innerHTML = `
+                <input type="checkbox" class="weapon-checkbox" id="weapon-${index}">
+                <div class="weapon-info">
+                    <div class="weapon-name">${weapon.name}</div>
+                    <div class="weapon-stats">
+                        <div class="weapon-stat">
+                            <div class="weapon-stat-label">Range</div>
+                            <div class="weapon-stat-value">${weapon.range}</div>
+                        </div>
+                        <div class="weapon-stat">
+                            <div class="weapon-stat-label">A</div>
+                            <div class="weapon-stat-value">${weapon.attacks}</div>
+                        </div>
+                        <div class="weapon-stat">
+                            <div class="weapon-stat-label">Skill</div>
+                            <div class="weapon-stat-value">${weapon.skill}</div>
+                        </div>
+                        <div class="weapon-stat">
+                            <div class="weapon-stat-label">S</div>
+                            <div class="weapon-stat-value">${weapon.strength}</div>
+                        </div>
+                        <div class="weapon-stat">
+                            <div class="weapon-stat-label">AP</div>
+                            <div class="weapon-stat-value">${weapon.ap}</div>
+                        </div>
+                        <div class="weapon-stat">
+                            <div class="weapon-stat-label">D</div>
+                            <div class="weapon-stat-value">${weapon.damage}</div>
+                        </div>
+                    </div>
+                </div>
+            `;
+            
+            // Add click handler
+            option.addEventListener('click', function(e) {
+                if (e.target.type !== 'checkbox') {
+                    const checkbox = this.querySelector('.weapon-checkbox');
+                    checkbox.checked = !checkbox.checked;
+                }
+                this.classList.toggle('selected', this.querySelector('.weapon-checkbox').checked);
+            });
+            
+            return option;
+        }
+        
+        function closeWeaponModal() {
+            const modal = document.getElementById('weapon-selection-modal');
+            modal.style.display = 'none';
+            selectedUnitForWeapons = null;
+            selectedWeapons = [];
+        }
+        
+        function confirmWeaponSelection() {
+            if (!selectedUnitForWeapons) return;
+            
+            const weaponOptions = document.querySelectorAll('.weapon-option');
+            const unit = selectedUnitForWeapons.unit;
+            const unitElement = selectedUnitForWeapons.element;
+            
+            selectedWeapons = [];
+            weaponOptions.forEach((option, index) => {
+                if (option.querySelector('.weapon-checkbox').checked) {
+                    const weapons = extractUnitWeaponsDetailed(unit);
+                    if (weapons[index]) {
+                        selectedWeapons.push({
+                            ...weapons[index],
+                            unitName: unit.name,
+                            unitId: unit.id || index
+                        });
+                    }
+                }
+            });
+            
+            if (selectedWeapons.length > 0) {
+                // Add to selected attackers with weapons
+                selectedAttackers.push({
+                    unit: unit,
+                    weapons: selectedWeapons,
+                    selectionRole: 'attacker'
+                });
+                
+                // Mark unit as selected
+                unitElement.classList.add('selected');
+                updateSelectionSummary('attacker');
+                validateCurrentStep();
+                
+                showNotification(`Selected ${selectedWeapons.length} weapons from ${unit.name}`, 'success');
+            } else {
+                showNotification('Please select at least one weapon', 'warning');
+                return;
+            }
+            
+            closeWeaponModal();
+        }
+        
+        function createUnitSelectionHTML(roster, role) {
+            if (!roster || !roster.forces) {
+                return '<div class="no-units">Keine Einheiten in diesem Roster gefunden.</div>';
+            }
+            
+            let html = '';
+            let unitCount = 0;
+            
+            roster.forces.forEach(force => {
+                if (force.selections && force.selections.length > 0) {
+                    html += `
+                        <div class="unit-category">
+                            <div class="category-header">
+                                <h3><i class="material-icons" aria-hidden="true">military_tech</i> ${force.name || 'Unbenannte Einheit'}</h3>
+                                <div class="category-count">${force.selections.length} Einheiten</div>
+                            </div>
+                            <div class="unit-list">
+                    `;
+                    
+                    force.selections.forEach((unit, index) => {
+                        const unitId = `${role}-unit-${unitCount}`;
+                        const stats = extractUnitStats(unit);
+                        const weapons = extractUnitWeapons(unit);
+                        const keywords = extractUnitKeywords(unit);
+                        
+                        html += `
+                            <div class="unit-item" data-unit-id="${unitId}" data-role="${role}" data-unit-index="${unitCount}">
+                                <div class="unit-info">
+                                    <div class="unit-header">
+                                        <h4 class="unit-name">${unit.name || 'Unbenannte Einheit'}</h4>
+                                        <div class="unit-cost">${unit.cost || 0} Pts</div>
+                                    </div>
+                                    
+                                    ${stats.length > 0 ? `
+                                        <div class="unit-stats">
+                                            ${stats.map(stat => `
+                                                <div class="stat-item">
+                                                    <div class="stat-label">${stat.label}</div>
+                                                    <div class="stat-value">${stat.value}</div>
+                                                </div>
+                                            `).join('')}
+                                        </div>
+                                    ` : ''}
+                                    
+                                    ${weapons.length > 0 ? `
+                                        <div class="unit-weapons">
+                                            <div class="weapon-count">${weapons.length} Waffe(n)</div>
+                                            <div class="weapon-list">
+                                                ${weapons.map(weapon => `
+                                                    <span class="weapon-tag">${weapon}</span>
+                                                `).join('')}
+                                            </div>
+                                        </div>
+                                    ` : ''}
+                                    
+                                    ${keywords.length > 0 ? `
+                                        <div class="unit-keywords">
+                                            <div class="keyword-count">${keywords.length} Keyword(s)</div>
+                                            <div class="keyword-list">
+                                                ${keywords.map(keyword => `
+                                                    <span class="keyword-tag">${keyword}</span>
+                                                `).join('')}
+                                            </div>
+                                        </div>
+                                    ` : ''}
+                                </div>
+                            </div>
+                        `;
+                        
+                        unitCount++;
+                    });
+                    
+                    html += `
+                            </div>
+                            <div class="selection-actions">
+                                <button class="select-all-btn" onclick="selectAllInCategory('${role}', ${force.selections.length})">
+                                    <i class="material-icons" aria-hidden="true">select_all</i>
+                                    Alle auswählen
+                                </button>
+                                <button class="clear-selection-btn" onclick="clearCategorySelection('${role}')">
+                                    <i class="material-icons" aria-hidden="true">clear</i>
+                                    Auswahl löschen
+                                </button>
+                            </div>
+                        </div>
+                    `;
+                }
+            });
+            
+            return html;
+        }
+        
+        function extractUnitStats(unit) {
+            const stats = [];
+            
+            // Standard 40k Stats
+            if (unit.characteristics) {
+                unit.characteristics.forEach(char => {
+                    stats.push({
+                        label: char.name,
+                        value: char.value
+                    });
+                });
+            }
+            
+            // Fallback für andere Strukturen
+            ['M', 'WS', 'BS', 'S', 'T', 'W', 'A', 'Ld', 'Save'].forEach(statName => {
+                if (unit[statName] !== undefined) {
+                    stats.push({
+                        label: statName,
+                        value: unit[statName]
+                    });
+                }
+            });
+            
+            return stats;
+        }
+        
+        function extractUnitWeapons(unit) {
+            const weapons = [];
+            
+            if (unit.selections) {
+                unit.selections.forEach(selection => {
+                    if (selection.type === 'upgrade' && selection.name) {
+                        weapons.push(selection.name);
+                    }
+                });
+            }
+            
+            if (unit.weapons) {
+                unit.weapons.forEach(weapon => {
+                    if (weapon.name) {
+                        weapons.push(weapon.name);
+                    }
+                });
+            }
+            
+            return weapons;
+        }
+        
+        function extractUnitKeywords(unit) {
+            const keywords = new Set();
+            
+            if (unit.keywords) {
+                if (Array.isArray(unit.keywords)) {
+                    unit.keywords.forEach(keyword => keywords.add(keyword.trim()));
+                } else if (typeof unit.keywords === 'string') {
+                    unit.keywords.split(',').forEach(keyword => keywords.add(keyword.trim()));
+                }
+            }
+            
+            // Check for assigned custom keywords
+            const unitId = unit.id;
+            if (keywordAssignments.has(unitId)) {
+                keywordAssignments.get(unitId).forEach(keyword => keywords.add(keyword));
+            }
+            
+            return Array.from(keywords).filter(k => k.length > 0);
+        }
+        
+        function toggleUnitSelection(unitElement) {
+            const isSelected = unitElement.classList.contains('selected');
+            const role = unitElement.dataset.role;
+            
+            if (isSelected) {
+                unitElement.classList.remove('selected');
+            } else {
+                unitElement.classList.add('selected');
+            }
+            
+            updateSelectionSummary(role);
+            
+            // Announce to screen reader
+            const unitName = unitElement.querySelector('.unit-name').textContent;
+            const action = isSelected ? 'abgewählt' : 'ausgewählt';
+            announceToScreenReader(`${unitName} ${action}`);
+        }
+        
+        function selectAllInCategory(role, count) {
+            const roleSelector = role === 'attacker' ? '#attacker-units' : '#defender-units';
+            const unitItems = document.querySelectorAll(`${roleSelector} .unit-item`);
+            
+            unitItems.forEach(item => {
+                item.classList.add('selected');
+            });
+            
+            updateSelectionSummary(role);
+            showNotification(`Alle ${count} Einheiten ausgewählt.`, 'success');
+        }
+        
+        function clearCategorySelection(role) {
+            const roleSelector = role === 'attacker' ? '#attacker-units' : '#defender-units';
+            const unitItems = document.querySelectorAll(`${roleSelector} .unit-item.selected`);
+            const count = unitItems.length;
+            
+            unitItems.forEach(item => {
+                item.classList.remove('selected');
+            });
+            
+            updateSelectionSummary(role);
+            if (count > 0) {
+                showNotification(`${count} Einheiten abgewählt.`, 'success');
+            }
+        }
+        
+        function updateSelectionSummary(role) {
+            const roleSelector = role === 'attacker' ? '#attacker-units' : '#defender-units';
+            const selectedItems = document.querySelectorAll(`${roleSelector} .unit-item.selected`);
+            const totalItems = document.querySelectorAll(`${roleSelector} .unit-item`);
+            
+            const summaryElement = document.querySelector(`#${role}-selection-summary`);
+            if (summaryElement) {
+                summaryElement.innerHTML = `
+                    <div class="selection-count">
+                        <div class="count-item">
+                            <span class="count-number">${selectedItems.length}</span>
+                            <span class="count-label">Ausgewählt</span>
+                        </div>
+                        <div class="count-item">
+                            <span class="count-number">${totalItems.length}</span>
+                            <span class="count-label">Verfügbar</span>
+                        </div>
+                    </div>
+                `;
+            }
+        }
         
         function displayAttackerUnits() {
             const container = document.getElementById('attacker-units');
@@ -3254,10 +4699,10 @@
             const averageDamagePerIteration = statistics.totalDamageDealt / iterations;
             const overallHitRate = statistics.totalAttacks > 0 ? (statistics.totalHits / statistics.totalAttacks * 100) : 0;
             const totalDefenderWounds = defenders.reduce((sum, d) => sum + (d.wounds || 1), 0);
-            const damageEfficiency = totalDefenderWounds > 0 ? (statistics.totalDamageDealt / (iterations * totalDefenderWounds) * 100) : 0;
+            const damageEfficiency = totalDefenderWounds > 0 ? (averageDamagePerIteration / totalDefenderWounds * 100) : 0;
             
-            // Find most/least effective combinations
-            const sortedResults = [...combatResults].sort((a, b) => b.totalDamage - a.totalDamage);
+            // Find most/least effective combinations based on average damage
+            const sortedResults = [...combatResults].sort((a, b) => (b.totalDamage / iterations) - (a.totalDamage / iterations));
             const mostEffective = sortedResults[0];
             const leastEffective = sortedResults[sortedResults.length - 1];
             
@@ -3286,41 +4731,74 @@
                     <div class="result-card primary">
                         <div class="card-header">
                             <i class="material-icons" aria-hidden="true">trending_up</i>
-                            <h4>Gesamtschaden</h4>
+                            <h4>Average Damage</h4>
                         </div>
                         <div class="card-content">
-                            <div class="primary-metric">${statistics.totalDamageDealt.toLocaleString()}</div>
-                            <div class="metric-subtitle">Über alle Kombinationen</div>
-                            <div class="metric-detail">Ø ${averageDamagePerIteration.toFixed(2)} pro Iteration</div>
+                            <div class="primary-metric">${averageDamagePerIteration.toFixed(2)}</div>
+                            <div class="metric-subtitle">Per Simulation Round</div>
+                            <div class="metric-detail">From ${iterations.toLocaleString()} Iterations</div>
                         </div>
                     </div>
                     
                     <div class="result-card">
                         <div class="card-header">
                             <i class="material-icons" aria-hidden="true">gps_fixed</i>
-                            <h4>Trefferquote</h4>
+                            <h4>Hit Rate</h4>
                         </div>
                         <div class="card-content">
                             <div class="primary-metric">${overallHitRate.toFixed(1)}%</div>
-                            <div class="metric-subtitle">${statistics.totalHits.toLocaleString()} / ${statistics.totalAttacks.toLocaleString()} Treffer</div>
+                            <div class="metric-subtitle">${statistics.totalHits.toLocaleString()} / ${statistics.totalAttacks.toLocaleString()} Hits</div>
+                        </div>
+                    </div>
+                    
+                    <div class="result-card">
+                        <div class="card-header">
+                            <i class="material-icons" aria-hidden="true">healing</i>
+                            <h4>Wound Rate</h4>
+                        </div>
+                        <div class="card-content">
+                            <div class="primary-metric">${statistics.totalHits > 0 ? ((statistics.totalWounds / statistics.totalHits) * 100).toFixed(1) : 0}%</div>
+                            <div class="metric-subtitle">${statistics.totalWounds.toLocaleString()} / ${statistics.totalHits.toLocaleString()} Wounds</div>
+                        </div>
+                    </div>
+                    
+                    <div class="result-card">
+                        <div class="card-header">
+                            <i class="material-icons" aria-hidden="true">shield</i>
+                            <h4>Save Failures</h4>
+                        </div>
+                        <div class="card-content">
+                            <div class="primary-metric">${statistics.totalWounds > 0 ? ((statistics.totalFailedSaves / statistics.totalWounds) * 100).toFixed(1) : 0}%</div>
+                            <div class="metric-subtitle">${statistics.totalFailedSaves.toLocaleString()} / ${statistics.totalWounds.toLocaleString()} Failed</div>
+                        </div>
+                    </div>
+                    
+                    <div class="result-card">
+                        <div class="card-header">
+                            <i class="material-icons" aria-hidden="true">favorite</i>
+                            <h4>Feel No Pain</h4>
+                        </div>
+                        <div class="card-content">
+                            <div class="primary-metric">${statistics.totalFailedSaves > 0 ? ((statistics.totalFNPSaves / statistics.totalFailedSaves) * 100).toFixed(1) : 0}%</div>
+                            <div class="metric-subtitle">${statistics.totalFNPSaves.toLocaleString()} / ${statistics.totalFailedSaves.toLocaleString()} FNP Saves</div>
                         </div>
                     </div>
                     
                     <div class="result-card">
                         <div class="card-header">
                             <i class="material-icons" aria-hidden="true">speed</i>
-                            <h4>Schadenseffizienz</h4>
+                            <h4>Damage Efficiency</h4>
                         </div>
                         <div class="card-content">
                             <div class="primary-metric">${damageEfficiency.toFixed(1)}%</div>
-                            <div class="metric-subtitle">Relative Vernichtungskraft</div>
+                            <div class="metric-subtitle">Relative Lethality</div>
                         </div>
                     </div>
                     
                     <div class="result-card">
                         <div class="card-header">
                             <i class="material-icons" aria-hidden="true">military_tech</i>
-                            <h4>Beste Kombination</h4>
+                            <h4>Best Unit Combination</h4>
                         </div>
                         <div class="card-content">
                             <div class="combo-display">
@@ -3328,7 +4806,7 @@
                                 <i class="material-icons combo-arrow" aria-hidden="true">arrow_forward</i>
                                 <div class="combo-target">${mostEffective.defender}</div>
                             </div>
-                            <div class="metric-detail">${mostEffective.totalDamage.toLocaleString()} Schaden</div>
+                            <div class="metric-detail">${(mostEffective.totalDamage / iterations).toFixed(2)} Ø Schaden</div>
                         </div>
                     </div>
                 </div>
@@ -3921,6 +5399,55 @@
             }, 3000);
         }
 
+        // ===== NOTIFICATION SYSTEM =====
+        
+        function showNotification(message, type = 'info') {
+            // Create notification element
+            const notification = document.createElement('div');
+            notification.className = `notification notification-${type}`;
+            notification.innerHTML = `
+                <div class="notification-content">
+                    <i class="material-icons notification-icon">${getNotificationIcon(type)}</i>
+                    <span class="notification-message">${message}</span>
+                </div>
+                <button class="notification-close" onclick="this.parentElement.remove()">
+                    <i class="material-icons">close</i>
+                </button>
+            `;
+            
+            // Add to page
+            let container = document.getElementById('notification-container');
+            if (!container) {
+                container = document.createElement('div');
+                container.id = 'notification-container';
+                container.className = 'notification-container';
+                document.body.appendChild(container);
+            }
+            
+            container.appendChild(notification);
+            
+            // Auto-remove after 5 seconds
+            setTimeout(() => {
+                if (notification.parentElement) {
+                    notification.remove();
+                }
+            }, 5000);
+            
+            // Announce to screen reader
+            announceToScreenReader(message);
+        }
+        
+        function getNotificationIcon(type) {
+            switch (type) {
+                case 'success': return 'check_circle';
+                case 'warning': return 'warning';
+                case 'error': return 'error';
+                default: return 'info';
+            }
+        }
+        
+        // ===== ACCESSIBILITY HELPERS =====
+        
         function announceToScreenReader(message) {
             const announcement = document.createElement('div');
             announcement.setAttribute('aria-live', 'polite');
@@ -4113,18 +5640,35 @@
         
         function parseBattleScribeFile(jsonData) {
             console.log('Parsing BattleScribe roster data...');
+            console.log('Available JSON properties:', Object.keys(jsonData));
             
             try {
-                const roster = jsonData.roster;
-                if (!roster || !roster.forces || !roster.forces[0] || !roster.forces[0].selections) {
-                    throw new Error('Ungültige BattleScribe-Struktur');
+                let roster = jsonData.roster || jsonData;
+                let selections = [];
+                
+                // Try different ways to find selections
+                if (roster && roster.forces && roster.forces[0] && roster.forces[0].selections) {
+                    selections = roster.forces[0].selections;
+                } else if (roster && roster.selections) {
+                    selections = roster.selections;
+                } else if (jsonData.forces && jsonData.forces[0] && jsonData.forces[0].selections) {
+                    selections = jsonData.forces[0].selections;
+                } else if (jsonData.selections) {
+                    selections = jsonData.selections;
+                } else {
+                    console.warn('No selections found, using empty array');
+                    selections = [];
                 }
+                
+                console.log(`Found ${selections.length} selections to parse`);
                 
                 const weapons = [];
                 const defenders = [];
                 
                 // Durchsuche alle Einheiten in der Armee
                 function parseSelections(selections, parentName = '') {
+                    if (!selections || !Array.isArray(selections)) return;
+                    
                     selections.forEach(selection => {
                         // Prüfe ob es eine Einheit ist
                         if (selection.type === 'unit' || selection.type === 'model') {
@@ -4157,20 +5701,130 @@
                             if (selection.profiles) {
                                 selection.profiles.forEach(profile => {
                                     if (profile.typeName === 'Ranged Weapons' || profile.typeName === 'Melee Weapons') {
-                                        const weapon = parseWeaponProfile(profile, unit.name);
+                                        const weapon = parseWeaponProfile(profile, unit.name, parentName);
                                         if (weapon) {
                                             weapons.push(weapon);
                                         }
                                     }
                                 });
                             }
-                            
-                            // Rekursiv durch Waffenauswahlen
-                            if (selection.selections) {
-                                parseWeaponSelections(selection.selections, unit.name);
-                            }
                         });
                     }
+                }
+                
+                function parseDefenderProfile(profile, unitName, parentName) {
+                    if (!profile.characteristics) return null;
+                    
+                    const stats = {};
+                    profile.characteristics.forEach(char => {
+                        stats[char.name] = char.$text || char.value;
+                    });
+                    
+                    // Standard 40k Statskonvertierung
+                    return {
+                        id: `defender_${Date.now()}_${Math.random()}`,
+                        name: unitName || profile.name,
+                        type: determineUnitType(unitName),
+                        movement: stats.M || '6"',
+                        toughness: parseInt(stats.T) || 4,
+                        save: parseInt(stats.SV?.replace('+', '')) || 3,
+                        wounds: parseInt(stats.W) || 1,
+                        leadership: parseInt(stats.LD?.replace('+', '')) || 6,
+                        objectiveControl: parseInt(stats.OC) || 1,
+                        invulnSave: null, // Wird aus Abilities extrahiert
+                        feelNoPain: null, // Wird aus Abilities extrahiert
+                        keywords: extractKeywordsFromUnit(unitName, parentName)
+                    };
+                }
+                
+                function parseWeaponProfile(profile, unitName, parentName) {
+                    if (!profile.characteristics) return null;
+                    
+                    const stats = {};
+                    profile.characteristics.forEach(char => {
+                        stats[char.name] = char.$text || char.value;
+                    });
+                    
+                    // Bestimme Waffentyp
+                    const weaponType = profile.typeName === 'Ranged Weapons' ? 'Ranged' : 'Melee';
+                    
+                    return {
+                        id: `weapon_${Date.now()}_${Math.random()}`,
+                        name: profile.name || `${unitName} Weapon`,
+                        type: weaponType,
+                        range: stats.Range || (weaponType === 'Melee' ? 'Melee' : '24"'),
+                        attacks: stats.A || '1',
+                        skill: parseInt(stats.BS || stats.WS?.replace('+', '')) || 4,
+                        strength: parseInt(stats.S) || 4,
+                        ap: parseInt(stats.AP?.replace('-', '')) || 0,
+                        damage: stats.D || '1',
+                        keywords: stats.Keywords || '',
+                        unitName: unitName,
+                        parentName: parentName
+                    };
+                }
+                
+                function extractKeywordsFromUnit(unitName, parentName) {
+                    // Basis-Keywords basierend auf Einheitenname
+                    const keywords = [];
+                    
+                    if (unitName) {
+                        const name = unitName.toLowerCase();
+                        
+                        // Fraktion Keywords
+                        if (name.includes('daemon') || name.includes('bloodthirster') || name.includes('skarbrand')) {
+                            keywords.push('DAEMON', 'LEGIONES DAEMONICA');
+                        }
+                        
+                        // Chaos God Keywords
+                        if (name.includes('khorne') || name.includes('blood') || name.includes('skarbrand')) {
+                            keywords.push('KHORNE');
+                        }
+                        if (name.includes('tzeentch')) {
+                            keywords.push('TZEENTCH');
+                        }
+                        if (name.includes('nurgle')) {
+                            keywords.push('NURGLE');
+                        }
+                        if (name.includes('slaanesh')) {
+                            keywords.push('SLAANESH');
+                        }
+                        
+                        // Unit Type Keywords
+                        if (name.includes('character')) {
+                            keywords.push('CHARACTER');
+                        }
+                        if (name.includes('monster')) {
+                            keywords.push('MONSTER');
+                        }
+                        if (name.includes('vehicle')) {
+                            keywords.push('VEHICLE');
+                        }
+                        
+                        keywords.push('CHAOS');
+                    }
+                    
+                    return keywords.join(', ');
+                }
+                
+                function parseWeaponSelections(selections, unitName) {
+                    selections.forEach(selection => {
+                        if (selection.profiles) {
+                            selection.profiles.forEach(profile => {
+                                if (profile.typeName === 'Ranged Weapons' || profile.typeName === 'Melee Weapons') {
+                                    const weapon = parseWeaponProfile(profile, unitName);
+                                    if (weapon) {
+                                        weapons.push(weapon);
+                                    }
+                                }
+                            });
+                        }
+                        
+                        // Rekursiv durch Waffenauswahlen
+                        if (selection.selections) {
+                            parseWeaponSelections(selection.selections, unitName);
+                        }
+                    });
                 }
                 
                 function parseWeaponSelections(selections, unitName) {
@@ -4272,16 +5926,38 @@
                 }
                 
                 // Parse die Hauptstruktur
-                parseSelections(roster.forces[0].selections);
+                parseSelections(selections);
                 
                 console.log(`BattleScribe Parser: ${weapons.length} Waffen und ${defenders.length} Verteidiger gefunden`);
+                
+                // Flexiblere Extraktion der Roster-Informationen
+                let rosterName = 'BattleScribe Roster';
+                let gameSystem = 'Warhammer 40,000';
+                let points = 0;
+                
+                if (roster && roster.name) {
+                    rosterName = roster.name;
+                } else if (jsonData.name) {
+                    rosterName = jsonData.name;
+                }
+                
+                if (jsonData.gameSystemName) {
+                    gameSystem = jsonData.gameSystemName;
+                } else if (roster && roster.gameSystemName) {
+                    gameSystem = roster.gameSystemName;
+                }
+                
+                if (roster && roster.costs) {
+                    const pointsCost = roster.costs.find(c => c.name === 'pts' || c.name === 'points');
+                    points = pointsCost ? pointsCost.value : 0;
+                }
                 
                 return {
                     weapons: weapons,
                     defenders: defenders,
-                    rosterName: roster.name || 'BattleScribe Roster',
-                    gameSystem: jsonData.gameSystemName || 'Warhammer 40,000',
-                    points: roster.costs ? roster.costs.find(c => c.name === 'pts')?.value || 0 : 0
+                    rosterName: rosterName,
+                    gameSystem: gameSystem,
+                    points: points
                 };
                 
             } catch (error) {
