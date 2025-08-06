@@ -147,9 +147,9 @@ export class Weapon {
             }
         }
 
-        // Standard Keywords (case-insensitive)
-        this.lethalHits = hasKeyword("lethal hits");
-        this.devastatingWounds = hasKeyword("devastating wounds");
+        // Standard Keywords (case-insensitive) - removed old boolean properties
+        // this.lethalHits = hasKeyword("lethal hits");
+        // this.devastatingWounds = hasKeyword("devastating wounds");
         this.betterCrits = hasKeyword("better crits");
 
         // Twin-linked (case-insensitive)

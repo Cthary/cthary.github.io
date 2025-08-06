@@ -83,6 +83,8 @@ export class CombatCalculator {
         const { normalHits, criticalHits } = hitResult;
         const totalHits = normalHits + criticalHits;
         
+        console.log(`calculateWounds: weapon=${weapon.name}, normalHits=${normalHits}, criticalHits=${criticalHits}, keywords=`, weapon.Keywords);
+        
         if (totalHits === 0) {
             return { normalWounds: 0, criticalWounds: 0, mortalWounds: 0 };
         }
@@ -100,12 +102,14 @@ export class CombatCalculator {
         // Lethal Hits: Critical Hits werden automatisch zu Wounds
         let autoWounds = 0;
         const hasLethalHits = weapon.Keywords.some(k => k.toLowerCase().includes("lethal hits"));
+        console.log(`Lethal Hits check: hasLethalHits=${hasLethalHits}, keywords=`, weapon.Keywords.map(k => k.toLowerCase()));
         if (hasLethalHits) {
             autoWounds = criticalHits; // Critical Hits werden zu normalen Wounds
         }
 
         // Würfle für normale Hits (+ Critical Hits wenn kein Lethal Hits)
         const hitsToRoll = hasLethalHits ? normalHits : totalHits;
+        console.log(`Rolling for wounds: hitsToRoll=${hitsToRoll}, woundTarget=${woundTarget}`);
         const rolls = this.rollWithRerolls(hitsToRoll, woundTarget, rerollType, critWoundThreshold);
 
         let normalWounds = autoWounds; // Lethal Hits als normale Wounds
@@ -113,6 +117,7 @@ export class CombatCalculator {
         let mortalWounds = 0;
 
         const hasDevastatingWounds = weapon.Keywords.some(k => k.toLowerCase().includes("devastating wounds"));
+        console.log(`Devastating Wounds check: hasDevastatingWounds=${hasDevastatingWounds}, keywords=`, weapon.Keywords.map(k => k.toLowerCase()));
 
         for (const roll of rolls) {
             if (roll >= woundTarget) {
@@ -130,6 +135,7 @@ export class CombatCalculator {
             }
         }
 
+        console.log(`Wound results: normalWounds=${normalWounds}, criticalWounds=${criticalWounds}, mortalWounds=${mortalWounds}`);
         return { normalWounds, criticalWounds, mortalWounds };
     }
 
