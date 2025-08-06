@@ -585,9 +585,10 @@ function run(jsonData) {
                 attackerGroups[groupName].WeaponGroups[existingWeaponIndex].amount += weapon.amount;
                 console.log(`Combined weapon ${weapon.name} (${originalName}): new amount = ${attackerGroups[groupName].WeaponGroups[existingWeaponIndex].amount}`);
             } else {
-                // Füge neue Waffe hinzu
+                // Füge neue Waffe hinzu mit Deep Copy der Keywords
                 attackerGroups[groupName].WeaponGroups.push({
                     ...weapon,
+                    Keywords: JSON.parse(JSON.stringify(weapon.Keywords || [])), // Deep copy keywords
                     originalOwner: originalName
                 });
                 console.log(`Added new weapon ${weapon.name} (${originalName}): amount = ${weapon.amount}`);
@@ -638,6 +639,7 @@ function simulateGroupCombat(weaponGroups, defenderGroup, simulationCount) {
     // Waffen sind bereits korrekt gruppiert, nur Display-Namen hinzufügen
     const uniqueWeapons = weaponGroups.map(weapon => ({
         ...weapon,
+        Keywords: JSON.parse(JSON.stringify(weapon.Keywords || [])), // Deep copy keywords
         displayName: `${weapon.name} (${weapon.originalOwner})`
     }));
 
@@ -698,7 +700,7 @@ function simulateGroupCombat(weaponGroups, defenderGroup, simulationCount) {
                         strength: weapon.strength,
                         ap: weapon.ap,
                         damage: weapon.damage,
-                        Keywords: weapon.Keywords || []
+                        Keywords: JSON.parse(JSON.stringify(weapon.Keywords || [])) // Deep copy of keywords
                         // Don't include amount here - it's handled in the simulation loop
                     });
                 } else {
@@ -712,7 +714,7 @@ function simulateGroupCombat(weaponGroups, defenderGroup, simulationCount) {
                         strength: weapon.strength,
                         ap: weapon.ap,
                         damage: weapon.damage,
-                        Keywords: weapon.Keywords || [],
+                        Keywords: JSON.parse(JSON.stringify(weapon.Keywords || [])), // Deep copy of keywords
                         
                         // Methode für Attack-Parsing
                         getAttacks: function() {
