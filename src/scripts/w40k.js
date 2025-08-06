@@ -62,8 +62,16 @@ export class CombatCalculator {
         }
 
         // Sustained Hits für Critical Hits
-        if (weapon.sustainedHits && criticalHits > 0) {
-            const sustainedTotal = this.calculateSustainedHits(weapon.sustainedHits, criticalHits);
+        const hasSustainedHits = weapon.Keywords.some(k => k.toLowerCase().includes("sustained hits"));
+        if (hasSustainedHits && criticalHits > 0) {
+            // Finde den Sustained Hits Wert
+            const sustainedKeyword = weapon.Keywords.find(k => k.toLowerCase().includes("sustained hits"));
+            const match = sustainedKeyword.match(/sustained\s+hits\s+(\d+|d\d+)/i);
+            let sustainedValue = "1"; // Default
+            if (match) {
+                sustainedValue = match[1];
+            }
+            const sustainedTotal = this.calculateSustainedHits(sustainedValue, criticalHits);
             normalHits += sustainedTotal;
         }
 
@@ -91,28 +99,33 @@ export class CombatCalculator {
 
         // Lethal Hits: Critical Hits werden automatisch zu Wounds
         let autoWounds = 0;
-        if (weapon.lethalHits) {
-            autoWounds = criticalHits;
+        const hasLethalHits = weapon.Keywords.some(k => k.toLowerCase().includes("lethal hits"));
+        if (hasLethalHits) {
+            autoWounds = criticalHits; // Critical Hits werden zu normalen Wounds
         }
 
         // Würfle für normale Hits (+ Critical Hits wenn kein Lethal Hits)
-        const hitsToRoll = weapon.lethalHits ? normalHits : totalHits;
+        const hitsToRoll = hasLethalHits ? normalHits : totalHits;
         const rolls = this.rollWithRerolls(hitsToRoll, woundTarget, rerollType, critWoundThreshold);
 
         let normalWounds = autoWounds; // Lethal Hits als normale Wounds
         let criticalWounds = 0;
         let mortalWounds = 0;
 
+        const hasDevastatingWounds = weapon.Keywords.some(k => k.toLowerCase().includes("devastating wounds"));
+
         for (const roll of rolls) {
             if (roll >= woundTarget) {
                 const isCritical = this.isCriticalWound(roll, critWoundThreshold, weapon, defender);
                 
-                if (isCritical && weapon.devastatingWounds) {
-                    mortalWounds++;
-                } else if (isCritical) {
-                    criticalWounds++;
+                if (isCritical) {
+                    if (hasDevastatingWounds) {
+                        mortalWounds++; // Critical Wounds mit Devastating Wounds werden zu Mortal Wounds
+                    } else {
+                        criticalWounds++; // Normale Critical Wounds
+                    }
                 } else {
-                    normalWounds++;
+                    normalWounds++; // Normale Wounds
                 }
             }
         }
