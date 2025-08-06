@@ -13,13 +13,21 @@ export class CombatCalculator {
         let rerollType = "none";
         
         if (attackCount <= 0) {
-            return { normalHits: 0, criticalHits: 0, mortalWounds: 0 };
+            return { normalHits: 0, criticalHits: 0, mortalWounds: 0, keywordTriggers: {} };
         }
+        
+        // Keyword-Trigger Tracking
+        const keywordTriggers = {
+            lethalHits: 0,
+            sustainedHits: 0,
+            hazardous: 0
+        };
         
         // Blast: +1 Attack pro 5 Modelle (1-4=+0, 5-9=+1, 10-14=+2, etc.)
         if (weapon.Keywords.some(k => k.toLowerCase().includes("blast"))) {
             const bonusAttacks = Math.floor(defender.models / 5);
             attackCount += bonusAttacks;
+            keywordTriggers.blast = bonusAttacks;
         }
         
         // Sammle alle Modifikatoren
@@ -30,10 +38,12 @@ export class CombatCalculator {
 
         // Torrent: Automatische Hits
         if (weapon.Keywords.some(k => k.toLowerCase().includes("torrent"))) {
+            keywordTriggers.torrent = attackCount;
             return {
                 normalHits: attackCount,
                 criticalHits: 0,
-                mortalWounds: 0
+                mortalWounds: 0,
+                keywordTriggers
             };
         }
 
@@ -48,6 +58,7 @@ export class CombatCalculator {
             // Hazardous prüfen (nur bei ursprünglichen 1ern)
             if (weapon.Keywords.some(k => k.toLowerCase().includes("hazardous")) && roll === 1) {
                 mortalWounds++;
+                keywordTriggers.hazardous++;
             }
 
             if (roll >= hitTarget) {
@@ -71,18 +82,26 @@ export class CombatCalculator {
             }
             const sustainedTotal = this.calculateSustainedHits(sustainedValue, criticalHits);
             normalHits += sustainedTotal;
+            keywordTriggers.sustainedHits = sustainedTotal;
         }
 
-        return { normalHits, criticalHits, mortalWounds };
+        return { normalHits, criticalHits, mortalWounds, keywordTriggers };
     }
 
     // Optimierte Wound-Phase
     calculateWounds(weapon, defender, hitResult) {
-        const { normalHits, criticalHits } = hitResult;
+        const { normalHits, criticalHits, keywordTriggers: hitTriggers } = hitResult;
         const totalHits = normalHits + criticalHits;
         
+        // Erweitere Keyword-Trigger
+        const keywordTriggers = { 
+            ...hitTriggers,
+            lethalHits: 0,
+            devastatingWounds: 0
+        };
+        
         if (totalHits === 0) {
-            return { normalWounds: 0, criticalWounds: 0, mortalWounds: 0 };
+            return { normalWounds: 0, criticalWounds: 0, mortalWounds: 0, keywordTriggers };
         }
 
         let woundTarget = this.calculateWoundTarget(weapon.strength, defender.toughness);
@@ -100,6 +119,7 @@ export class CombatCalculator {
         const hasLethalHits = weapon.Keywords.some(k => k.toLowerCase().includes("lethal hits"));
         if (hasLethalHits) {
             autoWounds = criticalHits; // Critical Hits werden zu normalen Wounds
+            keywordTriggers.lethalHits = criticalHits;
         }
 
         // Würfle für normale Hits (+ Critical Hits wenn kein Lethal Hits)
@@ -119,6 +139,7 @@ export class CombatCalculator {
                 if (isCritical) {
                     if (hasDevastatingWounds) {
                         mortalWounds++; // Critical Wounds mit Devastating Wounds werden zu Mortal Wounds
+                        keywordTriggers.devastatingWounds++;
                     } else {
                         criticalWounds++; // Normale Critical Wounds
                     }
@@ -128,7 +149,7 @@ export class CombatCalculator {
             }
         }
 
-        return { normalWounds, criticalWounds, mortalWounds };
+        return { normalWounds, criticalWounds, mortalWounds, keywordTriggers };
     }
 
     // Optimierte Save-Phase
@@ -460,7 +481,8 @@ export class OptimizedSimulator {
             fnpSaves: fnpResult.savedWounds,
             finalDamageInstances: damageInstances,
             mortalWounds: woundResult.mortalWounds + hitResult.mortalWounds,
-            totalDamage: damageInstances.reduce((sum, dmg) => sum + dmg, 0)
+            totalDamage: damageInstances.reduce((sum, dmg) => sum + dmg, 0),
+            keywordTriggers: woundResult.keywordTriggers || {}
         };
         
         return result;
@@ -731,7 +753,15 @@ function simulateGroupCombat(weaponGroups, defenderGroup, simulationCount) {
                 Wounds: 0,
                 FailedSaves: 0,
                 AverageDamage: 0,
-                Keywords: keywordInfo // Neue Keyword-Informationen
+                Keywords: keywordInfo, // Neue Keyword-Informationen
+                KeywordTriggers: { // Neue Trigger-Statistiken
+                    lethalHits: 0,
+                    devastatingWounds: 0,
+                    sustainedHits: 0,
+                    hazardous: 0,
+                    blast: 0,
+                    torrent: 0
+                }
             };
         })
     };
@@ -741,7 +771,15 @@ function simulateGroupCombat(weaponGroups, defenderGroup, simulationCount) {
         totalHits: 0,
         totalWounds: 0,
         totalFailedSaves: 0,
-        totalDamage: 0
+        totalDamage: 0,
+        keywordTriggers: {
+            lethalHits: 0,
+            devastatingWounds: 0,
+            sustainedHits: 0,
+            hazardous: 0,
+            blast: 0,
+            torrent: 0
+        }
     }));
 
     // Simuliere jede Runde
@@ -820,11 +858,19 @@ function simulateGroupCombat(weaponGroups, defenderGroup, simulationCount) {
 
             console.log(`Simulating weapon: ${weapon.displayName}, Amount: ${weapon.amount}, Keywords:`, extractKeywordInfo(weapon.Keywords));
 
-            // Simuliere diese Waffe entsprechend ihrer amount
+            // Simuliere die Waffe so oft wie amount angibt
             let weaponTotalHits = 0;
             let weaponTotalWounds = 0;
             let weaponTotalFailedSaves = 0;
             let weaponTotalDamage = 0;
+            let aggregatedKeywordTriggers = {
+                lethalHits: 0,
+                devastatingWounds: 0,
+                sustainedHits: 0,
+                hazardous: 0,
+                blast: 0,
+                torrent: 0
+            };
 
             // Simuliere die Waffe so oft wie amount angibt
             for (let weaponInstance = 0; weaponInstance < weapon.amount; weaponInstance++) {
@@ -834,6 +880,13 @@ function simulateGroupCombat(weaponGroups, defenderGroup, simulationCount) {
                 weaponTotalWounds += weaponResult.wounds;
                 weaponTotalFailedSaves += weaponResult.failedSaves;
                 weaponTotalDamage += weaponResult.totalDamage;
+                
+                // Sammle Keyword-Trigger
+                if (weaponResult.keywordTriggers) {
+                    Object.keys(aggregatedKeywordTriggers).forEach(key => {
+                        aggregatedKeywordTriggers[key] += weaponResult.keywordTriggers[key] || 0;
+                    });
+                }
             }
 
             // Sammle Waffen-Statistiken
@@ -841,6 +894,11 @@ function simulateGroupCombat(weaponGroups, defenderGroup, simulationCount) {
             weaponStats[weaponIndex].totalWounds += weaponTotalWounds;
             weaponStats[weaponIndex].totalFailedSaves += weaponTotalFailedSaves;
             weaponStats[weaponIndex].totalDamage += weaponTotalDamage;
+            
+            // Sammle Keyword-Trigger
+            Object.keys(aggregatedKeywordTriggers).forEach(key => {
+                weaponStats[weaponIndex].keywordTriggers[key] += aggregatedKeywordTriggers[key];
+            });
 
             totalHits += weaponTotalHits;
             totalWounds += weaponTotalWounds;
@@ -921,6 +979,11 @@ function simulateGroupCombat(weaponGroups, defenderGroup, simulationCount) {
         groupTargetResult.Weapons[index].Wounds = stats.totalWounds / simulationCount;
         groupTargetResult.Weapons[index].FailedSaves = stats.totalFailedSaves / simulationCount;
         groupTargetResult.Weapons[index].AverageDamage = stats.totalDamage / simulationCount;
+        
+        // Berechne Keyword-Trigger-Durchschnitte
+        Object.keys(stats.keywordTriggers).forEach(key => {
+            groupTargetResult.Weapons[index].KeywordTriggers[key] = stats.keywordTriggers[key] / simulationCount;
+        });
     });
 
     // Berechne finale Statistiken für jedes Member

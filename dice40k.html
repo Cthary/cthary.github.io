@@ -578,6 +578,21 @@
             color: white;
         }
 
+        .keyword-tag.hazardous {
+            background: #c0392b;
+            color: white;
+        }
+
+        .keyword-tag.blast {
+            background: #d35400;
+            color: white;
+        }
+
+        .keyword-tag.torrent {
+            background: #27ae60;
+            color: white;
+        }
+
         .keyword-name {
             font-weight: bold;
             color: #ffd700;
@@ -2847,7 +2862,7 @@
             }, 100);
         };
 
-        // Ergebnisse anzeigen (komplett neu - sicher gegen undefined-Werte)
+        // Ergebnisse anzeigen (neu strukturiert: nach Angreifer-Gruppen)
         function displayResults() {
             const container = document.getElementById('resultsContainer');
             container.innerHTML = '';
@@ -2862,105 +2877,159 @@
                 attackerDiv.className = 'result-section';
                 
                 let attackerHtml = `
-                    <h3>🗡️ ${safeString(attackerResult.Name || 'Unbekannter Angreifer')}</h3>
+                    <div class="attacker-group-header">
+                        <h2>🗡️ ${safeString(attackerResult.Name || 'Unbekannter Angreifer')}</h2>
+                    </div>
                 `;
 
+                // Sammle alle Waffen aus allen Target-Ergebnissen dieser Angreifer-Gruppe
+                const weaponSummary = new Map();
+                
                 if (attackerResult.Target && attackerResult.Target.length > 0) {
+                    attackerResult.Target.forEach(targetResult => {
+                        if (targetResult.Weapons) {
+                            targetResult.Weapons.forEach(weapon => {
+                                if (!weaponSummary.has(weapon.Name)) {
+                                    weaponSummary.set(weapon.Name, {
+                                        weapon: weapon,
+                                        targets: []
+                                    });
+                                }
+                                weaponSummary.get(weapon.Name).targets.push({
+                                    targetName: targetResult.Name,
+                                    hits: weapon.Hits,
+                                    wounds: weapon.Wounds,
+                                    failedSaves: weapon.FailedSaves,
+                                    damage: weapon.AverageDamage
+                                });
+                            });
+                        }
+                    });
+                }
+
+                // Zeige Waffen-Übersicht für diese Angreifer-Gruppe
+                if (weaponSummary.size > 0) {
+                    attackerHtml += `
+                        <div class="weapons-overview">
+                            <button class="collapsible-btn" onclick="toggleCollapsible(this)">
+                                ⚔️ Waffen dieser Gruppe (${weaponSummary.size})
+                                <span class="toggle-icon">▼</span>
+                            </button>
+                            <div class="collapsible-content">
+                                <div class="weapons-grid">
+                    `;
+
+                    weaponSummary.forEach((weaponData, weaponName) => {
+                        const weapon = weaponData.weapon;
+                        attackerHtml += `
+                            <div class="weapon-card">
+                                <h5>${safeString(weaponName)}</h5>
+                                <div class="weapon-stats">
+                                    <div class="stat-item">
+                                        <span class="stat-label">Durchschn. Treffer:</span>
+                                        <span class="stat-value">${safeNumber(weapon.Hits).toFixed(2)}</span>
+                                    </div>
+                                    <div class="stat-item">
+                                        <span class="stat-label">Durchschn. Verwundungen:</span>
+                                        <span class="stat-value">${safeNumber(weapon.Wounds).toFixed(2)}</span>
+                                    </div>
+                                    <div class="stat-item">
+                                        <span class="stat-label">Fehlgeschlagene Saves:</span>
+                                        <span class="stat-value">${safeNumber(weapon.FailedSaves).toFixed(2)}</span>
+                                    </div>
+                                    <div class="stat-item">
+                                        <span class="stat-label">Durchschn. Schaden:</span>
+                                        <span class="stat-value">${safeNumber(weapon.AverageDamage).toFixed(2)}</span>
+                                    </div>
+                                </div>`;
+                        
+                        // Zeige wichtige Keywords an
+                        if (weapon.Keywords && Object.keys(weapon.Keywords).length > 0) {
+                            attackerHtml += `
+                                <div class="weapon-keywords">
+                                    <span class="stat-label">Spezial-Regeln:</span>
+                                    <div class="keyword-tags">`;
+                            
+                            const keywords = weapon.Keywords;
+                            const triggers = weapon.KeywordTriggers || {};
+                            
+                            if (keywords.lethalHits) {
+                                const avgTriggers = triggers.lethalHits > 0 ? ` (⌀${triggers.lethalHits.toFixed(1)})` : '';
+                                attackerHtml += `<span class="keyword-tag lethal">Lethal Hits${avgTriggers}</span>`;
+                            }
+                            if (keywords.devastatingWounds) {
+                                const avgTriggers = triggers.devastatingWounds > 0 ? ` (⌀${triggers.devastatingWounds.toFixed(1)})` : '';
+                                attackerHtml += `<span class="keyword-tag devastating">Devastating Wounds${avgTriggers}</span>`;
+                            }
+                            if (keywords.sustainedHits) {
+                                const avgTriggers = triggers.sustainedHits > 0 ? ` (⌀${triggers.sustainedHits.toFixed(1)})` : '';
+                                attackerHtml += `<span class="keyword-tag sustained">Sustained Hits ${keywords.sustainedHits}${avgTriggers}</span>`;
+                            }
+                            if (keywords.criticalHitOn && keywords.criticalHitOn !== "6") {
+                                attackerHtml += `<span class="keyword-tag crit">Critical Hit ${keywords.criticalHitOn}+</span>`;
+                            }
+                            if (keywords.criticalWoundOn && keywords.criticalWoundOn !== "6") {
+                                attackerHtml += `<span class="keyword-tag crit">Critical Wound ${keywords.criticalWoundOn}+</span>`;
+                            }
+                            if (keywords.anti && keywords.anti.length > 0) {
+                                keywords.anti.forEach(anti => {
+                                    attackerHtml += `<span class="keyword-tag anti">Anti-${anti.target} ${anti.threshold}+</span>`;
+                                });
+                            }
+                            if (keywords.melta) {
+                                attackerHtml += `<span class="keyword-tag melta">Melta ${keywords.melta}</span>`;
+                            }
+                            if (keywords.rerolls && keywords.rerolls.length > 0) {
+                                keywords.rerolls.forEach(reroll => {
+                                    let rerollText = reroll.replace("RH", "Reroll Hits ").replace("RW", "Reroll Wounds ");
+                                    attackerHtml += `<span class="keyword-tag reroll">${rerollText}</span>`;
+                                });
+                            }
+                            
+                            // Zeige andere getriggerte Keywords an
+                            if (triggers.hazardous > 0) {
+                                attackerHtml += `<span class="keyword-tag hazardous">Hazardous (⌀${triggers.hazardous.toFixed(1)})</span>`;
+                            }
+                            if (triggers.blast > 0) {
+                                attackerHtml += `<span class="keyword-tag blast">Blast (⌀+${triggers.blast.toFixed(1)} Attacks)</span>`;
+                            }
+                            if (triggers.torrent > 0) {
+                                attackerHtml += `<span class="keyword-tag torrent">Torrent (⌀${triggers.torrent.toFixed(1)} Auto-Hits)</span>`;
+                            }
+                            
+                            attackerHtml += `
+                                    </div>
+                                </div>`;
+                        }
+                        
+                        attackerHtml += `
+                            </div>
+                        `;
+                    });
+
+                    attackerHtml += `
+                                </div>
+                            </div>
+                        </div>
+                    `;
+                }
+
+                // Zeige Verteidiger-spezifische Ergebnisse
+                if (attackerResult.Target && attackerResult.Target.length > 0) {
+                    attackerHtml += `
+                        <div class="targets-section">
+                            <button class="collapsible-btn" onclick="toggleCollapsible(this)">
+                                🎯 Ergebnisse gegen Verteidiger (${attackerResult.Target.length})
+                                <span class="toggle-icon">▼</span>
+                            </button>
+                            <div class="collapsible-content">
+                    `;
+
                     attackerResult.Target.forEach((targetResult, targetIndex) => {
                         attackerHtml += `
                             <div class="target-result">
-                                <h4>🎯 vs. ${safeString(targetResult.Name || 'Unbekannter Verteidiger')}</h4>
+                                <h4>vs. ${safeString(targetResult.Name || 'Unbekannter Verteidiger')}</h4>
                         `;
-
-                        // Waffen-Ergebnisse (kollabierbar)
-                        if (targetResult.Weapons && targetResult.Weapons.length > 0) {
-                            attackerHtml += `
-                                <div class="weapons-section">
-                                    <button class="collapsible-btn" onclick="toggleCollapsible(this)">
-                                        ⚔️ Waffen-Statistiken (${targetResult.Weapons.length}) 
-                                        <span class="toggle-icon">▼</span>
-                                    </button>
-                                    <div class="collapsible-content">
-                                        <div class="weapons-grid">
-                            `;
-
-                            targetResult.Weapons.forEach((weapon, weaponIndex) => {
-                                attackerHtml += `
-                                    <div class="weapon-card">
-                                        <h5>${safeString(weapon.Name || 'Unbekannte Waffe')}</h5>
-                                        <div class="weapon-stats">
-                                            <div class="stat-item">
-                                                <span class="stat-label">Durchschn. Treffer:</span>
-                                                <span class="stat-value">${safeNumber(weapon.Hits).toFixed(2)}</span>
-                                            </div>
-                                            <div class="stat-item">
-                                                <span class="stat-label">Durchschn. Verwundungen:</span>
-                                                <span class="stat-value">${safeNumber(weapon.Wounds).toFixed(2)}</span>
-                                            </div>
-                                            <div class="stat-item">
-                                                <span class="stat-label">Fehlgeschlagene Saves:</span>
-                                                <span class="stat-value">${safeNumber(weapon.FailedSaves).toFixed(2)}</span>
-                                            </div>
-                                            <div class="stat-item">
-                                                <span class="stat-label">Durchschn. Schaden:</span>
-                                                <span class="stat-value">${safeNumber(weapon.AverageDamage).toFixed(2)}</span>
-                                            </div>
-                                        </div>`;
-                                
-                                // Zeige wichtige Keywords an
-                                if (weapon.Keywords && Object.keys(weapon.Keywords).length > 0) {
-                                    attackerHtml += `
-                                        <div class="weapon-keywords">
-                                            <span class="stat-label">Spezial-Regeln:</span>
-                                            <div class="keyword-tags">`;
-                                    
-                                    const keywords = weapon.Keywords;
-                                    if (keywords.lethalHits) {
-                                        attackerHtml += `<span class="keyword-tag lethal">Lethal Hits</span>`;
-                                    }
-                                    if (keywords.devastatingWounds) {
-                                        attackerHtml += `<span class="keyword-tag devastating">Devastating Wounds</span>`;
-                                    }
-                                    if (keywords.sustainedHits) {
-                                        attackerHtml += `<span class="keyword-tag sustained">Sustained Hits ${keywords.sustainedHits}</span>`;
-                                    }
-                                    if (keywords.criticalHitOn && keywords.criticalHitOn !== "6") {
-                                        attackerHtml += `<span class="keyword-tag crit">Critical Hit ${keywords.criticalHitOn}+</span>`;
-                                    }
-                                    if (keywords.criticalWoundOn && keywords.criticalWoundOn !== "6") {
-                                        attackerHtml += `<span class="keyword-tag crit">Critical Wound ${keywords.criticalWoundOn}+</span>`;
-                                    }
-                                    if (keywords.anti && keywords.anti.length > 0) {
-                                        keywords.anti.forEach(anti => {
-                                            attackerHtml += `<span class="keyword-tag anti">Anti-${anti.target} ${anti.threshold}+</span>`;
-                                        });
-                                    }
-                                    if (keywords.melta) {
-                                        attackerHtml += `<span class="keyword-tag melta">Melta ${keywords.melta}</span>`;
-                                    }
-                                    if (keywords.rerolls && keywords.rerolls.length > 0) {
-                                        keywords.rerolls.forEach(reroll => {
-                                            let rerollText = reroll.replace("RH", "Reroll Hits ").replace("RW", "Reroll Wounds ");
-                                            attackerHtml += `<span class="keyword-tag reroll">${rerollText}</span>`;
-                                        });
-                                    }
-                                    
-                                    attackerHtml += `
-                                            </div>
-                                        </div>`;
-                                }
-                                
-                                attackerHtml += `
-                                    </div>
-                                `;
-                            });
-
-                            attackerHtml += `
-                                        </div>
-                                    </div>
-                                </div>
-                            `;
-                        }
 
                         // Verteidiger-Ergebnisse
                         if (targetResult.Members && targetResult.Members.length > 0) {
@@ -3068,8 +3137,11 @@
 
                         attackerHtml += `</div>`;
                     });
-                } else {
-                    attackerHtml += '<p>Keine Ziele verfügbar.</p>';
+
+                    attackerHtml += `
+                            </div>
+                        </div>
+                    `;
                 }
 
                 attackerDiv.innerHTML = attackerHtml;
