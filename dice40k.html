@@ -369,10 +369,11 @@
         }
 
         .results-panel {
-            max-height: 80vh;
+            max-height: 90vh;
             overflow-y: auto;
             scrollbar-width: thin;
             scrollbar-color: #667eea #2c3e50;
+            position: relative;
         }
 
         .results-panel::-webkit-scrollbar {
@@ -398,6 +399,8 @@
             flex-direction: column;
             gap: 20px;
             margin-top: 20px;
+            width: 100%;
+            overflow-x: hidden;
         }
 
         .result-section {
@@ -407,6 +410,8 @@
             padding: 20px;
             margin-bottom: 15px;
             width: 100%;
+            box-sizing: border-box;
+            overflow-wrap: break-word;
         }
 
         .result-section h3 {
@@ -666,10 +671,16 @@
             }
             
             .results-panel {
-                max-height: 70vh;
+                max-height: none;
+                height: auto;
+                overflow-y: visible;
             }
             
             .result-section {
+                padding: 15px;
+            }
+            
+            .container {
                 padding: 15px;
             }
         }
@@ -2762,8 +2773,8 @@
                         targetResult.Weapons.forEach(weapon => {
                             checkNewPage();
                             
-                            // Truncate weapon name if too long
-                            let weaponName = weapon.Name;
+                            // Clean and truncate weapon name if too long
+                            let weaponName = cleanWeaponName(weapon.Name);
                             if (weaponName.length > 25) {
                                 weaponName = weaponName.substring(0, 22) + '...';
                             }
@@ -2987,8 +2998,14 @@
                     displayResults();
                     document.getElementById('resultsPanel').style.display = 'block';
                     
-                    // Zu Ergebnissen scrollen
-                    document.getElementById('resultsPanel').scrollIntoView({ behavior: 'smooth' });
+                    // Zu Ergebnissen scrollen - mit verzögerung für bessere Performance
+                    setTimeout(() => {
+                        document.getElementById('resultsPanel').scrollIntoView({ 
+                            behavior: 'smooth',
+                            block: 'start',
+                            inline: 'nearest'
+                        });
+                    }, 200);
                     
                     showSuccess('Simulation erfolgreich abgeschlossen!');
                 } catch (error) {
@@ -3059,9 +3076,10 @@
 
                     weaponSummary.forEach((weaponData, weaponName) => {
                         const weapon = weaponData.weapon;
+                        const cleanedWeaponName = cleanWeaponName(weaponName);
                         attackerHtml += `
                             <div class="weapon-card">
-                                <h5>${safeString(weaponName)}</h5>
+                                <h5>${safeString(cleanedWeaponName)}</h5>
                                 <div class="weapon-stats">
                                     <div class="stat-item">
                                         <span class="stat-label">Durchschn. Treffer:</span>
@@ -3294,6 +3312,40 @@
 
         function safeNumber(value, defaultValue = 0) {
             return (value !== undefined && value !== null && !isNaN(value)) ? value : defaultValue;
+        }
+
+        // Funktion zum Bereinigen von Waffennamen - entfernt verschachtelte Klammern
+        function cleanWeaponName(weaponName) {
+            if (!weaponName) return 'N/A';
+            
+            // Finde die erste öffnende Klammer
+            const firstParenIndex = weaponName.indexOf('(');
+            if (firstParenIndex === -1) {
+                return weaponName; // Keine Klammern gefunden
+            }
+            
+            // Finde die entsprechende schließende Klammer für die erste öffnende Klammer
+            let parenCount = 0;
+            let firstCloseIndex = -1;
+            
+            for (let i = firstParenIndex; i < weaponName.length; i++) {
+                if (weaponName[i] === '(') {
+                    parenCount++;
+                } else if (weaponName[i] === ')') {
+                    parenCount--;
+                    if (parenCount === 0) {
+                        firstCloseIndex = i;
+                        break;
+                    }
+                }
+            }
+            
+            if (firstCloseIndex === -1) {
+                return weaponName; // Keine passende schließende Klammer gefunden
+            }
+            
+            // Extrahiere den Teil bis zur ersten schließenden Klammer
+            return weaponName.substring(0, firstCloseIndex + 1).trim();
         }
     </script>
 </body>
