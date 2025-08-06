@@ -855,23 +855,38 @@
             padding: 10px;
             background: rgba(255, 255, 255, 0.05);
             border-radius: 5px;
+            display: flex;
+            flex-direction: column;
         }
 
         .chart-bar-container {
             display: flex;
+            flex-direction: column;
             align-items: center;
-            margin: 5px 0;
-            height: 25px;
+            margin: 0 5px;
+            min-width: 40px;
+            flex: 1;
+        }
+
+        .chart-bars-row {
+            display: flex;
+            align-items: flex-end;
+            height: 150px;
+            margin-bottom: 10px;
+            padding: 0 10px;
         }
 
         .chart-bar {
-            height: 20px;
-            border-radius: 3px;
+            width: 100%;
+            border-radius: 3px 3px 0 0;
             position: relative;
-            min-width: 2%;
+            min-height: 5px;
             display: flex;
-            align-items: center;
+            align-items: flex-start;
+            justify-content: center;
             transition: all 0.3s ease;
+            writing-mode: vertical-rl;
+            text-orientation: mixed;
         }
 
         .chart-bar:hover {
@@ -881,17 +896,20 @@
 
         .bar-label {
             color: white;
-            font-size: 0.8rem;
+            font-size: 0.7rem;
             font-weight: bold;
-            margin-left: 5px;
+            padding: 2px;
             text-shadow: 1px 1px 2px rgba(0,0,0,0.8);
+            writing-mode: horizontal-tb;
+            text-orientation: upright;
+            transform: rotate(0deg);
         }
 
         .bar-text {
-            margin-left: 10px;
-            font-size: 0.9rem;
-            color: #e0e6ed;
-            min-width: 40px;
+            color: #ccc;
+            font-size: 0.8rem;
+            margin-top: 5px;
+            text-align: center;
         }
     </style>
     <style>
@@ -2652,13 +2670,14 @@
                                         <div class="kill-distribution">
                                             <h6>${distributionTitle}</h6>
                                             <div class="distribution-chart">
+                                                <div class="chart-bars-row">
                                     `;
 
                                     member.KillDistribution.forEach(dist => {
-                                        const barWidth = Math.max(2, dist.percentage); // Mindestens 2% Breite
+                                        const barHeight = Math.max(5, (dist.percentage / 100) * 120); // 120px max height
                                         attackerHtml += `
                                             <div class="chart-bar-container">
-                                                <div class="chart-bar" style="width: ${barWidth}%; background-color: #4CAF50;">
+                                                <div class="chart-bar" style="height: ${barHeight}px; background-color: #4CAF50;">
                                                     <span class="bar-label">${dist.percentage.toFixed(1)}%</span>
                                                 </div>
                                                 <span class="bar-text">≥${dist.value}</span>
@@ -2667,6 +2686,7 @@
                                     });
 
                                     attackerHtml += `
+                                                </div>
                                             </div>
                                             <div class="distribution-list">
                                     `;
