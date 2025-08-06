@@ -2066,9 +2066,20 @@
             document.getElementById('weaponDamage').value = weapon.damage;
             document.getElementById('weaponAmount').value = weapon.amount;
             
-            // Lade Keywords - entferne Duplikate
-            const uniqueKeywords = [...new Set(weapon.Keywords || [])];
-            window.currentWeaponKeywords = uniqueKeywords;
+            // Lade Keywords - entferne Duplikate und bereinige
+            let cleanKeywords = weapon.Keywords || [];
+            if (Array.isArray(cleanKeywords)) {
+                cleanKeywords = cleanKeywords.filter(k => 
+                    k && 
+                    k.trim() !== '' && 
+                    !k.startsWith('WoundBonus') &&
+                    !k.includes('undefined')
+                );
+                cleanKeywords = [...new Set(cleanKeywords)]; // Entferne Duplikate
+            } else {
+                cleanKeywords = [];
+            }
+            window.currentWeaponKeywords = cleanKeywords;
             updateWeaponKeywordsDisplay();
             
             // Speichere die Indizes für das Update
@@ -2111,6 +2122,36 @@
         // Debug: Überprüfe ob editWeapon verfügbar ist
         console.log('editWeapon function available:', typeof window.editWeapon);
 
+        // Notfall-Funktion: Bereinige alle Keywords aller Waffen
+        window.cleanupAllWeaponKeywords = function() {
+            let totalCleaned = 0;
+            
+            window.attackers.forEach((group, groupIndex) => {
+                group.Members.forEach((member, memberIndex) => {
+                    member.Weapons.forEach((weapon, weaponIndex) => {
+                        if (weapon.Keywords) {
+                            const originalLength = weapon.Keywords.length;
+                            
+                            // Entferne alle WoundBonus Keywords
+                            weapon.Keywords = weapon.Keywords.filter(k => !k.startsWith('WoundBonus'));
+                            
+                            // Entferne Duplikate
+                            weapon.Keywords = [...new Set(weapon.Keywords)];
+                            
+                            // Entferne leere oder undefined Keywords
+                            weapon.Keywords = weapon.Keywords.filter(k => k && k.trim() !== '');
+                            
+                            totalCleaned += (originalLength - weapon.Keywords.length);
+                        }
+                    });
+                });
+            });
+            
+            updateAttackersList();
+            showSuccess(`Keyword-Bereinigung abgeschlossen! ${totalCleaned} doppelte/fehlerhafte Keywords entfernt.`);
+        };
+
+        // Verbesserte updateWeapon Funktion mit zusätzlicher Keyword-Bereinigung
         function updateWeapon() {
             const groupIndex = window.editingWeaponGroupIndex;
             const memberIndex = window.editingWeaponMemberIndex;
@@ -2133,6 +2174,17 @@
             weapon.damage = document.getElementById('weaponDamage').value;
             weapon.amount = parseInt(document.getElementById('weaponAmount').value) || 1;
             weapon.Keywords = [...new Set(window.currentWeaponKeywords)]; // Entferne Duplikate
+            
+            // Zusätzliche Bereinigung: Entferne WoundBonus Keywords und andere Fehler
+            weapon.Keywords = weapon.Keywords.filter(k => 
+                k && 
+                k.trim() !== '' && 
+                !k.startsWith('WoundBonus') &&
+                !k.includes('undefined')
+            );
+            
+            // Nochmals Duplikate entfernen zur Sicherheit
+            weapon.Keywords = [...new Set(weapon.Keywords)];
             
             // Reset die Editing-Indizes
             delete window.editingWeaponGroupIndex;
@@ -2319,88 +2371,274 @@
             
             let yPos = 20;
             const pageHeight = doc.internal.pageSize.height;
+            const pageWidth = doc.internal.pageSize.width;
             const margin = 20;
+            const contentWidth = pageWidth - (2 * margin);
             
-            // Titel
-            doc.setFontSize(16);
-            doc.text('Warhammer 40k Simulationsergebnisse', margin, yPos);
-            yPos += 15;
-            
-            // Datum
-            doc.setFontSize(10);
-            doc.text(`Erstellt am: ${new Date().toLocaleString('de-DE')}`, margin, yPos);
-            yPos += 15;
-
-            // Durchlaufe alle Ergebnisse
-            window.simulationResults.forEach((attackerResult, attackerIndex) => {
-                // Neue Seite wenn nötig
-                if (yPos > pageHeight - 60) {
+            // Helper function to check if new page is needed
+            function checkNewPage(requiredSpace = 25) {
+                if (yPos > pageHeight - requiredSpace) {
                     doc.addPage();
                     yPos = margin;
+                    return true;
+                }
+                return false;
+            }
+            
+            // Helper function to draw section divider
+            function drawDivider() {
+                doc.setDrawColor(100, 100, 100);
+                doc.line(margin, yPos, pageWidth - margin, yPos);
+                yPos += 8;
+            }
+            
+            // Helper function to create chart canvas
+            function createDistributionChart(distributionData, title, maxValue) {
+                const canvas = document.createElement('canvas');
+                canvas.width = 400;
+                canvas.height = 200;
+                const ctx = canvas.getContext('2d');
+                
+                // Clear canvas
+                ctx.fillStyle = 'white';
+                ctx.fillRect(0, 0, canvas.width, canvas.height);
+                
+                // Chart settings
+                const chartArea = {
+                    x: 50,
+                    y: 30,
+                    width: 300,
+                    height: 120
+                };
+                
+                // Draw title
+                ctx.fillStyle = 'black';
+                ctx.font = 'bold 14px Arial';
+                ctx.textAlign = 'center';
+                ctx.fillText(title, canvas.width / 2, 20);
+                
+                // Draw axes
+                ctx.strokeStyle = 'black';
+                ctx.lineWidth = 1;
+                ctx.beginPath();
+                ctx.moveTo(chartArea.x, chartArea.y + chartArea.height);
+                ctx.lineTo(chartArea.x + chartArea.width, chartArea.y + chartArea.height);
+                ctx.moveTo(chartArea.x, chartArea.y);
+                ctx.lineTo(chartArea.x, chartArea.y + chartArea.height);
+                ctx.stroke();
+                
+                if (distributionData && distributionData.length > 0) {
+                    const barWidth = chartArea.width / distributionData.length;
+                    const maxPercentage = Math.max(...distributionData.map(d => d.percentage));
+                    
+                    distributionData.forEach((data, index) => {
+                        const barHeight = (data.percentage / maxPercentage) * chartArea.height;
+                        const x = chartArea.x + (index * barWidth);
+                        const y = chartArea.y + chartArea.height - barHeight;
+                        
+                        // Draw bar
+                        ctx.fillStyle = '#4CAF50';
+                        ctx.fillRect(x + 2, y, barWidth - 4, barHeight);
+                        
+                        // Draw value label
+                        ctx.fillStyle = 'black';
+                        ctx.font = '10px Arial';
+                        ctx.textAlign = 'center';
+                        ctx.fillText(`≥${data.value}`, x + barWidth/2, chartArea.y + chartArea.height + 15);
+                        
+                        // Draw percentage
+                        ctx.font = '8px Arial';
+                        ctx.fillText(`${data.percentage.toFixed(1)}%`, x + barWidth/2, y - 5);
+                    });
                 }
                 
-                // Angreifer-Gruppe
-                doc.setFontSize(14);
-                doc.text(`Angreifer: ${attackerResult.Name}`, margin, yPos);
-                yPos += 10;
+                // Y-axis labels
+                ctx.fillStyle = 'black';
+                ctx.font = '10px Arial';
+                ctx.textAlign = 'right';
+                ctx.fillText('100%', chartArea.x - 5, chartArea.y + 5);
+                ctx.fillText('0%', chartArea.x - 5, chartArea.y + chartArea.height + 5);
+                
+                return canvas;
+            }
+            
+            // Title Page
+            doc.setFontSize(20);
+            doc.setFont(undefined, 'bold');
+            doc.text('Warhammer 40k', pageWidth / 2, 40, { align: 'center' });
+            doc.text('Kampfsimulation - Bericht', pageWidth / 2, 55, { align: 'center' });
+            
+            doc.setFontSize(12);
+            doc.setFont(undefined, 'normal');
+            doc.text(`Erstellt am: ${new Date().toLocaleString('de-DE')}`, pageWidth / 2, 70, { align: 'center' });
+            
+            // Summary Box
+            yPos = 90;
+            doc.setDrawColor(0, 0, 0);
+            doc.rect(margin, yPos, contentWidth, 40);
+            
+            yPos += 15;
+            doc.setFontSize(14);
+            doc.setFont(undefined, 'bold');
+            doc.text('Simulation Übersicht', margin + 10, yPos);
+            
+            yPos += 10;
+            doc.setFontSize(10);
+            doc.setFont(undefined, 'normal');
+            doc.text(`Anzahl Angreifer-Gruppen: ${window.simulationResults.length}`, margin + 10, yPos);
+            
+            const totalDefenders = window.simulationResults.reduce((sum, result) => sum + result.Target.length, 0);
+            yPos += 6;
+            doc.text(`Anzahl Verteidiger-Gruppen: ${totalDefenders}`, margin + 10, yPos);
+            
+            // Start detailed results on new page
+            doc.addPage();
+            yPos = margin;
+            
+            // Detailed Results
+            window.simulationResults.forEach((attackerResult, attackerIndex) => {
+                checkNewPage(40);
+                
+                // Angreifer-Gruppe Header
+                doc.setFontSize(16);
+                doc.setFont(undefined, 'bold');
+                doc.setTextColor(0, 0, 150);
+                doc.text(`${attackerResult.Name}`, margin, yPos);
+                yPos += 12;
+                
+                drawDivider();
                 
                 attackerResult.Target.forEach((targetResult, targetIndex) => {
-                    // Verteidiger-Gruppe
-                    doc.setFontSize(12);
-                    doc.text(`vs. ${targetResult.Name}`, margin + 10, yPos);
-                    yPos += 8;
+                    checkNewPage(50);
                     
-                    // Waffen-Ergebnisse
+                    // Verteidiger-Gruppe
+                    doc.setFontSize(14);
+                    doc.setFont(undefined, 'bold');
+                    doc.setTextColor(150, 0, 0);
+                    doc.text(`Ziel: ${targetResult.Name}`, margin + 10, yPos);
+                    yPos += 10;
+                    
+                    // Waffen-Ergebnisse Sektion
                     if (targetResult.Weapons && targetResult.Weapons.length > 0) {
-                        doc.setFontSize(10);
-                        doc.text('Waffen-Statistiken:', margin + 20, yPos);
+                        doc.setFontSize(12);
+                        doc.setFont(undefined, 'bold');
+                        doc.setTextColor(0, 0, 0);
+                        doc.text('Waffen-Statistiken', margin + 20, yPos);
+                        yPos += 8;
+                        
+                        // Waffen-Tabelle Header
+                        doc.setFontSize(9);
+                        doc.setFont(undefined, 'bold');
+                        const tableX = margin + 25;
+                        doc.text('Waffe', tableX, yPos);
+                        doc.text('Treffer', tableX + 80, yPos);
+                        doc.text('Wunden', tableX + 110, yPos);
+                        doc.text('Saves', tableX + 140, yPos);
+                        doc.text('Schaden', tableX + 170, yPos);
                         yPos += 6;
                         
+                        // Draw table line
+                        doc.setDrawColor(200, 200, 200);
+                        doc.line(tableX, yPos - 2, tableX + 200, yPos - 2);
+                        yPos += 2;
+                        
+                        doc.setFont(undefined, 'normal');
                         targetResult.Weapons.forEach(weapon => {
-                            if (yPos > pageHeight - 30) {
-                                doc.addPage();
-                                yPos = margin;
+                            checkNewPage();
+                            
+                            // Truncate weapon name if too long
+                            let weaponName = weapon.Name;
+                            if (weaponName.length > 25) {
+                                weaponName = weaponName.substring(0, 22) + '...';
                             }
                             
-                            doc.text(`${weapon.Name}:`, margin + 25, yPos);
-                            yPos += 5;
-                            doc.text(`  Treffer: ${weapon.Hits.toFixed(2)}, Wunden: ${weapon.Wounds.toFixed(2)}`, margin + 30, yPos);
-                            yPos += 4;
-                            doc.text(`  Saves: ${weapon.FailedSaves.toFixed(2)}, Schaden: ${weapon.AverageDamage.toFixed(2)}`, margin + 30, yPos);
-                            yPos += 8;
+                            doc.text(weaponName, tableX, yPos);
+                            doc.text(weapon.Hits.toFixed(1), tableX + 80, yPos);
+                            doc.text(weapon.Wounds.toFixed(1), tableX + 110, yPos);
+                            doc.text(weapon.FailedSaves.toFixed(1), tableX + 140, yPos);
+                            doc.text(weapon.AverageDamage.toFixed(1), tableX + 170, yPos);
+                            yPos += 6;
                         });
+                        
+                        yPos += 5;
                     }
                     
-                    // Member-Ergebnisse
+                    // Member-Ergebnisse Sektion
                     if (targetResult.Members && targetResult.Members.length > 0) {
-                        doc.text('Ergebnisse pro Verteidiger:', margin + 20, yPos);
-                        yPos += 6;
+                        checkNewPage(30);
+                        
+                        doc.setFontSize(12);
+                        doc.setFont(undefined, 'bold');
+                        doc.text('Verteidiger-Ergebnisse', margin + 20, yPos);
+                        yPos += 10;
                         
                         targetResult.Members.forEach(member => {
-                            if (yPos > pageHeight - 25) {
-                                doc.addPage();
-                                yPos = margin;
-                            }
+                            checkNewPage(35);
                             
                             const leaderText = member.IsLeader ? ' (Leader)' : '';
-                            doc.text(`${member.Name}${leaderText}:`, margin + 25, yPos);
-                            yPos += 5;
-                            doc.text(`  Modelle vernichtet: ${member.ModelsDestroyed.toFixed(2)}/${member.MaximumModels}`, margin + 30, yPos);
-                            yPos += 4;
-                            doc.text(`  Komplette Vernichtung: ${member.CompleteWipeoutChance.toFixed(1)}%`, margin + 30, yPos);
+                            doc.setFontSize(11);
+                            doc.setFont(undefined, 'bold');
+                            doc.text(`${member.Name}${leaderText}`, margin + 25, yPos);
                             yPos += 8;
+                            
+                            doc.setFontSize(9);
+                            doc.setFont(undefined, 'normal');
+                            
+                            // Stats in zwei Spalten
+                            const leftCol = margin + 30;
+                            const rightCol = margin + 120;
+                            
+                            doc.text(`Modelle vernichtet: ${member.ModelsDestroyed.toFixed(2)}/${member.MaximumModels}`, leftCol, yPos);
+                            doc.text(`Gesamtschaden: ${member.TotalDamage.toFixed(2)}`, rightCol, yPos);
+                            yPos += 6;
+                            
+                            doc.text(`Komplette Vernichtung: ${member.CompleteWipeoutChance.toFixed(1)}%`, leftCol, yPos);
+                            yPos += 10;
+                            
+                            // Distribution Chart
+                            if (member.KillDistribution && member.KillDistribution.length > 0) {
+                                checkNewPage(60);
+                                
+                                const isSingleModel = member.MaximumModels === 1;
+                                const chartTitle = isSingleModel ? 
+                                    `Wahrscheinlichkeitsverteilung - Wunden (${member.Name})` : 
+                                    `Wahrscheinlichkeitsverteilung - Kills (${member.Name})`;
+                                
+                                const canvas = createDistributionChart(member.KillDistribution, chartTitle, 
+                                    isSingleModel ? member.MaxWounds : member.MaximumModels);
+                                
+                                // Convert canvas to image and add to PDF
+                                const imgData = canvas.toDataURL('image/png');
+                                const imgWidth = 120;
+                                const imgHeight = 60;
+                                
+                                doc.addImage(imgData, 'PNG', margin + 25, yPos, imgWidth, imgHeight);
+                                yPos += imgHeight + 10;
+                            }
                         });
                     }
                     
-                    yPos += 5;
+                    yPos += 10;
+                    drawDivider();
                 });
                 
                 yPos += 10;
             });
             
+            // Footer on each page
+            const totalPages = doc.internal.getNumberOfPages();
+            for (let i = 1; i <= totalPages; i++) {
+                doc.setPage(i);
+                doc.setFontSize(8);
+                doc.setFont(undefined, 'normal');
+                doc.setTextColor(100, 100, 100);
+                doc.text(`Seite ${i} von ${totalPages}`, pageWidth - margin, pageHeight - 10, { align: 'right' });
+                doc.text('Warhammer 40k Simulationsbericht', margin, pageHeight - 10);
+            }
+            
             // PDF speichern
             doc.save(`warhammer40k_simulation_${new Date().toISOString().split('T')[0]}.pdf`);
-            showSuccess('PDF-Report wurde heruntergeladen!');
+            showSuccess('Strukturierter PDF-Report mit Diagrammen wurde heruntergeladen!');
         };
 
         // Export Simulation Results to JSON
