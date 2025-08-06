@@ -4,15 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Warhammer 40k 10th Edition Kampfsimulator</title>
+    <meta name="description" content="Professioneller Kampfsimulator für Warhammer 40k 10th Edition mit allen Regeln und statistischen Analysen">
+    
     <!-- Google Fonts für bessere Typografie -->
     <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@300;400;500;600;700&family=Orbitron:wght@400;500;700&display=swap" rel="stylesheet">
     <!-- Material Icons -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!-- jsPDF für PDF-Export -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    
     <style>
         :root {
-            /* Farbschema - Warhammer 40k inspiriert */
+            /* Design-System: Farbschema - Warhammer 40k inspiriert */
             --primary-bg: #0a0a0f;
             --secondary-bg: #1a1a28;
             --accent-bg: #2a2a3e;
@@ -31,6 +34,10 @@
             --secondary-blue: #3b82f6;
             --accent-blue: #60a5fa;
             
+            --success-green: #10b981;
+            --warning-orange: #f59e0b;
+            --error-red: #ef4444;
+            
             --text-primary: #ffffff;
             --text-secondary: #e5e7eb;
             --text-muted: #9ca3af;
@@ -38,11 +45,13 @@
             
             --border-color: rgba(212, 175, 55, 0.3);
             --border-accent: rgba(212, 175, 55, 0.6);
+            --border-focus: rgba(212, 175, 55, 0.8);
             
             --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.1);
             --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.15);
             --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.25);
             --shadow-xl: 0 16px 48px rgba(0, 0, 0, 0.4);
+            --shadow-focus: 0 0 0 3px rgba(212, 175, 55, 0.2);
             
             --radius-sm: 6px;
             --radius-md: 12px;
@@ -51,12 +60,36 @@
             
             --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
             --transition-fast: all 0.15s ease-out;
+            
+            /* Spacing-System */
+            --space-xs: 4px;
+            --space-sm: 8px;
+            --space-md: 16px;
+            --space-lg: 24px;
+            --space-xl: 32px;
+            --space-2xl: 48px;
+            
+            /* Typography-System */
+            --font-size-xs: 0.75rem;
+            --font-size-sm: 0.875rem;
+            --font-size-base: 1rem;
+            --font-size-lg: 1.125rem;
+            --font-size-xl: 1.25rem;
+            --font-size-2xl: 1.5rem;
+            --font-size-3xl: 1.875rem;
+            --font-size-4xl: 2.25rem;
         }
 
+        /* Reset und Base Styles */
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+        }
+
+        *:focus {
+            outline: 2px solid var(--border-focus);
+            outline-offset: 2px;
         }
 
         body {
@@ -67,6 +100,59 @@
             min-height: 100vh;
             line-height: 1.6;
             overflow-x: hidden;
+        }
+
+        /* Accessibility & Focus Management */
+        .skip-link {
+            position: absolute;
+            top: -40px;
+            left: 6px;
+            background: var(--primary-gold);
+            color: var(--primary-bg);
+            padding: var(--space-sm) var(--space-md);
+            text-decoration: none;
+            font-weight: 600;
+            border-radius: var(--radius-md);
+            z-index: 10000;
+            transition: var(--transition-fast);
+        }
+
+        .skip-link:focus {
+            top: 6px;
+        }
+
+        /* Screen Reader Only */
+        .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border: 0;
+        }
+
+        /* Reduced Motion Support */
+        @media (prefers-reduced-motion: reduce) {
+            *,
+            *::before,
+            *::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+                scroll-behavior: auto !important;
+            }
+        }
+
+        /* High Contrast Mode Support */
+        @media (prefers-contrast: high) {
+            :root {
+                --border-color: rgba(255, 255, 255, 0.8);
+                --border-accent: rgba(255, 255, 255, 1);
+                --text-muted: rgba(255, 255, 255, 0.9);
+            }
         }
 
         /* Scrollbar Styling */
@@ -89,12 +175,78 @@
             background: linear-gradient(45deg, var(--secondary-gold), var(--accent-gold));
         }
 
+        /* Layout Container */
         .container {
             max-width: 1400px;
             width: 100%;
             margin: 0 auto;
-            padding: 20px;
+            padding: var(--space-lg);
             box-sizing: border-box;
+        }
+
+        /* Header mit besserer Semantik */
+        .site-header {
+            text-align: center;
+            margin-bottom: var(--space-2xl);
+            padding: var(--space-2xl) var(--space-xl);
+            background: var(--panel-bg);
+            border-radius: var(--radius-xl);
+            backdrop-filter: blur(20px);
+            border: 2px solid var(--border-color);
+            box-shadow: var(--shadow-xl);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .site-header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, var(--primary-gold), var(--secondary-gold), var(--primary-gold));
+            animation: shimmer 3s infinite;
+        }
+
+        @keyframes shimmer {
+            0%, 100% { opacity: 0.8; }
+            50% { opacity: 1; }
+        }
+
+        .site-title {
+            font-family: 'Orbitron', monospace;
+            color: var(--text-accent);
+            font-size: clamp(2rem, 5vw, 3.5rem);
+            font-weight: 700;
+            margin-bottom: var(--space-md);
+            text-shadow: 
+                0 0 20px rgba(212, 175, 55, 0.5),
+                0 0 40px rgba(212, 175, 55, 0.3),
+                2px 2px 8px rgba(0, 0, 0, 0.8);
+            letter-spacing: 2px;
+            line-height: 1.2;
+        }
+
+        .site-description {
+            font-size: var(--font-size-lg);
+            color: var(--text-secondary);
+            opacity: 0.9;
+            font-weight: 300;
+            max-width: 600px;
+            margin: 0 auto var(--space-md);
+            line-height: 1.5;
+        }
+
+        .version-badge {
+            display: inline-block;
+            background: linear-gradient(45deg, var(--primary-gold), var(--secondary-gold));
+            color: var(--primary-bg);
+            padding: var(--space-sm) var(--space-md);
+            border-radius: var(--radius-lg);
+            font-size: var(--font-size-sm);
+            font-weight: 600;
+            box-shadow: var(--shadow-md);
         }
 
         .header {
@@ -438,17 +590,18 @@
             min-width: 140px;
         }
 
-        /* Card Styles */
+        /* Modern Card Design System */
         .card {
-            background: var(--card-bg);
-            border: 1px solid var(--border-color);
-            border-radius: var(--radius-lg);
-            padding: 24px;
-            margin-bottom: 20px;
-            transition: var(--transition);
-            box-shadow: var(--shadow-sm);
+            background: var(--panel-bg);
+            border-radius: var(--radius-xl);
+            backdrop-filter: blur(20px);
+            border: 2px solid var(--border-color);
+            box-shadow: var(--shadow-lg);
+            transition: var(--transition-medium);
             position: relative;
             overflow: hidden;
+            padding: var(--space-xl);
+            margin-bottom: var(--space-lg);
         }
 
         .card::before {
@@ -457,15 +610,15 @@
             top: 0;
             left: 0;
             right: 0;
-            height: 3px;
+            height: 4px;
             background: linear-gradient(90deg, var(--primary-gold), var(--secondary-gold));
             opacity: 0;
-            transition: var(--transition);
+            transition: var(--transition-medium);
         }
 
         .card:hover {
-            transform: translateY(-3px);
-            box-shadow: var(--shadow-lg);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-xl);
             border-color: var(--border-accent);
         }
 
@@ -473,16 +626,233 @@
             opacity: 1;
         }
 
-        /* Weapon and Defender Cards */
+        .card:focus-within {
+            outline: 3px solid var(--focus-color);
+            outline-offset: 2px;
+            border-color: var(--focus-color);
+        }
+
+        .card-header {
+            padding: var(--space-lg) var(--space-xl);
+            border-bottom: 1px solid var(--border-color);
+            background: linear-gradient(135deg, 
+                rgba(212, 175, 55, 0.1) 0%, 
+                rgba(184, 134, 11, 0.05) 100%);
+            margin: calc(-1 * var(--space-xl)) calc(-1 * var(--space-xl)) var(--space-lg) calc(-1 * var(--space-xl));
+        }
+
+        .card-title {
+            font-family: 'Orbitron', monospace;
+            color: var(--text-accent);
+            font-size: var(--font-size-xl);
+            font-weight: 600;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            gap: var(--space-md);
+        }
+
+        .card-body {
+            padding: 0;
+        }
+
+        .card-footer {
+            padding: var(--space-lg) var(--space-xl);
+            border-top: 1px solid var(--border-color);
+            background: rgba(0, 0, 0, 0.2);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: var(--space-md);
+            margin: var(--space-lg) calc(-1 * var(--space-xl)) calc(-1 * var(--space-xl)) calc(-1 * var(--space-xl));
+        }
+
+        /* Enhanced Form Design */
+        .form-group {
+            margin-bottom: var(--space-lg);
+        }
+
+        .form-label {
+            display: block;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: var(--space-sm);
+            font-size: var(--font-size-base);
+        }
+
+        .form-label.required::after {
+            content: ' *';
+            color: var(--error-color);
+            font-weight: bold;
+        }
+
+        .form-input {
+            width: 100%;
+            padding: var(--space-md);
+            background: var(--input-bg);
+            border: 2px solid var(--border-color);
+            border-radius: var(--radius-md);
+            color: var(--text-primary);
+            font-size: var(--font-size-base);
+            font-family: inherit;
+            transition: var(--transition-fast);
+            box-sizing: border-box;
+        }
+
+        .form-input:focus {
+            outline: none;
+            border-color: var(--focus-color);
+            box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.2);
+            background: var(--secondary-bg);
+        }
+
+        .form-input:hover:not(:focus) {
+            border-color: var(--border-accent);
+        }
+
+        .form-input:invalid {
+            border-color: var(--error-color);
+        }
+
+        .form-input:invalid:focus {
+            box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.2);
+        }
+
+        .form-select {
+            width: 100%;
+            padding: var(--space-md);
+            background: var(--input-bg);
+            border: 2px solid var(--border-color);
+            border-radius: var(--radius-md);
+            color: var(--text-primary);
+            font-size: var(--font-size-base);
+            font-family: inherit;
+            transition: var(--transition-fast);
+            cursor: pointer;
+            appearance: none;
+            background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23D4AF37' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6,9 12,15 18,9'%3e%3c/polyline%3e%3c/svg%3e");
+            background-repeat: no-repeat;
+            background-position: right var(--space-md) center;
+            background-size: 20px;
+            padding-right: 48px;
+        }
+
+        .form-select:focus {
+            outline: none;
+            border-color: var(--focus-color);
+            box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.2);
+            background-color: var(--secondary-bg);
+        }
+
+        /* Enhanced Button System */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: var(--space-sm);
+            padding: var(--space-md) var(--space-lg);
+            border: 2px solid transparent;
+            border-radius: var(--radius-md);
+            font-family: inherit;
+            font-size: var(--font-size-base);
+            font-weight: 600;
+            text-decoration: none;
+            cursor: pointer;
+            transition: var(--transition-fast);
+            position: relative;
+            overflow: hidden;
+            white-space: nowrap;
+            user-select: none;
+            min-height: 44px; /* Accessibility - minimum touch target */
+        }
+
+        .btn:focus {
+            outline: 3px solid var(--focus-color);
+            outline-offset: 2px;
+        }
+
+        .btn:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+            pointer-events: none;
+        }
+
+        .btn-primary {
+            background: linear-gradient(45deg, var(--primary-gold), var(--secondary-gold));
+            color: var(--primary-bg);
+            border-color: var(--primary-gold);
+            box-shadow: var(--shadow-md);
+        }
+
+        .btn-primary:hover:not(:disabled) {
+            background: linear-gradient(45deg, var(--secondary-gold), var(--accent-gold));
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .btn-primary:active {
+            transform: translateY(0);
+            box-shadow: var(--shadow-sm);
+        }
+
+        .btn-secondary {
+            background: var(--secondary-bg);
+            color: var(--text-primary);
+            border-color: var(--border-color);
+            box-shadow: var(--shadow-sm);
+        }
+
+        .btn-secondary:hover:not(:disabled) {
+            background: var(--panel-bg);
+            border-color: var(--border-accent);
+            transform: translateY(-1px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .btn-danger {
+            background: linear-gradient(45deg, var(--error-color), #dc2626);
+            color: white;
+            border-color: var(--error-color);
+            box-shadow: var(--shadow-md);
+        }
+
+        .btn-danger:hover:not(:disabled) {
+            background: linear-gradient(45deg, #dc2626, #b91c1c);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .btn-icon {
+            padding: var(--space-sm);
+            min-width: 44px;
+            border-radius: var(--radius-full);
+        }
+
+        .btn-large {
+            padding: var(--space-lg) var(--space-2xl);
+            font-size: var(--font-size-lg);
+            min-height: 52px;
+        }
+
+        .btn-small {
+            padding: var(--space-sm) var(--space-md);
+            font-size: var(--font-size-sm);
+            min-height: 36px;
+        }
+
+        /* Improved Weapon and Defender Cards */
+        /* Improved Weapon and Defender Cards */
         .weapon-card,
         .defender-card {
-            background: var(--card-bg);
-            border: 1px solid var(--border-color);
-            border-radius: var(--radius-md);
-            padding: 20px;
-            margin-bottom: 15px;
-            transition: var(--transition);
+            background: var(--panel-bg);
+            border: 2px solid var(--border-color);
+            border-radius: var(--radius-lg);
+            padding: var(--space-lg);
+            margin-bottom: var(--space-md);
+            transition: var(--transition-medium);
             position: relative;
+            box-shadow: var(--shadow-sm);
         }
 
         .weapon-card:hover,
@@ -492,10 +862,795 @@
             border-color: var(--border-accent);
         }
 
+        .weapon-card:focus-within,
+        .defender-card:focus-within {
+            outline: 2px solid var(--focus-color);
+            outline-offset: 2px;
+        }
+
         .weapon-card h3,
         .weapon-card h4,
         .weapon-card h5,
         .defender-card h3,
+        .defender-card h4,
+        .defender-card h5 {
+            color: var(--text-accent);
+            font-family: 'Orbitron', monospace;
+            margin-top: 0;
+            margin-bottom: var(--space-md);
+            font-weight: 600;
+        }
+
+        .weapon-card h3,
+        .defender-card h3 {
+            font-size: var(--font-size-lg);
+            border-bottom: 2px solid var(--border-color);
+            padding-bottom: var(--space-sm);
+        }
+
+        /* Grid Layout System */
+        .grid {
+            display: grid;
+            gap: var(--space-lg);
+        }
+
+        .grid-2 {
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        }
+
+        .grid-3 {
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        }
+
+        .grid-4 {
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        }
+
+        /* Main Layout */
+        .main-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: var(--space-xl);
+            margin-bottom: var(--space-2xl);
+        }
+
+        @media (max-width: 768px) {
+            .main-grid {
+                grid-template-columns: 1fr;
+                gap: var(--space-lg);
+            }
+        }
+
+        /* Input Styling */
+        input[type="number"],
+        input[type="text"],
+        select {
+            width: 100%;
+            padding: var(--space-md);
+            background: var(--input-bg);
+            border: 2px solid var(--border-color);
+            border-radius: var(--radius-md);
+            color: var(--text-primary);
+            font-size: var(--font-size-base);
+            font-family: inherit;
+            transition: var(--transition-fast);
+            box-sizing: border-box;
+        }
+
+        input[type="number"]:focus,
+        input[type="text"]:focus,
+        select:focus {
+            outline: none;
+            border-color: var(--focus-color);
+            box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.2);
+            background: var(--secondary-bg);
+        }
+
+        input[type="number"]:hover:not(:focus),
+        input[type="text"]:hover:not(:focus),
+        select:hover:not(:focus) {
+            border-color: var(--border-accent);
+        }
+
+        /* Enhanced Labels */
+        label {
+            display: block;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: var(--space-sm);
+            font-size: var(--font-size-base);
+        }
+
+        /* Keyword Tags Enhancement */
+        .keyword-tag {
+            display: inline-flex;
+            align-items: center;
+            gap: var(--space-xs);
+            padding: var(--space-xs) var(--space-sm);
+            background: rgba(212, 175, 55, 0.2);
+            color: var(--text-accent);
+            border-radius: var(--radius-md);
+            border: 1px solid rgba(212, 175, 55, 0.3);
+            font-size: var(--font-size-sm);
+            font-weight: 500;
+            margin: var(--space-xs);
+            transition: var(--transition-fast);
+            white-space: nowrap;
+        }
+
+        .keyword-tag:hover {
+            background: rgba(212, 175, 55, 0.3);
+            border-color: var(--border-accent);
+            transform: translateY(-1px);
+        }
+
+        .keyword-tag[data-type="damage"] {
+            background: rgba(239, 68, 68, 0.2);
+            color: #fca5a5;
+            border-color: rgba(239, 68, 68, 0.3);
+        }
+
+        .keyword-tag[data-type="special"] {
+            background: rgba(168, 85, 247, 0.2);
+            color: #c4b5fd;
+            border-color: rgba(168, 85, 247, 0.3);
+        }
+
+        .keyword-tag[data-type="accuracy"] {
+            background: rgba(34, 197, 94, 0.2);
+            color: #86efac;
+            border-color: rgba(34, 197, 94, 0.3);
+        }
+
+        /* Form Enhancement */
+        .form-help {
+            font-size: var(--font-size-sm);
+            color: var(--text-muted);
+            margin-top: var(--space-xs);
+            line-height: 1.4;
+        }
+
+        .checkbox-group {
+            display: flex;
+            align-items: center;
+            gap: var(--space-sm);
+        }
+
+        .form-checkbox {
+            width: auto !important;
+            margin: 0;
+        }
+
+        .checkbox-label {
+            margin: 0;
+            cursor: pointer;
+            user-select: none;
+        }
+
+        /* Selected Items Display */
+        .selected-items {
+            margin-top: var(--space-lg);
+            padding: var(--space-md);
+            background: var(--secondary-bg);
+            border-radius: var(--radius-md);
+            border: 1px solid var(--border-color);
+            min-height: 60px;
+            position: relative;
+        }
+
+        .selected-items:empty::before {
+            content: 'Keine Auswahl getroffen';
+            color: var(--text-muted);
+            font-style: italic;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        /* Loading States */
+        .loading-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.8);
+            backdrop-filter: blur(10px);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 10000;
+        }
+
+        .loading-content {
+            background: var(--panel-bg);
+            padding: var(--space-2xl);
+            border-radius: var(--radius-xl);
+            border: 2px solid var(--border-color);
+            text-align: center;
+            box-shadow: var(--shadow-xl);
+            max-width: 400px;
+            width: 90%;
+        }
+
+        .loading-spinner {
+            width: 60px;
+            height: 60px;
+            border: 4px solid var(--border-color);
+            border-top: 4px solid var(--primary-gold);
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+            margin: 0 auto var(--space-lg);
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        /* Toast Notifications */
+        .toast {
+            position: fixed;
+            top: var(--space-lg);
+            right: var(--space-lg);
+            background: var(--panel-bg);
+            border: 2px solid var(--border-color);
+            border-radius: var(--radius-lg);
+            padding: var(--space-lg);
+            box-shadow: var(--shadow-xl);
+            z-index: 10001;
+            max-width: 400px;
+            animation: slideInRight 0.3s ease-out;
+        }
+
+        .toast-error {
+            border-color: var(--error-color);
+            background: linear-gradient(135deg, 
+                rgba(239, 68, 68, 0.1) 0%, 
+                rgba(239, 68, 68, 0.05) 100%);
+        }
+
+        .toast-content {
+            display: flex;
+            align-items: center;
+            gap: var(--space-md);
+        }
+
+        .toast-close {
+            background: none;
+            border: none;
+            color: var(--text-muted);
+            cursor: pointer;
+            padding: var(--space-xs);
+            margin-left: auto;
+            border-radius: var(--radius-sm);
+            transition: var(--transition-fast);
+        }
+
+        .toast-close:hover {
+            background: var(--secondary-bg);
+            color: var(--text-primary);
+        }
+
+        @keyframes slideInRight {
+            from {
+                transform: translateX(100%);
+                opacity: 0;
+            }
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+
+        /* Help Section */
+        .help-section {
+            margin-top: var(--space-2xl);
+        }
+
+        .help-section details {
+            margin-bottom: 0;
+        }
+
+        .help-section summary {
+            cursor: pointer;
+            list-style: none;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            transition: var(--transition-fast);
+        }
+
+        .help-section summary::-webkit-details-marker {
+            display: none;
+        }
+
+        .help-section summary::after {
+            content: 'expand_more';
+            font-family: 'Material Icons';
+            transition: var(--transition-fast);
+        }
+
+        .help-section details[open] summary::after {
+            transform: rotate(180deg);
+        }
+
+        .help-section h3 {
+            color: var(--text-accent);
+            font-family: 'Orbitron', monospace;
+            font-size: var(--font-size-lg);
+            margin-bottom: var(--space-md);
+        }
+
+        .help-section ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .help-section li {
+            padding: var(--space-sm) 0;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .help-section li:last-child {
+            border-bottom: none;
+        }
+
+        .help-section kbd {
+            background: var(--secondary-bg);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-sm);
+            padding: var(--space-xs) var(--space-sm);
+            font-family: 'Courier New', monospace;
+            font-size: var(--font-size-sm);
+            font-weight: bold;
+        }
+
+        /* Results Actions */
+        .results-actions {
+            display: flex;
+            gap: var(--space-md);
+            flex-wrap: wrap;
+        }
+
+        /* Error States */
+        .form-input:invalid,
+        .form-select:invalid {
+            border-color: var(--error-color);
+        }
+
+        .form-input:invalid + .form-help,
+        .form-select:invalid + .form-help {
+            color: var(--error-color);
+        }
+
+        /* Focus Indicators */
+        details:focus-within summary {
+            outline: 2px solid var(--focus-color);
+            outline-offset: 2px;
+        }
+
+        /* Responsive Improvements */
+        @media (max-width: 1024px) {
+            .container {
+                padding: var(--space-md);
+            }
+            
+            .grid-3 {
+                grid-template-columns: 1fr;
+            }
+            
+            .toast {
+                top: var(--space-md);
+                right: var(--space-md);
+                left: var(--space-md);
+                max-width: none;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .site-header {
+                padding: var(--space-lg);
+                margin-bottom: var(--space-lg);
+            }
+            
+            .card-header,
+            .card-body,
+            .card-footer {
+                padding: var(--space-md);
+            }
+            
+            .loading-content {
+                padding: var(--space-lg);
+            }
+        }
+
+        @media (max-width: 480px) {
+            .btn {
+                width: 100%;
+                justify-content: center;
+            }
+            
+            .results-actions {
+                flex-direction: column;
+            }
+            
+            .results-actions .btn {
+                width: 100%;
+            }
+        }
+
+        /* Print Styles */
+        @media print {
+            .skip-link,
+            .loading-overlay,
+            .toast,
+            .help-section,
+            .card-footer {
+                display: none !important;
+            }
+            
+            .card {
+                border: 1px solid #000;
+                box-shadow: none;
+                page-break-inside: avoid;
+                margin-bottom: 20px;
+            }
+            
+            .site-header {
+                border: none;
+                box-shadow: none;
+            }
+        }
+
+        /* Enhanced Results Display */
+        .results-header {
+            background: var(--secondary-bg);
+            padding: var(--space-lg);
+            border-radius: var(--radius-md);
+            margin-bottom: var(--space-lg);
+            border: 1px solid var(--border-color);
+        }
+
+        .results-meta {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: var(--space-md);
+        }
+
+        .results-meta p {
+            margin: 0;
+            padding: var(--space-sm);
+            background: var(--panel-bg);
+            border-radius: var(--radius-sm);
+            border: 1px solid var(--border-color);
+        }
+
+        .result-weapon-section {
+            margin-bottom: var(--space-2xl);
+            border: 2px solid var(--border-color);
+            border-radius: var(--radius-lg);
+            background: var(--panel-bg);
+            overflow: hidden;
+        }
+
+        .result-weapon-title {
+            background: linear-gradient(135deg, 
+                rgba(212, 175, 55, 0.2) 0%, 
+                rgba(184, 134, 11, 0.1) 100%);
+            color: var(--text-accent);
+            font-family: 'Orbitron', monospace;
+            font-size: var(--font-size-xl);
+            font-weight: 600;
+            margin: 0;
+            padding: var(--space-lg);
+            border-bottom: 2px solid var(--border-color);
+            display: flex;
+            align-items: center;
+            gap: var(--space-md);
+            outline-offset: -2px;
+        }
+
+        .result-weapon-title:focus {
+            outline: 2px solid var(--focus-color);
+            background: linear-gradient(135deg, 
+                rgba(212, 175, 55, 0.3) 0%, 
+                rgba(184, 134, 11, 0.15) 100%);
+        }
+
+        .result-defenders {
+            padding: var(--space-lg);
+            display: grid;
+            gap: var(--space-lg);
+        }
+
+        .result-defender-card {
+            background: var(--secondary-bg);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-md);
+            padding: var(--space-lg);
+            transition: var(--transition-fast);
+        }
+
+        .result-defender-card:hover {
+            border-color: var(--border-accent);
+            box-shadow: var(--shadow-sm);
+        }
+
+        .result-defender-title {
+            color: var(--text-accent);
+            font-family: 'Orbitron', monospace;
+            font-size: var(--font-size-lg);
+            font-weight: 600;
+            margin: 0 0 var(--space-lg) 0;
+            display: flex;
+            align-items: center;
+            gap: var(--space-sm);
+            padding-bottom: var(--space-sm);
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .result-stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: var(--space-md);
+            margin-bottom: var(--space-lg);
+        }
+
+        .result-stat {
+            background: var(--input-bg);
+            padding: var(--space-md);
+            border-radius: var(--radius-sm);
+            border: 1px solid var(--border-color);
+            text-align: center;
+        }
+
+        .stat-label {
+            display: block;
+            font-size: var(--font-size-sm);
+            color: var(--text-muted);
+            margin-bottom: var(--space-xs);
+            font-weight: 500;
+        }
+
+        .stat-value {
+            display: block;
+            font-size: var(--font-size-xl);
+            font-weight: 700;
+            font-family: 'Orbitron', monospace;
+        }
+
+        .stat-value.primary {
+            color: var(--primary-gold);
+        }
+
+        .stat-value.success {
+            color: #22c55e;
+        }
+
+        .stat-value.warning {
+            color: #f59e0b;
+        }
+
+        .stat-value.danger {
+            color: var(--error-color);
+        }
+
+        /* Damage Distribution Chart */
+        .damage-distribution {
+            margin-top: var(--space-lg);
+        }
+
+        .damage-distribution h5 {
+            color: var(--text-accent);
+            font-family: 'Orbitron', monospace;
+            font-size: var(--font-size-base);
+            margin: 0 0 var(--space-md) 0;
+            text-align: center;
+        }
+
+        .chart-container {
+            display: flex;
+            align-items: end;
+            justify-content: center;
+            gap: var(--space-xs);
+            height: 120px;
+            background: var(--primary-bg);
+            padding: var(--space-sm);
+            border-radius: var(--radius-sm);
+            border: 1px solid var(--border-color);
+            overflow-x: auto;
+        }
+
+        .chart-bar {
+            position: relative;
+            background: linear-gradient(to top, var(--primary-gold), var(--secondary-gold));
+            min-width: 30px;
+            border-radius: var(--radius-sm) var(--radius-sm) 0 0;
+            transition: var(--transition-fast);
+            cursor: pointer;
+            border: 1px solid var(--border-color);
+        }
+
+        .chart-bar:hover {
+            background: linear-gradient(to top, var(--secondary-gold), var(--accent-gold));
+            transform: translateY(-2px);
+        }
+
+        .bar-label {
+            position: absolute;
+            bottom: -20px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: var(--font-size-xs);
+            color: var(--text-muted);
+            font-weight: 600;
+        }
+
+        .bar-percentage {
+            position: absolute;
+            top: -25px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: var(--font-size-xs);
+            color: var(--text-primary);
+            font-weight: 600;
+            background: var(--panel-bg);
+            padding: var(--space-xs);
+            border-radius: var(--radius-sm);
+            border: 1px solid var(--border-color);
+            white-space: nowrap;
+            opacity: 0;
+            transition: var(--transition-fast);
+        }
+
+        .chart-bar:hover .bar-percentage {
+            opacity: 1;
+        }
+
+        /* Stats Grid Enhancement */
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: var(--space-sm);
+            margin-top: var(--space-md);
+        }
+
+        .stat-item {
+            padding: var(--space-sm);
+            background: var(--input-bg);
+            border-radius: var(--radius-sm);
+            border: 1px solid var(--border-color);
+            font-size: var(--font-size-sm);
+            text-align: center;
+        }
+
+        /* Weapon/Defender Card Headers */
+        .weapon-card-header,
+        .defender-card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: var(--space-md);
+            padding-bottom: var(--space-sm);
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .weapon-name,
+        .defender-name {
+            color: var(--text-accent);
+            font-family: 'Orbitron', monospace;
+            font-size: var(--font-size-lg);
+            font-weight: 600;
+            margin: 0;
+        }
+
+        .weapon-stats,
+        .defender-stats {
+            margin-bottom: var(--space-md);
+        }
+
+        .weapon-keywords,
+        .defender-keywords {
+            display: flex;
+            flex-wrap: wrap;
+            gap: var(--space-xs);
+            margin-top: var(--space-md);
+        }
+
+        /* Enhanced Responsive Design */
+        @media (max-width: 1200px) {
+            .result-stats-grid {
+                grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            }
+        }
+
+        @media (max-width: 768px) {
+            .result-stats-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .results-meta {
+                grid-template-columns: 1fr;
+            }
+            
+            .chart-container {
+                height: 100px;
+                padding: var(--space-xs);
+            }
+            
+            .chart-bar {
+                min-width: 25px;
+            }
+            
+            .stats-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .weapon-card-header,
+            .defender-card-header {
+                flex-direction: column;
+                align-items: stretch;
+                gap: var(--space-sm);
+            }
+            
+            .weapon-name,
+            .defender-name {
+                text-align: center;
+            }
+        }
+
+        /* Performance Optimizations */
+        .card,
+        .weapon-card,
+        .defender-card,
+        .result-defender-card {
+            contain: layout style paint;
+        }
+
+        /* Animation Performance */
+        .btn,
+        .card,
+        .chart-bar {
+            will-change: transform;
+        }
+
+        .btn:not(:hover),
+        .card:not(:hover),
+        .chart-bar:not(:hover) {
+            will-change: auto;
+        }
+
+        /* Focus Improvements */
+        .result-weapon-title:focus-visible,
+        .btn:focus-visible,
+        .form-input:focus-visible,
+        .form-select:focus-visible {
+            outline: 3px solid var(--focus-color);
+            outline-offset: 2px;
+        }
+
+        /* Custom Scrollbar for Results */
+        .chart-container::-webkit-scrollbar {
+            height: 8px;
+        }
+
+        .chart-container::-webkit-scrollbar-track {
+            background: var(--secondary-bg);
+            border-radius: var(--radius-sm);
+        }
+
+        .chart-container::-webkit-scrollbar-thumb {
+            background: var(--primary-gold);
+            border-radius: var(--radius-sm);
+        }
+
+        .chart-container::-webkit-scrollbar-thumb:hover {
+            background: var(--secondary-gold);
+        }
         .defender-card h4,
         .defender-card h5,
         .defender-card h6 {
@@ -1788,7 +2943,343 @@
     </style>
 </head>
 <body>
+    <!-- Skip Links für bessere Zugänglichkeit -->
+    <a href="#main-content" class="skip-link">Zum Hauptinhalt springen</a>
+    <a href="#simulation-controls" class="skip-link">Zu den Simulationseinstellungen springen</a>
+    <a href="#results" class="skip-link">Zu den Ergebnissen springen</a>
+
     <div class="container">
+        <!-- Hauptheader mit semantischer Struktur -->
+        <header class="site-header" role="banner">
+            <h1 class="site-title">Warhammer 40k Combat Simulator</h1>
+            <p class="site-description">
+                Präzise mathematische Simulation für Warhammer 40.000 Kampfszenarien
+            </p>
+            <span class="version-badge" aria-label="Version 2.1">v2.1</span>
+        </header>
+
+        <!-- Hauptinhalt mit verbesserter Semantik -->
+        <main id="main-content" role="main" aria-labelledby="main-heading">
+            <h2 id="main-heading" class="sr-only">Combat Simulator Interface</h2>
+            
+            <!-- Hauptlayout Grid -->
+            <div class="main-grid">
+                <!-- Waffen-Sektion -->
+                <section class="card" aria-labelledby="weapons-heading">
+                    <header class="card-header">
+                        <h2 id="weapons-heading" class="card-title">
+                            <i class="material-icons" aria-hidden="true">gps_fixed</i>
+                            Waffen Konfiguration
+                        </h2>
+                    </header>
+                    
+                    <div class="card-body">
+                        <!-- Waffen-Upload -->
+                        <div class="form-group">
+                            <label for="weapon-upload" class="form-label required">
+                                Waffen-Datei hochladen (.json)
+                            </label>
+                            <input 
+                                type="file" 
+                                id="weapon-upload" 
+                                class="form-input" 
+                                accept=".json"
+                                aria-describedby="weapon-upload-help"
+                                onchange="loadWeapons(event)"
+                                required
+                            />
+                            <div id="weapon-upload-help" class="form-help">
+                                JSON-Datei mit Waffenstatistiken auswählen
+                            </div>
+                        </div>
+
+                        <!-- Waffen-Auswahl -->
+                        <div class="form-group">
+                            <label for="weapon-select" class="form-label required">
+                                Waffe auswählen
+                            </label>
+                            <select 
+                                id="weapon-select" 
+                                class="form-select"
+                                aria-describedby="weapon-select-help"
+                                onchange="selectWeapon()"
+                                required
+                            >
+                                <option value="">-- Waffe auswählen --</option>
+                            </select>
+                            <div id="weapon-select-help" class="form-help">
+                                Verfügbare Waffe aus der geladenen Datei wählen
+                            </div>
+                        </div>
+
+                        <!-- Gewählte Waffen Anzeige -->
+                        <div 
+                            id="selected-weapons" 
+                            class="selected-items"
+                            role="region"
+                            aria-labelledby="selected-weapons-heading"
+                            aria-live="polite"
+                        >
+                            <h3 id="selected-weapons-heading" class="sr-only">Ausgewählte Waffen</h3>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Verteidiger-Sektion -->
+                <section class="card" aria-labelledby="defenders-heading">
+                    <header class="card-header">
+                        <h2 id="defenders-heading" class="card-title">
+                            <i class="material-icons" aria-hidden="true">shield</i>
+                            Verteidiger Konfiguration
+                        </h2>
+                    </header>
+                    
+                    <div class="card-body">
+                        <!-- Verteidiger-Upload -->
+                        <div class="form-group">
+                            <label for="defender-upload" class="form-label required">
+                                Verteidiger-Datei hochladen (.json)
+                            </label>
+                            <input 
+                                type="file" 
+                                id="defender-upload" 
+                                class="form-input" 
+                                accept=".json"
+                                aria-describedby="defender-upload-help"
+                                onchange="loadDefenders(event)"
+                                required
+                            />
+                            <div id="defender-upload-help" class="form-help">
+                                JSON-Datei mit Verteidigerstatistiken auswählen
+                            </div>
+                        </div>
+
+                        <!-- Verteidiger-Auswahl -->
+                        <div class="form-group">
+                            <label for="defender-select" class="form-label required">
+                                Verteidiger auswählen
+                            </label>
+                            <select 
+                                id="defender-select" 
+                                class="form-select"
+                                aria-describedby="defender-select-help"
+                                onchange="selectDefender()"
+                                required
+                            >
+                                <option value="">-- Verteidiger auswählen --</option>
+                            </select>
+                            <div id="defender-select-help" class="form-help">
+                                Verfügbaren Verteidiger aus der geladenen Datei wählen
+                            </div>
+                        </div>
+
+                        <!-- Gewählte Verteidiger Anzeige -->
+                        <div 
+                            id="selected-defenders" 
+                            class="selected-items"
+                            role="region"
+                            aria-labelledby="selected-defenders-heading"
+                            aria-live="polite"
+                        >
+                            <h3 id="selected-defenders-heading" class="sr-only">Ausgewählte Verteidiger</h3>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <!-- Simulations-Steuerung -->
+            <section 
+                id="simulation-controls" 
+                class="card" 
+                aria-labelledby="simulation-heading"
+            >
+                <header class="card-header">
+                    <h2 id="simulation-heading" class="card-title">
+                        <i class="material-icons" aria-hidden="true">analytics</i>
+                        Simulation starten
+                    </h2>
+                </header>
+                
+                <div class="card-body">
+                    <div class="grid grid-3">
+                        <!-- Simulation Parameter -->
+                        <div class="form-group">
+                            <label for="iterations" class="form-label">
+                                Anzahl Simulationen
+                            </label>
+                            <input 
+                                type="number" 
+                                id="iterations" 
+                                class="form-input"
+                                value="10000" 
+                                min="100" 
+                                max="1000000"
+                                aria-describedby="iterations-help"
+                            />
+                            <div id="iterations-help" class="form-help">
+                                Mehr Simulationen = genauere Ergebnisse (100-1.000.000)
+                            </div>
+                        </div>
+
+                        <!-- Exportoptionen -->
+                        <div class="form-group">
+                            <label for="export-pdf" class="form-label">
+                                PDF Export
+                            </label>
+                            <div class="checkbox-group">
+                                <input 
+                                    type="checkbox" 
+                                    id="export-pdf" 
+                                    class="form-checkbox"
+                                    aria-describedby="export-pdf-help"
+                                />
+                                <label for="export-pdf" class="checkbox-label">
+                                    Ergebnisse als PDF exportieren
+                                </label>
+                            </div>
+                            <div id="export-pdf-help" class="form-help">
+                                Automatischer PDF-Download nach Simulation
+                            </div>
+                        </div>
+
+                        <!-- Simulation Button -->
+                        <div class="form-group">
+                            <label class="form-label">&nbsp;</label>
+                            <button 
+                                id="simulate-btn" 
+                                class="btn btn-primary btn-large"
+                                onclick="runSimulation()"
+                                aria-describedby="simulate-help"
+                                disabled
+                            >
+                                <i class="material-icons" aria-hidden="true">play_arrow</i>
+                                Simulation starten
+                            </button>
+                            <div id="simulate-help" class="form-help">
+                                Waffe und Verteidiger müssen ausgewählt sein
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Ergebnisse Sektion -->
+            <section 
+                id="results" 
+                class="card" 
+                aria-labelledby="results-heading"
+                aria-live="polite"
+                style="display: none;"
+            >
+                <header class="card-header">
+                    <h2 id="results-heading" class="card-title">
+                        <i class="material-icons" aria-hidden="true">assessment</i>
+                        Simulationsergebnisse
+                    </h2>
+                </header>
+                
+                <div class="card-body">
+                    <div id="results-content" role="region" aria-label="Simulationsergebnisse">
+                        <!-- Ergebnisse werden hier dynamisch eingefügt -->
+                    </div>
+                </div>
+                
+                <footer class="card-footer">
+                    <div class="results-actions">
+                        <button 
+                            class="btn btn-secondary"
+                            onclick="exportToPDF()"
+                            aria-label="Ergebnisse als PDF exportieren"
+                        >
+                            <i class="material-icons" aria-hidden="true">download</i>
+                            PDF Export
+                        </button>
+                        
+                        <button 
+                            class="btn btn-secondary"
+                            onclick="clearResults()"
+                            aria-label="Ergebnisse löschen"
+                        >
+                            <i class="material-icons" aria-hidden="true">clear</i>
+                            Ergebnisse löschen
+                        </button>
+                    </div>
+                </footer>
+            </section>
+        </main>
+
+        <!-- Help & Info Sektion -->
+        <aside class="help-section" role="complementary" aria-labelledby="help-heading">
+            <details class="card">
+                <summary class="card-header" id="help-heading">
+                    <h2 class="card-title">
+                        <i class="material-icons" aria-hidden="true">help</i>
+                        Hilfe & Informationen
+                    </h2>
+                </summary>
+                
+                <div class="card-body">
+                    <div class="grid grid-2">
+                        <div>
+                            <h3>Dateiformate</h3>
+                            <ul>
+                                <li><strong>Waffen:</strong> JSON-Datei mit Waffenstatistiken</li>
+                                <li><strong>Verteidiger:</strong> JSON-Datei mit Einheitenstatistiken</li>
+                                <li><strong>Export:</strong> PDF-Bericht der Simulationsergebnisse</li>
+                            </ul>
+                        </div>
+                        
+                        <div>
+                            <h3>Tastaturkürzel</h3>
+                            <ul>
+                                <li><kbd>Tab</kbd> - Navigation zwischen Elementen</li>
+                                <li><kbd>Enter</kbd> - Button aktivieren</li>
+                                <li><kbd>Space</kbd> - Checkbox togglen</li>
+                                <li><kbd>Esc</kbd> - Modalfenster schließen</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </details>
+        </aside>
+    </div>
+
+    <!-- Loading Overlay -->
+    <div 
+        id="loading-overlay" 
+        class="loading-overlay" 
+        role="dialog" 
+        aria-modal="true" 
+        aria-labelledby="loading-title"
+        style="display: none;"
+    >
+        <div class="loading-content">
+            <div class="loading-spinner" aria-hidden="true"></div>
+            <h2 id="loading-title">Simulation läuft...</h2>
+            <p id="loading-progress" aria-live="polite">Wird geladen...</p>
+        </div>
+    </div>
+
+    <!-- Error Toast -->
+    <div 
+        id="error-toast" 
+        class="toast toast-error" 
+        role="alert" 
+        aria-live="assertive"
+        style="display: none;"
+    >
+        <div class="toast-content">
+            <i class="material-icons" aria-hidden="true">error</i>
+            <span id="error-message"></span>
+            <button 
+                class="toast-close" 
+                onclick="hideErrorToast()"
+                aria-label="Fehlermeldung schließen"
+            >
+                <i class="material-icons" aria-hidden="true">close</i>
+            </button>
+        </div>
+    </div>
         <div class="header">
             <h1>⚔️ Warhammer 40k 10th Edition Kampfsimulator ⚔️</h1>
             <p>Simuliere Kämpfe zwischen Angreifern und Verteidigern mit allen 10th Edition Regeln</p>
@@ -2074,6 +3565,857 @@
     </div>
 
     <script>
+        // ===== ENHANCED GLOBAL VARIABLES & STATE MANAGEMENT =====
+        let weaponsData = [];
+        let defendersData = [];
+        let selectedWeapons = [];
+        let selectedDefenders = [];
+        let currentResults = null;
+
+        // Accessibility & UX Enhancement Functions
+        function announceToScreenReader(message) {
+            const announcement = document.createElement('div');
+            announcement.setAttribute('aria-live', 'polite');
+            announcement.setAttribute('aria-atomic', 'true');
+            announcement.className = 'sr-only';
+            announcement.textContent = message;
+            document.body.appendChild(announcement);
+            
+            setTimeout(() => {
+                document.body.removeChild(announcement);
+            }, 1000);
+        }
+
+        function showErrorToast(message) {
+            const toast = document.getElementById('error-toast');
+            const messageElement = document.getElementById('error-message');
+            messageElement.textContent = message;
+            toast.style.display = 'block';
+            
+            // Auto-hide after 5 seconds
+            setTimeout(() => {
+                hideErrorToast();
+            }, 5000);
+            
+            announceToScreenReader(`Fehler: ${message}`);
+        }
+
+        function hideErrorToast() {
+            const toast = document.getElementById('error-toast');
+            toast.style.display = 'none';
+        }
+
+        function showLoadingOverlay(message = 'Wird geladen...') {
+            const overlay = document.getElementById('loading-overlay');
+            const progressElement = document.getElementById('loading-progress');
+            progressElement.textContent = message;
+            overlay.style.display = 'flex';
+            
+            // Focus management
+            const previousFocus = document.activeElement;
+            overlay.setAttribute('data-previous-focus', previousFocus.id || '');
+            overlay.focus();
+        }
+
+        function hideLoadingOverlay() {
+            const overlay = document.getElementById('loading-overlay');
+            overlay.style.display = 'none';
+            
+            // Restore focus
+            const previousFocusId = overlay.getAttribute('data-previous-focus');
+            if (previousFocusId) {
+                const previousElement = document.getElementById(previousFocusId);
+                if (previousElement) {
+                    previousElement.focus();
+                }
+            }
+        }
+
+        function updateSimulateButtonState() {
+            const btn = document.getElementById('simulate-btn');
+            const hasWeapons = selectedWeapons.length > 0;
+            const hasDefenders = selectedDefenders.length > 0;
+            
+            btn.disabled = !(hasWeapons && hasDefenders);
+            
+            if (btn.disabled) {
+                btn.setAttribute('aria-describedby', 'simulate-help');
+            } else {
+                btn.removeAttribute('aria-describedby');
+            }
+        }
+
+        // ===== ENHANCED FILE LOADING WITH ACCESSIBILITY =====
+        async function loadWeapons(event) {
+            const file = event.target.files[0];
+            if (!file) return;
+
+            showLoadingOverlay('Lade Waffendaten...');
+            
+            try {
+                const text = await file.text();
+                weaponsData = JSON.parse(text);
+                
+                if (!Array.isArray(weaponsData) || weaponsData.length === 0) {
+                    throw new Error('Ungültige Waffendatei: Keine Waffen gefunden');
+                }
+
+                populateWeaponSelect();
+                announceToScreenReader(`${weaponsData.length} Waffen erfolgreich geladen`);
+                
+            } catch (error) {
+                console.error('Error loading weapons:', error);
+                showErrorToast(`Fehler beim Laden der Waffendatei: ${error.message}`);
+                weaponsData = [];
+            } finally {
+                hideLoadingOverlay();
+                updateSimulateButtonState();
+            }
+        }
+
+        async function loadDefenders(event) {
+            const file = event.target.files[0];
+            if (!file) return;
+
+            showLoadingOverlay('Lade Verteidigerdaten...');
+            
+            try {
+                const text = await file.text();
+                defendersData = JSON.parse(text);
+                
+                if (!Array.isArray(defendersData) || defendersData.length === 0) {
+                    throw new Error('Ungültige Verteidigerdatei: Keine Verteidiger gefunden');
+                }
+
+                populateDefenderSelect();
+                announceToScreenReader(`${defendersData.length} Verteidiger erfolgreich geladen`);
+                
+            } catch (error) {
+                console.error('Error loading defenders:', error);
+                showErrorToast(`Fehler beim Laden der Verteidigerdatei: ${error.message}`);
+                defendersData = [];
+            } finally {
+                hideLoadingOverlay();
+                updateSimulateButtonState();
+            }
+        }
+
+        function populateWeaponSelect() {
+            const select = document.getElementById('weapon-select');
+            select.innerHTML = '<option value="">-- Waffe auswählen --</option>';
+            
+            weaponsData.forEach((weapon, index) => {
+                const option = document.createElement('option');
+                option.value = index;
+                option.textContent = weapon.name || `Waffe ${index + 1}`;
+                select.appendChild(option);
+            });
+            
+            select.disabled = false;
+        }
+
+        function populateDefenderSelect() {
+            const select = document.getElementById('defender-select');
+            select.innerHTML = '<option value="">-- Verteidiger auswählen --</option>';
+            
+            defendersData.forEach((defender, index) => {
+                const option = document.createElement('option');
+                option.value = index;
+                option.textContent = defender.name || `Verteidiger ${index + 1}`;
+                select.appendChild(option);
+            });
+            
+            select.disabled = false;
+        }
+
+        // ===== ENHANCED SELECTION FUNCTIONS =====
+        function selectWeapon() {
+            const select = document.getElementById('weapon-select');
+            const selectedIndex = select.value;
+            
+            if (selectedIndex === '') return;
+            
+            const weapon = weaponsData[selectedIndex];
+            if (!weapon) return;
+            
+            // Check if already selected
+            if (selectedWeapons.find(w => w.name === weapon.name)) {
+                showErrorToast('Diese Waffe ist bereits ausgewählt');
+                select.value = '';
+                return;
+            }
+            
+            selectedWeapons.push({ ...weapon, id: Date.now() });
+            updateSelectedWeaponsDisplay();
+            updateSimulateButtonState();
+            select.value = '';
+            
+            announceToScreenReader(`Waffe ${weapon.name} hinzugefügt`);
+        }
+
+        function selectDefender() {
+            const select = document.getElementById('defender-select');
+            const selectedIndex = select.value;
+            
+            if (selectedIndex === '') return;
+            
+            const defender = defendersData[selectedIndex];
+            if (!defender) return;
+            
+            // Check if already selected
+            if (selectedDefenders.find(d => d.name === defender.name)) {
+                showErrorToast('Dieser Verteidiger ist bereits ausgewählt');
+                select.value = '';
+                return;
+            }
+            
+            selectedDefenders.push({ ...defender, id: Date.now() });
+            updateSelectedDefendersDisplay();
+            updateSimulateButtonState();
+            select.value = '';
+            
+            announceToScreenReader(`Verteidiger ${defender.name} hinzugefügt`);
+        }
+
+        function updateSelectedWeaponsDisplay() {
+            const container = document.getElementById('selected-weapons');
+            container.innerHTML = '';
+            
+            selectedWeapons.forEach(weapon => {
+                const weaponCard = createWeaponCard(weapon);
+                container.appendChild(weaponCard);
+            });
+        }
+
+        function updateSelectedDefendersDisplay() {
+            const container = document.getElementById('selected-defenders');
+            container.innerHTML = '';
+            
+            selectedDefenders.forEach(defender => {
+                const defenderCard = createDefenderCard(defender);
+                container.appendChild(defenderCard);
+            });
+        }
+
+        function createWeaponCard(weapon) {
+            const card = document.createElement('div');
+            card.className = 'weapon-card';
+            card.setAttribute('role', 'article');
+            card.setAttribute('aria-labelledby', `weapon-title-${weapon.id}`);
+            
+            card.innerHTML = `
+                <div class="weapon-card-header">
+                    <h4 id="weapon-title-${weapon.id}" class="weapon-name">${weapon.name}</h4>
+                    <button 
+                        class="btn btn-icon btn-danger"
+                        onclick="removeWeapon(${weapon.id})"
+                        aria-label="Waffe ${weapon.name} entfernen"
+                        title="Waffe entfernen"
+                    >
+                        <i class="material-icons" aria-hidden="true">delete</i>
+                    </button>
+                </div>
+                <div class="weapon-stats">
+                    ${createStatsDisplay(weapon)}
+                </div>
+                ${weapon.keywords ? `<div class="weapon-keywords">${createKeywordTags(weapon.keywords)}</div>` : ''}
+            `;
+            
+            return card;
+        }
+
+        function createDefenderCard(defender) {
+            const card = document.createElement('div');
+            card.className = 'defender-card';
+            card.setAttribute('role', 'article');
+            card.setAttribute('aria-labelledby', `defender-title-${defender.id}`);
+            
+            card.innerHTML = `
+                <div class="defender-card-header">
+                    <h4 id="defender-title-${defender.id}" class="defender-name">${defender.name}</h4>
+                    <button 
+                        class="btn btn-icon btn-danger"
+                        onclick="removeDefender(${defender.id})"
+                        aria-label="Verteidiger ${defender.name} entfernen"
+                        title="Verteidiger entfernen"
+                    >
+                        <i class="material-icons" aria-hidden="true">delete</i>
+                    </button>
+                </div>
+                <div class="defender-stats">
+                    ${createStatsDisplay(defender)}
+                </div>
+                ${defender.keywords ? `<div class="defender-keywords">${createKeywordTags(defender.keywords)}</div>` : ''}
+            `;
+            
+            return card;
+        }
+
+        function removeWeapon(weaponId) {
+            const weapon = selectedWeapons.find(w => w.id === weaponId);
+            if (!weapon) return;
+            
+            selectedWeapons = selectedWeapons.filter(w => w.id !== weaponId);
+            updateSelectedWeaponsDisplay();
+            updateSimulateButtonState();
+            
+            announceToScreenReader(`Waffe ${weapon.name} entfernt`);
+        }
+
+        function removeDefender(defenderId) {
+            const defender = selectedDefenders.find(d => d.id === defenderId);
+            if (!defender) return;
+            
+            selectedDefenders = selectedDefenders.filter(d => d.id !== defenderId);
+            updateSelectedDefendersDisplay();
+            updateSimulateButtonState();
+            
+            announceToScreenReader(`Verteidiger ${defender.name} entfernt`);
+        }
+
+        function createStatsDisplay(unit) {
+            const stats = [];
+            
+            // Common stats to display
+            const statKeys = ['attacks', 'skill', 'strength', 'damage', 'ap', 'toughness', 'wounds', 'save'];
+            
+            statKeys.forEach(key => {
+                if (unit[key] !== undefined) {
+                    const label = getStatLabel(key);
+                    stats.push(`<span class="stat-item"><strong>${label}:</strong> ${unit[key]}</span>`);
+                }
+            });
+            
+            return `<div class="stats-grid">${stats.join('')}</div>`;
+        }
+
+        function getStatLabel(key) {
+            const labels = {
+                'attacks': 'Angriffe',
+                'skill': 'Fertigkeit',
+                'strength': 'Stärke',
+                'damage': 'Schaden',
+                'ap': 'AP',
+                'toughness': 'Widerstandskraft',
+                'wounds': 'Lebenspunkte',
+                'save': 'Rettungswurf'
+            };
+            return labels[key] || key;
+        }
+
+        function createKeywordTags(keywords) {
+            if (!keywords || keywords.length === 0) return '';
+            
+            return keywords.map(keyword => {
+                const type = getKeywordType(keyword);
+                return `<span class="keyword-tag" data-type="${type}" title="${keyword}">${keyword}</span>`;
+            }).join('');
+        }
+
+        function getKeywordType(keyword) {
+            const lowerKeyword = keyword.toLowerCase();
+            
+            if (lowerKeyword.includes('damage') || lowerKeyword.includes('wound')) {
+                return 'damage';
+            } else if (lowerKeyword.includes('hit') || lowerKeyword.includes('accuracy')) {
+                return 'accuracy';
+            } else {
+                return 'special';
+            }
+        }
+
+        // ===== ENHANCED SIMULATION ENGINE =====
+        async function runSimulation() {
+            if (selectedWeapons.length === 0 || selectedDefenders.length === 0) {
+                showErrorToast('Bitte wählen Sie mindestens eine Waffe und einen Verteidiger aus');
+                return;
+            }
+
+            const iterations = parseInt(document.getElementById('iterations').value) || 10000;
+            
+            if (iterations < 100 || iterations > 1000000) {
+                showErrorToast('Anzahl Simulationen muss zwischen 100 und 1.000.000 liegen');
+                return;
+            }
+
+            showLoadingOverlay('Führe Kampfsimulation durch...');
+            
+            try {
+                // Run simulation in chunks to prevent UI blocking
+                const results = await runSimulationAsync(selectedWeapons, selectedDefenders, iterations);
+                currentResults = results;
+                
+                displayResults(results);
+                
+                // Auto-export if requested
+                const shouldExportPDF = document.getElementById('export-pdf').checked;
+                if (shouldExportPDF) {
+                    await exportToPDF();
+                }
+                
+                announceToScreenReader('Simulation erfolgreich abgeschlossen');
+                
+            } catch (error) {
+                console.error('Simulation error:', error);
+                showErrorToast(`Fehler bei der Simulation: ${error.message}`);
+            } finally {
+                hideLoadingOverlay();
+            }
+        }
+
+        async function runSimulationAsync(weapons, defenders, iterations) {
+            const results = {
+                weapons: weapons,
+                defenders: defenders,
+                iterations: iterations,
+                timestamp: new Date().toISOString(),
+                combatResults: []
+            };
+
+            const chunkSize = Math.min(1000, Math.floor(iterations / 10));
+            let completedIterations = 0;
+
+            for (let weaponIndex = 0; weaponIndex < weapons.length; weaponIndex++) {
+                const weapon = weapons[weaponIndex];
+                results.combatResults[weaponIndex] = {
+                    weapon: weapon,
+                    defenderResults: []
+                };
+
+                for (let defenderIndex = 0; defenderIndex < defenders.length; defenderIndex++) {
+                    const defender = defenders[defenderIndex];
+                    const defenderResult = {
+                        defender: defender,
+                        totalDamage: 0,
+                        averageDamage: 0,
+                        damageDistribution: {},
+                        killProbability: 0,
+                        hits: 0,
+                        wounds: 0,
+                        saves: 0,
+                        totalKills: 0
+                    };
+
+                    // Run simulation in chunks
+                    for (let chunk = 0; chunk < iterations; chunk += chunkSize) {
+                        const currentChunkSize = Math.min(chunkSize, iterations - chunk);
+                        
+                        for (let i = 0; i < currentChunkSize; i++) {
+                            const result = simulateCombat(weapon, defender);
+                            defenderResult.totalDamage += result.damage;
+                            defenderResult.hits += result.hits;
+                            defenderResult.wounds += result.wounds;
+                            defenderResult.saves += result.saves;
+                            
+                            if (result.damage >= defender.wounds) {
+                                defenderResult.totalKills++;
+                            }
+
+                            // Track damage distribution
+                            const damageKey = result.damage.toString();
+                            defenderResult.damageDistribution[damageKey] = 
+                                (defenderResult.damageDistribution[damageKey] || 0) + 1;
+                        }
+
+                        completedIterations += currentChunkSize;
+                        
+                        // Update progress
+                        const progress = Math.round((completedIterations / (iterations * weapons.length * defenders.length)) * 100);
+                        const progressElement = document.getElementById('loading-progress');
+                        if (progressElement) {
+                            progressElement.textContent = `Simulation läuft... ${progress}%`;
+                        }
+
+                        // Allow UI to update
+                        if (chunk % (chunkSize * 5) === 0) {
+                            await new Promise(resolve => setTimeout(resolve, 1));
+                        }
+                    }
+
+                    // Calculate statistics
+                    defenderResult.averageDamage = defenderResult.totalDamage / iterations;
+                    defenderResult.killProbability = defenderResult.totalKills / iterations;
+                    defenderResult.averageHits = defenderResult.hits / iterations;
+                    defenderResult.averageWounds = defenderResult.wounds / iterations;
+                    defenderResult.averageSaves = defenderResult.saves / iterations;
+
+                    results.combatResults[weaponIndex].defenderResults.push(defenderResult);
+                }
+            }
+
+            return results;
+        }
+
+        function simulateCombat(weapon, defender) {
+            const result = {
+                hits: 0,
+                wounds: 0,
+                saves: 0,
+                damage: 0
+            };
+
+            const attacks = parseStatValue(weapon.attacks);
+            const skill = parseStatValue(weapon.skill);
+            const strength = parseStatValue(weapon.strength);
+            const damage = parseStatValue(weapon.damage);
+            const ap = parseStatValue(weapon.ap) || 0;
+            
+            const toughness = parseStatValue(defender.toughness);
+            const save = parseStatValue(defender.save);
+            const wounds = parseStatValue(defender.wounds);
+
+            // Hit rolls
+            for (let i = 0; i < attacks; i++) {
+                const hitRoll = rollD6();
+                if (hitRoll >= skill) {
+                    result.hits++;
+                    
+                    // Wound rolls
+                    const woundTarget = calculateWoundTarget(strength, toughness);
+                    const woundRoll = rollD6();
+                    if (woundRoll >= woundTarget) {
+                        result.wounds++;
+                        
+                        // Save rolls
+                        const modifiedSave = Math.max(save + ap, 7); // 7+ means no save
+                        if (modifiedSave <= 6) {
+                            const saveRoll = rollD6();
+                            if (saveRoll >= modifiedSave) {
+                                result.saves++;
+                            } else {
+                                // Damage applied
+                                result.damage += damage;
+                            }
+                        } else {
+                            // No save possible
+                            result.damage += damage;
+                        }
+                    }
+                }
+            }
+
+            return result;
+        }
+
+        function parseStatValue(stat) {
+            if (typeof stat === 'number') return stat;
+            if (typeof stat === 'string') {
+                // Handle dice notation like "2D6", "D3", etc.
+                if (stat.includes('D') || stat.includes('d')) {
+                    return rollDice(stat);
+                }
+                // Handle ranges like "2-6"
+                if (stat.includes('-')) {
+                    const [min, max] = stat.split('-').map(Number);
+                    return Math.floor(Math.random() * (max - min + 1)) + min;
+                }
+                // Handle simple numbers with +
+                return parseInt(stat.replace('+', '')) || 0;
+            }
+            return 0;
+        }
+
+        function rollDice(notation) {
+            const lowerNotation = notation.toLowerCase();
+            
+            if (lowerNotation === 'd3') {
+                return Math.floor(Math.random() * 3) + 1;
+            }
+            
+            if (lowerNotation === 'd6') {
+                return rollD6();
+            }
+            
+            // Handle XdY notation
+            const match = lowerNotation.match(/(\d*)d(\d+)/);
+            if (match) {
+                const count = parseInt(match[1]) || 1;
+                const sides = parseInt(match[2]);
+                let total = 0;
+                for (let i = 0; i < count; i++) {
+                    total += Math.floor(Math.random() * sides) + 1;
+                }
+                return total;
+            }
+            
+            return 1;
+        }
+
+        function rollD6() {
+            return Math.floor(Math.random() * 6) + 1;
+        }
+
+        function calculateWoundTarget(strength, toughness) {
+            if (strength >= toughness * 2) return 2;
+            if (strength > toughness) return 3;
+            if (strength === toughness) return 4;
+            if (strength * 2 <= toughness) return 6;
+            return 5;
+        }
+
+        // ===== ENHANCED RESULTS DISPLAY =====
+        function displayResults(results) {
+            const resultsSection = document.getElementById('results');
+            const resultsContent = document.getElementById('results-content');
+            
+            resultsContent.innerHTML = createResultsHTML(results);
+            resultsSection.style.display = 'block';
+            
+            // Scroll to results
+            resultsSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            
+            // Focus management
+            const firstResult = resultsContent.querySelector('h3');
+            if (firstResult) {
+                firstResult.focus();
+            }
+        }
+
+        function createResultsHTML(results) {
+            let html = `
+                <div class="results-header">
+                    <div class="results-meta">
+                        <p><strong>Simulationen:</strong> ${results.iterations.toLocaleString()}</p>
+                        <p><strong>Zeitstempel:</strong> ${new Date(results.timestamp).toLocaleString()}</p>
+                        <p><strong>Waffen:</strong> ${results.weapons.length}</p>
+                        <p><strong>Verteidiger:</strong> ${results.defenders.length}</p>
+                    </div>
+                </div>
+            `;
+
+            results.combatResults.forEach((weaponResult, weaponIndex) => {
+                const weapon = weaponResult.weapon;
+                const cleanWeaponName = cleanWeaponName ? cleanWeaponName(weapon.name) : weapon.name;
+                
+                html += `
+                    <div class="result-weapon-section">
+                        <h3 class="result-weapon-title" tabindex="0">
+                            <i class="material-icons" aria-hidden="true">gps_fixed</i>
+                            ${cleanWeaponName}
+                        </h3>
+                        
+                        <div class="result-defenders">
+                `;
+
+                weaponResult.defenderResults.forEach((defenderResult, defenderIndex) => {
+                    const defender = defenderResult.defender;
+                    
+                    html += `
+                        <div class="result-defender-card">
+                            <h4 class="result-defender-title">
+                                <i class="material-icons" aria-hidden="true">shield</i>
+                                vs ${defender.name}
+                            </h4>
+                            
+                            <div class="result-stats-grid">
+                                <div class="result-stat">
+                                    <span class="stat-label">Durchschnittlicher Schaden</span>
+                                    <span class="stat-value primary">${defenderResult.averageDamage.toFixed(2)}</span>
+                                </div>
+                                
+                                <div class="result-stat">
+                                    <span class="stat-label">Tötungswahrscheinlichkeit</span>
+                                    <span class="stat-value ${defenderResult.killProbability > 0.5 ? 'success' : 'warning'}">
+                                        ${(defenderResult.killProbability * 100).toFixed(1)}%
+                                    </span>
+                                </div>
+                                
+                                <div class="result-stat">
+                                    <span class="stat-label">Durchschnittliche Treffer</span>
+                                    <span class="stat-value">${defenderResult.averageHits.toFixed(2)}</span>
+                                </div>
+                                
+                                <div class="result-stat">
+                                    <span class="stat-label">Durchschnittliche Verwundungen</span>
+                                    <span class="stat-value">${defenderResult.averageWounds.toFixed(2)}</span>
+                                </div>
+                            </div>
+                            
+                            ${createDamageDistributionChart(defenderResult.damageDistribution, results.iterations)}
+                        </div>
+                    `;
+                });
+
+                html += `
+                        </div>
+                    </div>
+                `;
+            });
+
+            return html;
+        }
+
+        function createDamageDistributionChart(distribution, totalIterations) {
+            const maxDamage = Math.max(...Object.keys(distribution).map(Number));
+            let chartHTML = '<div class="damage-distribution"><h5>Schadensverteilung</h5><div class="chart-container">';
+            
+            for (let i = 0; i <= maxDamage; i++) {
+                const count = distribution[i.toString()] || 0;
+                const percentage = ((count / totalIterations) * 100).toFixed(1);
+                const barHeight = (count / totalIterations) * 100;
+                
+                chartHTML += `
+                    <div class="chart-bar" style="height: ${barHeight}%" title="${i} Schaden: ${percentage}% (${count.toLocaleString()})">
+                        <span class="bar-label">${i}</span>
+                        <span class="bar-percentage">${percentage}%</span>
+                    </div>
+                `;
+            }
+            
+            chartHTML += '</div></div>';
+            return chartHTML;
+        }
+
+        // ===== PDF EXPORT ENHANCEMENT =====
+        async function exportToPDF() {
+            if (!currentResults) {
+                showErrorToast('Keine Ergebnisse zum Exportieren verfügbar');
+                return;
+            }
+
+            showLoadingOverlay('Erstelle PDF...');
+            
+            try {
+                const { jsPDF } = window.jspdf;
+                const doc = new jsPDF();
+                
+                // PDF content generation
+                await generatePDFContent(doc, currentResults);
+                
+                const timestamp = new Date().toISOString().slice(0, 19).replace(/:/g, '-');
+                const filename = `warhammer40k-simulation-${timestamp}.pdf`;
+                
+                doc.save(filename);
+                announceToScreenReader('PDF erfolgreich exportiert');
+                
+            } catch (error) {
+                console.error('PDF export error:', error);
+                showErrorToast(`Fehler beim PDF-Export: ${error.message}`);
+            } finally {
+                hideLoadingOverlay();
+            }
+        }
+
+        async function generatePDFContent(doc, results) {
+            let yPosition = 20;
+            
+            // Title
+            doc.setFontSize(20);
+            doc.text('Warhammer 40k Combat Simulation', 20, yPosition);
+            yPosition += 20;
+            
+            // Meta information
+            doc.setFontSize(12);
+            doc.text(`Datum: ${new Date(results.timestamp).toLocaleString()}`, 20, yPosition);
+            yPosition += 10;
+            doc.text(`Simulationen: ${results.iterations.toLocaleString()}`, 20, yPosition);
+            yPosition += 20;
+            
+            // Results
+            results.combatResults.forEach(weaponResult => {
+                const weapon = weaponResult.weapon;
+                const cleanName = cleanWeaponName ? cleanWeaponName(weapon.name) : weapon.name;
+                
+                // Check page space
+                if (yPosition > 250) {
+                    doc.addPage();
+                    yPosition = 20;
+                }
+                
+                doc.setFontSize(16);
+                doc.text(`Waffe: ${cleanName}`, 20, yPosition);
+                yPosition += 15;
+                
+                weaponResult.defenderResults.forEach(defenderResult => {
+                    if (yPosition > 240) {
+                        doc.addPage();
+                        yPosition = 20;
+                    }
+                    
+                    doc.setFontSize(14);
+                    doc.text(`vs ${defenderResult.defender.name}`, 30, yPosition);
+                    yPosition += 10;
+                    
+                    doc.setFontSize(10);
+                    doc.text(`Durchschnittlicher Schaden: ${defenderResult.averageDamage.toFixed(2)}`, 30, yPosition);
+                    yPosition += 8;
+                    doc.text(`Tötungswahrscheinlichkeit: ${(defenderResult.killProbability * 100).toFixed(1)}%`, 30, yPosition);
+                    yPosition += 8;
+                    doc.text(`Durchschnittliche Treffer: ${defenderResult.averageHits.toFixed(2)}`, 30, yPosition);
+                    yPosition += 8;
+                    doc.text(`Durchschnittliche Verwundungen: ${defenderResult.averageWounds.toFixed(2)}`, 30, yPosition);
+                    yPosition += 15;
+                });
+            });
+        }
+
+        // ===== UTILITY FUNCTIONS =====
+        function clearResults() {
+            const resultsSection = document.getElementById('results');
+            const resultsContent = document.getElementById('results-content');
+            
+            resultsContent.innerHTML = '';
+            resultsSection.style.display = 'none';
+            currentResults = null;
+            
+            announceToScreenReader('Ergebnisse gelöscht');
+        }
+
+        // Clean weapon names (remove nested parentheses)
+        function cleanWeaponName(name) {
+            if (!name) return name;
+            
+            // Remove nested parentheses and clean up
+            let cleaned = name;
+            
+            // Remove content within parentheses that contain other parentheses
+            cleaned = cleaned.replace(/\([^()]*\([^()]*\)[^()]*\)/g, '');
+            
+            // Clean up multiple spaces and trim
+            cleaned = cleaned.replace(/\s+/g, ' ').trim();
+            
+            return cleaned;
+        }
+
+        // ===== KEYBOARD NAVIGATION ENHANCEMENT =====
+        document.addEventListener('keydown', function(event) {
+            // ESC key handling
+            if (event.key === 'Escape') {
+                // Close loading overlay
+                const loadingOverlay = document.getElementById('loading-overlay');
+                if (loadingOverlay.style.display !== 'none') {
+                    hideLoadingOverlay();
+                    return;
+                }
+                
+                // Close error toast
+                const errorToast = document.getElementById('error-toast');
+                if (errorToast.style.display !== 'none') {
+                    hideErrorToast();
+                    return;
+                }
+            }
+            
+            // Enter key for simulation
+            if (event.key === 'Enter' && event.target.id === 'simulate-btn') {
+                runSimulation();
+            }
+        });
+
+        // ===== INITIALIZATION =====
+        document.addEventListener('DOMContentLoaded', function() {
+            // Initialize tooltips and accessibility features
+            updateSimulateButtonState();
+            
+            // Set focus to first interactive element
+            const firstInput = document.getElementById('weapon-upload');
+            if (firstInput) {
+                firstInput.focus();
+            }
+            
+            announceToScreenReader('Warhammer 40k Combat Simulator geladen');
+        });
+    </script>
         // Einfacher Test ohne Module
         console.log('Basic script loading...');
         document.addEventListener('DOMContentLoaded', function() {
