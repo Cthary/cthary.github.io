@@ -519,6 +519,65 @@
             border-left: 3px solid #667eea;
         }
 
+        /* Neue Keyword-Tag Styles */
+        .weapon-keywords {
+            margin-top: 12px;
+            padding-top: 8px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .keyword-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 4px;
+            margin-top: 6px;
+        }
+
+        .keyword-tag {
+            display: inline-block;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-size: 0.75rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .keyword-tag.lethal {
+            background: #e74c3c;
+            color: white;
+        }
+
+        .keyword-tag.devastating {
+            background: #8e44ad;
+            color: white;
+        }
+
+        .keyword-tag.sustained {
+            background: #f39c12;
+            color: white;
+        }
+
+        .keyword-tag.crit {
+            background: #2ecc71;
+            color: white;
+        }
+
+        .keyword-tag.anti {
+            background: #34495e;
+            color: white;
+        }
+
+        .keyword-tag.melta {
+            background: #e67e22;
+            color: white;
+        }
+
+        .keyword-tag.reroll {
+            background: #3498db;
+            color: white;
+        }
+
         .keyword-name {
             font-weight: bold;
             color: #ffd700;
@@ -2846,7 +2905,52 @@
                                                 <span class="stat-label">Durchschn. Schaden:</span>
                                                 <span class="stat-value">${safeNumber(weapon.AverageDamage).toFixed(2)}</span>
                                             </div>
-                                        </div>
+                                        </div>`;
+                                
+                                // Zeige wichtige Keywords an
+                                if (weapon.Keywords && Object.keys(weapon.Keywords).length > 0) {
+                                    attackerHtml += `
+                                        <div class="weapon-keywords">
+                                            <span class="stat-label">Spezial-Regeln:</span>
+                                            <div class="keyword-tags">`;
+                                    
+                                    const keywords = weapon.Keywords;
+                                    if (keywords.lethalHits) {
+                                        attackerHtml += `<span class="keyword-tag lethal">Lethal Hits</span>`;
+                                    }
+                                    if (keywords.devastatingWounds) {
+                                        attackerHtml += `<span class="keyword-tag devastating">Devastating Wounds</span>`;
+                                    }
+                                    if (keywords.sustainedHits) {
+                                        attackerHtml += `<span class="keyword-tag sustained">Sustained Hits ${keywords.sustainedHits}</span>`;
+                                    }
+                                    if (keywords.criticalHitOn && keywords.criticalHitOn !== "6") {
+                                        attackerHtml += `<span class="keyword-tag crit">Critical Hit ${keywords.criticalHitOn}+</span>`;
+                                    }
+                                    if (keywords.criticalWoundOn && keywords.criticalWoundOn !== "6") {
+                                        attackerHtml += `<span class="keyword-tag crit">Critical Wound ${keywords.criticalWoundOn}+</span>`;
+                                    }
+                                    if (keywords.anti && keywords.anti.length > 0) {
+                                        keywords.anti.forEach(anti => {
+                                            attackerHtml += `<span class="keyword-tag anti">Anti-${anti.target} ${anti.threshold}+</span>`;
+                                        });
+                                    }
+                                    if (keywords.melta) {
+                                        attackerHtml += `<span class="keyword-tag melta">Melta ${keywords.melta}</span>`;
+                                    }
+                                    if (keywords.rerolls && keywords.rerolls.length > 0) {
+                                        keywords.rerolls.forEach(reroll => {
+                                            let rerollText = reroll.replace("RH", "Reroll Hits ").replace("RW", "Reroll Wounds ");
+                                            attackerHtml += `<span class="keyword-tag reroll">${rerollText}</span>`;
+                                        });
+                                    }
+                                    
+                                    attackerHtml += `
+                                            </div>
+                                        </div>`;
+                                }
+                                
+                                attackerHtml += `
                                     </div>
                                 `;
                             });

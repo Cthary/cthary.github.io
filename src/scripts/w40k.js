@@ -1,6 +1,4 @@
-import { Attacker, Defender, Weapon } from "./units.js";
 import { Dice } from "./dice.js";
-import { JsonParser } from "./jsonparser.js";
 
 export class CombatCalculator {
     constructor() {
@@ -83,8 +81,6 @@ export class CombatCalculator {
         const { normalHits, criticalHits } = hitResult;
         const totalHits = normalHits + criticalHits;
         
-        console.log(`calculateWounds: weapon=${weapon.name}, normalHits=${normalHits}, criticalHits=${criticalHits}, keywords=`, weapon.Keywords);
-        
         if (totalHits === 0) {
             return { normalWounds: 0, criticalWounds: 0, mortalWounds: 0 };
         }
@@ -102,14 +98,12 @@ export class CombatCalculator {
         // Lethal Hits: Critical Hits werden automatisch zu Wounds
         let autoWounds = 0;
         const hasLethalHits = weapon.Keywords.some(k => k.toLowerCase().includes("lethal hits"));
-        console.log(`Lethal Hits check: hasLethalHits=${hasLethalHits}, keywords=`, weapon.Keywords.map(k => k.toLowerCase()));
         if (hasLethalHits) {
             autoWounds = criticalHits; // Critical Hits werden zu normalen Wounds
         }
 
         // Würfle für normale Hits (+ Critical Hits wenn kein Lethal Hits)
         const hitsToRoll = hasLethalHits ? normalHits : totalHits;
-        console.log(`Rolling for wounds: hitsToRoll=${hitsToRoll}, woundTarget=${woundTarget}`);
         const rolls = this.rollWithRerolls(hitsToRoll, woundTarget, rerollType, critWoundThreshold);
 
         let normalWounds = autoWounds; // Lethal Hits als normale Wounds
@@ -117,7 +111,6 @@ export class CombatCalculator {
         let mortalWounds = 0;
 
         const hasDevastatingWounds = weapon.Keywords.some(k => k.toLowerCase().includes("devastating wounds"));
-        console.log(`Devastating Wounds check: hasDevastatingWounds=${hasDevastatingWounds}, keywords=`, weapon.Keywords.map(k => k.toLowerCase()));
 
         for (const roll of rolls) {
             if (roll >= woundTarget) {
@@ -135,7 +128,6 @@ export class CombatCalculator {
             }
         }
 
-        console.log(`Wound results: normalWounds=${normalWounds}, criticalWounds=${criticalWounds}, mortalWounds=${mortalWounds}`);
         return { normalWounds, criticalWounds, mortalWounds };
     }
 
@@ -471,7 +463,6 @@ export class OptimizedSimulator {
             totalDamage: damageInstances.reduce((sum, dmg) => sum + dmg, 0)
         };
         
-        console.log('Final simulation result:', result);
         return result;
     }
 
@@ -569,8 +560,6 @@ function run(jsonData) {
     const simulationCount = jsonData.Amount || 1000;
     const results = [];
 
-    console.log('Simulation Input:', jsonData);
-
     // Gruppiere Angreifer nach Gruppen zusammen, aber behalte Waffen-Zuordnung
     const attackerGroups = {};
     jsonData.Attackers.forEach(attacker => {
@@ -593,8 +582,6 @@ function run(jsonData) {
             // Extrahiere ursprünglichen Angreifer-Namen (ohne Nummer und Gruppe)
             const originalName = attacker.Name.replace(/\s+\d+\s+\(.*?\)$/, '').trim();
             
-            console.log(`Processing weapon ${weapon.name} for attacker ${attacker.Name} -> originalOwner: ${originalName}, amount: ${weapon.amount}`);
-            
             // Suche nach existierender Waffe mit gleichem Namen und Besitzer
             const existingWeaponIndex = attackerGroups[groupName].WeaponGroups.findIndex(w => 
                 w.name === weapon.name && w.originalOwner === originalName
@@ -603,7 +590,6 @@ function run(jsonData) {
             if (existingWeaponIndex >= 0) {
                 // Kombiniere die Waffen-Mengen
                 attackerGroups[groupName].WeaponGroups[existingWeaponIndex].amount += weapon.amount;
-                console.log(`Combined weapon ${weapon.name} (${originalName}): new amount = ${attackerGroups[groupName].WeaponGroups[existingWeaponIndex].amount}`);
             } else {
                 // Füge neue Waffe hinzu mit Deep Copy der Keywords
                 attackerGroups[groupName].WeaponGroups.push({
@@ -611,7 +597,6 @@ function run(jsonData) {
                     Keywords: JSON.parse(JSON.stringify(weapon.Keywords || [])), // Deep copy keywords
                     originalOwner: originalName
                 });
-                console.log(`Added new weapon ${weapon.name} (${originalName}): amount = ${weapon.amount}`);
             }
         });
     });
@@ -641,13 +626,77 @@ function run(jsonData) {
         results.push(groupResult);
     }
 
-    console.log('Simulation Results:', results);
     return results;
 }
 
 // Neue Funktion für Gruppen-Kämpfe mit Leader-System
 function simulateGroupCombat(weaponGroups, defenderGroup, simulationCount) {
     const simulator = new OptimizedSimulator();
+    
+    // Hilfsfunktion zum Extrahieren wichtiger Keyword-Informationen
+    const extractKeywordInfo = (keywords) => {
+        const info = {};
+        
+        // Sustained Hits
+        const sustainedKeyword = keywords.find(k => k.toLowerCase().includes("sustained hits"));
+        if (sustainedKeyword) {
+            const match = sustainedKeyword.match(/sustained\s+hits\s+(\d+|d\d+)/i);
+            info.sustainedHits = match ? match[1] : "1";
+        }
+        
+        // Lethal Hits
+        if (keywords.some(k => k.toLowerCase().includes("lethal hits"))) {
+            info.lethalHits = true;
+        }
+        
+        // Devastating Wounds
+        if (keywords.some(k => k.toLowerCase().includes("devastating wounds"))) {
+            info.devastatingWounds = true;
+        }
+        
+        // Critical Hit Threshold
+        const critHitKeyword = keywords.find(k => k.match(/CritHit(\d+)/));
+        if (critHitKeyword) {
+            const match = critHitKeyword.match(/CritHit(\d+)/);
+            info.criticalHitOn = match[1];
+        }
+        
+        // Critical Wound Threshold
+        const critWoundKeyword = keywords.find(k => k.match(/CritWound(\d+)/));
+        if (critWoundKeyword) {
+            const match = critWoundKeyword.match(/CritWound(\d+)/);
+            info.criticalWoundOn = match[1];
+        }
+        
+        // Anti-X Keywords
+        const antiKeywords = keywords.filter(k => k.startsWith("Anti-"));
+        if (antiKeywords.length > 0) {
+            info.anti = antiKeywords.map(k => {
+                const match = k.match(/Anti-(\w+)(?:\s+(\d+))?/);
+                return match ? {
+                    target: match[1],
+                    threshold: match[2] || "6"
+                } : k;
+            });
+        }
+        
+        // Melta X
+        const meltaKeyword = keywords.find(k => k.match(/melta\s+(\d+)/i));
+        if (meltaKeyword) {
+            const match = meltaKeyword.match(/melta\s+(\d+)/i);
+            info.melta = match[1];
+        }
+        
+        // Reroll Information
+        const rerollKeywords = keywords.filter(k => 
+            k.includes("RH") || k.includes("RW") || k.includes("Knight") && k.includes("Reroll")
+        );
+        if (rerollKeywords.length > 0) {
+            info.rerolls = rerollKeywords;
+        }
+        
+        return info;
+    };
     
     // Sortiere Verteidiger: Leader zuletzt
     const sortedMembers = [...defenderGroup.Members].sort((a, b) => {
@@ -663,18 +712,28 @@ function simulateGroupCombat(weaponGroups, defenderGroup, simulationCount) {
         displayName: `${weapon.name} (${weapon.originalOwner})`
     }));
 
-    console.log('Final unique weapons for display:', uniqueWeapons.map(w => ({ name: w.displayName, amount: w.amount })));
+    console.log('Final unique weapons for display:', uniqueWeapons.map(w => ({ 
+        name: w.displayName, 
+        amount: w.amount,
+        keywords: extractKeywordInfo(w.Keywords)
+    })));
 
     const groupTargetResult = {
         Name: defenderGroup.Name,
         Members: [],
-        Weapons: uniqueWeapons.map(weapon => ({
-            Name: weapon.displayName,
-            Hits: 0,
-            Wounds: 0,
-            FailedSaves: 0,
-            AverageDamage: 0
-        }))
+        Weapons: uniqueWeapons.map(weapon => {
+            // Extrahiere wichtige Keywords für die Anzeige
+            const keywordInfo = extractKeywordInfo(weapon.Keywords);
+            
+            return {
+                Name: weapon.displayName,
+                Hits: 0,
+                Wounds: 0,
+                FailedSaves: 0,
+                AverageDamage: 0,
+                Keywords: keywordInfo // Neue Keyword-Informationen
+            };
+        })
     };
 
     // Sammle Waffen-Statistiken separat (für alle Waffen-Instanzen)
@@ -701,88 +760,53 @@ function simulateGroupCombat(weaponGroups, defenderGroup, simulationCount) {
 
         // Simuliere alle Waffen kombiniert
         uniqueWeapons.forEach((weapon, weaponIndex) => {
-            console.log('Processing weapon:', weapon);
-            console.log('Weapon amount:', weapon.amount);
-            console.log('Weapon attacks:', weapon.attacks);
-            
-            // Erstelle Weapon-Objekt direkt mit der Weapon-Klasse für bessere Kompatibilität
-            let tempWeapon;
-            
-            try {
-                // Versuche die richtige Weapon-Klasse zu verwenden, falls verfügbar
-                if (typeof Weapon !== 'undefined') {
-                    console.log('Using Weapon class');
-                    tempWeapon = new Weapon({
-                        name: weapon.name,
-                        type: weapon.type,
-                        attacks: weapon.attacks,
-                        to_hit: weapon.to_hit,
-                        strength: weapon.strength,
-                        ap: weapon.ap,
-                        damage: weapon.damage,
-                        Keywords: JSON.parse(JSON.stringify(weapon.Keywords || [])) // Deep copy of keywords
-                        // Don't include amount here - it's handled in the simulation loop
-                    });
-                } else {
-                    console.log('Using fallback weapon object');
-                    // Fallback auf manuelles Objekt
-                    tempWeapon = {
-                        name: weapon.name,
-                        type: weapon.type,
-                        attacks: weapon.attacks,
-                        to_hit: weapon.to_hit,
-                        strength: weapon.strength,
-                        ap: weapon.ap,
-                        damage: weapon.damage,
-                        Keywords: JSON.parse(JSON.stringify(weapon.Keywords || [])), // Deep copy of keywords
-                        
-                        // Methode für Attack-Parsing
-                        getAttacks: function() {
-                            if (typeof this.attacks === 'string') {
-                                if (this.attacks.includes('d')) {
-                                    const parts = this.attacks.toLowerCase().split('d');
-                                    const numDice = parts[0] === '' ? 1 : parseInt(parts[0]) || 1;
-                                    const sides = parseInt(parts[1]) || 6;
-                                    let total = 0;
-                                    for (let i = 0; i < numDice; i++) {
-                                        total += Math.floor(Math.random() * sides) + 1;
-                                    }
-                                    return total;
-                                }
-                                return parseInt(this.attacks) || 1;
+            // Erstelle einfaches Weapon-Objekt ohne Klassen-Dependencies
+            const tempWeapon = {
+                name: weapon.name,
+                type: weapon.type,
+                attacks: weapon.attacks,
+                to_hit: weapon.to_hit,
+                strength: weapon.strength,
+                ap: weapon.ap,
+                damage: weapon.damage,
+                Keywords: JSON.parse(JSON.stringify(weapon.Keywords || [])), // Deep copy of keywords
+                
+                // Methode für Attack-Parsing
+                getAttacks: function() {
+                    if (typeof this.attacks === 'string') {
+                        if (this.attacks.includes('d')) {
+                            const parts = this.attacks.toLowerCase().split('d');
+                            const numDice = parts[0] === '' ? 1 : parseInt(parts[0]) || 1;
+                            const sides = parseInt(parts[1]) || 6;
+                            let total = 0;
+                            for (let i = 0; i < numDice; i++) {
+                                total += Math.floor(Math.random() * sides) + 1;
                             }
-                            return this.attacks || 1;
-                        },
-
-                        // Damage-Parsing Methode
-                        getDamage: function() {
-                            if (typeof this.damage === 'string') {
-                                if (this.damage.includes('d')) {
-                                    const parts = this.damage.toLowerCase().split('d');
-                                    const numDice = parts[0] === '' ? 1 : parseInt(parts[0]) || 1;
-                                    const sides = parseInt(parts[1]) || 6;
-                                    let total = 0;
-                                    for (let i = 0; i < numDice; i++) {
-                                        total += Math.floor(Math.random() * sides) + 1;
-                                    }
-                                    return total;
-                                }
-                                return parseInt(this.damage) || 1;
-                            }
-                            return this.damage || 1;
+                            return total;
                         }
-                    };
-                }
-            } catch (error) {
-                console.error('Error creating weapon object:', error);
-                return; // Skip this weapon
-            }
+                        return parseInt(this.attacks) || 1;
+                    }
+                    return this.attacks || 1;
+                },
 
-            // Prüfe ob tempWeapon erfolgreich erstellt wurde
-            if (!tempWeapon) {
-                console.error('Failed to create tempWeapon for:', weapon);
-                return;
-            }
+                // Damage-Parsing Methode
+                getDamage: function() {
+                    if (typeof this.damage === 'string') {
+                        if (this.damage.includes('d')) {
+                            const parts = this.damage.toLowerCase().split('d');
+                            const numDice = parts[0] === '' ? 1 : parseInt(parts[0]) || 1;
+                            const sides = parseInt(parts[1]) || 6;
+                            let total = 0;
+                            for (let i = 0; i < numDice; i++) {
+                                total += Math.floor(Math.random() * sides) + 1;
+                            }
+                            return total;
+                        }
+                        return parseInt(this.damage) || 1;
+                    }
+                    return this.damage || 1;
+                }
+            };
 
             // Erstelle Standard-Verteidiger für Waffen-Simulation
             const standardDefender = {
@@ -794,7 +818,7 @@ function simulateGroupCombat(weaponGroups, defenderGroup, simulationCount) {
                 Keywords: sortedMembers[0].Keywords || []
             };
 
-            console.log(`Simulating weapon: ${weapon.displayName}, Amount: ${weapon.amount}`);
+            console.log(`Simulating weapon: ${weapon.displayName}, Amount: ${weapon.amount}, Keywords:`, extractKeywordInfo(weapon.Keywords));
 
             // Simuliere diese Waffe entsprechend ihrer amount
             let weaponTotalHits = 0;
