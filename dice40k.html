@@ -612,6 +612,1035 @@
         
         .hidden { display: none; }
         .visible { display: block; }
+        
+        /* ===== CUSTOM UNIT STYLES ===== */
+        
+        .selected-items {
+            margin-top: var(--space-lg);
+        }
+        
+        .badge {
+            display: inline-block;
+            font-size: var(--font-size-xs);
+            font-weight: var(--font-weight-medium);
+            padding: var(--space-xs) var(--space-sm);
+            border-radius: var(--radius-full);
+            white-space: nowrap;
+        }
+        
+        hr {
+            border: none;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, var(--border-color), transparent);
+        }
+        
+        /* Enhanced form styling for custom units */
+        .form-group small {
+            display: block;
+            margin-top: var(--space-xs);
+            font-size: var(--font-size-xs);
+            color: var(--text-muted);
+        }
+        
+        /* ===== WORKFLOW SYSTEM ===== */
+        
+        .workflow-container {
+            max-width: 1600px;
+            margin: 0 auto;
+        }
+        
+        .workflow-step {
+            display: none;
+            animation: fadeIn 0.3s ease-in-out;
+        }
+        
+        .workflow-step.active {
+            display: block;
+        }
+        
+        .step-number {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 2rem;
+            height: 2rem;
+            background: var(--primary-gold);
+            color: var(--primary-bg);
+            border-radius: 50%;
+            font-weight: var(--font-weight-bold);
+            margin-right: var(--space-md);
+        }
+        
+        .workflow-actions {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: var(--space-2xl);
+            padding-top: var(--space-xl);
+            border-top: 1px solid var(--border-color);
+        }
+        
+        /* ===== IMPORT SECTIONS ===== */
+        
+        .import-section {
+            padding: var(--space-lg);
+            border: 2px dashed var(--border-color);
+            border-radius: var(--radius-lg);
+            text-align: center;
+            transition: all var(--transition-normal);
+        }
+        
+        .import-section:hover {
+            border-color: var(--primary-gold);
+            background: rgba(212, 175, 55, 0.05);
+        }
+        
+        .import-section.loaded {
+            border-color: var(--success-color);
+            background: rgba(39, 174, 96, 0.1);
+        }
+        
+        .roster-info {
+            margin-top: var(--space-lg);
+            padding: var(--space-md);
+            background: var(--accent-bg);
+            border-radius: var(--radius-md);
+            text-align: left;
+        }
+        
+        .roster-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+            gap: var(--space-md);
+            margin-top: var(--space-md);
+        }
+        
+        .stat-card {
+            background: var(--secondary-bg);
+            padding: var(--space-md);
+            border-radius: var(--radius-md);
+            text-align: center;
+        }
+        
+        .stat-value {
+            font-size: var(--font-size-2xl);
+            font-weight: var(--font-weight-bold);
+            color: var(--primary-gold);
+        }
+        
+        .stat-label {
+            font-size: var(--font-size-xs);
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        
+        /* ===== KEYWORD MANAGEMENT ===== */
+        
+        .keyword-management {
+            display: grid;
+            gap: var(--space-xl);
+        }
+        
+        .keyword-filters {
+            background: var(--secondary-bg);
+            padding: var(--space-xl);
+            border-radius: var(--radius-lg);
+        }
+        
+        .keyword-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: var(--space-sm);
+            margin-top: var(--space-md);
+        }
+        
+        .keyword-tag {
+            display: inline-flex;
+            align-items: center;
+            gap: var(--space-xs);
+            padding: var(--space-xs) var(--space-md);
+            background: var(--accent-bg);
+            color: var(--text-primary);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-full);
+            font-size: var(--font-size-sm);
+            cursor: pointer;
+            transition: all var(--transition-fast);
+        }
+        
+        .keyword-tag:hover {
+            background: var(--panel-bg);
+            border-color: var(--primary-gold);
+        }
+        
+        .keyword-tag.active {
+            background: var(--primary-gold);
+            color: var(--primary-bg);
+            border-color: var(--primary-gold);
+        }
+        
+        .keyword-tag .remove {
+            cursor: pointer;
+            font-size: 1rem;
+            opacity: 0.7;
+        }
+        
+        .keyword-tag .remove:hover {
+            opacity: 1;
+        }
+        
+        .keyword-editor {
+            margin-top: var(--space-lg);
+            padding-top: var(--space-lg);
+            border-top: 1px solid var(--border-color);
+        }
+        
+        .keyword-editor .form-group {
+            display: flex;
+            gap: var(--space-md);
+        }
+        
+        /* ===== UNIT SELECTION ===== */
+        
+        .selection-panel {
+            background: var(--secondary-bg);
+            padding: var(--space-xl);
+            border-radius: var(--radius-lg);
+            height: 600px;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .unit-filter {
+            margin-bottom: var(--space-lg);
+        }
+        
+        .unit-list {
+            flex: 1;
+            overflow-y: auto;
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-md);
+            padding: var(--space-md);
+        }
+        
+        .unit-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: var(--space-md);
+            margin-bottom: var(--space-sm);
+            background: var(--panel-bg);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-md);
+            cursor: pointer;
+            transition: all var(--transition-fast);
+        }
+        
+        .unit-item:hover {
+            border-color: var(--primary-gold);
+            transform: translateY(-1px);
+        }
+        
+        .unit-item.selected {
+            background: linear-gradient(45deg, rgba(212, 175, 55, 0.2), rgba(212, 175, 55, 0.1));
+            border-color: var(--primary-gold);
+        }
+        
+        .unit-info {
+            flex: 1;
+        }
+        
+        .unit-name {
+            font-weight: var(--font-weight-medium);
+            color: var(--text-primary);
+        }
+        
+        .unit-stats {
+            font-size: var(--font-size-sm);
+            color: var(--text-secondary);
+            margin-top: var(--space-xs);
+        }
+        
+        .unit-keywords {
+            display: flex;
+            flex-wrap: wrap;
+            gap: var(--space-xs);
+            margin-top: var(--space-xs);
+        }
+        
+        .unit-keyword {
+            padding: 2px 6px;
+            background: var(--accent-bg);
+            border-radius: var(--radius-sm);
+            font-size: 10px;
+            color: var(--text-muted);
+        }
+        
+        .selected-units {
+            margin-top: var(--space-lg);
+            padding-top: var(--space-lg);
+            border-top: 1px solid var(--border-color);
+            max-height: 200px;
+            overflow-y: auto;
+        }
+        
+        /* ===== SIMULATION CONFIG ===== */
+        
+        .simulation-config {
+            display: grid;
+            gap: var(--space-xl);
+        }
+        
+        .config-section {
+            background: var(--secondary-bg);
+            padding: var(--space-xl);
+            border-radius: var(--radius-lg);
+        }
+        
+        .battle-preview {
+            background: var(--accent-bg);
+            padding: var(--space-lg);
+            border-radius: var(--radius-md);
+            border-left: 4px solid var(--primary-gold);
+        }
+        
+        .battle-summary {
+            display: grid;
+            grid-template-columns: 1fr auto 1fr;
+            gap: var(--space-lg);
+            align-items: center;
+        }
+        
+        .army-summary {
+            text-align: center;
+        }
+        
+        .vs-indicator {
+            font-size: var(--font-size-2xl);
+            font-weight: var(--font-weight-bold);
+            color: var(--primary-gold);
+        }
+        
+        /* ===== RESULTS DASHBOARD ===== */
+        
+        .results-dashboard {
+            display: grid;
+            gap: var(--space-lg);
+        }
+        
+        .results-summary {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: var(--space-lg);
+            margin-bottom: var(--space-xl);
+        }
+        
+        .result-card {
+            background: var(--secondary-bg);
+            padding: var(--space-lg);
+            border-radius: var(--radius-lg);
+            text-align: center;
+            border: 1px solid var(--border-color);
+        }
+        
+        .result-value {
+            font-size: var(--font-size-3xl);
+            font-weight: var(--font-weight-bold);
+            color: var(--primary-gold);
+            margin-bottom: var(--space-sm);
+        }
+        
+        .result-label {
+            color: var(--text-secondary);
+            text-transform: uppercase;
+            font-size: var(--font-size-sm);
+            letter-spacing: 0.5px;
+        }
+        
+        .chart-container {
+            background: var(--secondary-bg);
+            padding: var(--space-xl);
+            border-radius: var(--radius-lg);
+            margin-bottom: var(--space-lg);
+        }
+        
+        .chart-title {
+            margin-bottom: var(--space-lg);
+            color: var(--text-primary);
+            font-weight: var(--font-weight-medium);
+        }
+        
+        /* ===== ANIMATIONS ===== */
+        
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @keyframes slideInRight {
+            from {
+                opacity: 0;
+                transform: translateX(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+        
+        /* ===== RESPONSIVE DESIGN ===== */
+        
+        @media (max-width: 768px) {
+            .workflow-actions {
+                flex-direction: column;
+                gap: var(--space-md);
+            }
+            
+            .main-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .selection-panel {
+                height: auto;
+                max-height: 400px;
+            }
+            
+            .battle-summary {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+            
+            .results-summary {
+                grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            }
+        }
+        
+        /* ===== RESULTS DASHBOARD & ANALYTICS ===== */
+        
+        .results-header {
+            margin-bottom: 2rem;
+        }
+        
+        .results-title h3 {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-bottom: 1rem;
+            color: var(--primary-color);
+        }
+        
+        .results-meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            opacity: 0.8;
+        }
+        
+        .meta-item {
+            display: flex;
+            align-items: center;
+            gap: 0.25rem;
+            font-size: 0.9rem;
+        }
+        
+        .results-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 3rem;
+        }
+        
+        .result-card {
+            background: linear-gradient(135deg, var(--card-bg) 0%, rgba(255, 255, 255, 0.05) 100%);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 1.5rem;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+        
+        .result-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+        }
+        
+        .result-card.primary {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--accent-color) 100%);
+            color: white;
+        }
+        
+        .card-header {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .card-header h4 {
+            margin: 0;
+            font-size: 1rem;
+            font-weight: 600;
+        }
+        
+        .primary-metric {
+            font-size: 2.5rem;
+            font-weight: 700;
+            line-height: 1;
+            margin-bottom: 0.5rem;
+        }
+        
+        .metric-subtitle {
+            font-size: 0.9rem;
+            opacity: 0.8;
+            margin-bottom: 0.25rem;
+        }
+        
+        .metric-detail {
+            font-size: 0.85rem;
+            opacity: 0.7;
+        }
+        
+        .combo-display {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .combo-weapon, .combo-target {
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+        
+        .combo-arrow {
+            opacity: 0.6;
+        }
+        
+        .battlefield-overview {
+            margin-bottom: 3rem;
+            padding: 1.5rem;
+            background: var(--card-bg);
+            border-radius: 12px;
+            border: 1px solid var(--border-color);
+        }
+        
+        .battlefield-overview h4 {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-bottom: 1.5rem;
+            color: var(--primary-color);
+        }
+        
+        .battlefield-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        
+        .battlefield-section h5 {
+            margin-bottom: 1rem;
+            color: var(--text-color);
+            border-bottom: 2px solid var(--accent-color);
+            padding-bottom: 0.5rem;
+        }
+        
+        .force-list {
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+        }
+        
+        .force-item {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            padding: 0.75rem;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 8px;
+            border-left: 4px solid var(--accent-color);
+        }
+        
+        .force-item.weapon {
+            border-left-color: var(--error-color);
+        }
+        
+        .force-item.defender {
+            border-left-color: var(--success-color);
+        }
+        
+        .force-stats {
+            font-size: 0.85rem;
+            font-family: 'Courier New', monospace;
+            opacity: 0.8;
+            margin-left: auto;
+        }
+        
+        .analytics-section {
+            margin-bottom: 3rem;
+            padding: 2rem;
+            background: var(--card-bg);
+            border-radius: 12px;
+            border: 1px solid var(--border-color);
+        }
+        
+        .analytics-section h4 {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-bottom: 1.5rem;
+            color: var(--primary-color);
+        }
+        
+        .weapon-analysis, .defender-analysis {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+        
+        .analysis-row {
+            padding: 1rem;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 8px;
+            border: 1px solid var(--border-color);
+        }
+        
+        .analysis-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 0.75rem;
+        }
+        
+        .analysis-name {
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+        
+        .analysis-score {
+            font-weight: 700;
+            color: var(--accent-color);
+        }
+        
+        .analysis-score.mortality {
+            color: var(--error-color);
+        }
+        
+        .analysis-details {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 0.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .detail-item {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.9rem;
+        }
+        
+        .detail-label {
+            opacity: 0.8;
+        }
+        
+        .detail-value {
+            font-weight: 600;
+        }
+        
+        .progress-bar {
+            height: 6px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 3px;
+            overflow: hidden;
+        }
+        
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, var(--accent-color), var(--primary-color));
+            transition: width 0.3s ease;
+        }
+        
+        .progress-bar.survival .progress-fill {
+            background: linear-gradient(90deg, var(--success-color), var(--primary-color));
+        }
+        
+        .combat-matrix-container {
+            overflow-x: auto;
+        }
+        
+        .combat-matrix {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 1rem;
+        }
+        
+        .combat-matrix th,
+        .combat-matrix td {
+            padding: 0.75rem;
+            text-align: center;
+            border: 1px solid var(--border-color);
+        }
+        
+        .matrix-corner {
+            background: var(--primary-color);
+            color: white;
+            font-weight: 600;
+        }
+        
+        .weapon-header,
+        .defender-header {
+            background: rgba(255, 255, 255, 0.1);
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+        
+        .matrix-cell {
+            position: relative;
+            min-width: 80px;
+            font-size: 0.8rem;
+        }
+        
+        .matrix-cell.empty {
+            opacity: 0.3;
+        }
+        
+        .cell-damage {
+            font-weight: 600;
+            margin-bottom: 0.25rem;
+        }
+        
+        .cell-kills {
+            font-size: 0.7rem;
+            opacity: 0.8;
+        }
+        
+        .charts-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+        
+        .chart-container {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 1.5rem;
+        }
+        
+        .chart-container.full-width {
+            grid-column: 1 / -1;
+        }
+        
+        .chart-container h4 {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-bottom: 1.5rem;
+            color: var(--primary-color);
+        }
+        
+        .bar-chart {
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+        }
+        
+        .bar-item {
+            display: flex;
+            flex-direction: column;
+            gap: 0.25rem;
+        }
+        
+        .bar-label {
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+        
+        .bar-container {
+            position: relative;
+            height: 30px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 4px;
+            overflow: hidden;
+        }
+        
+        .bar-fill {
+            height: 100%;
+            background: linear-gradient(90deg, var(--accent-color), var(--primary-color));
+            transition: width 0.5s ease;
+        }
+        
+        .bar-value {
+            position: absolute;
+            right: 0.5rem;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: white;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+        }
+        
+        .pie-chart-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1rem;
+        }
+        
+        .pie-chart {
+            position: relative;
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            background: conic-gradient(from 0deg, var(--accent-color) 0deg, var(--primary-color) 360deg);
+        }
+        
+        .pie-legend {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+        
+        .legend-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.9rem;
+        }
+        
+        .legend-color {
+            width: 16px;
+            height: 16px;
+            border-radius: 2px;
+        }
+        
+        .survival-chart {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+        
+        .survival-item {
+            padding: 1rem;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 8px;
+        }
+        
+        .survival-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 0.5rem;
+        }
+        
+        .survival-name {
+            font-weight: 600;
+        }
+        
+        .survival-rate {
+            font-weight: 700;
+            color: var(--success-color);
+        }
+        
+        .survival-bar {
+            position: relative;
+            height: 20px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            overflow: hidden;
+            margin-bottom: 0.5rem;
+        }
+        
+        .survival-fill {
+            position: absolute;
+            left: 0;
+            height: 100%;
+            background: var(--success-color);
+            transition: width 0.5s ease;
+        }
+        
+        .mortality-fill {
+            position: absolute;
+            right: 0;
+            height: 100%;
+            background: var(--error-color);
+            transition: width 0.5s ease;
+        }
+        
+        .survival-details {
+            opacity: 0.8;
+        }
+        
+        .timeline-chart {
+            position: relative;
+            height: 200px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 8px;
+            padding: 1rem;
+        }
+        
+        .timeline-axis {
+            position: relative;
+            height: 100%;
+            border-bottom: 2px solid var(--border-color);
+        }
+        
+        .timeline-point {
+            position: absolute;
+            bottom: 0;
+            width: 4px;
+            background: var(--accent-color);
+            border-radius: 2px 2px 0 0;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+        
+        .timeline-point:hover {
+            background: var(--primary-color);
+            width: 6px;
+        }
+        
+        .timeline-tooltip {
+            position: absolute;
+            bottom: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            background: rgba(0, 0, 0, 0.9);
+            color: white;
+            padding: 0.5rem;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            white-space: nowrap;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.2s ease;
+        }
+        
+        .timeline-point:hover .timeline-tooltip {
+            opacity: 1;
+        }
+        
+        .timeline-labels {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 0.5rem;
+            font-size: 0.8rem;
+            opacity: 0.8;
+        }
+        
+        .export-section {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 2rem;
+        }
+        
+        .export-section h4 {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-bottom: 1.5rem;
+            color: var(--primary-color);
+        }
+        
+        .export-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+        
+        .export-option {
+            text-align: center;
+        }
+        
+        .export-option .btn {
+            width: 100%;
+            margin-bottom: 0.75rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            padding: 1rem;
+        }
+        
+        .export-description {
+            font-size: 0.85rem;
+            opacity: 0.8;
+            margin: 0;
+        }
+        
+        .export-summary {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid var(--border-color);
+        }
+        
+        .summary-stat {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+        
+        .toast {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 10000;
+            max-width: 400px;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+            animation: slideIn 0.3s ease;
+        }
+        
+        .success-toast {
+            background: var(--success-color);
+            color: white;
+        }
+        
+        .toast-content {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            padding: 1rem;
+        }
+        
+        .toast-close {
+            background: none;
+            border: none;
+            color: inherit;
+            cursor: pointer;
+            padding: 0.25rem;
+            border-radius: 4px;
+            margin-left: auto;
+        }
+        
+        .toast-close:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+        
+        @keyframes slideIn {
+            from {
+                transform: translateX(100%);
+                opacity: 0;
+            }
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
     </style>
 </head>
 
@@ -633,216 +1662,365 @@
 
         <!-- Hauptinhalt mit verbesserter Semantik -->
         <main id="main-content" role="main" aria-labelledby="main-heading">
-            <h2 id="main-heading" class="sr-only">Combat Simulator Interface</h2>
+            <h2 id="main-heading" class="sr-only">Advanced Combat Simulator Interface</h2>
             
-            <!-- Hauptlayout Grid -->
-            <div class="main-grid">
-                <!-- Waffen-Sektion -->
-                <section class="card" aria-labelledby="weapons-heading">
+            <!-- Step-by-Step Workflow -->
+            <div class="workflow-container">
+                <!-- Step 1: Roster Import -->
+                <section class="card workflow-step active" id="step-import" aria-labelledby="import-heading">
                     <header class="card-header">
-                        <h2 id="weapons-heading" class="card-title">
-                            <i class="material-icons" aria-hidden="true">gps_fixed</i>
-                            Waffen-Konfiguration (Pflichtfelder)
+                        <h2 id="import-heading" class="card-title">
+                            <span class="step-number">1</span>
+                            <i class="material-icons" aria-hidden="true">upload_file</i>
+                            BattleScribe-Roster importieren
                         </h2>
                     </header>
                     
                     <div class="card-body">
-                        <div class="form-group">
-                            <label for="weapon-upload" class="form-label required">
-                                Waffen-Datei hochladen
-                            </label>
-                            <input 
-                                type="file" 
-                                id="weapon-upload" 
-                                class="form-input"
-                                accept=".json"
-                                required
-                                aria-describedby="weapon-upload-help"
-                                onchange="loadWeapons(event)"
-                            >
-                            <small id="weapon-upload-help" class="text-muted">
-                                JSON-Datei mit Waffendefinitionen
-                            </small>
+                        <div class="main-grid">
+                            <!-- Angreifer-Import -->
+                            <div class="import-section" id="attacker-import">
+                                <h3><i class="material-icons" aria-hidden="true">gps_fixed</i> Angreifer-Roster</h3>
+                                <div class="form-group">
+                                    <label for="attacker-upload" class="form-label required">
+                                        Angreifer BattleScribe-Datei
+                                    </label>
+                                    <input 
+                                        type="file" 
+                                        id="attacker-upload" 
+                                        class="form-input"
+                                        accept=".json,.ros"
+                                        required
+                                        aria-describedby="attacker-upload-help"
+                                        onchange="loadAttackerRoster(event)"
+                                    >
+                                    <small id="attacker-upload-help" class="text-muted">
+                                        Laden Sie Ihr Angreifer-Roster (.json/.ros)
+                                    </small>
+                                </div>
+                                <div id="attacker-roster-info" class="roster-info" style="display: none;"></div>
+                            </div>
+
+                            <!-- Verteidiger-Import -->
+                            <div class="import-section" id="defender-import">
+                                <h3><i class="material-icons" aria-hidden="true">shield</i> Verteidiger-Roster</h3>
+                                <div class="form-group">
+                                    <label for="defender-upload" class="form-label required">
+                                        Verteidiger BattleScribe-Datei
+                                    </label>
+                                    <input 
+                                        type="file" 
+                                        id="defender-upload" 
+                                        class="form-input"
+                                        accept=".json,.ros"
+                                        required
+                                        aria-describedby="defender-upload-help"
+                                        onchange="loadDefenderRoster(event)"
+                                    >
+                                    <small id="defender-upload-help" class="text-muted">
+                                        Laden Sie Ihr Verteidiger-Roster (.json/.ros)
+                                    </small>
+                                </div>
+                                <div id="defender-roster-info" class="roster-info" style="display: none;"></div>
+                            </div>
                         </div>
 
-                        <div class="form-group">
-                            <label for="weapon-select" class="form-label required">
-                                Waffe auswählen
-                            </label>
-                            <select 
-                                id="weapon-select" 
-                                class="form-select"
-                                required
+                        <div class="workflow-actions">
+                            <div></div>
+                            <button 
+                                id="next-to-keywords" 
+                                class="btn btn-primary btn-large"
+                                onclick="goToStep('keywords')"
                                 disabled
-                                aria-describedby="weapon-select-help"
-                                onchange="selectWeapon()"
                             >
-                                <option value="">-- Waffe auswählen --</option>
-                            </select>
-                            <small id="weapon-select-help" class="text-muted">
-                                Erst nach dem Laden einer Datei verfügbar
-                            </small>
-                        </div>
-
-                        <div id="selected-weapons" class="selected-items" aria-live="polite">
-                            <!-- Ausgewählte Waffen werden hier angezeigt -->
+                                <i class="material-icons" aria-hidden="true">arrow_forward</i>
+                                Weiter zu Keywords
+                            </button>
                         </div>
                     </div>
                 </section>
 
-                <!-- Verteidiger-Sektion -->
-                <section class="card" aria-labelledby="defenders-heading">
+                <!-- Step 2: Keyword Management -->
+                <section class="card workflow-step" id="step-keywords" aria-labelledby="keywords-heading">
                     <header class="card-header">
-                        <h2 id="defenders-heading" class="card-title">
-                            <i class="material-icons" aria-hidden="true">shield</i>
-                            Verteidiger-Konfiguration (Pflichtfelder)
+                        <h2 id="keywords-heading" class="card-title">
+                            <span class="step-number">2</span>
+                            <i class="material-icons" aria-hidden="true">label</i>
+                            Keyword-Management
                         </h2>
                     </header>
                     
                     <div class="card-body">
-                        <div class="form-group">
-                            <label for="defender-upload" class="form-label required">
-                                Verteidiger-Datei hochladen
-                            </label>
-                            <input 
-                                type="file" 
-                                id="defender-upload" 
-                                class="form-input"
-                                accept=".json"
-                                required
-                                aria-describedby="defender-upload-help"
-                                onchange="loadDefenders(event)"
-                            >
-                            <small id="defender-upload-help" class="text-muted">
-                                JSON-Datei mit Verteidigerdefinitionen
-                            </small>
+                        <div class="keyword-management">
+                            <div class="keyword-filters">
+                                <div class="keyword-header">
+                                    <h3>Verfügbare Keywords aus beiden Rosters</h3>
+                                    <div class="keyword-search">
+                                        <input 
+                                            type="text" 
+                                            id="keyword-search" 
+                                            class="form-input"
+                                            placeholder="Keywords durchsuchen..."
+                                            onkeyup="searchKeywords()"
+                                        >
+                                        <i class="material-icons search-icon" aria-hidden="true">search</i>
+                                    </div>
+                                </div>
+                                <div id="available-keywords" class="keyword-list"></div>
+                                
+                                <div class="keyword-editor">
+                                    <h4>Eigene Keywords hinzufügen</h4>
+                                    <div class="form-group">
+                                        <input 
+                                            type="text" 
+                                            id="custom-keyword" 
+                                            class="form-input"
+                                            placeholder="Neues Keyword eingeben..."
+                                            onkeypress="handleKeywordEnter(event)"
+                                        >
+                                        <button class="btn btn-secondary" onclick="addCustomKeyword()">
+                                            <i class="material-icons" aria-hidden="true">add</i>
+                                            Hinzufügen
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
 
-                        <div class="form-group">
-                            <label for="defender-select" class="form-label required">
-                                Verteidiger auswählen
-                            </label>
-                            <select 
-                                id="defender-select" 
-                                class="form-select"
-                                required
+                        <div class="workflow-actions">
+                            <button 
+                                class="btn btn-secondary"
+                                onclick="goToStep('import')"
+                            >
+                                <i class="material-icons" aria-hidden="true">arrow_back</i>
+                                Zurück
+                            </button>
+                            <button 
+                                id="next-to-selection" 
+                                class="btn btn-primary btn-large"
+                                onclick="goToStep('selection')"
+                            >
+                                <i class="material-icons" aria-hidden="true">arrow_forward</i>
+                                Zur Auswahl
+                            </button>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Step 3: Unit Selection -->
+                <section class="card workflow-step" id="step-selection" aria-labelledby="selection-heading">
+                    <header class="card-header">
+                        <h2 id="selection-heading" class="card-title">
+                            <span class="step-number">3</span>
+                            <i class="material-icons" aria-hidden="true">checklist</i>
+                            Einheiten für den Kampf auswählen
+                        </h2>
+                    </header>
+                    
+                    <div class="card-body">
+                        <div class="main-grid">
+                            <!-- Angreifer Selection -->
+                            <div class="selection-panel">
+                                <h3><i class="material-icons" aria-hidden="true">gps_fixed</i> Angreifer auswählen</h3>
+                                <div class="unit-filter">
+                                    <input 
+                                        type="text" 
+                                        id="attacker-search" 
+                                        class="form-input"
+                                        placeholder="Angreifer suchen..."
+                                        onkeyup="filterUnits('attacker')"
+                                    >
+                                </div>
+                                <div id="attacker-units" class="unit-list"></div>
+                                <div id="selected-attackers" class="selected-units">
+                                    <h4>Ausgewählte Angreifer</h4>
+                                </div>
+                            </div>
+
+                            <!-- Verteidiger Selection -->
+                            <div class="selection-panel">
+                                <h3><i class="material-icons" aria-hidden="true">shield</i> Verteidiger auswählen</h3>
+                                <div class="unit-filter">
+                                    <input 
+                                        type="text" 
+                                        id="defender-search" 
+                                        class="form-input"
+                                        placeholder="Verteidiger suchen..."
+                                        onkeyup="filterUnits('defender')"
+                                    >
+                                </div>
+                                <div id="defender-units" class="unit-list"></div>
+                                <div id="selected-defenders" class="selected-units">
+                                    <h4>Ausgewählte Verteidiger</h4>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="workflow-actions">
+                            <button 
+                                class="btn btn-secondary"
+                                onclick="goToStep('keywords')"
+                            >
+                                <i class="material-icons" aria-hidden="true">arrow_back</i>
+                                Zurück
+                            </button>
+                            <button 
+                                id="start-simulation" 
+                                class="btn btn-primary btn-large"
+                                onclick="goToStep('simulation')"
                                 disabled
-                                aria-describedby="defender-select-help"
-                                onchange="selectDefender()"
                             >
-                                <option value="">-- Verteidiger auswählen --</option>
-                            </select>
-                            <small id="defender-select-help" class="text-muted">
-                                Erst nach dem Laden einer Datei verfügbar
-                            </small>
+                                <i class="material-icons" aria-hidden="true">play_arrow</i>
+                                Zur Simulation
+                            </button>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Step 4: Simulation Configuration -->
+                <section class="card workflow-step" id="step-simulation" aria-labelledby="simulation-heading">
+                    <header class="card-header">
+                        <h2 id="simulation-heading" class="card-title">
+                            <span class="step-number">4</span>
+                            <i class="material-icons" aria-hidden="true">analytics</i>
+                            Schlacht konfigurieren
+                        </h2>
+                    </header>
+                    
+                    <div class="card-body">
+                        <div class="simulation-config">
+                            <div class="config-section">
+                                <h3>Simulationsparameter</h3>
+                                <div class="grid grid-3">
+                                    <div class="form-group">
+                                        <label for="iterations" class="form-label">Iterationen</label>
+                                        <input 
+                                            type="number" 
+                                            id="iterations" 
+                                            class="form-input"
+                                            value="100000"
+                                            min="1000"
+                                            max="1000000"
+                                            step="1000"
+                                        >
+                                        <small class="text-muted">Mehr = genauer, aber langsamer</small>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="form-label">
+                                            <input type="checkbox" id="detailed-analysis" checked style="margin-right: 8px;">
+                                            Detaillierte Analyse
+                                        </label>
+                                        <small class="text-muted">Zusätzliche Statistiken</small>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="form-label">
+                                            <input type="checkbox" id="auto-export" style="margin-right: 8px;">
+                                            Auto-Export
+                                        </label>
+                                        <small class="text-muted">Automatischer PDF-Export</small>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="config-section">
+                                <h3>Schlacht-Übersicht</h3>
+                                <div id="battle-preview" class="battle-preview"></div>
+                            </div>
                         </div>
 
-                        <div id="selected-defenders" class="selected-items" aria-live="polite">
-                            <!-- Ausgewählte Verteidiger werden hier angezeigt -->
+                        <div class="workflow-actions">
+                            <button 
+                                class="btn btn-secondary"
+                                onclick="goToStep('selection')"
+                            >
+                                <i class="material-icons" aria-hidden="true">arrow_back</i>
+                                Zurück
+                            </button>
+                            <button 
+                                id="run-simulation" 
+                                class="btn btn-primary btn-large"
+                                onclick="runAdvancedSimulation()"
+                            >
+                                <i class="material-icons" aria-hidden="true">rocket_launch</i>
+                                Schlacht beginnen!
+                            </button>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Step 5: Results & Analytics -->
+                <section class="card workflow-step" id="step-results" aria-labelledby="results-heading">
+                    <header class="card-header">
+                        <h2 id="results-heading" class="card-title">
+                            <span class="step-number">5</span>
+                            <i class="material-icons" aria-hidden="true">assessment</i>
+                            Schlachtergebnisse & Analyse
+                        </h2>
+                    </header>
+                    
+                    <div class="card-body">
+                        <div id="results-dashboard" class="results-dashboard">
+                            <!-- Results Summary Section -->
+                            <div id="results-summary" class="results-summary-section">
+                                <!-- Summary content will be populated by JavaScript -->
+                            </div>
+                            
+                            <!-- Detailed Analytics Section -->
+                            <div id="detailed-analytics" class="detailed-analytics-section">
+                                <!-- Analytics content will be populated by JavaScript -->
+                            </div>
+                            
+                            <!-- Data Visualization Section -->
+                            <div id="data-visualization" class="data-visualization-section">
+                                <!-- Charts and graphs will be populated by JavaScript -->
+                            </div>
+                            
+                            <!-- Export Options Section -->
+                            <div id="export-options" class="export-options-section">
+                                <!-- Export options will be populated by JavaScript -->
+                            </div>
+                        </div>
+
+                        <div class="workflow-actions">
+                            <button 
+                                class="btn btn-secondary"
+                                onclick="goToStep('simulation')"
+                            >
+                                <i class="material-icons" aria-hidden="true">arrow_back</i>
+                                Simulation wiederholen
+                            </button>
+                            
+                            <button 
+                                class="btn btn-success"
+                                onclick="exportResultsPDF()"
+                                id="export-pdf-btn"
+                            >
+                                <i class="material-icons" aria-hidden="true">picture_as_pdf</i>
+                                PDF-Bericht erstellen
+                            </button>
+                            
+                            <button 
+                                class="btn btn-primary"
+                                onclick="goToStep('import')"
+                            >
+                                <i class="material-icons" aria-hidden="true">refresh</i>
+                                Neue Simulation
+                            </button>
+                        </div>
+                                <i class="material-icons" aria-hidden="true">replay</i>
+                                Neue Simulation
+                            </button>
+                            <button 
+                                class="btn btn-primary"
+                                onclick="exportResults()"
+                            >
+                                <i class="material-icons" aria-hidden="true">download</i>
+                                Ergebnisse exportieren
+                            </button>
                         </div>
                     </div>
                 </section>
             </div>
-
-            <!-- Simulations-Steuerung -->
-            <section 
-                id="simulation-controls" 
-                class="card" 
-                aria-labelledby="simulation-heading"
-            >
-                <header class="card-header">
-                    <h2 id="simulation-heading" class="card-title">
-                        <i class="material-icons" aria-hidden="true">play_arrow</i>
-                        Simulation starten
-                    </h2>
-                </header>
-                
-                <div class="card-body">
-                    <div class="grid grid-3">
-                        <div class="form-group">
-                            <label for="iterations" class="form-label">
-                                Anzahl Simulationen
-                            </label>
-                            <input 
-                                type="number" 
-                                id="iterations" 
-                                class="form-input"
-                                value="10000"
-                                min="100"
-                                max="1000000"
-                                step="100"
-                                aria-describedby="iterations-help"
-                            >
-                            <small id="iterations-help" class="text-muted">
-                                Zwischen 100 und 1.000.000
-                            </small>
-                        </div>
-
-                        <div class="form-group">
-                            <label class="form-label">
-                                <input type="checkbox" id="export-pdf" style="margin-right: 8px;">
-                                Auto-PDF Export
-                            </label>
-                            <small class="text-muted">
-                                PDF nach Simulation automatisch erstellen
-                            </small>
-                        </div>
-
-                        <div class="form-group">
-                            <button 
-                                id="simulate-btn"
-                                class="btn btn-primary btn-large w-full"
-                                onclick="runSimulation()"
-                                disabled
-                                aria-describedby="simulate-help"
-                            >
-                                <i class="material-icons" aria-hidden="true">analytics</i>
-                                Simulation starten
-                            </button>
-                            <small id="simulate-help" class="text-muted">
-                                Waffen und Verteidiger müssen ausgewählt sein
-                            </small>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Ergebnisse Sektion -->
-            <section 
-                id="results" 
-                class="card" 
-                aria-labelledby="results-heading"
-                aria-live="polite"
-                style="display: none;"
-            >
-                <header class="card-header">
-                    <h2 id="results-heading" class="card-title">
-                        <i class="material-icons" aria-hidden="true">assessment</i>
-                        Simulationsergebnisse
-                    </h2>
-                </header>
-                
-                <div class="card-body">
-                    <div id="results-content" role="region" aria-label="Simulationsergebnisse">
-                        <!-- Ergebnisse werden hier eingefügt -->
-                    </div>
-                </div>
-                
-                <footer class="card-footer">
-                    <div class="results-actions">
-                        <div class="button-group">
-                            <button class="btn btn-secondary" onclick="exportToPDF()">
-                                <i class="material-icons" aria-hidden="true">picture_as_pdf</i>
-                                PDF exportieren
-                            </button>
-                            <button class="btn btn-secondary" onclick="clearResults()">
-                                <i class="material-icons" aria-hidden="true">clear</i>
-                                Ergebnisse löschen
-                            </button>
-                        </div>
-                    </div>
-                </footer>
-            </section>
         </main>
 
         <!-- Help & Info Sektion -->
@@ -921,12 +2099,18 @@
         // Enhanced Combat Simulator JavaScript - Version 2.1
         console.log('Warhammer 40k Combat Simulator v2.1 geladen');
         
-        // Global state management
+        // Global state management for new workflow
+        let attackerRoster = null;
+        let defenderRoster = null;
+        let availableKeywords = new Set();
+        let selectedAttackers = [];
+        let selectedDefenders = [];
+        let currentStep = 'import';
+        let currentResults = null;
+        
+        // Legacy compatibility
         let weaponsData = [];
         let defendersData = [];
-        let selectedWeapons = [];
-        let selectedDefenders = [];
-        let currentResults = null;
 
         // Initialize on DOM load
         document.addEventListener('DOMContentLoaded', function() {
@@ -949,8 +2133,1794 @@
             announceToScreenReader('Warhammer 40k Combat Simulator v2.1 geladen');
         }
 
-        // ===== ACCESSIBILITY FUNCTIONS =====
+        // ===== WORKFLOW MANAGEMENT =====
         
+        function goToStep(stepName) {
+            // Hide all steps
+            document.querySelectorAll('.workflow-step').forEach(step => {
+                step.classList.remove('active');
+            });
+            
+            // Show target step
+            const targetStep = document.getElementById(`step-${stepName}`);
+            if (targetStep) {
+                targetStep.classList.add('active');
+                currentStep = stepName;
+                
+                // Step-specific initialization
+                switch(stepName) {
+                    case 'keywords':
+                        displayAvailableKeywords();
+                        validateKeywordStep();
+                        break;
+                    case 'selection':
+                        prepareUnitSelection();
+                        break;
+                    case 'simulation':
+                        prepareBattleSimulation();
+                        break;
+                    case 'results':
+                        displaySimulationResults();
+                        break;
+                }
+                
+                // Update progress and validation
+                validateCurrentStep();
+                announceToScreenReader(`Schritt ${stepName} aktiviert`);
+            }
+        }
+        
+        function validateCurrentStep() {
+            switch(currentStep) {
+                case 'import':
+                    const nextBtn = document.getElementById('next-to-keywords');
+                    if (nextBtn) {
+                        nextBtn.disabled = !(attackerRoster && defenderRoster);
+                    }
+                    break;
+                case 'keywords':
+                    validateKeywordStep();
+                    break;
+                case 'selection':
+                    const simBtn = document.getElementById('start-simulation');
+                    if (simBtn) {
+                        const hasAttackers = selectedAttackers.length > 0;
+                        const hasDefenders = selectedDefenders.length > 0;
+                        simBtn.disabled = !(hasAttackers && hasDefenders);
+                        
+                        // Update button text based on selection state
+                        const btnText = simBtn.querySelector('span') || simBtn.childNodes[2];
+                        if (btnText) {
+                            if (!hasAttackers && !hasDefenders) {
+                                btnText.textContent = ' Einheiten auswählen';
+                            } else if (!hasAttackers) {
+                                btnText.textContent = ' Angreifer auswählen';
+                            } else if (!hasDefenders) {
+                                btnText.textContent = ' Verteidiger auswählen';
+                            } else {
+                                btnText.textContent = ' Zur Simulation';
+                            }
+                        }
+                    }
+                    break;
+                case 'simulation':
+                    validateSimulationSettings();
+                    break;
+            }
+        }
+
+        // ===== DUAL ROSTER LOADING =====
+        
+        async function loadAttackerRoster(event) {
+            const file = event.target.files[0];
+            if (!file) return;
+
+            showLoadingOverlay('Lade Angreifer-Roster...');
+            
+            try {
+                const text = await file.text();
+                const jsonData = JSON.parse(text);
+                
+                // Validate BattleScribe format
+                if (!jsonData.roster || !jsonData.gameSystemName) {
+                    throw new Error('Dies ist keine gültige BattleScribe-Roster-Datei');
+                }
+                
+                const parsedData = parseBattleScribeFile(jsonData);
+                attackerRoster = {
+                    ...parsedData,
+                    fileName: file.name,
+                    loadedAt: new Date().toISOString(),
+                    role: 'attacker'
+                };
+                
+                displayRosterInfo('attacker', attackerRoster);
+                extractKeywords();
+                validateCurrentStep();
+                
+                announceToScreenReader(`Angreifer-Roster ${attackerRoster.rosterName} erfolgreich geladen`);
+                
+            } catch (error) {
+                console.error('Error loading attacker roster:', error);
+                showErrorToast(`Fehler beim Laden des Angreifer-Rosters: ${error.message}`);
+                attackerRoster = null;
+                document.getElementById('attacker-roster-info').style.display = 'none';
+            } finally {
+                hideLoadingOverlay();
+            }
+        }
+        
+        async function loadDefenderRoster(event) {
+            const file = event.target.files[0];
+            if (!file) return;
+
+            showLoadingOverlay('Lade Verteidiger-Roster...');
+            
+            try {
+                const text = await file.text();
+                const jsonData = JSON.parse(text);
+                
+                // Validate BattleScribe format
+                if (!jsonData.roster || !jsonData.gameSystemName) {
+                    throw new Error('Dies ist keine gültige BattleScribe-Roster-Datei');
+                }
+                
+                const parsedData = parseBattleScribeFile(jsonData);
+                defenderRoster = {
+                    ...parsedData,
+                    fileName: file.name,
+                    loadedAt: new Date().toISOString(),
+                    role: 'defender'
+                };
+                
+                displayRosterInfo('defender', defenderRoster);
+                extractKeywords();
+                validateCurrentStep();
+                
+                announceToScreenReader(`Verteidiger-Roster ${defenderRoster.rosterName} erfolgreich geladen`);
+                
+            } catch (error) {
+                console.error('Error loading defender roster:', error);
+                showErrorToast(`Fehler beim Laden des Verteidiger-Rosters: ${error.message}`);
+                defenderRoster = null;
+                document.getElementById('defender-roster-info').style.display = 'none';
+            } finally {
+                hideLoadingOverlay();
+            }
+        }
+        
+        function displayRosterInfo(role, roster) {
+            const infoElement = document.getElementById(`${role}-roster-info`);
+            const importSection = document.getElementById(`${role}-import`);
+            
+            infoElement.innerHTML = `
+                <div class="roster-preview">
+                    <div class="roster-header">
+                        <h4><i class="material-icons" aria-hidden="true">check_circle</i> ${roster.rosterName}</h4>
+                        <span class="roster-points">${roster.points} Punkte</span>
+                    </div>
+                    <div class="roster-stats">
+                        <div class="stat-item">
+                            <i class="material-icons" aria-hidden="true">sports_martial_arts</i>
+                            <span>${roster.weapons.length} Waffen</span>
+                        </div>
+                        <div class="stat-item">
+                            <i class="material-icons" aria-hidden="true">groups</i>
+                            <span>${roster.defenders.length} Einheiten</span>
+                        </div>
+                        <div class="stat-item">
+                            <i class="material-icons" aria-hidden="true">schedule</i>
+                            <span>${new Date(roster.loadedAt).toLocaleTimeString()}</span>
+                        </div>
+                    </div>
+                </div>
+            `;
+            
+            infoElement.style.display = 'block';
+            importSection.classList.add('loaded');
+        }
+        
+        function extractKeywords() {
+            availableKeywords.clear();
+            
+            // Extract from attacker roster
+            if (attackerRoster) {
+                [...attackerRoster.weapons, ...attackerRoster.defenders].forEach(unit => {
+                    if (unit.keywords) {
+                        unit.keywords.split(',').forEach(keyword => {
+                            availableKeywords.add(keyword.trim().toUpperCase());
+                        });
+                    }
+                });
+            }
+            
+            // Extract from defender roster
+            if (defenderRoster) {
+                [...defenderRoster.weapons, ...defenderRoster.defenders].forEach(unit => {
+                    if (unit.keywords) {
+                        unit.keywords.split(',').forEach(keyword => {
+                            availableKeywords.add(keyword.trim().toUpperCase());
+                        });
+                    }
+                });
+            }
+            
+            console.log(`Extracted ${availableKeywords.size} unique keywords from both rosters`);
+            
+            // Update keyword display if we're on the keywords step
+            if (currentStep === 'keywords') {
+                displayAvailableKeywords();
+            }
+        }
+
+        // ===== KEYWORD MANAGEMENT SYSTEM =====
+        
+        function displayAvailableKeywords() {
+            const keywordContainer = document.getElementById('available-keywords');
+            if (!keywordContainer) return;
+            
+            keywordContainer.innerHTML = '';
+            
+            if (availableKeywords.size === 0) {
+                keywordContainer.innerHTML = `
+                    <div class="keyword-empty">
+                        <i class="material-icons" aria-hidden="true">info</i>
+                        <p>Keine Keywords in den geladenen Rosters gefunden.</p>
+                        <p class="text-muted">Sie können eigene Keywords unten hinzufügen.</p>
+                    </div>
+                `;
+                return;
+            }
+            
+            const sortedKeywords = Array.from(availableKeywords).sort();
+            
+            sortedKeywords.forEach(keyword => {
+                const keywordTag = createKeywordTag(keyword);
+                keywordContainer.appendChild(keywordTag);
+            });
+            
+            announceToScreenReader(`${availableKeywords.size} Keywords verfügbar`);
+        }
+        
+        function createKeywordTag(keyword, isCustom = false) {
+            const tag = document.createElement('div');
+            tag.className = `keyword-tag ${isCustom ? 'custom' : 'extracted'}`;
+            tag.setAttribute('data-keyword', keyword);
+            
+            const icon = isCustom ? 'edit' : 'auto_awesome';
+            const title = isCustom ? 'Benutzerdefiniertes Keyword' : 'Aus Roster extrahiert';
+            
+            tag.innerHTML = `
+                <i class="material-icons keyword-icon" aria-hidden="true" title="${title}">${icon}</i>
+                <span class="keyword-text">${keyword}</span>
+                <button 
+                    class="keyword-remove" 
+                    onclick="removeKeyword('${keyword}')"
+                    aria-label="Keyword ${keyword} entfernen"
+                    title="Keyword entfernen"
+                >
+                    <i class="material-icons" aria-hidden="true">close</i>
+                </button>
+            `;
+            
+            return tag;
+        }
+        
+        function addCustomKeyword() {
+            const input = document.getElementById('custom-keyword');
+            const keyword = input.value.trim().toUpperCase();
+            
+            if (!keyword) {
+                showErrorToast('Bitte geben Sie ein Keyword ein');
+                input.focus();
+                return;
+            }
+            
+            if (availableKeywords.has(keyword)) {
+                showErrorToast('Dieses Keyword existiert bereits');
+                input.focus();
+                return;
+            }
+            
+            // Validate keyword format (no special characters except underscore)
+            if (!/^[A-Z0-9_\s]+$/.test(keyword)) {
+                showErrorToast('Keywords dürfen nur Buchstaben, Zahlen, Unterstriche und Leerzeichen enthalten');
+                input.focus();
+                return;
+            }
+            
+            availableKeywords.add(keyword);
+            
+            // Add to display
+            const keywordContainer = document.getElementById('available-keywords');
+            const keywordTag = createKeywordTag(keyword, true);
+            keywordContainer.appendChild(keywordTag);
+            
+            // Clear input
+            input.value = '';
+            input.focus();
+            
+            announceToScreenReader(`Keyword ${keyword} hinzugefügt`);
+        }
+        
+        function removeKeyword(keyword) {
+            // Check if keyword is used in any loaded units
+            const isUsedInAttacker = attackerRoster && 
+                [...attackerRoster.weapons, ...attackerRoster.defenders].some(unit => 
+                    unit.keywords && unit.keywords.toUpperCase().includes(keyword)
+                );
+                
+            const isUsedInDefender = defenderRoster && 
+                [...defenderRoster.weapons, ...defenderRoster.defenders].some(unit => 
+                    unit.keywords && unit.keywords.toUpperCase().includes(keyword)
+                );
+            
+            if (isUsedInAttacker || isUsedInDefender) {
+                const confirmed = confirm(
+                    `Das Keyword "${keyword}" wird in den geladenen Rosters verwendet. ` +
+                    `Wenn Sie es entfernen, kann es die Filterung beeinträchtigen. ` +
+                    `Möchten Sie es trotzdem entfernen?`
+                );
+                
+                if (!confirmed) {
+                    return;
+                }
+            }
+            
+            availableKeywords.delete(keyword);
+            
+            // Remove from display
+            const keywordTag = document.querySelector(`[data-keyword="${keyword}"]`);
+            if (keywordTag) {
+                keywordTag.remove();
+            }
+            
+            announceToScreenReader(`Keyword ${keyword} entfernt`);
+        }
+        
+        function handleKeywordEnter(event) {
+            if (event.key === 'Enter') {
+                event.preventDefault();
+                addCustomKeyword();
+            }
+        }
+        
+        function searchKeywords() {
+            const searchTerm = document.getElementById('keyword-search').value.toLowerCase();
+            const keywordTags = document.querySelectorAll('.keyword-tag');
+            
+            keywordTags.forEach(tag => {
+                const keyword = tag.querySelector('.keyword-text').textContent.toLowerCase();
+                const isVisible = keyword.includes(searchTerm);
+                tag.style.display = isVisible ? 'flex' : 'none';
+            });
+            
+            const visibleCount = Array.from(keywordTags).filter(tag => tag.style.display !== 'none').length;
+            announceToScreenReader(`${visibleCount} Keywords gefunden`);
+        }
+        
+        function validateKeywordStep() {
+            // Keywords step is always valid - user can proceed with or without keywords
+            const nextBtn = document.getElementById('next-to-selection');
+            if (nextBtn) {
+                nextBtn.disabled = false;
+            }
+            
+            // Auto-populate unit selection data when keywords are ready
+            if (attackerRoster && defenderRoster) {
+                prepareUnitSelection();
+            }
+        }
+        
+        function prepareUnitSelection() {
+            console.log('Preparing unit selection with available keywords:', Array.from(availableKeywords));
+            
+            // This will be called when transitioning to selection step
+            if (currentStep === 'selection') {
+                displayAttackerUnits();
+                displayDefenderUnits();
+                updateSelectedUnitsDisplay();
+            }
+        }
+
+        // ===== UNIT SELECTION SYSTEM =====
+        
+        function displayAttackerUnits() {
+            const container = document.getElementById('attacker-units');
+            if (!container || !attackerRoster) return;
+            
+            container.innerHTML = '';
+            
+            const allAttackerUnits = [...attackerRoster.weapons, ...attackerRoster.defenders];
+            
+            if (allAttackerUnits.length === 0) {
+                container.innerHTML = `
+                    <div class="unit-empty">
+                        <i class="material-icons" aria-hidden="true">info</i>
+                        <p>Keine Angreifer-Einheiten im Roster gefunden.</p>
+                    </div>
+                `;
+                return;
+            }
+            
+            allAttackerUnits.forEach(unit => {
+                const unitCard = createSelectableUnitCard(unit, 'attacker');
+                container.appendChild(unitCard);
+            });
+            
+            announceToScreenReader(`${allAttackerUnits.length} Angreifer-Einheiten verfügbar`);
+        }
+        
+        function displayDefenderUnits() {
+            const container = document.getElementById('defender-units');
+            if (!container || !defenderRoster) return;
+            
+            container.innerHTML = '';
+            
+            // Only use defenders from defender roster for defensive units
+            const defenderUnits = defenderRoster.defenders;
+            
+            if (defenderUnits.length === 0) {
+                container.innerHTML = `
+                    <div class="unit-empty">
+                        <i class="material-icons" aria-hidden="true">info</i>
+                        <p>Keine Verteidiger-Einheiten im Roster gefunden.</p>
+                    </div>
+                `;
+                return;
+            }
+            
+            defenderUnits.forEach(unit => {
+                const unitCard = createSelectableUnitCard(unit, 'defender');
+                container.appendChild(unitCard);
+            });
+            
+            announceToScreenReader(`${defenderUnits.length} Verteidiger-Einheiten verfügbar`);
+        }
+        
+        function createSelectableUnitCard(unit, role) {
+            const card = document.createElement('div');
+            card.className = 'unit-card selectable';
+            card.setAttribute('data-unit-id', unit.id);
+            card.setAttribute('data-role', role);
+            card.setAttribute('role', 'button');
+            card.setAttribute('tabindex', '0');
+            card.setAttribute('aria-label', `${unit.name} auswählen`);
+            
+            // Determine if unit is a weapon or defender
+            const isWeapon = unit.attacks !== undefined;
+            const typeIcon = isWeapon ? 
+                (unit.type === 'Melee' ? 'sports_martial_arts' : 'gps_fixed') :
+                (unit.type === 'Vehicle' ? 'directions_car' : 
+                 unit.type === 'Monster' ? 'pest_control' : 
+                 unit.type === 'Character' ? 'person' : 'groups');
+            
+            const keywords = unit.keywords || '';
+            const keywordTags = keywords ? 
+                keywords.split(',').map(k => `<span class="keyword-mini">${k.trim()}</span>`).join('') : 
+                '<span class="keyword-mini no-keywords">Keine Keywords</span>';
+            
+            // Create stats display based on unit type
+            let statsDisplay = '';
+            if (isWeapon) {
+                statsDisplay = `
+                    <div class="unit-stats">
+                        <div class="stat"><span class="stat-label">A:</span> ${unit.attacks}</div>
+                        <div class="stat"><span class="stat-label">H:</span> ${unit.skill}+</div>
+                        <div class="stat"><span class="stat-label">S:</span> ${unit.strength}</div>
+                        <div class="stat"><span class="stat-label">AP:</span> -${unit.ap}</div>
+                        <div class="stat"><span class="stat-label">D:</span> ${unit.damage}</div>
+                    </div>
+                `;
+            } else {
+                const saveText = unit.save === 7 ? '-' : `${unit.save}+`;
+                const invulnText = unit.invulnSave ? `${unit.invulnSave}++` : '-';
+                const fnpText = unit.feelNoPain ? `${unit.feelNoPain}+++` : '-';
+                
+                statsDisplay = `
+                    <div class="unit-stats">
+                        <div class="stat"><span class="stat-label">T:</span> ${unit.toughness}</div>
+                        <div class="stat"><span class="stat-label">RW:</span> ${saveText}</div>
+                        <div class="stat"><span class="stat-label">UW:</span> ${invulnText}</div>
+                        <div class="stat"><span class="stat-label">W:</span> ${unit.wounds}</div>
+                        <div class="stat"><span class="stat-label">FNP:</span> ${fnpText}</div>
+                    </div>
+                `;
+            }
+            
+            card.innerHTML = `
+                <div class="unit-header">
+                    <div class="unit-title">
+                        <i class="material-icons unit-icon" aria-hidden="true">${typeIcon}</i>
+                        <span class="unit-name">${unit.name}</span>
+                        <span class="unit-type-badge">${isWeapon ? 'Waffe' : 'Einheit'}</span>
+                    </div>
+                    <div class="unit-select-checkbox">
+                        <i class="material-icons" aria-hidden="true">add_circle_outline</i>
+                    </div>
+                </div>
+                ${statsDisplay}
+                <div class="unit-keywords">
+                    ${keywordTags}
+                </div>
+            `;
+            
+            // Add click handler
+            card.addEventListener('click', () => selectUnit(unit, role));
+            card.addEventListener('keydown', (e) => {
+                if (e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault();
+                    selectUnit(unit, role);
+                }
+            });
+            
+            return card;
+        }
+        
+        function selectUnit(unit, role) {
+            const isWeapon = unit.attacks !== undefined;
+            const targetArray = role === 'attacker' ? selectedAttackers : selectedDefenders;
+            
+            // Check if already selected
+            if (targetArray.find(u => u.id === unit.id)) {
+                showErrorToast(`Diese ${isWeapon ? 'Waffe' : 'Einheit'} ist bereits ausgewählt`);
+                return;
+            }
+            
+            // Add to selection
+            targetArray.push({ ...unit, selectionRole: role });
+            
+            // Update displays
+            updateSelectedUnitsDisplay();
+            updateUnitCardSelection(unit.id, true);
+            validateCurrentStep();
+            
+            const unitType = isWeapon ? 'Waffe' : 'Einheit';
+            announceToScreenReader(`${unitType} ${unit.name} als ${role === 'attacker' ? 'Angreifer' : 'Verteidiger'} ausgewählt`);
+        }
+        
+        function unselectUnit(unitId, role) {
+            const targetArray = role === 'attacker' ? selectedAttackers : selectedDefenders;
+            const unit = targetArray.find(u => u.id === unitId);
+            
+            if (!unit) return;
+            
+            // Remove from selection
+            if (role === 'attacker') {
+                selectedAttackers = selectedAttackers.filter(u => u.id !== unitId);
+            } else {
+                selectedDefenders = selectedDefenders.filter(u => u.id !== unitId);
+            }
+            
+            // Update displays
+            updateSelectedUnitsDisplay();
+            updateUnitCardSelection(unitId, false);
+            validateCurrentStep();
+            
+            const unitType = unit.attacks !== undefined ? 'Waffe' : 'Einheit';
+            announceToScreenReader(`${unitType} ${unit.name} entfernt`);
+        }
+        
+        function updateUnitCardSelection(unitId, isSelected) {
+            const unitCard = document.querySelector(`[data-unit-id="${unitId}"]`);
+            if (!unitCard) return;
+            
+            const checkbox = unitCard.querySelector('.unit-select-checkbox i');
+            
+            if (isSelected) {
+                unitCard.classList.add('selected');
+                checkbox.textContent = 'check_circle';
+                unitCard.setAttribute('aria-label', unitCard.getAttribute('aria-label').replace('auswählen', 'abwählen'));
+            } else {
+                unitCard.classList.remove('selected');
+                checkbox.textContent = 'add_circle_outline';
+                unitCard.setAttribute('aria-label', unitCard.getAttribute('aria-label').replace('abwählen', 'auswählen'));
+            }
+        }
+        
+        function updateSelectedUnitsDisplay() {
+            updateSelectedAttackersDisplay();
+            updateSelectedDefendersDisplay();
+        }
+        
+        function updateSelectedAttackersDisplay() {
+            const container = document.getElementById('selected-attackers');
+            if (!container) return;
+            
+            container.innerHTML = '<h4>Ausgewählte Angreifer</h4>';
+            
+            if (selectedAttackers.length === 0) {
+                container.innerHTML += `
+                    <div class="selected-empty">
+                        <i class="material-icons" aria-hidden="true">info</i>
+                        <p>Keine Angreifer ausgewählt</p>
+                    </div>
+                `;
+                return;
+            }
+            
+            selectedAttackers.forEach(unit => {
+                const unitSummary = createSelectedUnitSummary(unit, 'attacker');
+                container.appendChild(unitSummary);
+            });
+        }
+        
+        function updateSelectedDefendersDisplay() {
+            const container = document.getElementById('selected-defenders');
+            if (!container) return;
+            
+            container.innerHTML = '<h4>Ausgewählte Verteidiger</h4>';
+            
+            if (selectedDefenders.length === 0) {
+                container.innerHTML += `
+                    <div class="selected-empty">
+                        <i class="material-icons" aria-hidden="true">info</i>
+                        <p>Keine Verteidiger ausgewählt</p>
+                    </div>
+                `;
+                return;
+            }
+            
+            selectedDefenders.forEach(unit => {
+                const unitSummary = createSelectedUnitSummary(unit, 'defender');
+                container.appendChild(unitSummary);
+            });
+        }
+        
+        function createSelectedUnitSummary(unit, role) {
+            const summary = document.createElement('div');
+            summary.className = 'selected-unit-summary';
+            summary.setAttribute('data-unit-id', unit.id);
+            
+            const isWeapon = unit.attacks !== undefined;
+            const typeIcon = isWeapon ? 
+                (unit.type === 'Melee' ? 'sports_martial_arts' : 'gps_fixed') :
+                (unit.type === 'Vehicle' ? 'directions_car' : 
+                 unit.type === 'Monster' ? 'pest_control' : 
+                 unit.type === 'Character' ? 'person' : 'groups');
+            
+            summary.innerHTML = `
+                <div class="summary-header">
+                    <i class="material-icons" aria-hidden="true">${typeIcon}</i>
+                    <span class="summary-name">${unit.name}</span>
+                    <button 
+                        class="btn btn-icon btn-small"
+                        onclick="unselectUnit(${unit.id}, '${role}')"
+                        aria-label="${unit.name} entfernen"
+                        title="Aus Auswahl entfernen"
+                    >
+                        <i class="material-icons" aria-hidden="true">close</i>
+                    </button>
+                </div>
+                <div class="summary-type">${isWeapon ? 'Waffe' : 'Einheit'} • ${unit.type}</div>
+            `;
+            
+            return summary;
+        }
+        
+        function filterUnits(role) {
+            const searchInput = document.getElementById(`${role}-search`);
+            const searchTerm = searchInput ? searchInput.value.toLowerCase() : '';
+            const container = document.getElementById(`${role}-units`);
+            
+            if (!container) return;
+            
+            const unitCards = container.querySelectorAll('.unit-card');
+            let visibleCount = 0;
+            
+            unitCards.forEach(card => {
+                const unitName = card.querySelector('.unit-name').textContent.toLowerCase();
+                const keywords = Array.from(card.querySelectorAll('.keyword-mini'))
+                    .map(tag => tag.textContent.toLowerCase())
+                    .join(' ');
+                
+                const isVisible = unitName.includes(searchTerm) || keywords.includes(searchTerm);
+                card.style.display = isVisible ? 'block' : 'none';
+                
+                if (isVisible) visibleCount++;
+            });
+            
+            announceToScreenReader(`${visibleCount} ${role === 'attacker' ? 'Angreifer' : 'Verteidiger'} gefunden`);
+        }
+
+        // ===== ADVANCED SIMULATION SYSTEM =====
+        
+        function prepareBattleSimulation() {
+            generateBattlePreview();
+            validateSimulationSettings();
+            announceToScreenReader('Schlacht-Konfiguration geladen');
+        }
+        
+        function generateBattlePreview() {
+            const previewContainer = document.getElementById('battle-preview');
+            if (!previewContainer) return;
+            
+            const totalAttackers = selectedAttackers.length;
+            const totalDefenders = selectedDefenders.length;
+            
+            if (totalAttackers === 0 || totalDefenders === 0) {
+                previewContainer.innerHTML = `
+                    <div class="preview-empty">
+                        <i class="material-icons" aria-hidden="true">warning</i>
+                        <p>Keine Einheiten für die Schlacht ausgewählt</p>
+                        <p class="text-muted">Gehen Sie zurück zu Schritt 3 um Einheiten auszuwählen</p>
+                    </div>
+                `;
+                return;
+            }
+            
+            // Separate weapons and defenders for detailed preview
+            const attackerWeapons = selectedAttackers.filter(u => u.attacks !== undefined);
+            const attackerUnits = selectedAttackers.filter(u => u.attacks === undefined);
+            const defenderUnits = selectedDefenders;
+            
+            // Calculate estimated battle metrics
+            const totalAttacks = attackerWeapons.reduce((sum, w) => {
+                const attacks = typeof w.attacks === 'string' ? 
+                    (w.attacks.includes('D') ? 3.5 : parseInt(w.attacks) || 1) : 
+                    w.attacks || 1;
+                return sum + attacks;
+            }, 0);
+            
+            const totalWounds = defenderUnits.reduce((sum, d) => sum + (d.wounds || 1), 0);
+            const avgToughness = defenderUnits.reduce((sum, d) => sum + (d.toughness || 4), 0) / defenderUnits.length;
+            const avgSave = defenderUnits.reduce((sum, d) => sum + (d.save === 7 ? 7 : d.save || 3), 0) / defenderUnits.length;
+            
+            previewContainer.innerHTML = `
+                <div class="battle-stats">
+                    <div class="battle-stat-group">
+                        <h4><i class="material-icons" aria-hidden="true">gps_fixed</i> Angriffskraft</h4>
+                        <div class="stat-grid">
+                            <div class="stat-item">
+                                <span class="stat-value">${attackerWeapons.length}</span>
+                                <span class="stat-label">Waffen</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-value">${Math.round(totalAttacks)}</span>
+                                <span class="stat-label">Ø Angriffe</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-value">${attackerUnits.length}</span>
+                                <span class="stat-label">Support-Einheiten</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="battle-stat-group">
+                        <h4><i class="material-icons" aria-hidden="true">shield</i> Verteidigung</h4>
+                        <div class="stat-grid">
+                            <div class="stat-item">
+                                <span class="stat-value">${defenderUnits.length}</span>
+                                <span class="stat-label">Einheiten</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-value">${totalWounds}</span>
+                                <span class="stat-label">LP Total</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-value">${avgToughness.toFixed(1)} / ${avgSave.toFixed(1)}+</span>
+                                <span class="stat-label">Ø T / RW</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="battle-units">
+                    <div class="battle-unit-list">
+                        <h5>Ausgewählte Waffen (${attackerWeapons.length})</h5>
+                        <div class="unit-chips">
+                            ${attackerWeapons.map(w => `
+                                <span class="unit-chip weapon">${w.name}</span>
+                            `).join('')}
+                        </div>
+                    </div>
+                    
+                    <div class="battle-unit-list">
+                        <h5>Ziel-Einheiten (${defenderUnits.length})</h5>
+                        <div class="unit-chips">
+                            ${defenderUnits.map(d => `
+                                <span class="unit-chip defender">${d.name}</span>
+                            `).join('')}
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="battle-estimation">
+                    <div class="estimation-card">
+                        <h5><i class="material-icons" aria-hidden="true">trending_up</i> Kampf-Prognose</h5>
+                        <p class="text-muted">
+                            Geschätzte Simulation mit ${document.getElementById('iterations')?.value || 100000} Iterationen.
+                            Ergebnis verfügbar in ca. ${Math.ceil((totalAttackers * totalDefenders) / 10000)} Sekunden.
+                        </p>
+                    </div>
+                </div>
+            `;
+        }
+        
+        function validateSimulationSettings() {
+            const iterations = parseInt(document.getElementById('iterations')?.value) || 100000;
+            const runBtn = document.getElementById('run-simulation');
+            
+            if (iterations < 1000 || iterations > 1000000) {
+                runBtn.disabled = true;
+                runBtn.title = 'Iterationen müssen zwischen 1.000 und 1.000.000 liegen';
+            } else if (selectedAttackers.length === 0 || selectedDefenders.length === 0) {
+                runBtn.disabled = true;
+                runBtn.title = 'Angreifer und Verteidiger müssen ausgewählt sein';
+            } else {
+                runBtn.disabled = false;
+                runBtn.title = 'Schlacht starten';
+            }
+        }
+        
+        async function runAdvancedSimulation() {
+            // Validation
+            if (selectedAttackers.length === 0 || selectedDefenders.length === 0) {
+                showErrorToast('Bitte wählen Sie Angreifer und Verteidiger aus');
+                return;
+            }
+            
+            const iterations = parseInt(document.getElementById('iterations')?.value) || 100000;
+            const detailedAnalysis = document.getElementById('detailed-analysis')?.checked || false;
+            const autoExport = document.getElementById('auto-export')?.checked || false;
+            
+            if (iterations < 1000 || iterations > 1000000) {
+                showErrorToast('Anzahl Iterationen muss zwischen 1.000 und 1.000.000 liegen');
+                return;
+            }
+            
+            showLoadingOverlay('Kampfsimulation wird vorbereitet...');
+            
+            try {
+                // Prepare simulation data
+                const attackerWeapons = selectedAttackers.filter(u => u.attacks !== undefined);
+                const defenderUnits = selectedDefenders;
+                
+                if (attackerWeapons.length === 0) {
+                    throw new Error('Keine Waffen zum Angriff ausgewählt');
+                }
+                
+                const simulationData = {
+                    weapons: attackerWeapons,
+                    defenders: defenderUnits,
+                    iterations: iterations,
+                    detailedAnalysis: detailedAnalysis,
+                    autoExport: autoExport,
+                    timestamp: new Date().toISOString(),
+                    keywords: Array.from(availableKeywords)
+                };
+                
+                // Run the advanced simulation
+                const results = await executeAdvancedSimulation(simulationData);
+                
+                // Store results globally
+                currentResults = results;
+                
+                // Navigate to results step
+                goToStep('results');
+                
+                // Auto-export if requested
+                if (autoExport) {
+                    setTimeout(() => exportResults(), 1000);
+                }
+                
+                announceToScreenReader('Kampfsimulation erfolgreich abgeschlossen');
+                
+            } catch (error) {
+                console.error('Advanced simulation error:', error);
+                showErrorToast(`Fehler bei der Simulation: ${error.message}`);
+            } finally {
+                hideLoadingOverlay();
+            }
+        }
+        
+        async function executeAdvancedSimulation(simulationData) {
+            const { weapons, defenders, iterations, detailedAnalysis } = simulationData;
+            
+            // Update loading overlay with progress
+            const updateProgress = (current, total, phase) => {
+                const progressElement = document.getElementById('loading-progress');
+                if (progressElement) {
+                    const percentage = Math.round((current / total) * 100);
+                    progressElement.textContent = `${phase}: ${percentage}% (${current.toLocaleString()}/${total.toLocaleString()})`;
+                }
+            };
+            
+            const results = {
+                ...simulationData,
+                combatResults: [],
+                statistics: {
+                    totalDamageDealt: 0,
+                    totalHits: 0,
+                    totalAttacks: 0,
+                    averageDamagePerRound: 0,
+                    killProbability: {},
+                    weaponEffectiveness: {},
+                    defenderSurvival: {}
+                },
+                detailedBreakdown: detailedAnalysis ? {} : null
+            };
+            
+            // Simulate each weapon against each defender
+            const totalCombinations = weapons.length * defenders.length;
+            let currentCombination = 0;
+            
+            updateProgress(0, iterations, 'Initialisierung');
+            
+            for (const weapon of weapons) {
+                results.statistics.weaponEffectiveness[weapon.name] = {
+                    totalDamage: 0,
+                    totalHits: 0,
+                    averageDamagePerHit: 0,
+                    hitRate: 0
+                };
+                
+                for (const defender of defenders) {
+                    currentCombination++;
+                    updateProgress(currentCombination * 1000, totalCombinations * iterations, 'Kampfsimulation');
+                    
+                    const combatResult = await simulateCombat(weapon, defender, iterations, updateProgress);
+                    results.combatResults.push(combatResult);
+                    
+                    // Aggregate statistics
+                    results.statistics.totalDamageDealt += combatResult.totalDamage;
+                    results.statistics.totalHits += combatResult.totalHits;
+                    results.statistics.totalAttacks += combatResult.totalAttacks;
+                    
+                    // Update weapon effectiveness
+                    const weaponStats = results.statistics.weaponEffectiveness[weapon.name];
+                    weaponStats.totalDamage += combatResult.totalDamage;
+                    weaponStats.totalHits += combatResult.totalHits;
+                    
+                    // Initialize defender survival if not exists
+                    if (!results.statistics.defenderSurvival[defender.name]) {
+                        results.statistics.defenderSurvival[defender.name] = {
+                            damageReceived: 0,
+                            survivalRate: 0,
+                            averageWoundsRemaining: 0
+                        };
+                    }
+                    
+                    const defenderStats = results.statistics.defenderSurvival[defender.name];
+                    defenderStats.damageReceived += combatResult.totalDamage;
+                    defenderStats.survivalRate = combatResult.survivalRate;
+                    defenderStats.averageWoundsRemaining = combatResult.averageWoundsRemaining;
+                    
+                    // Detailed breakdown if requested
+                    if (detailedAnalysis) {
+                        const key = `${weapon.name}_vs_${defender.name}`;
+                        results.detailedBreakdown[key] = {
+                            weapon: weapon.name,
+                            defender: defender.name,
+                            damageDistribution: combatResult.damageDistribution,
+                            hitDistribution: combatResult.hitDistribution,
+                            criticalHits: combatResult.criticalHits || 0
+                        };
+                    }
+                }
+            }
+            
+            // Calculate final statistics
+            results.statistics.averageDamagePerRound = results.statistics.totalDamageDealt / iterations;
+            
+            // Calculate weapon effectiveness averages
+            for (const weaponName in results.statistics.weaponEffectiveness) {
+                const stats = results.statistics.weaponEffectiveness[weaponName];
+                stats.averageDamagePerHit = stats.totalHits > 0 ? stats.totalDamage / stats.totalHits : 0;
+                stats.hitRate = results.statistics.totalAttacks > 0 ? stats.totalHits / results.statistics.totalAttacks : 0;
+            }
+            
+            updateProgress(iterations, iterations, 'Analyse abgeschlossen');
+            
+            return results;
+        }
+        
+        async function simulateCombat(weapon, defender, iterations, updateProgress) {
+            const result = {
+                weapon: weapon.name,
+                defender: defender.name,
+                totalDamage: 0,
+                totalHits: 0,
+                totalAttacks: 0,
+                survivalRate: 0,
+                averageWoundsRemaining: 0,
+                damageDistribution: {},
+                hitDistribution: {},
+                killCount: 0
+            };
+            
+            // Parse weapon stats
+            const attacks = typeof weapon.attacks === 'string' ? 
+                (weapon.attacks.includes('D') ? Math.floor(Math.random() * 6) + 1 : parseInt(weapon.attacks)) : 
+                weapon.attacks;
+            const hitThreshold = weapon.skill || 4;
+            const strength = weapon.strength || 4;
+            const ap = weapon.ap || 0;
+            const damage = typeof weapon.damage === 'string' ? 
+                (weapon.damage.includes('D') ? Math.floor(Math.random() * 6) + 1 : parseInt(weapon.damage)) : 
+                weapon.damage;
+            
+            // Parse defender stats
+            const toughness = defender.toughness || 4;
+            const save = defender.save || 3;
+            const invulnSave = defender.invulnSave;
+            const wounds = defender.wounds || 1;
+            const feelNoPain = defender.feelNoPain;
+            
+            // Calculate wound threshold
+            let woundThreshold = 4;
+            if (strength >= toughness * 2) woundThreshold = 2;
+            else if (strength > toughness) woundThreshold = 3;
+            else if (strength === toughness) woundThreshold = 4;
+            else if (strength * 2 <= toughness) woundThreshold = 6;
+            else woundThreshold = 5;
+            
+            // Run simulation iterations
+            for (let i = 0; i < iterations; i++) {
+                if (i % 10000 === 0 && updateProgress) {
+                    updateProgress(i, iterations, `${weapon.name} vs ${defender.name}`);
+                    // Allow UI to update
+                    await new Promise(resolve => setTimeout(resolve, 1));
+                }
+                
+                let defenderWounds = wounds;
+                let totalDamageThisRound = 0;
+                let hitsThisRound = 0;
+                
+                // Roll attacks
+                for (let attack = 0; attack < attacks; attack++) {
+                    result.totalAttacks++;
+                    
+                    // Hit roll
+                    const hitRoll = Math.floor(Math.random() * 6) + 1;
+                    if (hitRoll < hitThreshold) continue;
+                    
+                    result.totalHits++;
+                    hitsThisRound++;
+                    
+                    // Wound roll
+                    const woundRoll = Math.floor(Math.random() * 6) + 1;
+                    if (woundRoll < woundThreshold) continue;
+                    
+                    // Save roll
+                    const effectiveSave = Math.max(save + ap, invulnSave || 7);
+                    if (effectiveSave <= 6) {
+                        const saveRoll = Math.floor(Math.random() * 6) + 1;
+                        if (saveRoll >= effectiveSave) continue;
+                    }
+                    
+                    // Feel No Pain
+                    if (feelNoPain) {
+                        const fnpRoll = Math.floor(Math.random() * 6) + 1;
+                        if (fnpRoll >= feelNoPain) continue;
+                    }
+                    
+                    // Apply damage
+                    const actualDamage = Math.min(damage, defenderWounds);
+                    defenderWounds -= actualDamage;
+                    totalDamageThisRound += actualDamage;
+                    result.totalDamage += actualDamage;
+                    
+                    if (defenderWounds <= 0) {
+                        result.killCount++;
+                        break;
+                    }
+                }
+                
+                // Track distributions
+                result.damageDistribution[totalDamageThisRound] = (result.damageDistribution[totalDamageThisRound] || 0) + 1;
+                result.hitDistribution[hitsThisRound] = (result.hitDistribution[hitsThisRound] || 0) + 1;
+                
+                // Track survival
+                if (defenderWounds > 0) {
+                    result.averageWoundsRemaining += defenderWounds;
+                }
+            }
+            
+            // Calculate final statistics
+            result.survivalRate = (iterations - result.killCount) / iterations;
+            result.averageWoundsRemaining = result.averageWoundsRemaining / Math.max(iterations - result.killCount, 1);
+            
+            return result;
+        }
+
+        // ===== RESULTS DASHBOARD & ANALYTICS =====
+        
+        function displaySimulationResults() {
+            if (!currentResults) {
+                showErrorToast('Keine Simulationsergebnisse verfügbar');
+                return;
+            }
+            
+            console.log('Displaying simulation results:', currentResults);
+            
+            // Generate comprehensive results display
+            generateResultsSummary();
+            generateDetailedAnalytics();
+            generateDataVisualization();
+            generateExportOptions();
+            
+            announceToScreenReader('Simulationsergebnisse erfolgreich geladen');
+        }
+        
+        function generateResultsSummary() {
+            const summaryContainer = document.getElementById('results-summary');
+            if (!summaryContainer) return;
+            
+            const { statistics, combatResults, weapons, defenders, iterations } = currentResults;
+            
+            // Calculate key metrics
+            const totalCombinations = combatResults.length;
+            const averageDamagePerIteration = statistics.totalDamageDealt / iterations;
+            const overallHitRate = statistics.totalAttacks > 0 ? (statistics.totalHits / statistics.totalAttacks * 100) : 0;
+            const totalDefenderWounds = defenders.reduce((sum, d) => sum + (d.wounds || 1), 0);
+            const damageEfficiency = totalDefenderWounds > 0 ? (statistics.totalDamageDealt / (iterations * totalDefenderWounds) * 100) : 0;
+            
+            // Find most/least effective combinations
+            const sortedResults = [...combatResults].sort((a, b) => b.totalDamage - a.totalDamage);
+            const mostEffective = sortedResults[0];
+            const leastEffective = sortedResults[sortedResults.length - 1];
+            
+            summaryContainer.innerHTML = `
+                <div class="results-header">
+                    <div class="results-title">
+                        <h3><i class="material-icons" aria-hidden="true">analytics</i> Simulationsergebnisse</h3>
+                        <div class="results-meta">
+                            <span class="meta-item">
+                                <i class="material-icons" aria-hidden="true">repeat</i>
+                                ${iterations.toLocaleString()} Iterationen
+                            </span>
+                            <span class="meta-item">
+                                <i class="material-icons" aria-hidden="true">schedule</i>
+                                ${new Date(currentResults.timestamp).toLocaleString()}
+                            </span>
+                            <span class="meta-item">
+                                <i class="material-icons" aria-hidden="true">memory</i>
+                                ${totalCombinations} Kampf-Kombinationen
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="results-grid">
+                    <div class="result-card primary">
+                        <div class="card-header">
+                            <i class="material-icons" aria-hidden="true">trending_up</i>
+                            <h4>Gesamtschaden</h4>
+                        </div>
+                        <div class="card-content">
+                            <div class="primary-metric">${statistics.totalDamageDealt.toLocaleString()}</div>
+                            <div class="metric-subtitle">Über alle Kombinationen</div>
+                            <div class="metric-detail">Ø ${averageDamagePerIteration.toFixed(2)} pro Iteration</div>
+                        </div>
+                    </div>
+                    
+                    <div class="result-card">
+                        <div class="card-header">
+                            <i class="material-icons" aria-hidden="true">gps_fixed</i>
+                            <h4>Trefferquote</h4>
+                        </div>
+                        <div class="card-content">
+                            <div class="primary-metric">${overallHitRate.toFixed(1)}%</div>
+                            <div class="metric-subtitle">${statistics.totalHits.toLocaleString()} / ${statistics.totalAttacks.toLocaleString()} Treffer</div>
+                        </div>
+                    </div>
+                    
+                    <div class="result-card">
+                        <div class="card-header">
+                            <i class="material-icons" aria-hidden="true">speed</i>
+                            <h4>Schadenseffizienz</h4>
+                        </div>
+                        <div class="card-content">
+                            <div class="primary-metric">${damageEfficiency.toFixed(1)}%</div>
+                            <div class="metric-subtitle">Relative Vernichtungskraft</div>
+                        </div>
+                    </div>
+                    
+                    <div class="result-card">
+                        <div class="card-header">
+                            <i class="material-icons" aria-hidden="true">military_tech</i>
+                            <h4>Beste Kombination</h4>
+                        </div>
+                        <div class="card-content">
+                            <div class="combo-display">
+                                <div class="combo-weapon">${mostEffective.weapon}</div>
+                                <i class="material-icons combo-arrow" aria-hidden="true">arrow_forward</i>
+                                <div class="combo-target">${mostEffective.defender}</div>
+                            </div>
+                            <div class="metric-detail">${mostEffective.totalDamage.toLocaleString()} Schaden</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="battlefield-overview">
+                    <h4><i class="material-icons" aria-hidden="true">map</i> Schlachtfeld-Übersicht</h4>
+                    <div class="battlefield-stats">
+                        <div class="battlefield-section">
+                            <h5>Angriffskräfte</h5>
+                            <div class="force-list">
+                                ${weapons.map(w => `
+                                    <div class="force-item weapon">
+                                        <i class="material-icons" aria-hidden="true">${w.type === 'Melee' ? 'sports_martial_arts' : 'gps_fixed'}</i>
+                                        <span>${w.name}</span>
+                                        <div class="force-stats">A${w.attacks} S${w.strength} AP-${w.ap} D${w.damage}</div>
+                                    </div>
+                                `).join('')}
+                            </div>
+                        </div>
+                        
+                        <div class="battlefield-section">
+                            <h5>Verteidigende Einheiten</h5>
+                            <div class="force-list">
+                                ${defenders.map(d => `
+                                    <div class="force-item defender">
+                                        <i class="material-icons" aria-hidden="true">${d.type === 'Vehicle' ? 'directions_car' : d.type === 'Monster' ? 'pest_control' : 'groups'}</i>
+                                        <span>${d.name}</span>
+                                        <div class="force-stats">T${d.toughness} ${d.save === 7 ? '-' : d.save + '+'}/${d.invulnSave ? d.invulnSave + '++' : '-'} W${d.wounds}</div>
+                                    </div>
+                                `).join('')}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            `;
+        }
+        
+        function generateDetailedAnalytics() {
+            const analyticsContainer = document.getElementById('detailed-analytics');
+            if (!analyticsContainer) return;
+            
+            const { statistics, combatResults } = currentResults;
+            
+            // Weapon effectiveness analysis
+            const weaponAnalysis = Object.entries(statistics.weaponEffectiveness)
+                .sort(([,a], [,b]) => b.totalDamage - a.totalDamage)
+                .map(([name, stats]) => ({
+                    name,
+                    ...stats,
+                    efficiency: stats.totalHits > 0 ? stats.totalDamage / stats.totalHits : 0
+                }));
+            
+            // Defender survival analysis
+            const defenderAnalysis = Object.entries(statistics.defenderSurvival)
+                .sort(([,a], [,b]) => a.survivalRate - b.survivalRate)
+                .map(([name, stats]) => ({
+                    name,
+                    ...stats,
+                    mortality: (1 - stats.survivalRate) * 100
+                }));
+            
+            // Combat matrix for detailed matchup analysis
+            const combatMatrix = generateCombatMatrix(combatResults);
+            
+            analyticsContainer.innerHTML = `
+                <div class="analytics-section">
+                    <h4><i class="material-icons" aria-hidden="true">assessment</i> Waffen-Effektivität</h4>
+                    <div class="weapon-analysis">
+                        ${weaponAnalysis.map(weapon => `
+                            <div class="analysis-row">
+                                <div class="analysis-header">
+                                    <span class="analysis-name">${weapon.name}</span>
+                                    <span class="analysis-score">${weapon.totalDamage.toLocaleString()} Schaden</span>
+                                </div>
+                                <div class="analysis-details">
+                                    <div class="detail-item">
+                                        <span class="detail-label">Effizienz:</span>
+                                        <span class="detail-value">${weapon.efficiency.toFixed(2)} Schaden/Treffer</span>
+                                    </div>
+                                    <div class="detail-item">
+                                        <span class="detail-label">Trefferquote:</span>
+                                        <span class="detail-value">${(weapon.hitRate * 100).toFixed(1)}%</span>
+                                    </div>
+                                    <div class="detail-item">
+                                        <span class="detail-label">Gesamttreffer:</span>
+                                        <span class="detail-value">${weapon.totalHits.toLocaleString()}</span>
+                                    </div>
+                                </div>
+                                <div class="progress-bar">
+                                    <div class="progress-fill" style="width: ${(weapon.totalDamage / weaponAnalysis[0].totalDamage) * 100}%"></div>
+                                </div>
+                            </div>
+                        `).join('')}
+                    </div>
+                </div>
+                
+                <div class="analytics-section">
+                    <h4><i class="material-icons" aria-hidden="true">shield</i> Verteidiger-Überlebenschancen</h4>
+                    <div class="defender-analysis">
+                        ${defenderAnalysis.map(defender => `
+                            <div class="analysis-row">
+                                <div class="analysis-header">
+                                    <span class="analysis-name">${defender.name}</span>
+                                    <span class="analysis-score mortality">${defender.mortality.toFixed(1)}% Sterblichkeit</span>
+                                </div>
+                                <div class="analysis-details">
+                                    <div class="detail-item">
+                                        <span class="detail-label">Überlebenschance:</span>
+                                        <span class="detail-value">${(defender.survivalRate * 100).toFixed(1)}%</span>
+                                    </div>
+                                    <div class="detail-item">
+                                        <span class="detail-label">Ø LP verbleibend:</span>
+                                        <span class="detail-value">${defender.averageWoundsRemaining.toFixed(1)}</span>
+                                    </div>
+                                    <div class="detail-item">
+                                        <span class="detail-label">Schaden erhalten:</span>
+                                        <span class="detail-value">${defender.damageReceived.toLocaleString()}</span>
+                                    </div>
+                                </div>
+                                <div class="progress-bar survival">
+                                    <div class="progress-fill" style="width: ${defender.survivalRate * 100}%"></div>
+                                </div>
+                            </div>
+                        `).join('')}
+                    </div>
+                </div>
+                
+                <div class="analytics-section">
+                    <h4><i class="material-icons" aria-hidden="true">grid_on</i> Kampf-Matrix</h4>
+                    <div class="combat-matrix-container">
+                        ${combatMatrix}
+                    </div>
+                </div>
+            `;
+        }
+        
+        function generateCombatMatrix(combatResults) {
+            // Create a matrix showing weapon vs defender effectiveness
+            const weapons = [...new Set(combatResults.map(r => r.weapon))];
+            const defenders = [...new Set(combatResults.map(r => r.defender))];
+            
+            // Find max damage for normalization
+            const maxDamage = Math.max(...combatResults.map(r => r.totalDamage));
+            
+            let matrix = `
+                <table class="combat-matrix">
+                    <thead>
+                        <tr>
+                            <th class="matrix-corner">Waffe vs Ziel</th>
+                            ${defenders.map(d => `<th class="defender-header">${d}</th>`).join('')}
+                        </tr>
+                    </thead>
+                    <tbody>
+            `;
+            
+            weapons.forEach(weapon => {
+                matrix += `<tr><td class="weapon-header">${weapon}</td>`;
+                
+                defenders.forEach(defender => {
+                    const result = combatResults.find(r => r.weapon === weapon && r.defender === defender);
+                    if (result) {
+                        const intensity = (result.totalDamage / maxDamage) * 100;
+                        const killRate = (result.killCount / currentResults.iterations) * 100;
+                        
+                        matrix += `
+                            <td class="matrix-cell" style="background: linear-gradient(45deg, rgba(244, 67, 54, ${intensity/100}) 0%, rgba(255, 152, 0, ${intensity/100}) 100%)">
+                                <div class="cell-damage">${result.totalDamage.toLocaleString()}</div>
+                                <div class="cell-kills">${killRate.toFixed(1)}% Kills</div>
+                            </td>
+                        `;
+                    } else {
+                        matrix += `<td class="matrix-cell empty">-</td>`;
+                    }
+                });
+                
+                matrix += `</tr>`;
+            });
+            
+            matrix += `</tbody></table>`;
+            return matrix;
+        }
+        
+        function generateDataVisualization() {
+            const chartsContainer = document.getElementById('data-visualization');
+            if (!chartsContainer) return;
+            
+            const { combatResults, statistics } = currentResults;
+            
+            // Generate damage distribution chart
+            const damageChart = generateDamageDistributionChart(combatResults);
+            
+            // Generate hit rate comparison chart
+            const hitRateChart = generateHitRateChart(statistics.weaponEffectiveness);
+            
+            // Generate survival rate chart
+            const survivalChart = generateSurvivalChart(statistics.defenderSurvival);
+            
+            chartsContainer.innerHTML = `
+                <div class="charts-grid">
+                    <div class="chart-container">
+                        <h4><i class="material-icons" aria-hidden="true">bar_chart</i> Schadensverteilung</h4>
+                        <div class="chart-content">
+                            ${damageChart}
+                        </div>
+                    </div>
+                    
+                    <div class="chart-container">
+                        <h4><i class="material-icons" aria-hidden="true">pie_chart</i> Trefferquoten-Vergleich</h4>
+                        <div class="chart-content">
+                            ${hitRateChart}
+                        </div>
+                    </div>
+                    
+                    <div class="chart-container">
+                        <h4><i class="material-icons" aria-hidden="true">donut_small</i> Überlebensraten</h4>
+                        <div class="chart-content">
+                            ${survivalChart}
+                        </div>
+                    </div>
+                    
+                    <div class="chart-container full-width">
+                        <h4><i class="material-icons" aria-hidden="true">timeline</i> Kampfverlauf-Analyse</h4>
+                        <div class="chart-content">
+                            ${generateBattleProgressChart(combatResults)}
+                        </div>
+                    </div>
+                </div>
+            `;
+        }
+        
+        function generateDamageDistributionChart(combatResults) {
+            const maxDamage = Math.max(...combatResults.map(r => r.totalDamage));
+            const sorted = [...combatResults].sort((a, b) => b.totalDamage - a.totalDamage);
+            
+            return `
+                <div class="bar-chart">
+                    ${sorted.slice(0, 10).map((result, index) => {
+                        const percentage = (result.totalDamage / maxDamage) * 100;
+                        return `
+                            <div class="bar-item">
+                                <div class="bar-label">${result.weapon} → ${result.defender}</div>
+                                <div class="bar-container">
+                                    <div class="bar-fill" style="width: ${percentage}%"></div>
+                                    <span class="bar-value">${result.totalDamage.toLocaleString()}</span>
+                                </div>
+                            </div>
+                        `;
+                    }).join('')}
+                </div>
+            `;
+        }
+        
+        function generateHitRateChart(weaponEffectiveness) {
+            const weapons = Object.entries(weaponEffectiveness);
+            const maxHitRate = Math.max(...weapons.map(([,stats]) => stats.hitRate));
+            
+            return `
+                <div class="pie-chart-container">
+                    <div class="pie-chart">
+                        ${weapons.map(([name, stats], index) => {
+                            const angle = (stats.hitRate / maxHitRate) * 360;
+                            const hue = (index * 360) / weapons.length;
+                            return `
+                                <div class="pie-slice" style="--angle: ${angle}deg; --color: hsl(${hue}, 70%, 60%);">
+                                    <span class="pie-label">${name}: ${(stats.hitRate * 100).toFixed(1)}%</span>
+                                </div>
+                            `;
+                        }).join('')}
+                    </div>
+                    <div class="pie-legend">
+                        ${weapons.map(([name, stats], index) => {
+                            const hue = (index * 360) / weapons.length;
+                            return `
+                                <div class="legend-item">
+                                    <div class="legend-color" style="background: hsl(${hue}, 70%, 60%);"></div>
+                                    <span>${name} (${(stats.hitRate * 100).toFixed(1)}%)</span>
+                                </div>
+                            `;
+                        }).join('')}
+                    </div>
+                </div>
+            `;
+        }
+        
+        function generateSurvivalChart(defenderSurvival) {
+            const defenders = Object.entries(defenderSurvival);
+            
+            return `
+                <div class="survival-chart">
+                    ${defenders.map(([name, stats]) => {
+                        const survivalPercentage = stats.survivalRate * 100;
+                        const mortalityPercentage = 100 - survivalPercentage;
+                        
+                        return `
+                            <div class="survival-item">
+                                <div class="survival-header">
+                                    <span class="survival-name">${name}</span>
+                                    <span class="survival-rate">${survivalPercentage.toFixed(1)}%</span>
+                                </div>
+                                <div class="survival-bar">
+                                    <div class="survival-fill" style="width: ${survivalPercentage}%"></div>
+                                    <div class="mortality-fill" style="width: ${mortalityPercentage}%"></div>
+                                </div>
+                                <div class="survival-details">
+                                    <small>Ø ${stats.averageWoundsRemaining.toFixed(1)} LP verbleibend</small>
+                                </div>
+                            </div>
+                        `;
+                    }).join('')}
+                </div>
+            `;
+        }
+        
+        function generateBattleProgressChart(combatResults) {
+            // Create a timeline showing damage accumulation
+            const sortedByDamage = [...combatResults].sort((a, b) => b.totalDamage - a.totalDamage);
+            const maxDamage = sortedByDamage[0].totalDamage;
+            
+            return `
+                <div class="timeline-chart">
+                    <div class="timeline-axis">
+                        ${sortedByDamage.map((result, index) => {
+                            const position = (index / (sortedByDamage.length - 1)) * 100;
+                            const height = (result.totalDamage / maxDamage) * 100;
+                            
+                            return `
+                                <div class="timeline-point" style="left: ${position}%; height: ${height}%;">
+                                    <div class="timeline-tooltip">
+                                        <strong>${result.weapon}</strong><br>
+                                        vs ${result.defender}<br>
+                                        ${result.totalDamage.toLocaleString()} Schaden<br>
+                                        ${((result.killCount / currentResults.iterations) * 100).toFixed(1)}% Kills
+                                    </div>
+                                </div>
+                            `;
+                        }).join('')}
+                    </div>
+                    <div class="timeline-labels">
+                        <span>Niedrigster Schaden</span>
+                        <span>Höchster Schaden</span>
+                    </div>
+                </div>
+            `;
+        }
+        
+        function generateExportOptions() {
+            const exportContainer = document.getElementById('export-options');
+            if (!exportContainer) return;
+            
+            exportContainer.innerHTML = `
+                <div class="export-section">
+                    <h4><i class="material-icons" aria-hidden="true">file_download</i> Export & Berichte</h4>
+                    
+                    <div class="export-grid">
+                        <div class="export-option">
+                            <button class="btn btn-primary" onclick="exportResultsPDF()">
+                                <i class="material-icons" aria-hidden="true">picture_as_pdf</i>
+                                <span>PDF-Bericht</span>
+                            </button>
+                            <p class="export-description">Vollständiger Bericht mit allen Analysen und Diagrammen</p>
+                        </div>
+                        
+                        <div class="export-option">
+                            <button class="btn btn-secondary" onclick="exportResultsJSON()">
+                                <i class="material-icons" aria-hidden="true">code</i>
+                                <span>JSON-Daten</span>
+                            </button>
+                            <p class="export-description">Rohdaten für weitere Analysen</p>
+                        </div>
+                        
+                        <div class="export-option">
+                            <button class="btn btn-secondary" onclick="exportResultsCSV()">
+                                <i class="material-icons" aria-hidden="true">table_chart</i>
+                                <span>CSV-Tabelle</span>
+                            </button>
+                            <p class="export-description">Tabellarische Daten für Excel/Calc</p>
+                        </div>
+                        
+                        <div class="export-option">
+                            <button class="btn btn-secondary" onclick="shareResults()">
+                                <i class="material-icons" aria-hidden="true">share</i>
+                                <span>Teilen</span>
+                            </button>
+                            <p class="export-description">Link oder Code zum Teilen generieren</p>
+                        </div>
+                    </div>
+                    
+                    <div class="export-summary">
+                        <div class="summary-stat">
+                            <i class="material-icons" aria-hidden="true">storage</i>
+                            <span>Dateigröße: ~${Math.round(JSON.stringify(currentResults).length / 1024)} KB</span>
+                        </div>
+                        <div class="summary-stat">
+                            <i class="material-icons" aria-hidden="true">schedule</i>
+                            <span>Erstellt: ${new Date(currentResults.timestamp).toLocaleString()}</span>
+                        </div>
+                        <div class="summary-stat">
+                            <i class="material-icons" aria-hidden="true">repeat</i>
+                            <span>${currentResults.iterations.toLocaleString()} Simulationen</span>
+                        </div>
+                    </div>
+                </div>
+            `;
+        }
+        
+        async function exportResultsPDF() {
+            if (!currentResults) {
+                showErrorToast('Keine Ergebnisse zum Exportieren verfügbar');
+                return;
+            }
+            
+            showLoadingOverlay('PDF-Bericht wird erstellt...');
+            
+            try {
+                // This would require jsPDF library integration
+                const { jsPDF } = window.jspdf || {};
+                if (!jsPDF) {
+                    throw new Error('PDF-Bibliothek nicht verfügbar');
+                }
+                
+                const doc = new jsPDF();
+                
+                // Add title
+                doc.setFontSize(20);
+                doc.text('Warhammer 40k Kampfsimulation - Bericht', 20, 20);
+                
+                // Add timestamp
+                doc.setFontSize(12);
+                doc.text(`Erstellt: ${new Date(currentResults.timestamp).toLocaleString()}`, 20, 35);
+                doc.text(`Iterationen: ${currentResults.iterations.toLocaleString()}`, 20, 45);
+                
+                // Add summary statistics
+                doc.setFontSize(16);
+                doc.text('Zusammenfassung', 20, 65);
+                doc.setFontSize(12);
+                doc.text(`Gesamtschaden: ${currentResults.statistics.totalDamageDealt.toLocaleString()}`, 20, 80);
+                doc.text(`Treffer: ${currentResults.statistics.totalHits.toLocaleString()} / ${currentResults.statistics.totalAttacks.toLocaleString()}`, 20, 90);
+                
+                // Add weapon effectiveness
+                let yPos = 110;
+                doc.setFontSize(16);
+                doc.text('Waffen-Effektivität', 20, yPos);
+                yPos += 15;
+                
+                Object.entries(currentResults.statistics.weaponEffectiveness).forEach(([name, stats]) => {
+                    doc.setFontSize(10);
+                    doc.text(`${name}: ${stats.totalDamage.toLocaleString()} Schaden, ${(stats.hitRate * 100).toFixed(1)}% Treffer`, 25, yPos);
+                    yPos += 10;
+                });
+                
+                // Save the PDF
+                const filename = `warhammer-simulation-${new Date().toISOString().slice(0, 10)}.pdf`;
+                doc.save(filename);
+                
+                announceToScreenReader('PDF-Bericht erfolgreich erstellt');
+                
+            } catch (error) {
+                console.error('PDF export error:', error);
+                showErrorToast(`Fehler beim PDF-Export: ${error.message}`);
+            } finally {
+                hideLoadingOverlay();
+            }
+        }
+        
+        function exportResultsJSON() {
+            if (!currentResults) {
+                showErrorToast('Keine Ergebnisse zum Exportieren verfügbar');
+                return;
+            }
+            
+            const dataStr = JSON.stringify(currentResults, null, 2);
+            const blob = new Blob([dataStr], { type: 'application/json' });
+            const url = URL.createObjectURL(blob);
+            
+            const filename = `warhammer-simulation-${new Date().toISOString().slice(0, 10)}.json`;
+            const link = document.createElement('a');
+            link.href = url;
+            link.download = filename;
+            link.click();
+            
+            URL.revokeObjectURL(url);
+            announceToScreenReader('JSON-Daten erfolgreich exportiert');
+        }
+        
+        function exportResultsCSV() {
+            if (!currentResults) {
+                showErrorToast('Keine Ergebnisse zum Exportieren verfügbar');
+                return;
+            }
+            
+            // Create CSV data
+            const headers = ['Waffe', 'Ziel', 'Gesamtschaden', 'Treffer', 'Angriffe', 'Trefferquote', 'Kills', 'Überlebensrate'];
+            const rows = currentResults.combatResults.map(result => [
+                result.weapon,
+                result.defender,
+                result.totalDamage,
+                result.totalHits,
+                result.totalAttacks,
+                ((result.totalHits / result.totalAttacks) * 100).toFixed(2) + '%',
+                result.killCount,
+                (result.survivalRate * 100).toFixed(2) + '%'
+            ]);
+            
+            const csvContent = [headers, ...rows].map(row => row.join(',')).join('\n');
+            const blob = new Blob([csvContent], { type: 'text/csv;charset=utf-8;' });
+            const url = URL.createObjectURL(blob);
+            
+            const filename = `warhammer-simulation-${new Date().toISOString().slice(0, 10)}.csv`;
+            const link = document.createElement('a');
+            link.href = url;
+            link.download = filename;
+            link.click();
+            
+            URL.revokeObjectURL(url);
+            announceToScreenReader('CSV-Daten erfolgreich exportiert');
+        }
+        
+        function shareResults() {
+            if (!currentResults) {
+                showErrorToast('Keine Ergebnisse zum Teilen verfügbar');
+                return;
+            }
+            
+            // Create a shareable summary
+            const summary = {
+                timestamp: currentResults.timestamp,
+                iterations: currentResults.iterations,
+                totalDamage: currentResults.statistics.totalDamageDealt,
+                totalHits: currentResults.statistics.totalHits,
+                totalAttacks: currentResults.statistics.totalAttacks,
+                weapons: currentResults.weapons.map(w => w.name),
+                defenders: currentResults.defenders.map(d => d.name)
+            };
+            
+            const shareText = `🎲 Warhammer 40k Kampfsimulation\n\n` +
+                `📊 ${summary.iterations.toLocaleString()} Iterationen\n` +
+                `⚔️ ${summary.totalDamage.toLocaleString()} Gesamtschaden\n` +
+                `🎯 ${((summary.totalHits / summary.totalAttacks) * 100).toFixed(1)}% Trefferquote\n\n` +
+                `Waffen: ${summary.weapons.join(', ')}\n` +
+                `Ziele: ${summary.defenders.join(', ')}\n\n` +
+                `Erstellt: ${new Date(summary.timestamp).toLocaleString()}`;
+            
+            if (navigator.share) {
+                navigator.share({
+                    title: 'Warhammer 40k Kampfsimulation',
+                    text: shareText
+                }).then(() => {
+                    announceToScreenReader('Ergebnisse erfolgreich geteilt');
+                }).catch(err => {
+                    console.error('Share error:', err);
+                    fallbackShare(shareText);
+                });
+            } else {
+                fallbackShare(shareText);
+            }
+        }
+        
+        function fallbackShare(text) {
+            // Copy to clipboard as fallback
+            navigator.clipboard.writeText(text).then(() => {
+                showSuccessToast('Ergebnisse in die Zwischenablage kopiert');
+                announceToScreenReader('Text in die Zwischenablage kopiert');
+            }).catch(err => {
+                console.error('Clipboard error:', err);
+                showErrorToast('Fehler beim Kopieren in die Zwischenablage');
+            });
+        }
+        
+        function showSuccessToast(message) {
+            // Create a success toast (similar to error toast but green)
+            const toast = document.createElement('div');
+            toast.className = 'toast success-toast';
+            toast.innerHTML = `
+                <div class="toast-content">
+                    <i class="material-icons" aria-hidden="true">check_circle</i>
+                    <span>${message}</span>
+                    <button class="toast-close" onclick="this.parentElement.parentElement.remove()">
+                        <i class="material-icons" aria-hidden="true">close</i>
+                    </button>
+                </div>
+            `;
+            
+            document.body.appendChild(toast);
+            
+            // Auto-remove after 3 seconds
+            setTimeout(() => {
+                if (toast.parentElement) {
+                    toast.remove();
+                }
+            }, 3000);
+        }
+
         function announceToScreenReader(message) {
             const announcement = document.createElement('div');
             announcement.setAttribute('aria-live', 'polite');
@@ -1139,6 +4109,379 @@
             select.disabled = false;
         }
 
+        // ===== BATTLESCRIBE PARSER =====
+        
+        function parseBattleScribeFile(jsonData) {
+            console.log('Parsing BattleScribe roster data...');
+            
+            try {
+                const roster = jsonData.roster;
+                if (!roster || !roster.forces || !roster.forces[0] || !roster.forces[0].selections) {
+                    throw new Error('Ungültige BattleScribe-Struktur');
+                }
+                
+                const weapons = [];
+                const defenders = [];
+                
+                // Durchsuche alle Einheiten in der Armee
+                function parseSelections(selections, parentName = '') {
+                    selections.forEach(selection => {
+                        // Prüfe ob es eine Einheit ist
+                        if (selection.type === 'unit' || selection.type === 'model') {
+                            parseUnit(selection, parentName);
+                        }
+                        
+                        // Rekursiv durch Unterauswahlen
+                        if (selection.selections) {
+                            parseSelections(selection.selections, selection.name || parentName);
+                        }
+                    });
+                }
+                
+                function parseUnit(unit, parentName) {
+                    // Extrahiere Verteidiger-Stats aus Profilen
+                    if (unit.profiles) {
+                        unit.profiles.forEach(profile => {
+                            if (profile.typeName === 'Unit') {
+                                const defender = parseDefenderProfile(profile, unit.name, parentName);
+                                if (defender) {
+                                    defenders.push(defender);
+                                }
+                            }
+                        });
+                    }
+                    
+                    // Extrahiere Waffen
+                    if (unit.selections) {
+                        unit.selections.forEach(selection => {
+                            if (selection.profiles) {
+                                selection.profiles.forEach(profile => {
+                                    if (profile.typeName === 'Ranged Weapons' || profile.typeName === 'Melee Weapons') {
+                                        const weapon = parseWeaponProfile(profile, unit.name);
+                                        if (weapon) {
+                                            weapons.push(weapon);
+                                        }
+                                    }
+                                });
+                            }
+                            
+                            // Rekursiv durch Waffenauswahlen
+                            if (selection.selections) {
+                                parseWeaponSelections(selection.selections, unit.name);
+                            }
+                        });
+                    }
+                }
+                
+                function parseWeaponSelections(selections, unitName) {
+                    selections.forEach(selection => {
+                        if (selection.profiles) {
+                            selection.profiles.forEach(profile => {
+                                if (profile.typeName === 'Ranged Weapons' || profile.typeName === 'Melee Weapons') {
+                                    const weapon = parseWeaponProfile(profile, unitName);
+                                    if (weapon) {
+                                        weapons.push(weapon);
+                                    }
+                                }
+                            });
+                        }
+                        
+                        if (selection.selections) {
+                            parseWeaponSelections(selection.selections, unitName);
+                        }
+                    });
+                }
+                
+                function parseDefenderProfile(profile, unitName, parentName) {
+                    const characteristics = {};
+                    
+                    if (profile.characteristics) {
+                        profile.characteristics.forEach(char => {
+                            characteristics[char.name] = char.$text || char.value;
+                        });
+                    }
+                    
+                    // Warhammer 40k Stats zu unserem Format konvertieren
+                    const toughness = parseInt(characteristics.T) || 4;
+                    const save = characteristics.SV ? parseInt(characteristics.SV.replace('+', '')) : 7;
+                    const wounds = parseInt(characteristics.W) || 1;
+                    
+                    return {
+                        id: Date.now() + Math.random(),
+                        name: `${unitName} (${parentName || 'BattleScribe'})`,
+                        toughness: toughness,
+                        save: save,
+                        invulnSave: null, // Wird aus Abilities extrahiert
+                        wounds: wounds,
+                        feelNoPain: null, // Wird aus Abilities extrahiert
+                        type: determineUnitType(unitName),
+                        isBattleScribe: true,
+                        originalUnit: unitName
+                    };
+                }
+                
+                function parseWeaponProfile(profile, unitName) {
+                    const characteristics = {};
+                    
+                    if (profile.characteristics) {
+                        profile.characteristics.forEach(char => {
+                            characteristics[char.name] = char.$text || char.value;
+                        });
+                    }
+                    
+                    // Warhammer 40k Waffen-Stats zu unserem Format konvertieren
+                    const attacks = characteristics.A || '1';
+                    const skill = characteristics.BS || characteristics.WS || '4+';
+                    const strength = parseInt(characteristics.S) || 4;
+                    const ap = Math.abs(parseInt(characteristics.AP) || 0);
+                    const damage = characteristics.D || '1';
+                    const range = characteristics.Range || 'Melee';
+                    
+                    // Bestimme Waffentyp
+                    const weaponType = profile.typeName === 'Melee Weapons' ? 'Melee' : 'Ranged';
+                    
+                    return {
+                        id: Date.now() + Math.random(),
+                        name: `${profile.name} (${unitName})`,
+                        attacks: attacks,
+                        skill: parseInt(skill.replace('+', '')) || 4,
+                        strength: strength,
+                        ap: ap,
+                        damage: damage,
+                        type: weaponType,
+                        range: range,
+                        keywords: characteristics.Keywords || '',
+                        isBattleScribe: true,
+                        originalWeapon: profile.name,
+                        originalUnit: unitName
+                    };
+                }
+                
+                function determineUnitType(unitName) {
+                    const name = unitName.toLowerCase();
+                    
+                    if (name.includes('vehicle') || name.includes('tank') || name.includes('dreadnought')) {
+                        return 'Vehicle';
+                    } else if (name.includes('monster') || name.includes('daemon')) {
+                        return 'Monster';
+                    } else if (name.includes('captain') || name.includes('sergeant') || name.includes('lieutenant') || name.includes('chaplain') || name.includes('librarian')) {
+                        return 'Character';
+                    } else {
+                        return 'Infantry';
+                    }
+                }
+                
+                // Parse die Hauptstruktur
+                parseSelections(roster.forces[0].selections);
+                
+                console.log(`BattleScribe Parser: ${weapons.length} Waffen und ${defenders.length} Verteidiger gefunden`);
+                
+                return {
+                    weapons: weapons,
+                    defenders: defenders,
+                    rosterName: roster.name || 'BattleScribe Roster',
+                    gameSystem: jsonData.gameSystemName || 'Warhammer 40,000',
+                    points: roster.costs ? roster.costs.find(c => c.name === 'pts')?.value || 0 : 0
+                };
+                
+            } catch (error) {
+                console.error('BattleScribe Parser Error:', error);
+                throw new Error(`Fehler beim Parsen der BattleScribe-Datei: ${error.message}`);
+            }
+        }
+        
+        function loadBattleScribeFile(event) {
+            const file = event.target.files[0];
+            if (!file) return;
+
+            showLoadingOverlay('Lade BattleScribe-Roster...');
+            
+            const fileReader = new FileReader();
+            fileReader.onload = async function(e) {
+                try {
+                    const jsonData = JSON.parse(e.target.result);
+                    
+                    // Prüfe ob es eine BattleScribe-Datei ist
+                    if (!jsonData.roster || !jsonData.gameSystemName) {
+                        throw new Error('Dies ist keine gültige BattleScribe-Roster-Datei');
+                    }
+                    
+                    const parsedData = parseBattleScribeFile(jsonData);
+                    
+                    // Füge die geparsten Daten zu den globalen Arrays hinzu
+                    if (parsedData.weapons.length > 0) {
+                        weaponsData = [...weaponsData, ...parsedData.weapons];
+                        populateWeaponSelect();
+                        announceToScreenReader(`${parsedData.weapons.length} Waffen aus BattleScribe-Roster geladen`);
+                    }
+                    
+                    if (parsedData.defenders.length > 0) {
+                        defendersData = [...defendersData, ...parsedData.defenders];
+                        populateDefenderSelect();
+                        announceToScreenReader(`${parsedData.defenders.length} Verteidiger aus BattleScribe-Roster geladen`);
+                    }
+                    
+                    // Zeige Erfolgsmeldung
+                    showBattleScribeSuccessMessage(parsedData);
+                    
+                } catch (error) {
+                    console.error('Error loading BattleScribe file:', error);
+                    showErrorToast(`Fehler beim Laden der BattleScribe-Datei: ${error.message}`);
+                } finally {
+                    hideLoadingOverlay();
+                    updateSimulateButtonState();
+                }
+            };
+            
+            fileReader.readAsText(file);
+        }
+        
+        function showBattleScribeSuccessMessage(parsedData) {
+            const message = `
+                <div style="background: var(--success-color); color: white; padding: 1rem; border-radius: 8px; margin-bottom: 1rem;">
+                    <h4 style="margin: 0 0 0.5rem 0;">✅ BattleScribe-Roster erfolgreich geladen!</h4>
+                    <p style="margin: 0; font-size: 0.9rem;">
+                        <strong>${parsedData.rosterName}</strong><br>
+                        ${parsedData.weapons.length} Waffen und ${parsedData.defenders.length} Verteidiger importiert<br>
+                        Armeepunkte: ${parsedData.points} | System: ${parsedData.gameSystem}
+                    </p>
+                </div>
+            `;
+            
+            // Füge die Nachricht am Anfang der Waffen-Sektion hinzu
+            const weaponCard = document.querySelector('.card');
+            if (weaponCard) {
+                const messageDiv = document.createElement('div');
+                messageDiv.innerHTML = message;
+                weaponCard.parentNode.insertBefore(messageDiv, weaponCard);
+                
+                // Entferne die Nachricht nach 10 Sekunden
+                setTimeout(() => {
+                    messageDiv.remove();
+                }, 10000);
+            }
+        }
+
+        // ===== CUSTOM UNIT CREATION =====
+        
+        function createCustomWeapon() {
+            const name = document.getElementById('weapon-name').value.trim();
+            const attacks = document.getElementById('weapon-attacks').value.trim();
+            const skill = document.getElementById('weapon-skill').value;
+            const strength = document.getElementById('weapon-strength').value;
+            const ap = document.getElementById('weapon-ap').value;
+            const damage = document.getElementById('weapon-damage').value.trim();
+            const type = document.getElementById('weapon-type').value;
+            
+            // Validation
+            if (!name) {
+                showErrorToast('Bitte geben Sie einen Waffennamen ein');
+                document.getElementById('weapon-name').focus();
+                return;
+            }
+            
+            if (!attacks) {
+                showErrorToast('Bitte geben Sie die Anzahl Angriffe ein');
+                document.getElementById('weapon-attacks').focus();
+                return;
+            }
+            
+            if (!damage) {
+                showErrorToast('Bitte geben Sie den Schaden ein');
+                document.getElementById('weapon-damage').focus();
+                return;
+            }
+            
+            // Check if weapon already exists
+            if (selectedWeapons.find(w => w.name === name)) {
+                showErrorToast('Eine Waffe mit diesem Namen existiert bereits');
+                document.getElementById('weapon-name').focus();
+                return;
+            }
+            
+            const customWeapon = {
+                id: Date.now(),
+                name: name,
+                attacks: attacks,
+                skill: parseInt(skill),
+                strength: parseInt(strength),
+                ap: parseInt(ap),
+                damage: damage,
+                type: type,
+                isCustom: true
+            };
+            
+            selectedWeapons.push(customWeapon);
+            updateSelectedWeaponsDisplay();
+            updateSimulateButtonState();
+            clearWeaponForm();
+            
+            announceToScreenReader(`Eigene Waffe ${name} erfolgreich hinzugefügt`);
+        }
+        
+        function createCustomDefender() {
+            const name = document.getElementById('defender-name').value.trim();
+            const toughness = document.getElementById('defender-toughness').value;
+            const save = document.getElementById('defender-save').value;
+            const invuln = document.getElementById('defender-invuln').value;
+            const wounds = document.getElementById('defender-wounds').value;
+            const fnp = document.getElementById('defender-fnp').value;
+            const type = document.getElementById('defender-type').value;
+            
+            // Validation
+            if (!name) {
+                showErrorToast('Bitte geben Sie einen Verteidigernamen ein');
+                document.getElementById('defender-name').focus();
+                return;
+            }
+            
+            // Check if defender already exists
+            if (selectedDefenders.find(d => d.name === name)) {
+                showErrorToast('Ein Verteidiger mit diesem Namen existiert bereits');
+                document.getElementById('defender-name').focus();
+                return;
+            }
+            
+            const customDefender = {
+                id: Date.now(),
+                name: name,
+                toughness: parseInt(toughness),
+                save: parseInt(save),
+                invulnSave: invuln ? parseInt(invuln) : null,
+                wounds: parseInt(wounds),
+                feelNoPain: fnp ? parseInt(fnp) : null,
+                type: type,
+                isCustom: true
+            };
+            
+            selectedDefenders.push(customDefender);
+            updateSelectedDefendersDisplay();
+            updateSimulateButtonState();
+            clearDefenderForm();
+            
+            announceToScreenReader(`Eigener Verteidiger ${name} erfolgreich hinzugefügt`);
+        }
+        
+        function clearWeaponForm() {
+            document.getElementById('weapon-name').value = '';
+            document.getElementById('weapon-attacks').value = '1';
+            document.getElementById('weapon-skill').value = '4';
+            document.getElementById('weapon-strength').value = '4';
+            document.getElementById('weapon-ap').value = '0';
+            document.getElementById('weapon-damage').value = '1';
+            document.getElementById('weapon-type').value = 'Ranged';
+        }
+        
+        function clearDefenderForm() {
+            document.getElementById('defender-name').value = '';
+            document.getElementById('defender-toughness').value = '4';
+            document.getElementById('defender-save').value = '3';
+            document.getElementById('defender-invuln').value = '';
+            document.getElementById('defender-wounds').value = '2';
+            document.getElementById('defender-fnp').value = '';
+            document.getElementById('defender-type').value = 'Infantry';
+        }
+
         // ===== SELECTION FUNCTIONS =====
         
         function selectWeapon() {
@@ -1218,9 +4561,27 @@
             card.setAttribute('role', 'article');
             card.setAttribute('aria-labelledby', `weapon-title-${weapon.id}`);
             
+            const typeIcon = weapon.type === 'Melee' ? 'sports_martial_arts' : 
+                           weapon.type === 'Psychic' ? 'psychology' : 'gps_fixed';
+            
+            let sourceBadge = '';
+            if (weapon.isCustom) {
+                sourceBadge = '<span class="badge" style="background: var(--info-color); color: white; padding: 2px 8px; border-radius: 12px; font-size: 0.75rem; margin-left: 8px;">Benutzerdefiniert</span>';
+            } else if (weapon.isBattleScribe) {
+                sourceBadge = '<span class="badge" style="background: var(--warning-color); color: var(--primary-bg); padding: 2px 8px; border-radius: 12px; font-size: 0.75rem; margin-left: 8px;">BattleScribe</span>';
+            }
+            
+            const rangeInfo = weapon.range && weapon.range !== 'Melee' ? `<div><strong>Reichweite:</strong> ${weapon.range}</div>` : '';
+            const keywordsInfo = weapon.keywords ? `<div><strong>Keywords:</strong> ${weapon.keywords}</div>` : '';
+            const unitInfo = weapon.originalUnit ? `<div><strong>Einheit:</strong> ${weapon.originalUnit}</div>` : '';
+            
             card.innerHTML = `
-                <div class="card-header">
-                    <h4 id="weapon-title-${weapon.id}" class="card-title">${weapon.name}</h4>
+                <div class="card-header" style="display: flex; justify-content: space-between; align-items: center;">
+                    <h4 id="weapon-title-${weapon.id}" class="card-title" style="margin: 0; display: flex; align-items: center;">
+                        <i class="material-icons" aria-hidden="true" style="margin-right: 8px;">${typeIcon}</i>
+                        ${weapon.name}
+                        ${sourceBadge}
+                    </h4>
                     <button 
                         class="btn btn-icon btn-danger"
                         onclick="removeWeapon(${weapon.id})"
@@ -1231,7 +4592,17 @@
                     </button>
                 </div>
                 <div class="card-body">
-                    <p><strong>Details:</strong> ${JSON.stringify(weapon, null, 2)}</p>
+                    <div class="grid grid-3" style="gap: 1rem;">
+                        <div><strong>Angriffe:</strong> ${weapon.attacks}</div>
+                        <div><strong>Treffer:</strong> ${weapon.skill}+</div>
+                        <div><strong>Stärke:</strong> ${weapon.strength}</div>
+                        <div><strong>AP:</strong> -${weapon.ap}</div>
+                        <div><strong>Schaden:</strong> ${weapon.damage}</div>
+                        <div><strong>Typ:</strong> ${weapon.type}</div>
+                        ${rangeInfo}
+                        ${unitInfo}
+                        ${keywordsInfo}
+                    </div>
                 </div>
             `;
             
@@ -1245,9 +4616,29 @@
             card.setAttribute('role', 'article');
             card.setAttribute('aria-labelledby', `defender-title-${defender.id}`);
             
+            const typeIcon = defender.type === 'Vehicle' ? 'directions_car' : 
+                           defender.type === 'Monster' ? 'pest_control' : 
+                           defender.type === 'Character' ? 'person' : 'groups';
+            
+            let sourceBadge = '';
+            if (defender.isCustom) {
+                sourceBadge = '<span class="badge" style="background: var(--info-color); color: white; padding: 2px 8px; border-radius: 12px; font-size: 0.75rem; margin-left: 8px;">Benutzerdefiniert</span>';
+            } else if (defender.isBattleScribe) {
+                sourceBadge = '<span class="badge" style="background: var(--warning-color); color: var(--primary-bg); padding: 2px 8px; border-radius: 12px; font-size: 0.75rem; margin-left: 8px;">BattleScribe</span>';
+            }
+            
+            const invulnText = defender.invulnSave ? `${defender.invulnSave}++` : 'Keine';
+            const fnpText = defender.feelNoPain ? `${defender.feelNoPain}+++` : 'Keine';
+            const saveText = defender.save === 7 ? 'Kein RW' : `${defender.save}+`;
+            const unitInfo = defender.originalUnit ? `<div><strong>Ursprungseinheit:</strong> ${defender.originalUnit}</div>` : '';
+            
             card.innerHTML = `
-                <div class="card-header">
-                    <h4 id="defender-title-${defender.id}" class="card-title">${defender.name}</h4>
+                <div class="card-header" style="display: flex; justify-content: space-between; align-items: center;">
+                    <h4 id="defender-title-${defender.id}" class="card-title" style="margin: 0; display: flex; align-items: center;">
+                        <i class="material-icons" aria-hidden="true" style="margin-right: 8px;">${typeIcon}</i>
+                        ${defender.name}
+                        ${sourceBadge}
+                    </h4>
                     <button 
                         class="btn btn-icon btn-danger"
                         onclick="removeDefender(${defender.id})"
@@ -1258,7 +4649,15 @@
                     </button>
                 </div>
                 <div class="card-body">
-                    <p><strong>Details:</strong> ${JSON.stringify(defender, null, 2)}</p>
+                    <div class="grid grid-3" style="gap: 1rem;">
+                        <div><strong>Widerstandskraft:</strong> ${defender.toughness}</div>
+                        <div><strong>Rettungswurf:</strong> ${saveText}</div>
+                        <div><strong>Unverwundbar:</strong> ${invulnText}</div>
+                        <div><strong>Lebenspunkte:</strong> ${defender.wounds}</div>
+                        <div><strong>Feel No Pain:</strong> ${fnpText}</div>
+                        <div><strong>Typ:</strong> ${defender.type}</div>
+                        ${unitInfo}
+                    </div>
                 </div>
             `;
             
