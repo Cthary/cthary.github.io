@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<roster name="Test Roster" points="200" gameSystemName="Warhammer 40,000 10th Edition" gameSystemRevision="10">
+  <forces>
+    <force catalogueName="Adeptus Astartes" catalogueRevision="10" entryId="f1" name="Adeptus Astartes" points="200">
+      <selections>
+        <selection type="unit" entryId="u2" name="Terminator Squad" points="200">
+          <selections>
+            <selection type="model" entryId="m2" name="Terminator" number="3">
+              <profiles>
+                <profile name="Terminator" typeName="Model">
+                  <characteristics>
+                    <characteristic name="M">5</characteristic>
+                    <characteristic name="T">5</characteristic>
+                    <characteristic name="Sv">2</characteristic>
+                    <characteristic name="W">3</characteristic>
+                    <characteristic name="Ld">6</characteristic>
+                    <characteristic name="OC">1</characteristic>
+                    <characteristic name="Inv">4</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <selections>
+                <selection type="weapon" entryId="w2" name="Storm Bolter">
+                  <profiles>
+                    <profile name="Storm Bolter" typeName="Weapon">
+                      <characteristics>
+                        <characteristic name="A">2</characteristic>
+                        <characteristic name="BS">2</characteristic>
+                        <characteristic name="S">4</characteristic>
+                        <characteristic name="AP">0</characteristic>
+                        <characteristic name="D">1</characteristic>
+                        <characteristic name="Range">24</characteristic>
+                      </characteristics>
+                    </profile>
+                  </profiles>
+                  <categories>
+                    <category name="Rapid Fire 2"/>
+                  </categories>
+                </selection>
+                <selection type="weapon" entryId="w3" name="Power Fist">
+                  <profiles>
+                    <profile name="Power Fist" typeName="Weapon">
+                      <characteristics>
+                        <characteristic name="A">2</characteristic>
+                        <characteristic name="WS">3</characteristic>
+                        <characteristic name="S">8</characteristic>
+                        <characteristic name="AP">-2</characteristic>
+                        <characteristic name="D">2</characteristic>
+                      </characteristics>
+                    </profile>
+                  </profiles>
+                  <categories>
+                    <category name="Melee"/>
+                  </categories>
+                </selection>
+              </selections>
+            </selection>
+          </selections>
+          <categories>
+            <category name="INFANTRY"/>
+            <category name="TERMINATOR"/>
+          </categories>
+          <rules>
+            <rule name="Teleport Strike"/>
+          </rules>
+        </selection>
+      </selections>
+    </force>
+  </forces>
+</roster>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<roster name="Test Roster" points="1000" gameSystemName="Warhammer 40,000 10th Edition" gameSystemRevision="10">
+  <forces>
+    <force catalogueName="Adeptus Astartes" catalogueRevision="10" entryId="f1" name="Adeptus Astartes" points="1000">
+      <selections>
+        <selection type="unit" entryId="u1" name="Intercessor Squad" points="100">
+          <selections>
+            <selection type="model" entryId="m1" name="Intercessor" number="5">
+              <profiles>
+                <profile name="Intercessor" typeName="Model">
+                  <characteristics>
+                    <characteristic name="M">6</characteristic>
+                    <characteristic name="T">4</characteristic>
+                    <characteristic name="Sv">3</characteristic>
+                    <characteristic name="W">2</characteristic>
+                    <characteristic name="Ld">7</characteristic>
+                    <characteristic name="OC">1</characteristic>
+                    <characteristic name="Inv">5</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <selections>
+                <selection type="weapon" entryId="w1" name="Bolt Rifle">
+                  <profiles>
+                    <profile name="Bolt Rifle" typeName="Weapon">
+                      <characteristics>
+                        <characteristic name="A">2</characteristic>
+                        <characteristic name="BS">3</characteristic>
+                        <characteristic name="S">4</characteristic>
+                        <characteristic name="AP">-1</characteristic>
+                        <characteristic name="D">2</characteristic>
+                        <characteristic name="Range">24</characteristic>
+                      </characteristics>
+                    </profile>
+                  </profiles>
+                  <categories>
+                    <category name="Rapid Fire 1"/>
+                    <category name="Assault"/>
+                  </categories>
+                </selection>
+              </selections>
+            </selection>
+          </selections>
+          <categories>
+            <category name="INFANTRY"/>
+            <category name="ADEPTUS ASTARTES"/>
+          </categories>
+          <rules>
+            <rule name="Oath of Moment"/>
+          </rules>
+        </selection>
+      </selections>
+    </force>
+  </forces>
+</roster>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<roster name="Test Roster" points="60" gameSystemName="Warhammer 40,000 10th Edition" gameSystemRevision="10">
+  <forces>
+    <force catalogueName="Tyranids" catalogueRevision="10" entryId="f2" name="Tyranids" points="60">
+      <selections>
+        <selection type="unit" entryId="u3" name="Termagant Brood" points="60">
+          <selections>
+            <selection type="model" entryId="m3" name="Termagant" number="10">
+              <profiles>
+                <profile name="Termagant" typeName="Model">
+                  <characteristics>
+                    <characteristic name="M">6</characteristic>
+                    <characteristic name="T">3</characteristic>
+                    <characteristic name="Sv">6</characteristic>
+                    <characteristic name="W">1</characteristic>
+                    <characteristic name="Ld">8</characteristic>
+                    <characteristic name="OC">2</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <selections>
+                <selection type="weapon" entryId="w4" name="Fleshborer">
+                  <profiles>
+                    <profile name="Fleshborer" typeName="Weapon">
+                      <characteristics>
+                        <characteristic name="A">1</characteristic>
+                        <characteristic name="BS">4</characteristic>
+                        <characteristic name="S">4</characteristic>
+                        <characteristic name="AP">0</characteristic>
+                        <characteristic name="D">1</characteristic>
+                        <characteristic name="Range">18</characteristic>
+                      </characteristics>
+                    </profile>
+                  </profiles>
+                  <categories>
+                    <category name="Assault"/>
+                  </categories>
+                </selection>
+              </selections>
+            </selection>
+          </selections>
+          <categories>
+            <category name="INFANTRY"/>
+            <category name="TERMAGANT"/>
+          </categories>
+          <rules>
+            <rule name="Scuttling Swarm"/>
+          </rules>
+        </selection>
+      </selections>
+    </force>
+  </forces>
+</roster>
