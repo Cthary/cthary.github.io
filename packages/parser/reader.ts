@@ -49,12 +49,28 @@ export async function readBattlescribe(filePath: string): Promise<IRSquad> {
           const keywords = w.categories?.[0]?.category
             ? w.categories[0].category.map((cat: any) => cat.$.name)
             : [];
+          
+          // Determine weapon type based on profile and keywords
+          const isMelee = !wProfileObj['Range'] || 
+                         wProfileObj['Range'] === 0 || 
+                         keywords.some((k: string) => k.toLowerCase().includes('melee')) ||
+                         w.$.name.toLowerCase().includes('close combat') ||
+                         w.$.name.toLowerCase().includes('combat knife') ||
+                         w.$.name.toLowerCase().includes('chainsword') ||
+                         w.$.name.toLowerCase().includes('power') ||
+                         w.$.name.toLowerCase().includes('sword') ||
+                         w.$.name.toLowerCase().includes('axe') ||
+                         w.$.name.toLowerCase().includes('hammer') ||
+                         w.$.name.toLowerCase().includes('claw') ||
+                         w.$.name.toLowerCase().includes('fist');
+          
           return {
             name: w.$.name,
-            type: 'ranged', // Annahme: nur ranged im Beispiel
+            type: isMelee ? 'melee' : 'ranged',
             profile: {
               A: wProfileObj['A'],
-              BS: wProfileObj['BS'],
+              BS: isMelee ? undefined : wProfileObj['BS'],
+              WS: isMelee ? wProfileObj['WS'] : undefined,
               S: wProfileObj['S'],
               AP: wProfileObj['AP'],
               D: wProfileObj['D'],

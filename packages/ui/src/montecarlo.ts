@@ -20,8 +20,9 @@ export function rollMany(n: number, sides: number, rng: RNG): number[] {
 export function countSuccess(rolls: number[], target: number): number {
   return rolls.filter(r => r >= target).length;
 }
-export function toHit(attack: { BS: number }, mods = 0): number {
-  return Math.max(2, Math.min(6, attack.BS + mods));
+export function toHit(attack: { BS?: number; WS?: number }, mods = 0): number {
+  const skill = attack.WS || attack.BS || 4; // Use WS for melee, BS for ranged, default to 4+
+  return Math.max(2, Math.min(6, skill + mods));
 }
 export function toWound(S: number, T: number): number {
   if (S >= 2 * T) return 2;
@@ -58,12 +59,14 @@ export interface MonteCarloStats {
 }
 export function monteCarlo(
   runs: number,
-  attack: { A: number; BS: number; S: number; AP: number; D: number },
-  defender: { T: number; Sv: number; W: number; Inv?: number },
+  attack: { A: number; BS?: number; WS?: number; S: number; AP: number; D: number },
+  defender: { T: number; Sv: number; W: number; Inv?: number; modelCount?: number },
   seed = 42
 ): { results: MonteCarloResult[]; stats: MonteCarloStats } {
   const rng = new RNG(seed);
   const results: MonteCarloResult[] = [];
+  const maxModels = defender.modelCount || 1; // Default to single model if not specified
+  
   for (let i = 0; i < runs; ++i) {
     const attacks = attack.A;
     const hitTarget = toHit(attack);
@@ -75,15 +78,44 @@ export function monteCarlo(
     const saveTarget = toSave(defender.Sv, attack.AP, defender.Inv);
     const saveRolls = rollMany(wounds, 6, rng);
     const failedSaves = wounds - countSuccess(saveRolls, saveTarget);
-    let totalDamage = 0;
-    let woundsLeft = defender.W;
-    let kills = 0;
-    for (let j = 0; j < failedSaves; ++j) {
-      woundsLeft = applyDamage(woundsLeft, attack.D);
-      totalDamage += attack.D;
-      if (woundsLeft === 0) kills = 1;
+    
+    // Debug für erste Iteration
+    if (i === 0) {
+      console.log(`🎲 DEBUG Run ${i}:`, {
+        attacks, hitTarget, hits, woundTarget, wounds, saveTarget, failedSaves,
+        attackProfile: attack, defenderProfile: defender
+      });
     }
-    results.push({ totalDamage, kills, survived: 1 - kills, woundsLeft });
+    
+    let totalDamage = 0;
+    let currentModelWounds = defender.W;
+    let kills = 0;
+    let modelsRemaining = maxModels;
+    
+    for (let j = 0; j < failedSaves; ++j) {
+      if (modelsRemaining <= 0) break; // No more models to kill
+      
+      const damageThisHit = attack.D;
+      totalDamage += damageThisHit;
+      
+      // Apply damage to current model only - excess damage is lost!
+      const damageToApply = Math.min(damageThisHit, currentModelWounds);
+      currentModelWounds -= damageToApply;
+      
+      // If current model is killed
+      if (currentModelWounds === 0) {
+        kills++;
+        modelsRemaining--;
+        if (modelsRemaining > 0) {
+          currentModelWounds = defender.W; // Start new model with full wounds
+        }
+      }
+      // Any excess damage beyond currentModelWounds is lost (Warhammer 40k rules)
+    }
+    
+    const woundsLeft = modelsRemaining > 0 ? currentModelWounds : 0;
+    const survived = modelsRemaining;
+    results.push({ totalDamage, kills, survived, woundsLeft });
   }
   const damages = results.map(r => r.totalDamage).sort((a, b) => a - b);
   const mean = damages.reduce((a, b) => a + b, 0) / runs;
