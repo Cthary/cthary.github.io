@@ -1,5 +1,6 @@
 import { Sword, Shield, Users, Zap } from 'lucide-react';
 import type { Unit } from '../irTypes';
+import { DebugUnitInfo } from './DebugUnitInfo';
 
 interface UnitCardProps {
   unit: Unit;
@@ -20,12 +21,29 @@ export function UnitCard({ unit, isSelected, onClick, role, index }: UnitCardPro
     : 'border-blue-500 bg-blue-50 dark:bg-blue-900/20';
 
   // Get basic unit info
-  const modelCount = Array.isArray(unit.models) ? unit.models.length : 0;
+  const modelCount = Array.isArray(unit.models) 
+    ? unit.models.reduce((total, model) => total + model.count, 0) 
+    : 0;
   const hasWeapons = Array.isArray(unit.models) && 
     unit.models.some(m => Array.isArray(m.weapons) && m.weapons.length > 0);
+  
+  // For units with multiple model types, show the most common model's stats
+  // or if they're all the same, show those stats
   const firstModel = Array.isArray(unit.models) && unit.models.length > 0 ? unit.models[0] : null;
+  
+  // Check if all models have the same core stats (W, Sv, Inv) - ignore names and other differences
+  const allSameStats = unit.models?.every(model => 
+    model.profile.W === firstModel?.profile.W &&
+    model.profile.Sv === firstModel?.profile.Sv &&
+    model.profile.Inv === firstModel?.profile.Inv
+  ) ?? true;
+  
   const wounds = firstModel?.profile?.W || 'N/A';
   const save = firstModel?.profile?.Sv || 'N/A';
+  const invSave = firstModel?.profile?.Inv;
+  
+  // Only show "varied stats" if the core defensive stats actually differ
+  const hasVariedStats = !allSameStats && unit.models && unit.models.length > 1;
 
   return (
     <div
@@ -54,7 +72,7 @@ export function UnitCard({ unit, isSelected, onClick, role, index }: UnitCardPro
         )}
       </div>
 
-      <div className="grid grid-cols-3 gap-4 text-sm">
+      <div className="grid grid-cols-2 gap-2 text-sm">
         <div className="flex items-center space-x-1">
           <Users className="w-4 h-4 text-gray-500" />
           <span className="text-gray-600 dark:text-gray-400">
@@ -67,7 +85,7 @@ export function UnitCard({ unit, isSelected, onClick, role, index }: UnitCardPro
             W
           </div>
           <span className="text-gray-600 dark:text-gray-400">
-            {wounds}
+            {wounds}{hasVariedStats ? '*' : ''}
           </span>
         </div>
         
@@ -76,10 +94,27 @@ export function UnitCard({ unit, isSelected, onClick, role, index }: UnitCardPro
             Sv
           </div>
           <span className="text-gray-600 dark:text-gray-400">
-            {save}
+            {save}+{hasVariedStats ? '*' : ''}
           </span>
         </div>
+
+        {invSave && (
+          <div className="flex items-center space-x-1">
+            <div className="w-4 h-4 rounded border border-gray-400 flex items-center justify-center text-xs">
+              Inv
+            </div>
+            <span className="text-gray-600 dark:text-gray-400">
+              {invSave}+{hasVariedStats ? '*' : ''}
+            </span>
+          </div>
+        )}
       </div>
+
+      {hasVariedStats && (
+        <div className="mt-2 text-xs text-gray-500 dark:text-gray-400">
+          * Gemischte Modelltypen
+        </div>
+      )}
 
       {hasWeapons && (
         <div className="mt-3 flex items-center space-x-1 text-xs text-green-600 dark:text-green-400">
@@ -93,6 +128,9 @@ export function UnitCard({ unit, isSelected, onClick, role, index }: UnitCardPro
           ⚠ Keine Waffen erkannt
         </div>
       )}
+
+      {/* DEBUG INFO - temporary */}
+      <DebugUnitInfo unit={unit} />
     </div>
   );
 }

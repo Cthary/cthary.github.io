@@ -1,4 +1,5 @@
 // IR Types für UI (Kopie aus packages/parser/ir.ts)
+import type { WeaponModifiers } from './types/modifiers';
 
 export interface WeaponProfile {
   name: string;
@@ -13,6 +14,7 @@ export interface WeaponProfile {
     range?: number;
   };
   keywords: string[];
+  modifiers?: WeaponModifiers; // Add modifiers to weapon profile
 }
 
 export interface ModelProfile {
@@ -37,6 +39,7 @@ export interface Unit {
   abilities: string[];
   auras: string[];
   modifiers: string[];
+  combinedWeapons?: WeaponProfile[]; // Waffen kombiniert auf Unit-Ebene
 }
 
 export interface IRSquad {

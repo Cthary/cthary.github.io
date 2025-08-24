@@ -50,62 +50,164 @@ function ensureArray<T>(value: T | T[] | undefined): T[] {
 function extractModelsFromSelection(selection: any): ModelProfile[] {
   const models: ModelProfile[] = [];
   
-  // Get the direct model count from this selection
-  const directCount = selection.number || 1;
-  
-  // Check if this selection has a "models" characteristic
-  const characteristics = ensureArray(selection.profiles?.profile?.characteristics?.characteristic);
-  const modelsChar = characteristics.find((char: any) => 
-    char.name?.toLowerCase().includes('models') || 
-    char.typeId === 'models' ||
-    char.name === 'Models'
+  // FIRST: Check if this selection is actually a weapon or equipment
+  const profiles = ensureArray(selection.profiles?.profile);
+  const isWeapon = profiles.some(profile => 
+    profile.typeName === 'Weapon' || 
+    profile.typeName === 'Ranged Weapon' || 
+    profile.typeName === 'Melee Weapon' ||
+    profile.typeName === 'Psychic Power'
   );
   
-  let modelCount = directCount;
-  if (modelsChar && modelsChar.textContent) {
-    const parsedModels = parseStatValue(modelsChar.textContent);
-    if (parsedModels > 0) {
-      modelCount = parsedModels;
+  console.log(`🔍 Analyzing ${selection.name}: profiles=[${profiles.map(p => p.typeName).join(', ')}], isWeapon=${isWeapon}`);
+  
+  if (isWeapon) {
+    console.log(`🚫 Skipping weapon selection: ${selection.name}`);
+    // Still recurse into children
+    const childSelections = ensureArray(selection.selections?.selection);
+    for (const child of childSelections) {
+      models.push(...extractModelsFromSelection(child));
     }
+    return models;
   }
   
-  // Try to extract model count from selection name (e.g., "1 Jungle Fighter Sergeant and 9 Jungle Fighters")
-  if (selection.name) {
-    const name = selection.name;
-    // Look for patterns like "X and Y models" or "X models"
-    const squadMatch = name.match(/(\d+)\s+.*?\s+and\s+(\d+)\s+/i);
-    if (squadMatch) {
-      const count1 = parseInt(squadMatch[1], 10);
-      const count2 = parseInt(squadMatch[2], 10);
-      modelCount = count1 + count2;
-      console.log(`🔍 Squad detected: "${name}" -> ${count1} + ${count2} = ${modelCount} models`);
-    } else {
-      // Look for single number patterns like "10 models"
-      const singleMatch = name.match(/(\d+)\s+\w+/);
-      if (singleMatch && parseInt(singleMatch[1], 10) > 1) {
-        const extractedCount = parseInt(singleMatch[1], 10);
-        if (extractedCount > modelCount) {
-          modelCount = extractedCount;
-          console.log(`🔍 Single count detected: "${name}" -> ${modelCount} models`);
+  // Check if this has model-like characteristics even without Unit/Model profile
+  const hasModelProfile = profiles.some(p => p.typeName === 'Unit' || p.typeName === 'Model');
+  const hasCharacteristics = profiles.some(p => {
+    const chars = ensureArray(p.characteristics?.characteristic);
+    return chars.some(c => c.name === 'M' || c.name === 'T' || c.name === 'W' || c.name === 'Movement' || c.name === 'Toughness' || c.name === 'Wounds');
+  });
+  
+  // Also check if this selection has a count > 0 and looks like a model name
+  const hasCount = (selection.number || 0) > 0;
+  const looksLikeModel = hasCount && selection.name && 
+    !selection.name.toLowerCase().includes('weapon') &&
+    !selection.name.toLowerCase().includes('pistol') &&
+    !selection.name.toLowerCase().includes('rifle') &&
+    !selection.name.toLowerCase().includes('launcher') &&
+    !selection.name.toLowerCase().includes('grenade') &&
+    !selection.name.toLowerCase().includes('fist') &&
+    !selection.name.toLowerCase().includes('sword') &&
+    !selection.name.toLowerCase().includes('combat') &&
+    !selection.name.toLowerCase().includes('battle size') &&
+    !selection.name.toLowerCase().includes('detachment') &&
+    !selection.name.toLowerCase().includes('options') &&
+    !selection.name.toLowerCase().includes('visible') &&
+    !selection.name.toLowerCase().includes('warlord');
+  
+  console.log(`   hasModelProfile=${hasModelProfile}, hasCharacteristics=${hasCharacteristics}, hasCount=${hasCount}, looksLikeModel=${looksLikeModel}`);
+  
+  // If this looks like a model (has characteristics) but no explicit Model/Unit profile, treat it as a model
+  const shouldTreatAsModel = hasModelProfile || hasCharacteristics || looksLikeModel;
+  
+  if (shouldTreatAsModel) {
+    // Get the direct model count from this selection
+    const directCount = selection.number || 1;
+    
+    // Check if this selection has a "models" characteristic
+    const characteristics = ensureArray(selection.profiles?.profile?.characteristics?.characteristic);
+    const modelsChar = characteristics.find((char: any) => 
+      char.name?.toLowerCase().includes('models') || 
+      char.typeId === 'models' ||
+      char.name === 'Models'
+    );
+    
+    let modelCount = directCount;
+    if (modelsChar && modelsChar.textContent) {
+      const parsedModels = parseStatValue(modelsChar.textContent);
+      if (parsedModels > 0) {
+        modelCount = parsedModels;
+      }
+    }
+    
+    // Try to extract model count from selection name (e.g., "1 Jungle Fighter Sergeant and 9 Jungle Fighters")
+    if (selection.name) {
+      const name = selection.name;
+      // Look for patterns like "X and Y models" or "X models"
+      const squadMatch = name.match(/(\d+)\s+.*?\s+and\s+(\d+)\s+/i);
+      if (squadMatch) {
+        const count1 = parseInt(squadMatch[1], 10);
+        const count2 = parseInt(squadMatch[2], 10);
+        modelCount = count1 + count2;
+        console.log(`🔍 Squad detected: "${name}" -> ${count1} + ${count2} = ${modelCount} models`);
+      } else {
+        // Look for single number patterns like "10 models"
+        const singleMatch = name.match(/(\d+)\s+\w+/);
+        if (singleMatch && parseInt(singleMatch[1], 10) > 1) {
+          const extractedCount = parseInt(singleMatch[1], 10);
+          if (extractedCount > modelCount) {
+            modelCount = extractedCount;
+            console.log(`🔍 Single count detected: "${name}" -> ${modelCount} models`);
+          }
         }
       }
     }
-  }
+    
+    // Create model with the determined count ONLY if this selection has its own profile
+    // Don't create a model from parent selections that represent mixed units
+    // Use the broader shouldTreatAsModel logic instead of just Unit/Model profiles
+    const hasOwnProfile = shouldTreatAsModel;
+  const childSelections = ensureArray(selection.selections?.selection);
+  const hasModelChildren = childSelections.some(child => {
+    const childProfiles = ensureArray(child.profiles?.profile);
+    return childProfiles.some(p => p.typeName === 'Unit' || p.typeName === 'Model');
+  });
   
-  // Create model with the determined count
-  if (modelCount > 0) {
+  // Only create a model if:
+  // 1. This selection has its own profile AND
+  // 2. It doesn't have child selections with their own profiles (to avoid duplication)
+  // EXCEPTION: Character units (like Calgar) should create both character and bodyguards
+  if (hasOwnProfile && !hasModelChildren && modelCount > 0) {
+    console.log(`✅ Creating model: ${selection.name} (count: ${modelCount})`);
     models.push({
       name: selection.name || 'Unknown Model',
       count: modelCount,
       profile: extractStatsFromSelection(selection),
       weapons: extractWeaponsFromSelection(selection),
     });
+  } else if (hasModelChildren) {
+    // Check if this looks like a character with bodyguards
+    const isCharacterUnit = selection.name?.toLowerCase().includes('calgar') || 
+                            selection.name?.toLowerCase().includes('captain') ||
+                            selection.name?.toLowerCase().includes('librarian') ||
+                            selection.name?.toLowerCase().includes('chaplain') ||
+                            selection.name?.toLowerCase().includes('sergeant') ||
+                            selection.name?.toLowerCase().includes('lieutenant');
+    
+    if (isCharacterUnit && hasOwnProfile) {
+      console.log(`� Character with bodyguards detected: ${selection.name} - creating character model`);
+      models.push({
+        name: selection.name || 'Unknown Character',
+        count: 1, // Characters are usually single models
+        profile: extractStatsFromSelection(selection),
+        weapons: extractWeaponsFromSelection(selection),
+      });
+    } else {
+      console.log(`�🔄 Skipping parent model creation for ${selection.name} - has model children`);
+    }
+    
+    console.log(`   Child selections with profiles:`, childSelections
+      .filter(child => {
+        const childProfiles = ensureArray(child.profiles?.profile);
+        return childProfiles.some(p => p.typeName === 'Unit' || p.typeName === 'Model');
+      })
+      .map(child => child.name)
+    );
+  } else if (!hasOwnProfile) {
+    console.log(`⚠️ No profile found for ${selection.name}`);
+  } else {
+    console.log(`⚠️ Unknown skip reason for ${selection.name} (hasProfile: ${hasOwnProfile}, hasChildren: ${hasModelChildren}, count: ${modelCount})`);
   }
+  
+  } // End of if (shouldTreatAsModel)
   
   // Recursively process child selections
   const childSelections = ensureArray(selection.selections?.selection);
   for (const child of childSelections) {
-    models.push(...extractModelsFromSelection(child));
+    console.log(`🔄 Processing child: ${child.name}`);
+    const childModels = extractModelsFromSelection(child);
+    console.log(`   Child ${child.name} produced ${childModels.length} models:`, childModels.map(m => `${m.name}(${m.count})`));
+    models.push(...childModels);
   }
   
   return models;
@@ -114,15 +216,22 @@ function extractModelsFromSelection(selection: any): ModelProfile[] {
 function extractStatsFromSelection(selection: any): ModelProfile['profile'] {
   const profiles = ensureArray(selection.profiles?.profile);
   
+  console.log(`🔍 Extracting stats for: ${selection.name}`);
+  console.log(`   Found ${profiles.length} profiles:`, profiles.map(p => p.typeName));
+  
   for (const profile of profiles) {
     if (profile.typeName === 'Unit' || profile.typeName === 'Model') {
       const characteristics = ensureArray(profile.characteristics?.characteristic);
+      
+      console.log(`   Processing ${profile.typeName} profile with ${characteristics.length} characteristics`);
       
       let M = 6, T = 4, Sv = 3, W = 1, Ld = 7, OC = 1, Inv;
       
       for (const char of characteristics) {
         const name = char.name?.toLowerCase();
         const value = char.textContent;
+        
+        console.log(`     Characteristic: ${char.name} = ${value}`);
         
         if (name && value != null) {
           switch (name) {
@@ -141,6 +250,7 @@ function extractStatsFromSelection(selection: any): ModelProfile['profile'] {
             case 'wounds':
             case 'w':
               W = parseStatValue(value);
+              console.log(`     ✅ Found Wounds: ${value} -> ${W}`);
               break;
             case 'leadership':
             case 'ld':
@@ -158,11 +268,14 @@ function extractStatsFromSelection(selection: any): ModelProfile['profile'] {
         }
       }
       
-      return { M, T, Sv, W, Ld, OC, ...(Inv ? { Inv } : {}) };
+      const result = { M, T, Sv, W, Ld, OC, ...(Inv ? { Inv } : {}) };
+      console.log(`   ✅ Final stats for ${selection.name}:`, result);
+      return result;
     }
   }
   
   // Default stats if no profile found
+  console.log(`   ⚠️ No Unit/Model profile found for ${selection.name}, using defaults`);
   return { M: 6, T: 4, Sv: 3, W: 1, Ld: 7, OC: 1 };
 }
 
@@ -358,13 +471,17 @@ function parseBattlescribeXmlDirect(xmlContent: string): IRSquad {
 function extractUnitFromSelection(selection: any): Unit | null {
   if (!selection.name) return null;
   
+  console.log(`🏗️ Processing unit selection: ${selection.name} (type: ${selection.type})`);
+  
   // Extract all models from this selection and its children
   const models = extractModelsFromSelection(selection);
   
   // If no models found, create a dummy model with count from selection
+  // This handles vehicles and single-model units
   if (models.length === 0) {
     const count = selection.number || 1;
     if (count > 0) {
+      console.log(`🚗 Creating vehicle/single model: ${selection.name} (count: ${count})`);
       models.push({
         name: selection.name,
         count: count,
@@ -372,24 +489,60 @@ function extractUnitFromSelection(selection: any): Unit | null {
         weapons: extractWeaponsFromSelection(selection),
       });
     }
+  } else {
+    console.log(`👥 Found ${models.length} model types for unit: ${selection.name}`);
   }
   
   // Filter out weapons and equipment from models
   const actualModels = models.filter(model => {
     const name = model.name.toLowerCase();
-    // Skip weapons and equipment
-    if (name.includes('pistol') || name.includes('rifle') || name.includes('cannon') || 
-        name.includes('bolter') || name.includes('flamer') || name.includes('missile') ||
-        name.includes('weapon') || name.includes('caster') || name.includes('tracks') ||
-        name.includes('stubber') || name.includes('array') || name.includes('bomb') ||
-        name.includes('grenade') || name.includes('fist') || name.includes('sword') ||
-        name.includes('chainsaw') || name.includes('autocannon') || name.includes('lascannon') ||
-        name.includes('mortar') || name.includes('lasgun') || name.includes('close combat')) {
+    
+    // Skip the unit container itself ONLY if we have multiple model types
+    // For single-model units (like vehicles), keep the model even if it matches the unit name
+    if (model.name === selection.name && models.length > 1) {
+      console.log(`🚫 Filtered out unit container: ${model.name} (multiple models present)`);
       return false;
     }
+    
+    // Enhanced weapon detection - this is now redundant since we filter at the source
+    // but keeping as backup for edge cases
+    
+    // Skip common weapon names and equipment, but be more specific
+    // Don't filter out model names that happen to contain weapon words
+    const isActualWeapon = (
+      (name.includes('pistol') && !name.includes('intercessor')) ||
+      (name.includes('rifle') && !name.includes('intercessor') && !name.includes('squad')) ||
+      (name.includes('cannon') && !name.includes('intercessor')) ||
+      name.includes('bolter') || name.includes('flamer') || name.includes('missile') ||
+      (name.includes('weapon') && !name.includes('intercessor')) || 
+      name.includes('caster') || name.includes('tracks') ||
+      name.includes('stubber') || name.includes('array') || name.includes('bomb') ||
+      name.includes('grenade') || 
+      (name.includes('fist') && !name.includes('intercessor')) || 
+      (name.includes('sword') && !name.includes('intercessor')) ||
+      name.includes('chainsaw') || name.includes('autocannon') || name.includes('lascannon') ||
+      name.includes('mortar') || name.includes('lasgun') || 
+      (name.includes('close combat') && !name.includes('intercessor')) ||
+      name.includes('launcher') || name.includes('blaster') || name.includes('melta') ||
+      name.includes('plasma') && !name.includes('intercessor') ||
+      name.includes('heavy') && !name.includes('intercessor') || 
+      name.includes('assault') && !name.includes('intercessor') ||
+      name.includes('rapid fire') || name.includes('combi-') || name.includes('master-crafted') ||
+      name.includes('twin') || name.includes('hunter-killer') || name.includes('storm') ||
+      name.includes('power ') && !name.includes('intercessor') || 
+      name.includes('chainfist') || name.includes('thunder hammer') ||
+      name.includes('relic') || name.includes('special issue') || name.includes('artificer')
+    );
+    
+    if (isActualWeapon) {
+      console.log(`🚫 Filtered out weapon by name: ${model.name}`);
+      return false;
+    }
+    
     // Skip configuration items
     if (name.includes('battle size') || name.includes('detachment') || name.includes('option') ||
-        name.includes('strategist') || name.includes('enhancement')) {
+        name.includes('strategist') || name.includes('enhancement') || name.includes('upgrade') ||
+        name.includes('wargear') || name.includes('equipment')) {
       return false;
     }
     // Skip Warlords - they are typically single character models that shouldn't be attackers
@@ -409,8 +562,42 @@ function extractUnitFromSelection(selection: any): Unit | null {
     const existing = modelMap.get(model.name);
     if (existing) {
       existing.count += model.count;
-      // Merge weapons (simple approach - combine arrays)
-      existing.weapons.push(...model.weapons);
+      
+      // Merge weapons properly - combine identical weapons
+      const weaponMap = new Map<string, WeaponProfile & { count?: number }>();
+      
+      // Add existing weapons to map
+      for (const weapon of existing.weapons) {
+        const profile = weapon.profile;
+        const key = `${weapon.name}-${weapon.type}-${profile.range || 0}-${profile.A}-${profile.BS || profile.WS || 0}-${profile.S}-${profile.AP}-${profile.D}`;
+        const existingWeapon = weaponMap.get(key);
+        if (existingWeapon) {
+          existingWeapon.count = (existingWeapon.count || 1) + 1;
+        } else {
+          weaponMap.set(key, { ...weapon, count: 1 } as WeaponProfile & { count?: number });
+        }
+      }
+      
+      // Add new weapons to map
+      for (const weapon of model.weapons) {
+        const profile = weapon.profile;
+        const key = `${weapon.name}-${weapon.type}-${profile.range || 0}-${profile.A}-${profile.BS || profile.WS || 0}-${profile.S}-${profile.AP}-${profile.D}`;
+        const existingWeapon = weaponMap.get(key);
+        if (existingWeapon) {
+          existingWeapon.count = (existingWeapon.count || 1) + 1;
+        } else {
+          weaponMap.set(key, { ...weapon, count: 1 } as WeaponProfile & { count?: number });
+        }
+      }
+      
+      existing.weapons = Array.from(weaponMap.values()).map(w => {
+        // eslint-disable-next-line @typescript-eslint/no-unused-vars
+        const { count, ...weaponWithoutCount } = w;
+        if (count && count > 1) {
+          console.log(`🔫 Combined ${count}x ${weaponWithoutCount.name} for ${model.name}`);
+        }
+        return weaponWithoutCount;
+      });
     } else {
       modelMap.set(model.name, { ...model });
     }
@@ -418,7 +605,86 @@ function extractUnitFromSelection(selection: any): Unit | null {
   
   const aggregatedModels = Array.from(modelMap.values());
   
-  if (aggregatedModels.length === 0) return null;
+  // Aggregate weapons across all model types for the unit
+  const unitWeaponMap = new Map<string, WeaponProfile & { totalCount: number }>();
+  
+  for (const model of aggregatedModels) {
+    for (const weapon of model.weapons) {
+      const profile = weapon.profile;
+      
+      // Clean up the weapon name (remove count prefixes for comparison)
+      const cleanName = weapon.name.replace(/^\d+x\s/, '');
+      
+      // Extract total count from weapon name if present, otherwise use model count
+      let totalWeapons;
+      
+      const countMatch = weapon.name.match(/^(\d+)x\s/);
+      if (countMatch) {
+        // "4x Bolt Pistol" means 4 weapons total for this model group
+        totalWeapons = parseInt(countMatch[1], 10);
+      } else {
+        // No count prefix means 1 weapon per model
+        totalWeapons = model.count;
+      }
+      
+      // Calculate base attacks per weapon by dividing total attacks by weapon count
+      const baseAttacks = Math.round(profile.A / totalWeapons);
+      
+      // Create key based on base weapon characteristics (per-weapon, not total)
+      const key = `${cleanName}-${weapon.type}-${profile.range || 0}-${baseAttacks}-${profile.BS || profile.WS || 0}-${profile.S}-${profile.AP}-${profile.D}`;
+      
+      console.log(`🔍 Weapon: ${weapon.name} (${totalWeapons} weapons, ${baseAttacks} attacks each) -> key: ${key}`);
+      
+      const existingWeapon = unitWeaponMap.get(key);
+      if (existingWeapon) {
+        existingWeapon.totalCount += totalWeapons;
+        console.log(`🔗 Combining ${totalWeapons}x ${cleanName} with existing ${existingWeapon.totalCount - totalWeapons}x = ${existingWeapon.totalCount}x total`);
+      } else {
+        unitWeaponMap.set(key, { 
+          ...weapon, 
+          name: cleanName,
+          totalCount: totalWeapons 
+        } as WeaponProfile & { totalCount: number });
+        console.log(`➕ Adding new weapon: ${totalWeapons}x ${cleanName}`);
+      }
+    }
+  }
+  
+  // Create a combined weapons list for the unit
+  const unitWeapons = Array.from(unitWeaponMap.values()).map(w => {
+    const { totalCount, ...weaponWithoutCount } = w;
+    
+    // Calculate base attacks per weapon from the original profile
+    const countMatch = w.name.match(/^(\d+)x\s/);
+    const originalWeaponCount = countMatch ? parseInt(countMatch[1], 10) : 1;
+    const baseAttacks = Math.round(w.profile.A / originalWeaponCount);
+    
+    return {
+      ...weaponWithoutCount,
+      name: totalCount > 1 ? `${totalCount}x ${weaponWithoutCount.name}` : weaponWithoutCount.name,
+      profile: {
+        ...weaponWithoutCount.profile,
+        A: baseAttacks * totalCount // Update total attacks for combined weapons
+      }
+    };
+  });
+  
+  console.log(`🔫 Unit weapons summary for ${selection.name}:`, 
+    unitWeapons.map(w => w.name));
+  
+  // Store combined weapons as a property (for future use)
+  // For now, this is mainly for debugging
+  
+  console.log(`📊 Final result for ${selection.name}: ${aggregatedModels.length} model types`);
+  aggregatedModels.forEach(model => {
+    console.log(`   - ${model.name}: ${model.count} models, W=${model.profile.W}, ${model.weapons.length} weapons:`, 
+      model.weapons.map(w => w.name));
+  });
+  
+  if (aggregatedModels.length === 0) {
+    console.log(`❌ No models left after filtering for ${selection.name}`);
+    return null;
+  }
   
   return {
     name: selection.name,
@@ -427,5 +693,6 @@ function extractUnitFromSelection(selection: any): Unit | null {
     abilities: [],    // TODO: Extract abilities if needed
     auras: [],        // TODO: Extract auras if needed
     modifiers: [],    // TODO: Extract modifiers if needed
+    combinedWeapons: unitWeapons, // Kombinierte Waffen für die UI
   };
 }

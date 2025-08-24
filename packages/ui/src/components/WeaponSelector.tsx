@@ -115,10 +115,12 @@ export function WeaponSelector({
   onSelectAll, 
   onSelectNone 
 }: WeaponSelectorProps) {
-  // Get all weapons from all models
-  const allWeapons = unit.models?.flatMap(model => model.weapons || []) || [];
+  // Use combined weapons if available, otherwise fall back to individual model weapons
+  const allWeapons = unit.combinedWeapons?.length 
+    ? unit.combinedWeapons 
+    : (unit.models?.flatMap(model => model.weapons || []) || []);
   
-  // Remove duplicates based on weapon name and profile
+  // Remove duplicates based on weapon name and profile (mainly for fallback case)
   const uniqueWeapons = allWeapons.filter((weapon, index, arr) => {
     return arr.findIndex(w => 
       w.name === weapon.name && 

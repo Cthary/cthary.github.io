@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { parseBattlescribeXml } from './battlescribeParser';
 import type { IRSquad, Unit, WeaponProfile } from './irTypes';
+import type { WeaponModifiers } from './types/modifiers';
 import SimpleSimWorker from './simpleSim.worker?worker';
 
 // Modern UI Components
@@ -148,10 +149,29 @@ function AppContent() {
     });
   }
 
+  function handleWeaponModify(weapon: WeaponProfile, modifiers: WeaponModifiers) {
+    // Update the weapon with modifiers
+    const modifiedWeapon = { ...weapon, modifiers };
+    
+    // Replace the weapon in the selected weapons array
+    setSelectedAttackerWeapons(prev => 
+      prev.map(w => 
+        w.name === weapon.name && 
+        JSON.stringify(w.profile) === JSON.stringify(weapon.profile)
+          ? modifiedWeapon
+          : w
+      )
+    );
+  }
+
   function handleSelectAllWeapons() {
     if (!selectedAttacker) return;
     
-    const allWeapons = selectedAttacker.models?.flatMap(model => model.weapons || []) || [];
+    // Use combined weapons if available, otherwise fall back to individual model weapons
+    const allWeapons = selectedAttacker.combinedWeapons?.length 
+      ? selectedAttacker.combinedWeapons 
+      : (selectedAttacker.models?.flatMap(model => model.weapons || []) || []);
+    
     const uniqueWeapons = allWeapons.filter((weapon, index, arr) => {
       return arr.findIndex(w => 
         w.name === weapon.name && 
@@ -361,6 +381,7 @@ function AppContent() {
           onSelectAll={handleSelectAllWeapons}
           onSelectNone={handleSelectNoWeapons}
           onConfirm={handleWeaponModalConfirm}
+          onWeaponModify={handleWeaponModify}
         />
       )}
     </div>

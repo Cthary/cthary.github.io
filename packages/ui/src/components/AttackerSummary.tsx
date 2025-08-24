@@ -123,6 +123,12 @@ export function AttackerSummary({ attacker, selectedWeapons, onEditWeapons }: At
 }
 
 function WeaponSummaryCard({ weapon }: { weapon: WeaponProfile }) {
+  const hasModifiers = weapon.modifiers && (
+    Object.values(weapon.modifiers.modifications).some(v => v !== 0) ||
+    Object.values(weapon.modifiers.rerolls).some(v => v !== 'N/A') ||
+    weapon.modifiers.keywords.length > 0
+  );
+
   return (
     <div className="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg p-3">
       <div className="flex items-center space-x-2 mb-2">
@@ -134,8 +140,14 @@ function WeaponSummaryCard({ weapon }: { weapon: WeaponProfile }) {
         <span className="text-sm font-medium text-gray-900 dark:text-gray-100">
           {weapon.name}
         </span>
+        {hasModifiers && (
+          <span className="inline-flex items-center px-2 py-1 rounded-full text-xs font-medium bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200">
+            Mod
+          </span>
+        )}
       </div>
-      <div className="grid grid-cols-4 gap-2 text-xs">
+      
+      <div className="grid grid-cols-4 gap-2 text-xs mb-2">
         <div>
           <span className="text-gray-500 dark:text-gray-400">A:</span>
           <span className="ml-1 text-gray-900 dark:text-gray-100">{weapon.profile.A}</span>
@@ -153,6 +165,47 @@ function WeaponSummaryCard({ weapon }: { weapon: WeaponProfile }) {
           <span className="ml-1 text-gray-900 dark:text-gray-100">{weapon.profile.D}</span>
         </div>
       </div>
+
+      {/* Display modifiers if present */}
+      {hasModifiers && weapon.modifiers && (
+        <div className="border-t border-gray-200 dark:border-gray-600 pt-2 space-y-1">
+          {/* Keywords */}
+          {weapon.modifiers.keywords.length > 0 && (
+            <div className="flex flex-wrap gap-1">
+              {weapon.modifiers.keywords.map((keyword, index) => (
+                <span 
+                  key={index}
+                  className="inline-flex items-center px-1.5 py-0.5 rounded text-xs font-medium bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200"
+                >
+                  {keyword.name}{keyword.value ? ` ${keyword.value}` : ''}
+                </span>
+              ))}
+            </div>
+          )}
+          
+          {/* Modifications */}
+          {Object.entries(weapon.modifiers.modifications).some(([, value]) => value !== 0) && (
+            <div className="text-xs text-gray-600 dark:text-gray-400">
+              <span>Mods: </span>
+              {Object.entries(weapon.modifiers.modifications)
+                .filter(([, value]) => value !== 0)
+                .map(([key, value]) => `${key}${value > 0 ? '+' : ''}${value}`)
+                .join(', ')}
+            </div>
+          )}
+          
+          {/* Rerolls */}
+          {Object.entries(weapon.modifiers.rerolls).some(([, value]) => value !== 'N/A') && (
+            <div className="text-xs text-gray-600 dark:text-gray-400">
+              <span>Rerolls: </span>
+              {Object.entries(weapon.modifiers.rerolls)
+                .filter(([, value]) => value !== 'N/A')
+                .map(([key, value]) => `${key}:${value}`)
+                .join(', ')}
+            </div>
+          )}
+        </div>
+      )}
     </div>
   );
 }

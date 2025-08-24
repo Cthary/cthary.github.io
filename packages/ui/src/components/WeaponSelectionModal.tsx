@@ -1,6 +1,9 @@
+import { useState } from 'react';
 import { X } from 'lucide-react';
 import { WeaponSelector } from './WeaponSelector';
+import { WeaponModifiersModal } from './WeaponModifiersModal';
 import type { Unit, WeaponProfile } from '../irTypes';
+import type { WeaponModifiers } from '../types/modifiers';
 
 interface WeaponSelectionModalProps {
   isOpen: boolean;
@@ -11,6 +14,7 @@ interface WeaponSelectionModalProps {
   onSelectAll: () => void;
   onSelectNone: () => void;
   onConfirm: () => void;
+  onWeaponModify: (weapon: WeaponProfile, modifiers: WeaponModifiers) => void;
 }
 
 export function WeaponSelectionModal({
@@ -21,8 +25,41 @@ export function WeaponSelectionModal({
   onWeaponToggle,
   onSelectAll,
   onSelectNone,
-  onConfirm
+  onConfirm,
+  onWeaponModify
 }: WeaponSelectionModalProps) {
+  const [modifierModalOpen, setModifierModalOpen] = useState(false);
+  const [currentWeapon, setCurrentWeapon] = useState<WeaponProfile | null>(null);
+
+  const handleWeaponToggle = (weapon: WeaponProfile) => {
+    if (selectedWeapons.includes(weapon)) {
+      // Weapon is already selected, toggle it off
+      onWeaponToggle(weapon);
+    } else {
+      // Weapon is not selected, select it and open modifier modal
+      onWeaponToggle(weapon);
+      setCurrentWeapon(weapon);
+      setModifierModalOpen(true);
+    }
+  };
+
+  const handleModifiersConfirm = (modifiers: WeaponModifiers) => {
+    if (currentWeapon) {
+      onWeaponModify(currentWeapon, modifiers);
+    }
+    setModifierModalOpen(false);
+    setCurrentWeapon(null);
+  };
+
+  const handleModifiersClose = () => {
+    // If user cancels modifiers, remove the weapon from selection
+    if (currentWeapon) {
+      onWeaponToggle(currentWeapon);
+    }
+    setModifierModalOpen(false);
+    setCurrentWeapon(null);
+  };
+
   if (!isOpen) return null;
 
   return (
@@ -51,7 +88,7 @@ export function WeaponSelectionModal({
             <WeaponSelector
               unit={unit}
               selectedWeapons={selectedWeapons}
-              onWeaponToggle={onWeaponToggle}
+              onWeaponToggle={handleWeaponToggle}
               onSelectAll={onSelectAll}
               onSelectNone={onSelectNone}
             />
@@ -74,6 +111,17 @@ export function WeaponSelectionModal({
           </div>
         </div>
       </div>
+
+      {/* Modifiers Modal */}
+      {modifierModalOpen && currentWeapon && (
+        <WeaponModifiersModal
+          isOpen={modifierModalOpen}
+          onClose={handleModifiersClose}
+          onConfirm={handleModifiersConfirm}
+          weaponName={currentWeapon.name}
+          initialModifiers={currentWeapon.modifiers}
+        />
+      )}
     </div>
   );
 }

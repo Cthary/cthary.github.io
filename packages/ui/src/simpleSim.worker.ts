@@ -54,6 +54,7 @@ self.onmessage = function (e) {
             modelCount: remainingModels,
             W: currentModelWounds // Current wounds on the first model
           }, 
+          weapon.modifiers, // Pass weapon modifiers to Monte Carlo
           42 + done + i);
         const result = results[0];
         

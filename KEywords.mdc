@@ -1,0 +1,34 @@
+Nächster Schritt Verteidiger:
+
+* Beim Auswählen der Verteidiger soll das gleiche Passieren.
+
+* Modifications
+* Keywords
+
+Für Modifications sollen folgende Dropdowns da sein:
+* Hit
+* Wound
+* Damage
+* Crit
+in diesem Dropdowns stehen werte von +1, 0, -1.
+
+in Damage Dropdown noch zusätzlich -50% als wert.
+Hier ist die Reihenfolge wichtig, Damage wird immer berechnet:
+Grundschaden * Mod% + X + -Y
+Als Beispiel:
+Outrider haben +1 Schaden nach einem Charge, C'Tan bekommen immer -50% damage:
+Grundschaden 1 * 50% = 1 (Schaden kann nie kleiner sein als 1) + 1 + -0 = 2
+
+Für Angriffe und Verteidiger müssen noch selbst erstelle Keywords erschaffen werden:
+* Angreifer
+** +1 to Wound vs Stronger
+*** Wenn die Thoughness des Ziel größer gleich der Stärke des Angreifers ist, bekommt der Angreifer +1 to Wound
+** BA Charge
+*** Für Nahkampfanfriffe, +1 Angriffe pro Waffe und +2 Stärke
+* Anti-X Y
+** Wenn der Verteidiger in einen Keywords X stehen hat, gilt Y als Kritischer Wert für Wound rolls
+*** Beispiel: Anti-Infantry 3, wenn der Verteidiger das Keyword Infantry hat, gilt eine 3+ als Kritischer Woundroll
+
+* Verteidiger
+** -1 to Wound vs Stronger
+*** Wenn die Stärke des Angreifers größer gleich der Thoughness des Ziels ist, bekommt der Angreifer -1 to Wound
