@@ -1,0 +1,330 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<title>Checkliste fürs Spiel · Die richtigen Fragen</title>
+<meta name="description" content="Kompakte Phasen-Checkliste für Blood Angels: Fragen statt Regeltexte, schnell am Handy nutzbar.">
+<!--HEAD-->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<meta name="color-scheme" content="light dark">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<script>(function(){try{var t=localStorage.getItem('ba:theme');if(t==='dark'||t==='light'){document.documentElement.setAttribute('data-theme',t);}}catch(e){}})();</script>
+<link rel="stylesheet" href="css/style.css">
+<!--/HEAD-->
+</head>
+<body data-page="checklist" data-rules="1">
+<!--HEADER-->
+<a class="skip" href="#main">Zum Inhalt springen</a>
+<header class="site-header">
+<div class="wrap">
+<div class="header-bar">
+<a class="brand" href="index.html"><img src="assets/favicon.svg" alt="" width="30" height="30"><span>Die richtigen Fragen</span></a>
+<button class="menu-btn" type="button" aria-expanded="false" aria-controls="site-nav"><span aria-hidden="true">☰</span><span class="btn-label"> Menü</span></button>
+<button class="theme-btn" type="button"><span class="ico" aria-hidden="true">🌙</span><span class="btn-label"> Dunkel</span></button>
+</div>
+<nav class="site-nav" id="site-nav" aria-label="Hauptmenü">
+<ul>
+<li class="group"><div class="links"><a href="index.html">Start</a></div></li>
+<li class="group"><p class="group-title">Vor dem Spiel</p><div class="links"><a href="before.html">Vor dem Spiel</a><a href="army.html">Meine Armee</a><a href="units.html">Meine Einheiten</a><a href="deployment.html">Deployment</a></div></li>
+<li class="group"><p class="group-title">Im Spiel</p><div class="links"><a href="checklist.html" aria-current="page">Checkliste</a><a href="stratagems.html">Stratagems</a><a href="threat.html">Mein Gegner</a><a href="missions.html">Mission</a></div></li>
+<li class="group"><p class="group-title">Lernen</p><div class="links"><a href="examples.html">Beispiele</a></div></li>
+<li class="group"><p class="group-title">Danach</p><div class="links"><a href="review.html">Nach dem Spiel</a></div></li>
+</ul>
+</nav>
+</div>
+</header>
+<!--/HEADER-->
+<main id="main" class="wrap">
+
+<h1>Checkliste fürs Spiel</h1>
+<p class="lead">Keine Regeltexte, nur Fragen. Deine Haken bleiben in diesem Browser gespeichert. Zum Neustart gibt es bei jedem Abschnitt einen Zurücksetzen-Knopf.</p>
+
+<nav class="cluster" aria-label="Zu einer Phase springen">
+  <a class="btn btn--small" href="#cmd">Command</a>
+  <a class="btn btn--small" href="#move">Movement</a>
+  <a class="btn btn--small" href="#shoot">Shooting</a>
+  <a class="btn btn--small" href="#charge">Charge</a>
+  <a class="btn btn--small" href="#fight">Fight</a>
+  <a class="btn btn--small" href="#end">Ende</a>
+</nav>
+
+<section class="section" aria-labelledby="h-drei">
+  <h2 id="h-drei">Vor jeder Runde: die 3 Fragen</h2>
+  <div class="card tone-info">
+    <ol class="stack">
+      <li><strong>Was will ICH diese Runde erreichen?</strong></li>
+      <li><strong>Was will MEIN GEGNER diese Runde erreichen?</strong></li>
+      <li><strong>Welche Einheit ist dafür verantwortlich?</strong></li>
+    </ol>
+  </div>
+</section>
+
+<section class="section" aria-labelledby="h-phasen">
+  <h2 id="h-phasen">Die Phasen im Überblick</h2>
+  <p class="intro">Wichtig: „Beide Spieler“ heißt wirklich beide. In der Command Phase bekommen beide Spieler 1 CP. Battle-shock würfelt dagegen nur der Spieler, der gerade dran ist.</p>
+  <div class="table-wrap table-stack">
+    <table>
+      <thead>
+        <tr><th scope="col">Phase</th><th scope="col">Beide Spieler</th><th scope="col">Dein Zug</th><th scope="col">Gegnerischer Zug</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row"><a href="#cmd">Command</a></th>
+          <td data-label="Beide Spieler">+1 CP für beide</td>
+          <td data-label="Dein Zug">Battle-shock würfeln (nur du, für deine Einheiten). Primary prüfen? Ziel für diese Runde?</td>
+          <td data-label="Gegnerischer Zug">Er würfelt sein Battle-shock. Du hast trotzdem deinen CP bekommen.</td>
+        </tr>
+        <tr>
+          <th scope="row"><a href="#move">Movement</a></th>
+          <td data-label="Beide Spieler">–</td>
+          <td data-label="Dein Zug">Plan? Gefahr? Charge-Weg? Reserven, die ankommen? Advance- oder Fall-Back-Stratagem?</td>
+          <td data-label="Gegnerischer Zug">Beobachten. <strong>Am Ende</strong> seiner Movement Phase: Fire Overwatch? Rapid Ingress?</td>
+        </tr>
+        <tr>
+          <th scope="row"><a href="#shoot">Shooting</a></th>
+          <td data-label="Beide Spieler">–</td>
+          <td data-label="Dein Zug">Welche Einheit verhindert meinen Plan? Explosives?</td>
+          <td data-label="Gegnerischer Zug">Beobachten. Wenn er Ziele gewählt hat: Armour of Contempt?</td>
+        </tr>
+        <tr>
+          <th scope="row"><a href="#charge">Charge</a></th>
+          <td data-label="Beide Spieler">–</td>
+          <td data-label="Dein Zug">Warum charge ich? Was bekomme ich dafür?</td>
+          <td data-label="Gegnerischer Zug">Am Ende seiner Charge Phase: Heroic Intervention? Wurdest du gechargt: Savage Echoes?</td>
+        </tr>
+        <tr>
+          <th scope="row"><a href="#fight">Fight</a></th>
+          <td data-label="Beide Spieler">Beide Spieler kämpfen</td>
+          <td data-label="Dein Zug">Was muss sterben? Red Rampage? Wer gechargt hat, schlägt zuerst zu.</td>
+          <td data-label="Gegnerischer Zug">Gegenschlag? Armour of Contempt? Counteroffensive?</td>
+        </tr>
+        <tr>
+          <th scope="row"><a href="#end">Ende</a></th>
+          <td data-label="Beide Spieler">Mission wird geprüft</td>
+          <td data-label="Dein Zug">Punkte prüfen</td>
+          <td data-label="Gegnerischer Zug">Punkte prüfen</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="fine">Manche Missionen werten auch schon am Ende deiner Command Phase. Das steht auf deiner Missionskarte. Alle Stratagems findest du auf der Seite <a href="stratagems.html">Stratagems</a>.</p>
+</section>
+
+<section class="section" aria-labelledby="h-loop">
+  <h2 id="h-loop">Der taktische Loop</h2>
+  <div class="loop">
+    <div><span class="phase">Deployment</span><span class="flow-line">Aufgabe → Position → Bedrohung → Schutz</span></div>
+    <div><span class="phase">Command</span><span class="flow-line">CP → Battle-shock → Primary → nächster Plan</span></div>
+    <div><span class="phase">Movement</span><span class="flow-line">Ziel → Überleben → Charge</span></div>
+    <div><span class="phase">Shooting</span><span class="flow-line">Welche gegnerische Einheit verhindert meinen Plan?</span></div>
+    <div><span class="phase">Charge</span><span class="flow-line">Ist der Charge wichtig? → Was bekomme ich dafür?</span></div>
+    <div><span class="phase">Fight</span><span class="flow-line">Was muss sterben? → Wo stehe ich danach?</span></div>
+  </div>
+</section>
+
+<section class="section" id="cmd" aria-labelledby="h-cmd">
+  <h2 id="h-cmd">Command Phase</h2>
+  <div class="checkgroup">
+    <div class="check-head"><span class="progress" data-progress="cmd"></span><button class="btn btn--small btn--ghost" type="button" data-reset="cmd">Zurücksetzen</button></div>
+    <ul class="checklist" data-checklist="cmd">
+      <li><label class="check"><input type="checkbox"><span>CP erhalten? <small>Beide Spieler bekommen 1 CP.</small></span></label></li>
+      <li><label class="check"><input type="checkbox"><span>Battle-shock prüfen? <small>Nur deine Einheiten, die schon battle-shocked oder auf halber Stärke (oder weniger) sind.</small></span></label></li>
+      <li><label class="check"><input type="checkbox"><span>Primärpunkte prüfen? <small>Manche Missionen werten schon am Ende deiner Command Phase.</small></span></label></li>
+      <li><label class="check"><input type="checkbox"><span>Was ist mein Ziel für diese Runde?</span></label></li>
+    </ul>
+  </div>
+  <details class="layer">
+    <summary><span class="layer-title">Battle-shock in Kürze</span><span class="badge-rule">Regelstand</span></summary>
+    <div class="layer-body">
+      <ul>
+        <li>Eine Einheit, die battle-shocked ist, zählt nicht für Objectives (ihre OC ist „–“).</li>
+        <li>Du kannst auf eine battle-shockte Einheit <strong>keine Stratagems</strong> einsetzen.</li>
+        <li>Zum Wiederherstellen würfelst du in deiner nächsten Command Phase erneut (2W6 gegen Ld).</li>
+        <li>Wenn deine Blood Angels der „Red Thirst“ nachgeben, werden sie absichtlich battle-shocked. Das ist der Preis. Mehr dazu bei den <a href="stratagems.html#red-thirst">Stratagems</a>.</li>
+      </ul>
+    </div>
+  </details>
+</section>
+
+<section class="section" id="move" aria-labelledby="h-move">
+  <h2 id="h-move">Movement Phase</h2>
+  <div class="question">
+    <p>Nicht fragen: „Wie komme ich näher?“<br>Frage: „Wie komme ich nah genug heran, ohne vorher zu sterben?“</p>
+  </div>
+  <h3>Die 3 Fragen vor jeder wichtigen Bewegung</h3>
+  <ol>
+    <li><strong>Was will diese Einheit als Nächstes angreifen?</strong></li>
+    <li><strong>Kann der Gegner sie vorher töten?</strong></li>
+    <li><strong>Kann sie von dieser Position aus noch chargen?</strong></li>
+  </ol>
+  <div class="checkgroup">
+    <h3>Für jede wichtige Einheit</h3>
+    <div class="check-head"><span class="progress" data-progress="move"></span><button class="btn btn--small btn--ghost" type="button" data-reset="move">Zurücksetzen</button></div>
+    <ul class="checklist" data-checklist="move">
+      <li><label class="check"><input type="checkbox"><span>Was ist ihr nächstes Ziel?</span></label></li>
+      <li><label class="check"><input type="checkbox"><span>Wo muss sie dafür stehen?</span></label></li>
+      <li><label class="check"><input type="checkbox"><span>Kann der Gegner sie dort töten?</span></label></li>
+      <li><label class="check"><input type="checkbox"><span>Kann sie danach noch chargen?</span></label></li>
+      <li><label class="check"><input type="checkbox"><span>Muss sie jetzt wirklich weiter nach vorne?</span></label></li>
+    </ul>
+  </div>
+  <h3>Denkassistent</h3>
+  <p class="muted">Kein Taktikberater, nur ein paar Fragen nacheinander.</p>
+  <div class="flow" data-flow="move"></div>
+  <div class="no-js-only callout callout--info">
+    <p class="callout-title">Ohne JavaScript: dieselben Fragen zum Selbst-Durchgehen</p>
+    <ol>
+      <li>Was soll die Einheit tun? Objective halten, schießen, chargen, Gegner blockieren oder überleben.</li>
+      <li>Kann der Gegner sie dort vorher töten? Ja oder nein.</li>
+      <li>Kann sie von dort aus noch chargen? Ja oder nein.</li>
+    </ol>
+  </div>
+  <details class="layer">
+    <summary><span class="layer-title">Bewegung in Kürze</span><span class="badge-rule">Regelstand</span></summary>
+    <div class="layer-body">
+      <ul>
+        <li><strong>Advance</strong>: du bewegst dich weiter, danach kannst du <em>nicht</em> chargen. Mit dem Stratagem <a href="stratagems.html#aggressive-onslaught">Aggressive Onslaught</a> geht es doch.</li>
+        <li><strong>Fall Back</strong> (aus dem Nahkampf zurückziehen): danach darfst du weder schießen noch chargen. Mit <a href="stratagems.html#relentless-assault">Relentless Assault</a> geht es doch.</li>
+        <li><strong>Reserven</strong> (Deep Strike) kommen frühestens in Runde 2 und müssen bis Ende Runde 3 angekommen sein. Sie stehen mehr als 8 Zoll von Gegnern entfernt.</li>
+      </ul>
+    </div>
+  </details>
+</section>
+
+<section class="section" id="shoot" aria-labelledby="h-shoot">
+  <h2 id="h-shoot">Shooting Phase</h2>
+  <div class="question">
+    <p>Welche gegnerische Einheit verhindert gerade meinen Plan?</p>
+    <small>Nicht automatisch: „Was kann ich mit diesem Modell erschießen?“</small>
+  </div>
+  <div class="checkgroup">
+    <div class="check-head"><span class="progress" data-progress="shoot"></span><button class="btn btn--small btn--ghost" type="button" data-reset="shoot">Zurücksetzen</button></div>
+    <ul class="checklist" data-checklist="shoot">
+      <li><label class="check"><input type="checkbox"><span>Welche gegnerische Einheit verhindert meinen Plan?</span></label></li>
+      <li><label class="check"><input type="checkbox"><span>Kann ich sie ausschalten?</span></label></li>
+      <li><label class="check"><input type="checkbox"><span>Wenn nein: Kann ich sie schwächen?</span></label></li>
+      <li><label class="check"><input type="checkbox"><span>Gibt es eine Missionseinheit, die Punkte produziert?</span></label></li>
+      <li><label class="check"><input type="checkbox"><span>Habe ich ein wichtiges Stratagem? <small>Zum Beispiel <a href="stratagems.html#explosives">Explosives</a>.</small></span></label></li>
+    </ul>
+  </div>
+  <details class="layer">
+    <summary><span class="layer-title">Beispiele für die Zielwahl</span></summary>
+    <div class="layer-body">
+      <ul>
+        <li>Gegnerischer Anti-Tank bedroht meine Nahkampfmonster → priorisieren.</li>
+        <li>Billige Objective-Einheit macht seit drei Runden Punkte → eventuell ebenfalls wichtig.</li>
+        <li>Einheit steht irgendwo herum und hat keine relevante Aufgabe → möglicherweise ignorieren.</li>
+      </ul>
+      <p>Mehr dazu auf der Seite <a href="threat.html">Mein Gegner</a>.</p>
+    </div>
+  </details>
+</section>
+
+<section class="section" id="charge" aria-labelledby="h-charge">
+  <h2 id="h-charge">Charge Phase</h2>
+  <div class="question">
+    <p>Ich kann chargen. Aber warum sollte ich?</p>
+  </div>
+  <div class="checkgroup">
+    <div class="check-head"><span class="progress" data-progress="charge"></span><button class="btn btn--small btn--ghost" type="button" data-reset="charge">Zurücksetzen</button></div>
+    <ul class="checklist" data-checklist="charge">
+      <li><label class="check"><input type="checkbox"><span>Warum charge ich?</span></label></li>
+      <li><label class="check"><input type="checkbox"><span>Ist das Ziel wichtig?</span></label></li>
+      <li><label class="check"><input type="checkbox"><span>Wie lang ist der Charge?</span></label></li>
+      <li><label class="check"><input type="checkbox"><span>Gibt es einen Charge-/Advance-Trick? <small>Siehe <a href="stratagems.html">Stratagems</a>.</small></span></label></li>
+      <li><label class="check"><input type="checkbox"><span>Was passiert, wenn ich scheitere?</span></label></li>
+      <li><label class="check"><input type="checkbox"><span>Wo stehe ich nach dem Charge?</span></label></li>
+    </ul>
+  </div>
+  <details class="layer">
+    <summary><span class="layer-title">Die 7 Fragen vor jedem Charge (Langform)</span></summary>
+    <div class="layer-body">
+      <ol>
+        <li>Muss ich diese Einheit angreifen?</li>
+        <li>Was bekomme ich durch den Charge?</li>
+        <li>Ist der Charge realistisch?</li>
+        <li>Was passiert, wenn ich scheitere?</li>
+        <li>Was passiert nach dem Nahkampf?</li>
+        <li>Wo steht meine Einheit anschließend?</li>
+        <li>Welche Detachment-/Charge-Boni gelten?</li>
+      </ol>
+    </div>
+  </details>
+  <details class="layer">
+    <summary><span class="layer-title">Charge in Kürze</span><span class="badge-rule">Regelstand</span></summary>
+    <div class="layer-body">
+      <ul>
+        <li>Ein Gegner muss höchstens 12 Zoll entfernt sein. Du würfelst 2W6 für die Reichweite.</li>
+        <li>Die Einheit darf in diesem Zug nicht Advance oder Fall Back gemacht haben (außer durch ein passendes Stratagem) und darf nicht schon im Nahkampf stehen.</li>
+        <li>Wer chargt, kämpft im Fight <strong>zuerst</strong> („Fights First“).</li>
+        <li><strong>Red Thirst</strong>: Hat deine Einheit gechargt, bekommen ihre Nahkampfwaffen im Fight +1 Attacke und +2 Stärke.</li>
+      </ul>
+    </div>
+  </details>
+</section>
+
+<section class="section" id="fight" aria-labelledby="h-fight">
+  <h2 id="h-fight">Fight Phase</h2>
+  <div class="question">
+    <p>Was muss sterben?<br>Wo muss ich danach stehen?</p>
+  </div>
+  <div class="checkgroup">
+    <div class="check-head"><span class="progress" data-progress="fight"></span><button class="btn btn--small btn--ghost" type="button" data-reset="fight">Zurücksetzen</button></div>
+    <ul class="checklist" data-checklist="fight">
+      <li><label class="check"><input type="checkbox"><span>Was muss sterben?</span></label></li>
+      <li><label class="check"><input type="checkbox"><span>Welche Einheit soll zuerst kämpfen?</span></label></li>
+      <li><label class="check"><input type="checkbox"><span>Welches Ziel bringt mir am meisten?</span></label></li>
+      <li><label class="check"><input type="checkbox"><span>Wo muss ich nach dem Kampf stehen?</span></label></li>
+      <li><label class="check"><input type="checkbox"><span>Kann der Gegner danach zurückschlagen?</span></label></li>
+    </ul>
+  </div>
+  <details class="layer">
+    <summary><span class="layer-title">Der Fight endet nicht mit „Ich habe Modelle getötet“</span></summary>
+    <div class="layer-body">
+      <p>Wichtig ist auch:</p>
+      <ul>
+        <li>Objective Control</li>
+        <li>Schutz</li>
+        <li>das nächste Ziel</li>
+        <li>der gegnerische Gegenschlag</li>
+        <li>die Position für die nächste Runde</li>
+      </ul>
+      <p>Am Ende des Fights darfst du dich noch bis zu 3 Zoll neu aufstellen („Consolidate“). Auch das ist ein Werkzeug für deine Position.</p>
+    </div>
+  </details>
+</section>
+
+<section class="section" id="end" aria-labelledby="h-end">
+  <h2 id="h-end">Ende der Runde</h2>
+  <div class="checkgroup">
+    <div class="check-head"><span class="progress" data-progress="end"></span><button class="btn btn--small btn--ghost" type="button" data-reset="end">Zurücksetzen</button></div>
+    <ul class="checklist" data-checklist="end">
+      <li><label class="check"><input type="checkbox"><span>Wie viele Victory Points habe ich?</span></label></li>
+      <li><label class="check"><input type="checkbox"><span>Wie viele hat der Gegner?</span></label></li>
+      <li><label class="check"><input type="checkbox"><span>Welche Einheit hat gut gearbeitet?</span></label></li>
+      <li><label class="check"><input type="checkbox"><span>Welche Einheit hat nichts getan?</span></label></li>
+      <li><label class="check"><input type="checkbox"><span>Was ist jetzt die wichtigste gegnerische Einheit?</span></label></li>
+      <li><label class="check"><input type="checkbox"><span>Was muss ich nächste Runde erreichen?</span></label></li>
+    </ul>
+  </div>
+  <p>Nach dem Spiel geht es weiter bei <a href="review.html">Nach dem Spiel</a>.</p>
+</section>
+
+</main>
+<!--FOOTER-->
+<footer class="site-footer">
+<div class="wrap">
+<p><span class="badge-rule">Regelstand</span> 11. Edition · geprüft am 19.09.2026. Regeln und Punkte ändern sich. Im Zweifel gilt die offizielle App.</p>
+<p>Inoffizielles Fanprojekt zum Lernen. Warhammer 40,000 und Blood Angels sind Marken von Games Workshop. Diese Seite hat keine Verbindung zu Games Workshop. Regeln sind hier in eigenen Worten zusammengefasst. Maßgeblich sind immer das Regelbuch und die offizielle Warhammer-40,000-App.</p>
+<p class="no-print"><a href="#main">↑ Nach oben</a> · <a href="index.html#quellen">Quellen und Regelstand</a></p>
+</div>
+</footer>
+<!--/FOOTER-->
+<!--SCRIPTS-->
+<script src="js/app.js" defer></script>
+<script src="js/checklist.js" defer></script>
+<script src="js/helper.js" defer></script>
+<!--/SCRIPTS-->
+</body>
+</html>

@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<title>Mein Gegner · Die richtigen Fragen</title>
+<meta name="description" content="Threat Analysis: Erkenne, was der Gegner mit jeder Einheit vorhat, und entscheide, ob du sie bekämpfen oder ignorieren solltest.">
+<!--HEAD-->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<meta name="color-scheme" content="light dark">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<script>(function(){try{var t=localStorage.getItem('ba:theme');if(t==='dark'||t==='light'){document.documentElement.setAttribute('data-theme',t);}}catch(e){}})();</script>
+<link rel="stylesheet" href="css/style.css">
+<!--/HEAD-->
+</head>
+<body data-page="threat" data-rules="0">
+<!--HEADER-->
+<a class="skip" href="#main">Zum Inhalt springen</a>
+<header class="site-header">
+<div class="wrap">
+<div class="header-bar">
+<a class="brand" href="index.html"><img src="assets/favicon.svg" alt="" width="30" height="30"><span>Die richtigen Fragen</span></a>
+<button class="menu-btn" type="button" aria-expanded="false" aria-controls="site-nav"><span aria-hidden="true">☰</span><span class="btn-label"> Menü</span></button>
+<button class="theme-btn" type="button"><span class="ico" aria-hidden="true">🌙</span><span class="btn-label"> Dunkel</span></button>
+</div>
+<nav class="site-nav" id="site-nav" aria-label="Hauptmenü">
+<ul>
+<li class="group"><div class="links"><a href="index.html">Start</a></div></li>
+<li class="group"><p class="group-title">Vor dem Spiel</p><div class="links"><a href="before.html">Vor dem Spiel</a><a href="army.html">Meine Armee</a><a href="units.html">Meine Einheiten</a><a href="deployment.html">Deployment</a></div></li>
+<li class="group"><p class="group-title">Im Spiel</p><div class="links"><a href="checklist.html">Checkliste</a><a href="stratagems.html">Stratagems</a><a href="threat.html" aria-current="page">Mein Gegner</a><a href="missions.html">Mission</a></div></li>
+<li class="group"><p class="group-title">Lernen</p><div class="links"><a href="examples.html">Beispiele</a></div></li>
+<li class="group"><p class="group-title">Danach</p><div class="links"><a href="review.html">Nach dem Spiel</a></div></li>
+</ul>
+</nav>
+</div>
+</header>
+<!--/HEADER-->
+<main id="main" class="wrap">
+
+<h1>Mein Gegner: Threat Analysis</h1>
+<div class="question question--big"><p>„Was versucht mein Gegner gerade mit dieser Einheit zu erreichen?“</p></div>
+<p class="lead">Nicht die stärkste Einheit ist die wichtigste, sondern die, die der Gegner für seinen Plan braucht.</p>
+
+<nav class="cluster" aria-label="Auf dieser Seite">
+  <a class="btn btn--small" href="#rollen">3 Rollen</a>
+  <a class="btn btn--small" href="#vier-fragen">4 Fragen</a>
+  <a class="btn btn--small" href="#kill">Threat oder Punkte?</a>
+  <a class="btn btn--small" href="#baum">Entscheidungsbaum</a>
+  <a class="btn btn--small" href="#fehler">Anfängerfehler</a>
+</nav>
+
+<section class="section" id="rollen" aria-labelledby="h-rollen">
+  <h2 id="h-rollen">Welche Rolle hat die gegnerische Einheit?</h2>
+  <p class="intro">Für jede wichtige gegnerische Einheit versuchst du, eine von drei Rollen zu erkennen. Eine Einheit kann A + B + C gleichzeitig sein.</p>
+  <div class="grid">
+    <div class="card tone-bad">
+      <h3>A – Bedrohung</h3>
+      <p>„Wenn ich sie nicht stoppe, kann sie meine Armee zerstören.“</p>
+    </div>
+    <div class="card tone-warn">
+      <h3>B – Mission</h3>
+      <p>„Wenn ich sie nicht stoppe, bekommt mein Gegner Punkte.“</p>
+    </div>
+    <div class="card tone-info">
+      <h3>C – Aufgabe</h3>
+      <p>„Wenn ich sie nicht stoppe, kann sie eine andere wichtige Einheit unterstützen oder eine bestimmte Aufgabe erfüllen.“</p>
+    </div>
+  </div>
+  <h3>Denkassistent</h3>
+  <p class="muted">Wähle die Rollen, die du bei einer gegnerischen Einheit siehst.</p>
+  <div class="flow" data-flow="roles"></div>
+  <div class="no-js-only callout callout--info">
+    <p class="callout-title">Ohne JavaScript</p>
+    <p>Frag dich bei jeder wichtigen gegnerischen Einheit: Ist sie A (Bedrohung), B (Mission) oder C (Aufgabe)? Hat sie keine der drei Rollen, darfst du sie vielleicht ignorieren.</p>
+  </div>
+</section>
+
+<section class="section" id="vier-fragen" aria-labelledby="h-vier">
+  <h2 id="h-vier">Die vier Fragen vor einem Angriff</h2>
+  <p class="intro">Das verhindert, dass du einfach die nächstbeste Einheit angreifst.</p>
+  <div class="check-head"><span class="progress" data-progress="attack"></span><button class="btn btn--small btn--ghost" type="button" data-reset="attack">Zurücksetzen</button></div>
+  <ul class="checklist" data-checklist="attack">
+    <li><label class="check"><input type="checkbox"><span><strong>1. Was macht die gegnerische Einheit gerade?</strong></span></label></li>
+    <li><label class="check"><input type="checkbox"><span><strong>2. Was passiert, wenn ich sie ignoriere?</strong></span></label></li>
+    <li><label class="check"><input type="checkbox"><span><strong>3. Was passiert, wenn ich sie töte?</strong></span></label></li>
+    <li><label class="check"><input type="checkbox"><span><strong>4. Was könnte ich stattdessen mit meinen Einheiten machen?</strong></span></label></li>
+  </ul>
+</section>
+
+<section class="section" id="kill" aria-labelledby="h-kill">
+  <h2 id="h-kill">„Kill the threat“ oder „Kill points“?</h2>
+  <div class="swap">
+    <div class="no"><span class="label">Falsches Denken</span><p>„Die Einheit kostet 300 Punkte, also muss ich sie töten.“</p></div>
+    <div class="yes"><span class="label">Besseres Denken</span><p>„Was macht diese Einheit für meinen Gegner?“</p></div>
+  </div>
+  <div class="card">
+    <p>Eine 300-Punkte-Einheit steht hinten und tut drei Runden nichts. Eine 50-Punkte-Einheit hält dagegen seit drei Runden ein Objective.</p>
+    <p>Dann kann die 50-Punkte-Einheit für das aktuelle Spiel wichtiger sein. Nicht weil sie stärker ist, sondern weil sie gerade mehr zum Sieg beiträgt.</p>
+  </div>
+</section>
+
+<section class="section" id="baum" aria-labelledby="h-baum">
+  <h2 id="h-baum">Der Entscheidungsbaum</h2>
+  <p class="intro">Er stellt nur Fragen. Die Antworten gibst du.</p>
+  <div class="flow" data-flow="tree"></div>
+  <h3>Der ganze Baum auf einen Blick</h3>
+  <ol class="tree">
+    <li><span class="node">Was will ich erreichen?</span></li>
+    <li><span class="node">Welche Einheit soll das tun?</span></li>
+    <li><span class="node">Wo muss sie dafür stehen?</span></li>
+    <li><span class="node">Was kann sie dort töten?</span></li>
+    <li><span class="node">Was kann sie dort töten lassen?</span>
+      <ul class="branch">
+        <li><span class="node yes">Ja</span><span class="node end">Position ändern / schützen</span><span class="fine">Danach zurück zu „Wo muss sie dafür stehen?“</span></li>
+        <li><span class="node no">Nein</span><span>Weiter mit der nächsten Frage</span></li>
+      </ul>
+    </li>
+    <li><span class="node">Was muss der Gegner verhindern?</span></li>
+    <li><span class="node">Welche gegnerische Einheit ist dafür verantwortlich?</span></li>
+    <li><span class="node">Muss ich sie töten?</span>
+      <ul class="branch">
+        <li><span class="node yes">Ja</span><span class="node end">Angriff vorbereiten</span></li>
+        <li><span class="node no">Nein</span><span class="node end">Ignorieren / Punkte spielen</span></li>
+      </ul>
+    </li>
+  </ol>
+</section>
+
+<section class="section" id="fehler" aria-labelledby="h-fehler">
+  <h2 id="h-fehler">Häufige Anfängerfehler</h2>
+  <p class="intro">Nicht nur, was du tun kannst, sondern typische Denkfehler sichtbar machen.</p>
+  <div class="stack">
+    <div class="swap">
+      <div class="no"><span class="label">Fehler 1</span><p>„Ich kann chargen, also charge ich.“</p></div>
+      <div class="yes"><span class="label">Korrektur</span><p>„Ich kann chargen. Aber warum sollte ich?“</p></div>
+    </div>
+    <div class="swap">
+      <div class="no"><span class="label">Fehler 2</span><p>„Ich muss die stärkste Einheit töten.“</p></div>
+      <div class="yes"><span class="label">Korrektur</span><p>„Welche Einheit verhindert gerade meinen Plan?“</p></div>
+    </div>
+    <div class="swap">
+      <div class="no"><span class="label">Fehler 3</span><p>„Ich muss näher an den Gegner.“</p></div>
+      <div class="yes"><span class="label">Korrektur</span><p>„Ich muss nah genug an mein Ziel kommen und dabei überleben.“</p></div>
+    </div>
+    <div class="swap">
+      <div class="no"><span class="label">Fehler 4</span><p>„Diese Einheit ist billig, also ist sie unwichtig.“</p></div>
+      <div class="yes"><span class="label">Korrektur</span><p>„Wie viele Victory Points produziert sie?“</p></div>
+    </div>
+    <div class="swap">
+      <div class="no"><span class="label">Fehler 5</span><p>„Meine Einheit ist noch voll gesund, also kann ich sie nach vorne stellen.“</p></div>
+      <div class="yes"><span class="label">Korrektur</span><p>„Kann der Gegner sie töten, bevor sie ihren Job erledigt?“</p></div>
+    </div>
+    <div class="swap">
+      <div class="no"><span class="label">Fehler 6</span><p>„Ich habe noch CP, also benutze ich ein Stratagem.“</p></div>
+      <div class="yes"><span class="label">Korrektur</span><p>„Ist diese Situation wichtig genug, um CP auszugeben?“</p></div>
+    </div>
+  </div>
+  <p>Wie andere Spieler diese Fehler gemacht (oder vermieden) haben, siehst du bei den <a href="examples.html">Beispielen</a>.</p>
+</section>
+
+</main>
+<!--FOOTER-->
+<footer class="site-footer">
+<div class="wrap">
+<p>Inoffizielles Fanprojekt zum Lernen. Warhammer 40,000 und Blood Angels sind Marken von Games Workshop. Diese Seite hat keine Verbindung zu Games Workshop. Regeln sind hier in eigenen Worten zusammengefasst. Maßgeblich sind immer das Regelbuch und die offizielle Warhammer-40,000-App.</p>
+<p class="no-print"><a href="#main">↑ Nach oben</a> · <a href="index.html#quellen">Quellen und Regelstand</a></p>
+</div>
+</footer>
+<a class="fab" href="checklist.html">✓ Checkliste</a>
+<!--/FOOTER-->
+<!--SCRIPTS-->
+<script src="js/app.js" defer></script>
+<script src="js/checklist.js" defer></script>
+<script src="js/helper.js" defer></script>
+<!--/SCRIPTS-->
+</body>
+</html>

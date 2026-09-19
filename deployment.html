@@ -1,0 +1,239 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<title>Deployment · Die richtigen Fragen</title>
+<meta name="description" content="Der wichtigste taktische Abschnitt: Aufstellung in fünf Schritten, Reihenfolge und das Ping-Pong mit dem Gegner.">
+<!--HEAD-->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<meta name="color-scheme" content="light dark">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<script>(function(){try{var t=localStorage.getItem('ba:theme');if(t==='dark'||t==='light'){document.documentElement.setAttribute('data-theme',t);}}catch(e){}})();</script>
+<link rel="stylesheet" href="css/style.css">
+<!--/HEAD-->
+</head>
+<body data-page="deployment" data-rules="1">
+<!--HEADER-->
+<a class="skip" href="#main">Zum Inhalt springen</a>
+<header class="site-header">
+<div class="wrap">
+<div class="header-bar">
+<a class="brand" href="index.html"><img src="assets/favicon.svg" alt="" width="30" height="30"><span>Die richtigen Fragen</span></a>
+<button class="menu-btn" type="button" aria-expanded="false" aria-controls="site-nav"><span aria-hidden="true">☰</span><span class="btn-label"> Menü</span></button>
+<button class="theme-btn" type="button"><span class="ico" aria-hidden="true">🌙</span><span class="btn-label"> Dunkel</span></button>
+</div>
+<nav class="site-nav" id="site-nav" aria-label="Hauptmenü">
+<ul>
+<li class="group"><div class="links"><a href="index.html">Start</a></div></li>
+<li class="group"><p class="group-title">Vor dem Spiel</p><div class="links"><a href="before.html">Vor dem Spiel</a><a href="army.html">Meine Armee</a><a href="units.html">Meine Einheiten</a><a href="deployment.html" aria-current="page">Deployment</a></div></li>
+<li class="group"><p class="group-title">Im Spiel</p><div class="links"><a href="checklist.html">Checkliste</a><a href="stratagems.html">Stratagems</a><a href="threat.html">Mein Gegner</a><a href="missions.html">Mission</a></div></li>
+<li class="group"><p class="group-title">Lernen</p><div class="links"><a href="examples.html">Beispiele</a></div></li>
+<li class="group"><p class="group-title">Danach</p><div class="links"><a href="review.html">Nach dem Spiel</a></div></li>
+</ul>
+</nav>
+</div>
+</header>
+<!--/HEADER-->
+<main id="main" class="wrap">
+
+<h1>Deployment: der wichtigste taktische Abschnitt</h1>
+<div class="question question--big"><p>Verliere das Spiel nicht schon bei der Aufstellung.</p></div>
+<p class="lead">Deployment ist kein „Ich stelle meine Modelle dort hin, wo sie ungefähr hin sollen“. Deployment ist der Beginn des Spielplans.</p>
+
+<nav class="cluster" aria-label="Schritte">
+  <a class="btn btn--small" href="#schritt1">1 Mission</a>
+  <a class="btn btn--small" href="#schritt2">2 Aufgaben</a>
+  <a class="btn btn--small" href="#schritt3">3 Position</a>
+  <a class="btn btn--small" href="#schritt4">4 Bedrohung</a>
+  <a class="btn btn--small" href="#schritt5">5 Schutz</a>
+  <a class="btn btn--small" href="#reihenfolge">Reihenfolge</a>
+  <a class="btn btn--small" href="#pingpong">Ping-Pong</a>
+</nav>
+
+<section class="section">
+  <h2>Der Weg in fünf Schritten</h2>
+  <p class="fine">Kurz zum Abhaken: <a href="before.html#deployment-check">Deployment-Kurzcheck</a>.</p>
+  <ol class="path">
+    <li><div><span class="who">Schritt 1</span><span class="what">Mission verstehen: Was muss ich punkten?</span></div></li>
+    <li><div><span class="who">Schritt 2</span><span class="what">Aufgaben definieren: Was macht jede Einheit?</span></div></li>
+    <li><div><span class="who">Schritt 3</span><span class="what">Wo muss sie dafür stehen?</span></div></li>
+    <li><div><span class="who">Schritt 4</span><span class="what">Threat Analysis: Wer bedroht mich, was braucht der Gegner?</span></div></li>
+    <li><div><span class="who">Schritt 5</span><span class="what">Schutz: Was kann der Gegner töten, bevor es seinen Job erledigt?</span></div></li>
+  </ol>
+</section>
+
+<section class="section" id="schritt1" aria-labelledby="h-s1">
+  <h2 id="h-s1">Schritt 1: Mission verstehen</h2>
+  <div class="question"><p>Bevor ein Modell aufgestellt wird: Was muss ich in Runde 1 und Runde 2 punkten?</p></div>
+  <p>Dann:</p>
+  <ul>
+    <li>Welches Objective ist Home?</li>
+    <li>Welches ist Expansion?</li>
+    <li>Welche Objectives sind zentral?</li>
+    <li>Welche Mission- und Secondary-Anforderungen gibt es?</li>
+    <li>Welche Einheit kann welche Aufgabe erfüllen?</li>
+  </ul>
+  <div class="card tone-info" id="mission-box">
+    <h3>Meine Mission</h3>
+    <p class="fine">Deine Eingaben bleiben in diesem Browser gespeichert.</p>
+    <div class="field-wrap">
+      <label class="field" for="mission-name">Mission</label>
+      <input type="text" id="mission-name" data-persist="mission-name" autocomplete="off">
+    </div>
+    <div class="field-wrap">
+      <label class="field" for="mission-r1">Runde 1 muss ich</label>
+      <textarea id="mission-r1" data-persist="mission-r1"></textarea>
+    </div>
+    <div class="field-wrap">
+      <label class="field" for="mission-r2">Runde 2 muss ich</label>
+      <textarea id="mission-r2" data-persist="mission-r2"></textarea>
+    </div>
+    <div class="field-wrap">
+      <label class="field" for="mission-obj">Wichtigstes Objective</label>
+      <input type="text" id="mission-obj" data-persist="mission-obj" autocomplete="off">
+    </div>
+    <button class="btn btn--small btn--ghost" type="button" data-reset-fields="#mission-box">Felder leeren</button>
+  </div>
+  <p>Wie deine Mission zustande kommt, steht auf der Seite <a href="missions.html">Mission</a>.</p>
+</section>
+
+<section class="section" id="schritt2" aria-labelledby="h-s2">
+  <h2 id="h-s2">Schritt 2: Aufgaben definieren</h2>
+  <div class="question"><p>Was soll diese Einheit in Runde 1 machen? Und was in Runde 2?</p></div>
+  <p class="intro">Die grauen Beispiele sind nur Denkmodelle. Die konkrete Entscheidung hängt von Mission und Gegner ab.</p>
+  <div id="plan-box">
+    <div class="table-wrap table-stack">
+      <table>
+        <thead>
+          <tr><th scope="col">Einheit</th><th scope="col">Runde 1</th><th scope="col">Runde 2</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">Dante + Sanguinary Guard</th>
+            <td data-label="Runde 1"><label class="visually-hidden" for="plan-dante-1">Dante und Garde, Runde 1</label><textarea class="compact-area" id="plan-dante-1" data-persist="plan-dante-1" placeholder="Positionieren und Charge vorbereiten." rows="2"></textarea></td>
+            <td data-label="Runde 2"><label class="visually-hidden" for="plan-dante-2">Dante und Garde, Runde 2</label><textarea class="compact-area" id="plan-dante-2" data-persist="plan-dante-2" placeholder="Wichtige gegnerische Bedrohung angreifen." rows="2"></textarea></td>
+          </tr>
+          <tr>
+            <th scope="row">Bladeguard + Priest</th>
+            <td data-label="Runde 1"><label class="visually-hidden" for="plan-blade-1">Bladeguard, Runde 1</label><textarea class="compact-area" id="plan-blade-1" data-persist="plan-blade-1" placeholder="Sicher Richtung Mitte." rows="2"></textarea></td>
+            <td data-label="Runde 2"><label class="visually-hidden" for="plan-blade-2">Bladeguard, Runde 2</label><textarea class="compact-area" id="plan-blade-2" data-persist="plan-blade-2" placeholder="Mittleren Bereich kontrollieren." rows="2"></textarea></td>
+          </tr>
+          <tr>
+            <th scope="row">Intercessors</th>
+            <td data-label="Runde 1"><label class="visually-hidden" for="plan-inter-1">Intercessors, Runde 1</label><textarea class="compact-area" id="plan-inter-1" data-persist="plan-inter-1" placeholder="Home Objective halten." rows="2"></textarea></td>
+            <td data-label="Runde 2"><label class="visually-hidden" for="plan-inter-2">Intercessors, Runde 2</label><textarea class="compact-area" id="plan-inter-2" data-persist="plan-inter-2" placeholder="Objective weiter halten." rows="2"></textarea></td>
+          </tr>
+          <tr>
+            <th scope="row">Ballistus (beide)</th>
+            <td data-label="Runde 1"><label class="visually-hidden" for="plan-ball-1">Ballistus, Runde 1</label><textarea class="compact-area" id="plan-ball-1" data-persist="plan-ball-1" placeholder="Feuerlinien aufbauen." rows="2"></textarea></td>
+            <td data-label="Runde 2"><label class="visually-hidden" for="plan-ball-2">Ballistus, Runde 2</label><textarea class="compact-area" id="plan-ball-2" data-persist="plan-ball-2" placeholder="Bedrohung ausschalten." rows="2"></textarea></td>
+          </tr>
+          <tr>
+            <th scope="row">Inceptors</th>
+            <td data-label="Runde 1"><label class="visually-hidden" for="plan-incept-1">Inceptors, Runde 1</label><textarea class="compact-area" id="plan-incept-1" data-persist="plan-incept-1" placeholder="In der Reserve warten." rows="2"></textarea></td>
+            <td data-label="Runde 2"><label class="visually-hidden" for="plan-incept-2">Inceptors, Runde 2</label><textarea class="compact-area" id="plan-incept-2" data-persist="plan-incept-2" placeholder="Wo entsteht eine neue Bedrohung?" rows="2"></textarea></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <button class="btn btn--small btn--ghost" type="button" data-reset-fields="#plan-box">Felder leeren</button>
+  </div>
+  <details class="layer">
+    <summary><span class="layer-title">Reserven: Regeln in Kürze</span><span class="badge-rule">Regelstand</span></summary>
+    <div class="layer-body">
+      <ul>
+        <li>Einheiten mit Deep Strike (bei dir Inceptors, Dante und die Sanguinary Guard) kannst du schon vor dem Aufstellen in die Reserve legen.</li>
+        <li>Zusammen dürfen Reserve-Einheiten höchstens die Hälfte deiner Punkte kosten.</li>
+        <li>Sie kommen frühestens in Runde 2 und müssen bis zum Ende von Runde 3 angekommen sein. Sonst sind sie verloren.</li>
+        <li>Beim Ankommen stehen sie mehr als 8 Zoll von jedem Gegner entfernt.</li>
+      </ul>
+    </div>
+  </details>
+</section>
+
+<section class="section" id="schritt3" aria-labelledby="h-s3">
+  <h2 id="h-s3">Schritt 3: Wo muss die Einheit dafür stehen?</h2>
+  <div class="question"><p>„Wo muss sie stehen, damit sie ihre Aufgabe erfüllen kann?“</p></div>
+  <p>Das verhindert blindes Aufstellen. Ein Beispiel: Eine Einheit soll in Runde 2 chargen.</p>
+  <div class="swap">
+    <div class="no"><span class="label">Nicht fragen</span><p>„Wo sieht sie cool aus?“</p></div>
+    <div class="yes"><span class="label">Frage</span><p>„Von welcher Position aus kann sie in Runde 2 chargen und überlebt sie bis dahin?“</p></div>
+  </div>
+</section>
+
+<section class="section" id="schritt4" aria-labelledby="h-s4">
+  <h2 id="h-s4">Schritt 4: Threat Analysis</h2>
+  <div class="question"><p>„Welche meiner Einheiten muss der Gegner fürchten?“</p></div>
+  <div class="question"><p>„Welche seiner Einheiten muss ICH fürchten?“</p></div>
+  <p>Noch wichtiger:</p>
+  <div class="question question--big"><p>„Welche Einheit braucht der Gegner, damit sein Plan funktioniert?“</p></div>
+  <p>Das ist nicht immer dieselbe Einheit. Mehr dazu auf der Seite <a href="threat.html">Mein Gegner</a>.</p>
+</section>
+
+<section class="section" id="schritt5" aria-labelledby="h-s5">
+  <h2 id="h-s5">Schritt 5: Schutz</h2>
+  <div class="question"><p>„Was kann der Gegner töten, bevor es seinen Job erledigt?“</p></div>
+  <ul>
+    <li>Wenn eine Einheit in Runde 2 chargen soll, darf sie nicht in Runde 1 sinnlos im offenen Gelände stehen.</li>
+    <li>Wenn ein Ballistus eine Feuerlinie braucht, darf er nicht so stehen, dass er sofort ausgeschaltet wird.</li>
+    <li>Wenn eine Einheit nur Home hält, muss sie nicht unbedingt exponiert stehen.</li>
+  </ul>
+</section>
+
+<section class="section" id="reihenfolge" aria-labelledby="h-reihe">
+  <h2 id="h-reihe">Die Aufstellungs-Reihenfolge</h2>
+  <div class="grid grid--2">
+    <div class="card tone-ok">
+      <h3>Früh aufstellen</h3>
+      <p>Einheiten, deren Aufgabe offensichtlich ist. Zum Beispiel die Intercessors auf Home. Der Gegner weiß ohnehin ungefähr, was sie machen.</p>
+    </div>
+    <div class="card tone-warn">
+      <h3>Später aufstellen</h3>
+      <p>Einheiten,</p>
+      <ul>
+        <li>die der Gegner besonders fürchten muss,</li>
+        <li>deren Position von der gegnerischen Aufstellung abhängt,</li>
+        <li>die eine wichtige Feuerlinie brauchen,</li>
+        <li>die flexibel eingesetzt werden können.</li>
+      </ul>
+      <p class="fine">Zum Beispiel Dante + Sanguinary Guard, wichtige Ballistus-Positionen und die Bladeguard, je nach Gegner.</p>
+    </div>
+  </div>
+  <div class="callout callout--info"><p><strong>Das ist keine absolute Regel.</strong> Wenn Überleben, Mission oder Gelände etwas anderes verlangen, ist das wichtiger.</p></div>
+</section>
+
+<section class="section" id="pingpong" aria-labelledby="h-ping">
+  <h2 id="h-ping">Deployment als Ping-Pong</h2>
+  <div class="question question--big"><p>„Aufstellung ist ein Ping-Pong-Spiel. Jede Einheit, die du aufstellst, gibt deinem Gegner Informationen. Dein Gegner macht dasselbe.“</p></div>
+  <div class="grid grid--2">
+    <div class="card">
+      <h3>Beispiel 1</h3>
+      <p>Der Gegner stellt eine große Bedrohung links auf. Dann weißt du: „Meine Einheit muss vielleicht nicht dort stehen.“</p>
+    </div>
+    <div class="card">
+      <h3>Beispiel 2</h3>
+      <p>Der Gegner stellt seine Anti-Tank-Einheiten zentral auf. Dann weißt du: „Meine Monster dürfen nicht einfach dort auftauchen, wo sie sofort beschossen werden.“</p>
+    </div>
+  </div>
+  <p>Echte Geschichten dazu findest du bei den <a href="examples.html">Beispielen</a>.</p>
+</section>
+
+</main>
+<!--FOOTER-->
+<footer class="site-footer">
+<div class="wrap">
+<p><span class="badge-rule">Regelstand</span> 11. Edition · geprüft am 19.09.2026. Regeln und Punkte ändern sich. Im Zweifel gilt die offizielle App.</p>
+<p>Inoffizielles Fanprojekt zum Lernen. Warhammer 40,000 und Blood Angels sind Marken von Games Workshop. Diese Seite hat keine Verbindung zu Games Workshop. Regeln sind hier in eigenen Worten zusammengefasst. Maßgeblich sind immer das Regelbuch und die offizielle Warhammer-40,000-App.</p>
+<p class="no-print"><a href="#main">↑ Nach oben</a> · <a href="index.html#quellen">Quellen und Regelstand</a></p>
+</div>
+</footer>
+<a class="fab" href="checklist.html">✓ Checkliste</a>
+<!--/FOOTER-->
+<!--SCRIPTS-->
+<script src="js/app.js" defer></script>
+<script src="js/checklist.js" defer></script>
+<script src="js/helper.js" defer></script>
+<!--/SCRIPTS-->
+</body>
+</html>

@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<title>Vor dem Spiel · Die richtigen Fragen</title>
+<meta name="description" content="Zehn Fragen vor dem ersten Würfelwurf und der Deployment-Kurzcheck zum Abhaken.">
+<!--HEAD-->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<meta name="color-scheme" content="light dark">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<script>(function(){try{var t=localStorage.getItem('ba:theme');if(t==='dark'||t==='light'){document.documentElement.setAttribute('data-theme',t);}}catch(e){}})();</script>
+<link rel="stylesheet" href="css/style.css">
+<!--/HEAD-->
+</head>
+<body data-page="before" data-rules="0">
+<!--HEADER-->
+<a class="skip" href="#main">Zum Inhalt springen</a>
+<header class="site-header">
+<div class="wrap">
+<div class="header-bar">
+<a class="brand" href="index.html"><img src="assets/favicon.svg" alt="" width="30" height="30"><span>Die richtigen Fragen</span></a>
+<button class="menu-btn" type="button" aria-expanded="false" aria-controls="site-nav"><span aria-hidden="true">☰</span><span class="btn-label"> Menü</span></button>
+<button class="theme-btn" type="button"><span class="ico" aria-hidden="true">🌙</span><span class="btn-label"> Dunkel</span></button>
+</div>
+<nav class="site-nav" id="site-nav" aria-label="Hauptmenü">
+<ul>
+<li class="group"><div class="links"><a href="index.html">Start</a></div></li>
+<li class="group"><p class="group-title">Vor dem Spiel</p><div class="links"><a href="before.html" aria-current="page">Vor dem Spiel</a><a href="army.html">Meine Armee</a><a href="units.html">Meine Einheiten</a><a href="deployment.html">Deployment</a></div></li>
+<li class="group"><p class="group-title">Im Spiel</p><div class="links"><a href="checklist.html">Checkliste</a><a href="stratagems.html">Stratagems</a><a href="threat.html">Mein Gegner</a><a href="missions.html">Mission</a></div></li>
+<li class="group"><p class="group-title">Lernen</p><div class="links"><a href="examples.html">Beispiele</a></div></li>
+<li class="group"><p class="group-title">Danach</p><div class="links"><a href="review.html">Nach dem Spiel</a></div></li>
+</ul>
+</nav>
+</div>
+</header>
+<!--/HEADER-->
+<main id="main" class="wrap">
+
+<h1>Vor dem Spiel</h1>
+<p class="lead">Vor dem ersten Würfelwurf: zehn Fragen. Nimm dir dafür zwei Minuten. Deine Haken bleiben in diesem Browser gespeichert.</p>
+
+<section class="section" aria-labelledby="h-zehn">
+  <h2 id="h-zehn">Die zehn Fragen</h2>
+  <div class="check-head"><span class="progress" data-progress="before"></span><button class="btn btn--small btn--ghost" type="button" data-reset="before">Zurücksetzen</button></div>
+  <ul class="checklist" data-checklist="before">
+    <li><label class="check"><input type="checkbox"><span>Mission verstanden?</span></label></li>
+    <li><label class="check"><input type="checkbox"><span>Primärziel verstanden?</span></label></li>
+    <li><label class="check"><input type="checkbox"><span>Was muss ich Runde 1 punkten?</span></label></li>
+    <li><label class="check"><input type="checkbox"><span>Was muss ich Runde 2 punkten?</span></label></li>
+    <li><label class="check"><input type="checkbox"><span>Welche Einheit hält Home?</span></label></li>
+    <li><label class="check"><input type="checkbox"><span>Welche Einheit geht Richtung Mitte?</span></label></li>
+    <li><label class="check"><input type="checkbox"><span>Welche Einheit ist meine wichtigste Nahkampfbedrohung?</span></label></li>
+    <li><label class="check"><input type="checkbox"><span>Was kann mich beim Gegner am stärksten stoppen?</span></label></li>
+    <li><label class="check"><input type="checkbox"><span>Welche Einheit muss ich schützen?</span></label></li>
+    <li><label class="check"><input type="checkbox"><span>Welche Einheit kann ich bewusst opfern?</span></label></li>
+  </ul>
+  <p>Hilfe dazu: <a href="army.html">Meine Armee</a> und <a href="units.html">Meine Einheiten</a>. Deine Mission trägst du auf der Seite <a href="deployment.html#schritt1">Deployment</a> ein.</p>
+</section>
+
+<section class="section" id="deployment-check" aria-labelledby="h-dep">
+  <h2 id="h-dep">Deployment-Kurzcheck</h2>
+  <p class="intro">Aufgabe → Position → Bedrohung → Schutz. Die lange Version steht bei <a href="deployment.html">Deployment</a>.</p>
+  <div class="check-head"><span class="progress" data-progress="deploy"></span><button class="btn btn--small btn--ghost" type="button" data-reset="deploy">Zurücksetzen</button></div>
+  <div data-checklist="deploy">
+    <div class="checkgroup">
+      <h3><span class="chip chip--info">Mission</span></h3>
+      <ul class="checklist">
+        <li><label class="check"><input type="checkbox"><span>Was muss ich punkten?</span></label></li>
+      </ul>
+    </div>
+    <div class="checkgroup">
+      <h3><span class="chip chip--info">Aufgaben</span></h3>
+      <ul class="checklist">
+        <li><label class="check"><input type="checkbox"><span>Was macht jede Einheit in Runde 1?</span></label></li>
+        <li><label class="check"><input type="checkbox"><span>Was macht jede Einheit in Runde 2?</span></label></li>
+      </ul>
+    </div>
+    <div class="checkgroup">
+      <h3><span class="chip chip--info">Position</span></h3>
+      <ul class="checklist">
+        <li><label class="check"><input type="checkbox"><span>Wo muss sie dafür stehen?</span></label></li>
+      </ul>
+    </div>
+    <div class="checkgroup">
+      <h3><span class="chip chip--warn">Bedrohung</span></h3>
+      <ul class="checklist">
+        <li><label class="check"><input type="checkbox"><span>Was kann mich töten?</span></label></li>
+        <li><label class="check"><input type="checkbox"><span>Was braucht der Gegner für seinen Plan?</span></label></li>
+      </ul>
+    </div>
+    <div class="checkgroup">
+      <h3><span class="chip chip--bad">Schutz</span></h3>
+      <ul class="checklist">
+        <li><label class="check"><input type="checkbox"><span>Was muss ich verstecken?</span></label></li>
+        <li><label class="check"><input type="checkbox"><span>Welche Einheit darf der Gegner nicht einfach erschießen?</span></label></li>
+      </ul>
+    </div>
+    <div class="checkgroup">
+      <h3><span class="chip">Reihenfolge</span></h3>
+      <ul class="checklist">
+        <li><label class="check"><input type="checkbox"><span>Offensichtliche Einheiten zuerst?</span></label></li>
+        <li><label class="check"><input type="checkbox"><span>Flexible und gefürchtete Einheiten später?</span></label></li>
+        <li><label class="check"><input type="checkbox"><span>Gegnerische Aufstellung berücksichtigt?</span></label></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+</main>
+<!--FOOTER-->
+<footer class="site-footer">
+<div class="wrap">
+<p>Inoffizielles Fanprojekt zum Lernen. Warhammer 40,000 und Blood Angels sind Marken von Games Workshop. Diese Seite hat keine Verbindung zu Games Workshop. Regeln sind hier in eigenen Worten zusammengefasst. Maßgeblich sind immer das Regelbuch und die offizielle Warhammer-40,000-App.</p>
+<p class="no-print"><a href="#main">↑ Nach oben</a> · <a href="index.html#quellen">Quellen und Regelstand</a></p>
+</div>
+</footer>
+<a class="fab" href="checklist.html">✓ Checkliste</a>
+<!--/FOOTER-->
+<!--SCRIPTS-->
+<script src="js/app.js" defer></script>
+<script src="js/checklist.js" defer></script>
+<script src="js/helper.js" defer></script>
+<!--/SCRIPTS-->
+</body>
+</html>

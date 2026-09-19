@@ -1,0 +1,6 @@
+# Briefing bleibt lokal (enthält persönliche Angaben, nicht veröffentlichen)
+/blood_angels_lern_webseite_ki_agent.md
+
+# Python-Cache der Hilfsskripte
+__pycache__/
+*.pyc
