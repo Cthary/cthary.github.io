@@ -1,0 +1,262 @@
+Gegneranalyse: Tobias Pingel (Fenris) – Necrons.
+
+Liste in Kürze (1985 Punkte, Awakened Dynasty 3 Daemon Prince).
+
+Technomancer (Veil of Darkness) plus 6 Canoptek Wraiths; Punkte: 320; Rolle gegen dich: Objective-Brecher, Harvester-Jäger, Deep-Strike-Sprung 1 mal pro Spiel.
+Technomancer plus 6 Canoptek Wraiths; Punkte: 330; Rolle gegen dich: zweiter Wraith-Block.
+Plasmancer plus 10 Immortals (Tesla); Punkte: 200; Rolle gegen dich: Battleline, Living Lightning (4W6, dann Mortal Wounds).
+Lokhust Lord (Nether-realm Casket: Stealth) plus 3 Lokhust Heavy Destroyers (Gauss Destructor); Punkte: 265; Rolle gegen dich: Hauptwaffe gegen Monster: 48 Zoll Stärke 14 AP minus 4 D6.
+C'tan Shard of the Nightbringer; Punkte: 360; Rolle gegen dich: Nahkampf-Monster, Gaze 18 Zoll.
+Hexmark Destroyer; Punkte: 75; Rolle gegen dich: Overwatch für 0 Kommandopunkte, trifft auf 2 plus.
+Illuminor Szeras (Warlord); Punkte: 175; Rolle gegen dich: Battleline-Aura AP±1, Eldritch Lance 36 Zoll.
+Imotekh the Stormlord (allein); Punkte: 100; Rolle gegen dich: plus 1 Kommandopunkt, Lord of the Storm (1 mal : D3 oder D3 plus 3 Mortal Wounds an alles in 12 Zoll).
+Deathmarks, 5 Stück; Punkte: 60; Rolle gegen dich: Hyperspace Hunters: schießt auf Reserveeinheiten, die in 18 Zoll landen.
+Lokhust Heavy Destroyers, 2 Stück (Enmitic Exterminator); Punkte: 100; Rolle gegen dich: Anti-Infanterie 36 Zoll.
+
+Force Disposition: Take and Hold (einzige Option).
+
+Abschnitt 1: Executive Summary.
+
+Was die Armee will: Ein zähes, sich selbst heilendes Objective-Spiel. Zwei Wraith-Blöcke (Widerstand 6, 4 plus Invul, Feel No Pain 5 plus) nehmen Objectives und jagen deine weichen Harvester; die Immortals plus Szeras halten die eigene Hälfte; die Heavy Destroyers mit Gauss Destructors schießen deine Monster aus 48 Zoll an.
+Wichtigste Bedrohung: Die drei Gauss Destructors (mit Lord: plus 1 to hit, Crits auf 5 plus, dann Lethal Hits) – etwa 7, mit Feel No Pain 5, Schaden pro Runde an einem Norn, zuverlässig und aus großer Distanz, unter Stealth. Im Nahkampf: der Nightbringer (etwa 10, mit Feel No Pain 7, an einem Norn).
+Wichtigstes taktisches Problem: Necrons regenerieren wie du (Reanimation Protocols D3 pro Runde, Technomancer D3, Feel No Pain 5 plus bei Wraiths). Ein langes Attritionsspiel ohne Fokus kippt nicht automatisch zu deinen Gunsten.
+Was du vermeiden musst: Deinen Schaden auf den Nightbringer zu verschwenden (Widerstand 11, 4 plus Invul, Feel No Pain 5 plus, minus 1 Damage). Und Zoanthropes in 18 Zoll der Deathmarks einfliegen zu lassen.
+Strategischer Ansatz: O-C-Duell gewinnen, nicht das Töten. Beide spielen Battlefield Dominance. Deine Norns (O-C 15) schlagen jeden seiner Blöcke im Objective-Wettbewerb. Kill-Fokus: Wraith-Blöcke (sie sind die Objective-Brecher) und die Heavy Destroyers. Assassination als Secondary: 8 Characters.
+
+Abschnitt 2: Opponent Game Plan.
+
+Awakened Dynasty: Character führt Einheit, dann plus 1 to hit, dann Wraiths treffen im Nahkampf auf 3 plus, Heavy Destroyers auf 2 plus (mit Heavy plus 1, dann 2 plus) Immortals auf 2 plus.
+Reanimation Protocols: jede Einheit heilt D3 W am Ende seiner Command Phase.
+Technomancer: plus Feel No Pain 5 plus für Wraiths, plus D3 Heilung auf ein Modell in 6 Zoll.
+Protocol of the Undying Legions (1 Kommandopunkt): sofortige Reanimation nach deinem Angriff.
+
+1: Aufstellung: Immortals plus Szeras plus Imotekh auf Home oder eigener Expansion. Heavy Destroyers (Lord) mit 48 Zoll-Lane. Wraith-Blöcke zentral oder flankierend. Nightbringer zentral. Deathmarks in Reserve oder in einer Ruine als Reserve-Wächter.
+2: Runde 1 bis 2: Wraiths (Bewegung 10, FLY, Wraith Form: Mortal Wounds beim Überfliegen) nehmen Central oder Expansion und springen deine Pyrovores oder Rippers oder Biovore an. Heavy Destroyers schießen auf deinen größten Block.
+3: Runde 2 bis 3: Nightbringer trifft die Front. Veil of Darkness versetzt einen Wraith-Block 1 mal per Deep Strike in deine Hälfte (auf Home).
+4: Scoring: Battlefield Dominance – er will Home plus Central plus Expansion (13 Siegpunkte pro Runde).
+
+Er gewinnt nicht durch Schaden. Er gewinnt, wenn seine Wraiths und Immortals länger auf Objectives stehen als deine Norns – und wenn er in Runde 2 per Veil oder Deep Strike dein Home bricht.
+
+Abschnitt 3: Major Threats.
+
+Lord plus 3 Lokhust Heavy Destroyers (Gauss Destructors).
+
+Widerstand 6, 3 plus, 4 Lebenspunkte je Modell (Lord 4 plus Invul, Feel No Pain 5 plus), Stealth (Casket), FLY, Bewegung 8. Gauss Destructor 48 Zoll 1 Attacken Stärke 14 AP minus 4 D6 Lethal Hits Heavy, Reroll Wound 1 gegen Monster. Lord: Crits auf 5 plus (Destroyer Cult), dann Lethal Hits auf 5 plus. Awakened Dynasty plus 1 to hit, Heavy plus 1, dann trifft auf 2 plus.
+Gegen Norn: 3 Schuss, dann etwa 2,8 Treffer (davon etwa 1,4 Lethal), dann etwa 2,3 Wunden, dann 4 plus Invul, dann etwa 7, mit Feel No Pain 5, Schaden pro Runde. Gegen Psychophage (Widerstand 9, 3 plus, Feel No Pain 5 plus): etwa 2,4 durch, dann etwa 8, dann fast tot.
+Reaktion: Kill early. 13 W bei Widerstand 6 oder 3 plus: der Hive-Tyrant-Block löscht sie im Nahkampf; Zoanthropes-D3-Blast (Stärke 7 gegen Widerstand 6, dann 3 plus, AP minus 2, D3), dann etwa 6 W. Stealth: normale Schüsse minus 1 BS, Psychic ignoriert das (Zoans, Emissary).
+
+C'tan Shard of the Nightbringer.
+
+Widerstand 11, 3 plus oder 4 plus Invul, Feel No Pain 5 plus, 16 Lebenspunkte, Necrodermis: minus 1 Damage, Bewegung 10, FLY, Deep Strike. Gaze 18 Zoll D3 Stärke 12 AP minus 3 D6 plus 3; Scythe Strike 6 Attacken 2 plus Stärke 14 AP minus 4 D6 plus 2 Dev Wounds; Sweep 14 Attacken Stärke 8 AP minus 2 D2. Drain Life: Ende jeder Fight Phase 4 plus, dann D3 Mortal Wounds an jede Gegnereinheit in 6 Zoll.
+Gegen Norn im Nahkampf: etwa 9 bis 11, mit Feel No Pain 6 bis 7, (Devastating Wounds-Mortal Wounds, gegen Emissary halbiert durch Feel No Pain 4 plus gegen Mortal Wounds). Gegen Tyrant Guard: etwa 4 Guards.
+Er ist Bring It Down plus Assassination (8 Siegpunkte), aber teuer zu töten: Dein Hive-Tyrant-Block macht effektiv etwa 3 bis 5 Schaden an ihm.
+Reaktion: Control, avoid. Ihn mit O-C-Überlegenheit (Norn 15 > C'tan 4) auf dem Objective neutralisieren und die anderen Einheiten töten. Erst wenn er beschädigt ist (Damaged unter 6 W: minus 1 to hit), mit Norn (Singular Purpose auf ihn, dann Reroll Hit oder Wound; Lesser Prey plus 2 S) finishen.
+
+Canoptek-Wraith-Blöcke, 2 Stück (mit Technomancer).
+
+Widerstand 6, 3 plus oder 4 plus Invul, Feel No Pain 5 plus, 4 Lebenspunkte je (24 W pro Block), O-C 2 je (Block O-C 13), Bewegung 10, FLY. Vicious Claws 4 Attacken Stärke 6 AP minus 1 D2 ( plus 1 to hit, dann 3 plus). Wraith Form: nach Normal Move über eine Einheit 4 plus je Modell, dann Mortal Wounds.
+Veil of Darkness (1 mal pro Armee): am Ende deines Zuges in Reserve, im nächsten Zug per Deep Strike., dann Home-Bedrohung in Runde 2 oder 3.
+Gegen Pyrovores: ein Block tötet einen 3er-Trupp. Gegen Norn: etwa 6, mit Feel No Pain 4, W. Gegen Tyrant Guard: etwa 2 Guards.
+Reaktion: Sie sind die Objective-Brecher (O-C 13). Kill-Ziel Nr. 1 im Nahkampf: Hive-Tyrant-Block (Guards Stärke 7 gegen Widerstand 6, dann 3 plus!) plus Psychophage (Bio-stimulus AP plus 1, dann AP minus 2 für Guards gegen 3 plus oder 4 plus Invul, dann 4 plus Invul bleibt). Rechnung: etwa 30 Guard-Attacken, dann 20 Treffer, dann 13 Wunden, dann 4 plus Invul, dann 6,5, dann Feel No Pain 5 plus, dann etwa 4,3 W; Hive Tyrant 6 Attacken D3, dann etwa 7 W; Talons etwa 2, dann etwa 13 bis 14 W: halber Block. Zwei Aktivierungen nötig.
+
+Illuminor Szeras plus Immortals ( plus Plasmancer).
+
+Szeras: Widerstand 8, 2 plus oder 4 plus Invul, Feel No Pain 4 plus, 9 Lebenspunkte, Lone Operative in 3 Zoll anderer Necrons. Mechanical Augmentation: Battleline in 3 Zoll, dann plus 1 AP für sie, minus 1 AP gegen sie. Eldritch Lance 36 Zoll 3 Attacken Stärke 9 AP minus 3 D3.
+Immortals (Tesla 2 Attacken Sustained 2, Reroll Wound am Objective) plus Plasmancer (Crits 5 plus, Living Lightning: 4W6, 4 plus = Mortal Wounds, 18 Zoll).
+Reaktion: Medium. Sie halten sein Home. Nicht jagen, außer für Assassination (Plasmancer 4 Lebenspunkte, Szeras 9 Lebenspunkte).
+
+Hexmark Destroyer – Overwatch-Falle.
+
+Inescapable Death: Overwatch für 0 Kommandopunkte, trifft auf 2 plus statt 6. 6 Schuss 18 Zoll Stärke 6 AP minus 2 D1 Ignores Cover. Lone Operative. Multi-threat Eliminator: schießt zurück, wenn du auf eine Necron-Einheit in 3 Zoll von ihm schießt.
+Gegen Pyrovores oder Zoanthropes: etwa 2 bis 3 W pro Overwatch.
+Reaktion: Beim Vorrücken in 18 Zoll einkalkulieren; Pyrovores oder Zoans nicht als Erstes in seine 18 Zoll-Zone bewegen.
+
+Deathmarks – Reservejäger.
+
+Hyperspace Hunters: Wenn eine deiner Einheiten aus der Reserve in 18 Zoll und Sicht erscheint, dann sofort 5 Schuss (Precision, Stärke 5 AP minus 2 D2).
+Gegen Zoanthropes: etwa 1,5 Zoanthropes tot. Gegen Rippers: tot.
+Reaktion: Zoans oder Rippers mehr als 18 Zoll oder außer Sicht der Deathmarks einsetzen. Die Deathmarks stehen oft in einer Ruine nahe der Mitte – das definiert, wo du nicht einfliegst.
+
+Imotekh (allein).
+
+plus 1 Kommandopunkt pro Runde. Lord of the Storm (1 mal pro Spiel, Ende seiner Command Phase): jede deiner Einheiten in 12 Zoll: 2 bis 5, dann D3 Mortal Wounds, 6, dann D3 plus 3 Mortal Wounds.
+Gegen deine dicht stehenden Blöcke: 4 bis 6 Einheiten mal etwa 2,5 Mortal Wounds = 10 bis 15 Mortal Wounds gesamt, verteilt. Tödlich für Rippers, Zoans, beschädigte Pyrovores.
+Reaktion: Nicht mehr als 2 bis 3 Einheiten in 12 Zoll von ihm, wenn er seine Fähigkeit noch hat.
+
+Abschnitt 4: Threat Matrix.
+
+Heavy Destroyers (Gauss) plus Lord; Threat: High; Primary targets: Norns, Psychophages; How it threatens them: 48 Zoll Stärke 14 D6 Lethal 5 plus; Recommended response: Früh im Nahkampf, Zoans (Psychic).
+Wraith-Blöcke, 2 Stück; Threat: High (Scoring); Primary targets: Pyrovores, Rippers, Objectives; How it threatens them: O-C 13, 4 plus Invul, Feel No Pain 5 plus, Bewegung 10; Recommended response: Hive-Tyrant-Block plus Psychophage.
+Nightbringer; Threat: High (Nahkampf); Primary targets: Norns, Guards; How it threatens them: 6 Attacken Stärke 14 D6 plus 2 Devastating Wounds; Recommended response: Mit O-C überstimmen, nicht fokussieren.
+Imotekh (Lord of the Storm); Threat: Medium–High; Primary targets: Weiche Einheiten in Clustern; How it threatens them: D3 oder D3 plus 3 Mortal Wounds an alles in 12 Zoll; Recommended response: Abstand, Cluster vermeiden.
+Szeras plus Immortals plus Plasmancer; Threat: Medium; Primary targets: Home-Wache; How it threatens them: AP-Aura, Living Lightning; Recommended response: Ignorieren oder Assassination.
+Hexmark; Threat: Medium; Primary targets: Pyrovores, Zoans; How it threatens them: Overwatch 2 plus, 0 Kommandopunkte; Recommended response: Vorrücken planen.
+Deathmarks; Threat: Medium; Primary targets: Zoans, Rippers; How it threatens them: Reserve-Konter; Recommended response: >18 Zoll landen.
+Heavy Destroyers (Exterminator); Threat: Low–Medium; Primary targets: Guards, Pyrovores; How it threatens them: 12 Schuss Stärke 6; Recommended response: Ignorieren.
+
+Abschnitt 5: Target Priority.
+
+Kill early.
+1: Lord plus Heavy Destroyers (Gauss) – der einzige zuverlässige Norn-Schaden aus der Distanz.
+2: Ein Wraith-Block – ohne beide Wraith-Blöcke kann er deine Objectives nicht brechen.
+
+Control, avoid.
+Nightbringer – O-C 4. Ein Norn (O-C 15) steht auf dem Objective daneben und gewinnt es. Schaden erst, wenn er beschädigt ist oder als letzter Kill.
+Imotekh – Abstand halten, bis Lord of the Storm verbraucht ist.
+
+Ignore.
+Immortals oder Szeras in seiner Hälfte (außer für Assassination-Kills in Reichweite). Exterminator-Destroyers.
+
+Abschnitt 6: Deployment Analysis.
+
+Wahrscheinlich: Immortals oder Szeras oder Imotekh auf Home, Heavy Destroyers mit Lord in einer Flanke mit 48 Zoll-Lane, Wraith-Blöcke je einer pro Seite nahe der Front, Nightbringer zentral, Deathmarks in einer Ruine (oder Reserve), Hexmark bei einer Schlüsseleinheit.
+
+Castle oder spread? Mittel – er deckt Home plus Central plus eine Expansion.
+
+Kernfrage: Kann er einen Norn in einem Zyklus töten? Nur mit Nightbringer plus Wraiths plus Gauss in einer Runde auf denselben Norn (etwa 7 plus etwa 10 plus etwa 6 = etwa 23, mit Feel No Pain 15,). Möglich ab Runde 2, wenn der Norn vorne allein steht. Beide Norns: nein.
+
+Deine Aufstellung:
+Standard-Split ist hier gut. Norns auf Central (Assimilator, 4 plus Invul) und eigene Expansion (Emissary), Objective-Modus.
+Norn-Sichtbarkeit in diesem Matchup: Ein Norn, der ein Objective hält, ist immer sichtbar – seine Base steht in der Objective-Geländezone (deren Obscuring zählt für ihn nicht), er überragt die Ruinen, Monster sind nie hidden. Hier ist das vertretbar: Sein Fernkampf gegen einen Norn liegt bei etwa 15, mit Feel No Pain 10, (Gauss-Destroyers etwa 7, mit Feel No Pain 5, Gaze etwa 4, mit Feel No Pain 3, Rest), und Feel No Pain 5 plus im Objective-Modus plus Heilung fangen das auf. Die Gefahr ist die Kombination aus Gauss plus Nightbringer plus Wraiths auf denselben Norn in Runde 2 – deshalb gehört zu jedem Norn ein Tyrant-Block in 12 Zoll (Heroic Intervention) und ein Harvester in 6 Zoll. Solange die Gauss-Destroyers leben, steht ein Norn außerdem so, dass ihre Lane durch eine andere obscuring Zone läuft, wenn das Objective das zulässt.
+Hive-Tyrant-Block auf der Seite der Heavy Destroyers.
+Swarmlord zentral, 12 Zoll-Aura über Central: verteuert Protocol of the Undying Legions, Hungry Void, Conquering Tyrant, Sudden Storm (seine Kern-Stratagems).
+Home mit 2 Einheiten (Biovore plus ein Pyrovore-Trupp oder Psychophage): Veil-of-Darkness-Wraiths landen sonst auf deinem Home.
+Zoanthropes: Reserve, aber Eintritt außerhalb 18 Zoll der Deathmarks. Wenn die Deathmarks zentral stehen und alle Kanten abdecken, dann Zoans auf den Tisch in eine Ruine (Infanterie, hidden) mit Sicht auf die Heavy-Destroyer-Lane.
+Rippers: Reserve, später auf ein Objective mit Immortals oder Wraiths (O-C halbieren: Wraith-Block O-C 13, dann 7; dann gewinnt auch ein Tyrant-Block).
+
+Welchen Fehler er sich wünscht: Einen Norn, den du in den Nightbringer schickst; Reserveeinheiten in Deathmark-Reichweite; dein Home nur mit der Biovore.
+
+Wraiths beide auf eine Seite, dann Overload diese Seite: Hive-Tyrant-Block plus Psychophage plus Pyrovores (Torrent-Overwatch).
+Heavy Destroyers auf deinem Norn-Flügel mit freier Lane, dann Norn so auf das Objective stellen, dass die Destroyer-Lane durch eine andere obscuring Zone läuft; geht das nicht: Tyrannoformed (Assimilator oder Pyrovores) und Norn hinter die Zone. Hive-Tyrant-Block auf die Destroyers (Bewegung 8 plus 2W6, sie sind Bewegung 8 oder FLY).
+Deathmarks in Reserve, dann Sie kommen als Konter, wenn du Zoans bringst. Zoans auf den Tisch oder spät (Runde 3).
+
+Abschnitt 7: Movement and Positioning.
+
+Wraiths: Bewegung 10 FLY plus Advance oder Charge; Wraith Form (Mortal Wounds beim Überfliegen), dann Screens mit Pyrovores kosten Pyrovores.
+Veil of Darkness: Ein Block (Wraiths mit Technomancer) kann am Ende deines Zuges verschwinden und in seinem Zug mehr als 8 Zoll von dir landen. Plan: 8 Zoll-Netz um Home ab Runde 2.
+Nightbringer: Bewegung 10 FLY, Deep Strike.
+Heavy Destroyers: Heavy, dann bewegen sie sich mehr als 3 Zoll, verlieren sie plus 1 to hit (dann 3 plus). Wenn du sie zwingst, sich zu bewegen (Drohung durch Hive-Tyrant-Block), sinkt ihr Schaden.
+Safe: Hinter (nicht in) obscuring Zonen relativ zu den Gauss-Destroyers. Ein Norn auf einem Objective ist nie verdeckt – nur die Lane zu ihm kann durch eine andere Zone laufen.
+Dangerous: 12 Zoll-Radius um Imotekh (solange Lord of the Storm verfügbar), 18 Zoll um Deathmarks für Reserven, 18 Zoll um Hexmark für Vorstöße.
+Conditional: Central – mit Norn (O-C 15) und Tyrant-Block in 12 Zoll gut haltbar.
+
+Abschnitt 8: Charge, Fight Phase Analysis.
+
+Wraith-Block chargt deine Pyrovores:
+1. Ende seiner Movement Phase: Fire Overwatch (1 Kommandopunkt) mit den Pyrovores: Torrent trifft automatisch (Likely) – D6 plus 1 Stärke 6 AP minus 1 gegen Widerstand 6 4 plus, dann etwa 2 Wunden, dann 4 plus Invul, dann Feel No Pain 5 plus, dann etwa 1 W. Schwach Besser: Overwatch mit dem Psychophage (D6 Stärke 6, dann ähnlich). Lohnt nur, wenn Kommandopunkte übrig.
+2. Charge: Wraiths Fights First (Charge).
+3. Heroic Intervention (1 Kommandopunkt) Hive-Tyrant-Block (Leap to Defend), dann Fights First.
+4. Er zuerst: Pyrovores sterben (etwa 1,5 Modelle).
+5. Dein Hive-Tyrant-Block: etwa 13 W an den Wraiths.
+6. Protocol of the Undying Legions (1 Kommandopunkt für ihn, 2 Kommandopunkte mit Swarmlord in 12 Zoll), dann D3 plus 1 zurück.
+7. Deine Runde: zweiter Schlag (Psychophage Bio-stimulus, dann AP plus 1; Feeding Frenzy plus 1 to hit), dann Block tot, dann Parasitic Biomorphology aktiv (Harvester in 6 Zoll).
+
+Nightbringer chargt deinen Norn:
+1. Kein Overwatch (Widerstand 11, 4 plus Invul, Feel No Pain 5 plus).
+2. Heroic Intervention mit Swarmlord-Block? NEIN, wenn der Nightbringer danach Drain Life plus Sweep auf die Guards macht Lieber: Norn nimmt den Schlag (etwa 10, mit Feel No Pain 7,), bleibt mit O-C 15 auf dem Objective.
+3. Drain Life (Ende Fight Phase): 4 plus, dann D3 Mortal Wounds an JEDE Einheit in 6 Zoll. Einheiten-Cluster meiden.
+4. Nächste Command Phase: Norn heilen (D3 plus 1), Singular-Purpose-Wechsel (Protean Purpose) auf den Nightbringer erwägen, wenn du ihn in den nächsten 2 Runden töten willst (Reroll Hit oder Wound).
+
+Units, die nicht gechargt werden sollten: Nightbringer (außer als Finisher). Immortals mit Szeras (minus 1 AP gegen sie, Reroll-Wunden am Objective) – lohnt nur am Spielende für ein Objective.
+
+Köder: Pyrovores am Rand eines Objectives mit dem Hive-Tyrant-Block 10 Zoll dahinter, dann Wraiths beißen an, dann Heroic Intervention plus Gegenschlag.
+
+Abschnitt 9: Shooting Analysis.
+
+Gauss Destructor, 3 Stück (Lord: plus 1 hit, Crit 5 plus); Reichweite: 48 Zoll; Wirkung gegen dich: etwa 7, mit Feel No Pain 5, an Norn, etwa 8 an Psychophage (fast tot).
+Nightbringer Gaze (D3, Stärke 12, D6 plus 3 minus 0); Reichweite: 18 Zoll; Wirkung gegen dich: etwa 4, mit Feel No Pain 3, an Norn.
+Szeras Eldritch Lance (3 Attacken Stärke 9 AP minus 3 D3); Reichweite: 36 Zoll; Wirkung gegen dich: etwa 2, mit Feel No Pain 1,3, an Norn.
+Plasmancer Living Lightning (4W6, 4 plus = Mortal Wounds); Reichweite: 18 Zoll; Wirkung gegen dich: etwa 2, mit Feel No Pain 1,3, Mortal Wounds auf irgendwas (auch Norn).
+Tesla Immortals (20 Attacken, Sustained 2, Crit 5 plus mit Plasmancer); Reichweite: 24 Zoll; Wirkung gegen dich: Pyrovores oder Guards: etwa 3 bis 4 W.
+Enmitic Exterminators, 2 Stück (12 Attacken in 18 Zoll, Sustained); Reichweite: 36 Zoll; Wirkung gegen dich: Pyrovores, Rippers, Zoans.
+Hexmark (6 Attacken Stärke 6 AP minus 2, Ignores Cover); Reichweite: 18 Zoll; Wirkung gegen dich: Pyrovores oder Zoans; Overwatch auf 2 plus.
+Deathmarks (5 Attacken Precision); Reichweite: 36 Zoll; Wirkung gegen dich: Zoans beim Einflug.
+
+dann Gesamt gegen einen Norn in seiner Nähe: etwa 15, mit Feel No Pain 10, aus dem Beschuss, dazu Nahkampf (Nightbringer etwa 10, mit Feel No Pain 7, Wraiths etwa 6, mit Feel No Pain 4,).
+
+Seine Zielpriorität: Psychophage (Harvester, fällt fast in einem Zug) > Norn > Zoans > Pyrovores.
+
+Abschnitt 10: Gotchas and Traps.
+
+1: Veil of Darkness (1 mal ) – Wraith-Block verschwindet am Ende deines Zuges, landet im nächsten auf deinem Home. Erkennen: Technomancer mit Veil ist im Block. Verhindern: 8 Zoll-Netz um Home, Pyrovores als Home-Wache.
+2: Lord of the Storm – 1 mal Massen-Mortal Wounds in 12 Zoll um Imotekh. Verhindern: Cluster aus Rippers oder Zoans oder beschädigten Pyrovores in 12 Zoll vermeiden, bis er es genutzt hat.
+3: Hexmark Inescapable Death – Overwatch 0 Kommandopunkte auf 2 plus. Deine Charges in seine Nähe kosten 2 bis 3 W vorher.
+4: Deathmarks Hyperspace Hunters – Reserve-Konter in 18 Zoll.
+5: Protocol of the Eternal Revenant (1 Kommandopunkt) – ein INFANTRY-CHARACTER (Technomancer, Plasmancer, Szeras, Imotekh, Hexmark) steht mit halben W wieder auf. Assassination zählt pro zerstörtem Modell – ein wiederkehrender Character kann zweimal Siegpunkte geben (Likely).
+6: Protocol of the Vengeful Stars (2 Kommandopunkte) – wenn du in deiner Shooting Phase eine Necron-Einheit tötest, darf ein Necron-Character, der in 6 Zoll davon stand, sofort auf deine schießende Einheit zurückschießen. Nutzen: Zoans nicht in Reichweite von Szeras oder Imotekh eine Einheit neben ihnen töten lassen, wenn der Rückschlag weh tut.
+7: Necrodermis, Immortals-AP-Aura – deine D2-Waffen werden gegen C'tan D1, AP minus 1 gegen Battleline bei Szeras AP0.
+8: Reanimation am Ende SEINER Command Phase – er heilt vor seinem Scoring nicht relevant, aber Einheiten, die du auf 1 Modell reduzierst, kommen zurück. Einheiten ganz töten, nicht anschlagen.
+
+Abschnitt 11: Opponent Decision Tree.
+
+Wo stehen die Gauss-Destroyers?
+Mit Lane auf deine Norn-Objectives, dann Lane durch eine andere obscuring Zone brechen oder.
+Tyrannoformed plus Norn dahinter; Hive-Tyrant-Block auf sie (Runde 2).
+Hinten oder ohne Lane, dann ignorieren, Wraiths zuerst.
+Veil of Darkness schon benutzt?
+NEIN, dann Home mit 2 Einheiten, 8 Zoll-Netz.
+JA, dann Home kann mit 1 Einheit gehalten werden.
+Lord of the Storm schon benutzt?
+NEIN, dann max. 2 bis 3 Einheiten in 12 Zoll um Imotekh.
+JA, dann frei heranrücken.
+Nightbringer auf Central?
+JA, dann Norn im Objective-Modus bleibt (O-C 15), nicht fighten, Tyrant-Blöcke auf die Wraiths.
+
+Abschnitt 12: Player's Game Plan.
+
+Default plan.
+
+1: Runde 1: Home (2 Einheiten), Central (Assimilator plus Swarmlord-Block in 12 Zoll), eigene Expansion (Emissary). Hive-Tyrant-Block plus Psychophage gegenüber Heavy Destroyers.
+2: Runde 2: Heavy Destroyers angreifen oder den vordersten Wraith-Block. Rippers auf ein gegnerisches Objective (O-C halbieren).
+3: Runde 3: Zweiten Wraith-Block. Shadow in the Warp in seiner Command Phase, wenn seine Einheiten auf Objectives stehen (Wraiths Leadership 8 plus, Immortals Leadership 7 plus; Character-geführte Einheiten Leadership 6 plus).
+4: Runde 4 bis 5: Norns halten; Nightbringer gegebenenfalls als letzter Bring-It-Down oder Assassination-Kill.
+
+Adjustment triggers.
+
+Wraith-Block landet (Veil) auf oder an deinem Home, dann Swarmlord-Block oder Psychophage zurück; Home ist Pflicht (Battlefield Dominance plus 2 oder Objective).
+Imotekh rückt mit Lord of the Storm vor, dann Einheiten auseinanderziehen; Emissary-Precision-Profil (18 Zoll) auf Imotekh (Widerstand 5, 2 plus oder 4 plus Invul, W6).
+Heavy Destroyers bewegen sich (>3 Zoll), dann Ihr Schaden sinkt (kein Heavy-Bonus). Guter Zug für einen offenen Norn-Vorstoß.
+Nightbringer unter 6 W (Damaged), dann Jetzt töten: Norn mit Singular Purpose (Protean Purpose), Lesser Prey, Tyrant-Block.
+
+Abschnitt 13: Primary Scoring Plan.
+
+Paarung: Beide Take and Hold, dann Battlefield Dominance (Spiegel).
+
+3 Siegpunkte pro Objective, plus 2 pro Nicht-Home bei gehaltenem Home (ab Runde 2, Command Phase). Runde 1 bis 2: 2 Siegpunkte für mehr Objectives.
+Ziel: Home plus Central plus eigene Expansion = 13 Siegpunkte pro Runde; seine Expansion als Bonus ( plus 5) nur mit Rippers-O-C-Trick oder nach Wraith-Kills.
+O-C-Vergleich: Norn O-C 15 > Wraith-Block 13 > Immortals-Block 21 (10 mal 2 plus Plasmancer 1)! Achtung: 10 Immortals sind O-C 20 plus. Ein Norn allein gewinnt nicht gegen volle Immortals. Rippers (O-C halbieren) plus Norn schon.
+Shadow in the Warp (1 mal pro Spiel, in jeder Command Phase nutzbar): Löst du sie in seiner Command Phase aus (nach seinem Battle-shock-Schritt, damit er kein Insane Bravery nutzen kann), testen alle seine Einheiten Battle-shock (minus 1 in 6 Zoll deiner Synapse-Einheiten). Durchgefallene Einheiten haben O-C –, genau wenn er am Ende dieser Command Phase wertet. Seine Einheiten: Wraiths Leadership 8 plus, Immortals Leadership 7 plus; von Characters geführte Einheiten Leadership 6 plus, dann Durchfallquote mit minus 1 etwa 42 bis 72 Prozent. Timing vorher mit ihm klären (Likely-Interpretation).
+Winning the mission: Wraith-Blöcke eliminieren = er kann deine Objectives nicht mehr brechen. Dann gewinnst du über Zeit.
+
+Secondaries: Assassination (Fixed) – Technomancer, 2 Stück, Plasmancer, Lokhust Lord, Nightbringer, Hexmark, Szeras, Imotekh = 8 Characters (alle W mindestens 4, dann 4 Siegpunkte). Sehr stark. Zweite: Bring It Down (nur Nightbringer) ist schwach, dann besser Defend Stronghold (Tactical) oder No Prisoners.
+
+Abschnitt 14: First Turn, Second Turn Considerations.
+
+Wenn du zuerst spielst.
+
+Objectives besetzen, Hive-Tyrant-Block Richtung Heavy Destroyers. Keine Einheit in 18 Zoll des Hexmark ohne Grund.
+Runde 1-Scoring (mehr Objectives als er): Home plus Expansion plus Central = 3 – er wird Home plus Expansion plus gegebenenfalls Central haben. Central entscheidet die 2 Siegpunkte.
+
+Wenn er zuerst spielt.
+
+Wraiths springen nach vorn, Gauss schießt. Ablative Carapace (2 Kommandopunkte) für den Psychophage, falls Gauss auf ihn geht.
+Dein Zug 1: Wraith-Block, der vorne steht, mit Hive-Tyrant-Block plus Psychophage angehen.
+
+Abschnitt 15: Practical Round Checklist.
+
+BEFORE DEPLOYMENT.
+Battlefield Dominance (Spiegel).
+Secondaries: Assassination fixed (8 Characters).
+Deathmark-Position bestimmt Zoans-Einsatz.
+DEPLOYMENT.
+Home mit 2 Einheiten (Veil-Wraiths).
+Norns: Central (Assimilator) plus eigene Expansion (Emissary), Objective-Modus.
+Hive-Tyrant-Block gegenüber den Gauss-Destroyers.
+OPPONENT TURN.
+Lord of the Storm oder Veil noch verfügbar?
+12 Zoll um Imotekh nicht überladen.
+Heroic Intervention gegen Wraiths bereit (1 Kommandopunkt).
+MY TURN.
+Einheiten GANZ töten (Reanimation).
+Rippers auf Wraith-, Immortal-Objective.
+Shadow in the Warp für seine Command Phase planen.

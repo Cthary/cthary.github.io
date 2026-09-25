@@ -1,0 +1,253 @@
+Gegneranalyse: Jonathan Müller (Imotekh1507) – Necrons.
+
+Liste in Kürze (2000 Punkte, Awakened Dynasty 3 Daemon Prince).
+
+Imotekh (Warlord) plus Plasmancer plus 10 Immortals (Tesla); Punkte: 300; Rolle gegen dich: plus 1 Kommandopunkt, Lord of the Storm, Living Lightning, O-C-21-Block.
+Technomancer plus 6 Canoptek Wraiths; Punkte: 300; Rolle gegen dich: Objective-Brecher, Harvester-Jäger.
+Overlord (Resurrection Orb) plus 20 Necron Warriors (Gauss Reaper); Punkte: 280; Rolle gegen dich: O-C 41, 40 Schuss Stärke 4 AP minus 1 Lethal in 12 Zoll, Reanimation mit Reroll.
+Skorpekh Lord (Veil of Darkness) plus 6 Skorpekh Destroyers (2 Plasmacytes); Punkte: 285; Rolle gegen dich: Nahkampf-Hammer, Deep-Strike-Sprung 1 mal, Crimson Harvest (Mortal Wounds beim Charge).
+C'tan Shard of the Nightbringer; Punkte: 360; Rolle gegen dich: Nahkampf-Monster, Gaze 18 Zoll.
+C'tan Shard of the Void Dragon; Punkte: 345; Rolle gegen dich: Nahkampf-Monster, Voltaic Storm 18 Zoll.
+Canoptek Reanimator; Punkte: 75; Rolle gegen dich: plus D3 Reanimation für Einheiten in 3 Zoll.
+Flayed Ones, 5 Stück; Punkte: 55; Rolle gegen dich: Infiltrators, Stealth, Viertel oder Objective-Snatch.
+
+Force Disposition: Take and Hold (einzige Option).
+
+Abschnitt 1: Executive Summary.
+
+Was die Armee will: Zwei unzerstörbare Säulen (Warriors-Block mit O-C 41 und Reanimator; Immortals-Block mit O-C 21) halten Objectives, während zwei C'tan und der Skorpekh-Block deine Anker im Nahkampf zerbrechen. Kaum Fernkampf – dieses Spiel wird im Nahkampf und über O-C entschieden.
+Wichtigste Bedrohung: Die zwei C'tan zusammen (je etwa 9 bis 11, mit Feel No Pain 6 bis 7, Schaden an einem Norn im Nahkampf; zusammen töten sie einen Norn in einer Fight Phase).
+Wichtigstes taktisches Problem: O-C. Deine Norns (O-C 15) verlieren gegen 20 Warriors (O-C 40 plus Overlord 1). Du kannst ein Warriors-Objective nicht einfach überstimmen – nur mit Rippers (O-C halbieren), Shadow in the Warp (Battle-shock) oder Töten.
+Was du vermeiden musst: Deine Nahkampfkraft in die C'tan zu kippen (Widerstand 11, 4 plus Invul, Feel No Pain 5 plus, minus 1 Damage), oder den Warriors-Block wegmachen zu wollen (Reanimation D3 mit Reroll, plus D3 Reanimator, Resurrection Orb D6).
+Strategischer Ansatz: Seine Objective-Blöcke zu Battle-shock zwingen, statt sie zu töten, und die mobilen Bedrohungen (Wraiths, Skorpekhs) als Kill-Ziele nehmen. C'tan mit Norn-O-C neutralisieren, nicht zerschlagen.
+
+Abschnitt 2: Opponent Game Plan.
+
+Reanimation Protocols: jede seiner Einheiten heilt am Ende seiner Command Phase D3 Wunden.
+(bei Mehrmodell-Einheiten kommen damit auch Modelle zurück).
+Awakened Dynasty: Einheit, die von einem NECRONS CHARACTER geführt wird, dann plus 1 to hit.
+Protocol of the Undying Legions (1 Kommandopunkt): nach deinem Angriff sofort D3 (mit Character D3 plus 1) reanimieren.
+Protocol of the Hungry Void (1 Kommandopunkt): plus 1 S im Nahkampf, mit Character zusätzlich plus 1 AP.
+Protocol of the Conquering Tyrant (1 Kommandopunkt): Reroll Hit-1er auf halbe Reichweite (mit Character alle Hits).
+Protocol of the Eternal Revenant (1 Kommandopunkt): ein INFANTRY-CHARACTER steht mit halben W wieder auf.
+Protocol of the Vengeful Stars (2 Kommandopunkte): tötest du in DEINER Shooting Phase eine Necron-Einheit, schießt.
+ein Necron-Character, der in 6 Zoll davon stand, sofort auf deine schießende Einheit zurück.
+Veil of Darkness (Enhancement, 1 mal pro Armee): Einheit am Ende deines Zuges in Reserve, nächster Zug Deep Strike.
+
+1: Aufstellung: Warriors plus Overlord plus Reanimator auf Home oder Central. Immortals plus Imotekh auf einer Expansion. Wraiths und Skorpekhs als Angriffswelle; beide C'tan zentral. Flayed Ones infiltrieren.
+2: Runde 1 bis 2: C'tan (Bewegung 10, FLY) marschieren zur Mitte; Wraiths oder Skorpekhs gehen auf deine Vorposten. Skorpekh-Block gegebenenfalls mit Veil in deine Hälfte.
+3: Runde 2 bis 4: Warriors sitzen, reanimieren, halten. C'tan zerreiben deine Norns oder Tyrant-Blöcke.
+4: Scoring: Battlefield Dominance – Home plus Central plus Expansion (13 Siegpunkte pro Runde), unterstützt durch unbewegliche O-C-Massen.
+
+Er gewinnt nicht durch Schaden auf Distanz. Er gewinnt, weil du seine Objectives mit O-C nicht nehmen kannst und seine C'tan dir die Norns im Nahkampf wegnehmen.
+
+Abschnitt 3: Major Threats.
+
+C'tan Shard of the Nightbringer.
+
+Widerstand 11, 3 plus oder 4 plus Invul, Feel No Pain 5 plus, 16 Lebenspunkte, Bewegung 10, FLY, Deep Strike, O-C 4. Necrodermis: minus 1 Damage auf jeden zugewiesenen Angriff.
+Scythe of the Nightbringer Strike 6 Attacken 2 plus Stärke 14 AP minus 4 D6 plus 2 Dev Wounds; Sweep 14 Attacken Stärke 8 AP minus 2 D2. Gaze of Death 18 Zoll D3 Stärke 12 AP minus 3 D6 plus 3.
+Drain Life: Ende jeder Fight Phase – für jede deiner Einheiten in 6 Zoll auf 4 plus, dann D3 Mortal Wounds.
+Gegen Norn im Nahkampf: etwa 5 Treffer, dann etwa 3,3 Wunden (Stärke 14 gegen Widerstand 11, dann 3 plus), davon etwa 0,8 kritisch als Devastating Wounds-Mortal Wounds (etwa 4,6 Mortal Wounds; die Emissary halbiert sie mit Feel No Pain 4 plus gegen Mortal Wounds) plus etwa 1,25 normal durch den 4 plus Invul mal 5,5, dann etwa 10, mit Feel No Pain 7, an einem Norn. Gegen Tyrant Guard: etwa 4 Guards.
+Dein Schaden gegen ihn ist schwach: der Hive-Tyrant-Block macht effektiv etwa 3 bis 5 (minus 1 Damage, 4 plus Invul, Feel No Pain 5 plus).
+
+C'tan Shard of the Void Dragon.
+
+Gleiche Defensivwerte. Spear Strike 5 Attacken 2 plus Stärke 12 AP minus 4 D6 plus 2 (Anti-Vehicle – für dich irrelevant), Sweep 10 Attacken Stärke 8 AP minus 1 D2, Tail Blades (Extra Attacks) 6 Attacken Stärke 6 AP minus 1 D1. Voltaic Storm 18 Zoll D6 plus 3 Blast Stärke 7 AP minus 1 D2 Sustained Hits 2. Matter Absorption nur gegen VEHICLE.
+Gegen Norn: etwa 8 bis 9, mit Feel No Pain 5 bis 6, Nahkampf. Gegen Tyrant Guard (Sweep plus Tail): etwa 3 bis 4 Guards. Voltaic Storm gegen Pyrovores oder Guards oder Zoans: etwa 6 bis 8 W.
+Reaktion: wie Nightbringer – kontrollieren, nicht fokussieren.
+
+Skorpekh Lord (Veil) plus 6 Skorpekh Destroyers.
+
+Widerstand 6 (Lord Widerstand 7), 3 plus (Lord 4 plus Invul), 3 Lebenspunkte je, Bewegung 8. Hyperphase Weapons 4 Attacken Stärke 7 AP minus 2 D2, Reroll Hits beim Charge, Lethal Hits (Lord), plus 1 to hit (Awakened Dynasty), dann 2 plus. Plasmacyte, 2 Stück: je 1 mal Dev Wounds. Crimson Harvest: nach Charge D3 (6: D3 plus 3) Mortal Wounds. Lord: Hyperphase Harvester 4 Attacken Stärke 10 AP minus 3 D3.
+Hungry Void (1 Kommandopunkt): plus 1 S, AP plus 1, dann Stärke 8 AP minus 3.
+Gegen Tyrant-Guard-Block: 24 Attacken (2 plus, Lethal), dann etwa 23 Treffer (etwa 4 Lethal), dann gegen Widerstand 8 (Stärke 7 oder Stärke 8: 5 plus oder 4 plus), dann etwa 10 Wunden, dann 3 plus AP minus 2 oder minus 3, dann etwa 7 durch mal D2 = etwa 14, dann 3 bis 4 Guards; Lord extra etwa 2. Gegen Norn: etwa 7 bis 9, mit Feel No Pain 5 bis 6,.
+Veil of Darkness: 1 mal Deep Strike nach deinem Zug, dann Runde-2-Überfall auf Home oder Harvester.
+Reaktion: Kill early (sie sind Widerstand 6 oder 3 plus oder 3 Lebenspunkte – Hive-Tyrant-Block tötet sie; etwa 18 W). Guter erster Parasitic-Kill, wenn er ankommt.
+
+Canoptek Wraiths plus Technomancer.
+
+6 Wraiths: Widerstand 6, 3 plus oder 4 plus Invul, 4 Lebenspunkte je (24 W), O-C 2 je, dann Block O-C 13 mit Technomancer. Technomancer gibt Feel No Pain 5 plus und heilt ein Modell in 6 Zoll um D3 (Ende seiner Movement Phase). Bewegung 10, FLY.
+Vicious Claws 4 Attacken Stärke 6 AP minus 1 D2 ( plus 1 to hit durch Awakened Dynasty, dann 3 plus). Wraith Form: nach einem Normal Move über eine deiner Einheiten je Modell 4 plus, dann 1 Mortal Wounds.
+Gegen Pyrovores: ein Block tötet einen 3er-Trupp. Gegen Norn: etwa 6, mit Feel No Pain 4,.
+Reaktion: Kill-Ziel (Objective-Brecher). Hive-Tyrant-Block plus Psychophage: Guards Stärke 7 gegen Widerstand 6, dann 3 plus, etwa 30 Attacken, dann etwa 13 Wunden, dann 4 plus Invul, dann Feel No Pain 5 plus, dann etwa 4 W; Hive Tyrant etwa 7 W; zusammen etwa 13 bis 14 W = halber Block pro Aktivierung.
+
+Overlord plus 20 Warriors plus Reanimator – die O-C-Wand.
+
+Warriors: Widerstand 4, 4 plus, 1 Lebenspunkte, O-C 2, dann Block O-C 41. Gauss Reaper 12 Zoll 2 Attacken Stärke 4 AP minus 1 Lethal ( plus 1 to hit, dann 3 plus), dann 40 Schuss: gegen Pyrovores etwa 2 bis 3 W, gegen Guards etwa 2 W.
+Reanimation: D3 mit Reroll (Their Number is Legion), plus D3 (Reanimator in 3 Zoll), Resurrection Orb 1 mal : D6. Overlord: minus 1 Damage, My Will Be Done (minus 1 Kommandopunkt Stratagem 1 mal pro Runde), Tachyon Arrow 1 mal 72 Zoll Stärke 16 AP minus 5 D6 plus 2.
+Reaktion: Nicht wegkämpfen. Rippers in Engagement (O-C halbiert, dann 20), Norn (15) plus Tyrant-Block (Guards 6 plus Tyrant 3 = 9), dann 24 mehr als 20. Oder Battle-shock (Warriors Leadership 7 plus; Overlord leitet, dann Leadership 6 plus für die Einheit).
+
+Imotekh plus Plasmancer plus 10 Immortals.
+
+Imotekh: Widerstand 5, 2 plus oder 4 plus Invul, W6, Grand Strategist ( plus 1 Kommandopunkt pro Command Phase), Lord of the Storm (1 mal pro Spiel, Ende seiner Command Phase: jede deiner Einheiten in 12 Zoll, dann auf 2 bis 5 D3 Mortal Wounds, auf 6 D3 plus 3 Mortal Wounds). Staff of the Destroyer 18 Zoll 3 Attacken Stärke 6 AP minus 3 D2.
+Plasmancer: Living Lightning (seine Shooting Phase: eine deiner Einheiten in 18 Zoll, dann 4W6, je 4 plus = 1 Mortal Wounds), Crits auf 5 plus für die Einheit.
+10 Immortals (Tesla 2 Attacken Sustained 2), Reroll Wound gegen Ziele auf Objectives. Block-O-C 22 (Imotekh 1 plus Plasmancer 1 plus 20).
+Reaktion: Keine Cluster in 12 Zoll um Imotekh, solange Lord of the Storm verfügbar ist; Imotekh ist Assassination (4 Siegpunkte).
+
+Flayed Ones, 5 Stück.
+
+Infiltrators, Stealth. Schnappen ein leeres Objective in deiner Hälfte (O-C 5) oder binden Rippers oder Biovore.
+
+Abschnitt 4: Threat Matrix.
+
+Nightbringer; Threat: Very High; Primary targets: Norns, Guards; How it threatens them: 6 Attacken Stärke 14 D6 plus 2 Devastating Wounds, Drain Life; Recommended response: O-C-Kontrolle, nicht fokussieren.
+Void Dragon; Threat: High; Primary targets: Norns, Guards, Pyrovores; How it threatens them: Nahkampf plus Voltaic Storm; Recommended response: wie oben.
+Skorpekh-Block (Veil); Threat: High; Primary targets: Tyrant-Blöcke, Harvester; How it threatens them: 24 Attacken Lethal, Crimson Harvest; Recommended response: Früh töten (Parasitic-Kill).
+Wraiths plus Technomancer; Threat: High (Scoring); Primary targets: Pyrovores, Objectives; How it threatens them: O-C 13, zäh, schnell; Recommended response: Hive-Tyrant-Block plus Psychophage.
+Warriors plus Overlord plus Reanimator; Threat: Medium (Schaden), Very High (O-C); Primary targets: Objectives; How it threatens them: O-C 41, Reanimation; Recommended response: Rippers plus Shadow in the Warp.
+Imotekh-Block; Threat: Medium; Primary targets: Cluster; How it threatens them: Lord of the Storm, Living Lightning; Recommended response: Abstand, Assassination.
+Flayed Ones; Threat: Low; Primary targets: Leere Objectives; How it threatens them: Infiltrate; Recommended response: Mit Pyrovore-Torrent entfernen.
+
+Abschnitt 5: Target Priority.
+
+Kill early: Skorpekh-Block (einzige mobile Nahkampfbedrohung, die deine Tyrant-Blöcke frisst und nicht zäh ist), dann Wraiths.
+
+Control, avoid: Beide C'tan – mit Norns (O-C 15) und Tyrant-Blöcken auf Objectives stehen, ihre Angriffe absorbieren und regenerieren. Nur finishen, wenn Damaged ( höchstens 5 W: minus 1 to hit).
+
+Ignore: Warriors oder Immortals als Töten-Ziel. Sie sind O-C-Ziele (Battle-shock, Rippers), keine Kill-Ziele.
+
+Abschnitt 6: Deployment Analysis.
+
+Wahrscheinlich: Warriors plus Reanimator auf Home oder Central (gerne Central, um O-C 41 dort zu parken). Immortals auf Expansion. C'tan zentral. Skorpekhs oder Wraiths an den Flanken, Flayed Ones infiltriert.
+
+Kernfrage: Kann er einen Norn plus Support töten? Ja – beide C'tan zusammen an einem Norn = etwa 20, mit Feel No Pain 13, plus Wraiths oder Skorpekhs. Ab Runde 2. Beide Norns in einer Runde: nein.
+
+Deine Aufstellung:
+Norns getrennt, aber nicht isoliert – jeder mit einem Tyrant-Block in 12 Zoll für Heroic Intervention. Ein C'tan pro Norn ist verkraftbar (etwa 10, mit Feel No Pain 7, von 16 plus Heilung plus Feel No Pain 5 plus im Objective-Modus).
+Norn-Sichtbarkeit in diesem Matchup: Ein Norn, der ein Objective hält, ist immer sichtbar (Base in der Objective-Geländezone, dann deren Obscuring zählt nicht; er überragt die Ruinen; Monster sind nie hidden). Hier ist das vertretbar: Die Liste hat kaum Fernkampf gegen Monster (Gaze etwa 4, mit Feel No Pain 3, Tachyon Arrow einmalig etwa 4, mit Feel No Pain 3,; Voltaic Storm trifft vor allem Infanterie). Die Gefahr kommt im Nahkampf – dagegen hilft Verstecken nicht, sondern Heroic Intervention-Deckung und Heilung.
+Assimilator (4 plus Invul) auf das Objective, das die C'tan zuerst erreichen.
+Swarmlord zentral (Malign Presence verteuert Undying Legions, Hungry Void, Vengeful Stars; der Overlord kompensiert 1 mal pro Runde).
+Home mit 2 Einheiten (Veil-Skorpekhs).
+Zoanthropes: Auf den Tisch in eine Ruine (Infanterie, hidden). Er hat keine Deathmarks und fast keinen Fernkampf – Reserve bringt wenig; es gibt kaum schwere Ziele an der Kante. Ihr D3-Blast (Stärke 7, AP minus 2, D3) gegen Skorpekhs oder Wraiths und 20er-Warriors ( plus 4 Blast-Attacken) ist ihr Job. Aber: Lord of the Storm und Voltaic Storm töten Zoans – Abstand.
+Rippers: Reserve, Deep Strike an das Warriors-, Immortals-Objective (O-C-Halbierung) in Runde 2 oder 3.
+
+Welchen Fehler er sich wünscht: Du wirfst Hive Tyrant plus Swarmlord in die C'tan und verlierst beide Blöcke an Drain Life plus Konter.
+
+Warriors auf Central, dann Central ist schwer. Triangle: Home plus beide Expansions? (Seine Expansion hat Immortals.) Realistisch: Home plus eigene Expansion sicher, Central über Rippers plus Shadow in the Warp in 1 bis 2 Runden kippen.
+Warriors auf seinem Home, dann Central plus eigene Expansion plus Home = dein 13-Siegpunkte-Ziel ist erreichbar.
+C'tan beide auf einer Seite, dann Diese Seite mit Assimilator plus Swarmlord-Block absorbieren; Hive-Tyrant-Block auf die andere Seite gegen Skorpekhs oder Wraiths (Kills).
+
+Abschnitt 7: Movement and Positioning.
+
+C'tan: Bewegung 10 FLY plus Charge, dann etwa 17 Zoll Bedrohung, Deep Strike möglich.
+Skorpekhs: Bewegung 8 plus Charge (Reroll Hits beim Charge), Veil einmal.
+Wraiths: Bewegung 10 FLY.
+Warriors oder Immortals: Bewegung 5 – statisch.
+Safe: außerhalb 17 Zoll der C'tan; Pyrovores oder Zoans in Geländezonen (hidden, solange sie nicht geschossen haben).
+Dangerous: 6 Zoll um die C'tan am Ende der Fight Phase (Drain Life: 4 plus, dann D3 Mortal Wounds an jede Einheit in 6 Zoll – auch an deine, die gar nicht kämpfen). 12 Zoll um Imotekh (Lord of the Storm).
+Conditional: Central mit Warriors – nur mit Rippers plus Norn plus Tyrant-Block.
+
+Abschnitt 8: Charge, Fight Phase Analysis.
+
+C'tan chargt deinen Norn (Objective-Modus):
+1. Kein Overwatch (lohnt nicht).
+2. C'tan Fights First (Charge).
+3. Heroic Intervention? Nur Leap to Defend mit einem Tyrant-Block, wenn der Block danach NICHT in 6 Zoll um den C'tan am Ende der Fight Phase stehen bleibt (Drain Life) – praktisch immer doch., dann Meist KEINE Heroic Intervention.
+4. C'tan: etwa 10, mit Feel No Pain 7, am Norn. Norn überlebt (16 W, Feel No Pain 5 plus im Objective-Modus).
+5. Norn schlägt zurück: gegen C'tan etwa 2 bis 3 (Necrodermis plus Feel No Pain). Lesser Prey ( plus 2 S) erhöht auf etwa 4.
+6. Drain Life: 4 plus, dann D3 Mortal Wounds am Norn (Emissary Feel No Pain 4 plus gegen Mortal Wounds; Assimilator: Catalytic Biofortification 1 Kommandopunkt).
+7. Deine Command Phase: Norn heilen (ein Harvester, D3 plus 1). O-C 15 hält das Objective weiter.
+
+Skorpekhs chargen einen Tyrant-Block:
+1. Overwatch (1 Kommandopunkt) mit Pyrovores in 12 Zoll: Torrent Stärke 6 AP minus 1 gegen Widerstand 6, dann etwa 3 Wunden, dann 3 plus, dann etwa 1 W. Meh.
+2. Crimson Harvest (Lord): D3 Mortal Wounds (6: D3 plus 3).
+3. Heroic Intervention mit dem anderen Tyrant-Block, Norn (Leap to Defend).
+4. Er zuerst (etwa 14 an Guards). Dann deine Heroic Intervention-Einheit: Skorpekhs (Widerstand 6, 3 plus, 3 Lebenspunkte) sterben schnell.
+5. Rapacious Hunger (1 Kommandopunkt) nach dem Kill: Regeneration. Parasitic aktiv (Harvester in 6 Zoll!).
+
+Nicht chargen: C'tan (außer Damaged). Warriors mit Reanimator in 3 Zoll (du machst Schaden, er heilt D3 plusD3 mit Reroll).
+
+Abschnitt 9: Shooting Analysis.
+
+Voltaic Storm (D6 plus 3 Blast Stärke 7 AP minus 1 D2, Sustained 2); Reichweite: 18 Zoll; Wirkung: Pyrovores oder Guards oder Zoans: etwa 6 bis 8 W.
+Nightbringer Gaze (D3 Stärke 12 D6 plus 3); Reichweite: 18 Zoll; Wirkung: etwa 4, mit Feel No Pain 3, an Norn.
+20 Warriors Gauss Reaper (40 Attacken in 12 Zoll, Lethal); Reichweite: 12 Zoll; Wirkung: Pyrovores etwa 3 W, Guards etwa 2 W.
+Tesla Immortals (20 Attacken Sustained 2, Crit 5 plus); Reichweite: 24 Zoll; Wirkung: Pyrovores oder Guards etwa 3 W.
+Living Lightning (4W6, 4 plus); Reichweite: 18 Zoll; Wirkung: etwa 2 Mortal Wounds.
+Tachyon Arrow (1 mal, 72 Zoll Stärke 16 AP minus 5 D6 plus 2); Reichweite: 72 Zoll; Wirkung: etwa 4, mit Feel No Pain 3, an Norn, einmal.
+Lord of the Storm (1 mal ); Reichweite: 12 Zoll; Wirkung: D3–D3 plus 3 Mortal Wounds an jede Einheit.
+
+dann Kein ernstzunehmender Norn-Fernkampf. Das Spiel ist Nahkampf plus O-C.
+
+Abschnitt 10: Gotchas and Traps.
+
+1: Drain Life – Ende jeder Fight Phase (auch deiner!): D3 Mortal Wounds an jede Einheit in 6 Zoll des Nightbringers auf 4 plus. Wenn du ihn im Nahkampf bindest, zahlt jede deiner Einheiten in 6 Zoll.
+2: Lord of the Storm – 1 mal pro Spiel, 12 Zoll. Cluster vermeiden.
+3: Veil of Darkness (Skorpekh-Block) – 1 mal Deep Strike nach deinem Zug.
+4: Resurrection Orb (Overlord) – 1 mal am Ende einer beliebigen Phase: D6 Reanimation. Der Warriors-Block kommt zurück, nachdem du ihn angeschlagen hast.
+5: Their Number is Legion plus Reanimator – Warriors reanimieren D3 (Reroll) plus D3 (Reanimator in 3 Zoll). Reanimator (Widerstand 6, 3 plus, Feel No Pain 4 plus, W6) ist das eigentliche Ziel, wenn du den Warriors-Block brechen willst.
+6: Tachyon Arrow – ein Schuss 72 Zoll Stärke 16 AP minus 5 D6 plus 2 (ohne Precision). Er wird ihn auf einen Norn oder Psychophage schießen. Rechne einmal mit etwa 4, mit Feel No Pain 3, Schaden.
+7: Protocol of the Eternal Revenant – Infantry-Characters (Imotekh, Overlord, Plasmancer, Technomancer, Skorpekh Lord) stehen 1 mal mit halben W wieder auf.
+8: Shadow in the Warp – Warriors-Block wird vom Overlord geführt: Leadership 6 plus (Test besteht auf 6 plus; mit minus 1 auf 7 plus). Immortals mit Imotekh ebenfalls Leadership 6 plus. Wraiths Leadership 8 plus (Technomancer Leadership 6 plus). Durchfallquote mit minus 1: etwa 42 Prozent. Trotzdem einer deiner wenigen Wege, O-C 41 auszuschalten.
+
+Abschnitt 11: Opponent Decision Tree.
+
+Wo parkt der Warriors-Block?
+Central, dann Central in Runde 2 bis 3 NICHT per O-C nehmen wollen. Rippers plus Shadow in the Warp in.
+einer Runde kombinieren (Runde 3 pro Runde 4), dann Norn plus Block auf Central.
+Sein Home, dann Du bekommst Central leichter; C'tan werden dort kämpfen.
+Wo gehen die C'tan hin?
+Beide auf einen Norn, dann Norn bleibt auf dem Objective (Verstecken hilft gegen Nahkampf nicht): O-C 15 halten.
+der andere Norn und die Blöcke punkten.
+Getrennt, dann jeder Norn nimmt einen C'tan; Tyrant-Blöcke töten Wraiths oder Skorpekhs.
+Skorpekhs mit Veil noch verfügbar?
+JA, dann Home doppelt besetzt, keine Harvester allein.
+
+Abschnitt 12: Player's Game Plan.
+
+Default plan.
+
+1: Runde 1: Home (2 Einheiten), eigene Expansion (Emissary, Objective-Modus), Central-Rand (Assimilator). Zoans in Ruine mit Sicht auf die Skorpekh oder Wraith-Anmarschwege.
+2: Runde 2: Skorpekhs oder Wraiths im Nahkampf zerschlagen (Parasitic-Kill). Rippers vorbereiten.
+3: Runde 3: Rippers auf das Warriors-Objective plus Shadow in the Warp in seiner Command Phase, dann er verliert die Wertung dort; in deinem Zug Norn plus Block übernehmen.
+4: Runde 4 bis 5: Objectives halten; C'tan nur, wenn Damaged.
+
+Adjustment triggers.
+
+Beide C'tan Damaged oder verwundet, dann Jetzt Bring It Down oder Assassination kassieren (je 8 Siegpunkte).
+Reanimator steht allein neben den Warriors, dann Emissary-Tendril oder Zoans auf den Reanimator (Widerstand 6, W6).
+Skorpekhs landen per Veil auf Home, dann Swarmlord-Block zurück; Home ist Pflicht.
+Lord of the Storm verbraucht, dann Enger stehen ist wieder möglich; Tyrant-Blöcke dürfen nebeneinander.
+
+Abschnitt 13: Primary Scoring Plan.
+
+Paarung: Beide Take and Hold, dann Battlefield Dominance.
+
+Du brauchst Home (sonst kein plus 2) und zwei weitere Objectives.
+O-C-Realität: Warriors 41, Immortals 22, Wraiths 13, C'tan 4. Deine: Norn 15, Tyrant-Block 9, Psychophage 3, Pyrovores 3.
+Deine sichersten drei: Home plus eigene Expansion plus Central (wenn keine Warriors dort). Stehen die Warriors auf Central: Home plus eigene Expansion sicher (10 Siegpunkte inklusive plus 2) und Central über Rippers oder Shadow in einer Schlüsselrunde kippen.
+Winning the fight: Du wirst seine C'tan nicht zuverlässig töten. Winning the mission: Seine mobilen Einheiten (Wraiths, Skorpekhs) töten, dann kann er nichts mehr von dir nehmen; seine statischen Blöcke halten nur ihre eigenen Objectives.
+
+Secondaries: Assassination (Fixed) – Imotekh, Plasmancer, Technomancer, Overlord, Skorpekh Lord, 2 C'tan = 7 Characters. Bring It Down – 2 C'tan (16 Lebenspunkte), aber schwer. Empfehlung: Assassination plus Tactical (Defend Stronghold, Burden of Trust passen gut). A Grievous Blow würde nur den Warriors-Block treffen (Starting Strength 21) – der ist kaum komplett tötbar, daher nicht empfohlen.
+
+Abschnitt 14: First Turn, Second Turn Considerations.
+
+Wenn du zuerst spielst.
+
+Objectives besetzen; Hive-Tyrant-Block Richtung Skorpekh oder Wraith-Flanke; Zoans auf eine vorgerückte Einheit.
+Runde 1: Wer hat mehr Objectives? Flayed Ones können eins schnappen – mit Pyrovore-Torrent entfernen.
+
+Wenn er zuerst spielt.
+
+C'tan und Wraiths rücken vor; Skorpekhs gegebenenfalls schon in Reichweite. Dein Zug 1 ist Konter auf die mobilen Einheiten.
+Kommandopunkte: Heroic Intervention (1), Catalytic Biofortification (1) gegen Drain Life oder Devastating Wounds-Mortal Wounds.
+
+Abschnitt 15: Practical Round Checklist.
+
+BEFORE DEPLOYMENT.
+Battlefield Dominance; Home ist Pflicht.
+Secondaries: Assassination fixed.
+Zoans auf den Tisch (keine Deathmarks), Rippers Reserve.
+DEPLOYMENT.
+Wo stehen die Warriors (O-C 41)?, dann bestimmt dein drittes Objective.
+Norns je mit Tyrant-Block in 12 Zoll.
+Home doppelt (Veil-Skorpekhs).
+OPPONENT TURN.
+Drain Life: keine unnötigen Einheiten in 6 Zoll des Nightbringers.
+Lord of the Storm verfügbar?, dann 12 Zoll freihalten.
+Resurrection Orb schon benutzt?
+MY TURN.
+Skorpekhs oder Wraiths töten (ganz!).
+Rippers plus Shadow in the Warp für die Warriors-Runde.
+C'tan nur finishen, wenn Damaged.

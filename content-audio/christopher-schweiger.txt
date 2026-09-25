@@ -1,0 +1,249 @@
+Gegneranalyse: Christopher Schweiger (Korvain) – T'au Empire (Mont'ka).
+
+Liste in Kürze (1995 Punkte, Mont'ka 3 Daemon Prince).
+
+Ethereal (Warlord, Strike Swiftly: 2 Einheiten Scouts 6 Zoll); Punkte: 95; Rolle gegen dich: plus 1 Kommandopunkt auf 4 plus, Scout-Enabler.
+Darkstrider (allein); Punkte: 60; Rolle gegen dich: Jammer Array: deine Reserven nicht in 12 Zoll von ihm.
+Broadsides, 3 Stück (High-yield Missile Pods, Seeker, Missile Drones, WSS); Punkte: 270; Rolle gegen dich: Anti-Infanterie oder Guards, 30 Zoll.
+Broadsides, 3 Stück (Heavy Rail Rifles, Seeker, Missile Drones, WSS); Punkte: 255; Rolle gegen dich: 60 Zoll Stärke 12 AP minus 4 D6 plus 1 Dev Wounds – Norn-Killer.
+Riptide, 2 Stück (Ion Accelerator, Twin Plasma, Missile Drones); Punkte: 430; Rolle gegen dich: 72 Zoll Stärke 10 AP minus 3 D4 (Supercharge), Nova Charge.
+Ghostkeel (Cyclic Ion Raker, Twin Fusion); Punkte: 165; Rolle gegen dich: Infiltrators, Lone Operative, Stealth.
+Piranhas, 1 Stück ( mal 3) (Fusion Blaster Melta 4, 2 Seeker); Punkte: 205; Rolle gegen dich: Scouts 9 Zoll, 6 Seeker Missiles, Battle-shock-Druck.
+Stealth Battlesuits, 5 Stück ( mal 2) (Burst, Fusion, Homing Beacon); Punkte: 200; Rolle gegen dich: Infiltrate, Observer, Stealth.
+Pathfinder Team, 10 Stück ( mal 2) (3 Ion Rifles, Grav-inhibitor, Marker); Punkte: 200; Rolle gegen dich: Observer, Scouts 7 Zoll, Charge minus 2.
+Krootox Rider, 1 Stück; Punkte: 45; Rolle gegen dich: Scouts 7 Zoll.
+Vespid Stingwings, 5 Stück; Punkte: 70; Rolle gegen dich: Deep Strike, Reserve-Springer.
+
+Force Disposition laut Herald: Priority Assets (Mont'ka ist das einzige Detachment, dann einzige Option).
+
+Abschnitt 1: Executive Summary.
+
+Was die Armee will: In Runde 1 bis 3 (Mont'ka: Assault plus Lethal Hits für gelenkte Einheiten) jede Runde ein großes Ziel löschen. Seine Primary (Secure Asset) zahlt 4 Siegpunkte pro Zug für eine Action auf einem Nicht-Home-Objective plus 4 plus 4 Siegpunkte für Objectives – er braucht Objectives in seiner Hälfte plus eins in der Mitte, keinen Nahkampf.
+Wichtigste Bedrohung: Heavy-Rail-Broadsides (6 Schuss, 60 Zoll, Dev Wounds) plus Riptides plus 12 Seeker Missiles (Stärke 14, einmalig). Runde-1 oder 2-Alpha gegen einen Norn: 35 plus.
+Wichtigstes taktisches Problem: Du musst über 24 bis 30 Zoll offenes Feld an eine Feuerbasis heran, die den Tisch abdeckt – und Seeker Missiles machen seinen ersten Schuss extrem schwer.
+Was du vermeiden musst: Einen Norn in Runde 1 oder 2 in Sicht – und das heißt auch: nicht auf einem Objective (dort ist ein Norn immer sichtbar). Die Seeker-Salve ist einmalig – lass sie auf etwas Unwichtiges oder ins Leere gehen.
+Strategischer Ansatz: Norns hinter obscuring Zonen, Objectives mit hidden Pyrovores plus Tyrannoformed, dann Tempo. Deine Mission (Inescapable Dominion) zahlt für mindestens 2, mindestens 3 Objectives und mehr als er. Nahkampf ist sein Schwachpunkt (fast nichts kann sich wehren). Sobald ein Tyrant-Block oder Norn in seiner Linie steht, bricht sie.
+
+Abschnitt 2: Opponent Game Plan.
+
+Beobachter (Pathfinder oder Stealth oder Marker Drones) markieren Ziel, dann gelenkte Einheiten: BS plus 1, Ignores Cover.
+Mont'ka (Runde 1 bis 3): gelenkt, dann Lethal Hits; alle Fernkampfwaffen Assault.
+Focused Fire (1 Kommandopunkt, Runde 1 bis 3): 2 Einheiten nur auf 1 Ziel, AP plus 1.
+Weapon Support System: ignoriert alle Hit-Modifikatoren.
+
+1: Pre-Game: Stealth plus Ghostkeel infiltrieren, Piranhas Scout 9 Zoll, Pathfinders oder Krootox Scout 7 Zoll, Strike Swiftly gibt zwei weiteren Einheiten Scouts 6 Zoll (zum Beispiel Riptides). Darkstrider legt eine 12 Zoll-Sperrzone gegen deine Reserven.
+2: Runde 1 bis 2: Seeker-Salve (12 Stück, Stärke 14 AP minus 3 D6 plus 1) plus Rail plus Ion auf dein größtes Ziel. Danach das nächste.
+3: Runde 2 plus: Secure-Asset-Action auf einem Objective in seiner Hälfte (Stealth, Pathfinders, Krootox), Objectives halten, weiche Einheiten von dir töten (Piranhas-Fusion, Missile Pods).
+4: Nahkampf-Vermeidung: Grav-inhibitor (minus 2 Charge), Pulse Onslaught (2 Kommandopunkte, deine Nicht-Monster-Einheit minus 2 Zoll Move oder minus 2 Charge), Retreat und Schießen (Battlesuit Support System bei Ghostkeel oder Riptide).
+
+Er gewinnt nicht, indem er dich tötet – er gewinnt, wenn er in Runde 1 bis 3 zwei deiner großen Einheiten löscht, bevor du ihn erreichst, und dann mit Actions und Objectives in seiner Hälfte punktet.
+
+Abschnitt 3: Major Threats.
+
+Heavy-Rail-Broadsides, 3 Stück.
+
+Widerstand 6, 2 plus, 8 Lebenspunkte je ( plus Shield Drones?) – hier Missile Drones (je 2 Missile Pods 30 Zoll 5 plus). Feel No Pain 4 plus gegen Mortal Wounds. Heavy Rail Rifle 60 Zoll 2 Attacken Stärke 12 AP minus 4 D6 plus 1 Dev Wounds Heavy, WSS ignoriert Hit-Modifikatoren. Seeker (1 mal ) je Modell.
+Gegen Norn (gelenkt, Lethal): etwa 10, mit Feel No Pain 7, aus den Rails plus etwa 4, mit Feel No Pain 3, aus 3 Seekern, dann etwa 14, mit Feel No Pain 9,.
+Reaktion: Kill early – sie stehen hinten (Bewegung 5). Widerstand 6 oder 2 plus oder 8 Lebenspunkte: Hive-Tyrant-Block (Stärke 10 oder Stärke 11 gegen Widerstand 6, dann 2 plus) löscht sie in einem Fight. Zoanthropes fokussiert: Stärke 12 gegen Widerstand 6, dann 2 plus, AP minus 3 gegen 2 plus, dann 5 plus Save, dann etwa 3,3 durch mal 4,5, dann etwa 2 Broadsides tot (aber Jammer Array beachten).
+
+Riptide, 2 Stück.
+
+Widerstand 9, 2 plus oder 4 plus Invul, 14 Lebenspunkte, Bewegung 10 FLY. Ion Accelerator 72 Zoll 6 Attacken Stärke 9 oder Stärke 10 AP minus 2 oder minus 3 D3 oder D4 (Supercharge: Hazardous), Twin Plasma 18 Zoll, Nova Charge (1 mal : Dev Wounds auf eine Waffe). WSS.
+Gegen Norn: etwa 4 bis 5, mit Feel No Pain 3, je (Supercharge, gelenkt). Gegen Psychophage: etwa 6 bis 8.
+Bring It Down (14 Lebenspunkte), O-C 4.
+Reaktion: Mittel–hoch; im Nahkampf (Widerstand 9, 2 plus oder 4 plus Invul) zäh, aber Riptide-Fäuste sind lächerlich (6 Attacken 5 plus Stärke 6) – ein gebundener Riptide ist wertlos (Battlesuit Support System erlaubt Fallback plus Schießen!).
+
+Seeker Missiles, 12 Stück (einmalig).
+
+3 (Missile-Broadsides) plus 3 (Rail-Broadsides) plus 6 (Piranhas): 48 Zoll 1 Attacken Stärke 14 AP minus 3 D6 plus 1 BS4 plus (gelenkt 3 plus, Lethal).
+Alle auf einen Norn: etwa 8 Treffer, dann etwa 5,5 Wunden (Stärke 14 gegen Widerstand 11, dann 3 plus), dann 4 plus Invul, dann etwa 2,7 mal 4,5 = etwa 12, mit Feel No Pain 8,.
+Reaktion: Der erste Zug, in dem er einen Norn sieht, kostet dich etwa 40 Prozent davon. Nicht zeigen.
+
+Piranhas, 3 Stück (einzeln).
+
+Widerstand 7, 4 plus, 7 Lebenspunkte, Bewegung 14 FLY, Scouts 9 Zoll. Fusion Blaster 12 Zoll Melta 4 (D6 plus 4 in 6 Zoll), 2 Seeker, Burst Cannon. Drone Harassment Tactics: Ende seiner Movement Phase – eine deiner Einheiten in 12 Zoll testet Battle-shock.
+Reaktion: Schnelle Harvester-, Objective-Jäger. Leichte Kills für deine Blöcke (7 Lebenspunkte, 4 plus).
+
+Ghostkeel plus Stealth, 2 Stück plus Pathfinders, 2 Stück (Observer).
+
+Ghostkeel: Widerstand 8, 2 plus, 12 Lebenspunkte, Lone Operative, Stealth, Infiltrators, Stealth Drones (2 mal Damage 0). Ion Raker 36 Zoll 6 Attacken, Twin Fusion 12 Zoll.
+Stealth: Stealth, Infiltrators, Forward Observers (Reroll 1er Hit oder Wound für gelenkte Einheiten), Homing Beacon (1 mal Rapid Ingress 0 Kommandopunkte in 3 Zoll von ihnen – Vespid oder andere Reserven landen neben ihnen).
+Pathfinders: Grav-inhibitor (minus 2 auf Charges gegen sie), Target Uploaded.
+Reaktion: Die Observer sind System-Ziele. Ohne Spotting verliert die Feuerbasis BS plus 1 und die Mont'ka-Lethal-Hits.
+
+Darkstrider – Jammer Array.
+
+Deine Reserven (Zoanthropes, Rippers) dürfen nicht in 12 Zoll von ihm aufgestellt werden. Er steht infiltriert oder weit vorne.
+Reaktion: Einfluss auf deinen Reserveplan (siehe §6).
+
+Abschnitt 4: Threat Matrix.
+
+Rail-Broadsides, 3 Stück; Threat: Very High; Primary targets: Norns, Psychophages; How it threatens them: 60 Zoll Stärke 12 AP minus 4 Devastating Wounds; Recommended response: Norns hinter obscuring Zonen, dann Nahkampf oder Zoans.
+Seeker, 12 Stück (1 mal ); Threat: Very High (einmalig); Primary targets: Norn; How it threatens them: 12 mal Stärke 14; Recommended response: Erste Sicht verweigern.
+Riptides, 2 Stück; Threat: High; Primary targets: Norns, Psychophages; How it threatens them: 72 Zoll Ion; Recommended response: Nahkampf binden.
+Observer (Pathfinder, Stealth, Marker); Threat: High (System); How it threatens them: BS plus 1, Lethal (Mont'ka); Recommended response: Früh töten.
+Missile-Broadsides; Threat: Medium; Primary targets: Guards, Pyrovores; How it threatens them: 18 Schuss Stärke 7 D2; Recommended response: Hinter obscuring Zonen; Pyrovores hidden.
+Piranhas, 3 Stück; Threat: Medium; Primary targets: Harvester, Battle-shock; How it threatens them: Melta 4, Bewegung 14; Recommended response: Leichte Kills.
+Ghostkeel; Threat: Medium; Primary targets: Harvester; How it threatens them: Lone Operative, Fusion; Recommended response: Nahkampf.
+Darkstrider; Threat: Medium (System); Primary targets: deine Reserven; How it threatens them: Jammer 12 Zoll; Recommended response: Reserveplan anpassen.
+
+Abschnitt 5: Target Priority.
+
+Kill early.
+1: Observer in Reichweite (Pathfinders, Stealth) – billig, weich, sie schalten Mont'ka-Lethal und BS plus 1 ab.
+2: Rail-Broadsides – sobald ein Block sie erreicht.
+
+Control, avoid.
+Riptides – binden statt totschlagen (sie sind zäh, im Nahkampf harmlos). Achtung: Battlesuit Support System, dann Fallback und trotzdem schießen.
+Ghostkeel – Lone Operative (nur in 12 Zoll sichtbar), Stealth Drones.
+
+Ignore.
+Krootox, Vespid – außer auf Objectives.
+
+Abschnitt 6: Deployment Analysis.
+
+Wahrscheinlich: Broadsides und Riptides hinten mit Lanes über die Mitte; Stealth oder Ghostkeel infiltriert (>8 Zoll von dir, außerhalb deiner Aufstellungszone); Pathfinders oder Piranhas scouten vor; Darkstrider infiltriert (Jammer); Vespid in Reserve.
+
+Castle oder spread? Feuerbasis konzentriert, Observer oder Scoring vorgeschoben.
+
+Kernfrage: Kann er einen Norn in einem Zyklus töten? Ja, locker (Runde 1 oder 2 mit Seekern: 35 plus [23 plus]). Zwei Norns? In Runde 1 mit Seekern fast (Seeker auf einen, Rail plus Riptides auf den anderen, dann etwa 14, mit Feel No Pain 9, plus etwa 10, mit Feel No Pain 7,). Das ist die gefährlichste Fernkampfliste im Turnier für dich.
+
+Deine Aufstellung (Empfehlung: dicht, hinter obscuring Zonen, konzentriert):
+Norn-Sichtbarkeit in diesem Matchup (entscheidend): Ein Norn, der ein Objective hält, ist immer sichtbar – seine Base steht in der Objective-Geländezone (deren Obscuring zählt für ihn nicht), er überragt die Ruinen, Monster sind nie hidden. Gegen 60 Zoll oder 72 Zoll-Waffen heißt das: Ein Norn auf einem Objective in Runde 1 bis 3 stirbt. Verdeckt ist ein Norn nur hinter (nicht in) einer obscuring Geländezone – dort punktet er nicht.
+Norns zuletzt, beide hinter obscuring Zonen. Keine Sicht zu 60 Zoll-Lanes. Das ist wichtiger als Objective-Position in Runde 1.
+Objectives in Runde 1 bis 3: Pyrovores (INFANTRY, dann hidden in der Objective-Zone, nur in 15 Zoll sichtbar – Observer oder Markerlights ändern daran nichts, Ignores Cover ist nicht ignoriert Hidden; aber nur, solange der Trupp in diesem oder dem vorigen Zug nicht geschossen hat, auch kein Overwatch) plus Biovore auf Home. In deiner Command Phase Tyrannoformed (1 Kommandopunkt, Pyrovores sind Harvester), dann das Objective bleibt dein, auch wenn der Trupp weiterzieht oder stirbt. Deine Primary (Inescapable Dominion) zählt Objectives, nicht Norns.
+Overload-Konzept: Alles auf eine Hälfte, die sich hinter Gelände nach vorn arbeiten kann. Seine Feuerbasis tötet pro Runde etwa ein großes Ziel – gib ihm nur eines zur Auswahl, und zwar ein sich regenerierendes.
+Swarmlord zentral: Malign Presence verteuert Focused Fire, Counterfire Defence Systems, Pulse Onslaught, Aggressive Mobility, Pinpoint Counter-Offensive.
+Zoanthropes und Rippers: Reserve – aber Jammer Array beachten. Darkstrider blockiert 12 Zoll um sich; deine Einheiten dürfen dort nicht landen. Plane den Eintritt auf der anderen Seite; Zoans (Runde 2) auf Broadsides oder Observer in 24 Zoll.
+Pyrovores oder Guards in Geländezonen (hidden gegen alles außer Observer in 15 Zoll).
+
+Welchen Fehler er sich wünscht: Einen Norn in Runde 1 in offener Sicht; einen breiten Split, bei dem jede Seite einzeln zerschossen wird.
+
+Er steht breit (Broadsides auf beiden Seiten), dann Overload eine Seite; dort die Broadsides ab Runde 2 im Nahkampf.
+Er steht konzentriert, dann Triangle: Home plus Central plus die Expansion, die von seiner Feuerbasis am schlechtesten gesehen wird.
+Darkstrider vorne, dann Rippers oder Zoans auf die gegenüberliegende Seite; Darkstrider selbst ist ein schwaches Ziel (Widerstand 3, 3 Lebenspunkte).
+
+Abschnitt 7: Movement and Positioning.
+
+Seine Reichweiten: 60 Zoll (Rails), 72 Zoll (Ion), 48 Zoll (Seeker). Der ganze Tisch.
+Seine Nahkampfabwehr: Grav-inhibitor minus 2 Charge gegen Pathfinders; Pulse Onslaught minus 2 Zoll Move oder minus 2 Charge (nicht gegen Monster!); Photon-Grenades (Kauyon, nicht hier).
+Deine Annäherung: Monster können nicht durch dichte Geländeteile über 2 Zoll Höhe – das kostet Zeit. Wege planen, die hinter obscuring Geländezonen bleiben. Tyrant Guard (INFANTRY im Block – aber der Character ist MONSTER: Block kann nicht durch Dense mehr als 2 Zoll; Verified-Regel betrifft jedes Modell).
+Safe: Hinter obscuring Geländezonen (nicht auf einem Objective). Hidden-Infanterie in Geländezonen (15 Zoll; gegen Observer mit Markerlight kein Ignore – Hidden ist Sichtbarkeit, Ignores Cover ändert das nicht).
+Dangerous: Alles, was die Broadsides oder Riptides sehen.
+Conditional: Central – nur mit Sichtschutz.
+
+Abschnitt 8: Charge, Fight Phase Analysis.
+
+Du chargst die Broadsides (Runde 2 oder 3):
+Vorher: Psychophage-Torrent (Bio-stimulus), falls in 12 Zoll.
+Charge: Hive-Tyrant-Block (Bewegung 8 plus 2W6). Pathfinders mit Grav-inhibitor nur relevant, wenn DU SIE chargst.
+Fight: Hive Tyrant 6 Attacken Stärke 11 gegen Widerstand 6, dann 2 plus, AP minus 2(minus 3) gegen 2 plus, dann 4 plus oder 5 plus, dann etwa 2,5 mal D3, dann etwa 1 Broadside Guards 30 Attacken Stärke 7 gegen Widerstand 6, dann 3 plus, dann etwa 13 Wunden, dann 2 plus Save AP minus 1(minus 2), dann etwa 4 bis 6 durch, dann etwa 1 Broadside, dann etwa 2 Broadsides tot, Rest gebunden (kann nicht auf dich schießen außer Close-Quarters oder minus 1).
+Rapacious Hunger (1 Kommandopunkt) nach Kill.
+
+Wichtig 11th: Gebundene Einheiten dürfen nicht normal schießen. Monster oder Vehicles (Riptide, Broadsides sind VEHICLE) dürfen Close-Quarters Shooting mit minus 1 to hit – aber nur auf die Einheit, mit der sie engaged sind. Ein gebundener Riptide schießt also auf deinen Block statt auf deinen Norn.
+
+Er chargt dich: Praktisch nie absichtlich. Ausnahmen: Twin-Lance-artige Einheiten fehlen hier. Piranhas oder Ghostkeel nur, um Objectives zu blockieren.
+
+Heroic Intervention: Kaum relevant. Overwatch: Pyrovores gegen Piranhas oder Stealth, die Objectives nehmen wollen.
+
+Abschnitt 9: Shooting Analysis.
+
+Heavy Rail Rifle, 6 Stück (Devastating Wounds, gelenkt, Lethal Runde 1 bis 3); Reichweite: 60 Zoll; Gegen Norn (Widerstand 11, 2 plus, 4 plus Invul): etwa 10, mit Feel No Pain 7,; Gegen Tyrant Guard: etwa 3 Guards.
+Seeker Missiles, 12 Stück (1 mal ); Reichweite: 48 Zoll; Gegen Norn (Widerstand 11, 2 plus, 4 plus Invul): etwa 12, mit Feel No Pain 8,; Gegen Tyrant Guard: etwa 4 Guards.
+Ion Accelerator, 2 Stück (Supercharge); Reichweite: 72 Zoll; Gegen Norn (Widerstand 11, 2 plus, 4 plus Invul): etwa 8 bis 9, mit Feel No Pain 5 bis 6,; Gegen Tyrant Guard: etwa 4 Guards.
+High-yield Missile Pods, 3 Stück (18 Attacken Stärke 7 D2); Reichweite: 30 Zoll; Gegen Norn (Widerstand 11, 2 plus, 4 plus Invul): etwa 3, mit Feel No Pain 2,; Gegen Tyrant Guard: etwa 3 Guards.
+Missile Drones (16 mal 2 Attacken Stärke 7 D2, BS 5 plus); Reichweite: 30 Zoll; Gegen Norn (Widerstand 11, 2 plus, 4 plus Invul): etwa 2, mit Feel No Pain 1,3,; Gegen Tyrant Guard: etwa 2 Guards.
+Fusion (Piranhas Melta 4, Stealth, Ghostkeel); Reichweite: 12 Zoll; Gegen Norn (Widerstand 11, 2 plus, 4 plus Invul): etwa 3 bis 5, mit Feel No Pain 2 bis 3, in 6 Zoll; Gegen Tyrant Guard: etwa 2.
+Ion Rifles, Burst Cannons; Reichweite: 18 bis 30 Zoll; Gegen Norn (Widerstand 11, 2 plus, 4 plus Invul): vernachlässigbar; Gegen Tyrant Guard: Pyrovores oder Rippers.
+
+dann Runde 1 oder 2 mit Seekern: etwa 35 plus, mit Feel No Pain 23 plus, gegen einen Norn in Sicht. Ab Runde 3 (ohne Seeker, ohne Mont'ka-Lethal ab Runde 4): etwa 20, mit Feel No Pain 13,.
+
+Seine Zielpriorität: Norn, dann Psychophage, dann Hive-Tyrant-Block, dann Zoanthropes.
+
+Abschnitt 10: Gotchas and Traps.
+
+1: Jammer Array (Darkstrider) – keine Reserve-Aufstellung in 12 Zoll von ihm. Zoans oder Rippers-Plan danach richten; Darkstrider früh töten (Widerstand 3, 3 Lebenspunkte), wenn er deinen besten Eintrittspunkt blockiert.
+2: Mont'ka endet nach Runde 3 – Lethal Hits und Assault nur Runde 1 bis 3. Ab Runde 4 fällt sein Schaden deutlich. Dein Plan: Runde 1 bis 3 überleben (Sicht), Runde 3 bis 5 dominieren.
+3: Seeker = einmalig – nachdem die Salve raus ist, ist ein Norn deutlich sicherer.
+4: Homing Beacon (Stealth): 1 mal Rapid Ingress 0 Kommandopunkte neben den Stealth-Anzügen (Vespid).
+5: Stealth Drones (Ghostkeel): 2 mal Damage 0 auf einen Treffer. Deine großen D6 plus 1-Treffer werden gefressen.
+6: Battlesuit Support System – Riptide oder Ghostkeel fallen aus dem Nahkampf zurück und schießen trotzdem. Harpoon Barbs bestraft Fallback vom Assimilator (2 plus: D6 Mortal Wounds).
+7: Counterfire Defence Systems (2 Kommandopunkte) – eine seiner Einheiten: minus 1 Damage gegen deine Schüsse. Malign Presence: 3 Kommandopunkte.
+8: Pulse Onslaught (2 Kommandopunkte) – betrifft nur Nicht-Monster: deine Tyrant-Blöcke sind MONSTER (Keyword im Block), dann immun (Verified-Logik: Attached Unit hat MONSTER-Keyword; excluding MONSTERS). Pyrovores oder Zoans oder Rippers betroffen.
+9: Drone Harassment (Piranhas) – Battle-shock-Test für eine Einheit in 12 Zoll; relevant für O-C auf Objectives vor seiner Wertung.
+
+Abschnitt 11: Opponent Decision Tree.
+
+Sieht er in Runde 1 einen Norn?
+JA, dann Norn verliert etwa 35, mit Feel No Pain 23,. Vermeiden!
+NEIN, dann Er schießt Seeker auf etwas anderes (Psychophage oder Tyrant-Block) oder spart sie Wenn er spart: Norn bleibt auch Runde 2 hinter obscuring Zonen (Objectives halten Pyrovores plus Tyrannoformed); Zoans oder Blöcke zwingen ihn, sie zu verbrauchen.
+Wo stehen die Observer?
+Vorne oder erreichbar, dann Runde 1 pro Runde 2 töten (Emissary-Blast, Biovore, Pyrovores).
+Hinten, dann Stealth-Anzüge sind die vordersten Observer; Zoans auf sie.
+Runde 4 erreicht?
+Mont'ka vorbei, dann Norns dürfen auf Objectives (dort sind sie sichtbar), wenn Broadsides oder Riptides dezimiert sind.
+
+Abschnitt 12: Player's Game Plan.
+
+Default plan.
+
+1: Runde 1: Home plus eine Expansion plus Central-Rand mit Pyrovores (hidden), Biovore; alle Monster hinter obscuring Zonen. Kein Norn in Sicht, also auch kein Norn auf einem Objective. Runde 2 Command Phase: Tyrannoformed auf die gehaltenen Objectives. Observer in Reichweite beschießen (Biovore 48 Zoll Indirect auf Pathfinders).
+2: Runde 2: Hive-Tyrant-Block plus Assimilator hinter Gelände vorwärts; Zoans auf Broadsides oder Stealth. Rippers auf ein Objective in seiner Hälfte (O-C-Halbierung plus Harvester nahe Front).
+3: Runde 3: In seine Linie: Broadsides oder Riptides binden oder töten. Inescapable Dominion: mindestens 3 Objectives.
+4: Runde 4 bis 5: Mont'ka ist vorbei – Norns auf Objectives (sichtbar, aber gegen eine dezimierte Feuerbasis tragbar), O-C-Dominanz.
+
+Adjustment triggers.
+
+Er verschießt die Seeker früh auf etwas anderes, dann Norns ab Runde 2 etwas mutiger.
+Ein Broadside-Trupp steht in 20 Zoll eines Tyrant-Blocks, dann Charge; einen gebundenen Broadside-Trupp nicht mehr loslassen.
+Riptide in Nahkampf gebunden, dann Wenn er zurückfällt: Harpoon Barbs (Assimilator) oder zweiter Charge.
+Darkstrider steht vor deinem Zoans-Korridor, dann Emissary-Precision-Profil (18 Zoll) auf ihn; dann Zoans rein.
+
+Abschnitt 13: Primary Scoring Plan.
+
+Paarung (Herald): Du (Take and Hold), dann Inescapable Dominion; er (Priority Assets), dann Secure Asset.
+
+Du:
+Zugende: 4 Siegpunkte bei mindestens 3 Objectives.
+Ab Runde 2 (Command Phase): 5 Siegpunkte bei mindestens 2, 4 Siegpunkte bei mehr als er.
+Spielende: 5 Siegpunkte für sein Home.
+dann Pro Runde bis zu 13 Siegpunkte mit 3 Objectives und Mehrheit. Home zählt hier mit!
+Er: 4 Siegpunkte pro Zug für Secure Asset (Action in seiner Shooting Phase auf einem Nicht-Home-Objective, fertig am Zugende, wenn die Einheit es kontrolliert – die Einheit darf in diesem Zug nicht schießen), 2 Siegpunkte, wenn deine Einheit auf Central stirbt, ab Runde 2: 4 Siegpunkte für mindestens 1 Nicht-Home, 4 Siegpunkte für mindestens 3 Objectives.
+Kern: Er braucht eine Action-Einheit auf einem Nicht-Home-Objective pro Zug (Stealth, Pathfinders, Krootox, Piranha). Diese Einheit zu töten oder das Objective zu überstimmen, kostet ihn 4 Siegpunkte pro Runde. Rippers (O-C halbieren) plus ein Block reichen.
+Central ist gefährlich für dich (2 Siegpunkte für ihn bei Kill dort) – nicht mit billigen Einheiten auf Central stehen.
+Winning the fight gegen. mission: Er wird mehr töten als du. Aber Inescapable Dominion wertet Objective-Anzahl inklusive Home – drei Objectives mit zähen Einheiten reichen.
+
+Secondaries: Bring It Down (Fixed) – 2 Riptides (14 Lebenspunkte), Ghostkeel (12 Lebenspunkte) = 3 Ziele. Zweite: Assassination (Ethereal 3 Lebenspunkte, Darkstrider 3 Lebenspunkte, dann nur je 3 Siegpunkte) schwach. Empfehlung: Bring It Down plus Tactical (oder No Prisoners: 17 Einheiten, viele weich).
+
+Abschnitt 14: First Turn, Second Turn Considerations.
+
+Wenn du zuerst spielst.
+
+Nichts zeigen. Minimal vorrücken, Biovore auf Observer, Objectives in deiner Hälfte.
+Seine Scouts oder Infiltratoren (Stealth, Ghostkeel, Piranhas) stehen evtl. in 18 Zoll deiner Emissary oder Pyrovores: jetzt töten.
+
+Wenn er zuerst spielt.
+
+Seeker-Salve kommt sofort auf das Beste, was er sieht. Deployment entscheidet.
+Ablative Carapace (2 Kommandopunkte) nur, wenn ein Harvester (Psychophage oder Assimilator) als Ziel gewählt wird und die Salve ihn töten würde.
+Dein Zug 1: Vorrücken hinter Gelände, Observer töten.
+
+Abschnitt 15: Practical Round Checklist.
+
+BEFORE DEPLOYMENT.
+Inescapable Dominion (Home zählt!) gegen Secure Asset.
+Bring It Down fixed (Riptides, Ghostkeel).
+Darkstrider-Position, dann Jammer 12 Zoll für deine Reserven.
+DEPLOYMENT.
+Norns zuletzt, KEINE Sicht zu 60 Zoll oder 72 Zoll-Lanes (nicht auf Objectives).
+Pyrovores hidden auf die Objectives, Tyrannoformed Runde 2.
+Konzentriert auf einer Seite (Overload oder Triangle).
+Swarmlord zentral.
+OPPONENT TURN.
+Seeker schon verbraucht?
+Welche Einheit macht Secure Asset? (sie schießt in dem Zug nicht).
+Drone Harassment: Battle-shock vor seiner Wertung.
+MY TURN.
+Observer töten.
+Broadsides binden oder töten.
+Ab Runde 4: Norns auf Objectives, wenn Broadsides oder Riptides dezimiert.

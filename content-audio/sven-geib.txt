@@ -1,0 +1,262 @@
+Gegneranalyse: Sven Geib (Freekkel) – Death Guard.
+
+Liste in Kürze (2000 Punkte, Contagion Engines 1 Daemon Prince plus Mortarion's Hammer 2 Daemon Prince).
+
+Lord of Contagion plus 3 Deathshroud Terminators; Punkte: 280; Rolle gegen dich: Nahkampf-Block, Sustained plus Lance, Deep Strike (6 Zoll von Afflicted).
+Lord of Virulence (Warlord, Tendrilous Emissions); Punkte: 130; Rolle gegen dich: Lone Operative bei Fahrzeugen, Reroll Wound 1 für Fahrzeuge, Blight Bombardment.
+Tallyman; Punkte: 60; Rolle gegen dich: 2W6 7 plus, dann plus 1 Kommandopunkt.
+Deathshroud Terminators, 3 Stück; Punkte: 160; Rolle gegen dich: zweiter Terminator-Block, Deep Strike.
+Foetid Bloat-drone (Fleshmower, Parasitic Woe-Reaper), 2 Stück; Punkte: 230; Rolle gegen dich: Nahkampf-Drohnen, heilen D3 nach dem Kampf.
+Foetid Bloat-drone (2 Plaguespitters); Punkte: 110; Rolle gegen dich: Torrent Anti-Infantry 2 plus – Pyrovore-, Guard-Killer.
+Bloat-drone mit Heavy Blight Launcher, 2 Stück; Punkte: 250; Rolle gegen dich: 36 Zoll D6 plus 2 Blast Stärke 10 AP minus 2 D3 Lethal.
+Myphitic Blight-haulers, 2 Stück (je 2, Lancet: MOBILE); Punkte: 410; Rolle gegen dich: Tank Hunters: plus 1 Hit, plus 1 Wound gegen Monster; Multi-meltas.
+Plagueburst Crawler (Entropy Cannons); Punkte: 170; Rolle gegen dich: 36 Zoll Stärke 10 AP minus 3, Mortar Indirect 48 Zoll.
+Plagueburst Crawler (Plaguespitters); Punkte: 200; Rolle gegen dich: Mortar Indirect 48 Zoll, Torrents.
+
+Force Disposition laut Herald: Purge the Foe (Mortarion's Hammer). Alternative: Reconnaissance (Contagion Engines).
+
+Abschnitt 1: Executive Summary.
+
+Was die Armee will: Eine Fahrzeug- und Drohnenwalze. 9 Fahrzeugmodelle (Widerstand 9–Widerstand 10, 3 plus oder 2 plus, 5 plus Invul, 10 Lebenspunkte bis 12) marschieren auf die Mitte, machen deine Einheiten Afflicted (minus 1 T, plus Seuche), schießen Monster mit Tank Hunters weg und binden den Rest im Nahkampf. Seine Primary (Unstoppable Force) zahlt 3 Siegpunkte für jeden Zug mit Kill und 5 Siegpunkte am Ende für Central.
+Wichtigste Bedrohung: Blight-haulers (4 Modelle): Multi-meltas mit plus 1 to hit, plus 1 to wound gegen deine Monster, dann etwa 15, mit Feel No Pain 10, Schaden an einem Norn pro Runde, mit Heavy Blight Launcher-Drohnen und Crawlern etwa 25, mit Feel No Pain 17,.
+Wichtigstes taktisches Problem: Afflicted senkt deine Toughness um 1 (Norn Widerstand 10, Guards Widerstand 7, Pyrovores Widerstand 5) – überall dort, wo seine Einheiten in Contagion Range stehen, und zusätzlich bei 2 deiner Einheiten pro Runde über Miasmic Bombardment (>12 Zoll von ihm).
+Was du vermeiden musst: Einen Norn in Sicht der Blight-haulers in 18 Zoll (Melta). Und deine Pyrovores oder Guards in Reichweite der Plaguespitter-Torrents (Anti-Infantry 2 plus).
+Strategischer Ansatz: Deine Primary (Immovable Object) zahlt 5 Siegpunkte pro Nicht-Home-Objective in Runde 2 bis 4. Halte Central plus eigene Expansion (10 Siegpunkte plus 3 für Central pro Runde) und lass seine Fahrzeuge in deine Nahkampfblöcke laufen – Widerstand 9 ist für deine Norns oder Tyrants gut verwundbar. Blight-haulers zuerst.
+
+Abschnitt 2: Opponent Game Plan.
+
+Nurgle's Gift: Deine Einheiten in Contagion Range sind Afflicted (minus 1 T plus gewählte Seuche).
+Contagion Range wächst über die Runden (Likely: 3 Zoll, 6 Zoll, 9 Zoll, max. 12 Zoll).
+Miasmic Bombardment: Start jeder Runde, dann 2 deiner Einheiten mehr als 12 Zoll von ihm werden Afflicted.
+Seuche (vor dem Spiel gewählt; vermutlich eine dieser drei):
+Skullsquirm Blight: dein Fernkampf gibt ihm Cover, dein Nahkampf minus 1 to hit.
+Rattlejoint Ague: dein Save minus 1.
+Scabrous Soulrot: M oder Leadership oder O-C minus 1 (O-C min. 1).
+
+1: Aufstellung: Crawler hinten (48 Zoll Indirect Mortar), Blight-haulers plus Lord of Virulence (Lone Operative, Reroll Wound 1) mittig, Drohnen vorn, Deathshroud in Deep-Strike-Reserve.
+2: Runde 1 bis 2: Blight-haulers (MOBILE, Bewegung 10) und Drohnen (FLY, Bewegung 10) nach vorn; Beschuss auf den Norn oder Psychophage. Mortars auf Pyrovores oder Guards (Indirect).
+3: Runde 2: Deathshroud-Blöcke landen mehr als 6 Zoll von Afflicted-Einheiten (Death Approaches), dann 7 Zoll-Charge auf deine Harvester oder Characters.
+4: Scoring: Unstoppable Force – 3 Siegpunkte für jeden seiner Züge mit einem Kill (leicht: Rippers, Biovore, Pyrovores), 4 Siegpunkte pro Nicht-Home-Objective, 3 Siegpunkte für neu genommene Objectives, 5 Siegpunkte am Ende für Central.
+
+Er gewinnt nicht, indem er alles tötet, sondern indem er jede Runde eine Einheit tötet (3 Siegpunkte) und am Ende Central hält (5 Siegpunkte), während deine Norns seinen Anti-Monster-Waffen zum Opfer fallen.
+
+Abschnitt 3: Major Threats.
+
+Myphitic Blight-haulers (2 Einheiten à 2 Modelle, MOBILE).
+
+Widerstand 9, 3 plus oder 5 plus Invul, 10 Lebenspunkte je Modell, Bewegung 10, SMOKE. Tank Hunters: plus 1 to hit und plus 1 to wound gegen MONSTER oder VEHICLE (nur Shooting Phase). Multi-melta 18 Zoll 2 Attacken Stärke 9 AP minus 4 D6 Melta 2 Lethal; Missile Krak 48 Zoll Stärke 9 AP minus 2 D6; Bile Spurt 12 Zoll 3 Attacken Lethal.
+Gegen Norn (Widerstand 11, Afflicted Widerstand 10): 8 Multi-melta-Schuss, dann etwa 7 Treffer, dann etwa 4 Wunden, dann 4 plus Invul, dann etwa 2 durch mal 5,5 (Melta in 9 Zoll) = etwa 11 bis 12, mit Feel No Pain 7 bis 8,; Krak, 4 Stück, dann etwa 3 bis 4, mit Feel No Pain 2 bis 3,. Gesamt etwa 15, mit Feel No Pain 10,.
+Contagion Engines: Assault auf Fernkampf (schießen nach Advance), Soulrot Flux (Mortal Wounds beim Fallback aus ihrem Nahkampf).
+Reaktion: Kill early. Sie sind die Monster-Killer. Widerstand 9 oder 3 plus oder 5 plus Invul, 20 Lebenspunkte pro Einheit: Hive-Tyrant-Block (Stärke 10 oder Stärke 11 gegen Widerstand 9, dann 3 plus, Guards Stärke 7, dann 5 plus) plus Psychophage (Bio-stimulus AP plus 1), dann etwa 15 bis 18, dann ein Hauler plus Schaden am zweiten. Norn-Nahkampf (Talons Stärke 10 gegen Widerstand 9, dann 3 plus, D3; Harpune Stärke 13, dann 3 plus, D6 plus 1), dann etwa 10.
+
+Bloat-drones mit Heavy Blight Launcher, 2 Stück.
+
+Widerstand 9, 3 plus oder 5 plus Invul, 10 Lebenspunkte, FLY, Bewegung 10. Heavy Blight Launcher 36 Zoll D6 plus 2 Blast Stärke 10 AP minus 2 D3 Lethal.
+Gegen Norn: je etwa 3 bis 4, mit Feel No Pain 2 bis 3,. Gegen Tyrant Guard (Afflicted Widerstand 7: Stärke 10, dann 3 plus): etwa 3 Guards je.
+Explosive Blight: Tötet sie eine Einheit, auf 5 plus (6 plus ohne Afflicted plus 1) werden alle deine Einheiten in 6 Zoll Afflicted.
+Reaktion: Mittel–hoch; Bring It Down (10 Lebenspunkte).
+
+Plagueburst Crawler, 2 Stück.
+
+Widerstand 10, 2 plus oder 5 plus Invul, 12 Lebenspunkte. Plagueburst Mortar 48 Zoll Indirect D6 plus 3 Blast Stärke 8 AP minus 1 D2 Lethal; Spore-laced Shock Waves: Ziel plus alle deine Einheiten in 3 Zoll würfeln, 6 plus (Afflicted plus 1), dann D3 Mortal Wounds. Entropy Cannons 2 mal Stärke 10 AP minus 3 D6 plus 1. Plaguespitter (2. Crawler) Torrent Anti-Infantry 2 plus.
+Gegen deine Guards oder Pyrovores hinter Gelände (Indirect: trifft auf 4 plus beziehungsweise 6 plus ohne Sichtkontakt eines anderen Modells).
+Reaktion: Hinter der Front; Zoanthropes (Stärke 12 gegen Widerstand 10, dann 3 plus) oder später Norn.
+
+Fleshmower-Drohnen, 2 Stück ( plus Plaguespitter-Drohne).
+
+Widerstand 9, 3 plus oder 5 plus Invul, 10 Lebenspunkte, FLY. Fleshmower 10 Attacken 3 plus Stärke 7 AP minus 1 D2 Lethal. Parasitic Woe-Reaper: nach dem Fight heilt D3. Hovering Death: Fallback plus Schießen plus Charge.
+Plaguespitter-Drohne: 2 mal Torrent 12 Zoll D6 Stärke 6 AP minus 1 Anti-Infantry 2 plus Ignores Cover, dann Pyrovores und Tyrant Guard werden auf 2 plus verwundet.
+Reaktion: Fleshmower-Drohnen binden deine Blöcke; nicht dein Hauptziel. Die Plaguespitter-Drohne ist ein Harvester-Killer (Pyrovores) – als Ziel für Zoans oder Emissary vormerken.
+
+Lord of Contagion plus Deathshroud, 3 Stück, Deathshroud, 3 Stück.
+
+Widerstand 7, 2 plus oder 4 plus Invul, 4 Lebenspunkte (Lord W6, Unholy Resilience: steht 1 mal mit 3 W auf). Manreaper Strike 4 Attacken Stärke 8 AP minus 2 D2 Lethal (Lord: plus Sustained, Lance), Plaguespurt 12 Zoll Torrent Anti-Infantry 4 plus. Silent Bodyguard: Lord Feel No Pain 4 plus. Icon of Despair: minus 1 Leadership in 6 Zoll.
+Death Approaches: Deep Strike mehr als 6 Zoll von Afflicted-Einheiten (sonst 8 Zoll).
+Gegen Tyrant Guard (Widerstand 7 Afflicted, Stärke 8, dann 3 plus): etwa 3 Guards pro Block. Gegen Psychophage: etwa 6.
+Reaktion: Wenn sie landen: Heroic Intervention oder Konter mit Tyrant-Block – sie sind 3 bis 4 Modelle, 12 bis 18 W, 2 plus oder 4 plus Invul, dann zäh, aber dein Hive-Tyrant-Block hat D3.
+
+Lord of Virulence (Warlord, Lone Operative bei Fahrzeugen).
+
+Tendrilous Emissions: In 3 Zoll eines Fahrzeugs Lone Operative; Fahrzeuge rerollen Wound-1er gegen Ziele, die er sieht. Blight Bombardment: Reroll Hit-1er gegen ein Ziel (Blast: alle Hits).
+Reaktion: Assassination (4 Siegpunkte) – schwer erreichbar (Lone Operative 12 Zoll). Psychophage-Torrent (12 Zoll) oder Nahkampf.
+
+Abschnitt 4: Threat Matrix.
+
+Blight-haulers, 4 Stück; Threat: Very High; Primary targets: Norns, Psychophages; How it threatens them: Tank Hunters, Melta; Recommended response: Zuerst im Nahkampf töten.
+Heavy Blight Launcher-Drohnen, 2 Stück; Threat: High; Primary targets: Guards, Norns; How it threatens them: 36 Zoll Blast Stärke 10 D3; Recommended response: Zoans, Nahkampf.
+Afflicted (System); Threat: High (System); Primary targets: alles; How it threatens them: minus 1 T, Seuche; Recommended response: Abstand >Contagion Range, Miasmic einkalkulieren.
+Plaguespitter-Drohne; Threat: High; Primary targets: Pyrovores, Guards; How it threatens them: Torrent Anti-Inf 2 plus; Recommended response: Früh (Zoans oder Emissary).
+Crawler, 2 Stück; Threat: Medium–High; Primary targets: Guards, Pyrovores (Indirect), Norns; How it threatens them: Mortar plus Spore-Mortal Wounds; Recommended response: Später.
+Deathshroud, 2 Stück; Threat: Medium–High; Primary targets: Harvester, Characters; How it threatens them: Deep Strike 6 Zoll plus Charge; Recommended response: Heroic Intervention plus Tyrant-Block.
+Fleshmower-Drohnen, 2 Stück; Threat: Medium; Primary targets: Guards, Pyrovores; How it threatens them: 10 Attacken Lethal, Selbstheilung; Recommended response: Binden oder ignorieren.
+Lord of Virulence; Threat: Medium (System); How it threatens them: Reroll-Buffs; Recommended response: Assassination.
+
+Abschnitt 5: Target Priority.
+
+Kill early.
+1: Blight-haulers (einer nach dem anderen – je Einheit 2 Modelle à 10 W).
+2: Plaguespitter-Drohne (Anti-Infantry 2 plus gegen Pyrovores oder Guards – nimmt dir das Harvester-Netz).
+
+Control, avoid.
+Crawler – Indirect Mortar ist lästig, aber ihr Direktschaden gegen Norns ist moderat. Deckung plus Streuung.
+Deathshroud – nicht jagen; wenn sie landen, kontern.
+
+Ignore.
+Fleshmower-Drohnen, bis sie in deinen Blöcken stehen. Sie heilen sich selbst; lieber die gefährlichen Fahrzeuge töten.
+
+Abschnitt 6: Deployment Analysis.
+
+Wahrscheinlich: Crawler hinten mit Sicht auf die Mitte, Blight-haulers plus Lord of Virulence in Mittellage, Drohnen breit vorn, beide Deathshroud-Blöcke in Deep-Strike-Reserve, Tallyman hinten.
+
+Castle oder spread? Walze über die Mitte: er will Central (5 Siegpunkte am Ende) und Kills.
+
+Kernfrage: Kann er einen Norn plus Support in einem Zyklus töten? Ja (Haulers plus Heavy Blight Launcher plus Crawler etwa 25 bis 30 an einem offenen Norn). Beide Norns: nein.
+
+Deine Aufstellung (Empfehlung: Standard-Split hinter obscuring Zonen, Overload-Option offen):
+Norn-Sichtbarkeit in diesem Matchup (entscheidend): Ein Norn, der ein Objective hält, ist immer sichtbar – seine Base steht in der Objective-Geländezone (deren Obscuring zählt für ihn nicht), er überragt die Ruinen, Monster sind nie hidden. Seine Fernwaffen (Heavy Blight Launcher 36 Zoll, Krak 48 Zoll, Entropy 36 Zoll) bringen etwa 12, mit Feel No Pain 8, an einen sichtbaren Norn; mit den Haulers in 18 Zoll etwa 25, mit Feel No Pain 17,. Daraus folgt: Ein Norn auf einem Objective ist nur dort vertretbar, wo die Haulers ihn im nächsten Zug nicht in 18 Zoll bekommen (Haulers Bewegung 10 plus 18 Zoll = etwa 28 Zoll). Verdeckt ist ein Norn nur hinter (nicht in) einer obscuring Zone – dort punktet er nicht.
+Norns zuletzt, hinter obscuring Zonen; Assimilator (4 plus Invul) hinter einer Zone nahe Central (Immovable Object zahlt 3 Siegpunkte pro Runde für Central!) – er betritt Central erst, wenn er dort nicht mehr von den Haulers erreicht wird oder nachdem er sie im Nahkampf gebunden oder getötet hat.
+Emissary auf deine Expansion, sofern diese mehr als 28 Zoll von den Haulers liegt; sonst hinter eine Zone daneben.
+Objectives, auf denen kein Norn stehen kann: Pyrovores (INFANTRY, dann hidden in der Objective-Zone, nur in 15 Zoll sichtbar, solange sie in diesem oder dem vorigen Zug nicht geschossen haben – die Plaguespitter-Torrents mit 12 Zoll brauchen Sicht, erreichen sie also nur aus nächster Nähe). In deiner Command Phase Tyrannoformed (1 Kommandopunkt, Pyrovores sind Harvester), dann das Objective bleibt dein. Immovable Object wertet am Ende deiner Command Phase – ein Tyrannoformed-Objective zählt auch ohne Anwesenheit.
+Hive-Tyrant-Block plus Psychophage gegenüber den Blight-haulers.
+Swarmlord zentral: Malign Presence verteuert Blighted Land, Relentless Grind, Drawn to Despair, Font of Filth, Fresh Vectors, Bloodrust Deluge, Eyestinger Storm, Stinking Mire – sein ganzes Stratagem-Paket läuft über Fahrzeuge in deiner Nähe.
+Pyrovores oder Biovore auseinander (Spore-laced Shock Waves treffen Einheiten in 3 Zoll des Ziels), aber in Synapse (Afflicted plus Scabrous Soulrot senkt Leadership).
+Zoanthropes – Reserve. Seine Crawler stehen hinten nahe Kanten; Runde 2 an der Kante auf einen Crawler oder Heavy Blight Launcher-Drohne (Stärke 12 gegen Widerstand 10, dann 3 plus, gegen Widerstand 9, dann 3 plus).
+Rippers – Reserve. Später auf ein Objective mit seinen Drohnen (O-C 3, dann 1 bis 2 halbiert).
+Miasmic Bombardment beachten: Einheiten mehr als 12 Zoll von allen seinen Modellen können zu Rundenbeginn afflicted werden (2 Stück). Deine hinteren Einheiten (Biovore, Zoans auf dem Tisch) sind typische Ziele – egal, sie sind weit weg.
+
+Welchen Fehler er sich wünscht: Einen Norn offen auf Central in Runde 1 bis 2, wo 4 Haulers ihn in 18 Zoll Melta haben.
+
+Er walzt mit allem über Central, dann Overload Central NICHT frontal. Norns 6 bis 10 Zoll hinter Central, hinter obscuring Zonen, Tyrant-Blöcke als Charge-Drohung. Er betritt Central, dann du chargst mit allem (Nahkampf ist deine Stärke Tank Hunters gilt nur im Shooting).
+Er spreizt Drohnen auf die Flanken, dann Expansions verteidigen, Haulers in der Mitte zerschlagen.
+Deathshroud in Reserve, dann Ab Runde 2 keine Harvester oder Characters allein; 6 Zoll-Netz (Death Approaches: 6 Zoll von Afflicted!).
+
+Abschnitt 7: Movement and Positioning.
+
+Seine Mobilität: Haulers Bewegung 10 plus MOBILE (durch Dense), Drohnen Bewegung 10 FLY, Crawler Bewegung 10. Relentless Grind (1 Kommandopunkt): Fahrzeuge durch Gelände.
+Contagion Range (Likely: 3 Zoll Runde 1, 6 Zoll Runde 2, 9 Zoll Runde 3 plus): Alles in diesem Radius um irgendein Death-Guard-Modell ist Afflicted. Ab Runde 3 sind praktisch alle deine Nahkampfeinheiten afflicted.
+Death Approaches: Deathshroud landen 6 Zoll von Afflicted-Einheiten, dann 6 Zoll-Charge.
+Safe: Hinter obscuring Geländezonen (nicht auf einem Objective – dort ist ein Norn immer sichtbar), außerhalb 28 Zoll der Haulers (Bewegung plus Melta).
+Dangerous: 18 Zoll-Radius der Haulers (Melta), offene Lanes der Heavy Blight Launcher-Drohnen oder Crawler.
+Conditional: Central – solange er es betreten muss, um zu scoren, ist Central deine Nahkampfzone.
+Stinking Mire (1 Kommandopunkt): minus 1 auf einen deiner Charge-Würfe (Einheit in 12 Zoll eines Fahrzeugs). Malign Presence macht es 2 Kommandopunkte.
+
+Abschnitt 8: Charge, Fight Phase Analysis.
+
+Dein Charge auf einen Blight-hauler-Trupp (Runde 2):
+Shooting: Psychophage-Torrent (Bio-stimulus: plus 1 AP), Assimilator-Harpune, dann Harpooned ( plus 2 Charge) Tanglestrike Rounds (1 Kommandopunkt) auf den anderen Hauler-Trupp (minus 2 Zoll Move).
+Charge: Hive-Tyrant-Block plus Assimilator. Crushing Impact (1 Kommandopunkt, Norn Widerstand 11, dann W6, 11 Stück: etwa 3,7 Mortal Wounds).
+Fight:
+Hive Tyrant 6 Attacken Stärke 11 AP minus 3 (Bio) gegen Widerstand 9, dann 3 plus twin-linked, dann etwa 4,7 Wunden, dann 3 plus Save AP minus 3, dann 5 plus Invul, dann etwa 3 mal D3 = etwa 6.
+Talons 4 Attacken Stärke 9, dann 4 plus, dann etwa 2.
+6 Guards 30 Attacken Stärke 7 AP minus 2 gegen Widerstand 9, dann 5 plus, dann etwa 6,7, dann 5 plus oder 5 plus Invul, dann etwa 4,5.
+Assimilator Harpune (extra) 4 Attacken Stärke 13 AP minus 3 D6 plus 1, dann etwa 2,2 Wunden, dann etwa 1,5 mal 4,5 = etwa 7; Talons 6 Attacken Stärke 10 D3, dann etwa 5, dann etwa 25 Schaden: ein Hauler-Trupp (2 mal 10 W) tot. Parasitic aktiv (Psychophage oder Assimilator in 6 Zoll).
+Achtung: Soulrot Flux (1 Kommandopunkt) – falls du später zurückfällst: Mortal Wounds.
+
+Deathshroud landen und chargen deinen Psychophage:
+1. Ende seiner Movement Phase (nach Landung): Overwatch (1 Kommandopunkt) mit Pyrovores oder Psychophage: Torrent gegen Widerstand 7 2 plus, dann wenig. Nur wenn Kommandopunkte übrig.
+2. Charge 6 bis 7 Zoll (Death Approaches). Deathshroud Fights First (Charge).
+3. Heroic Intervention mit Tyrant-Block (Leap to Defend).
+4. Ablative Carapace (2 Kommandopunkte) auf den Psychophage NACH seiner Zielwahl im Fight (Feel No Pain 5 plus, auf eigenem Objective 4 plus).
+5. Konter: Hive-Tyrant-Block etwa 4 Terminatoren-W... gegen 2 plus oder 4 plus Invul sind sie zäh, dann zwei Aktivierungen.
+
+Nicht chargen: Fleshmower-Drohnen ohne Kill-Absicht (heilen D3 nach jedem Kampf, Hovering Death: Fallback plus Schießen plus Charge).
+
+Abschnitt 9: Shooting Analysis.
+
+Multi-melta, 8 Stück (Tank Hunters); Reichweite: 18 Zoll; Gegen Norn (Afflicted Widerstand 10): etwa 11 bis 12, mit Feel No Pain 7 bis 8, in 9 Zoll; Gegen Tyrant Guard (Widerstand 7): etwa 4 Guards.
+Krak, 4 Stück (Tank Hunters); Reichweite: 48 Zoll; Gegen Norn (Afflicted Widerstand 10): etwa 3 bis 4, mit Feel No Pain 2 bis 3,; Gegen Tyrant Guard (Widerstand 7): etwa 2 Guards.
+Heavy Blight Launcher, 2 Stück; Reichweite: 36 Zoll; Gegen Norn (Afflicted Widerstand 10): etwa 6 bis 7, mit Feel No Pain 4 bis 5,; Gegen Tyrant Guard (Widerstand 7): etwa 5 bis 6 Guards.
+Entropy Cannons, 2 Stück; Reichweite: 36 Zoll; Gegen Norn (Afflicted Widerstand 10): etwa 2, mit Feel No Pain 1,3,; Gegen Tyrant Guard (Widerstand 7): etwa 1 Guard.
+Plagueburst Mortars, 2 Stück (Indirect); Reichweite: 48 Zoll; Gegen Norn (Afflicted Widerstand 10): etwa 1 bis 2, mit Feel No Pain 0,7 bis 1,3, plus Spore-Mortal Wounds; Gegen Tyrant Guard (Widerstand 7): etwa 2 Guards plus Mortal Wounds.
+Plaguespitters (Drohne, 2 Stück, Crawler, 2 Stück); Reichweite: 12 Zoll; Gegen Norn (Afflicted Widerstand 10): vernachlässigbar; Gegen Tyrant Guard (Widerstand 7): Anti-Inf 2 plus: etwa 4 bis 6 W je Torrent.
+
+dann Gesamt gegen einen offenen Norn: etwa 25, mit Feel No Pain 17, mit Lord-of-Virulence-Rerolls mehr.
+
+Seine Zielpriorität: Norn (Tank Hunters) > Psychophage > Pyrovores (Kill-Siegpunkte) > Guards.
+
+Scheinbar gefährlich, aber ineffizient: Mortars gegen deine Monster (Stärke 8 gegen Widerstand 10).
+
+Abschnitt 10: Gotchas and Traps.
+
+1: Afflicted überall – minus 1 T bedeutet: Norn Widerstand 10 (Stärke 10-Waffen verwunden auf 4 plus statt 5 plus), Guards Widerstand 7 (Stärke 7 auf 4 plus, Stärke 8 auf 3 plus), Pyrovores Widerstand 5. Deine T-basierten Rechnungen stimmen gegen ihn nicht mehr.
+2: Seuchenwahl vor dem Spiel – frag danach (öffentliche Information). Skullsquirm: dein Nahkampf minus 1 to hit, dann Guards 4 plus, Tyrants 3 plus. Rattlejoint: dein Save minus 1, dann Norn 3 plus. Soulrot: O-C minus 1 (Norn im Objective-Modus 14, Guards 1 bleibt min. 1).
+3: Death Approaches – Deathshroud 6 Zoll statt 8 Zoll von Afflicted-Einheiten.
+4: Eyestinger Storm (1 Kommandopunkt, deine Command Phase) – Afflicted-Einheiten auf einem Objective, das ein Fahrzeug sieht, testen Battle-shock, dann O-C – genau vor deiner Primary-Wertung (Immovable Object wertet am Ende deiner Command Phase!). Verhindern: In Synapse bleiben (3W6), Swarmlord-Aura macht es 2 Kommandopunkte.
+5: Blighted Land (2 Kommandopunkte) – ein Geländestück: alle deine Einheiten in 3 Zoll sind Afflicted bis zu seinem nächsten Zug.
+6: Spore-laced Shock Waves – Mortar-Ziel plus alle deine Einheiten in 3 Zoll: 6 plus (Afflicted 5 plus), dann D3 Mortal Wounds. Nicht clustern.
+7: Parasitic Woe-Reaper – Fleshmower-Drohnen heilen nach jedem Fight D3.
+8: Unholy Resilience (Lord of Contagion) – steht 1 mal mit 3 W wieder auf (2 plus).
+9: Tank Hunters gilt nur in SEINER Shooting Phase – im Nahkampf sind die Haulers schwach (Gnashing Maw 4 Attacken Stärke 6). Nahkampf ist dein Terrain.
+
+Abschnitt 11: Opponent Decision Tree.
+
+Wählt er eine Seuche, die O-C senkt (Soulrot)?
+JA, dann Rippers plus Norn-Objective-Modus rechnen mit O-C 14; Eyestinger Storm ist noch gefährlicher.
+NEIN, dann normal.
+Wo stehen die Blight-haulers?
+Zusammen in der Mitte, dann Norns außerhalb 18 Zoll, Hive-Tyrant-Block plus Assimilator als Charge-Drohung;
+sobald sie sich auf Central stellen: Charge.
+Auf den Flanken, dann Overload die erreichbarere Flanke.
+Deathshroud in Reserve?
+JA, dann ab Runde 2 Harvester oder Characters nie allein; 6 Zoll-Netz.
+
+Abschnitt 12: Player's Game Plan.
+
+Default plan.
+
+1: Runde 1: Home plus eigene Expansion plus Central-Rand, mit Pyrovores (hidden), Biovore wo ein Norn in Hauler-Reichweite stünde. Norns hinter obscuring Zonen. Zoans plus Rippers in Reserve. Runde 2 Command Phase: Tyrannoformed auf gehaltene Objectives.
+2: Runde 2: Er kommt auf Central, dann Nahkampf-Konter auf die Blight-haulers (Hive-Tyrant-Block plus Assimilator). Zoans auf Heavy Blight Launcher-Drohne oder Crawler. Central per Norn übernehmen – der Norn steht dann dort sichtbar, aber die Haulers sind gebunden oder tot.
+3: Runde 3 bis 4: Immovable Object: 5 Siegpunkte pro Nicht-Home-Objective plus 3 für Central. Halte Central plus eigene Expansion (13 Siegpunkte pro Runde), gegebenenfalls seine Expansion.
+4: Runde 5: Central halten (verhindert seine 5 Siegpunkte Endwertung).
+
+Adjustment triggers.
+
+Haulers in 18 Zoll deines Norns, dann Norn vom Objective runter hinter eine obscuring Zone (vorher Tyrannoformed, falls ein Harvester dort steht) oder, wenn er stehen bleiben muss: Ablative Carapace (nur Assimilator, 2 Kommandopunkte: Feel No Pain 4 plus auf eigenem Objective).
+Eyestinger Storm möglich (Fahrzeug sieht dein Objective, deine Einheit dort Afflicted), dann Norn im Objective-Modus in Synapse (3W6 Leadership 7 plus) – praktisch sicher.
+Deathshroud landen neben Home, dann Swarmlord-Block zurück, Heroic Intervention.
+Er hat nur noch Drohnen, dann Norns dürfen nach vorn; seine Expansion nehmen.
+
+Abschnitt 13: Primary Scoring Plan.
+
+Paarung (Herald): Du, dann Immovable Object; er (Purge the Foe), dann Unstoppable Force.
+
+Du: 3 Siegpunkte pro eigenem Zug für mindestens 1 Central; Runde 2 bis 4 (Command Phase) 5 Siegpunkte pro Nicht-Home-Objective; Runde 5 Zugende dasselbe.
+Central plus eigene Expansion = 10 plus 3 = 13 Siegpunkte pro Runde. Plus seine Expansion = 18.
+Er: 3 Siegpunkte pro eigenem Zug mit mindestens 1 Kill; 4 Siegpunkte pro Nicht-Home-Objective; 3 Siegpunkte für neues Objective; 5 Siegpunkte am Spielende für Central.
+Kill-Vermeidung: Er bekommt 3 Siegpunkte pro Zug, sobald irgendeine deiner Einheiten stirbt. Rippers, Biovore, einzelne Pyrovore-Trupps sind leichte Kills. Keine billigen Einheiten ungeschützt – jeder Zug ohne Kill kostet ihn 3 Siegpunkte.
+Winning the fight gegen mission: Wenn du Central ab Runde 2 hältst und seine Haulers bis Runde 3 tot sind, gewinnst du die Mission deutlich, auch wenn er in jedem Zug eine kleine Einheit tötet.
+
+Secondaries: Bring It Down (Fixed) – 4 Blight-haulers (10 Lebenspunkte), 5 Bloat-drones (10 Lebenspunkte), 2 Crawler (12 Lebenspunkte) = 11 Ziele. Exzellent. Zweite: No Prisoners oder Assassination (Lord of Contagion, Lord of Virulence, Tallyman).
+
+Abschnitt 14: First Turn, Second Turn Considerations.
+
+Wenn du zuerst spielst.
+
+Nicht in die 18 Zoll-Melta-Zone. Stellung beziehen; Biovore auf Drohnen.
+Contagion Range ist in Runde 1 klein (Likely 3 Zoll) – deine Einheiten sind nur über Miasmic Bombardment afflicted.
+
+Wenn er zuerst spielt.
+
+Er rückt vor und schießt; Mortars Indirect auf deine Infanterie.
+Ablative Carapace (2 Kommandopunkte) auf den Assimilator oder Psychophage, wenn Haulers zielen.
+Dein Zug 1: Konter auf alles, was in 20 Zoll deines Hive-Tyrant-Blocks steht.
+
+Abschnitt 15: Practical Round Checklist.
+
+BEFORE DEPLOYMENT.
+Seuche erfragen (Skullsquirm, Rattlejoint, Soulrot).
+Immovable Object: Central = 3 Siegpunkte plus 5 Siegpunkte pro Runde.
+Bring It Down fixed (11 Ziele).
+DEPLOYMENT.
+Norns hinter obscuring Zonen (nicht auf Objectives in 28 Zoll der Haulers), Assimilator Central-nah.
+Pyrovores hidden auf Objectives ohne Norn, Tyrannoformed Runde 2.
+Keine billigen Einheiten ungeschützt (jeder Kill = 3 Siegpunkte für ihn).
+Swarmlord zentral.
+OPPONENT TURN.
+18 Zoll-Melta-Radius der Haulers messen.
+Deathshroud-Landung: 6 Zoll von Afflicted.
+Eyestinger Storm in deiner Command Phase einkalkulieren.
+MY TURN.
+Blight-haulers zuerst (Nahkampf – Tank Hunters gilt dort nicht).
+Plaguespitter-Drohne (Anti-Inf 2 plus) mit Zoans oder Emissary.
+Central halten.

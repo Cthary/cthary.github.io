@@ -1,0 +1,240 @@
+Gegneranalyse: Jens Hömmerich (slay_the_warlord) – Necrons.
+
+Liste in Kürze (1995 Punkte, Awakened Dynasty 3 Daemon Prince).
+
+Lokhust Lord (Warlord, Resurrection Orb) plus 6 Lokhust Destroyers; Punkte: 255; Rolle gegen dich: 18 Schuss Stärke 5 AP minus 2 D2 Lethal, Crits auf 5 plus – Hauptfernkampf.
+Technomancer plus 6 Canoptek Wraiths; Punkte: 300; Rolle gegen dich: Objective-Brecher.
+Technomancer plus 6 Canoptek Wraiths; Punkte: 330; Rolle gegen dich: Objective-Brecher.
+C'tan Shard of the Nightbringer; Punkte: 360; Rolle gegen dich: Nahkampf-Monster.
+C'tan Shard of the Void Dragon; Punkte: 345; Rolle gegen dich: Nahkampf-Monster plus Voltaic Storm.
+Skorpekh Lord, 2 Stück (allein); Punkte: 190; Rolle gegen dich: Nahkampf-Characters, Crimson Harvest.
+Ophydian Destroyers, 3 Stück ( mal 2); Punkte: 160; Rolle gegen dich: Tunnelling Horrors: jede Runde Reserve, dann neu einsetzen, Dev Wounds.
+Flayed Ones, 5 Stück; Punkte: 55; Rolle gegen dich: Infiltrators, Stealth.
+
+Force Disposition: Take and Hold.
+
+Abschnitt 1: Executive Summary.
+
+Was die Armee will: Eine hochmobile Nahkampf-Necron-Armee: zwei C'tan, zwei Wraith-Blöcke (Bewegung 10 FLY) und zwei Ophydian-Trupps, die jede Runde neu aus der Reserve kommen. Kaum Battleline, wenig statisches O-C – er will Objectives durch Töten und Überrennen nehmen.
+Wichtigste Bedrohung: Die C'tan (je etwa 9 bis 11, mit Feel No Pain 6 bis 7, an einem Norn) plus zwei Wraith-Blöcke – er kann in einer Runde eine komplette Front angreifen.
+Wichtigstes taktisches Problem: Es gibt kaum weiche Ziele, und seine Einheiten heilen. Deine Tyrant-Blöcke müssen gezielt die Einheiten zerstören, die nicht zäh sind.
+Was du vermeiden musst: Harvester ohne Deckung (Ophydians tauchen jede Runde mehr als 8 Zoll von dir auf und chargen 9 Zoll; Wraiths Bewegung 10 FLY).
+Strategischer Ansatz: Seine Armee ist klein und hat wenig O-C. Wraiths (O-C 13 je Block) und C'tan (O-C 4) sind seine Objective-Halter. Norns (O-C 15) plus Tyrant-Blöcke auf drei Objectives; seine Wraiths im Nahkampf zerschlagen, sobald sie kommen. Er hat nur zwei Einheiten, die Objectives ernsthaft halten können.
+
+Abschnitt 2: Opponent Game Plan.
+
+Reanimation Protocols: jede seiner Einheiten heilt am Ende seiner Command Phase D3 Wunden.
+(bei Mehrmodell-Einheiten kommen damit auch Modelle zurück).
+Awakened Dynasty: Einheit, die von einem NECRONS CHARACTER geführt wird, dann plus 1 to hit.
+(Wraiths mit Technomancer, Lokhusts mit Lord: ja; C'tan, Ophydians, Skorpekh Lords allein: nein).
+Protocol of the Undying Legions (1 Kommandopunkt): nach deinem Angriff sofort D3 (mit Character D3 plus 1) reanimieren.
+Protocol of the Hungry Void (1 Kommandopunkt): plus 1 S im Nahkampf, mit Character zusätzlich plus 1 AP.
+Protocol of the Conquering Tyrant (1 Kommandopunkt): Reroll Hit-1er auf halbe Reichweite (mit Character alle Hits).
+
+1: Aufstellung: Lokhust-Block mit Lanes, Wraiths an beiden Flanken, C'tan zentral, Flayed Ones infiltriert, Ophydians entweder aufgestellt oder in Reserve.
+2: Runde 1 bis 2: Wraiths und C'tan gehen nach vorn; Lokhust Destroyers schießen auf Pyrovores oder Guards oder Psychophages (Hard-wired: Reroll Hits gegen Ziele auf deinen kontrollierten Objectives).
+3: Jede Runde: Ophydians gehen am Ende deines Zuges per Tunnelling Horrors in Reserve und tauchen in seinem Zug erneut auf (Deep Strike mehr als 8 Zoll), dann 9 Zoll-Charge auf eine weiche Einheit.
+4: Scoring: Battlefield Dominance – er muss deine Objectives brechen, weil er selbst wenig hält. Home (Flayed Ones oder Lokhust) plus Central (C'tan oder Wraiths) plus eine Expansion.
+
+Er gewinnt nur, wenn er Objectives durch Töten räumt. Wenn deine Anker nach seinem Angriff noch stehen und zurückschlagen, hat er keine zweite Welle.
+
+Abschnitt 3: Major Threats.
+
+C'tan, 2 Stück (Nightbringer, Void Dragon).
+
+Beide: Widerstand 11, 3 plus oder 4 plus Invul, Feel No Pain 5 plus, 16 Lebenspunkte, Bewegung 10, FLY, Deep Strike, O-C 4. Necrodermis: minus 1 Damage auf jeden zugewiesenen Angriff.
+Nightbringer: Scythe Strike 6 Attacken 2 plus Stärke 14 AP minus 4 D6 plus 2 Dev Wounds; Sweep 14 Attacken Stärke 8 AP minus 2 D2; Gaze of Death 18 Zoll D3 Stärke 12 AP minus 3 D6 plus 3. Drain Life: Ende jeder Fight Phase – jede deiner Einheiten in 6 Zoll auf 4 plus, dann D3 Mortal Wounds. Gegen Norn im Nahkampf etwa 10, mit Feel No Pain 7,; gegen Tyrant Guard etwa 4 Guards.
+Void Dragon: Spear Strike 5 Attacken 2 plus Stärke 12 AP minus 4 D6 plus 2 (Anti-Vehicle – für dich irrelevant), Sweep 10 Attacken Stärke 8 AP minus 1 D2, Tail Blades (Extra Attacks) 6 Attacken Stärke 6 AP minus 1 D1; Voltaic Storm 18 Zoll D6 plus 3 Blast Stärke 7 AP minus 1 D2 Sustained Hits 2. Gegen Norn etwa 8 bis 9, mit Feel No Pain 5 bis 6, im Nahkampf; Voltaic Storm gegen Pyrovores oder Guards oder Zoans etwa 6 bis 8 W.
+Dein Schaden gegen einen C'tan ist schwach: der Hive-Tyrant-Block macht effektiv etwa 3 bis 5 (minus 1 Damage, 4 plus Invul, Feel No Pain 5 plus). Kontrollieren, nicht fokussieren.
+
+Canoptek-Wraith-Blöcke, 2 Stück.
+
+Je 6 Wraiths: Widerstand 6, 3 plus oder 4 plus Invul, 4 Lebenspunkte je (24 W), O-C 2 je, dann Block O-C 13 mit Technomancer. Technomancer: Feel No Pain 5 plus für den Block, heilt ein Modell in 6 Zoll um D3. Bewegung 10, FLY.
+Vicious Claws 4 Attacken Stärke 6 AP minus 1 D2, plus 1 to hit (Awakened Dynasty, Technomancer führt), dann 3 plus. Wraith Form: nach einem Normal Move über eine deiner Einheiten je Modell 4 plus, dann 1 Mortal Wounds.
+Gegen Pyrovores: ein Block tötet einen 3er-Trupp. Gegen Norn: etwa 6, mit Feel No Pain 4,.
+Reaktion: Hive-Tyrant-Block plus Psychophage: Guards Stärke 7 gegen Widerstand 6, dann 3 plus, etwa 30 Attacken, dann etwa 13 Wunden, dann 4 plus Invul, dann Feel No Pain 5 plus, dann etwa 4 W; Hive Tyrant etwa 7 W; zusammen etwa 13 bis 14 W = halber Block pro Aktivierung. Seine Objective-Halter und Harvester-Killer. Kill-Ziel Nr. 1.
+
+Lokhust Lord plus 6 Lokhust Destroyers.
+
+Widerstand 6, 3 plus (Lord 4 plus Invul, Feel No Pain 5 plus), 3 Lebenspunkte je, Bewegung 8 FLY. Gauss Cannon 24 Zoll 3 Attacken Stärke 5 AP minus 2 D2 Lethal; Lord: Crits auf 5 plus (, dann Lethal auf 5 plus); Awakened Dynasty plus 1 to hit, dann 2 plus. Hard-wired for Destruction: Reroll 1er gegen nächstes Ziel; Reroll alle Hits, wenn das Ziel auf einem Objective steht, das du kontrollierst.
+Gegen Norn: 18 Schuss, dann etwa 15 Treffer (etwa 6 Lethal auf 5 plus), dann plus etwa 1,5 Wunden (6 plus), dann etwa 7,5 Wunden, dann 2 plus oder 4 plus Invul AP minus 2, dann etwa 3,7 durch mal 2 = etwa 7,5, mit Feel No Pain 5,. Gegen Psychophage (Widerstand 9, dann 5 plus): etwa 9 Wunden, dann 3 plus AP minus 2, dann 5 plus, dann etwa 6 mal 2 = 12, dann Feel No Pain 5 plus, dann etwa 8 (fast tot). Gegen Tyrant Guard (Widerstand 8, dann 5 plus): etwa 3 Guards.
+Resurrection Orb (1 mal, Ende einer beliebigen Phase): D6 Reanimation.
+Reaktion: Kill early – 18 W bei Widerstand 6 oder 3 plus. Hive-Tyrant-Block löscht ihn in einer Aktivierung (Guards Stärke 7 gegen Widerstand 6, dann 3 plus). Zoans-Blast gegen 7 Modelle ( plus 1 Attacke).
+
+Ophydian Destroyers, 2 Stück (je 3).
+
+Widerstand 5, 4 plus, 3 Lebenspunkte, Bewegung 10, Deep Strike. 5 Attacken Stärke 4 AP minus 2 D2 ( plus 1 to hit nur, wenn Character führt – hier nicht), 1 mal Plasmacyte: Dev Wounds.
+Tunnelling Horrors: Am Ende deines Zuges (unengaged) in Reserve; im nächsten eigenen Zug Ingress (auch Runde 1). Er setzt sie jede Runde neu mehr als 8 Zoll von dir ein und chargt (9 Zoll).
+Gegen Pyrovores: etwa 5 W (ein Trupp halb tot). Gegen Rippers oder Biovore: tot.
+Reaktion: Sie sind eine Harvester-Bedrohung, keine Objective-Bedrohung (O-C 2 je, 6 gesamt). Jede Runde, in der sie auftauchen und chargen: Heroic Intervention mit einem Block, dann sie sterben (Widerstand 5, 4 plus, 3 Lebenspunkte).
+
+Skorpekh Lords, 2 Stück (allein).
+
+Widerstand 7, 3 plus oder 4 plus Invul, 7 Lebenspunkte, Bewegung 8. Hyperphase Harvester 4 Attacken 2 plus Stärke 10 AP minus 3 D3; Flensing Claw 8 Attacken Stärke 6 AP minus 1 D1. Crimson Harvest: nach Charge D3 oder D3 plus 3 Mortal Wounds. Keine Awakened-Dynasty-Boni (führen nichts).
+Gegen Norn: etwa 5 bis 6, mit Feel No Pain 3 bis 4, plus Mortal Wounds. Assassination 4 Siegpunkte je.
+Reaktion: Guter Assassination-Kill für den Swarmlord (8 Attacken Stärke 10 gegen Widerstand 7, dann verwundet auf 3 plus, twin-linked).
+
+Flayed Ones, 5 Stück.
+
+Infiltrators, Stealth, 4 Attacken Sustained twin-linked. Objective-Snatcher.
+
+Abschnitt 4: Threat Matrix.
+
+Nightbringer; Threat: Very High; Primary targets: Norns, Guards; How it threatens them: Nahkampf plus Drain Life; Recommended response: O-C-Kontrolle.
+Void Dragon; Threat: High; Primary targets: Norns, Pyrovores; How it threatens them: Nahkampf plus Voltaic Storm; Recommended response: O-C-Kontrolle.
+Wraith-Blöcke, 2 Stück; Threat: High (Scoring); Primary targets: Objectives, Pyrovores; How it threatens them: O-C 13, Bewegung 10 FLY, zäh; Recommended response: Hive-Tyrant-Block plus Psychophage.
+Lokhust-Block; Threat: High; Primary targets: Psychophages, Pyrovores, Norns; How it threatens them: 18 Schuss Lethal 5 plus; Recommended response: Früh im Nahkampf.
+Ophydians, 2 Stück; Threat: Medium; Primary targets: Rippers, Biovore, Pyrovores; How it threatens them: Jede Runde neu per Deep Strike; Recommended response: Heroic Intervention, dann töten.
+Skorpekh Lords, 2 Stück; Threat: Medium; Primary targets: Guards, Harvester; How it threatens them: Crimson Harvest; Recommended response: Assassination-Kill.
+Flayed Ones; Threat: Low; Primary targets: Leere Objectives; How it threatens them: Infiltrate; Recommended response: Torrent.
+
+Abschnitt 5: Target Priority.
+
+Kill early: Lokhust-Block (einziger Fernkampf, trifft Harvester hart) und Wraith-Blöcke (einziges ernsthaftes O-C).
+
+Control, avoid: C'tan – mit Norns absorbieren; nur Damaged finishen.
+
+Ignore: Flayed Ones (außer auf deinem Objective). Ophydians jagen – nein; wenn sie chargen – töten.
+
+Abschnitt 6: Deployment Analysis.
+
+Wahrscheinlich: C'tan zentral, Wraiths je Flanke, Lokhust-Block mit Sicht auf die Mitte, Skorpekh Lords bei den C'tan oder Wraiths, Flayed Ones infiltriert, Ophydians in Reserve oder auf dem Tisch (nach Runde 1 ohnehin im Reserve-Zyklus).
+
+Kernfrage: Kann er einen Norn plus Support töten? Ja – beide C'tan plus Wraith-Block plus Lokhust-Feuer auf einen Norn in Runde 2 (etwa 30, mit Feel No Pain 20,). Beide Norns: nein.
+
+Deine Aufstellung:
+Norns auf Central (Assimilator) und eigener Expansion (Emissary), Objective-Modus, jeder mit Tyrant-Block in 12 Zoll (Heroic Intervention).
+Norn-Sichtbarkeit in diesem Matchup: Ein Norn, der ein Objective hält, ist immer sichtbar (Base in der Objective-Geländezone, dann deren Obscuring zählt nicht; er überragt die Ruinen; Monster sind nie hidden). Hier ist das vertretbar: Sein einziger nennenswerter Fernkampf gegen Monster ist der Lokhust-Block (etwa 7,5, mit Feel No Pain 5, an einem Norn, mit Hard-wired-Reroll auf deinen Objectives etwas mehr) plus Gaze of Death (etwa 4, mit Feel No Pain 3,). Die eigentliche Gefahr sind C'tan und Wraiths im Nahkampf – dagegen hilft Verstecken nicht, sondern Heroic Intervention-Deckung, O-C 15 und Heilung.
+Swarmlord zentral (verteuert Undying Legions, Hungry Void, Conquering Tyrant, Sudden Storm).
+Harvester-Schutz: Pyrovores nicht allein; Rippers in Reserve; Biovore mit Psychophage auf Home. Ophydians landen mehr als 8 Zoll – ein 8 Zoll-Netz um Home und Harvester reduziert ihre Landezonen.
+Zoanthropes: Auf den Tisch (keine Deathmarks, kaum schwere Kantenziele) in einer Ruine, D3-Blast auf Wraiths oder Lokhust-Block (7 Modelle, dann plus 1 Blast-Attacke). Abstand zu Voltaic Storm (18 Zoll).
+Hive-Tyrant-Block auf die Seite des Lokhust-Blocks.
+
+Welchen Fehler er sich wünscht: Deine Harvester ungeschützt am Rand (Ophydians, Wraiths), einen Norn allein vorne (beide C'tan).
+
+Wraiths beide auf eine Seite plus C'tan dort, dann Overload-Test: Kann dein Block (Norn plus Hive-Tyrant-Block plus Psychophage plus Pyrovores) den ersten Schlag überleben? Ja (er macht etwa 30 an EINER Einheit, nicht an allen), dann Overload; nach seinem Schlag zerschlägst du die Wraiths.
+Gleichmäßig verteilt, dann Standard-Split; Kills an der Wraith-Front, Norns halten.
+
+Abschnitt 7: Movement and Positioning.
+
+Wraiths: Bewegung 10 FLY, dann Charge-Bedrohung etwa 17 Zoll.
+C'tan: Bewegung 10 FLY, dann etwa 17 Zoll.
+Ophydians: Deep Strike jede Runde mehr als 8 Zoll, dann 9 Zoll-Charge. Jede Lücke mehr als 8 Zoll in deinem Netz ist eine Landezone.
+Lokhust Destroyers: Bewegung 8 FLY plus 24 Zoll, dann etwa 32 Zoll Bedrohung.
+Safe: Mitte deines Blocks; außerhalb 24 Zoll plus 8 Zoll der Lokhusts beziehungsweise hinter einer obscuring Geländezone (für Norns, die gerade nicht halten müssen). Pyrovores oder Zoans in Geländezonen (hidden, solange sie nicht geschossen haben).
+Dangerous: Isolierte Positionen an den Kanten (Ophydians), 6 Zoll um den Nightbringer am Ende der Fight Phase.
+Hard-wired-Falle: Seine Destroyers rerollen alle Hits gegen Einheiten auf Objectives, die du kontrollierst – deine Objective-Halter werden bevorzugt beschossen. Der Norn im Objective-Modus hat dafür Feel No Pain 5 plus – das gleicht aus.
+
+Abschnitt 8: Charge, Fight Phase Analysis.
+
+Ophydians landen und chargen Pyrovores (typisch jede Runde):
+1. Ende seiner Movement Phase: Overwatch (1 Kommandopunkt) mit den Pyrovores: D6 plus 1 Torrent Stärke 6 AP minus 1 gegen Widerstand 5 (3 plus), dann etwa 3,3 Wunden, dann 4 plus Save, dann etwa 2 W, dann ein Ophydian tot. Lohnt sich, wenn Kommandopunkte da.
+2. Charge 9 Zoll (etwa 28 Prozent ohne Rerolls). Scheitert oft!
+3. Heroic Intervention (1 Kommandopunkt) mit einem Tyrant-Block, dann Ophydians tot, Parasitic-Kill möglich.
+
+Wraith-Block chargt deinen Norn:
+1. Heroic Intervention mit dem Tyrant-Block in 12 Zoll (Leap to Defend).
+2. Wraiths zuerst (etwa 6, mit Feel No Pain 4, am Norn). Dann Tyrant-Block (etwa 13 an den Wraiths).
+3. Norn schlägt (Talons 6 Attacken Stärke 10 gegen Widerstand 6, dann verwundet auf 3 plus): etwa 6 W.
+4. Wraith-Block fast tot; Undying Legions (1 Kommandopunkt, 2 Kommandopunkte mit Swarmlord in 12 Zoll) holt D3 plus 1 zurück.
+5. Deine Runde: Rest töten.
+
+C'tan chargt deinen Norn (Objective-Modus):
+1. Kein Overwatch (lohnt nicht).
+2. C'tan Fights First (Charge).
+3. Heroic Intervention? Nur Leap to Defend mit einem Tyrant-Block, wenn der Block am Ende der Fight Phase NICHT in 6 Zoll um den Nightbringer steht (Drain Life) – praktisch immer doch., dann Gegen den Nightbringer meist KEINE Heroic Intervention; gegen den Void Dragon (kein Drain Life) ist Heroic Intervention mit einem Tyrant-Block vertretbar.
+4. C'tan: etwa 9 bis 10, mit Feel No Pain 6 bis 7, am Norn. Norn überlebt (16 W, Feel No Pain 5 plus im Objective-Modus).
+5. Norn schlägt zurück: gegen C'tan etwa 2 bis 3 (Necrodermis plus Feel No Pain). Lesser Prey ( plus 2 S) erhöht auf etwa 4.
+6. Nightbringer: Drain Life 4 plus, dann D3 Mortal Wounds am Norn (Emissary Feel No Pain 4 plus gegen Mortal Wounds; Assimilator: Catalytic Biofortification 1 Kommandopunkt).
+7. Deine Command Phase: Norn heilen (Harvester in Range, D3 plus 1). O-C 15 hält das Objective gegen O-C 4.
+
+Dein bester Charge: Hive-Tyrant-Block in den Lokhust-Block (Widerstand 6, 3 plus, 3 Lebenspunkte; etwa 20 W an Guards plus Tyrant). Parasitic-Kill.
+
+Abschnitt 9: Shooting Analysis.
+
+Lokhust Gauss Cannons (18 Attacken, 2 plus, Lethal 5 plus); Reichweite: 24 Zoll; Wirkung: Norn etwa 7,5, mit Feel No Pain 5,; Psychophage etwa 8; Guards etwa 3 Modelle.
+Voltaic Storm; Reichweite: 18 Zoll; Wirkung: Pyrovores oder Guards oder Zoans etwa 6 bis 8 W.
+Nightbringer Gaze; Reichweite: 18 Zoll; Wirkung: Norn etwa 4, mit Feel No Pain 3.
+Particle Casters (Wraiths, 18 Attacken Stärke 5 Devastating Wounds, Pistol); Reichweite: 12 Zoll; Wirkung: Pyrovores etwa 2 W.
+Skorpekh Lord Enmitic Annihilator (4 Attacken in 9 Zoll); Reichweite: 18 Zoll; Wirkung: gering.
+
+dann Maximum gegen einen Norn aus Beschuss: etwa 12 bis 15, mit Feel No Pain 8 bis 10,. Der Rest kommt im Nahkampf.
+
+Abschnitt 10: Gotchas and Traps.
+
+1: Tunnelling Horrors – Ophydians verschwinden am Ende deines Zuges und landen in seinem Zug (auch Runde 1) mehr als 8 Zoll. Verhindern: 8 Zoll-Netz, Harvester in Gruppen.
+2: Hard-wired for Destruction – Reroll aller Hits auf Einheiten auf deinen kontrollierten Objectives.
+3: Resurrection Orb (Lokhust Lord) – D6 Reanimation 1 mal am Ende einer Phase. Block ganz töten.
+4: Drain Life, Voltaic Storm – verteilte Mortals und Blast-Schaden gegen Cluster.
+5: Protocol of the Eternal Revenant – betrifft hier nur INFANTRY-Characters: Technomancer, Skorpekh Lords. (Lokhust Lord ist MOUNTED, nicht INFANTRY, dann nicht betroffen.).
+6: Wraith Form – Wraiths fliegen über deine Pyrovore-Screens und verursachen Mortal Wounds (4 plus je Modell).
+7: Wenig Battleline, wenig O-C – das ist seine Schwäche: Wenn beide Wraith-Blöcke fallen, kann er Objectives nur noch mit C'tan (O-C 4) und Resten halten.
+
+Abschnitt 11: Opponent Decision Tree.
+
+Greift er in Runde 1 oder 2 mit allem an?
+JA, dann Absorbieren (Norns im Objective-Modus, Heroic Intervention-Konter), in deiner Runde alles Gebundene töten.
+Er hat keine zweite Welle außer Ophydians.
+NEIN (wartet), dann Du nimmst Central plus Expansion plus Home; Zoans oder Biovore schießen, er muss kommen.
+Wraiths am Objective?
+JA, dann Hive-Tyrant-Block plus Psychophage darauf (Bio-stimulus zuerst).
+NEIN, dann Lokhust-Block zuerst.
+
+Abschnitt 12: Player's Game Plan.
+
+Default plan.
+
+1: Runde 1: Home plus Central plus eigene Expansion besetzen. Harvester in Gruppen. Zoans in Ruine.
+2: Runde 2: Er greift an, dann absorbieren, Heroic Intervention. In deinem Zug: Wraith-Block und oder oder Lokhust-Block töten (Parasitic).
+3: Runde 3: Zweiten Wraith-Block. Shadow in the Warp in seiner Command Phase, wenn Wraiths oder C'tan auf Objectives stehen (Wraiths Leadership 8 plus, dann mit Technomancer 6 plus).
+4: Runde 4 bis 5: Objectives halten; beschädigte C'tan für Bring It Down oder Assassination.
+
+Adjustment triggers.
+
+Beide C'tan auf einem Norn, dann Norn hält (O-C 15, Feel No Pain 5 plus), anderer Norn plus Blöcke punkten oder töten Wraiths.
+Ophydians landen neben Home, dann Heroic Intervention mit dem nächsten Block; Home-Einheit nicht bewegen.
+Lokhust-Block bewegt sich in 20 Zoll deines Hive-Tyrant-Blocks, dann Charge.
+Er hat keine Wraiths mehr, dann Aggressiv seine Objectives nehmen (seine Expansion plus 5 Siegpunkte pro Runde).
+
+Abschnitt 13: Primary Scoring Plan.
+
+Paarung: Beide Take and Hold, dann Battlefield Dominance.
+
+Sein O-C ist niedrig: Wraith-Blöcke 13, C'tan 4, Lokhust-Block 12 plus 2, Ophydians 6, Flayed Ones 5, Skorpekh Lords 2 je.
+Deine O-C: Norn 15 im Objective-Modus. Ein Norn hält gegen jede einzelne seiner Einheiten.
+Ziel: Home plus Central plus eigene Expansion (13 Siegpunkte), ab Runde 3 seine Expansion ( plus 5 Siegpunkte).
+Winning the fight gegen. mission: Seine Nahkampfwelle kostet dich Einheiten, aber wenn Norns stehen bleiben, gewinnst du jede Wertung.
+
+Secondaries: Assassination (Fixed) – 2 C'tan, Lokhust Lord, 2 Technomancer, 2 Skorpekh Lords = 7 Characters. Bring It Down – nur 2 C'tan (16 Lebenspunkte). Empfehlung: Assassination plus Tactical (oder No Prisoners: 10 Einheiten, viele kleine).
+
+Abschnitt 14: First Turn, Second Turn Considerations.
+
+Wenn du zuerst spielst.
+
+Objectives besetzen, keine Harvester isoliert. Zoans oder Biovore auf Flayed Ones oder vorgerückte Wraiths.
+Kommandopunkte für seinen Zug: Heroic Intervention plus Overwatch.
+
+Wenn er zuerst spielt.
+
+Ophydians landen sofort, Wraiths oder C'tan rücken vor; Lokhust schießt auf Psychophage oder Pyrovores.
+Ablative Carapace (2 Kommandopunkte) auf den Psychophage, wenn Lokhust ihn wählt.
+Dein Zug 1: Konter mit beiden Tyrant-Blöcken.
+
+Abschnitt 15: Practical Round Checklist.
+
+BEFORE DEPLOYMENT.
+Battlefield Dominance; Home ist Pflicht.
+Assassination fixed (7 Characters).
+Zoans auf den Tisch, Rippers Reserve.
+DEPLOYMENT.
+Harvester in Gruppen, 8 Zoll-Netz gegen Ophydians.
+Norns: Central plus eigene Expansion, je mit Tyrant-Block in 12 Zoll.
+Hive-Tyrant-Block gegenüber Lokhust-Block.
+OPPONENT TURN.
+Ophydians: Overwatch (Pyrovores) plus Heroic Intervention.
+Keine Cluster in 6 Zoll Nightbringer, 18 Zoll Voltaic Storm.
+Resurrection Orb schon benutzt?
+MY TURN.
+Wraiths, Lokhust GANZ töten.
+Shadow in the Warp in seiner Command Phase (Objective-Halter).
+C'tan nur Damaged finishen.

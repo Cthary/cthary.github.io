@@ -1,0 +1,238 @@
+Gegneranalyse: Ulrich Haase (Nullfre4k) – World Eaters.
+
+Hinweis: Ulrich Haase ist laut Herald der Veranstalter des Turniers.
+
+List parsing warning: Herald-Metadaten nennen Possessed Slaughterband plus Butchers of Khorne, der Listentext Possessed Slaughterband and Vessels of Wrath. Die Enhancement Gateways to Glory gehört zu Vessels of Wrath (Verified), dann die Analyse geht von Vessels of Wrath aus.
+
+Liste in Kürze (2000 Punkte, Possessed Slaughterband 2 Daemon Prince plus Vessels of Wrath 1 Daemon Prince).
+
+Slaughterbound (Malicious Vigour) plus 6 Exalted Eightbound; Punkte: 395; Rolle gegen dich: Monster-Killer, Deep Strike oder Scouts 6 Zoll, Brazen Fury immer 6 Zoll.
+Slaughterbound (Frenzied Focus: Crits auf 5 plus) plus 6 Exalted Eightbound; Punkte: 385; Rolle gegen dich: Monster-Killer.
+Khârn plus 20 Khorne Berzerkers (4 Eviscerators, 4 Plasma); Punkte: 435; Rolle gegen dich: O-C-40-Walze, Blood Surge, Legendary Killer.
+Daemon Prince of Khorne (Warlord, Gateways to Glory: MOBILE, plus 1 Charge); Punkte: 210; Rolle gegen dich: Nahkampf-Monster, Dev Wounds nach Charge, minus 1 Kommandopunkt Stratagem.
+Chaos Rhino; Punkte: 75; Rolle gegen dich: Transport (vermutlich Jakhals).
+Eightbound, 3 Stück ( mal 2); Punkte: 250; Rolle gegen dich: Scouts 6 Zoll, Beacons of Rage ( plus 1 Hit gegen Nicht-Monster in 6 Zoll).
+Helbrute (Fist plus Hammer); Punkte: 120; Rolle gegen dich: Nahkampf, Frenzy.
+Jakhals, 10 Stück ( mal 2); Punkte: 130; Rolle gegen dich: Screens, Sticky (Objective Ravaged).
+
+Force Disposition laut Herald: Purge the Foe (Possessed Slaughterband). Alternative: Priority Assets (Vessels of Wrath).
+
+Abschnitt 1: Executive Summary.
+
+Was die Armee will: Totaler Nahkampf ab Runde 1. Zwei Exalted-Eightbound-Blöcke (Anti-Monster 3 plus, plus 1 Damage gegen Monster) sind speziell dafür gebaut, Monster wie deine Norns zu zerreißen. Berzerker (O-C 40 plus) nehmen die Mitte. Seine Primary (Unstoppable Force) zahlt 3 Siegpunkte pro Zug mit Kill und 5 Siegpunkte für Central am Ende.
+Wichtigste Bedrohung: Exalted Eightbound. Ein Block macht etwa 16 bis 21, mit Feel No Pain 11 bis 14, Schaden an einem Norn in einer Aktivierung. Beide Blöcke = beide Norns in einer Runde möglich.
+Wichtigstes taktisches Problem: Scouts 6 Zoll plus Bewegung 10 plus Charge, dann Runde-1-Charges sind realistisch, wenn er anfängt. Und Brazen Fury: Wenn du auf seine Possessed schießt und ein Modell tötest, surgt der Trupp 6 Zoll auf dich zu (bindet deine Einheit!).
+Was du vermeiden musst: Norns in Charge-Reichweite ( etwa 22 bis 26 Zoll) der Exalted Eightbound, ohne dass ein Tyrant-Block davor oder in Heroic Intervention-Reichweite steht. Und Beschuss auf Eightbound, der sie nur anschlägt statt tötet.
+Strategischer Ansatz: Reaktiv-konterndes Spiel – genau das, wofür deine Liste (Tyrant-Blöcke, Heroic Intervention, Regeneration) gebaut ist. Screens (Pyrovores oder Guards) nehmen den ersten Schlag, Overwatch (Torrents), Heroic Intervention und Counteroffensive, dann zerschlagen Tyrant-Blöcke die Eightbound (Widerstand 6, 3 plus oder 5 plus Invul, 3 Lebenspunkte – D3-Waffen töten pro Wunde ein Modell). Deine Primary (Immovable Object) zahlt 5 Siegpunkte pro Nicht-Home-Objective – du musst nicht töten, du musst stehen bleiben.
+
+Abschnitt 2: Opponent Game Plan.
+
+Blessings of Khorne (Rundenbeginn, 8W6): bis zu 2 aus.
+plus 1 Charge 6 Zoll Pile-in oder Consolidate Fight-on-death 4 plus Sustained Lethal Dev Wounds gegen INFANTRY.
+Brazen Fury: getötetes Possessed-Modell im Beschuss, dann D6 Zoll (mit Malicious Vigour: 6 Zoll) Surge auf dich.
+Daemonic Strength (1 Kommandopunkt): Exalted Eightbound plus 1 Damage gegen Monster oder Vehicles.
+Daemonic Resistance (2 Kommandopunkte): minus 1 to wound gegen seine Possessed.
+Immortal Fury (2 Kommandopunkte): tote Possessed schlagen noch zurück.
+Rapid Manifestation (1 Kommandopunkt): Deep Strike 6 Zoll statt 8 Zoll – dann aber kein Charge.
+
+1: Aufstellung: Exalted-Blöcke mit Scouts 6 Zoll vorn (oder Deep Strike), Berzerker plus Khârn zentral, Daemon Prince plus Eightbound als zweite Welle, Jakhals im Rhino oder auf Objectives.
+2: Runde 1 (wenn er beginnt): Scout 6 Zoll plus Move 10 Zoll plus Charge, dann erste Monster-Kills. Ansonsten Runde 2.
+3: Runde 2 bis 3: Berzerker-Walze auf Central (O-C 41). Daemon Prince springt mit Devastating Wounds-Wounds-Charge in einen Tyrant-Block.
+4: Scoring: Unstoppable Force: 3 Siegpunkte pro Zug mit mindestens 1 Kill, 4 Siegpunkte pro Nicht-Home-Objective, 3 Siegpunkte für neues Objective, 5 Siegpunkte Spielende Central.
+
+Er gewinnt, wenn er in Runde 1 bis 2 beide Norns im Nahkampf entfernt und danach mit Berzerker-O-C die Mitte hält. Er verliert, wenn seine Eightbound in deinen Konter laufen, bevor sie die Norns erreichen.
+
+Abschnitt 3: Major Threats.
+
+Exalted Eightbound, 6 Stück plus Slaughterbound ( mal 2) – Hauptbedrohung.
+
+Widerstand 6, 3 plus oder 5 plus Invul, 3 Lebenspunkte (Slaughterbound Widerstand 6, W6, 5 plus Invul), Bewegung 10, Deep Strike, Scouts 6 Zoll (mit Slaughterbound). Chainblades 4 Attacken 3 plus Stärke 8 AP minus 3 D2, Anti-Monster 3 plus, Anti-Vehicle 3 plus, Rend and Tear: plus 1 Damage gegen Monster, dann D3. Daemonic Strength: plus 1 D, dann D4.
+Slaughterbound: 6 Attacken 2 plus Stärke 10 AP minus 2 D2; Possessed Lord (1 mal : plus 3 A, Dev Wounds); Rage Eternal (holt pro Command Phase ein totes Eightbound zurück).
+Frenzied-Focus-Block: Crits auf 5 plus (, dann Sustained oder Lethal, wenn als Blessing aktiv).
+Gegen Norn (Widerstand 11, 2 plus oder 4 plus Invul): 24 Attacken, dann etwa 16 Treffer, dann Anti-Monster 3 plus, dann etwa 11 Wunden, dann 4 plus Invul, dann etwa 5,5 mal D3 = etwa 16, mit Feel No Pain 11, (mit Daemonic Strength etwa 21, mit Feel No Pain 14,) plus Slaughterbound etwa 4, mit Feel No Pain 3,. Ein Block tötet einen Norn.
+Gegen Tyrant-Block: Der Block hat das MONSTER-Keyword (Hive Tyrant, Core Rules 19.03), dann Anti-Monster 3 plus greift gegen den ganzen Block, und Rend and Tear (attack that targets a MONSTER or VEHICLE unit, Verified) gibt auch auf die Guards plus 1 Damage, dann D3 gegen 4 Lebenspunkte-Guards, dann etwa 11 Wunden, etwa 5 durch (3 plus bei AP minus 3, dann 6 plus), dann etwa 4 bis 5 Guards pro Block-Aktivierung. (Daemonic Strength dagegen prüft das Modell – auf Guards kein weiteres plus 1.).
+Reaktion: Kill on contact – mit D3-Waffen (Hive Tyrant, Swarmlord, Norn-Talons, Psychophage D2): jede ungerettete Wunde etwa ein Modell (3 Lebenspunkte). Nicht anschießen (Brazen Fury), sondern im Nahkampf oder mit genug Feuer, um den Block zu vernichten.
+
+Khârn plus 20 Khorne Berzerkers.
+
+Widerstand 4, 3 plus, 2 Lebenspunkte, O-C 2, dann O-C 41. Chainblade 4 Attacken Stärke 4 AP minus 1; Eviscerator 3 Attacken Stärke 8 AP minus 2 D2. Khârn: Gorechild 8 Attacken 2 plus Stärke 7 AP minus 2 D3, Legendary Killer (Reroll 1er Hit oder Wound), 4 plus Invul, Berzerker Frenzy (steht 1 mal mit 3 W auf). Blood Surge: Getroffen und Modell tot, dann D6 plus 2 Zoll Surge.
+Gegen Tyrant Guard: Masse – 80 Chainblade-Attacken Stärke 4 gegen Widerstand 8 (6 plus), dann wenig; Eviscerators etwa 2 bis 3 Guards; Khârn etwa 2 Guards.
+A Grievous Blow-Ziel (21 Modelle).
+Reaktion: Die O-C-Masse auf Central. Pyrovores oder Psychophage-Torrents (Auto-Hit, Stärke 6 gegen Widerstand 4, dann 3 plus) sind gegen sie ideal – aber Blood Surge: jeder Beschuss, der ein Modell tötet, lässt sie D6 plus 2 Zoll auf dich zu surgen. Plane das als gewollte Bindung (sie kommen in deine Nahkampfzone) oder schieße nur, wenn der Surge dich nicht stört.
+
+Daemon Prince of Khorne (Warlord).
+
+Widerstand 10, 2 plus oder 4 plus Invul, 10 Lebenspunkte, Bewegung 10, MOBILE (durch Dense), plus 1 Charge (Gateways). Strike 8 Attacken 2 plus Stärke 8 AP minus 2 D3; nach Charge Dev Wounds. Direct the Slaughter: minus 1 Kommandopunkt Stratagem 1 mal pro Runde (gleicht Malign Presence aus).
+Gegen Norn: etwa 7 bis 9, mit Feel No Pain 5 bis 6, (Devastating Wounds). Gegen Tyrant-Block: etwa 3 Guards.
+Bring It Down plus Assassination (8 Siegpunkte).
+Reaktion: Swarmlord (8 Attacken Stärke 10 gegen Widerstand 10, dann 4 plus twin-linked) plus Hive Tyrant: etwa 10, dann tot möglich.
+
+Eightbound, 3 Stück ( mal 2).
+
+Widerstand 6, 3 plus oder 5 plus Invul, 3 Lebenspunkte, Bewegung 10, Scouts 6 Zoll. Chainblades 5 Attacken Stärke 8 AP minus 2 D2. Beacons of Rage: plus 1 Hit (und plus 1 Wound gegen unter halber Stärke) für World Eaters in 6 Zoll gegen Nicht-Monster – betrifft deine Pyrovores oder Zoans oder Rippers oder Biovore; nicht Norns oder Psychophages oder Tyrant-Blöcke.
+Reaktion: Screens-Killer. Mittel.
+
+Helbrute, Jakhals, Rhino.
+
+Helbrute: Fist 8 Attacken Stärke 12 plus Hammer 8 Attacken Stärke 14 (Devoted), Frenzy (schlägt nochmal, nachdem es angegriffen wurde). Jakhals: Screens plus Objective Ravaged (Sticky). Rhino: Meet Any Challenge – Passagiere steigen in deiner Movement Phase aus, wenn du in 8 Zoll endest.
+
+Abschnitt 4: Threat Matrix.
+
+Exalted Eightbound, 2 Stück Blöcke; Threat: Very High; Primary targets: Norns, Tyrant-Blöcke, Psychophages; How it threatens them: Anti-Monster 3 plus, D3 oder D4; Recommended response: Screens, Heroic Intervention, Konter mit D3-Waffen.
+Khârn plus 20 Berzerkers; Threat: High (O-C), Medium (Schaden); Primary targets: Central, Guards; How it threatens them: O-C 41, Blood Surge; Recommended response: Torrent plus Nahkampf, Grievous Blow.
+Daemon Prince; Threat: High; Primary targets: Norns, Tyrant-Blöcke; How it threatens them: Devastating Wounds-Charge, MOBILE; Recommended response: Swarmlord-Konter.
+Eightbound, 2 Stück; Threat: Medium; Primary targets: Pyrovores, Zoans, Rippers; How it threatens them: Beacons of Rage; Recommended response: Screens nicht allein.
+Helbrute; Threat: Medium; Primary targets: Norns; How it threatens them: Fist oder Hammer plus Frenzy; Recommended response: Umgehen.
+Jakhals, 2 Stück; Threat: Low; Primary targets: Objectives, Screens; How it threatens them: Sticky; Recommended response: Torrent.
+
+Abschnitt 5: Target Priority.
+
+Kill early: Exalted Eightbound – sobald sie in deinem Nahkampf stehen, mit allem. Jeder tote Exalted ist etwa 3, mit Feel No Pain 2, Norn-Schaden weniger. Rage Eternal holt pro Runde eins zurück, dann Slaughterbound mittöten.
+
+Control, avoid: Berzerker – ihre O-C 41 kannst du nicht überstimmen; du musst sie töten oder Central konzedieren. Helbrute – langsam (Bewegung 9), umgehen.
+
+Ignore: Jakhals (außer als Screen-Hindernis), Rhino.
+
+Abschnitt 6: Deployment Analysis.
+
+Wahrscheinlich: Exalted-Blöcke an den Flanken mit Scout 6 Zoll (oder einer in Deep Strike), Berzerker plus Khârn zentral, Daemon Prince dahinter, Eightbound als Flankenschutz, Jakhals vorn als Screens oder auf Objectives.
+
+Kernfrage: Kann er einen Norn plus Support in einem Zyklus töten? Ja. Beide Norns? Ja, wenn beide in Reichweite beider Exalted-Blöcke stehen., dann Die Kernfrage lautet also: Kann er seine Konzentration in einen kompletten System-Kill umwandeln? Nur, wenn beide Norns ungeschützt in seiner Reichweite stehen.
+
+Deine Aufstellung (Empfehlung: Tiefe statt Breite, Overload-Stil mit Screens):
+Norns zuletzt, tief (hinter der ersten Linie, mindestens 26 Zoll von seinen Exalted nach deren Scout-Move – im Zweifel am hinteren Aufstellungszone-Rand).
+Norn-Sichtbarkeit in diesem Matchup: Ein Norn, der ein Objective hält, ist immer sichtbar (Base in der Objective-Geländezone, dann deren Obscuring zählt nicht; er überragt die Ruinen; Monster sind nie hidden). Gegen diese Liste ist das egal – er hat praktisch keinen Fernkampf. Was zählt, ist Charge-Distanz und Screens: Ein Norn auf einem Objective ist sicher, wenn davor ein Screen steht und ein Tyrant-Block in 12 Zoll für Heroic Intervention bereitsteht. Deshalb in Runde 1 bis 2 Norns auf Home oder eigener Expansion (tief), Central erst nach seinem ersten Einschlag.
+Erste Linie: Pyrovores plus Tyrant-Blöcke. Er muss durch Pyrovores oder Guards, um an die Norns zu kommen (Charge-Regel: er muss mit allen Zielen engaged enden und darf nicht mit Nicht-Zielen engaged sein – Screens mit 2 Zoll Abstand zwingen ihn, die Screens anzuchargen).
+Beide Tyrant-Blöcke höchstens 12 Zoll von den Norns (Heroic Intervention mit Leap to Defend, nachdem er gechargt hat).
+Swarmlord zentral – Malign Presence verteuert Daemonic Strength, Daemonic Resistance (3 Kommandopunkte!), Immortal Fury (3 Kommandopunkte!), Rapid Manifestation, Warp Stalkers, Aspire to Infamy. Daemon Prince kompensiert 1 mal pro Runde.
+Zoanthropes: auf den Tisch, hinten in einer Ruine (hidden, solange sie nicht geschossen haben). Er hat keine Fernkampf-Bedrohung; Zoans schießen auf Eightbound, wenn sie den Block vernichten können (sonst Brazen Fury).
+Rippers: auf den Tisch als Screen oder Reserve – als Screen vor einem Norn: Er muss sie anchargen (O-C-Halbierung gegen die Chargenden, 4 W Puffer).
+Home: Biovore plus Psychophage.
+
+Welchen Fehler er sich wünscht: Einen Norn vorne auf Central in Runde 1, ohne Screen und ohne Heroic Intervention-Block.
+
+Er geht zuerst, dann Tiefe Aufstellung ist Pflicht: seine Scout plus Move plus Charge-Reichweite etwa 22 bis 26 Zoll Erster Schlag trifft Screens oder Guards, nicht Norns.
+Du gehst zuerst, dann NICHT vorlaufen. Leicht zurück, damit er in Runde 1 (seinem Zug) nur Screens erreicht Er muss dann in DEINE Konterzone.
+Exalted-Block in Deep-Strike-Reserve, dann Ab Runde 2 8 Zoll-Netz (Rapid Manifestation: 6 Zoll – aber dann kein Charge!).
+
+Abschnitt 7: Movement and Positioning.
+
+Exalted Eightbound Reichweite: Scouts 6 Zoll plus Bewegung 10 plus Advance? (nein, dann kein Charge) plus 2W6 Charge ( plus 1 bei Unbridled Bloodlust), dann etwa 24 Zoll ab ihrer Aufstellung.
+Warp Stalkers (1 Kommandopunkt): Possessed bewegen oder chargen durch Nicht-Monster-Modelle – Screens aus Pyrovores oder Guards oder Rippers können übersprungen werden, sie müssen aber am Ende nicht mit Nicht-Zielen engaged sein. Deine Norns oder Psychophages (Monster) blockieren weiterhin., dann Screens mit Monstern (Psychophage) sind stabiler.
+Brazen Fury: Surge 6 Zoll (Malicious-Vigour-Block immer 6 Zoll) nach deinem Schuss, dann bindet dich.
+Daemon Prince MOBILE: durch Dense.
+Safe: mehr als 26 Zoll von Exalted, hinter Screens.
+Dangerous: Vorderes Drittel deiner Aufstellungszone in Runde 1.
+Conditional: Central – nach dem ersten Schlagabtausch.
+
+Abschnitt 8: Charge, Fight Phase Analysis.
+
+Exalted chargen einen Pyrovore-Screen vor deinem Norn:
+1. Ende seiner Movement Phase: Fire Overwatch (1 Kommandopunkt) mit den Pyrovores (Torrent, Auto-Hit – Likely): D6 plus 1 Stärke 6 AP minus 1 gegen Widerstand 6, dann 4 plus, dann etwa 2,5 Wunden, dann 3 plus oder 5 plus Invul, dann etwa 1 W Brazen Fury oder Blood Surge lösen hier NICHT aus: sie gelten nur in DEINER Shooting Phase ("your opponent's Shooting phase" aus seiner Sicht); Overwatch findet in SEINER Movement Phase statt.
+2. Charge. Exalted Fights First.
+3. Heroic Intervention (1 Kommandopunkt, Leap to Defend) mit dem Hive-Tyrant-Block (in 12 Zoll), dann Fights First.
+4. Er zuerst: Pyrovores tot (wenig verloren).
+5. Dein Hive-Tyrant-Block: etwa 5 Exalted tot (Guards etwa 2, Tyrant etwa 3). Parasitic aktiv (Harvester in 6 Zoll!), dann Wenn er Immortal Fury (2 Kommandopunkte, mit Swarmlord 3 Kommandopunkte) spielt: tote Modelle schlagen zurück.
+6. Rapacious Hunger (1 Kommandopunkt): Guards regenerieren.
+7. Deine Runde: Rest plus Slaughterbound töten (sonst Rage Eternal).
+
+Exalted erreichen deinen Norn:
+1. Heroic Intervention mit dem nächsten Tyrant-Block.
+2. Er zuerst: etwa 16 bis 21, mit Feel No Pain 11 bis 14, am Norn, dann Norn tot oder fast tot Ablative Carapace (2 Kommandopunkte) NUR auf den Assimilator (Harvester): Feel No Pain 5 plus oder 4 plus auf eigenem Objective, dann reduziert etwa 21 auf etwa 12 bis 16.
+3. Counteroffensive (2 Kommandopunkte) nach seiner ersten Aktivierung, wenn eine zweite Exalted-, Daemon Prince-Aktivierung folgen würde.
+4. Dein Konter tötet den Block.
+
+Nicht chargen: Die Berzerker frontal mit einem Norn (Masse bindet, Khârn Reroll). Den Helbrute (Frenzy: schlägt nochmal).
+
+Abschnitt 9: Shooting Analysis.
+
+Er hat praktisch keinen Fernkampf (Infernal Cannon Daemon Prince, Plasma-Pistolen, Rhino oder Helbrute-Kleinzeug, Helbrute Missile). Dein Beschuss ist hier der entscheidende Teil:
+
+Zoanthropes D3-Blast (7 Modelle, dann plus 1); Ziel: Exalted; Wirkung: etwa 4 Wunden, dann etwa 2 bis 3 tot; Brazen Fury, Blood Surge?: Ja – Surge 6 Zoll auf die nächste Einheit!
+Emissary Blast (2D6 Stärke 6 AP minus 2); Ziel: Berzerker; Wirkung: etwa 3 bis 4 tot; Brazen Fury, Blood Surge?: Ja – Blood Surge D6 plus 2 Zoll.
+Pyrovores oder Psychophage Torrent; Ziel: Berzerker oder Jakhals; Wirkung: etwa 3 bis 5 tot; Brazen Fury, Blood Surge?: Berzerker: ja.
+Biovore (Indirect); Ziel: Jakhals; Brazen Fury, Blood Surge?: nein (Jakhals nicht Possessed).
+
+Regel: Beschieß Possessed oder Berzerker nur, wenn (a) du den Trupp vernichtest, oder (b) der Surge sie in eine Position bringt, in der du sie in deinem Charge-Zug zerlegst, oder (c) die Einheit, auf die sie surgen würden, das aushält (Tyrant-Block).
+
+Abschnitt 10: Gotchas and Traps.
+
+1: Brazen Fury, Blood Surge – dein Beschuss zieht sie heran. Die nächstgelegene deiner Einheiten wird zum Surge-Ziel.
+2: Anti-Monster 3 plus gegen deine Tyrant-Blöcke – der Block hat das MONSTER-Keyword. Rend and Tear ( plus 1 D gegen Monster-Einheiten) gilt dann für alle Angriffe auf den Block.
+3: Warp Stalkers – Screens aus Infanterie werden übersprungen. Monster-Screens (Psychophage) halten.
+4: Rage Eternal – jede seiner Command Phases kommt ein Exalted zurück, solange der Slaughterbound lebt.
+5: Immortal Fury, Total Carnage – tote Modelle schlagen noch zurück. Rechne deine Verluste im Konter mit ein.
+6: Possessed Lord (1 mal ): Slaughterbound plus 3 A und Dev Wounds.
+7: Meet Any Challenge (Rhino) – endest du in 8 Zoll, steigen Jakhals aus (Screens oder Blocker).
+8: Punish the Craven (1 Kommandopunkt) – deine Einheit, die aus dem Nahkampf mit einem seiner Characters zurückfällt, macht Desperate Escape.
+9: Horrifying Violence (1 Kommandopunkt, deine Command Phase) – Einheiten in Engagement mit Possessed testen Battle-shock (minus 1), dann O-C – vor deiner Immovable-Object-Wertung. In Synapse (3W6) meist bestanden.
+
+Abschnitt 11: Opponent Decision Tree.
+
+Wer beginnt?
+Er, dann Tiefe Aufstellung; Screens vorne; Norns mindestens 26 Zoll von Exalted.
+Du, dann Nicht vorlaufen; Stellung; gegebenenfalls Biovore oder Emissary auf Jakhals.
+Wo sind die Exalted-Blöcke nach Scout?
+Beide auf einer Seite, dann Norns auf die andere Seite; Tyrant-Blöcke plus Psychophage als Wall.
+Getrennt, dann je ein Tyrant-Block pro Seite als Heroic Intervention-Konter.
+Einer in Reserve, dann 8 Zoll-Netz ab Runde 2.
+Hat er Daemonic Strength oder Resistance Kommandopunkte?
+Zählen: Swarmlord-Aura macht Resistance oder Immortal Fury 3 Kommandopunkte.
+
+Abschnitt 12: Player's Game Plan.
+
+Default plan.
+
+1: Runde 1: Tief stehen, Screens vorne, Norns hinten. Zoans in Ruine.
+2: Sein Runde-1 oder 2-Angriff: Overwatch, dann Heroic Intervention, dann Konter. Seine Exalted sterben in deiner Zone.
+3: Runde 2 bis 3: Norns vor auf Central plus eigene Expansion (Objective-Modus). Daemon Prince mit Swarmlord kontern.
+4: Runde 3 bis 5: Immovable Object: 5 Siegpunkte pro Nicht-Home-Objective plus 3 für Central. Berzerker auf Central mit Torrents plus Tyrant-Blöcken abbauen.
+
+Adjustment triggers.
+
+Ein Exalted-Block ist tot, dann Der andere Norn darf nach vorn.
+Beide Exalted-Blöcke tot, dann Er hat keinen Norn-Killer mehr (Daemon Prince etwa 8, mit Feel No Pain 5, Helbrute etwa 10, mit Feel No Pain 7,). Norns dominieren.
+Berzerker auf Central (O-C 41), dann Central konzedieren oder in 2 Runden töten; deine Expansion plus seine Expansion zählen auch 5 Siegpunkte.
+Er spielt Rapid Manifestation (6 Zoll, kein Charge), dann Er steht dann ungebunden vor dir: du chargst zuerst (Fights First).
+
+Abschnitt 13: Primary Scoring Plan.
+
+Paarung (Herald): Du, dann Immovable Object; er (Purge the Foe), dann Unstoppable Force.
+
+Du: 3 Siegpunkte pro eigenem Zug für mindestens 1 Central. Runde 2 bis 4 Command Phase: 5 Siegpunkte pro Nicht-Home-Objective; Runde 5 Zugende dasselbe.
+Er: 3 Siegpunkte pro eigenem Zug mit Kill (fast immer), 4 Siegpunkte pro Nicht-Home-Objective, 3 Siegpunkte für neues Objective, 5 Siegpunkte am Ende für Central.
+Central ist doppelt wichtig (dein plus 3 pro Runde, sein plus 5 am Ende) – aber gegen O-C 41 schwer. Plan: Eigene Expansion plus seine Expansion = 10 Siegpunkte pro Runde, auch ohne Central.
+Winning the fight gegen. mission: Hier sind beide eng verbunden: Wenn seine Exalted in deinem Konter sterben, kann er keine Objectives von dir nehmen.
+
+Secondaries: A Grievous Blow (Fixed) – Khârn-Berzerker-Block (Starting Strength 21), dann 4 Siegpunkte. Bring It Down – nur Daemon Prince (10 Lebenspunkte) plus Rhino (10 Lebenspunkte). Assassination – Daemon Prince, Khârn (2 mal dank Berzerker Frenzy), 2 Slaughterbound = 4 bis 5 Kills. Empfehlung: Assassination plus No Prisoners (13 Einheiten, viele kleine) oder Assassination plus Tactical.
+
+Abschnitt 14: First Turn, Second Turn Considerations.
+
+Wenn du zuerst spielst.
+
+Nicht vorrücken. Du willst, dass er in deine Zone kommt.
+Ausnahme: Ein Exalted-Block hat per Scout zu nah gestellt (in 20 Zoll deines Hive-Tyrant-Blocks), dann zuerst chargen (Fights First durch Charge) und ihn zerlegen, bevor er schlägt.
+
+Wenn er zuerst spielt.
+
+Er chargt in Runde 1. Kommandopunkte: 1 Overwatch, 1 Heroic Intervention, 2 Counteroffensive oder Ablative Carapace.
+Nach seinem Zug: alles, was gebunden ist, stirbt in deinem Zug.
+
+Abschnitt 15: Practical Round Checklist.
+
+BEFORE DEPLOYMENT.
+Detachment klären (Vessels of Wrath gegen Butchers of Khorne – Metadaten-Konflikt).
+Immovable Object: 5 Siegpunkte pro Nicht-Home-Objective.
+Assassination plus No Prisoners oder Tactical.
+DEPLOYMENT.
+Norns tief ( mindestens 26 Zoll von Exalted nach Scout), Screens vorne.
+Tyrant-Blöcke höchstens 12 Zoll von den Norns.
+Psychophage als Monster-Screen (Warp Stalkers überspringt nur Nicht-Monster).
+OPPONENT TURN.
+Blessings notieren (Unbridled Bloodlust = plus 1 Charge!).
+Overwatch (Torrent), dann Heroic Intervention, dann Counteroffensive.
+Ablative Carapace nur auf den Assimilator.
+MY TURN.
+Nur schießen, wenn der Block stirbt oder der Surge dir nützt.
+Slaughterbound mittöten (Rage Eternal).
+Parasitic-Kill in 6 Zoll eines Harvesters.

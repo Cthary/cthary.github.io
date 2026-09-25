@@ -1,0 +1,269 @@
+Gegneranalyse: Alexander Large (MrLarge) – Dark Angels (Ravenwing plus Inner Circle).
+
+List parsing warning: Die Herald-Metadaten nennen nur company_of_hunters, der Listentext aber Company of Hunters and Darkflight Pursuit (3 Detachment Points), und die Liste nutzt Nightforged Battery (Darkflight-Upgrade). Die Analyse geht von beiden Detachments aus.
+
+Liste in Kürze (1990 Punkte).
+
+Lion El'Jonson (Warlord); Punkte: 265; Rolle gegen dich: Nahkampf-Killer, Fights First, 3 plus Invul, springt jede Runde in Reserve und wieder heraus.
+Sammael plus Ravenwing Command Squad plus 3 Outriders; Punkte: 280; Rolle gegen dich: Advance plus Charge-Block, Cut Off Their Escape.
+Ravenwing Command Squad plus 3 Outriders; Punkte: 175; Rolle gegen dich: Zweiter Bike-Block.
+Azrael plus 6 Inner Circle Companions; Punkte: 300; Rolle gegen dich: Charakter-Jäger im Nahkampf, Stealth, minus 1 to hit gegen sie im Nahkampf, plus 1 Kommandopunkt pro Runde.
+Land Speeder Vengeance, 3 Stück (2 mal Nightforged Battery); Punkte: 430; Rolle gegen dich: Plasma Storm Battery 36 Zoll – Hauptschaden gegen Monster.
+Land Speeder (Multi-melta, Gatling, Stormfury); Punkte: 105; Rolle gegen dich: 48 Zoll Stärke 12-Rakete.
+Land Speeder (Heavy Flamer, Multi-melta, Stormfury); Punkte: 105; Rolle gegen dich: 48 Zoll-Rakete, Flamer-Overwatch.
+Storm Speeder Thunderstrike; Punkte: 135; Rolle gegen dich: plus 1 to wound für alle Astartes-Fernkampfangriffe gegen ein getroffenes Monster.
+Ravenwing Darkshroud; Punkte: 70; Rolle gegen dich: Stealth-Aura 6 Zoll für alle Astartes.
+Invader ATV; Punkte: 60; Rolle gegen dich: Multi-melta, Outrider Escort (Gegenfeuer).
+Scout Squad, 5 Stück; Punkte: 65; Rolle gegen dich: Infiltrators, Scouts 6 Zoll, Viertel.
+
+Force Disposition laut Herald: Reconnaissance (Darkflight Pursuit). Alternative: Disruption (Company of Hunters).
+
+Abschnitt 1: Executive Summary.
+
+Was die Armee will: Eine Speeder-Feuerbasis (Oath of Moment plus Thunderstrike plus Ignores Cover) löscht jede Runde ein Monster, der Lion schlägt aus der Reserve dort zu, wo du schwach bist, und Azrael plus Companions jagen deine Character-Blöcke (Hive Tyrant, Swarmlord). Bikes und Scouts spielen die Viertel (Reconnaissance Sweep).
+Wichtigste Bedrohung: Lion El'Jonson, direkt dahinter die Speeder-Batterie mit Thunderstrike (etwa 22 bis 28, mit Feel No Pain 15 bis 19, Schaden gegen einen sichtbaren Norn pro Schussphase).
+Wichtigstes taktisches Problem: Die Darkshroud (Stealth-Aura) schützt die Speeder vor deiner nicht-psychischen Munition, und die Companions sind im Nahkampf minus 1 to hit.
+Was du vermeiden musst: Einen Tyrant-Block ohne zweiten Block in 12 Zoll (Lion oder Companions frisst ihn) und einen Norn auf einem Objective in Runde 1 bis 2 in Sicht der Speeder.
+Strategischer Ansatz: Objectives in Runde 1 bis 2 mit hidden Pyrovores plus Tyrannoformed halten, Norns hinter obscuring Zonen als Konterdrohung, Storm Speeder und Darkshroud zuerst (Psychic-Waffen ignorieren Stealth), dann Speeder im Nahkampf abbauen. Erst danach treten Norns offen auf Objectives.
+
+Abschnitt 2: Opponent Game Plan.
+
+Oath of Moment (seine Command Phase): ein Ziel, dann Reroll Hits für alle Astartes.
+Storm Speeder schießt zuerst (Stormfury 48 Zoll plus Las-talon), dann Thunderstrike: plus 1 to wound gegen dieses Monster.
+3 mal Vengeance Plasma Storm Battery (D6 plus 1 Blast, supercharged Stärke 9 AP minus 3 D3, twin-linked; Nightforged: Reroll der Schusszahl und Hazard), dann Ignores Cover (Darkflight).
+Land Speeder: Stormfury plus Multi-melta; ATV Multi-melta.
+Darkshroud: Stealth für alle Astartes in 6 Zoll (deine nicht-psychischen Schüsse minus 1 BS).
+Company of Hunters: Assault auf allem; Mounted dürfen nach Advance chargen und nach Fallback schießen plus chargen.
+
+1: Pre-Game: Scouts infiltrieren; Lion auf dem Tisch hinter Gelände oder in Reserve.
+2: Feuerzyklus jeder Runde: Oath plus Thunderstrike auf dein bestes sichtbares Monster.
+3: Lion: Deep Strike oder Mist-wreathed Shadow Realms (in seiner Command Phase, wenn unengaged: in Reserve und im selben Zug wieder herein) – er erscheint immer dort, wo du keinen Konter hast.
+4: Companions: marschieren (Bewegung 6) zu deinen Character-Blöcken; plus 1 to hit gegen CHARACTER-Einheiten.
+5: Scoring: Viertel (3 bis 6 Siegpunkte), Kills (1 Siegpunkte), ein Objective (3 Siegpunkte). Seine zweite Säule ist Bring It Down (4 Siegpunkte pro 10 Lebenspunkte plus -Modell).
+
+Er gewinnt über Monster-Kills plus Viertel. Jedes Monster, das er sieht, ist 4 Siegpunkte für ihn.
+
+Abschnitt 3: Major Threats.
+
+Lion El'Jonson.
+
+Bewegung 8, Widerstand 9, 2 plus oder 3 plus Invul, 10 Lebenspunkte, O-C 4, Fights First, Deep Strike. Emperor's Shield: Angriffe mit S > Widerstand 9 haben minus 1 to wound (deine Stärke 10 oder Stärke 11-Characters verwunden ihn auf 4 plus statt 3 plus).
+Fealty Strike 8 Attacken 2 plus Stärke 12 AP minus 4 D4 Lethal Hits; Sweep 16 Attacken Stärke 6 AP minus 3 D2 Sustained.
+Jede Command Phase zwei aus drei: Mist-wreathed Shadow Realms (Reserve-Sprung), Martial Exemplar (Reroll 1er für Astartes in 6 Zoll), No Hiding (Feel No Pain 4 plus gegen Mortal Wounds in 6 Zoll).
+Gegen Tyrant-Block (Widerstand 8): etwa 5 Guards tot. Gegen Norn: etwa 10 bis 12, mit Feel No Pain 7 bis 8,.
+8 Siegpunkte (Bring It Down plus Assassination).
+Reaktion: Binden, bevor er in Reserve springt – Mist-wreathed geht nur, wenn er in seiner Command Phase unengaged ist. Dann Swarmlord plus Hive Tyrant plus Psychophage auf ihn (10 W, 3 plus Invul, dann du brauchst etwa 15 ankommende Wunden, also zwei Blöcke plus Norn).
+
+Azrael plus 6 Inner Circle Companions – Charakter-Jäger.
+
+Companions: Widerstand 4, 3 plus, 3 Lebenspunkte, Stealth, Nahkampfangriffe gegen sie minus 1 to hit, plus 1 to hit gegen CHARACTER-Einheiten. Calibanite Greatsword Strike 4 Attacken Stärke 6 AP minus 2 D2 Lethal, Sweep 5 Attacken Sustained 2. Azrael: Sustained Hits 1 für die Einheit, 4 plus Invul für die Einheit (Lion Helm), plus 1 Kommandopunkt pro Runde, Sword of Secrets 6 Attacken Stärke 6 AP minus 4 D2 Devastating Wounds.
+Deine Tyrant-Blöcke sind Character-Einheiten (der Block hat alle Keywords seiner Modelle). Gegen einen Block: etwa 24 Treffer, dann etwa 11 Wunden, dann etwa 7 durch, dann etwa 14 Schaden etwa 3 bis 4 Guards, dazu Azrael.
+Deine Guards treffen sie auf 4 plus, Tyrants auf 3 plus (minus 1 to hit), und sie haben 4 plus Invul.
+Reaktion: Nicht mit einem Tyrant-Block allein hineinlaufen. Pyrovore-, Psychophage-Torrents (Auto-Hit, Ignores Cover) umgehen Stealth und minus 1 to hit. Norn-Talons (6 Attacken Stärke 10 AP minus 2 D3) sind der beste Nahkampf-Konter.
+
+Storm Speeder Thunderstrike – Enabler.
+
+Widerstand 9, 3 plus, 11 Lebenspunkte, BS 2 plus. Stormfury 48 Zoll Stärke 12 AP minus 3 D6 plus 1; Las-talon 36 Zoll 2 Attacken Stärke 9 AP minus 3 D6 plus 1. Thunderstrike: getroffenes MONSTER, dann plus 1 to wound für alle Astartes-Fernkampfangriffe diese Phase.
+Ohne ihn verwunden die Plasma-Batterien (Stärke 9) deine Norns auf 5 plus, mit ihm auf 4 plus.
+Reaktion: Kill early. Zoanthropes (Psychic ignoriert die Stealth-Aura), Assimilator-Harpune plus Charge, Hive-Tyrant-Block.
+
+Ravenwing Darkshroud – Schutzaura.
+
+Widerstand 8, 3 plus oder 5 plus Invul, 10 Lebenspunkte, Bewegung 14 FLY. Icon of Old Caliban: Astartes in 6 Zoll haben Stealth (Fernkampf gegen sie minus 1 BS).
+Psychic-Waffen ignorieren Modifikatoren auf BS oder Hit (Verified, [PSYCHIC]), dann Zoanthropes und Emissary-Tendril sind gegen Stealth immun, die Harpune nicht.
+Bring It Down (10 Lebenspunkte). Reaktion: Früh, mit Psychic oder Nahkampf.
+
+Land Speeder Vengeance, 3 Stück.
+
+Bewegung 14, Widerstand 8, 3 plus oder 5 plus Invul, 10 Lebenspunkte, FLY. Plasma Storm Battery 36 Zoll D6 plus 1 Blast, supercharged Stärke 9 AP minus 3 D3, twin-linked. Storm of Vengeance: stirbt in deiner Shooting Phase eine Astartes-Einheit in 6 Zoll, schießt die Vengeance sofort auf die schießende Einheit zurück.
+Gegen Norn (mit Thunderstrike plus Oath): etwa 5, mit Feel No Pain 3, je, dann etwa 15, mit Feel No Pain 10, aus dreien.
+Reaktion: Nahkampf (Widerstand 8 ist für Norns Stärke 10 plus, Tyrants Stärke 10 oder Stärke 11, Psychophages Stärke 7 gut verwundbar). Jede ist Bring It Down.
+
+Land Speeder, 2 Stück, Invader ATV.
+
+Stormfury 48 Zoll (je 1), Multi-melta 18 Zoll (Melta 2), Heavy Flamer (zweiter Speeder, 12 Zoll Torrent – Overwatch-fähig gegen deine Nahkampf-Anläufe). Purgation Run: nach dem Schießen D6 Zoll weg. ATV: Outrider Escort (schießt nach deinem Beschuss auf Bikes in 6 Zoll auf deine schießende Einheit).
+
+Bike-Blöcke, 2 Stück.
+
+Bewegung 12, Widerstand 5, 3 plus (Command Squad 5 plus Invul), 4 Lebenspunkte. Advance plus Charge (Company of Hunters), Fallback plus Schießen plus Charge. Outriders plus 1 S, plus 1 D nach Charge. Sammael: Cut Off Their Escape (Nicht-Monster fliehen nur mit Desperate Escape).
+Reaktion: Gute erste Parasitic-Kills für den Hive-Tyrant-Block.
+
+Abschnitt 4: Threat Matrix.
+
+Lion El'Jonson; Threat: Very High; Primary targets: Tyrant-Blöcke, Norns; How it threatens them: Fights First, 8 Attacken Stärke 12 D4, Reserve-Sprung; Recommended response: Binden, zwei Blöcke plus Norn.
+Storm Speeder; Threat: High (System); Primary targets: Norns; How it threatens them: plus 1 to wound; Recommended response: Zuerst (Zoans ignorieren Stealth).
+Darkshroud; Threat: High (System); How it threatens them: Stealth-Aura; Recommended response: Zoans oder Nahkampf, früh.
+Vengeance, 3 Stück; Threat: High; Primary targets: Norns, Psychophages; How it threatens them: Plasma 36 Zoll; Recommended response: Norns hinter obscuring Zonen, Nahkampf.
+Azrael plus Companions; Threat: High; Primary targets: Tyrant-Blöcke (Character); How it threatens them: plus 1 hit gegen Char, Lethal, 4 plus Invul; Recommended response: Norn oder Psychophage oder Torrents statt Guard-Block.
+Land Speeder, 2 Stück; Threat: Medium; Primary targets: Norns (Stormfury); How it threatens them: 48 Zoll Stärke 12; Recommended response: Nahkampf, wenn nah.
+Bike-Blöcke, 2 Stück; Threat: Medium; Primary targets: Weiche Harvester; How it threatens them: Advance plus Charge; Recommended response: Parasitic-Kill.
+Invader ATV; Threat: Low; Primary targets: Konterfeuer; How it threatens them: Outrider Escort; Recommended response: ignorieren.
+Scouts; Threat: Low; Primary targets: Viertel; How it threatens them: Infiltrate; Recommended response: nur auf Objectives töten.
+
+Abschnitt 5: Target Priority.
+
+Kill early: Storm Speeder, dann Darkshroud, dann Vengeance in Norn-Reichweite. Psychic-Waffen (Zoans, Emissary) sind hier doppelt wertvoll.
+
+Control, avoid: Lion (erst binden, dann töten). Azrael plus Companions: nicht frontal mit Tyrant-Blöcken; wenn sie ein Objective halten wollen: Pyrovore-Torrents (Auto-Hit, Ignores Cover) und später Norn im Objective-Modus (O-C 15 > ihre 13).
+
+Ignore: Scouts, ATV.
+
+Abschnitt 6: Deployment Analysis.
+
+Wahrscheinlich: Speeder plus Darkshroud hinten oder seitlich mit 36 bis 48 Zoll-Lanes; Bike-Blöcke vorne; Scouts infiltriert; Azrael plus Companions in einer Ruine nahe Central (Infanterie, dann hidden); Lion in Reserve oder hinter Gelände.
+
+Kernfrage: Kann er einen Norn plus Support in einem Zyklus töten? Ja – einen sichtbaren Norn (Beschuss etwa 22 bis 28, mit Feel No Pain 15 bis 19,) oder einen Tyrant-Block (Lion oder Companions). Beide Norns? Nein.
+
+Norn-Sichtbarkeit in diesem Matchup (entscheidend): Ein Norn, der ein Objective hält, ist immer sichtbar – seine Base steht in der Objective-Geländezone (deren Obscuring zählt für ihn nicht), er überragt die Ruinen, Monster sind nie hidden. Mit 36 bis 48 Zoll-Speedern und Ignores Cover heißt das: Ein Norn auf einem Objective in Runde 1 bis 2 verliert in einem Zug den Großteil seiner Wunden. Verdeckt ist ein Norn nur hinter (nicht in) einer obscuring Zone – dort punktet er nicht.
+
+Deine Aufstellung:
+Norns zuletzt, hinter obscuring Zonen als Konterdrohung (Assimilator 4 plus Invul auf der Seite, auf der später zuerst ein Objective genommen wird).
+Objectives in Runde 1 bis 2: Pyrovores (INFANTRY, dann hidden in der Objective-Zone, nur in 15 Zoll sichtbar, solange sie nicht schießen; Skyborne Surveillance gibt deinen Einheiten in 6 Zoll eines Ravenwing-Fliegers plus 3 Zoll Detection Range). In deiner Command Phase Tyrannoformed (1 Kommandopunkt; Pyrovores sind Harvester), dann das Objective bleibt dein, auch wenn der Trupp stirbt oder weiterzieht.
+Beide Tyrant-Blöcke höchstens 12 Zoll voneinander; kein Block in 13 Zoll der Companions ohne Norn oder Psychophage daneben.
+Swarmlord zentral: Malign Presence verteuert Armour of Contempt, High-Speed Focus, Wings of Shadow, Talon Strike, Hunters' Trail, Rapid Reappraisal in 12 Zoll.
+Zoanthropes: Reserve, Einflug Runde 2 an der Speeder-Kante (24 Zoll, Psychic ignoriert Stealth).
+Rippers: Reserve (Deep Strike), später auf ein Objective seiner Scouts oder Companions (O-C halbieren).
+
+Welchen Fehler er sich wünscht: Tyrant-Block allein vor Companions oder Lion; Norn auf einem Objective in Speeder-Lanes in Runde 1 bis 2.
+
+Companions auf Central, dann Central NICHT mit Tyrant-Block stürmen. Pyrovore-, Psychophage-Torrents in Runde 1 bis 2; sobald die Speeder dezimiert sind: Assimilator (O-C 15) plus Psychophage plus Pyrovores (O-C 15 plus 3 plus 3 mehr als 13).
+Speeder plus Darkshroud auf einer Seite, dann Overload-Flanke mit Hive-Tyrant-Block plus Assimilator plus Psychophage hinter Gelände; Zoans an dieser Kante.
+Lion in Reserve, dann 8 Zoll-Netz ab Runde 2 (keine Deep-Strike-Löcher neben deinen Blöcken oder Harvestern), Blöcke höchstens 12 Zoll auseinander.
+Lion auf dem Tisch, dann Er springt in seiner ersten Command Phase per Mist-wreathed; Pyrovore-Trupp als Stoßdämpfer vor den Blöcken.
+
+Abschnitt 7: Movement and Positioning.
+
+Speeder: Bewegung 14 plus 36 Zoll oder 48 Zoll, dann praktisch der ganze Tisch. Purgation Run und We Are Vengeance (1 Kommandopunkt, D3 plus 3 Zoll nach deinem Beschuss) lassen sie aus deiner Charge-Reichweite gleiten.
+Lion: Deep Strike mehr als 8 Zoll, dann 9 Zoll-Charge; über Mist-wreathed jede Runde neu platziert.
+Companions: Bewegung 6 plus 2W6, dann etwa 13 Zoll; mit Lion Martial Exemplar (Reroll 1er) in 6 Zoll.
+Bikes: Bewegung 12 plus Advance plus Charge, dann etwa 24 Zoll.
+Darkshroud-Blase (6 Zoll): deine nicht-psychischen Schüsse minus 1 BS.
+Safe: Hinter (nicht in) obscuring Zonen, mit zweitem Block in 12 Zoll. Pyrovores: in Geländezonen, hidden.
+Dangerous: Objectives und offene Flächen in Speeder-Sicht (Runde 1 bis 2); 13 Zoll um Companions; Lücken mehr als 8 Zoll hinter deinen Linien.
+Conditional: Central – mit Pyrovores plus Tyrannoformed früh, mit Norn erst nach der Speeder-Dezimierung.
+
+Abschnitt 8: Charge, Fight Phase Analysis.
+
+Lion chargt deinen Hive-Tyrant-Block:
+1. Overwatch lohnt nicht (Widerstand 9, 3 plus Invul).
+2. Charge; Lion Fights First (Datenblatt plus Charge).
+3. Ende seiner Charge Phase: Heroic Intervention (1 Kommandopunkt, Leap to Defend) mit Swarmlord-Block oder Norn, dann ebenfalls Fights First.
+4. Er zuerst: Strike auf die Guards (etwa 5 tot); der Hive Tyrant bleibt meist stehen (Characters zuletzt).
+5. Dein intervenierender Block: Swarmlord 8 Attacken Stärke 10 gegen Widerstand 9 (3 plus, Emperor's Shield, dann 4 plus), twin-linked, dann etwa 4 Wunden, dann 3 plus Invul, dann etwa 1,3 durch, dann etwa 4; Guards etwa 1; Hive Tyrant etwa 2 bis 3. Lion meist NICHT tot, aber gebunden.
+6. Seine nächste Command Phase: Mist-wreathed geht NICHT (engaged).
+7. Deine Runde: Psychophage-Torrent, dann alles in ihn.
+
+Companions chargen deinen Swarmlord-Block:
+1. Ende seiner Movement Phase: Fire Overwatch (1 Kommandopunkt) mit Pyrovores oder Psychophage in 12 Zoll: Torrent trifft automatisch (Likely), Ignores Cover schlägt Stealth, dann gegen Widerstand 4 oder 3 plus solide (Pyrovores verlieren danach für diesen und den nächsten Zug Hidden.).
+2. Charge, dann Companions Fights First.
+3. Heroic Intervention (1 Kommandopunkt) mit Norn oder Psychophage in 12 Zoll.
+4. Er zuerst: etwa 14 Schaden auf die Guards ( plus 1 to hit gegen Character-Einheit).
+5. Dein Norn (Talons 6 Attacken Stärke 10 AP minus 2 D3, WS 2 plus, dann minus 1 = 3 plus), dann etwa 4 tote Companions.
+6. Swarmlord-Block schlägt (Swarmlord 3 plus, Guards 4 plus).
+7. Command Phase: Guards zurückholen (Harvester in 6 Zoll).
+
+Dein bester Charge: Speeder (Widerstand 8). Die Companions nur mit Norn plus Psychophage oder nach Torrent-Beschuss.
+
+Nicht chargen: Companions mit den Guards allein. Den Lion mit einem einzelnen Block, wenn er danach nicht gebunden bleibt.
+
+Harpoon Barbs: Bikes oder Speeder, die vom Assimilator weg-fallbacken, erleiden auf 2 plus D6 Mortal Wounds.
+
+Abschnitt 9: Shooting Analysis.
+
+Plasma Storm Battery, 3 Stück (2 mal Nightforged, Supercharge); Reichweite: 36 Zoll; Gegen Norn (Widerstand 11, 2 plus, 4 plus Invul): etwa 4 bis 5, mit Feel No Pain 3, je (mit Thunderstrike plus Oath).
+Stormfury, 3 Stück (Storm Speeder BS 2 plus, 2 Land Speeder); Reichweite: 48 Zoll; Gegen Norn (Widerstand 11, 2 plus, 4 plus Invul): etwa 1,5 bis 2, mit Feel No Pain 1 bis 1,3, je.
+Las-talon (2 Attacken); Reichweite: 36 Zoll; Gegen Norn (Widerstand 11, 2 plus, 4 plus Invul): etwa 2 bis 3, mit Feel No Pain 1,3 bis 2.
+Multi-melta, 3 Stück (Melta 2 in 9 Zoll); Reichweite: 18 Zoll; Gegen Norn (Widerstand 11, 2 plus, 4 plus Invul): etwa 2, mit Feel No Pain 1,3, je in 9 Zoll.
+Heavy Flamer, Onslaught Gatling; Reichweite: 12 Zoll oder 24 Zoll; Gegen Norn (Widerstand 11, 2 plus, 4 plus Invul): vernachlässigbar; Pyrovores oder Guards.
+
+dann Gesamt gegen einen sichtbaren Norn: etwa 22 bis 28, mit Feel No Pain 15 bis 19,. Ohne Storm Speeder etwa 16, mit Feel No Pain 11,.
+
+Ignores Cover (Darkflight) – Deckung hilft deinen Monstern nicht; nur fehlende Sichtlinie (obscuring Zone dazwischen) hilft.
+
+Deine Fernkampf-Antwort: Psychic-Waffen (Zoans, Emissary) ignorieren die Stealth-Aura; die Harpune und die Biovore nicht.
+
+Abschnitt 10: Gotchas and Traps.
+
+1: Mist-wreathed Shadow Realms – Lion geht in seiner Command Phase (unengaged) in Reserve und kommt im selben Zug per Deep Strike wieder. Verhindern: binden.
+2: Thunderstrike-Reihenfolge – der Storm Speeder schießt zuerst auf einen Norn, alles andere folgt. Reaktion: Ablative Carapace (2 Kommandopunkte, nur Assimilator oder Harvester) nach der Zielwahl der ersten Vengeance.
+3: Enmity for the Unworthy – Companions plus 1 to hit gegen deine Character-Blöcke; gegen Norns oder Psychophages nicht.
+4: Braziers of Judgement – Nahkampf gegen Companions minus 1 to hit.
+5: Darkshroud-Aura – nicht-psychischer Fernkampf minus 1 BS in 6 Zoll.
+6: Heavy-Flamer-Overwatch – Torrent trifft beim Snap Shooting automatisch (Likely).
+7: Storm of Vengeance, Outrider Escort – Gegenfeuer nach deinen Schüssen (nur Shooting Phase).
+8: Emperor's Shield – Lesser Prey ( plus 2 S) ist gegen den Lion wertlos.
+9: Azrael plus Lion – plus 1 Kommandopunkt (Azrael), Command Squad Heroic Intervention minus 1 Kommandopunkt. Der Swarmlord verteuert Armour of Contempt, High-Speed Focus, Wings of Shadow, Talon Strike.
+10: Guerrilla Tactics, Rapid Reappraisal – Scouts (>6 Zoll von dir) und Ravenwing-Einheiten (1 Kommandopunkt) verschwinden am Ende deines Zuges in Reserve.
+
+Abschnitt 11: Opponent Decision Tree.
+
+Wo stehen Azrael plus Companions?
+Central, nahe deinen Tyrant-Blöcken, dann Torrents plus Norn gegen sie; Tyrant-Blöcke meiden sie.
+Hinten, dann ignorieren, Speeder zuerst.
+Wo ist der Lion?
+Auf dem Tisch nahe einem Block, dann zweiten Block in 12 Zoll; Pyrovore-Stoßdämpfer.
+In Reserve, dann 8 Zoll-Netz ab Runde 2.
+Darkshroud neben der Speeder-Gruppe?
+JA, dann Zoans (Psychic) auf Storm Speeder oder Darkshroud; Harpune auf etwas außerhalb der Aura.
+NEIN, dann Storm Speeder zuerst.
+Speeder dezimiert (Storm Speeder plus 1 Vengeance tot)?
+JA, dann Norns offen auf Objectives (Objective-Modus).
+NEIN, dann Norns weiter hinter obscuring Zonen; Objectives via Pyrovores oder Tyrannoformed.
+
+Abschnitt 12: Player's Game Plan.
+
+Default plan.
+
+1: Runde 1: Home, eigene Expansion, Central mit Pyrovores (hidden) und Biovore besetzen. Norns hinter obscuring Zonen, Blöcke höchstens 12 Zoll auseinander. Zoans plus Rippers in Reserve.
+2: Runde 2: Command Phase: Tyrannoformed. Zoans auf Storm Speeder oder Darkshroud. Hive-Tyrant-Block in einen Bike-Block oder Speeder (Parasitic-Kill).
+3: Runde 3: Lion binden und abräumen, wenn er in deiner Hälfte ist. Companions mit Norn oder Psychophage oder Torrents. Wenn die Speeder-Batterie dezimiert ist: Norns auf Objectives.
+4: Runde 4 bis 5: Objectives mit Norns (O-C 15) plus Blöcken halten, Kill-auf-Objective-Siegpunkte.
+
+Adjustment triggers.
+
+Companions gehen auf einen Tyrant-Block, dann Overwatch Pyrovores, Heroic Intervention mit Norn oder Psychophage; Tyrant-Block kämpft danach.
+Darkshroud stirbt früh, dann Harpune und Biovore wieder voll brauchbar gegen Speeder.
+Lion am Ende seines Zuges in Engagement mit deinem Block, dann Alles auf ihn (er kann nicht in Reserve).
+Er nimmt Scouts vom Tisch (Guerrilla Tactics), dann Leeres Objective übernehmen (3 Siegpunkte "neues Objective").
+Norn unter 8 W in Speeder-Sicht, dann Tyrannoformed (Assimilator oder Pyrovores), Norn hinter eine obscuring Zone, heilen.
+
+Abschnitt 13: Primary Scoring Plan.
+
+Paarung (Herald): Du, dann Purge and Secure; er (Recon), dann Reconnaissance Sweep.
+
+Du: ab Runde 2 4 Siegpunkte pro Nicht-Home-Objective (Wertung am Ende deiner Command Phase – der Halter muss seinen Zug überstanden haben oder das Objective ist per Tyrannoformed sticky), 3 Siegpunkte, wenn du auf oder an einem Objective tötest oder eine Einheit stirbt, die dort stand, 3 Siegpunkte für ein neues Nicht-Home-Objective.
+Er: 3 oder 6 Siegpunkte Viertel, 1 Siegpunkte pro Kill, 3 Siegpunkte für mindestens 1 Nicht-Home-Objective. Weniger Viertel-Tempo als ähnliche Ravenwing-Listen (nur 1 Scout-Trupp, kein Recon Hunter) – er spielt stärker über Kills und Bring It Down.
+Endposition: Central plus eigene Expansion ( plus gegnerische Expansion) mit Norns, sobald die Speeder dezimiert sind.
+O-C: Norn 15 > Companions-Block 13 auf Central.
+
+Secondaries: Bring It Down (Fixed) – Lion (10 Lebenspunkte), Storm Speeder (11 Lebenspunkte), 3 Vengeances (10 Lebenspunkte), Darkshroud (10 Lebenspunkte) = 6 Ziele. Alternativ Assassination (Lion, Azrael, Sammael, 2 Ravenwing Champions).
+
+Abschnitt 14: First Turn, Second Turn Considerations.
+
+Wenn du zuerst spielst.
+
+Kein Monster auf Objectives in Speeder-Sicht. Pyrovores nehmen die Objectives (nicht schießen, dann hidden).
+Emissary-Tendril (Psychic, 18 Zoll) auf die Darkshroud, wenn sie ohne Sicht auf deine Norns erreichbar ist.
+
+Wenn er zuerst spielt.
+
+Speeder schießen auf alles Sichtbare; Companions rücken in Ruinen vor; Lion springt gegebenenfalls.
+2 Kommandopunkte Ablative Carapace plus 1 Kommandopunkt Heroic Intervention bereit.
+
+Abschnitt 15: Practical Round Checklist.
+
+BEFORE DEPLOYMENT.
+Recon erwartet; Bring It Down fixed (6 Ziele).
+Zoans plus Rippers in Reserve.
+DEPLOYMENT.
+Norns zuletzt, HINTER obscuring Zonen (auf einem Objective ist ein Norn immer sichtbar).
+Objectives mit Pyrovores (hidden); Runde 2 Command Phase: Tyrannoformed.
+Tyrant-Blöcke höchstens 12 Zoll auseinander; kein Block allein in 13 Zoll der Companions.
+OPPONENT TURN.
+Storm Speeder schießt zuerst?, dann Ablative Carapace erst bei Vengeance-Beschuss.
+Heroic Intervention bereit gegen Lion oder Companions.
+Overwatch (Torrent) gegen Companions – kostet Hidden der Pyrovores.
+MY TURN.
+Psychic (Zoans oder Emissary) auf Ziele in der Darkshroud-Aura.
+Speeder im Nahkampf; Lion gebunden, dann alles auf ihn.
+Norns erst auf Objectives, wenn Storm Speeder plus 1 Vengeance tot.

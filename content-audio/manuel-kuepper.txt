@@ -1,0 +1,269 @@
+Gegneranalyse: Manuel Küpper (DerManni) – Emperor's Children.
+
+Liste in Kürze (2000 Punkte, Carnival of Excess 2 Daemon Prince plus Frenzied Host 1 Daemon Prince).
+
+Lord Exultant (Warlord, Possessed Blade) plus 5 Infractors; Punkte: 210; Rolle gegen dich: Nahkampf-Battleline, Lethal Hits, Scouts oder Infiltrators über Lord of the Host.
+Lord Exultant plus 5 Tormentors (Melta, Plasma, Icon); Punkte: 170; Rolle gegen dich: Infiltrators, Objective Defiled (Sticky), Precision-Beschuss.
+Tormentors, 5 Stück; Punkte: 80; Rolle gegen dich: Infiltrators, Sticky-Objective, Viertel-Scorer.
+Daemon Prince of Slaanesh with Wings (Empyric Suffusion: Heroic Intervention minus 1 Kommandopunkt); Punkte: 220; Rolle gegen dich: Deep Strike, 14 Zoll-Flieger, Charge-Mortals.
+Defiler (Ectoplasma, 2 Excruciator, 2 Heavy Reaper Autocannons), 2 Stück; Punkte: 710; Rolle gegen dich: Die Armee. 48 Zoll-Feuer mit Dev Wounds.
+Daemonettes, 10 Stück ( mal 2); Punkte: 200; Rolle gegen dich: Deep Strike, Fights First, Battle-shock-Druck, Empowered-Quelle.
+Fiends, 3 Stück ( mal 3); Punkte: 270; Rolle gegen dich: Deep Strike, Bewegung 12, Dev Wounds, Empowered-Quelle.
+Chaos Spawn, 2 Stück ( mal 2); Punkte: 140; Rolle gegen dich: Screens, weichen 6 Zoll aus, D6 plus 2 Attacken.
+
+Force Disposition laut Herald: Reconnaissance (Frenzied Host). Alternative: Disruption (Carnival).
+
+Abschnitt 1: Executive Summary.
+
+Was die Armee will: Zwei Defiler stehen hinten, schießen 48 Zoll und werden durch Daemonic Empowerment (Legions-of-Excess-Einheit in 6 Zoll) zu Devastating Wounds-Wound-Maschinen. Davor verteilen sich Infiltratoren und schnelle Daemons über alle vier Viertel (Reconnaissance Sweep) und binden oder opfern sich.
+Wichtigste Bedrohung: Beide Defiler zusammen – sie töten einen gesunden Norn in einer Schussphase ( etwa 20 plus Schaden, siehe §9).
+Wichtigstes taktisches Problem: Die Defiler sind 48 Zoll-Schützen, deine Konter sind 12 bis 24 Zoll. Du musst über die Linie aus Spawn oder Daemonettes oder Fiends hinweg an sie herankommen.
+Was du vermeiden musst: Einen Norn offen in Sicht beider Defiler zu stellen, insbesondere nach Runde 1, wenn Daemons in 6 Zoll der Defiler stehen.
+Strategischer Ansatz: Sichtlinien verweigern, Defiler mit Tyrant-Blöcken plus Zoanthropes killen, Objectives halten. Seine Daemons sind zerbrechlich (Daemonettes Widerstand 3 7 plus oder 5 plus Invul, Fiends Widerstand 5 7 plus oder 5 plus Invul) und dienen als Kill-Siegpunkte für deine Purge-and-Secure-Mission.
+
+Abschnitt 2: Opponent Game Plan.
+
+Das System:
+Legions-of-Excess-Einheit (Daemonettes oder Fiends) in 6 Zoll ↓.
+Defiler Empowered: Sustained Hits 1; Reaper Autocannons (schon Sustained), dann Critical Hits auf 5 plus ↓.
+plus 1 to hit (Revel in Desecration, Ziel nicht unter halber Stärke), dann trifft auf 2 plus ↓.
+8 Reaper-Schüsse Stärke 9 Dev Wounds plus Ectoplasma Stärke 12 plus 12 Excruciator je Defiler.
+
+Deployment: Defiler mit Sicht auf die Mitte, Spawn davor. Tormentors infiltrieren (>8 Zoll von dir und deiner Aufstellungszone) auf Objectives oder Viertel; der Lord Exultant mit Infractors hat Infiltrators plus Scouts 6 Zoll.
+Runde 1 bis 2: Defiler schießen auf das Größte oder Wichtigste in Sicht. Fiends oder Daemonettes oder Daemon Prince kommen per Deep Strike in Runde 2 (oder bleiben als Empowerment-Quelle bei den Defilern).
+Scoring: Viertel über Infiltratoren (3 bis 6 Siegpunkte), 1 Siegpunkte pro Kill, 3 Siegpunkte für ein Nicht-Home-Objective – Tormentors halten es per Objective Defiled auch ohne Anwesenheit.
+Nahkampf: Opportunistisch. Daemonettes (Fights First, Dev Wounds) und Fiends (Dev Wounds) jagen deine Harvester: Pyrovores, Rippers, Biovore, Zoanthropes.
+
+Der Gegner gewinnt nicht durch den Nahkampf gegen deine Blöcke. Er gewinnt, indem zwei Defiler deine Norns wegschießen, während billige Einheiten die Viertel besetzen und deine weichen Harvester fressen.
+
+Abschnitt 3: Major Threats.
+
+Defiler, 2 Stück – System- und Hauptbedrohung.
+
+Profil: Bewegung 12, Widerstand 11, 3 plus oder 5 plus Invul, 18 Lebenspunkte, O-C 5, Damaged bei 1 bis 6 W. Scuttling Walker: bewegt sich durch Modelle und Gelände.
+Waffen je Defiler: Ectoplasma Destructor 36 Zoll D6 Blast Stärke 12 AP minus 3 D3; 2 mal Excruciator 36 Zoll 6 Attacken Stärke 6 AP minus 1 D2; 2 mal Heavy Reaper Autocannon 48 Zoll 4 Attacken Stärke 9 AP minus 1 D3, Dev Wounds, Sustained Hits 1. Nahkampf: Shearing Claws Strike 5 Attacken Stärke 16 AP minus 3 D6 plus 1 Precision.
+Revel in Desecration: plus 1 to hit gegen Ziele, die nicht unter halber Stärke sind.
+Reaktion: Kill early. Hive-Tyrant-Block plus Psychophage (Bio-stimulus AP plus 1) machen etwa 14 bis 17 Schaden im Nahkampf (siehe §8). Zoanthropes etwa 8. Assimilator-Harpune 2 Schuss Stärke 12 plus Harpooned-Charge.
+
+Daemonettes, 2 Stück, Fiends, 3 Stück – Empowerment-Quelle und Harvester-Jäger.
+
+Daemonettes: Deep Strike, Fights First, 3 Attacken Stärke 4 AP minus 1 Dev Wounds; Horrifying Beauty: zu Beginn jeder Fight Phase testen engagierte Gegner auf Battle-shock.
+Fiends: Bewegung 12, 5 Attacken Stärke 5 AP minus 2 D2 Dev Wounds, Soporific Musk (nur Nicht-Monster): Fallback nur mit Desperate Escape.
+Diese Einheiten sind der Schalter für die Defiler-Kritischen. Ohne Legions of Excess-Einheit in 6 Zoll verlieren die Reaper-Autocannons die 5 plus-Crits und die übrigen Waffen die Sustained Hits.
+Reaktion: Die Einheit, die neben einem Defiler parkt, ist ein System-Ziel. Zoanthropes (D3 Blast Stärke 7 AP minus 2 D3) und Emissary-Blast (2D6 Stärke 6) löschen sie.
+
+Daemon Prince of Slaanesh with Wings.
+
+Bewegung 14, FLY, Deep Strike, Widerstand 9 2 plus oder 4 plus Invul, 10 Lebenspunkte, minus 1 Damage auf jeden Angriff. Daemonic Destruction: nach Charge W6 pro verbleibendem Wundpunkt, 4 plus = Mortal Wounds (max. 6). Strike 6 Attacken Stärke 8 AP minus 2 D3.
+Empyric Suffusion: Heroic Intervention kostet ihn 0 Kommandopunkte (Malign Presence des Swarmlord macht daraus wieder 1 Kommandopunkt, wenn in 12 Zoll).
+Er ist Bring It Down plus Assassination (8 Siegpunkte). Gegen deine Harvester ein Assassine: charge Psychophage, dann etwa 5 Mortal Wounds plus Nahkampf.
+Reaktion: Nicht in Ruhe lassen, wenn er landet – er ist in deinen Nahkampf-Zonen verwundbar (Widerstand 9 gegen. Stärke 9–Stärke 11).
+
+Lord Exultant (Warlord) plus Infractors.
+
+Possessed Blade: plus 1 A und optional plus 1 D, Dev Wounds, Hazardous. Euphoric Strikes (1 mal pro Spiel: plus 3 A, AP plus 1). Perfectionists: Lethal Hits für die Einheit. Infractors: Precision auf allen Nahkampfwaffen, Reroll Wound am Objective.
+Precision im Nahkampf heißt: Hive Tyrant, Swarmlord können hinter den Tyrant Guard getroffen werden. Das ist dein Assassination-Risiko.
+Frenzied Host: Nach Advance oder Fallback plus 1 S für Battleline.
+Reaktion: Mittel. Wird er durch deine Tyrant-Blöcke gebunden, stirbt der Trupp schnell (Widerstand 4, 3 plus, 2 Lebenspunkte).
+
+Tormentors, 2 Stück (einer mit Lord Exultant).
+
+Infiltrators, Precision-Beschuss (Melta 12 Zoll D6 plus 2, Plasma), Objective Defiled: am Ende seiner Command Phase kontrollierte Objectives bleiben seine.
+Reaktion: Sticky-Objectives sind bei deiner Purge-and-Secure-Mission teuer – 4 Siegpunkte pro Nicht-Home-Objective. Du musst ihn aktiv mit mehr O-C überstimmen: Rippers (halbieren sein O-C) plus Pyrovores oder Guards, oder – nachdem die Defiler dezimiert sind – ein Norn im Objective-Modus (O-C 15).
+
+Abschnitt 4: Threat Matrix.
+
+Defiler, 2 Stück; Threat: Very High; Primary targets: Norns, Psychophages, Tyrant Guard; How it threatens them: 48 Zoll Dev Wounds, 5 plus-Crits wenn Empowered; Recommended response: Sicht verweigern, dann Nahkampf-Kill.
+Daemonettes, Fiends neben Defilern; Threat: High (System); Primary targets: – (Buff); How it threatens them: Schalten Empowered an; Recommended response: Zuerst vom Defiler wegschießen.
+Fiends (vorn); Threat: Medium–High; Primary targets: Pyrovores, Rippers, Zoans, Biovore; How it threatens them: Bewegung 12, Dev Wounds, 5 Attacken; Recommended response: Pyrovore-Overwatch (Torrent), Norn-Konter.
+Daemonettes (vorn); Threat: Medium; Primary targets: Harvester, O-C via Battle-shock; How it threatens them: Fights First, Horrifying Beauty; Recommended response: Synapse halten (3W6), Emissary-Blast.
+Daemon Prince (Wings); Threat: Medium–High; Primary targets: Psychophage, Hive Tyrant; How it threatens them: Deep Strike plus Charge-Mortal Wounds; Recommended response: Nach Landung mit Tyrant-Block töten.
+Lord Exultant plus Infractors; Threat: Medium; Primary targets: Characters (Precision); How it threatens them: Lethal, Devastating Wounds (Blade), Precision; Recommended response: Nicht mit Character-Blöcken allein kontern lassen, ohne Fights First.
+Tormentors, 2 Stück; Threat: Medium (Scoring); Primary targets: Objectives; How it threatens them: Sticky, Infiltrators; Recommended response: O-C-Überstimmung mit Norn.
+Chaos Spawn, 2 Stück; Threat: Low; Primary targets: Screens; How it threatens them: Bewegen sich 6 Zoll weg; Recommended response: Ignorieren oder mit Guards abräumen.
+
+Abschnitt 5: Target Priority.
+
+Kill early.
+1: Defiler (einer nach dem anderen – ein halb toter Defiler verliert Revel gegen Ziele, nicht für sich selbst; er ist ab 6 W Damaged: minus 1 to hit).
+2: Die Legions of Excess-Einheit, die direkt bei den Defilern steht (meist Daemonettes oder ein Fiend-Trupp). Das ist der billigste Weg, 30 bis 40 Prozent seines Fernkampfschadens abzuschalten.
+
+Control, avoid.
+Daemon Prince: Nicht jagen, bevor er landet. Wenn er landet, ist er im Nahkampf mit Swarmlord (8 Attacken Stärke 10, twin-linked) tot.
+Infractors plus Warlord: Mit Norn oder Guard-Block binden; nicht den Character-Block alleine hineinschicken.
+
+Ignore.
+Chaos Spawn – außer sie stehen auf einem Objective.
+Tormentors ohne Objective – Viertel-Siegpunkte für ihn, aber in der Summe weniger wert als deine Objective-Siegpunkte.
+
+Abschnitt 6: Deployment Analysis.
+
+Wahrscheinlich: Beide Defiler zentral oder hinten mit Lanes auf Central und die Expansions. Spawn davor. Tormentors infiltrieren auf Expansion(en) oder in deine Viertel. Lord plus Infractors mit Scout nach vorn. Daemonettes und mindestens ein Fiend-Trupp in Deep-Strike-Reserve, oder ein Legions of Excess-Trupp bleibt als Buff-Batterie bei den Defilern. Daemon Prince in Reserve.
+
+Castle oder Spread? Hybrid: Feuerbasis konzentriert (Defiler), Scoring gespreizt.
+
+Kernfrage: Kann er einen Norn plus Support in einem Damage-Cycle töten? Ja – einen Norn, den beide Defiler sehen. Er kann aber nicht gleichzeitig beide Norns plus beide Tyrant-Blöcke erledigen. Daraus folgt:
+
+Norn-Sichtbarkeit in diesem Matchup (entscheidend): Ein Norn, der ein Objective hält, ist immer sichtbar – er steht mit der Base in der Objective-Geländezone (deren Obscuring zählt für ihn nicht), überragt die Ruinen, und Monster sind nie hidden. Gegen zwei 48 Zoll-Defiler heißt das: Ein Norn auf einem Objective in Sicht beider Defiler stirbt in einem Zug. Verdeckt ist ein Norn nur hinter (nicht in) einer obscuring Geländezone – dort punktet er aber nicht.
+Deshalb in Runde 1 bis 2: Norns nicht als Objective-Anker, sondern als Konterdrohung hinter obscuring Zonen, zuletzt aufstellen. Die Objectives halten in dieser Phase Pyrovores (INFANTRY, dann hidden in der Objective-Zone, nur in 15 Zoll sichtbar; O-C 3 je Trupp). In deiner Command Phase Tyrannoformed (1 Kommandopunkt) auf die gehaltenen Objectives – Pyrovores sind Harvester –, dann bleiben sie dein, auch wenn der Trupp später weiterzieht oder stirbt.
+Achtung Defiler: Sie bewegen sich durch Gelände (Scuttling Walker). Ein Defiler, der in eine Geländezone läuft, ignoriert deren Obscuring für seine eigenen Sichtlinien. Plane die Deckung gegen seine nächste Position, nicht gegen die aktuelle.
+Overloaded-Flank-Variante ist hier gut: Assimilator (4 plus Invul), Hive-Tyrant-Block, Psychophage und Pyrovores auf die Seite eines Defilers. Ziel: Diesen Defiler in Runde 2 im Nahkampf töten. Der andere Defiler kann nicht alles davon in einem Zug entfernen.
+Swarmlord zentral – Malign Presence verteuert Uncanny Reactions (minus 1 to hit auf Slaanesh-Einheiten), Heroic Intervention des Daemon Prince, Possessive Mania.
+Emissary hinter einer obscuring Zone an deiner Expansion; das Objective selbst hält ein Pyrovore-Trupp. Die Emissary tritt erst auf das Objective (Objective-Modus: O-C 15, Feel No Pain 5 plus), wenn mindestens ein Defiler tot ist oder er sie nicht mehr mit beiden sehen kann.
+Pyrovores in Geländezonen (Hidden), gegen Fiends oder Daemonettes als Overwatch-Posten in 12 Zoll der Zonen, in denen Daemons landen können.
+Rippers in Reserve. Zoanthropes in Reserve – Defiler stehen häufig nahe der eigenen Kante oder Flanke; Runde 2 an der Seitenkante hereinkommen (nicht in seiner Aufstellungszone, aber 24 Zoll reichen oft) ist ein realistischer Schuss auf einen Defiler oder eine Buff-Einheit.
+
+Welchen Fehler er sich wünscht: Einen Norn auf Central in offener Sicht in Runde 1, oder Pyrovores oder Zoans offen, die er mit Excruciators wegputzt.
+
+Alternativen:
+Beide Defiler auf einer Seite, dann Triangle-Plan: Home plus Central plus andere Expansion, gehalten von Pyrovores plus Tyrannoformed Norns HINTER obscuring Zonen (nicht auf den Objectives in Defiler-Sicht) Hive-Tyrant-Block plus Psychophage an den Rand der Defiler-Lanes, Charge Runde 2.
+Defiler getrennt (je eine Flanke), dann Overload eine Flanke (Assimilator, Hive-Tyrant-Block, Psychophage, Pyrovores gegenüber EINEM Defiler) Der andere Defiler sieht höchstens einen Teil davon.
+Er stellt alle Daemons in Reserve, dann Defiler sind in Runde 1 NICHT Empowered (keine Legions of Excess-Einheit in 6 Zoll) Runde 1 ist dein Fenster, weit nach vorn zu gehen.
+
+Abschnitt 7: Movement and Positioning.
+
+Defiler bewegen sich 12 Zoll durch Gelände und Modelle. Du kannst sie nicht blockieren, sie können sich jederzeit neue Sichtlinien suchen. Deine Verteidigung: Infanterie (Pyrovores) hidden in den Objective-Zonen, Monster hinter (nicht in) obscuring Zonen. Monster auf einem Objective sind nie verdeckt.
+Deep-Strike-Zonen: Fiends oder Daemonettes oder Daemon Prince landen mehr als 8 Zoll von dir. Dark Apparitions (2 Kommandopunkte): Daemonettes, die nicht gebunden sind, gehen am Ende deiner Fight Phase zurück in Reserve und landen im nächsten Zug mehr als 6 Zoll von dir (wholly within 8 Zoll eines Emperor's Children-Trupps)., dann Eine 6 Zoll-Charge-Distanz für eine Fights-First-Einheit.
+Safe: Hinter (nicht in) obscuring Geländezonen, außerhalb der Sichtlinien beider Defiler. Für Pyrovores oder Zoans: in Geländezonen (hidden, solange sie nicht geschossen haben).
+Dangerous: Jedes Objective mit einem Monster darauf, das ein Defiler sehen kann; die Flanke, auf der beide Defiler Sicht haben.
+Conditional: Die Seitenränder – sicher vor Defilern, aber Deep-Strike-Zonen für Fiends.
+Screening: Pyrovores (3 Bases 80 mm) als 12 Zoll-Torrent-Posten zwischen Deep-Strike-Flächen und Home oder Zoanthropes. Ab Runde 2 8 Zoll-Kreise um Home und Harvester mit Körpern besetzen, damit Daemons nicht in Charge-Reichweite landen.
+
+Abschnitt 8: Charge, Fight Phase Analysis.
+
+Dein bevorzugter Charge: Hive-Tyrant-Block in einen Defiler (Runde 2).
+Shooting: Psychophage-Torrent auf den Defiler (Bio-stimulus: plus 1 AP für alle Tyranid-Nahkampfangriffe) Assimilator-Harpune (12 Zoll) auf denselben Defiler, dann Harpooned ( plus 2 Charge).
+Charge: Hive-Tyrant-Block, Assimilator. (Crushing Impact 1 Kommandopunkt mit dem Norn: Widerstand 11 W6, dann etwa 3,7 Mortal Wounds).
+Fight (du bist aktiv, Fights First durch Charge):
+Hive Tyrant: 6 Attacken Stärke 11 (Synapse plus Parasitic) AP minus 3 (Bio-stimulus), twin-linked, dann etwa 4 Wunden, dann 5 plus Invul, dann etwa 8 Schaden.
+Talons: 4 Attacken Stärke 9, dann etwa 2.
+6 Guards: 30 Attacken Stärke 7 AP minus 2, dann etwa 20 Treffer, dann 5 plus Wunde, dann etwa 6,7, dann 5 plus Save, dann etwa 4,5.
+Norn Assimilator: Talons oder Harpune (4 Attacken Stärke 13 AP minus 3 D6 plus 1), dann etwa 6, dann Summe etwa 20 Schaden: Defiler (18 W) tot, Parasitic Biomorphology aktiv (wenn der Hive Tyrant in 6 Zoll eines Harvesters steht – Psychophage oder Assimilator!).
+
+Wenn er dich chargt (Daemonettes auf Pyrovores, Fiends auf Rippers, Daemon Prince auf Psychophage):
+1. Ende seiner Movement Phase: Fire Overwatch (1 Kommandopunkt). Pyrovore-, Psychophage-Torrents treffen automatisch (Likely), dann gegen Daemonettes (7 plus oder 5 plus Invul) und Fiends (7 plus oder 5 plus Invul) sehr effektiv (Malign Presence verteuert nur SEINE Stratagems, nicht deine.).
+2. Charge: seine Einheit hat Fights First (Charge). Daemonettes haben Fights First ohnehin.
+3. Horrifying Beauty: Start der Fight Phase Battle-shock-Test. In Synapse 3W6, dann praktisch sicher Außerhalb Synapse (Pyrovores am Rand!), dann reales Risiko, O-C fällt auf "-".
+4. Heroic Intervention (1 Kommandopunkt) mit Tyrant-Block oder Norn in 12 Zoll, dann auch Fights First.
+5. Er aktiviert zuerst. Danach deine intervenierende Einheit.
+6. Rapacious Hunger (1 Kommandopunkt) nach einem Kill: sofort regenerieren.
+7. Nächste Command Phase: Guards oder Pyrovores zurückholen (Pyrovores sind INFANTRY, dann Modell zurück).
+
+Units, die nicht gechargt werden sollten: Chaos Spawn (weichen per Scuttling Horrors aus, bevor du ankommst; 6 Zoll-Ausweichen, wenn du in 8 Zoll endest). Stattdessen die Spawn passieren – Monster können durch gegnerische Nicht-Monster-Modelle normal bewegen.
+
+Köder: Er will deine Pyrovores mit Fiends fressen. Ein Pyrovore-Trupp am Objective-Rand mit dem Swarmlord-Block 10 Zoll dahinter = Heroic Intervention plus garantierter Kill (Fiends haben 7 plus Save).
+
+Achtung Precision: Die Infractors (Precision auf allen Nahkampfwaffen) und der Defiler-Strike (Precision) können deine Characters direkt treffen. Ein Defiler-Strike auf den Hive Tyrant: 5 Attacken Stärke 16 AP minus 3 D6 plus 1, dann etwa 2 ungerettete (4 plus Invul), dann etwa 9 Schaden, Tyrant fast tot. Guardian Organism (Feel No Pain 5 plus) reduziert. Den Hive-Tyrant-Block nur in einen Defiler schicken, wenn der Defiler danach tot ist.
+
+Abschnitt 9: Shooting Analysis.
+
+Realistische Werte pro Defiler, Empowered, Ziel nicht unter halber Stärke:
+
+Norn Emissary (Widerstand 11, 2 plus oder 4 plus Invul, Feel No Pain 4 plus gegen Mortal Wounds); Reaper, 2 Stück (8 Attacken, 2 plus, Crit 5 plus): etwa 4 (Devastating Wounds-Mortal Wounds halbiert durch Feel No Pain 4 plus); Ectoplasma: etwa 3,5; Excruciators: etwa 1,5; Summe: etwa 9, mit Feel No Pain 6.
+Norn Assimilator (4 plus Invul; Catalytic Biofortification 1 Kommandopunkt); Reaper, 2 Stück (8 Attacken, 2 plus, Crit 5 plus): etwa 6 ohne, etwa 4 mit Stratagem; Ectoplasma: etwa 3,5; Excruciators: etwa 1,5; Summe: etwa 9 bis 11, mit Feel No Pain 6 bis 7.
+Psychophage (Widerstand 9, 3 plus, Feel No Pain 5 plus); Reaper, 2 Stück (8 Attacken, 2 plus, Crit 5 plus): etwa 6; Ectoplasma: etwa 4; Excruciators: etwa 3; Summe: etwa 10, dann tot.
+Tyrant Guard (Widerstand 8, 3 plus); Reaper, 2 Stück (8 Attacken, 2 plus, Crit 5 plus): etwa 7; Ectoplasma: etwa 3; Excruciators: etwa 4; Summe: etwa 3 bis 4 Guards.
+
+dann Zwei Defiler töten einen gesunden Norn (etwa 18 bis 22, mit Feel No Pain 12 bis 15,). Ohne Empowerment sinkt der Schaden um etwa 30 Prozent.
+
+Maximale Bedrohungsreichweite: 12 Zoll Bewegung plus 48 Zoll = der ganze Tisch. Nur Sichtlinie schützt.
+
+Sonstiger Beschuss: Tormentors (Melta D6 plus 2 in 6 Zoll, Plasma), Daemon Prince Infernal Cannon (3 Attacken Stärke 5), Warlord-Plasmapistole. Unerheblich gegen Norns.
+
+Seine vermutliche Zielpriorität: Norn in Sicht > Psychophage > Zoanthropes > Tyrant Guard > Pyrovores.
+
+Abschnitt 10: Gotchas and Traps.
+
+1: Empowerment-Schalter.
+Was: Defiler mit Legions of Excess-Einheit in 6 Zoll, dann Reaper-Crits auf 5 plus.
+Erkennen: Steht eine Daemonette-, Fiend-Einheit in 6 Zoll eines Defilers?
+Verhindern: Diese Einheit zuerst töten oder ihn zwingen, sie vorzuschicken.
+2: Dark Apparitions (2 Kommandopunkte) – Daemonettes verschwinden nach deiner Fight Phase und kommen mehr als 6 Zoll von dir zurück (8 Zoll von Emperor's Children-Einheit). Plane Screens mit 6 Zoll statt 8 Zoll Radius, wenn Emperor's Children-Einheiten nahe sind.
+3: Ecstatic Slaughter (1 Kommandopunkt) – Wenn Legions of Excess im Fight eine Einheit vernichtet, darf eine Emperor's Children-Einheit in 6 Zoll (ungebunden) einen Charge in der Fight Phase erklären. Zwei Charges aus einem Kill. Stell keine Characters in 12 Zoll hinter einen Harvester, den er gerade tötet.
+4: Sycophantic Surge (1 Kommandopunkt) – Legions of Excess darf nach Advance oder Fallback chargen, wenn das Ziel schon mit Emperor's Children gebunden ist. Fiends können so sehr weit kommen.
+5: Violent Crescendo (2 Kommandopunkte) – 6 Zoll Pile-in oder Consolidate: Seine Nahkämpfer können in andere Einheiten hineinkonsolidieren (Engaging Consolidation) und so deine Einheiten vor deinem Zug binden.
+6: Objective Defiled (Tormentors) – Sticky-Objectives. Ein leeres Objective ist nicht neutral.
+7: Possessive Mania (1 Kommandopunkt) – Emperor's Children-Battleline am Objective: Angriffe darauf minus 1 AP. Deine AP minus 2 oder minus 3-Waffen werden schlechter; Malign Presence ( plus 1 Kommandopunkt) hilft.
+8: Absolute Sensory Overload, Agonised Cacophony – Battleline bleibt hidden trotz Schießen, deine Einheit bekommt plus 6 Zoll Detection Range (deine versteckten Pyrovores werden aus 21 Zoll sichtbar).
+9: Horrifying Beauty – O-C-Verlust durch Battle-shock außerhalb Synapse. Pyrovores oder Rippers nie außerhalb 6 Zoll (Swarmlord 9 Zoll) von Synapse.
+10: Scuttling Horrors – Chaos Spawn weichen 6 Zoll aus, wenn du in 8 Zoll endest. Nicht chargen wollen.
+
+Abschnitt 11: Opponent Decision Tree.
+
+Wie sind die Defiler aufgestellt?
+Beide mit Sicht auf dieselbe Zone.
+Liegt dein Home oder Central in dieser Zone?
+JA, dann Norn dahin erst in Runde 2 (nach Nahkampf-Kill eines Defilers).
+bis dahin Objective mit Guard-Block oder Pyrovores halten.
+NEIN, dann Diese Zone konzedieren (Triangle).
+Getrennt.
+Overload den erreichbareren Defiler (Hive-Tyrant-Block plus Assimilator plus Psychophage).
+Steht eine Legions of Excess-Einheit neben einem Defiler?
+JA, dann diese Einheit zuerst (Zoans oder Emissary-Blast).
+NEIN, dann Defiler Runde 1 nicht Empowered: aggressiver vorrücken.
+
+Abschnitt 12: Player's Game Plan.
+
+Default plan.
+
+1: Runde 1: Nichts Wertvolles in beide Defiler-Lanes. Home plus eigene Expansion plus Central mit Pyrovores besetzen (hidden in der Objective-Zone; nicht schießen, sonst sind sie nicht mehr hidden). Norns und Tyrant-Blöcke hinter obscuring Zonen. Swarmlord zentral hinter Deckung.
+1b. Runde 2, Command Phase: Tyrannoformed (1 Kommandopunkt) auf das wichtigste gehaltene Objective (Pyrovores sind Harvester).
+2: Runde 2: Einen Defiler töten (Hive-Tyrant-Block plus Assimilator plus Psychophage). Zoanthropes kommen an der Seite des zweiten Defilers oder auf die Buff-Einheit.
+3: Runde 3: Zweiten Defiler mit Swarmlord-Block plus Emissary. Danach hat er keinen Norn-Killer mehr.
+4: Runde 3 bis 5: Erst jetzt Norns offen auf Central plus Expansions (Objective-Modus, O-C 15, Feel No Pain 5 plus) – sobald höchstens noch ein Defiler lebt. Daemons auf Objectives töten (3 Siegpunkte).
+
+Adjustment triggers.
+
+Ein Defiler steht in 18 bis 20 Zoll deines Hive-Tyrant-Blocks, dann Charge vorbereiten (Advance nicht nötig: Bewegung 8 plus 2W6).
+Beide Defiler Empowered und mit Sicht auf deinen Norn, dann Norn vom Objective runter und HINTER eine obscuring Zone (auf dem Objective ist er nie verdeckt); vorher Tyrannoformed, falls ein Harvester dort steht. Wenn er stehen bleiben muss: Ablative Carapace (2 Kommandopunkte) nur für den Assimilator (Harvester), die Emissary kann es nicht nutzen.
+Daemon Prince landet, dann Swarmlord-Block kontert (8 Attacken Stärke 10 twin-linked). Er ist 8 Siegpunkte Secondaries.
+Er verteilt alles für Viertel, dann Nicht jagen. Nur Einheiten auf oder an Objectives töten (Purge-and-Secure-Siegpunkte).
+Tormentors halten ein Sticky-Objective, dann Rippers (halbiert O-C) plus Pyrovores oder Guard-Block; einen Norn mit O-C 15 nur draufstellen, wenn kein Defiler ihn dort sehen kann.
+
+Abschnitt 13: Primary Scoring Plan.
+
+Paarung (Herald): Du, dann Purge and Secure; er (Recon), dann Reconnaissance Sweep.
+
+Du: ab Runde 2 4 Siegpunkte je Nicht-Home-Objective (Central plus Expansion = 8, plus gegnerische Expansion = 12), 3 Siegpunkte für Kill auf oder an Objective, 3 Siegpunkte für neues Objective.
+Er: 3 oder 6 Siegpunkte Viertel, 1 Siegpunkte pro Kill, 3 Siegpunkte für mindestens 1 Nicht-Home-Objective. Die Defiler stehen oft in seinen Vierteln; für 6 Siegpunkte muss er Tormentors oder Spawn oder Daemons in deine Viertel schicken, dann Kill-Ziele für dich.
+Winning the fight gegen. winning the mission: Wenn beide Defiler bis Runde 3 tot sind, kannst du sein Scoring durch Kills ersticken. Wenn nicht, gewinnst du trotzdem über Objectives, solange die Objectives von hidden Pyrovores plus Tyrannoformed gehalten werden und Norns erst nach den Defilern auf sie treten.
+Konzedieren: Die Expansion, die in beiden Defiler-Lanes liegt – bis ein Defiler tot ist.
+Trading: Pyrovore-Trupp gegen einen Fiend-Trupp am Objective = gut (du 3 Siegpunkte, er 1 Siegpunkte).
+
+Secondaries: Bring It Down (Fixed) – 2 Defiler (18 Lebenspunkte) plus Daemon Prince (10 Lebenspunkte) = 3 Ziele à 4 Siegpunkte. Zweite: Assassination (Daemon Prince, 2 Lords Exultant = 3 Charaktere à 4 Siegpunkte) oder Tactical.
+
+Abschnitt 14: First Turn, Second Turn Considerations.
+
+Wenn du zuerst spielst.
+
+Sind Daemons in Reserve, sind die Defiler in seinem ersten Zug nicht Empowered. Trotzdem kein offenes Monster.
+Emissary-Tendril auf infiltrierte Tormentors (18 Zoll); Biovore auf Spawn oder Tormentors.
+Hive-Tyrant-Block so weit an einen Defiler heran, dass Runde 2 ein Charge möglich ist – ohne in dessen Sicht zu stehen.
+
+Wenn er zuerst spielt.
+
+Er schießt sofort 48 Zoll. Alles, was er sieht, stirbt oder verliert viel. Deployment entscheidet dieses Spiel.
+Reaktionen: Ablative Carapace (2 Kommandopunkte) auf den Psychophage oder Assimilator, wenn er ihn als Ziel wählt; Catalytic Biofortification (1 Kommandopunkt) gegen Reaper-Devastating Wounds-Wounds auf den Assimilator.
+Dein Zug 1 ist dann bereits der Konter: Hive-Tyrant-Block in Charge-Reichweite eines Defilers bringen.
+
+Abschnitt 15: Practical Round Checklist.
+
+BEFORE DEPLOYMENT.
+Welche Force Disposition wählt er? (Recon erwartet).
+Secondaries: Bring It Down fixed.
+Rippers plus Zoans in Reserve; Plan für ihren Eintrittskorridor.
+DEPLOYMENT.
+Defiler-Lanes (48 Zoll) gedanklich einzeichnen – kein Norn offen darin.
+Norns zuletzt, HINTER obscuring Zonen (nicht auf Objectives in Defiler-Sicht).
+Objectives mit Pyrovores (hidden) besetzen; Runde 2 Tyrannoformed.
+Hive-Tyrant-Block plus Assimilator plus Psychophage gegenüber EINEM Defiler.
+OPPONENT TURN.
+Welche Legions of Excess-Einheit steht in 6 Zoll eines Defilers?
+2 Kommandopunkte für Ablative Carapace, 1 Kommandopunkt für Catalytic Biofortification bereit.
+Overwatch (Pyrovores) gegen landende Fiends oder Daemonettes.
+Nichts außerhalb Synapse (Horrifying Beauty).
+MY TURN.
+Bio-stimulus zuerst, dann Charge.
+Crushing Impact mit Norn auf den Defiler.
+Parasitic-Kill in 6 Zoll eines Harvesters.
+Kill auf oder an Objective = 3 Siegpunkte.

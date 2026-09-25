@@ -1,0 +1,233 @@
+Gegneranalyse: Kai Jakobs (StealphX) – Tyranids (Spiegelmatch).
+
+List parsing warning: Herald-Metadaten ohne Force Disposition; der Listentext nennt Take and Hold. Detachments: Talons of the Norn Queen (1 Daemon Prince, Take and Hold) plus Crusher Stampede (2 Daemon Prince, Purge the Foe).
+
+Liste in Kürze (2000 Punkte).
+
+Hive Tyrant (Warlord, allein, Bonesword); Punkte: 195; Rolle gegen dich: Will of the Hive Mind (minus 1 Kommandopunkt), Onslaught (Assault plus Lethal Hits in 6 Zoll).
+Norn Assimilator (Synaptoprescience: 4 plus Invul); Punkte: 280; Rolle gegen dich: Wie deiner.
+Norn Emissary (Destabilising Predation: Fernkampf Anti-Character 2 plus); Punkte: 270; Rolle gegen dich: Tendril gegen deine Character-Blöcke.
+Maleceptor, 2 Stück; Punkte: 360; Rolle gegen dich: 18 Zoll Psychic Blast Stärke 10 D3, Encephalic Diffusion: minus 1 to hit für deine Einheiten in 6 Zoll.
+Tyrannofex (Rupture Cannon); Punkte: 190; Rolle gegen dich: 48 Zoll Stärke 18 AP minus 4 D6 plus 6.
+Exocrine; Punkte: 135; Rolle gegen dich: 36 Zoll D6 plus 3 Blast Stärke 9 AP minus 3 D3.
+The Red Terror; Punkte: 130; Rolle gegen dich: Deep Strike, Burrower, Precision-Maw.
+Tyranid Prime with Lash Whip, 2 Stück (allein); Punkte: 150; Rolle gegen dich: Synapse-Knoten, Nahkampf.
+Neurolictor; Punkte: 80; Rolle gegen dich: Infiltrators, Lone Operative, Battle-shock-Test jede Runde.
+Genestealers, 5 Stück ( mal 2); Punkte: 150; Rolle gegen dich: Scouts 8 Zoll, Objective-Grabber.
+Biovore; Punkte: 60; Rolle gegen dich: Indirect, Spore Mines.
+
+Force Disposition (Text): Take and Hold. Alternative: Purge the Foe (Crusher Stampede).
+
+Abschnitt 1: Executive Summary.
+
+Was die Armee will: Ein Monster-Feuerteppich mit Norn-Ankern. Crusher Stampede gibt seinen Monstern plus 2 O-C bei voller Stärke und plus 1 to hit (unter Starting Strength), plus 1 to wound (unter halber Stärke) – beschädigte Monster werden gefährlicher. Maleceptors, Exocrine, Tyrannofex schießen; Norns halten Objectives.
+Wichtigste Bedrohung: Die Maleceptors (zwei 18 Zoll-Psychic-Blasts Stärke 10 D3 und eine minus 1-to-hit-Aura gegen deinen Nahkampf) und sein Norn-Paar im O-C-Duell.
+Wichtigstes taktisches Problem: O-C. Sein Norn im Objective-Modus hat bei voller Stärke O-C 17 (15 plus 2). Deiner 15. Umgekehrt: Sobald er beschädigt ist, fällt der plus 2-Bonus weg.
+Was du vermeiden musst: Monster anzuschlagen und stehen zu lassen (Enraged Behemoths belohnt ihn) – entweder töten oder gar nicht angreifen. Und Nahkampf in 6 Zoll beider Maleceptors (minus 1 to hit).
+Strategischer Ansatz: Deine Regeneration und die Tyrant Guard sind der Unterschied – er hat keine Harvester. Ein Abnutzungsspiel gewinnst du. Kill die Maleceptors und seine Norns einzeln, heile deine Norns zurück, schlag seine Monster einmal richtig statt zweimal halb.
+
+Abschnitt 2: Opponent Game Plan.
+
+Crusher Stampede (Enraged Behemoths):
+Monster unter Starting Strength (= beschädigt, bei Einzelmodellen verlorene Wunden, Likely): plus 1 to hit.
+unter halber Stärke: zusätzlich plus 1 to wound.
+bei voller Stärke (nicht battle-shocked): plus 2 O-C.
+Talons of the Norn Queen: Protean Purpose, Lesser Prey ( plus 2 S), Tanglestrike, Catalytic Biofortification.
+Hive Tyrant: Onslaught (Assault plus Lethal Hits für Tyranid-Fernkampf in 6 Zoll), Will of the Hive Mind (minus 1 Kommandopunkt).
+Crusher-Stratagems: Rampaging Monstrosities (Reroll Hits), Savage Roar (minus 1 hit gegen sein Monster).
+Massive Impact (6W6 Mortal Wounds nach Charge), Swarm-guided Salvoes (Ignores Cover, Mod. ignorieren).
+Untrammelled Ferocity (durch Modelle oder Gelände), Corrosive Viscera (Deadly Demise automatisch).
+
+1: Aufstellung: Norns auf Central oder Expansion (Objective-Modus, O-C 17), Maleceptors oder Exocrine oder Tyrannofex mit Lanes, Genestealers per Scout auf Objectives, Neurolictor infiltriert, Red Terror in Reserve.
+2: Runde 1 bis 2: Beschuss auf deine Tyrant-Blöcke (Exocrine-Blast gegen 7 Modelle, Maleceptors), Tyrannofex auf Norns. Emissary (Anti-Character 2 plus) auf deine Character-Blöcke.
+3: Runde 2 bis 3: Norns chargen deine Norns (Lesser Prey, Massive Impact). Neurolictor battle-shockt deine Halter.
+4: Scoring: Battlefield Dominance (O-C-Duell).
+
+Er gewinnt, wenn er das O-C-Duell mit O-C-17-Norns gewinnt und deine Blöcke aus 18 bis 48 Zoll zermürbt, ohne dass du heilen kannst – also wenn er deine Harvester zuerst tötet.
+
+Abschnitt 3: Major Threats.
+
+Maleceptor, 2 Stück.
+
+Widerstand 11, 3 plus oder 4 plus Invul, 14 Lebenspunkte, Bewegung 8, SYNAPSE. Psychic Overload 18 Zoll D6 plus 3 Blast Stärke 10 AP minus 2 D3 (Psychic: ignoriert Hit-Modifikatoren). Encephalic Diffusion (Aura 6 Zoll, Psychic): deine Einheiten in 6 Zoll minus 1 to hit (und minus 1 to wound, wenn unter halber Stärke). Massive Talons Strike 3 Attacken Stärke 9 AP minus 2 D6 plus 1.
+Gegen Tyrant-Block (7 Modelle: Blast plus 1): etwa 7,5 Schuss, dann etwa 5 Treffer, dann Stärke 10 gegen Widerstand 8 3 plus, dann etwa 3,3, dann 3 plus AP minus 2, dann 5 plus, dann etwa 2,2 mal D3, dann etwa 2 Guards je Maleceptor. Gegen Norn: etwa 4, mit Feel No Pain 3,.
+Reaktion: Kill early. Widerstand 11 oder 4 plus Invul oder 14 Lebenspunkte – im Nahkampf mit minus 1 to hit (Aura!) zäh. Zoans (Psychic ignoriert den minus 1-Modifikator!) etwa 8. Swarmlord-Block (8 Attacken Stärke 10 AP minus 2, minus 1 hit, dann 3 plus) etwa 6. Zwei Aktivierungen nötig.
+
+Seine Norns (Assimilator 4 plus Invul, Emissary mit Destabilising Predation).
+
+Norn Assimilator: Bewegung 10, Widerstand 11, 2 plus oder 4 plus Invul (Synaptoprescience, laut seiner Liste), 16 Lebenspunkte, O-C 5; Harpune 12 Zoll 2 Attacken Stärke 12 AP minus 3 D6 plus 1; Talons 6 Attacken Stärke 9 AP minus 2 D3 plus Harpune (extra) 4 Attacken Stärke 12 AP minus 3 D6 plus 1; Harpooned ( plus 2 Charge gegen getroffenes MONSTER oder VEHICLE); HARVESTER. Norn Emissary: Bewegung 10, Widerstand 11, 2 plus oder 4 plus Invul, 16 Lebenspunkte, O-C 5; Psychic Tendril 18 Zoll (Precision 2 Attacken Stärke 8 AP minus 2 D3, Blast 2D6 Stärke 6 AP minus 2 D1, Melta 2 Attacken Stärke 12 AP minus 3 D6); Talons 6 Attacken Stärke 9 D3 plus Claws 4 Attacken Stärke 7 AP minus 2 D2; Feel No Pain 4 plus gegen Mortal Wounds. Singular Purpose: Objective-Modus (Feel No Pain 5 plus, O-C 15) oder Rerolls Hit plus Wound gegen eine gewählte Einheit. Crusher: plus 2 O-C bei voller Stärke, dann O-C 17 im Objective-Modus. Beschädigt: plus 1 to hit ( plus 1 to wound unter 8 W).
+Destabilising Predation: Alle Fernkampfangriffe der Emissary haben Anti-Character 2 plus – gegen deine Tyrant-Blöcke (CHARACTER-Keyword im Block) wird auf 2 plus kritisch verwundet. Blast-Profil (2D6 Stärke 6 AP minus 2), dann etwa 5 Wunden, dann etwa 3 Guards; Precision-Profil (2 Attacken Stärke 8 AP minus 2 D3, Precision), dann direkt am Hive Tyrant oder Swarmlord (etwa 2).
+Reaktion: Seine Norns sind Bring It Down (4 Siegpunkte) – aber 16 W, 2 plus oder 4 plus Invul. Ziel: O-C-Duell über Beschädigung gewinnen: Ein beschädigter Norn verliert plus 2 O-C (17, dann 15). Dann gewinnt dein Norn plus irgendein O-C-Beitrag.
+
+Tyrannofex (Rupture Cannon).
+
+Widerstand 12, 2 plus, 16 Lebenspunkte. Rupture Cannon 48 Zoll 2 Attacken Stärke 18 AP minus 4 D6 plus 6; Stinger Salvoes 24 Zoll 8 Attacken. Resilient Organism (1 mal : Damage 0).
+Gegen Norn: etwa 4 bis 5, mit Feel No Pain 3, (hohe Varianz, ein Treffer = 7 bis 12).
+Reaktion: Mittel. Bring It Down.
+
+Exocrine.
+
+Widerstand 10, 3 plus, 14 Lebenspunkte. Bio-plasmic Cannon 36 Zoll D6 plus 3 Blast Stärke 9 AP minus 3 D3 Heavy. Symbiotic Targeting: Reroll Hit-1er für Tyraniden gegen das Ziel.
+Gegen Tyrant-Block: etwa 3 Guards.
+Reaktion: Mittel; Nahkampf-schwach (Limbs 3 Attacken).
+
+Neurolictor.
+
+Widerstand 5, 4 plus oder 4 plus Invul, 7 Lebenspunkte, Lone Operative, Stealth, Infiltrators. Neural Disruption: in seiner Command Phase eine deiner Einheiten in 12 Zoll, dann Battle-shock-Test. Psychological Saboteur (12 Zoll): battle-shocked Einheiten minus 1 to hit, Tyraniden plus 1 to wound gegen sie.
+In Synapse (3W6) testest du sicher – aber außerhalb (Pyrovores am Rand, Rippers) fällst du.
+Reaktion: Assassination? Nein (kein Character). Mit Pyrovore-Torrent (Auto-Hit ignoriert Stealth) töten, wenn in 12 Zoll.
+
+Red Terror, Primes, Genestealers.
+
+Red Terror: Deep Strike, Burrower (nach Fight zurück in Reserve), Gaping Maw Precision plus Devastating Wounds gegen Infanterie (deine Guards oder Pyrovores; heilt sich). 12 Attacken Talons Stärke 7.
+Primes (allein): Synapse, 4 Attacken Stärke 8 D3 plus Whip.
+Genestealers, 2 Stück: Scouts 8 Zoll, 4 Attacken 2 plus Stärke 4 AP minus 2, O-C 5 je, dann Objective-Snatcher in Runde 1.
+
+Abschnitt 4: Threat Matrix.
+
+Maleceptor, 2 Stück; Threat: High; Primary targets: Tyrant-Blöcke, Norns; How it threatens them: 18 Zoll Blast Stärke 10 D3, minus 1 hit Aura; Recommended response: Zoans (Psychic), zwei Aktivierungen.
+Norn Assimilator oder Emissary; Threat: High (O-C); Primary targets: Deine Norns, Character-Blöcke; How it threatens them: O-C 17, Anti-Character 2 plus; Recommended response: Beschädigen, dann O-C 15, dann killen.
+Tyrannofex; Threat: Medium–High; Primary targets: Norns; How it threatens them: 48 Zoll Stärke 18 D6 plus 6; Recommended response: Später, Bring It Down.
+Exocrine; Threat: Medium; Primary targets: Tyrant-Blöcke; How it threatens them: Blast Stärke 9 AP minus 3 D3; Recommended response: Nahkampf.
+Neurolictor; Threat: Medium (System); Primary targets: O-C deiner Halter; How it threatens them: Battle-shock; Recommended response: Synapse, Torrent.
+Red Terror; Threat: Medium; Primary targets: Pyrovores, Guards; How it threatens them: Deep Strike, Precision; Recommended response: Kontern.
+Hive Tyrant (allein); Threat: Medium; How it threatens them: Onslaught, Kommandopunkte; Recommended response: Assassination 4 Siegpunkte.
+Genestealers, 2 Stück; Threat: Low–Medium; Primary targets: Objectives Runde 1; How it threatens them: Scouts 8 Zoll; Recommended response: Torrent.
+
+Abschnitt 5: Target Priority.
+
+Kill early: Maleceptors (Schaden plus Anti-Nahkampf-Aura), Neurolictor (billig, O-C-Saboteur).
+
+Control, avoid: Seine Norns – nur angreifen, wenn du den Norn in dieser Aktivierung tötest oder er dadurch das Objective verliert. Halb angeschlagene Norns treffen besser (Enraged Behemoths).
+
+Ignore: Genestealers nach Runde 1 (außer auf Objectives), Biovore.
+
+Abschnitt 6: Deployment Analysis.
+
+Wahrscheinlich: Norns auf Central plus seiner Expansion (Objective-Modus), Maleceptors vorne-mittig (Aura), Tyrannofex oder Exocrine hinten, Genestealers scouten auf deine Expansion oder Central, Neurolictor infiltriert, Red Terror in Reserve.
+
+Kernfrage: Kann er einen Norn plus Support in einem Zyklus töten? Mit allem Beschuss plus Norn-Charge: etwa 25 bis 30, mit Feel No Pain 17 bis 20, dann ja, einen. Das System? Nein – und er kann nicht heilen.
+
+Deine Aufstellung:
+Standard-Split mit Paaren: Norn plus Tyrant-Block plus Harvester je Seite.
+Harvester schützen! Er weiß, dass deine Heilung sein Problem ist. Pyrovores hidden (solange sie nicht geschossen haben), Psychophages hinter den Blöcken.
+Norn-Sichtbarkeit in diesem Matchup (gilt für beide Seiten): Ein Norn, der ein Objective hält, ist immer sichtbar (Base in der Objective-Geländezone, dann deren Obscuring zählt nicht; er überragt die Ruinen; Monster sind nie hidden). Sein gesamter Beschuss bringt etwa 18 bis 20, mit Feel No Pain 12 bis 13, an einen Norn – aber nur, wenn alles in Reichweite ist (Maleceptors 18 Zoll, Emissary 18 Zoll, Harpune 12 Zoll). Aus 36 bis 48 Zoll (Exocrine, Tyrannofex) kommen nur etwa 7 bis 8, mit Feel No Pain 5,. Deshalb: Norns auf Objectives, die außerhalb 18 Zoll plus Bewegung seiner Maleceptors oder Emissary liegen (Home, eigene Expansion) sind vertretbar; einen Norn auf Central erst, wenn ein Maleceptor tot ist. Umgekehrt stehen seine Norns auf Objectives genauso offen – Zoans und Biovore können sie jede Runde beschädigen (minus 2 O-C).
+Swarmlord zentral: Malign Presence verteuert alle seine Stratagems auf Einheiten in 12 Zoll (Rampaging Monstrosities, Savage Roar, Massive Impact, Swarm-guided Salvoes, Untrammelled Ferocity, Corrosive Viscera, Lesser Prey, Tanglestrike, Catalytic Biofortification). Sein Hive Tyrant gleicht 1 mal pro Runde 1 Kommandopunkt aus.
+Zoanthropes: auf den Tisch (hidden, solange sie nicht geschossen haben) oder Reserve gegen Tyrannofex oder Exocrine an Kanten. Ihr Hauptziel: Maleceptors (Psychic ignoriert minus 1 Aura).
+Rippers: Reserve, auf sein Norn-Objective: halbiert O-C 17, dann 8; dein Norn (15) gewinnt.
+
+Welchen Fehler er sich wünscht: Deinen Norn allein gegen seinen Norn plus Maleceptor-Aura; Harvester offen.
+
+Seine Norns beide auf einer Seite, dann Nicht frontal. Die andere Seite plus Central nehmen; Rippers auf eines seiner Norn-Objectives.
+Maleceptors vorne, dann Zoans plus Swarmlord-Block auf einen Maleceptor (zwei Runden), Nahkampf außerhalb der zweiten Aura.
+Red Terror in Reserve, dann Pyrovores oder Guards nicht isoliert (Gaping Maw Precision plus Devastating Wounds gegen Infanterie).
+
+Abschnitt 7: Movement and Positioning.
+
+Gleiches Tempo wie du (Norns Bewegung 10, Maleceptors Bewegung 8). Untrammelled Ferocity (1 Kommandopunkt): seine Monster durch Modelle und Gelände höchstens 4 Zoll.
+Encephalic Diffusion: 6 Zoll-Blasen um Maleceptors, in denen deine Angriffe minus 1 to hit haben (Psychic-Waffen ignorieren das; Torrent trifft automatisch).
+Safe: Außerhalb 18 Zoll der Maleceptors, außerhalb 48 Zoll-Lane des Tyrannofex.
+Dangerous: 6 Zoll-Blasen der Maleceptors für Nahkampf; 12 Zoll um Neurolictor für Einheiten außerhalb Synapse.
+
+Abschnitt 8: Charge, Fight Phase Analysis.
+
+Norn gegen Norn (dein Charge):
+Vorher: Psychophage Bio-stimulus (AP plus 1). Harpune, dann Harpooned ( plus 2 Charge). Tanglestrike auf seinen zweiten Norn oder Maleceptor.
+Singular Purpose: Protean Purpose, dann sein Norn als Ziel (Reroll Hit oder Wound) – nur wenn du ihn in 1 bis 2 Runden töten willst.
+Charge: Assimilator plus Hive-Tyrant-Block. Crushing Impact (1 Kommandopunkt).
+Fight: Assimilator Harpune 4 Attacken Stärke 13 (Lesser Prey Stärke 15) AP minus 4 (Bio) D6 plus 1 gegen Widerstand 11 2 plus oder 4 plus Invul, dann etwa 3 Wunden, dann 4 plus Invul, dann etwa 1,5 mal 4,5 = etwa 7 Talons 6 Attacken Stärke 12 AP minus 3, dann 3 plus, dann etwa 4, dann 4 plus Invul, dann etwa 2 mal 3 = etwa 6 Hive Tyrant etwa 5; Guards etwa 2, dann etwa 20, mit Feel No Pain 13,: sein Norn (16) tot, oder fast tot mit Feel No Pain 5 plus im Objective-Modus.
+Danger: Savage Roar (1 Kommandopunkt): dein Angreifer testet Battle-shock, minus 1 to hit (Fehlschlag: minus 1 to wound).
+
+Sein Norn chargt deinen: Heroic Intervention mit Tyrant-Block; dein Norn im Objective-Modus (Feel No Pain 5 plus) überlebt; in deiner Command Phase heilst du, er nicht. Nächster Zug: Konter.
+
+Red Terror (Deep Strike) auf Pyrovores: Overwatch mit Pyrovores (Torrent), Heroic Intervention mit Block.
+
+Abschnitt 9: Shooting Analysis.
+
+Maleceptor, 2 Stück (Psychic Blast Stärke 10 D3); Reichweite: 18 Zoll; Gegen Norn: etwa 4, mit Feel No Pain 3, je; Gegen Tyrant-Block: etwa 2 Guards je.
+Exocrine (D6 plus 3 Blast Stärke 9 AP minus 3 D3); Reichweite: 36 Zoll; Gegen Norn: etwa 3, mit Feel No Pain 2,; Gegen Tyrant-Block: etwa 3 Guards.
+Tyrannofex Rupture (2 Attacken Stärke 18 D6 plus 6); Reichweite: 48 Zoll; Gegen Norn: etwa 4 bis 5, mit Feel No Pain 3,; Gegen Tyrant-Block: etwa 1,5 Guards.
+Emissary Tendril (Anti-Character 2 plus); Reichweite: 18 Zoll; Gegen Norn: etwa 3, mit Feel No Pain 2,; Gegen Tyrant-Block: etwa 3 Guards oder etwa 2 am Character.
+Assimilator Harpune; Reichweite: 12 Zoll; Gegen Norn: etwa 3, mit Feel No Pain 2,; Gegen Tyrant-Block: etwa 1 Guard.
+Biovore; Reichweite: 48 Zoll; Gegen Tyrant-Block: etwa 0,5.
+
+dann Gegen einen Norn gesamt: etwa 18 bis 20, mit Feel No Pain 12 bis 13,. Mit Onslaught (Lethal Hits in 6 Zoll des Hive Tyrants) mehr.
+
+Abschnitt 10: Gotchas and Traps.
+
+1: Enraged Behemoths – beschädigte Monster plus 1 to hit, unter halber Stärke plus 1 to wound. Ganz töten oder gar nicht angreifen.
+2: plus 2 O-C bei voller Stärke – sein Norn im Objective-Modus: O-C 17. Ein einziger Schadenspunkt (zum Beispiel Biovore oder Zoans) nimmt ihm die plus 2 (Starting Strength bei Einzelmodellen: Likely – Core-Beispiel zeigt, dass verlorene Wunden bei Einzelmodellen über Stärkeschwellen entscheiden).
+3: Encephalic Diffusion – minus 1 to hit im Nahkampf in 6 Zoll jedes Maleceptors.
+4: Destabilising Predation – Anti-Character 2 plus gegen deine Blöcke.
+5: Savage Roar, Rampaging Monstrosities – defensive oder offensive Fight-Stratagems.
+6: Massive Impact (1 Kommandopunkt) – 6W6, dann Mortal Wounds nach Monster-Charge.
+7: Corrosive Viscera – sein Monster (ohne FLY) explodiert garantiert (Deadly Demise). Norn D6, Tyrannofex D6, Maleceptor oder Exocrine D3, dann nicht mit Pyrovores oder Rippers in 6 Zoll eines sterbenden Monsters.
+8: Neural Disruption – jede seiner Command Phases ein Battle-shock-Test für eine deiner Einheiten in 12 Zoll des Neurolictors, dann O-C-Klau vor seiner Wertung.
+9: Red Terror Burrower – nach dem Fight zurück in Reserve, taucht neu auf.
+10: Er kennt deine Fraktion – er weiß, was Harvester, Norns und Stratagems tun. Keine Überraschung durch Regeln; die Überraschung ist deine Regeneration im Verbund.
+
+Abschnitt 11: Opponent Decision Tree.
+
+Wo stehen seine Norns?
+Auf Objectives mit O-C 17, dann Biovore oder Zoans anschlagen (O-C 15) plus Rippers (O-C halbieren), dann dein Norn übernimmt ohne Nahkampf.
+Rücken vor, dann Empfangen mit Norn plus Tyrant-Block plus Harvester; er heilt nicht.
+Maleceptors in 18 Zoll?
+JA, dann Blöcke aus 18 Zoll oder hinter obscuring Zonen; Zoans auf Maleceptor.
+Neurolictor in 12 Zoll deiner Halter?
+JA, dann Synapse prüfen; Pyrovore-Torrent auf den Neurolictor.
+
+Abschnitt 12: Player's Game Plan.
+
+Default plan.
+
+1: Runde 1: Home plus Central-Rand plus eigene Expansion; Genestealers auf Objectives mit Torrent oder Biovore räumen.
+2: Runde 2: Maleceptor #1 (Zoans plus Swarmlord-Block). Seine Norns anschlagen (O-C 17, dann 15), Rippers auf sein Norn-Objective.
+3: Runde 3: Einen seiner Norns ganz töten (Singular Purpose plus Lesser Prey plus Tyrant-Block). Heilen.
+4: Runde 4 bis 5: O-C-Überlegenheit; deine Norns sind geheilt, seine nicht.
+
+Adjustment triggers.
+
+Sein Norn beschädigt ( höchstens 15 W), dann Kein plus 2 O-C mehr. Nicht weiter anschlagen, außer du tötest ihn.
+Sein Norn unter halber Stärke ( höchstens 8 W), dann plus 1 to hit und plus 1 to wound für ihn: SOFORT töten.
+Er schießt auf deine Harvester, dann Ablative Carapace (Assimilator oder Psychophages oder Pyrovores), Harvester hinter Blöcke.
+
+Abschnitt 13: Primary Scoring Plan.
+
+Paarung (Text): Beide Take and Hold, dann Battlefield Dominance. (Wählt er Purge the Foe über Crusher Stampede: du Immovable Object, er Unstoppable Force.).
+
+Home plus eigene Expansion plus Central = 13 Siegpunkte pro Runde.
+O-C: Sein Norn 17 (voll), 15 (beschädigt), Maleceptor 6 (voll, 4 plus 2), Tyrannofex 7, Exocrine 6, Genestealers 5, Primes 1. Deine: Norn 15, Tyrant-Block 9.
+Winning the mission: Über Zeit, weil du heilst und er nicht.
+
+Secondaries: Bring It Down (Fixed) – 2 Norns, 2 Maleceptors, Tyrannofex, Exocrine, Hive Tyrant (10 Lebenspunkte) = 7 Ziele. Zweite: Assassination – Hive Tyrant, Red Terror, 2 Primes = 4 (Primes W6, Red Terror 9 Lebenspunkte – leicht). Empfehlung: Bring It Down plus Assassination.
+
+Abschnitt 14: First Turn, Second Turn Considerations.
+
+Wenn du zuerst spielst.
+
+Genestealers (Scout 8 Zoll) auf Objectives, dann Torrent oder Biovore.
+Seine Norns mit Biovore oder Zoans anschlagen (O-C-Bonus weg), dann Objectives übernehmen.
+
+Wenn er zuerst spielt.
+
+Maleceptors oder Exocrine auf deine Blöcke; Emissary auf Character-Blöcke.
+Dein Zug 1: heilen, dann Maleceptor angreifen.
+
+Abschnitt 15: Practical Round Checklist.
+
+BEFORE DEPLOYMENT.
+Force Disposition bestätigen (Text: T und H).
+Bring It Down plus Assassination.
+Rippers Reserve (O-C-Halbierung gegen O-C-17-Norns).
+DEPLOYMENT.
+Paare: Norn plus Tyrant-Block plus Harvester.
+Harvester geschützt (sein Hauptziel).
+Swarmlord zentral.
+OPPONENT TURN.
+Neurolictor-Test in Synapse bestehen.
+Heroic Intervention bereit gegen Norn-Charge.
+Corrosive Viscera: 6 Zoll Abstand zu sterbenden Monstern.
+MY TURN.
+Heilen (er kann es nicht).
+Monster ganz töten oder gar nicht angreifen (Enraged Behemoths).
+Maleceptors mit Psychic (Zoans) – ignoriert minus 1 Aura.

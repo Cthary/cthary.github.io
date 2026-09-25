@@ -1,0 +1,237 @@
+Gegneranalyse: Jörg Castellaz (Khorgor) – Adeptus Custodes.
+
+Liste in Kürze (2000 Punkte, Lions of the Emperor 3 Daemon Prince).
+
+Inquisitor (Psyker) plus 4 Custodian Guard; Punkte: 235; Rolle gegen dich: Battleline, Objective-Halter, Psychic Shock Wave.
+Inquisitor (Psyker) plus 4 Custodian Guard; Punkte: 235; Rolle gegen dich: dito.
+Blade Champion plus 5 Custodian Wardens (Vexilla); Punkte: 360; Rolle gegen dich: Nahkampf-Anker, O-C 17, Living Fortress (Feel No Pain 4 plus).
+Shield-Captain on Dawneagle plus 3 Vertus Praetors; Punkte: 355; Rolle gegen dich: Schneller Block, Salvo Launcher 24 Zoll Stärke 10, Quicksilver Execution (Mortal Wounds).
+Shield-Captain in Allarus (Warlord, Superior Creation); Punkte: 155; Rolle gegen dich: Deep Strike, steht 1 mal wieder auf, minus 1 Kommandopunkt Stratagem.
+Allarus Custodians, 5 Stück ( mal 2); Punkte: 560; Rolle gegen dich: Monster-, Character-Jäger (Reroll Wound), Deep Strike, Unleash the Lions.
+Witchseekers, 4 Stück ( mal 2); Punkte: 100; Rolle gegen dich: Scouts 6 Zoll, Feel No Pain 3 plus gegen Psychic und Mortal Wounds, Battle-shock per Flamer.
+
+Force Disposition: Take and Hold (einzige Option).
+
+Abschnitt 1: Executive Summary.
+
+Was die Armee will: Wenige, extrem zähe Elite-Einheiten (2 plus oder 4 plus Invul) nehmen Objectives mit Deep Strike und Einzelkämpfern. Lions of the Emperor gibt jeder Custodes-Einheit, die allein steht (keine eigene Einheit in 6 Zoll), plus 1 to hit und plus 1 to wound – er spielt bewusst verteilt.
+Wichtigste Bedrohung: Die zwei Allarus-Trupps (Deep Strike, Slayers of Tyrants: Reroll Wound gegen Monster oder Character). Ein Trupp mit Lions-Bonus macht etwa 15, mit Feel No Pain 10, Schaden an einem Norn und zerlegt einen Tyrant-Block.
+Wichtigstes taktisches Problem: Seine Einheiten sind schwer zu töten (2 plus oder 4 plus Invul, 3 Lebenspunkte–8 Lebenspunkte) und deine D1-Masse (Tyrant Guard) ist gegen 2 plus Rüstung ineffizient. Und: fast alles hat Deep Strike.
+Was du vermeiden musst: 8 Zoll-Lücken in deiner Aufstellung ab Runde 2 (Deep Strike direkt neben einen Norn oder Harvester) und Tyrant-Blöcke ohne Nachbarn.
+Strategischer Ansatz: O-C und Zahl. Er hat 11 Einheiten, du 13 plus Heilung. Battlefield Dominance ist ein O-C-Duell: Norn (O-C 15) schlägt jeden seiner Blöcke außer den Wardens (O-C 17). Zwinge ihn, seine Einheiten zusammenzuziehen (dann verlieren sie Lions), und nutze Psychic-Waffen oder D3-Waffen gegen 2 plus oder 4 plus Invul.
+
+Abschnitt 2: Opponent Game Plan.
+
+Lions of the Emperor: Einheit ohne eigene Einheit in 6 Zoll, dann plus 1 to hit, plus 1 to wound.
+Martial Ka'tah: im Fight Sustained Hits 1 ODER Lethal Hits.
+Deep Strike: Allarus, 2 Stück, Shield-Captain Allarus, Wardens, Guard, Blade Champion.
+Unleash the Lions (1 Kommandopunkt): Allarus-Trupp in 5 Einzelmodelle, dann 5 Einheiten, jede "allein".
+
+1: Aufstellung: Guard-Blöcke auf Home oder Expansion, Wardens auf Central, Praetors an einer Flanke, Witchseekers per Scout vorn. Allarus und Warlord in Deep-Strike-Reserve (oder auf dem Tisch mit From Golden Light als Rückzug).
+2: Runde 2: Allarus landen mehr als 8 Zoll von dir, oft dort, wo ein einzelner Norn oder Tyrant-Block steht, und chargen 9 Zoll (oder erst in Runde 3 aus nächster Nähe).
+3: Unleash the Lions: Ein Allarus-Trupp zerfällt in 5 Einzelmodelle (O-C 2 je) – 5 Objectives oder Viertel gleichzeitig bedroht, jeder mit Lions-Bonus.
+4: Scoring: Battlefield Dominance – Home plus Central plus eine Expansion.
+
+Er gewinnt, wenn seine Einzelkämpfer dir die Objectives einzeln abnehmen, während du deine Schläge gegen 2 plus oder 4 plus Invul verschwendest.
+
+Abschnitt 3: Major Threats.
+
+Allarus Custodians, 5 Stück ( mal 2) – Hauptbedrohung.
+
+Widerstand 7, 2 plus oder 4 plus Invul, 4 Lebenspunkte, O-C 2, Bewegung 5, Deep Strike. Guardian Spear 5 Attacken 2 plus Stärke 7 AP minus 2 D2; Balistus 18 Zoll D6 Blast. Slayers of Tyrants: Reroll Wound gegen CHARACTER oder MONSTER oder VEHICLE-Einheiten (deine Tyrant-Blöcke sind Character und Monster; Norns oder Psychophages Monster). From Golden Light (1 mal ): am Ende deines Zuges zurück in Reserve.
+Gegen Norn (Lions aktiv, Rendax = Lethal): 25 Attacken, dann etwa 22 Treffer (etwa 4 Lethal), dann Rest 5 plus (Stärke 7 gegen Widerstand 11 = 6 plus, plus 1) mit Reroll, dann etwa 11, dann etwa 15 Wunden, dann 4 plus oder 4 plus Invul, dann etwa 7,5 mal 2 = etwa 15, mit Feel No Pain 10,. Ohne Lions: etwa 9, mit Feel No Pain 6,.
+Gegen Tyrant-Guard-Block: etwa 5 bis 6 Guards.
+Reaktion: Kill early, wenn sie landen. D3-Waffen (Hive Tyrant, Swarmlord, Norn-Talons) verwunden Widerstand 7 auf 2 plus oder 3 plus und töten ein Modell pro durchgekommener Wunde (4 Lebenspunkte, dann D3 reicht nicht immer: 2 Treffer pro Modell!). Warp Blast fokussiert (Stärke 12 AP minus 3 D6 plus 1) tötet pro Wunde ein Modell.
+
+Shield-Captain in Allarus (Warlord).
+
+Widerstand 7, 2 plus oder 4 plus Invul, 7 Lebenspunkte, Superior Creation: beim ersten Tod 2 plus, dann steht mit vollen W wieder auf. Auramite and Adamantine (1 mal ): alle Angriffe auf ihn D1 für eine Phase. Strategic Mastery: minus 1 Kommandopunkt für ein Stratagem pro Runde.
+Assassination 4 Siegpunkte – aber er muss zweimal sterben (zweites Mal: nochmal 4 Siegpunkte, Likely).
+Reaktion: Nicht als erstes Ziel; er ist ein Zeitfresser.
+
+Blade Champion plus 5 Wardens (Vexilla).
+
+Widerstand 6, 2 plus oder 4 plus Invul, 3 Lebenspunkte (Champion W6), O-C 3 je (Vexilla), dann Block O-C 17. Resolute Will: Angriffe mit S > Widerstand 6 haben minus 1 to wound (solange Character führt). Living Fortress (1 mal ): Feel No Pain 4 plus für eine Phase. Blade Champion: Reroll Charge, 1 mal Charge nach Advance.
+O-C 17 schlägt deinen Norn (15). Auf Central brauchst du Norn plus Rippers oder Norn plus Tyrant-Block.
+Reaktion: Nicht fighten – zäh (minus 1 to wound gegen deine Stärke 7 plus-Waffen). Mit O-C überstimmen (Norn plus Tyrant-Block = 24) oder Rippers.
+
+Shield-Captain on Dawneagle plus 3 Vertus Praetors.
+
+Widerstand 7, 2 plus oder 4 plus Invul, 5 Lebenspunkte (Captain 8 Lebenspunkte), Bewegung 12 FLY, Turbo-boost ( plus 6 Zoll statt Advance-Wurf). Salvo Launcher 24 Zoll 1 Attacken Stärke 10 AP minus 3 D6 plus 1 twin-linked ( mal 4); Interceptor Lance 5 Attacken Stärke 7 AP minus 2 D2 Lance. Quicksilver Execution (1 mal ): überflogene Nicht-Monster-Einheit, dann 2 Mortal Wounds pro Modell auf 2 plus, dann etwa 6 Mortal Wounds an Pyrovores oder Guards oder Zoans.
+Gegen Norn (Schuss): etwa 5 bis 6, mit Feel No Pain 3 bis 4,. Charge: etwa 6 bis 8, mit Feel No Pain 4 bis 5,.
+Reaktion: Mittel–hoch. Der schnellste Block – er jagt deine Pyrovores oder Zoans und kontrolliert Viertel oder Expansions.
+
+Custodian Guard plus Inquisitor, 2 Stück.
+
+Widerstand 6, 2 plus oder 4 plus Invul (Inquisitor: 6 plus Invul für die Einheit ist schlechter – irrelevant), 3 Lebenspunkte, O-C 2 (Block O-C 9). Stand Vigil: Reroll Wound am eigenen Objective. Sentinel Storm (1 mal ): zweimal schießen. Inquisitor: Psychic Shock Wave 18 Zoll Torrent 2D6 Stärke 3 AP minus 2 Dev Wounds; Power of the Rosette: plus 1 Kommandopunkt auf 3 plus, wenn Stratagem auf die Einheit.
+Reaktion: Objective-Halter. Mit O-C überstimmen; nicht zwingend töten.
+
+Witchseekers, 2 Stück.
+
+Widerstand 3, 3 plus, 1 Lebenspunkte, Scouts 6 Zoll, Feel No Pain 3 plus gegen Psychic Attacks und Mortal Wounds. Flamer 12 Zoll Torrent, dann Sanctified Flames: getroffene Einheit testet Battle-shock.
+Battle-shock, dann O-C – bis zu deinem nächsten Battle-shock-Schritt. Folgen: (a) Am Ende seines Zuges kann er dadurch ein Objective kontrollieren (relevant für seine Runde-1 oder 2-Wertung mehr Objectives). (b) In deiner Command Phase testest du erneut vor deiner Wertung – bestanden = O-C wieder da. Der Test selbst ist in Synapse (3W6, Leadership 7 plus oder 8 plus) fast sicher bestanden; außerhalb Synapse (Pyrovores oder Rippers am Rand) ist er ein echtes Risiko.
+Reaktion: Lästig, billig. Pyrovore-Torrent oder Biovore räumen sie (Psychic-Waffen sind ineffizient: Feel No Pain 3 plus).
+
+Abschnitt 4: Threat Matrix.
+
+Allarus, 2 Stück; Threat: Very High; Primary targets: Norns, Tyrant-Blöcke; How it threatens them: Deep Strike, Reroll Wound gegen Monster oder Char, Lions; Recommended response: Landezonen verweigern; nach Landung mit D3 oder Psychic töten.
+Captain plus Praetors; Threat: High; Primary targets: Pyrovores, Zoans, Flanken; How it threatens them: Bewegung 12 plus 6 Zoll, Quicksilver Mortal Wounds, Salvos; Recommended response: Screens, Zoans nicht offen.
+Blade Champion plus Wardens; Threat: High (O-C 17); Primary targets: Central; How it threatens them: Zäh, Resolute Will; Recommended response: O-C-Überstimmung, Rippers.
+Shield-Captain Allarus; Threat: Medium; Primary targets: Norns, Characters; How it threatens them: Deep Strike, Wiederauferstehung; Recommended response: Nicht fokussieren.
+Guard, 2 Stück plus Inquisitor; Threat: Medium (Scoring); Primary targets: Objectives; How it threatens them: O-C 9, Reroll Wound am Objective; Recommended response: O-C-Überstimmung.
+Witchseekers, 2 Stück; Threat: Low–Medium; Primary targets: O-C deiner Halter; How it threatens them: Battle-shock; Recommended response: In Synapse bleiben.
+
+Abschnitt 5: Target Priority.
+
+Kill early.
+1: Allarus-Trupps, sobald sie gelandet sind (sie stehen dann meist allein, dann du triffst sie mit allem).
+2: Praetors, wenn erreichbar (sie sind seine Mobilität für Expansions oder Viertel).
+
+Control, avoid.
+Wardens auf Central: überstimmen, nicht fighten (Resolute Will, Living Fortress, 4 plus Invul).
+Warlord (Superior Creation): kostet zwei Kills.
+
+Ignore.
+Witchseekers (außer auf Objectives), Guard-Blöcke auf seiner Hälfte.
+
+Abschnitt 6: Deployment Analysis.
+
+Wahrscheinlich: Guard, 2 Stück auf Home plus seiner Expansion, Wardens plus Blade Champion auf oder an Central, Praetors an einer Flanke, Witchseekers vorn (Scouts). Allarus, 2 Stück plus Warlord in Reserve (Deep Strike Runde 2). Alternativ ein Allarus-Trupp auf dem Tisch mit From Golden Light als Notausgang.
+
+Castle oder spread? Spread – Lions belohnt Einzelaufstellung.
+
+Kernfrage: Kann er einen Norn plus Support töten? Ja, wenn beide Allarus-Trupps (Lions) plus Warlord einen Norn angehen (etwa 30, mit Feel No Pain 20,). Beide Norns: nein. Einen Tyrant-Block: ja (Allarus, Reroll Wound gegen Character-Einheiten).
+
+Deine Aufstellung:
+Kompaktes Netz ohne 8 Zoll-Lücken ab Runde 2. Die Norns stehen jeweils mit einem Harvester oder Block in weniger als 8 Zoll, sodass Allarus nicht direkt daneben landen.
+Norns: Assimilator Central (neben den Wardens – O-C-Duell mit Tyrant-Block als Verstärkung), Emissary eigene Expansion.
+Norn-Sichtbarkeit in diesem Matchup: Ein Norn, der ein Objective hält, ist immer sichtbar (Base in der Objective-Geländezone, dann deren Obscuring zählt nicht; er überragt die Ruinen; Monster sind nie hidden). Gegen Custodes ist das vertretbar – sein Fernkampf gegen einen Norn ist gering. Die Gefahr sind Allarus per Deep Strike plus Charge und die Wardens im Nahkampf; dagegen helfen das 8 Zoll-Netz, Heroic Intervention-Deckung und Harvester in 6 Zoll, nicht Verstecken.
+Swarmlord zentral (Malign Presence verteuert Unleash the Lions, Peerless Warrior, Defiant to the Last, Swift as the Eagle, Gilded Champion, Manoeuvre and Fire; Strategic Mastery gleicht 1 mal pro Runde aus).
+Pyrovores als Screens vor Home oder Biovore gegen Praetors.
+Zoanthropes: Auf den Tisch in eine Ruine (hidden, solange sie in diesem oder dem vorigen Zug nicht geschossen haben). Er hat wenig Fernkampf und fast keine Kanten-Ziele; Zoans (Psychic, D6 plus 1) sind dein bestes Werkzeug gegen gelandete Allarus. Nicht gegen Witchseekers.
+Rippers: Reserve, dann auf Central (Wardens O-C 17, dann 9).
+
+Welchen Fehler er sich wünscht: Ein Norn allein an einer Flanke, dann Allarus landen daneben (Lions aktiv) und löschen ihn.
+
+Allarus beide in Reserve, dann Ab Runde 2 8 Zoll-Netz; Norns nie isoliert. Er landet dann 9 Zoll plus entfernt, dann Charge etwa 28 Prozent (ohne Reroll).
+Allarus auf dem Tisch, dann Sie laufen Bewegung 5 – langsam. Du siehst sie kommen; Zoans plus Biovore auf sie.
+Er stellt alles eng (verzichtet auf Lions), dann Seine Einheiten verlieren plus 1, plus 1; deine Blöcke gewinnen jeden Nahkampf-Austausch deutlich leichter.
+
+Abschnitt 7: Movement and Positioning.
+
+Deep Strike mehr als 8 Zoll, dann 9 Zoll-Charge (keine Reroll außer Blade Champion: Swift Onslaught).
+Praetors: Bewegung 12 plus 6 Zoll (Turbo), dann 18 Zoll plus ; FLY. Quicksilver Execution beim Überfliegen.
+Allarus oder Guard oder Wardens am Boden: Bewegung 5–Bewegung 6, dann langsam.
+Lions-Geometrie: Jede seiner Einheiten verliert den Bonus, wenn eine andere seiner Einheiten in 6 Zoll steht. Er wird Abstand halten, dann seine Einheiten stützen sich gegenseitig nicht (keine Heroic Intervention-Ketten).
+Safe: Innerhalb deines Netzes.
+Dangerous: Isolierte Positionen; Flanken, auf denen die Praetors stehen.
+Conditional: Central – O-C-Kampf gegen Wardens.
+
+Abschnitt 8: Charge, Fight Phase Analysis.
+
+Allarus landen und chargen deinen Norn:
+1. Ende seiner Movement Phase (nach Landung): Overwatch (1 Kommandopunkt) mit Pyrovores oder Psychophage in 12 Zoll: Torrent Stärke 6 gegen Widerstand 7 5 plus AP minus 1, dann gegen 2 plus kaum Wirkung. Lohnt NICHT.
+2. Charge 9 Zoll (etwa 28 Prozent). Wenn erfolgreich: Allarus Fights First.
+3. Heroic Intervention (1 Kommandopunkt) mit dem nächsten Tyrant-Block (Leap to Defend), dann Fights First WICHTIG: Sobald dein Block in 6 Zoll der Allarus steht, verlieren sie NICHT Lions (Lions prüft nur SEINE eigenen Einheiten). Kein Effekt – aber dein Block schlägt mit.
+4. Er zuerst: etwa 15, mit Feel No Pain 10, am Norn (Lions plus Rendax).
+5. Dein Block: Swarmlord 8 Attacken Stärke 10 gegen Widerstand 7, dann 2 plus twin-linked, AP minus 2, dann 4 plus oder 4 plus Invul, dann etwa 3,5 mal D3, dann etwa 2 bis 3 Allarus tot Guards 30 Attacken Stärke 6 oder Stärke 7 AP minus 1 gegen Widerstand 7, dann 4 plus, dann etwa 10 Wunden, dann 3 plus Save, dann etwa 3,3 mal D1, dann etwa 1 Allarus.
+6. Norn schlägt zurück (Talons 6 Attacken Stärke 10 D3, dann etwa 2 Allarus).
+7. Rapacious Hunger (1 Kommandopunkt) bei Kill: Regeneration.
+
+Dein bester Charge: Mit D3 oder D6-Waffen (Hive Tyrant, Swarmlord, Norns, Psychophage D2) auf isolierte Custodes (Allarus, Praetors). Tyrant Guard (D1) sind hier Körper und O-C, weniger Schaden.
+
+Nicht chargen: Wardens mit Blade Champion (Resolute Will minus 1 to wound gegen deine Stärke 7 plus, Living Fortress Feel No Pain 4 plus, Defiant to the Last – tote Modelle schlagen auf 4 plus noch zurück).
+
+Defiant to the Last (1 Kommandopunkt): Im Fight werden seine getöteten Modelle auf 4 plus (Characters 2 plus) noch aktiv und schlagen zurück, bevor sie entfernt werden. Rechne im Nahkampf mit Rückschlag auch von Modellen, die du getötet hast.
+
+Abschnitt 9: Shooting Analysis.
+
+Salvo Launcher, 4 Stück (Stärke 10 AP minus 3 D6 plus 1, twin-linked); Reichweite: 24 Zoll; Wirkung: Norn etwa 5 bis 6, mit Feel No Pain 3 bis 4, (mit Lions).
+Guardian Spears oder Castellan (2 Attacken Stärke 4 AP minus 1 D2, Assault); Reichweite: 24 Zoll; Wirkung: Pyrovores oder Zoans etwa 1 bis 2 W je Einheit.
+Balistus Grenade Launcher (D6 Blast Stärke 4); Reichweite: 18 Zoll; Wirkung: Pyrovores oder Rippers.
+Psychic Shock Wave, 2 Stück (2D6 Torrent Stärke 3 AP minus 2 Devastating Wounds); Reichweite: 18 Zoll; Wirkung: Pyrovores oder Zoans: Devastating Wounds-Crits auf 6.
+Witchseeker Flamer (Torrent Stärke 4 plus Battle-shock); Reichweite: 12 Zoll; Wirkung: Battle-shock-Test.
+Sentinel Storm (Guard 1 mal : zweimal schießen); Reichweite: 24 Zoll.
+
+dann Kein ernstzunehmender Monster-Fernkampf. Dein Risiko ist der Nahkampf.
+
+Abschnitt 10: Gotchas and Traps.
+
+1: Unleash the Lions (1 Kommandopunkt, seine Command Phase) – Allarus-Trupp, dann 5 Einzelmodelle. 5 Einheiten mit je O-C 2, alle mit Lions-Bonus. Erkennen: In seiner Command Phase; danach stehen 5 Allarus verteilt. Reaktion: Einzelne Allarus (4 Lebenspunkte) sind leicht zu töten – je 1 Kill = 1 Unit-Kill (No Prisoners!).
+2: From Golden Light – Allarus-Trupp verschwindet am Ende deines Zuges (1 mal ), landet erneut.
+3: Superior Creation – Warlord steht beim ersten Tod auf 2 plus mit vollen Wunden wieder auf.
+4: Gilded Champion (1 Kommandopunkt) – eine 1 mal pro Spiel-Fähigkeit eines Characters ein zweites Mal (zum Beispiel Auramite and Adamantine, Martial Inspiration).
+5: Defiant to the Last – tote Modelle schlagen zurück.
+6: Resolute Will (Wardens) – deine Stärke 7 plus-Waffen (fast alle) minus 1 to wound.
+7: Witchseekers Feel No Pain 3 plus gegen Psychic oder Mortal Wounds – Zoans, Emissary-Tendril, Synaptic Pulse sind gegen sie verschwendet.
+8: Quicksilver Execution – Praetors überfliegen eine Nicht-Monster-Einheit, dann 2 Mortal Wounds je Modell auf 2 plus. Zoanthropes oder Pyrovores oder Tyrant-Blöcke (der Block ist INFANTRY plus MONSTER – excluding MONSTER units, dann der Block ist ausgeschlossen, weil er das Keyword MONSTER hat!). Pyrovores oder Zoans oder Rippers oder Biovore sind betroffen.
+
+Abschnitt 11: Opponent Decision Tree.
+
+Wo sind die Allarus?
+Reserve, dann Runde 2: 8 Zoll-Netz, keine isolierten Norns oder Harvester.
+Nach Landung: sofort mit Zoans plus D3-Blöcken töten.
+Tisch, dann langsam; Biovore oder Zoans auf sie, Blöcke bleiben zusammen.
+Unleash the Lions benutzt?
+JA, dann Einzel-Allarus als Kill-Siegpunkte (No Prisoners, Purge-Aspekte) und O-C-Löcher nutzen.
+Wardens auf Central?
+JA, dann Norn (15) plus Tyrant-Block (9) oder Rippers. Nicht fighten.
+
+Abschnitt 12: Player's Game Plan.
+
+Default plan.
+
+1: Runde 1: Home plus eigene Expansion plus Central-Rand. Kompaktes Netz. Zoans in Ruine mit Sicht auf mögliche Landezonen.
+2: Runde 2: Allarus landen, dann töten, was gelandet ist (Zoans fokussiert, Swarmlord-Block, Hive-Tyrant-Block). Rippers auf Central.
+3: Runde 3: Central per O-C (Norn plus Block plus Rippers). Praetors, wenn in Reichweite.
+4: Runde 4 bis 5: Halten. Shadow in the Warp in seiner Command Phase (Custodes Leadership 6 plus, dann mit minus 1 in 6 Zoll Synapse etwa 42 Prozent Durchfall) – auf die Wardens auf Central.
+
+Adjustment triggers.
+
+Allarus landen neben einem Norn, dann Heroic Intervention mit Tyrant-Block; nach seinem Schlag alles auf die Allarus (sie stehen allein).
+Praetors fliegen über deine Pyrovores, dann Quicksilver (1 mal ) ist dann verbraucht; danach sind Pyrovores sicherer.
+Er zieht Einheiten zusammen (kein Lions), dann Nahkampf wird für dich deutlich günstiger – aggressiver spielen.
+Warlord stirbt das erste Mal, dann Er steht auf 2 plus wieder auf (volle W). Nicht überrascht sein.
+
+Abschnitt 13: Primary Scoring Plan.
+
+Paarung: Beide Take and Hold, dann Battlefield Dominance.
+
+O-C-Vergleich: Wardens-Block 17, Allarus 10 (oder 5 mal 2), Guard-Blöcke 9, Praetor-Block 8, Witchseekers 4.
+Deine: Norn 15 (Objective-Modus), Tyrant-Block 9, Psychophage 3, Pyrovores 3, Rippers halbieren.
+Ziel: Home plus eigene Expansion plus Central = 13 Siegpunkte pro Runde. Central gegen Wardens mit Norn plus Block.
+Er hat nur 11 Einheiten. Jede Einheit, die du tötest, fehlt ihm dauerhaft für O-C. Deine Einheiten regenerieren.
+Winning the fight gegen. mission: Du tötest nicht viel pro Runde – aber du verlierst auch wenig, solange du keine isolierten Ziele bietest. Über 5 Runden gewinnt dein O-C.
+
+Secondaries: Assassination (Fixed) – 2 Inquisitoren (4 Lebenspunkte), Blade Champion (W6), Shield-Captain Dawneagle (8 Lebenspunkte), Warlord (7 Lebenspunkte, 2 mal möglich) = 5 bis 6 Kills à 4 Siegpunkte. Zweite: No Prisoners (Unleash the Lions erzeugt Einzelmodell-Einheiten) oder Tactical. Bring It Down: keine Ziele (kein W mindestens 10) – nicht wählen.
+
+Abschnitt 14: First Turn, Second Turn Considerations.
+
+Wenn du zuerst spielst.
+
+Objectives besetzen, kompakt bleiben. Biovore oder Zoans auf Witchseekers oder Guard nur, wenn sonst nichts.
+Keine 8 Zoll-Lücken hinter deiner Front für Runde 2.
+
+Wenn er zuerst spielt.
+
+Er scoutet oder positioniert; Praetors gegebenenfalls mit Quicksilver auf eine vorgeschobene Einheit.
+Runde 2 (sein Zug): Allarus landen. Kommandopunkte sparen: Heroic Intervention (1), Counteroffensive (2) nach dem ersten Allarus-Schlag.
+
+Abschnitt 15: Practical Round Checklist.
+
+BEFORE DEPLOYMENT.
+Battlefield Dominance; Home Pflicht.
+Assassination fixed (kein Bring It Down!).
+Zoans auf den Tisch, Rippers Reserve.
+DEPLOYMENT.
+Kompaktes Netz, keine isolierten Norns.
+Assimilator Central (gegen Wardens), Tyrant-Block in 12 Zoll.
+Pyrovores als Screen vor Home oder Biovore.
+OPPONENT TURN.
+Wo können Allarus landen (>8 Zoll)? Welche deiner Einheiten ist allein?
+Unleash the Lions?, dann 5 Einzel-Allarus.
+Heroic Intervention plus Counteroffensive bereit.
+MY TURN.
+Gelandete Allarus sofort (Zoans, D3-Blöcke).
+Central: Norn plus Block plus Rippers gegen Wardens.
+Keine Psychic-Waffen auf Witchseekers.

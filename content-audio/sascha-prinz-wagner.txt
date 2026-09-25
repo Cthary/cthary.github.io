@@ -1,0 +1,210 @@
+Gegneranalyse: Sascha Prinz-Wagner (Schattenlicht) – Emperor's Children (Monster Mash 2.0).
+
+Liste in Kürze (2000 Punkte, Carnival of Excess 2 Daemon Prince plus Frenzied Host 1 Daemon Prince).
+
+Fulgrim (Warlord); Punkte: 340; Rolle gegen dich: Widerstand 11, 2 plus oder 4 plus Invul, 16 Lebenspunkte, Bewegung 16, Strike 6 Attacken Stärke 14 D6 plus 1, wechselnde Primarch-Fähigkeit.
+Shalaxi Helbane (Legions of Excess); Punkte: 315; Rolle gegen dich: Quarry: Reroll Hit plus Wound gegen ein Ziel, Soulpiercer Stärke 12 D6 plus 2 Precision, Reroll Advance oder Charge.
+Keeper of Secrets (Warp Walker: plus 6 Zoll statt Advance, durch Modelle) (Legions of Excess); Punkte: 300; Rolle gegen dich: Bewegung 14, Nahkampf, minus 1 to hit gegen ihn.
+Keeper of Secrets (Legions of Excess); Punkte: 265; Rolle gegen dich: dito.
+Daemon Prince of Slaanesh with Wings (Possessed Blade); Punkte: 240; Rolle gegen dich: Bewegung 14 FLY, Deep Strike, Charge-Mortal Wounds, minus 1 Damage.
+Defiler (Ecto, 2 Excruciator, 2 Heavy Reaper); Punkte: 330; Rolle gegen dich: 48 Zoll Dev Wounds (Empowered: Crits auf 5 plus).
+Maulerfiend (Magma Cutters); Punkte: 120; Rolle gegen dich: Nahkampf Stärke 14 D6 plus 1.
+Fiends, 3 Stück (Legions of Excess); Punkte: 90; Rolle gegen dich: Bewegung 12, Deep Strike, Dev Wounds.
+
+Force Disposition laut Herald: Reconnaissance (Frenzied Host). Alternative: Disruption (Carnival).
+
+Abschnitt 1: Executive Summary.
+
+Was die Armee will: Monster gegen Monster. Sechs große Nahkampf-Modelle (Fulgrim, Shalaxi, 2 Keeper, Daemon Prince, Maulerfiend) plus ein Defiler auf 48 Zoll. Durch Carnival of Excess sind Emperor's Children-Einheiten in 6 Zoll von Legions-of-Excess-Einheiten (Keeper, Shalaxi, Fiends) Empowered (Sustained Hits; Fulgrim oder Defiler-Reaper: Crits auf 5 plus). Seine Primary ist Reconnaissance Sweep – Viertel plus Kills.
+Wichtigste Bedrohung: Shalaxi Helbane mit Quarry auf einem Norn (Reroll Hit plus Wound, Stärke 12 AP minus 3 D6 plus 2, Precision gegen Characters) und Fulgrim. Zusammen: ein Norn oder ein Tyrant-Block pro Runde.
+Wichtigstes taktisches Problem: Seine Monster sind schnell (Bewegung 14–Bewegung 16), zäh (4 plus Invul, minus 1 to hit bei Keepern oder Fulgrim, minus 1 Damage beim Daemon Prince) und verteilen sich für Reconnaissance Sweep über vier Viertel.
+Was du vermeiden musst: Einen Norn oder Character-Block isoliert, wenn Shalaxi ihn als Quarry hat. Und: Zu viel Schaden in die Keeper (minus 1 to hit) statt in die Ziele, die sterben.
+Strategischer Ansatz: Er hat nur 8 Einheiten. Jeder Kill ist groß (Bring It Down oder Assassination). Deine Primary (Purge and Secure) belohnt Kills auf Objectives. Überlade dort, wo er angreift, und töte ein Monster pro Runde mit Norn plus Tyrant-Block plus Bio-stimulus.
+
+Abschnitt 2: Opponent Game Plan.
+
+Carnival of Excess: Emperor's Children-Einheiten in 6 Zoll einer Legions-of-Excess-Einheit (Keeper, Shalaxi, Fiends) sind Empowered, dann Sustained Hits 1; Waffen, die schon Sustained haben (Fulgrim-Blades, Defiler-Reaper), critten auf 5 plus.
+Frenzied Host: nach Advance oder Fallback plus 1 S für Battleline (in dieser Liste kaum relevant – keine Battleline-Masse).
+Revel in Desecration (Defiler): plus 1 to hit gegen Ziele, die NICHT unter halber Stärke sind.
+
+1: Aufstellung: Monster verteilt, Defiler mit Lane, Fiends in Reserve, Daemon Prince in Reserve (Deep Strike). Shalaxi wählt vor Runde 1 eine Quarry (vermutlich ein Norn oder der Hive-Tyrant-Block).
+2: Runde 1 bis 2: Monster rennen (Keeper Bewegung 14 plus 6 Zoll Warp Walker, Fulgrim Bewegung 16, Shalaxi Reroll Advance oder Charge) in deine Linien. Defiler schießt auf Norns.
+3: Scoring: Recon Sweep – Einheiten in 3 bis 4 Vierteln (6 Siegpunkte), 1 Siegpunkte pro Kill, 3 Siegpunkte für ein Nicht-Home-Objective. Mit nur 8 Einheiten muss er Monster auf Viertel verteilen – die dann einzeln stehen.
+
+Er gewinnt, wenn seine Monster jede Runde eins deiner großen Ziele töten und dabei über die Viertel verteilt bleiben. Er verliert, wenn seine Monster einzeln in deine überladenen Konterzonen laufen.
+
+Abschnitt 3: Major Threats.
+
+Shalaxi Helbane.
+
+Widerstand 10, 3 plus oder 4 plus Invul, 20 Lebenspunkte, Bewegung 14, Reroll Advance und Charge. Soulpiercer 6 Attacken 2 plus Stärke 12 AP minus 3 D6 plus 2 Precision; Snapping Claws (Extra) 4 Attacken Stärke 6 Devastating Wounds D3. Lash 12 Zoll 6 Attacken. Pavane (Psychic Witchfire, Devastating Wounds; fokussiert Sustained 3).
+Monarch of the Hunt: vor Runde 1 eine Quarry (Reroll Hit plus Wound im Nahkampf); stirbt sie, neue Quarry.
+Gegen Norn (Quarry): etwa 5,8 Treffer, dann etwa 5,2 Wunden (Reroll, Stärke 12 gegen Widerstand 11, dann 3 plus), dann 4 plus Invul, dann etwa 2,6 mal 5,5 = etwa 14 plus Claws etwa 3, dann etwa 17, mit Feel No Pain 11,.
+Precision gegen deine Tyrant-Blöcke: trifft Hive Tyrant oder Swarmlord direkt, dann etwa 14 an einem 10 Lebenspunkte-Character, dann Character tot.
+Reaktion: Frag nach der Quarry (öffentlich). Diese Einheit nie allein. Shalaxi ist Bring It Down plus Assassination (8 Siegpunkte).
+
+Fulgrim (Warlord).
+
+Widerstand 11, 2 plus oder 4 plus Invul, 16 Lebenspunkte, Bewegung 16, FLY, MOBILE, Deep Strike. Daemonic Blades Strike 6 Attacken Stärke 14 AP minus 3 D6 plus 1 Sustained, Sweep 12 Attacken Stärke 8 AP minus 2 D2 Sustained; Serpentine Tail 6 Attacken; Malefic Lash 12 Zoll 6 Attacken Stärke 8. Daemonic Poisons: getroffenes Ziel dauerhaft vergiftet, dann jede Command Phase 4 plus, dann D3 Mortal Wounds.
+Daemon Primarch of Slaanesh (Start deiner Command Phase wählt er eine): Beguiling Form (minus 1 to hit gegen ihn), Daemonic Speed (Fights First), Enthralling Hypnosis (in 6 Zoll: Fallback nur mit Leadership-Test).
+Empowered (Legions of Excess in 6 Zoll): Sustained-Waffen critten auf 5 plus.
+Gegen Norn: etwa 12 bis 14, mit Feel No Pain 8 bis 9,.
+Reaktion: Hoch. 8 Siegpunkte. Fights First (wenn gewählt), dann er schlägt in deinem Zug vor dir, selbst wenn du chargst (beide Fights First, dann aktiver Spieler zuerst: du, in deinem Zug).
+
+Keeper of Secrets, 2 Stück.
+
+Widerstand 10, 5 plus (3 plus mit Shining Aegis – hier nicht gelistet), 4 plus Invul, 18 Lebenspunkte, Bewegung 14. Mesmerising Form: minus 1 to hit gegen ihn. Witstealer 6 Attacken Stärke 8 AP minus 2 D3 plus Snapping Claws 4 Attacken Stärke 6 AP minus 2 Devastating Wounds D3. Daemon Lord of Slaanesh: Legions of Excess in 6 Zoll plus 1 AP im Nahkampf. Warp Walker (einer): plus 6 Zoll statt Advance, durch Modelle.
+Gegen Norn: etwa 8 bis 10, mit Feel No Pain 5 bis 7,. Gegen Pyrovores oder Guards: Phantasmagoria plus Nahkampf.
+5 plus Save! Deine Guards (AP minus 1) und Tyrants (AP minus 2) zwingen ihn auf den 4 plus Invul. Zoanthropes (Stärke 12 AP minus 3 D6 plus 1): etwa 9 an einem Keeper.
+Reaktion: Mittel. Bring It Down plus Assassination.
+
+Daemon Prince of Slaanesh (Possessed Blade), Maulerfiend, Defiler.
+
+Daemon Prince: Bewegung 14, FLY, Deep Strike, Widerstand 9 2 plus oder 4 plus Invul, 10 Lebenspunkte, minus 1 Damage auf jeden Angriff. Strike 6 Attacken Stärke 8 AP minus 2 D3, hier mit Possessed Blade ( plus 1 A, optional plus 1 D, Dev Wounds, Hazardous). Daemonic Destruction: nach Charge W6 pro verbleibendem Wundpunkt, 4 plus = Mortal Wounds (max. 6). Empyric Suffusion: Heroic Intervention kostet ihn 0 Kommandopunkte (Malign Presence des Swarmlord macht daraus wieder 1 Kommandopunkt, wenn in 12 Zoll). Gegen einen Harvester (Psychophage) ein Assassine: etwa 5 Mortal Wounds plus Nahkampf. Bring It Down plus Assassination (8 Siegpunkte).
+Maulerfiend: Widerstand 10, 3 plus oder 5 plus Invul, 12 Lebenspunkte, Fists 6 Attacken Stärke 14 D6 plus 1. Gegen Norn etwa 8, mit Feel No Pain 5,.
+Defiler: Bewegung 12, Widerstand 11, 3 plus oder 5 plus Invul, 18 Lebenspunkte, Scuttling Walker (bewegt sich durch Gelände). Ectoplasma 36 Zoll D6 Blast Stärke 12 AP minus 3 D3; 2 mal Excruciator 36 Zoll 6 Attacken Stärke 6 AP minus 1 D2; 2 mal Heavy Reaper 48 Zoll 4 Attacken Stärke 9 AP minus 1 D3 Dev Wounds, Sustained Hits 1; Revel plus 1 to hit. Empowered (Legions of Excess in 6 Zoll): Reaper critten auf 5 plus. Gegen einen Norn: etwa 9 bis 11, mit Feel No Pain 6 bis 7, Empowered, etwa 6 bis 7, mit Feel No Pain 4 bis 5, ohne. Gegen Psychophage etwa 10 (tot). Ein Defiler allein tötet keinen gesunden Norn.
+Fiends: Bewegung 12, Deep Strike, Dev Wounds – Harvester-Jäger, Empowerment-Quelle.
+
+Abschnitt 4: Threat Matrix.
+
+Shalaxi Helbane; Threat: Very High; Primary targets: Quarry (Norn oder Tyrant-Block); How it threatens them: Reroll Hit oder Wound, Precision; Recommended response: Quarry schützen, bei Kontakt kontern.
+Fulgrim; Threat: Very High; Primary targets: Norns, Tyrant-Blöcke; How it threatens them: 6 Attacken Stärke 14 D6 plus 1, Poison; Recommended response: Überzahl, Fights First beachten.
+Defiler; Threat: High; Primary targets: Norns, Psychophages; How it threatens them: 48 Zoll Devastating Wounds (Empowered); Recommended response: Hinter obscuring Zonen bis Kontakt; Nahkampf.
+Keeper, 2 Stück; Threat: High; Primary targets: Norns, Pyrovores; How it threatens them: Bewegung 14, minus 1 to hit; Recommended response: Zoans, Norn-Talons.
+Daemon Prince; Threat: Medium–High; Primary targets: Psychophages, Characters; How it threatens them: Deep Strike, Charge-Mortal Wounds; Recommended response: Swarmlord-Konter.
+Maulerfiend; Threat: Medium; Primary targets: Norns; How it threatens them: Stärke 14 D6 plus 1; Recommended response: Konter.
+Fiends; Threat: Medium; Primary targets: Harvester; How it threatens them: Bewegung 12, Devastating Wounds; Recommended response: Torrent-Overwatch.
+
+Abschnitt 5: Target Priority.
+
+Kill early: Shalaxi (wenn sie deinen Konter-Radius betritt) und der Defiler (einziger Fernkampf-Norn-Schaden). Fiends, wenn sie als Empowerment-Quelle neben Fulgrim oder Defiler stehen.
+
+Control, avoid: Keeper (minus 1 to hit, 4 plus Invul) – nur mit Zoans oder Norn-Übermacht. Fulgrim – nur mit zwei Blöcken plus Norn.
+
+Ignore: Maulerfiend, bis er in deinen Blöcken steht.
+
+Abschnitt 6: Deployment Analysis.
+
+Wahrscheinlich: Monster breit verteilt (Recon-Viertel), Defiler hinten, Fiends oder Daemon Prince in Reserve.
+
+Kernfrage: Einen Norn in einem Zyklus? Ja (Shalaxi plus ein weiteres Monster). Das ganze System? Nein – er hat 8 Einheiten.
+
+Deine Aufstellung:
+Norns zuletzt, jeder mit Tyrant-Block in 12 Zoll und Harvester in 6 Zoll.
+Norn-Sichtbarkeit in diesem Matchup: Ein Norn, der ein Objective hält, ist immer sichtbar (Base in der Objective-Geländezone, dann deren Obscuring zählt nicht; er überragt die Ruinen; Monster sind nie hidden). Gegen diese Liste ist das vertretbar: Sein einziger ernster Fernkampf ist ein Defiler (etwa 9 bis 11, mit Feel No Pain 6 bis 7, Empowered) – das überlebt ein Norn und heilt in deiner Command Phase. Die echte Gefahr ist der Nahkampf (Shalaxi etwa 17, mit Feel No Pain 11, an der Quarry, Fulgrim etwa 12 bis 14, mit Feel No Pain 8 bis 9,) – dagegen hilft Verstecken nicht, sondern Heroic Intervention-Deckung, Harvester in 6 Zoll und Tiefe. Regel: Ein Norn auf einem Objective darf nicht gleichzeitig in Defiler-Sicht und in Charge-Reichweite (20 bis 28 Zoll) von Shalaxi plus einem zweiten Monster stehen.
+Die Shalaxi-Quarry (vor Runde 1 bekannt) bekommt die meiste Deckung.
+Swarmlord zentral (Malign Presence verteuert Violent Crescendo, Sycophantic Surge, Ecstatic Slaughter, Uncanny Reactions, Dark Apparitions).
+Zoanthropes: auf den Tisch (hidden, solange sie nicht geschossen haben) – Ziele: Keeper (5 plus Save), Defiler, Fiends. Oder Reserve gegen den Defiler an der Kante.
+Rippers: Reserve.
+Pyrovores als Overwatch-Posten gegen Fiends.
+
+Welchen Fehler er sich wünscht: Die Quarry isoliert; Einheiten verteilt, sodass jedes Monster einzeln einen Gegner findet.
+
+Monster verteilt (Recon), dann Du überlädst EINE Zone; jedes Monster, das dorthin kommt, stirbt Andere Viertel darf er haben – deine Primary zählt Objectives und Kills, nicht Viertel.
+Monster konzentriert, dann Er verzichtet auf Viertel-Siegpunkte. Overload-Test: 6 Monster gegen deinen Block, dann Norn fällt Rest überlebt, dann Konter tötet 1 bis 2 Monster.
+
+Abschnitt 7: Movement and Positioning.
+
+Reichweiten: Fulgrim Bewegung 16 FLY, Keeper Bewegung 14 ( plus 6 Zoll Warp Walker), Shalaxi Bewegung 14 (Reroll Advance oder Charge), Daemon Prince Bewegung 14 FLY, dann Bedrohung 20 bis 28 Zoll. Du kannst dich kaum außer Reichweite halten – stell dich so, dass jeder Angriff in Heroic Intervention-Reichweite endet.
+Enthralling Hypnosis (Fulgrim): Einheiten in 6 Zoll müssen für Fallback einen Leadership-Test bestehen.
+Safe: Im Verbund (Norn plus Block plus Harvester).
+Dangerous: Isolierte Positionen, Viertel-Ränder.
+
+Abschnitt 8: Charge, Fight Phase Analysis.
+
+Shalaxi chargt die Quarry (Norn):
+1. Overwatch? Nein (Widerstand 10, 4 plus Invul).
+2. Charge (Reroll). Shalaxi Fights First.
+3. Heroic Intervention (1 Kommandopunkt) mit Tyrant-Block.
+4. Shalaxi: etwa 17, mit Feel No Pain 11, am Norn, dann ohne Objective-Modus Norn tot, im Objective-Modus überlebt er Ablative Carapace (2 Kommandopunkte) auf den Assimilator VOR ihren Angriffen (Feel No Pain 5 plus oder 4 plus).
+5. Konter: Hive-Tyrant-Block plus Swarmlord, dann Shalaxi (Widerstand 10, 3 plus oder 4 plus Invul, 20 Lebenspunkte): Swarmlord 8 Attacken Stärke 10 AP minus 2(minus 3), dann 4 plus twin, dann etwa 5, dann 4 plus Invul, dann etwa 2,5 mal 3 = 7,5; Guards etwa 3; Hive Tyrant etwa 6, dann etwa 17, dann fast tot; Bio-stimulus vorher = besser.
+6. Deine Runde: finishen. Neue Quarry wird gewählt, wenn die alte stirbt – nicht, wenn Shalaxi stirbt.
+
+Fulgrim mit Daemonic Speed: In seinem Zug schlägt er zuerst (aktiver Spieler plus Fights First). In deinem Zug: Wenn du ihn chargst, habt ihr beide Fights First, dann du als aktiver Spieler wählst zuerst.
+
+Dein bester Charge: Keeper (5 plus Save) mit Norn-Talons (Stärke 10 AP minus 2 D3; minus 1 to hit, dann 3 plus) plus Hive-Tyrant-Block. Oder das Monster, das allein in einem Viertel steht.
+
+Abschnitt 9: Shooting Analysis.
+
+Defiler (Empowered); Reichweite: 48 Zoll; Wirkung: Norn etwa 11, mit Feel No Pain 7.
+Fulgrim Malefic Lash (6 Attacken Stärke 8 Sustained, plus Poison); Reichweite: 12 Zoll; Wirkung: etwa 2 plus Poison D3 pro Runde.
+Keeper Phantasmagoria (9 Attacken Stärke 6 Devastating Wounds); Reichweite: 18 Zoll; Wirkung: Pyrovores, Zoans.
+Shalaxi Pavane (D6 Stärke 9 Devastating Wounds, Sustained 3 fokussiert); Reichweite: 18 Zoll; Wirkung: Pyrovores oder Guards.
+Daemon Prince Infernal Cannon; Reichweite: 24 Zoll; Wirkung: gering.
+
+Daemonic Poisons: Jede Einheit, die Fulgrim trifft, ist dauerhaft vergiftet (4 plus, dann D3 Mortal Wounds in jeder Command Phase, beider Spieler). Deine Regeneration gleicht das aus – aber bei Zoans oder Pyrovores summiert es sich.
+
+Abschnitt 10: Gotchas and Traps.
+
+1: Quarry (Shalaxi) – vor Runde 1 gewählt, öffentlich. Frag danach.
+2: Precision auf Soulpiercer – Shalaxi kann Hive Tyrant oder Swarmlord hinter den Guards treffen.
+3: Fulgrims wechselnde Fähigkeit – in deiner Command Phase gewählt: Beguiling (minus 1 to hit), Daemonic Speed (Fights First), Hypnosis (Fallback-Sperre).
+4: Mesmerising Form (Keeper) – minus 1 to hit.
+5: Empowerment – Emperor's Children-Einheiten (Fulgrim, Defiler, Daemon Prince, Maulerfiend) in 6 Zoll von Legions of Excess (Keeper, Shalaxi, Fiends): Sustained Hits, Crits 5 plus.
+6: Warp Walker – Keeper läuft durch deine Screens ( plus 6 Zoll).
+7: Possessed Blade (Daemon Prince) – Dev Wounds und plus 1 D bei Aktivierung.
+8: Dark Apparitions – nur Daemonettes (hier keine), dann irrelevant.
+9: Violent Crescendo (2 Kommandopunkte) – 6 Zoll Pile-in oder Consolidate für Slaanesh-Beasts oder Infanterie oder Mounted (Fiends).
+
+Abschnitt 11: Opponent Decision Tree.
+
+Was ist die Quarry?
+Norn, dann Diesen Norn mit Tyrant-Block plus Harvester, Ablative Carapace (wenn Assimilator).
+Tyrant-Block, dann Block nie allein; Precision-Gefahr für den Character.
+Verteilt er Monster auf Viertel?
+JA, dann Einzelne Monster in deine Zone locken und töten (Purge and Secure: Kill auf Objective = 3 Siegpunkte).
+Steht der Defiler Empowered (Legions of Excess in 6 Zoll)?
+JA, dann Keine Norns in seiner 48 Zoll-Sicht.
+
+Abschnitt 12: Player's Game Plan.
+
+Default plan.
+
+1: Runde 1: Home plus Central plus eigene Expansion, Verbund-Aufstellung. Quarry geschützt.
+2: Runde 2: Seine Monster kommen, dann Heroic Intervention oder Konter; ein Monster pro Runde töten (8 Siegpunkte Secondaries plus 3 Siegpunkte Purge and Secure, wenn am Objective).
+3: Runde 3 bis 5: Objectives (4 Siegpunkte je Nicht-Home) halten; Defiler, wenn erreichbar.
+
+Adjustment triggers.
+
+Shalaxi tot, dann Die größte Precision-, Norn-Gefahr ist weg; Norns offensiver.
+Fulgrim wählt Beguiling Form, dann Nicht ihn angreifen diese Runde, sondern die Keeper oder Daemon Prince.
+Defiler allein ohne Legions of Excess, dann Nicht Empowered: Norns dürfen offener stehen.
+
+Abschnitt 13: Primary Scoring Plan.
+
+Paarung (Herald): Du, dann Purge and Secure; er (Recon), dann Reconnaissance Sweep.
+
+Du: 4 Siegpunkte pro Nicht-Home-Objective (Runde 2 plus), 3 Siegpunkte für Kill auf oder an Objective, 3 Siegpunkte für neues Objective.
+Er: 3 oder 6 Siegpunkte Viertel (mit 8 Einheiten schwer: jedes Monster, das ein Viertel hält, kämpft nicht), 1 Siegpunkte pro Kill, 3 Siegpunkte für mindestens 1 Objective.
+Winning the mission: Er muss Monster aufteilen, um zu punkten – oder konzentrieren, um zu töten. Beides gleichzeitig geht nicht. Halte deine drei Objectives und töte, was kommt.
+
+Secondaries: Bring It Down (Fixed) – Fulgrim (16 Lebenspunkte), Shalaxi (20 Lebenspunkte), 2 Keeper (18 Lebenspunkte), Daemon Prince (10 Lebenspunkte), Defiler (18 Lebenspunkte), Maulerfiend (12 Lebenspunkte) = 7 Ziele. Assassination – Fulgrim, Shalaxi, 2 Keeper, Daemon Prince = 5. Empfehlung: Bring It Down plus Assassination (jeder Greater Daemon = 8 Siegpunkte).
+
+Abschnitt 14: First Turn, Second Turn Considerations.
+
+Wenn du zuerst spielst.
+
+Verbund-Aufstellung, Zoans auf Keeper oder Defiler, Biovore auf Fiends. Nicht in seine Reichweite laufen.
+
+Wenn er zuerst spielt.
+
+Er rennt mit Bewegung 14–Bewegung 16 vor; Runde-1-Charges möglich (Keeper Bewegung 14 plus 6 Zoll Warp Walker ist Advance, dann kein Charge; Shalaxi Reroll). Kommandopunkte: Heroic Intervention plus Ablative Carapace plus Counteroffensive.
+
+Abschnitt 15: Practical Round Checklist.
+
+BEFORE DEPLOYMENT.
+Shalaxi-Quarry erfragen.
+Purge and Secure; Bring It Down plus Assassination.
+Zoans auf den Tisch (Keeper 5 plus Save).
+DEPLOYMENT.
+Verbund: Norn plus Tyrant-Block plus Harvester.
+Quarry maximal geschützt.
+Defiler-Lane meiden.
+OPPONENT TURN.
+Fulgrims Fähigkeit (in deiner Command Phase gewählt) notieren.
+Heroic Intervention plus Ablative Carapace.
+Poison-Liste führen (D3 Mortal Wounds jede Command Phase).
+MY TURN.
+Ein Monster pro Runde töten (8 Siegpunkte plus gegebenenfalls 3 Siegpunkte am Objective).
+Keeper: Zoans oder Norn (5 plus Save).
+Fulgrim nur mit Überzahl.

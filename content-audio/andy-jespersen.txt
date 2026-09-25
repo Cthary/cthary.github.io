@@ -1,0 +1,293 @@
+Gegneranalyse: Andy Jespersen (Eisenhirn) – Dark Angels (Ravenwing).
+
+Liste in Kürze (2000 Punkte, Company of Hunters 2 Daemon Prince plus Darkflight Pursuit 1 Daemon Prince).
+
+Lion El'Jonson (Warlord); Punkte: 265; Rolle gegen dich: Nahkampf-Killer, Fights First, 3 plus Invul, Rückzug in Reserve jede Runde.
+Ravenwing Command Squad (Champion: Mounted Strategist – Reroll Advance oder Charge) plus 3 Outriders; Punkte: 205; Rolle gegen dich: Schneller Charge-Block, Narthecium, O-C plus 1.
+Sammael plus Ravenwing Command Squad (Champion: Recon Hunter – Scouts 9 Zoll) plus 3 Outriders; Punkte: 310; Rolle gegen dich: Scout-Charge-Block, Cut Off Their Escape.
+Azrael plus 5 Sternguard (1 Heavy Bolter); Punkte: 240; Rolle gegen dich: plus 1 Kommandopunkt pro Runde, Sustained Hits, Devastating Wounds-Wound-Beschuss.
+Land Speeder Vengeance (Nightforged Battery), 3 Stück; Punkte: 445; Rolle gegen dich: Plasma Storm Battery 36 Zoll – Hauptschaden gegen Monster.
+Land Speeder (Multi-melta, Gatling, Stormfury), 2 Stück; Punkte: 210; Rolle gegen dich: 48 Zoll Stärke 12-Rakete, Melta, Deep Strike.
+Storm Speeder Thunderstrike; Punkte: 135; Rolle gegen dich: Thunderstrike: plus 1 to wound für alle Astartes-Fernkampfangriffe gegen ein getroffenes Monster.
+Invader ATV; Punkte: 60; Rolle gegen dich: Multi-melta, Outrider Escort (Gegenfeuer).
+Scout Squad, 5 Stück ( mal 2); Punkte: 130; Rolle gegen dich: Infiltrators, Scouts 6 Zoll, Guerrilla Tactics (zurück in Reserve).
+
+Force Disposition laut Herald: Reconnaissance (Darkflight Pursuit). Alternative: Disruption (Company of Hunters).
+
+Abschnitt 1: Executive Summary.
+
+Was die Armee will: Eine Speeder-Feuerbasis (Oath of Moment plus Thunderstrike plus Ignores Cover) löscht jede Runde ein Monster, während der Lion aus der Reserve dort zuschlägt, wo deine Struktur am schwächsten ist. Bikes und Scouts besetzen die vier Viertel (Reconnaissance Sweep).
+Wichtigste Bedrohung: Lion El'Jonson – er tötet einen Tyrant-Guard-Block oder nimmt einem Norn etwa 10 bis 12, mit Feel No Pain 7 bis 8, W im Nahkampf, schlägt immer zuerst und kann sich in jeder seiner Command Phases wieder in Reserve setzen.
+Wichtigstes taktisches Problem: Die Kombination Storm Speeder ( plus 1 to wound), dann Plasma Storm Batteries, dann Stormfury oder Multi-meltas verwundet deine Norns auf 3 plus oder 4 plus statt 5 plus. Das ist etwa 25 bis 30, mit Feel No Pain 17 bis 20, Schaden in einer Schussphase, wenn alles in Reichweite ist.
+Was du vermeiden musst: Den Storm Speeder am Leben lassen, und einen Norn in 36 Zoll aller drei Vengeances offen stehen lassen.
+Strategischer Ansatz: Die Fahrzeuge sind Widerstand 8–Widerstand 9, 3 plus, 9 Lebenspunkte–11 Lebenspunkte – deine Nahkampfeinheiten und Zoanthropes töten sie effizient. Halte die Norns in Runde 1 bis 2 hinter obscuring Geländezonen (ein Norn auf einem Objective ist immer sichtbar), halte die Objectives mit hidden Pyrovores plus Tyrannoformed, trade in die Speeder, und gib dem Lion ein Ziel, bei dem er danach im Gegenschlag stirbt.
+
+Abschnitt 2: Opponent Game Plan.
+
+1: Pre-Game: Scouts infiltrieren (Viertel oder Objectives). Sammael-Block macht Scout 9 Zoll (Recon Hunter). Scouts können am Ende deines Zuges per Guerrilla Tactics vom Tisch verschwinden (>6 Zoll von dir).
+2: Feuerzyklus jeder Runde:
+text.
+Oath of Moment auf dein wichtigstes Monster (Reroll Hits für alle).
+↓.
+Storm Speeder schießt zuerst (Stormfury 48 Zoll plus Las-talon), dann Thunderstrike: plus 1 to wound.
+↓.
+3 mal Vengeance Plasma Storm Battery (D6 plus 1 Blast, supercharged Stärke 9 AP minus 3 D3, twin-linked.
+Nightforged: Reroll der Schusszahl und Hazard), dann Ignores Cover (Darkflight).
+↓.
+Land Speeder Stormfury plus Multi-meltas, ATV Multi-melta.
+
+3: Lion: Deep Strike oder Mist-wreathed Shadow Realms: er erscheint Runde 1 oder 2 in deiner Nähe, chargt (Fights First, Bewegung 8), und verschwindet in der nächsten Command Phase wieder in Reserve, bevor du ihn kontern kannst.
+4: Bike-Blöcke: Advance plus Charge (Company of Hunters), Fallback plus Schießen plus Charge. Sie binden deine Harvester oder schnappen Objectives.
+5: Scoring: Viertel (3 bis 6 Siegpunkte), Kills (1 Siegpunkte), ein Objective (3 Siegpunkte). Hunters' Trail (1 Kommandopunkt) macht Objectives sticky.
+
+Der Gegner gewinnt nicht, indem er alles tötet. Er gewinnt, indem jeden Zug ein Monster fällt (Bring It Down: 4 Siegpunkte pro 10 Lebenspunkte plus -Modell, bis zu 5 pro Zug), seine Fahrzeuge dabei nie in deiner Nahkampfreichweite stehen und der Lion immer dort ist, wo du gerade nichts hast.
+
+Abschnitt 3: Major Threats.
+
+Lion El'Jonson – Nahkampf-Systembedrohung.
+
+Bewegung 8, Widerstand 9, 2 plus oder 3 plus Invul, 10 Lebenspunkte, O-C 4, Fights First, Deep Strike. Emperor's Shield: Angriffe mit S > Widerstand 9 haben minus 1 to wound (deine Stärke 10 oder Stärke 11-Characters verwunden ihn auf 3 plus statt 2 plus… genau: Stärke 10 gegen Widerstand 9 = 3 plus, minus 1, dann 4 plus).
+Fealty Strike 8 Attacken 2 plus Stärke 12 AP minus 4 D4 Lethal Hits; Sweep 16 Attacken Stärke 6 AP minus 3 D2 Sustained Hits 1.
+Jede Command Phase zwei aus drei: Mist-wreathed Shadow Realms (in Reserve, nächste Movement Phase Ingress), Martial Exemplar (Reroll 1er in 6 Zoll), No Hiding (Feel No Pain 4 plus gegen Mortal Wounds in 6 Zoll).
+Schaden: gegen Tyrant Guard (Widerstand 8): etwa 5 Guards tot. Gegen Norn: etwa 10 bis 12, mit Feel No Pain 7 bis 8, Schaden.
+Wert für dich: Bring It Down 4 Siegpunkte plus Assassination 4 Siegpunkte.
+Reaktion: Ihn binden, bevor er in Reserve geht (Mist-wreathed benötigt unengaged in seiner Command Phase). Eine Einheit von dir, die nach seinem Fight noch in Engagement Range steht, nagelt ihn fest, dann dann Swarmlord plus Hive Tyrant plus Psychophage auf ihn.
+
+Storm Speeder Thunderstrike – Enabler.
+
+Widerstand 9, 3 plus, 11 Lebenspunkte, BS 2 plus, Stormfury 48 Zoll Stärke 12 AP minus 3 D6 plus 1, Las-talon 2 Attacken 36 Zoll Stärke 9 AP minus 3 D6 plus 1. Thunderstrike: getroffenes MONSTER, dann plus 1 to wound für alle Astartes-Fernkampfangriffe diese Phase.
+Ohne ihn verwunden die Plasma-Batterien (Stärke 9) deine Norns auf 5 plus, mit ihm auf 4 plus; Stormfury (Stärke 12) auf 2 plus statt 3 plus.
+Reaktion: Kill early. Zoanthropes (fokussiert: etwa 9 Schaden), Assimilator-Harpune plus Charge, Hive-Tyrant-Block.
+
+Land Speeder Vengeance, 3 Stück (Nightforged Battery).
+
+Bewegung 14, Widerstand 8, 3 plus oder 5 plus Invul, 10 Lebenspunkte, FLY. Plasma Storm Battery 36 Zoll D6 plus 1 Blast, twin-linked; supercharged Stärke 9 AP minus 3 D3 (Hazardous – Nightforged rerollt Hazard und Schusszahl).
+Storm of Vengeance: Wenn in deinem Shooting eine seiner Astartes-Einheiten in 6 Zoll stirbt, darf die Vengeance sofort auf die schießende Einheit zurückfeuern.
+Gegen Norn (mit Thunderstrike plus Oath): etwa 5, mit Feel No Pain 3, Schaden pro Vengeance, dann etwa 15, mit Feel No Pain 10, aus dreien.
+Reaktion: Nahkampf. Widerstand 8 ist für Norns (Stärke 10 plus), Tyrants (Stärke 10 oder Stärke 11) und Psychophages (Stärke 7 AP minus 2 D2 mit Synapse) gut verwundbar. Jede Vengeance ist Bring It Down (10 Lebenspunkte).
+
+Land Speeder, 2 Stück plus Invader ATV.
+
+Stormfury 48 Zoll (je 1), Multi-melta 18 Zoll (Melta 2), Onslaught Gatling (8 Attacken Dev Wounds). Purgation Run: nach dem Schießen D6 Zoll weg. Deep Strike.
+ATV: Outrider Escort – wenn du auf einen Bike-Block in 6 Zoll schießt, schießt das ATV danach auf deine schießende Einheit.
+Reaktion: Medium. Multi-meltas sind nur in 9 Zoll gefährlich; wer nah ist, ist in deiner Nahkampfreichweite.
+
+Sammael-Block, Command-Squad-Block.
+
+Bewegung 12 Bikes, Widerstand 5, 3 plus (Command Squad 5 plus Invul), Advance plus Charge. Outriders Thunderous Impact: plus 1 S, plus 1 D nach Charge. Champion: plus 1 Advance oder Charge, Heroic Intervention minus 1 Kommandopunkt. Mounted Strategist: Reroll Advance oder Charge.
+Cut Off Their Escape (Sammael): Nicht-Monster, die aus seinem Nahkampf fliehen, machen Desperate Escape wie Battle-shocked.
+Gegen dich: Charges auf Pyrovores, Rippers, Biovore, Zoanthropes; Objective-Grabs.
+Reaktion: Sie sind gute erste Kills für den Hive-Tyrant-Block (Parasitic Biomorphology): Widerstand 5, 3 plus, 4 Lebenspunkte pro Modell, 6 Modelle ( plus Sammael 7 Lebenspunkte, 4 plus Invul).
+
+Azrael plus Sternguard.
+
+Masterful Tactician plus 1 Kommandopunkt pro Runde. Sustained Hits für die Einheit. Sternguard: Dev Wounds auf Bolt Rifles, Reroll Wound gegen Oath-Ziel.
+Gegen Widerstand 11 kaum Wirkung; gegen Tyrant Guard oder Pyrovores solide.
+Reaktion: Assassination-Ziel (4 Siegpunkte, W6). Wenn ein Tyrant-Block in Reichweite ist: töten, er ist der Kommandopunkte-Motor.
+
+Abschnitt 4: Threat Matrix.
+
+Lion El'Jonson; Threat: Very High; Primary targets: Tyrant-Guard-Blöcke, Norns; How it threatens them: Fights First 8 Attacken Stärke 12 D4, Reserve-Sprung; Recommended response: Binden, dann Swarmlord plus Tyrant; nie allein stehenden Block anbieten.
+Storm Speeder Thunderstrike; Threat: High (System); Primary targets: Norns; How it threatens them: plus 1 to wound für alle; Recommended response: Zuerst töten.
+Vengeance, 3 Stück; Threat: High; Primary targets: Norns, Psychophages; How it threatens them: Plasma D3 AP minus 3, 36 Zoll; Recommended response: Sicht verweigern, im Nahkampf zerlegen.
+Land Speeder, 2 Stück; Threat: Medium; Primary targets: Norns (48 Zoll Stormfury), Harvester (Gatling); How it threatens them: Stärke 12-Rakete, Melta; Recommended response: Wenn in Reichweite: Charge.
+Sammael-, Command-Block; Threat: Medium; Primary targets: Pyrovores, Rippers, Zoans, Objectives; How it threatens them: Advance plus Charge, Dev Wounds im Nahkampf; Recommended response: Als ersten Parasitic-Kill einplanen.
+Azrael plus Sternguard; Threat: Medium; Primary targets: Guards, Pyrovores; How it threatens them: Dev Wounds, plus 1 Kommandopunkt; Recommended response: Assassination, Nahkampf.
+Invader ATV; Threat: Low–Medium; Primary targets: Konter-Schuss; How it threatens them: Outrider Escort; Recommended response: Nicht als Erstes auf Bikes neben dem ATV schießen.
+Scouts, 2 Stück; Threat: Low (Scoring); Primary targets: Viertel oder Objectives; How it threatens them: Infiltrate, verschwinden; Recommended response: Nur auf Objectives töten.
+
+Abschnitt 5: Target Priority.
+
+Kill early.
+1: Storm Speeder Thunderstrike – nimmt etwa 30 Prozent des Gesamtschadens gegen Monster weg.
+2: Vengeances, die in 36 Zoll deiner Norns stehen – eine nach der anderen, im Nahkampf.
+3: Lion, sobald er gebunden ist und du Swarmlord plus Hive Tyrant plus Psychophage an ihn bringst.
+
+Control, avoid.
+Lion, solange er frei ist. Er wählt seinen Charge. Gib ihm nur Ziele, die er nicht in einem Zug vernichten kann (Norn im Objective-Modus mit Feel No Pain 5 plus, 16 W) oder hinter denen ein Heroic Intervention-Konter steht.
+Bike-Blöcke: Sie wollen deine weichen Harvester. Screenen mit Guard-Blöcken statt jagen.
+
+Ignore.
+Scouts, außer auf Objectives. ATV – Outrider Escort ist lästig, aber es ist ein 60-Punkte-Modell.
+
+Abschnitt 6: Deployment Analysis.
+
+Wahrscheinlich: Speeder weit hinten oder seitlich mit 36 bis 48 Zoll-Lanes; Sammael-Block per Scout 9 Zoll vorne; Scouts infiltriert auf Expansions oder in deinen Vierteln. Lion in Reserve (Deep Strike) oder auf dem Tisch hinter Gelände. Azrael plus Sternguard in einer Ruine nahe Central.
+
+Flanke: Keine feste. Die Speeder (Bewegung 14, FLY) können jede Flanke anspielen. Der Lion ist die Flanke, die er erst im Spiel wählt.
+
+Kernfrage: Kann er einen Norn plus Support in einem Zyklus töten? Ja – einen sichtbaren Norn (Beschuss etwa 25 bis 30, mit Feel No Pain 17 bis 20,) oder einen Tyrant-Block (Lion). Beides gleichzeitig: nur mit sehr gutem Würfeln. Nicht beide Norns in einem Zug.
+
+Deine Aufstellung:
+Norn-Sichtbarkeit in diesem Matchup (entscheidend): Ein Norn, der ein Objective hält, ist immer sichtbar – seine Base steht in der Objective-Geländezone (deren Obscuring zählt für ihn nicht), er überragt die Ruinen, Monster sind nie hidden. Die Speeder haben 36 bis 48 Zoll Reichweite und Ignores Cover – ein Norn auf einem Objective in Runde 1 bis 2 verliert etwa 25 bis 30, mit Feel No Pain 17 bis 20, W in einem Zug. Verdeckt ist ein Norn nur hinter (nicht in) einer obscuring Zone; dort punktet er nicht.
+Norns zuletzt und hinter obscuring Zonen als Konterdrohung. Die Objectives halten in Runde 1 bis 2 Pyrovores (INFANTRY, dann hidden in der Objective-Zone, nur in 15 Zoll sichtbar, solange sie nicht schießen; Achtung: Skyborne Surveillance gibt deinen Einheiten in 6 Zoll eines Ravenwing-Fliegers plus 3 Zoll Detection Range). In deiner Command Phase Tyrannoformed (1 Kommandopunkt, Pyrovores sind Harvester), dann das Objective bleibt dein, auch wenn der Trupp stirbt oder weiterzieht.
+Norns treten auf Objectives, sobald Storm Speeder plus mindestens eine Vengeance tot sind – dann sinkt der Schaden auf einen Norn unter etwa 15, mit Feel No Pain 10, und Objective-Modus (Feel No Pain 5 plus) plus Heilung tragen ihn.
+Assimilator (4 plus Invul) ist der robustere Norn gegen seine AP minus 3 oder AP minus 4-Waffen, dann er ist der erste, der später offen auf ein Objective tritt.
+Die beiden Tyrant-Blöcke nicht mehr als etwa 12 Zoll voneinander. Lion auf einen Block, dann der andere interveniert oder kontert. Isolierte Blöcke sind Lion-Futter.
+Swarmlord zentral: Malign Presence verteuert Armour of Contempt, High-Speed Focus, Wings of Shadow, Talon Strike, Hunters' Trail in 12 Zoll. Das ist gegen diese Liste ein großer Kommandopunkte-Faktor.
+Pyrovores als Screens gegen Bike-Charges vor Home und Biovore; hidden in Gelände.
+Rippers in Reserve.
+Zoanthropes in Reserve – klare Empfehlung. Seine Speeder stehen oft an Kanten oder Ecken mit Langstreckensicht. Runde 2 an der Seitenkante, 24 Zoll auf Storm Speeder oder eine Vengeance.
+
+Welchen Fehler er sich wünscht: Einen Tyrant-Block allein auf einer Flanke (Lion-Ziel), einen Norn auf einem Objective in 36 Zoll der Speeder in Runde 1 bis 2, Harvester ohne Screen (Bike-Ziel).
+
+Alternativen:
+Lion auf dem Tisch, dann Er wird Runde 1 per Mist-wreathed in Reserve gehen oder direkt vorlaufen Tyrant-Blöcke eng zusammen; ein Pyrovore-Trupp als "Stoßdämpfer" davor.
+Lion in Reserve, dann Er kann Runde 1 (Mist-wreathed: "including in your first turn" – nur wenn er in einer Command Phase auf dem Tisch war) beziehungsweise über Deep Strike ab Runde 2 kommen Keine 8 Zoll-Lücken hinter deinen Linien lassen (Deep Strike mehr als 8 Zoll).
+Speeder alle auf einer Seite, dann Overload-Flanke: Hive-Tyrant-Block plus Assimilator plus Psychophage plus Pyrovores dort Speeder sind Widerstand 8 – in Runde 2 zwei davon im Nahkampf zerlegen.
+
+Abschnitt 7: Movement and Positioning.
+
+Speeder-Reichweiten: Bewegung 14 plus 36 Zoll (Vengeance), 48 Zoll (Stormfury), dann fast unbegrenzt. Purgation Run (Land Speeder) und We Are Vengeance (1 Kommandopunkt, D3 plus 3 Zoll nach deinem Beschuss) lassen sie aus deiner Charge-Reichweite gleiten.
+Lion-Bedrohung: Deep Strike mehr als 8 Zoll, dann Charge 9 Zoll nötig (Ø etwa 28 Prozent, mit Reroll etwa 48 Prozent); aus 12 Zoll normaler Bewegung plus 2W6. Realistisch alles in etwa 20 Zoll von ihm ist bedroht, und über Reserve der ganze Tisch.
+Bike-Bedrohung: Bewegung 12 plus Advance (Reroll mit Mounted Strategist) plus Charge, dann etwa 24 Zoll.
+Safe: Hinter (nicht in) obscuring Geländezonen, mit einem zweiten Block in 12 Zoll (Heroic Intervention-Reichweite). Für Pyrovores: in Geländezonen, hidden.
+Dangerous: Offene Lanes zu den Tischecken (Speeder-Positionen); Positionen mit mehr als 8 Zoll Leerraum hinter dir (Lion-Deep-Strike).
+Conditional: Central – mit hidden Pyrovores plus Tyrannoformed in Runde 1 bis 2; ein Norn im Objective-Modus erst, wenn die Speeder-Batterie dezimiert ist (und beide Tyrant-Blöcke in 12 Zoll stehen).
+8 Zoll-Netz: Ab Runde 2 so stehen, dass es in deiner Hälfte keine großen Deep-Strike-Löcher gibt (Lion, Land Speeder Deep Strike).
+
+Abschnitt 8: Charge, Fight Phase Analysis.
+
+Szenario 1 – Lion chargt den Hive-Tyrant-Block:
+1. Ende seiner Movement Phase: Overwatch lohnt nicht (Widerstand 9, 3 plus Invul).
+2. Charge. Lion hat Fights First (Datenblatt plus Charge).
+3. Ende seiner Charge Phase: Heroic Intervention (1 Kommandopunkt) mit Swarmlord-Block oder Norn (Leap to Defend). Die intervenierende Einheit hat ebenfalls Fights First.
+4. Fight: Er zuerst (aktiver Spieler), dann Lion Strike auf die Guards (etwa 5 tot) Tipp: Allocation – die Guards sterben zuerst, der Hive Tyrant bleibt meist stehen.
+5. Du: intervenierender Swarmlord-Block (8 Attacken Stärke 10 gegen Widerstand 9: 3 plus, Emperor's Shield, dann 4 plus twin-linked Reroll), dann etwa 4 Wunden, dann 3 plus Invul, dann etwa 1,3 durch, dann etwa 4 Schaden plus Guards des Swarmlord (30 Attacken Stärke 6 gegen Widerstand 9 5 plus), dann etwa 1 durch plus Hive Tyrant (Rest), dann etwa 2 bis 3, dann Lion typischerweise NICHT tot (10 W, 3 plus Invul), aber gebunden.
+6. WICHTIG: In seiner nächsten Command Phase kann er Mist-wreathed Shadow Realms NICHT nutzen, wenn er engaged ist. Er muss Fallback machen oder weiterkämpfen.
+7. Deine Runde: Psychophage-Torrent auf den Lion (Bio-stimulus plus 1 AP – gegen 3 plus Invul irrelevant gegen 2 plus hilfreich), dann alles in ihn: Assimilator Lesser Prey ( plus 2 S).
+
+Realistische Lion-Kill-Rechnung: 10 W, 3 plus Invul schluckt 2 oder 3 aller Treffer. Du brauchst etwa 15 Wunden, die ankommen. Das schaffst du nur mit zwei Blöcken plus Norn in einem Zug. Plane es als Runde-2 oder 3-Aktion, nicht als Reaktion.
+
+Szenario 2 – Bike-Block chargt Pyrovores:
+1. Overwatch mit den Pyrovores selbst (1 Kommandopunkt): D6 plus 1 Torrent Stärke 6 AP minus 1, dann gegen Widerstand 5 3 plus, dann etwa 3 Wunden Achtung: Company of Hunters hat kein Overwatch-Immun wie die Eldar.
+2. Heroic Intervention mit Hive-Tyrant-Block (Leap to Defend, 1 Kommandopunkt; Champion-Heroic Intervention minus 1 Kommandopunkt gilt nur für IHN).
+3. Er schlägt zuerst (Outriders plus 1 S, plus 1 D nach Charge).
+4. Hive-Tyrant-Block tötet den Bike-Block, dann Parasitic Biomorphology aktiv, wenn in 6 Zoll eines Harvesters.
+5. Rapacious Hunger (1 Kommandopunkt): sofort regenerieren.
+
+Dein bester Charge: Hive-Tyrant-Block oder Norn in eine Vengeance oder den Storm Speeder. Widerstand 8 oder Widerstand 9, 3 plus, 10 Lebenspunkte oder 11 Lebenspunkte – der Hive-Tyrant-Block allein macht etwa 15 plus Schaden an Widerstand 8.
+
+Units, die nicht gechargt werden sollten: Den Lion mit einem einzelnen Block, wenn er nicht gebunden bleibt. Bikes, die per Fallback plus Schießen plus Charge (Company of Hunters) zurückschlagen – nur chargen, wenn sie sterben.
+
+Harpoon Barbs: Bikes, die vom Assimilator weg-fallbacken, erleiden 2 plus: D6 Mortal Wounds. Das ist gegen Widerstand 5-Bikes mit 4 bis 6 W heftig.
+
+Abschnitt 9: Shooting Analysis.
+
+Plasma Storm Battery (Supercharge), 3 Stück; Reichweite: 36 Zoll; Gegen Norn (Widerstand 11, 2 plus, 4 plus Invul): etwa 4 bis 5, mit Feel No Pain 3, je (mit Thunderstrike plus Oath); Gegen Tyrant Guard: etwa 2 Guards je.
+Stormfury, 3 Stück (Storm Speeder BS2 plus); Reichweite: 48 Zoll; Gegen Norn (Widerstand 11, 2 plus, 4 plus Invul): etwa 1,5 bis 2, mit Feel No Pain 1 bis 1,3, je; Gegen Tyrant Guard: etwa 1 Guard je.
+Las-talon (2 Attacken); Reichweite: 36 Zoll; Gegen Norn (Widerstand 11, 2 plus, 4 plus Invul): etwa 2 bis 3, mit Feel No Pain 1,3 bis 2,; Gegen Tyrant Guard: etwa 1 Guard.
+Multi-melta, 3 Stück (18 Zoll, Melta 2 in 9 Zoll); Reichweite: 18 Zoll; Gegen Norn (Widerstand 11, 2 plus, 4 plus Invul): etwa 2, mit Feel No Pain 1,3, je in 9 Zoll; Gegen Tyrant Guard: etwa 1 Guard je.
+Onslaught Gatling (8 Attacken Devastating Wounds); Reichweite: 24 Zoll; Gegen Norn (Widerstand 11, 2 plus, 4 plus Invul): vernachlässigbar; Gegen Tyrant Guard: etwa 1.
+Sternguard (Dev Wounds, Sustained); Reichweite: 24 Zoll; Gegen Norn (Widerstand 11, 2 plus, 4 plus Invul): gering; Gegen Tyrant Guard: etwa 1 bis 2 Guards.
+
+dann Gesamt gegen einen Norn in Reichweite aller Waffen: etwa 25 bis 30, mit Feel No Pain 17 bis 20,. Ohne Storm Speeder: etwa 18, mit Feel No Pain 12,. Ohne Oath (anderes Ziel): weniger.
+
+Wichtige Sichtlinien-Hinweise:
+Ignores Cover (Darkflight für RAVENWING FLY) – Deckung hilft deinen Monstern nichts. Nur Sichtblock hilft.
+Skyborne Surveillance (1 Kommandopunkt): plus 3 Zoll Detection Range auf deine Einheiten in 6 Zoll – versteckte Pyrovores werden sichtbar.
+
+Scheinbar gefährlich, aber ineffizient: Onslaught-Gatlings (Stärke 5) gegen deine Monster.
+
+Seine Zielpriorität: Norn (Oath plus Thunderstrike), dann Psychophage, dann Zoanthropes, dann Tyrant Guard.
+
+Abschnitt 10: Gotchas and Traps.
+
+1: Mist-wreathed Shadow Realms.
+Was: Lion geht in seiner Command Phase in Reserve (wenn unengaged) und kommt in derselben Runde per Ingress (Deep Strike) wieder.
+Warum: Du kannst ihn nicht verfolgen; er taucht immer dort auf, wo du schwach bist.
+Verhindern: Binden. Er muss am Ende deines Zuges in Engagement Range sein.
+2: Thunderstrike-Reihenfolge.
+Erkennen: Der Storm Speeder schießt als Erstes auf einen Norn, dann alles andere folgt auf dasselbe Ziel.
+Reaktion: Ablative Carapace (2 Kommandopunkte) auf den Assimilator (Harvester) nach der Zielauswahl der ersten Vengeance – nicht beim Storm Speeder verschwenden. Für die Emissary gibt es keine Harvester-Stratagems.
+3: Storm of Vengeance, Outrider Escort.
+Was: Wenn du eine seiner Einheiten in 6 Zoll einer Vengeance tötest beziehungsweise auf Bikes in 6 Zoll des ATV schießt, feuert er sofort auf die schießende Einheit zurück.
+Verhindern: Zoanthropes nicht auf Ziele neben einer Vengeance ansetzen, wenn der Rückschlag sie auslöscht. Nahkampf löst beides nicht aus (nur Shooting Phase).
+4: Guerrilla Tactics, Rapid Reappraisal.
+Scouts (>6 Zoll von dir) und Ravenwing-Einheiten (1 Kommandopunkt, ungebunden) verschwinden am Ende deines Zuges in Reserve. Beschädigte Einheiten entkommen.
+5: Company of Hunters: Fallback plus Schießen plus Charge.
+Bikes fallen aus dem Nahkampf zurück, schießen und chargen neu. Harpoon Barbs und die Tatsache, dass Sammael-Einheiten kein Desperate Escape machen müssen, beachten.
+6: Emperor's Shield.
+Deine starken Nahkampfwaffen (Stärke 10 plus) verwunden den Lion eine Stufe schlechter. Lesser Prey ( plus 2 S) auf Norns ist gegen den Lion wertlos (Stärke 11 oder Stärke 12, dann alle > Widerstand 9, dann minus 1).
+7: Hunters' Trail – Sticky-Objectives durch Ravenwing Mounted.
+8: Azrael plus Lion = 2 Kommandopunkte-Motoren (Azrael plus 1, Command-Squad-Heroic Intervention minus 1). Er hat viel Kommandopunkte für Armour of Contempt; der Swarmlord verteuert das.
+
+Abschnitt 11: Opponent Decision Tree.
+
+Wo ist der Lion?
+Auf dem Tisch.
+Nahe einem deiner Blöcke?, dann Den Block NICHT allein lassen; zweiter Block in 12 Zoll.
+Weit weg, dann Er wird Runde 1 per Mist-wreathed springen: 8 Zoll-Löcher schließen.
+In Reserve.
+Runde 2: Wo sind 8 Zoll-Lücken mit einem wertvollen Ziel in 9 Zoll? Diese zuerst schließen.
+Wo stehen die Speeder?
+Konzentriert (eine Seite, eine Ecke).
+Overload dorthin, Zoans an die Kante, Runde 2 zwei Speeder im Nahkampf.
+Verteilt.
+Norns hinter obscuring Zonen, Objectives mit Pyrovores; Storm Speeder zuerst, dann die Vengeance, die Central sieht.
+
+Abschnitt 12: Player's Game Plan.
+
+Default plan.
+
+1: Runde 1: Home plus eigene Expansion plus Central mit Pyrovores (hidden, nicht schießen) und Biovore besetzen. Norns hinter obscuring Zonen, beide Tyrant-Blöcke eng ( höchstens 12 Zoll) um Central. Zoans plus Rippers in Reserve.
+1b. Runde 2, Command Phase: Tyrannoformed auf das wichtigste gehaltene Objective.
+2: Runde 2: Zoans auf den Storm Speeder. Hive-Tyrant-Block plus Assimilator in die nächste Vengeance. Erster Parasitic-Kill (Bike-Block oder Speeder).
+3: Runde 3: Lion binden und mit zwei Blöcken plus Norn erledigen, falls er im Zentrum ist. Sonst weiter Speeder abbauen.
+4: Runde 3 bis 5: Wenn Storm Speeder plus eine Vengeance tot sind: Norns offen auf die Objectives (Objective-Modus, O-C 15, Feel No Pain 5 plus), Tyrant-Blöcke dazu.
+
+Adjustment triggers.
+
+Storm Speeder in 24 Zoll einer Kante, an der Zoans einfliegen können, dann Runde 2 Zoans dorthin, fokussiert, alles auf ihn.
+Lion landet neben einem Block, dann Heroic Intervention mit dem anderen Block; nach dem Fight ENGAGED bleiben (kein Fallback).
+Ein Norn unter 8 W und drei Speeder in Sicht, dann Norn vom Objective HINTER eine obscuring Zone (auf dem Objective ist er nie verdeckt), vorher Tyrannoformed (Assimilator oder Pyrovores als Harvester). Heilung (1 Harvester).
+Bikes gehen auf Pyrovores oder Biovore, dann Overwatch plus Heroic Intervention Hive-Tyrant-Block: Parasitic-Kill.
+Er stellt Scouts auf deine Expansion, dann Mit Pyrovore-Torrent (Ignores Cover) plus Guard-Block abräumen: Kill auf Objective.
+
+Abschnitt 13: Primary Scoring Plan.
+
+Paarung (Herald): Du, dann Purge and Secure; er (Recon), dann Reconnaissance Sweep.
+
+Du: 4 Siegpunkte pro Nicht-Home-Objective ab Runde 2, 3 Siegpunkte für Kill auf oder an Objective, 3 Siegpunkte für neues Objective.
+Er: max. etwa 6 (Viertel) plus 1 oder Kill plus 3 (Objective). Bring It Down (falls fixed) gibt ihm aber 4 Siegpunkte pro Monster (6 Ziele bei dir) – das ist sein zweites Standbein.
+Winning the fight gegen. mission: Er wird mehr Monster töten als du Speeder, wenn du nicht in den Nahkampf kommst. Du gewinnst die Mission, wenn du 3 Nicht-Home-Objectives mit O-C-starken Einheiten hältst und ihm pro Runde nicht mehr als ein Monster gibst.
+Konzedieren: Die gegnerische Expansion, wenn die Speeder dort stehen und dein Weg dorthin durch offene Lanes führt.
+Trading: Einen Psychophage (Bring It Down 4 Siegpunkte für ihn) gegen eine Vengeance (Bring It Down 4 Siegpunkte für dich plus 3 Siegpunkte Purge and Secure, wenn am Objective) ist ein gutes Geschäft.
+Endposition: Home plus Central plus eigene Expansion ( plus eine Kill-Aktion pro Runde).
+
+Secondaries: Bring It Down (Fixed) – Lion, Storm Speeder, 3 Vengeances = 5 Ziele mit W mindestens 10 à 4 Siegpunkte (Land Speeder 9 Lebenspunkte zählen nicht). Zweite: Assassination (Lion, Azrael, Sammael, 2 Ravenwing Champions = 5 Charaktere, Lion oder Azrael oder Sammael W mindestens 4, dann 4 Siegpunkte) oder Tactical.
+
+Abschnitt 14: First Turn, Second Turn Considerations.
+
+Wenn du zuerst spielst.
+
+Nicht in die offenen Speeder-Lanes laufen. Objectives mit Pyrovores nehmen, Norns hinter obscuring Zonen.
+Wenn Sammael-Block per Scout nah steht: Hive-Tyrant-Block darauf – perfekter erster Parasitic-Kill in Runde 1, sofern in 6 Zoll eines Harvesters.
+Mindestens 2 Kommandopunkte in seinen Zug mitnehmen (Heroic Intervention plus Ablative Carapace oder Overwatch).
+
+Wenn er zuerst spielt.
+
+Er schießt auf alles, was offen ist, und der Lion (falls auf dem Tisch) springt per Mist-wreathed in seiner ersten Command Phase in Reserve und kommt sofort wieder.
+Ablative Carapace (2 Kommandopunkte) bereit für den Assimilator oder einen Psychophage.
+Deine erste Runde ist Konter: Alles, was nah an dir steht (Bikes, Lion), wird angegriffen.
+
+Abschnitt 15: Practical Round Checklist.
+
+BEFORE DEPLOYMENT.
+Force Disposition (Recon erwartet).
+Secondaries: Bring It Down fixed (Lion, Storm Speeder, 3 Vengeances).
+Zoans plus Rippers in Reserve.
+DEPLOYMENT.
+Norns zuletzt, HINTER obscuring Zonen (auf einem Objective ist ein Norn immer sichtbar).
+Objectives mit Pyrovores (hidden) besetzen; Runde 2 Command Phase: Tyrannoformed.
+Tyrant-Blöcke höchstens 12 Zoll voneinander (Lion-Versicherung).
+Swarmlord zentral (Malign Presence auf Armour of Contempt etc.).
+OPPONENT TURN.
+Wo steht der Storm Speeder? (schießt er zuerst, dann Oath oder Thunderstrike-Ziel).
+2 Kommandopunkte Ablative Carapace, 1 Kommandopunkt Heroic Intervention bereit.
+Lion gebunden halten, wenn er zuschlägt.
+MY TURN.
+Storm Speeder > Vengeance in Reichweite > Lion (wenn gebunden).
+Norns erst auf Objectives, wenn Storm Speeder plus 1 Vengeance tot.
+Parasitic-Kill in 6 Zoll eines Harvesters.
+Nicht auf Bikes neben dem ATV oder einer Vengeance schießen (Gegenfeuer).

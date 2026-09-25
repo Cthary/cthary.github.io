@@ -1,0 +1,238 @@
+Gegneranalyse: Wieland Bull (Maevola) – Chaos Space Marines.
+
+Liste in Kürze (2000 Punkte, Veterans of the Long War 2 Daemon Prince plus Cabal of Chaos 1 Daemon Prince).
+
+Fabius Bile (Warlord) plus Masters of the Maelstrom plus 5 Chosen; Punkte: 380; Rolle gegen dich: Enhanced Warriors (Chosen plus 1 S, plus 1 T), Fleet Command (Redeploy 3), Plunder (Mortal Wounds), Axe of Ending (Anti-Character 2 plus, Precision), Mind Wrench (Precision).
+Kravek Morne plus 3 Mutilators; Punkte: 285; Rolle gegen dich: Nahkampf-Norn-Killer, Deep Strike, Crushing Charge (Mortal Wounds), Reroll Charge.
+Warpsmith; Punkte: 60; Rolle gegen dich: Heilt ein Fahrzeug D3, plus 1 to hit für es.
+Cultist Mob, 10 Stück ( mal 2); Punkte: 100; Rolle gegen dich: Sticky-Objectives (For the Dark Gods).
+Chaos Rhino; Punkte: 65; Rolle gegen dich: Transport (vermutlich für den Fabius-Block, 12 Modelle).
+Chaos Vindicator, 2 Stück; Punkte: 370; Rolle gegen dich: 24 Zoll D6 plus 3 Blast Stärke 14 AP minus 3 D6.
+Defiler (Ectoplasma, 2 Excruciator, 2 Heavy Reaper Autocannons); Punkte: 330; Rolle gegen dich: 48 Zoll Dev Wounds.
+Obliterators, 2 Stück ( mal 2); Punkte: 320; Rolle gegen dich: Deep Strike, 18 Zoll Stärke 12 AP minus 3 D4 Melta 2, 1 mal Indirect.
+Nurglings, 3 Stück ( mal 2) (verbündet); Punkte: 90; Rolle gegen dich: Infiltrators, O-C 0, minus 1 to hit im Nahkampf gegen sie.
+
+Force Disposition laut Herald: Take and Hold (Veterans of the Long War). Alternative: Disruption (Cabal).
+
+Abschnitt 1: Executive Summary.
+
+Was die Armee will: Ein schwer bewaffnetes Hass-Ziel-System: Focus of Hatred (Reroll Hits gegen eine deiner Einheiten pro Runde) bündelt Vindicators, Defiler, Obliterators und den Kravek-Block auf ein Ziel. Sticky-Cultists halten Objectives; Nurglings bremsen deinen Nahkampf.
+Wichtigste Bedrohung: Der gebündelte Anti-Monster-Schaden gegen den Focus of Hatred: Vindicators (etwa 10, mit Feel No Pain 7,), Defiler (etwa 7 bis 9, mit Feel No Pain 5 bis 6,), Obliterators (etwa 9, mit Feel No Pain 6,), Kravek plus Mutilators im Nahkampf (etwa 12 plus, mit Feel No Pain 8 plus,). Ein Norn pro Runde ist realistisch.
+Wichtigstes taktisches Problem: Fleet Command (Redeploy von 3 Einheiten nach dem Aufstellen) und Deep Strike von Obliterators und Mutilators machen seine Bedrohungsrichtung schwer lesbar.
+Was du vermeiden musst: Einen Norn in 24 Zoll beider Vindicators und in Deep-Strike-Reichweite der Mutilators gleichzeitig.
+Strategischer Ansatz: Beide spielen Battlefield Dominance. Vindicators (24 Zoll) und Obliterators (18 Zoll) sind Kurzstrecke – halte Norns außerhalb 24 Zoll oder Sicht bis Runde 2, töte dann die Vindicators im Nahkampf. Fabius-Block und Mutilators sind gute Ziele für deine Tyrant-Blöcke (Widerstand 5–Widerstand 7, keine Invuln außer Mutilators 5 plus Invul).
+
+Abschnitt 2: Opponent Game Plan.
+
+Focus of Hatred (seine Command Phase): eine deiner Einheiten, dann Reroll Hits für alle Heretic Astartes.
+Dark Pacts: Lethal Hits ODER Sustained Hits (Leadership-Test, sonst D3 Mortal Wounds).
+Cabal of Chaos: Psyker (Garlon Souleater oder Mind Wrench) plus 1 S bei Dark Pact.
+Bringers of Despair (1 Kommandopunkt): Fights First gegen den Focus of Hatred.
+Contemptuous Disregard (1 Kommandopunkt): minus 1 AP gegen Angriffe auf seine Einheit.
+
+1: Aufstellung: Vindicators plus Defiler mit Lanes auf Central; Fabius-Block im Rhino; Cultists auf Home oder Expansion; Nurglings infiltriert vor deinen Linien. Fleet Command: Nach deinem Aufstellen 3 Einheiten neu (auch in Reserve).
+2: Runde 1 bis 2: Vindicators oder Defiler schießen auf den Focus of Hatred. Rhino fährt den Fabius-Block nach vorn.
+3: Runde 2: Obliterators und Kravek-Mutilators per Deep Strike in Melta-, Charge-Reichweite deines Norns.
+4: Scoring: Battlefield Dominance; Cultists (Sticky) sichern Home plus Expansion, Fabius-Block Central.
+
+Er gewinnt, indem er jede Runde eine große Einheit von dir als Focus of Hatred mit allem löscht und Objectives mit Sticky-Cultists hält.
+
+Abschnitt 3: Major Threats.
+
+Chaos Vindicators, 2 Stück.
+
+Widerstand 11, 2 plus, 11 Lebenspunkte, Bewegung 9. Demolisher Cannon 24 Zoll D6 plus 3 Blast Stärke 14 AP minus 3 D6. Siege Shield: schießt auch in Engagement Range ohne minus 1.
+Gegen Norn (Focus of Hatred: Reroll Hits; Pact Lethal): etwa 6,5 Schuss, dann etwa 5,5 Treffer, dann etwa 3,7 Wunden, dann 4 plus Invul, dann etwa 1,8 mal 3,5 = etwa 6 bis 7, mit Feel No Pain 4 bis 5, je Vindicator. Gegen Tyrant-Block (Blast gegen 7 Modelle: plus 1): etwa 3 Guards.
+Reaktion: Kill early. Kurze Reichweite (24 Zoll) – sie müssen nach vorn. Widerstand 11 oder 2 plus oder 11 Lebenspunkte: Hive-Tyrant-Block (Stärke 11 gegen Widerstand 11, dann 4 plus, Bio-stimulus AP minus 3) etwa 8 bis 10; Norn (Harpune Stärke 13 gegen Widerstand 11, dann 3 plus) etwa 7; Crushing Impact. Bring It Down (11 Lebenspunkte). Siege Shield: gebundene Vindicators schießen weiter – auf deine gebundene Einheit, ohne Malus.
+
+Kravek Morne plus 3 Mutilators.
+
+Mutilators: Widerstand 7, 2 plus oder 5 plus Invul, 5 Lebenspunkte, Deep Strike, Crushing Charge (Reroll Charge; je Modell in Engagement 4 plus, dann D3 Mortal Wounds). Fleshmetal: Thunderous Blows 2 Attacken Stärke 12 AP minus 4 D6 plus 2, Rending 4 Attacken Stärke 9 AP minus 3 D3, Clawed 6 Attacken Stärke 6 AP minus 2 D1.
+Kravek: Widerstand 5, 2 plus oder 4 plus Invul, W6, 7 Attacken 2 plus Stärke 10 AP minus 2 D2 Devastating Wounds plus Servo 3 Attacken, Headlong Destruction ( plus 1 AP gegen nächstes Ziel), Architect of Ruin (Reroll Wound gegen gewählten Feind – wird dein Norn oder Hive Tyrant sein).
+Gegen Norn: Crushing Charge etwa 4 Mortal Wounds plus Mutilators (Rending) etwa 8 plus Kravek etwa 5, dann etwa 15 bis 17, mit Feel No Pain 10 bis 11,. Mit Focus of Hatred oder Bringers of Despair noch mehr.
+Reaktion: Deep-Strike-Landezonen verweigern (8 Zoll-Netz). Wenn sie landen: Heroic Intervention plus Konter. Widerstand 7 oder 2 plus oder 5 plus Invul ist für deine D3-Waffen okay.
+
+Defiler.
+
+Bewegung 12, Widerstand 11, 3 plus oder 5 plus Invul, 18 Lebenspunkte, O-C 5, Damaged bei 1 bis 6 W. Scuttling Walker: bewegt sich durch Modelle und Gelände. Ectoplasma Destructor 36 Zoll D6 Blast Stärke 12 AP minus 3 D3; 2 mal Excruciator 36 Zoll 6 Attacken Stärke 6 AP minus 1 D2; 2 mal Heavy Reaper Autocannon 48 Zoll 4 Attacken Stärke 9 AP minus 1 D3, Dev Wounds, Sustained Hits 1. Nahkampf Shearing Claws 5 Attacken Stärke 16 AP minus 3 D6 plus 1 Precision. Revel in Desecration: plus 1 to hit gegen Ziele, die nicht unter halber Stärke sind.
+Hier ohne Empowerment, dafür Dark Pact (Lethal oder Sustained) und Focus of Hatred (Reroll Hits). Gegen Norn: etwa 7 bis 9, mit Feel No Pain 5 bis 6,. Daemonforge: Reroll Wound 1er bei Dark Pact.
+Reaktion: Hoch. Nahkampf (Hive-Tyrant-Block etwa 15 bis 20).
+
+Obliterators, 2 Stück (je 2).
+
+Widerstand 7, 2 plus oder 5 plus Invul, 5 Lebenspunkte, Bewegung 4, Deep Strike. Focused Malice 18 Zoll D3 Stärke 12 AP minus 3 D4 Melta 2; Ruinous Salvo D6 Blast Stärke 8; Warp Hail D6 plus 3 Stärke 5 Sustained. Warp Rift Firepower (1 mal ): Indirect Fire.
+Gegen Norn in 9 Zoll: etwa 4 bis 5, mit Feel No Pain 3, je Trupp.
+Reaktion: Deep-Strike-Bedrohung; stehen danach langsam (Bewegung 4) – leicht zu erreichen.
+
+Fabius Bile plus Masters of the Maelstrom plus Chosen.
+
+Chosen mit Enhanced Warriors: Widerstand 5, plus 1 S (Accursed Stärke 6 AP minus 2, Power Fist Stärke 9). Chosen Marauders: Schießen oder Chargen nach Advance oder Fallback. Fabius: Feel No Pain 5 plus, Surgeon Acolyte (1 mal pro Zug Damage 0), Chirurgeon (steht 1 mal wieder auf).
+Masters: Katar Garrix – Axe of Ending 6 Attacken Stärke 6 AP minus 2 D2 Anti-Character 2 plus Precision, dann gegen deine Tyrant-Blöcke (Character-Keyword im Block) wundet auf 2 plus und trifft den Tyrant direkt, dann etwa 6 bis 8 Schaden am Hive Tyrant oder Swarmlord. Garlon – Mind Wrench 12 Zoll Precision Psychic D6 plus 1. Fleet Command (Redeploy 3). Plunder (1 mal : D3 plus 1 Mortal Wounds, 12 Zoll).
+Reaktion: Assassinations-Gefahr für deine Characters. Den Block nicht an deine Tyrant-Blöcke lassen, ohne dass du zuerst schlägst (Charge = Fights First).
+
+Nurglings, 2 Stück, Cultists, 2 Stück.
+
+Nurglings: O-C 0, Mischief Makers: minus 1 to hit im Nahkampf für Einheiten, die mit ihnen engaged sind, Infiltrators. Sie werden vor deine Blöcke gestellt, um Charges zu verschlechtern.
+Cultists: For the Dark Gods (Sticky Objectives).
+
+Abschnitt 4: Threat Matrix.
+
+Vindicators, 2 Stück; Threat: High; Primary targets: Norns, Tyrant-Blöcke; How it threatens them: 24 Zoll Stärke 14 D6 Blast; Recommended response: Außer 24 Zoll, dann Nahkampf.
+Kravek plus Mutilators; Threat: High; Primary targets: Norns; How it threatens them: Deep Strike plus Crushing Charge plus Rerolls; Recommended response: 8 Zoll-Netz, Heroic Intervention-Konter.
+Defiler; Threat: High; Primary targets: Norns, Psychophages; How it threatens them: 48 Zoll Devastating Wounds; Recommended response: Nahkampf.
+Obliterators, 2 Stück; Threat: Medium–High; Primary targets: Norns; How it threatens them: Deep Strike Melta; Recommended response: Nach Landung töten.
+Masters (Katar Garrix) plus Fabius plus Chosen; Threat: High (gegen deine Characters); Primary targets: Hive Tyrant, Swarmlord; How it threatens them: Anti-Character 2 plus Precision; Recommended response: Zuerst chargen, nie gechargt werden.
+Focus of Hatred; Threat: High (System); Primary targets: wechselnd; How it threatens them: Reroll Hits; Recommended response: Ziel erkennen, Ablative Carapace.
+Cultists, Nurglings; Threat: Low (Scoring oder Blocker); Primary targets: Objectives, Charges; How it threatens them: Sticky, minus 1 to hit; Recommended response: Torrents.
+
+Abschnitt 5: Target Priority.
+
+Kill early: Vindicators (Kurzstrecke, müssen kommen – sobald in Reichweite deines Hive-Tyrant-Blocks: töten). Obliterators oder Mutilators nach ihrer Landung.
+
+Control, avoid: Masters plus Fabius plus Chosen – nur mit Charge-Vorteil; Katar Garrix nicht an deine Tyrants lassen. Defiler – nach den Vindicators.
+
+Ignore: Nurglings (außer sie blockieren eine wichtige Charge – dann Pyrovore-Torrent), Cultists außer für O-C.
+
+Abschnitt 6: Deployment Analysis.
+
+Wahrscheinlich: Vindicators plus Defiler zentral oder hinten, Fabius-Block im Rhino, Cultists auf Home oder Expansion, Nurglings infiltriert vor dir, Obliterators und Kravek-Mutilators in Reserve. Fleet Command nach deinem Aufstellen.
+
+Kernfrage: Einen Norn in einem Zyklus? Ja (Vindicators plus Defiler plus Obliterators plus Mutilators auf Focus of Hatred etwa 35). Beide? Nein.
+
+Deine Aufstellung:
+Norn-Sichtbarkeit in diesem Matchup: Ein Norn, der ein Objective hält, ist immer sichtbar (Base in der Objective-Geländezone, dann deren Obscuring zählt nicht; er überragt die Ruinen; Monster sind nie hidden). Auf 48 Zoll erreicht ihn nur der Defiler (etwa 7 bis 9, mit Feel No Pain 5 bis 6,) – das ist tragbar. Gefährlich wird ein Norn auf einem Objective, wenn er nach der Bewegung der Vindicators in deren 24 Zoll liegt (dann etwa 20, mit Feel No Pain 13, aus Vindicators plus Defiler, mit Focus of Hatred mehr) oder Obliterators oder Mutilators per Deep Strike an ihn herankommen (8 Zoll-Netz!).
+Norns zuletzt, auf Objectives nur außerhalb Vindicator-Bewegung plus 24 Zoll; sonst hinter einer obscuring Zone (nicht darin – ein Norn in der Objective-Zone ist sichtbar). Emissary auf eigener Expansion, Assimilator Central-nah (hinter einer Zone, bis die Vindicators gebunden oder tot sind).
+Objectives, auf denen kein Norn stehen kann: Pyrovores (hidden in der Geländezone, nur in 15 Zoll sichtbar, solange sie nicht geschossen haben) und in deiner Command Phase Tyrannoformed (1 Kommandopunkt), dann das Objective bleibt dein, auch wenn der Trupp weiterzieht.
+8 Zoll-Netz in deiner Hälfte ab Runde 2 (Deep Strike Obliterators oder Mutilators).
+Hive-Tyrant-Block dort, wo die Vindicators vorrücken müssen.
+Swarmlord zentral (verteuert Bringers of Despair, Contemptuous Disregard, Endless Ire, Black Crusade, Let the Galaxy Burn, Millennia of Experience, Fleshy Curse, Infernal Vigour).
+Zoanthropes: Reserve (Defiler oder Vindicators an Flanken; Obliterators nach Landung).
+Rippers: Reserve (auf ein Cultist-Objective, um Sticky zu brechen: Rippers halbieren O-C, dein Block nimmt es).
+
+Welchen Fehler er sich wünscht: Einen Norn in 24 Zoll oder Sicht beider Vindicators in Runde 1, oder einen Tyrant-Block, den er mit Katar Garrix zuerst angreifen kann.
+
+Fleet Command verschiebt seine Vindicators oder Defiler auf eine Seite, dann Overload-Test: Kann er deinen Block in einem Zug löschen? Ein Norn ja, der ganze Block nein, dann Overload diese Seite und töte die Vindicators in Runde 2.
+Er verteilt, dann Standard-Split, Norns außerhalb 24 Zoll.
+
+Abschnitt 7: Movement and Positioning.
+
+Vindicators: Bewegung 9 plus 24 Zoll, dann etwa 33 Zoll Bedrohung. Defiler: Bewegung 12 plus 48 Zoll, Scuttling (durch Gelände).
+Deep Strike: Obliterators (Melta in 9 Zoll, dann Landung mehr als 8 Zoll heißt knapp außerhalb Melta; D3 Schüsse ohne Bonus), Mutilators (9 Zoll-Charge mit Reroll, dann etwa 50 Prozent).
+Rhino: 12 Zoll plus Disembark 3 Zoll, dann Fabius-Block ist schnell.
+Millennia of Experience (1 Kommandopunkt): Infanterie-Einheit 6 Zoll Move, wenn du in 8 Zoll endest.
+Safe: Außerhalb 24 Zoll von Vindicators, in deinem 8 Zoll-Netz.
+Dangerous: 24 Zoll-Zone der Vindicators, Lücken mehr als 8 Zoll.
+
+Abschnitt 8: Charge, Fight Phase Analysis.
+
+Mutilators plus Kravek landen und chargen deinen Norn:
+1. Ende seiner Movement Phase: Overwatch (Pyrovores in 12 Zoll, 1 Kommandopunkt): Torrent gegen Widerstand 7 2 plus, dann etwa 1 W. Lohnt kaum.
+2. Charge (Reroll). Crushing Charge: etwa 4 Mortal Wounds. Fights First (Charge); gegebenenfalls Bringers of Despair.
+3. Heroic Intervention (1 Kommandopunkt, Leap to Defend) mit dem nächsten Tyrant-Block.
+4. Er zuerst: etwa 15, mit Feel No Pain 10, am Norn. Norn (16 W) überlebt im Objective-Modus sicher, ohne nur knapp.
+5. Tyrant-Block plus Norn schlagen zurück: Mutilators (Widerstand 7, 2 plus oder 5 plus Invul, 5 Lebenspunkte) – Hive Tyrant etwa 2 Modelle, Guards etwa 1.
+6. Nächster Zug: Rest töten; Norn heilen.
+
+Du chargst die Vindicators (Runde 2):
+Bio-stimulus (Psychophage), dann Hive-Tyrant-Block plus Assimilator (Harpune, dann Harpooned plus 2 Charge).
+Crushing Impact (Norn): etwa 3,7 Mortal Wounds.
+Hive Tyrant 6 Attacken Stärke 11 AP minus 3 gegen Widerstand 11 2 plus, dann 4 plus twin-linked, dann etwa 3,7 Wunden, dann 5 plus Save, dann etwa 2,5 mal D3 = etwa 5.
+Guards 30 Attacken Stärke 7 AP minus 2, dann 6 plus gegen Widerstand 11, dann etwa 3,3, dann 4 plus Save, dann etwa 1,7.
+Norn Harpune 4 Attacken Stärke 13 AP minus 3 D6 plus 1, dann etwa 2,2 Wunden, dann 5 plus Save, dann etwa 1,5 mal 4,5 = etwa 7; Talons etwa 4, dann etwa 20: ein Vindicator (11 W) tot, der zweite beschädigt.
+Parasitic aktiv (Harvester in 6 Zoll).
+
+Nicht zulassen: Masters of the Maelstrom chargen deinen Tyrant-Block (Katar Garrix: Anti-Character 2 plus Precision). Wenn der Fabius-Block in 12 Zoll steht: selbst zuerst chargen (Fights First durch Charge) oder außer Reichweite bleiben.
+
+Nurglings vor deinem Charge-Ziel: Dein Block muss sie gegebenenfalls als zusätzliches Charge-Ziel mitnehmen, dann Mischief Makers (minus 1 to hit). Pyrovore-Torrent räumt sie vorher (Widerstand 3, 7 plus oder 5 plus Invul, 4 Lebenspunkte mal 3).
+
+Abschnitt 9: Shooting Analysis.
+
+Demolisher, 2 Stück; Reichweite: 24 Zoll; Gegen Norn: etwa 6 bis 7, mit Feel No Pain 4 bis 5, je; Anmerkung: Blast plus 1 gegen 5 plus-Modell-Einheiten.
+Defiler (Reaper, 2 Stück, Ecto, Excruciators); Reichweite: 48 Zoll; Gegen Norn: etwa 7 bis 9, mit Feel No Pain 5 bis 6,; Anmerkung: Dev Wounds.
+Obliterators Focused Malice, 2 Stück Trupps; Reichweite: 18 Zoll; Gegen Norn: etwa 4 bis 5, mit Feel No Pain 3, je (Melta 9 Zoll); Anmerkung: Deep Strike.
+Havoc Launcher (Vindicators, Rhino); Reichweite: 48 Zoll; Anmerkung: gegen Pyrovores.
+Mind Wrench (Garlon); Reichweite: 12 Zoll; Gegen Norn: Precision D6 plus 1 auf Character; Anmerkung: Assassination.
+Plunder (Masters, 1 mal ); Reichweite: 12 Zoll; Gegen Norn: D3 plus 1 Mortal Wounds.
+
+dann Gegen einen Focus-of-Hatred-Norn in Reichweite: etwa 25 bis 30, mit Feel No Pain 17 bis 20, Beschuss plus Nahkampf.
+
+Abschnitt 10: Gotchas and Traps.
+
+1: Fleet Command – nach deinem Aufstellen 3 Einheiten Redeploy (auch in Reserve). Deine Konteraufstellung kann umgangen werden. Norns zuletzt, flexibel.
+2: Focus of Hatred – er benennt es in seiner Command Phase: das verrät sein Ziel für die Runde. Ablative Carapace (Assimilator oder Psychophage) gezielt dafür.
+3: Endless Ire (2 Kommandopunkte) – stirbt der Focus, wählt ein Character ein neues Ziel in 12 Zoll (Reroll Hits weiter).
+4: Katar Garrix (Anti-Character 2 plus Precision) – Assassination-Waffe gegen deine Tyrants.
+5: Chirurgeon, Surgeon Acolyte – Fabius steht 1 mal wieder auf; 1 mal pro Zug Damage 0.
+6: Siege Shield – Vindicators schießen auch im Nahkampf ohne Malus auf die gebundene Einheit.
+7: Mischief Makers – Nurglings geben minus 1 to hit im Nahkampf.
+8: Cultists Sticky – leere Objectives bleiben seine.
+9: Shadow in the Warp – seine Einheiten haben Leadership 6 plus (CSM) beziehungsweise 7 plus (Cultists) – Cultists auf Objectives sind gute Ziele vor seiner Wertung.
+
+Abschnitt 11: Opponent Decision Tree.
+
+Was ist sein Focus of Hatred?
+Norn, dann Norn aus Vindicator-24 Zoll raus beziehungsweise vom Objective hinter eine obscuring Zone (vorher Tyrannoformed);
+Ablative Carapace bereit (nur Assimilator).
+Tyrant-Block, dann Block hinter eine obscuring Zone (der Hive Tyrant ist MONSTER – nie hidden); Guards regenerieren.
+Psychophage, dann Ablative Carapace (Feel No Pain 4 plus auf Objective).
+Obliterators oder Mutilators in Reserve?
+JA, dann 8 Zoll-Netz; nach Landung Konter.
+Rhino mit Fabius-Block fährt vor?
+Rhino töten, bevor er ausladen kann? (Widerstand 9, 3 plus, 10 Lebenspunkte) – Hive-Tyrant-Block: ja, wenn in Reichweite Dann steigt der Block (Emergency Disembark: Hazard, battle-shocked!) aus.
+
+Abschnitt 12: Player's Game Plan.
+
+Default plan.
+
+1: Runde 1: Home plus eigene Expansion plus Central-Rand, außerhalb 24 Zoll der Vindicators. 8 Zoll-Netz vorbereiten.
+2: Runde 2: Vindicators, die vorgerückt sind, im Nahkampf zerschlagen. Gelandete Obliterators oder Mutilators kontern. Zoans auf den Defiler.
+3: Runde 3: Defiler. Rippers plus Block auf ein Cultist-Objective. Shadow in the Warp in seiner Command Phase.
+4: Runde 4 bis 5: O-C-Dominanz mit Norns.
+
+Adjustment triggers.
+
+Rhino in 20 Zoll deines Hive-Tyrant-Blocks, dann Rhino zerschlagen: Emergency Disembark, dann Fabius-Block battle-shocked, Hazard-Würfe.
+Mutilators landen neben Home, dann Swarmlord-Block zurück, Heroic Intervention.
+Focus of Hatred = Swarmlord-Block, dann Hinter eine obscuring Zone, nicht in 12 Zoll der Masters.
+
+Abschnitt 13: Primary Scoring Plan.
+
+Paarung: Beide Take and Hold, dann Battlefield Dominance.
+
+Home plus eigene Expansion plus Central = 13 Siegpunkte pro Runde.
+Seine O-C: Cultists 10 je (Sticky!), Chosen-Block etwa 7 plus Characters, Vindicators 3, Defiler 5.
+Sticky-Cultists zwingen dich, aktiv zu übernehmen – Rippers plus Block.
+Winning the fight gegen. mission: Er hat viel Schaden, aber wenig zähe O-C. Wenn Vindicators oder Defiler fallen, gewinnt deine O-C-Masse.
+
+Secondaries: Bring It Down (Fixed) – 2 Vindicators (11 Lebenspunkte), Defiler (18 Lebenspunkte), Rhino (10 Lebenspunkte) = 4 Ziele. Zweite: Assassination – nur Fabius (kann per Chirurgeon 1 mal wieder aufstehen, dann gegebenenfalls zweimal Siegpunkte, Likely), Kravek Morne, Warpsmith = 3 Characters (die Masters of the Maelstrom haben laut Datenblatt kein CHARACTER-Keyword, Verified). A Grievous Blow greift nicht (Fabius-Block 11 Modelle weniger als 13). Empfehlung: Bring It Down plus Tactical (oder No Prisoners).
+
+Abschnitt 14: First Turn, Second Turn Considerations.
+
+Wenn du zuerst spielst.
+
+Außerhalb 24 Zoll bleiben; Nurglings mit Pyrovores oder Biovore entfernen.
+Hive-Tyrant-Block an eine Position, von der aus Runde 2 ein Vindicator erreichbar ist.
+
+Wenn er zuerst spielt.
+
+Vindicators rücken vor und schießen; Defiler schießt 48 Zoll.
+Kommandopunkte: Ablative Carapace (2) auf das Focus-Ziel, Heroic Intervention (1) gegen Deep-Strike-Charges.
+
+Abschnitt 15: Practical Round Checklist.
+
+BEFORE DEPLOYMENT.
+Battlefield Dominance.
+Bring It Down fixed (Vindicators, Defiler, Rhino).
+Zoans plus Rippers Reserve.
+DEPLOYMENT.
+Norns zuletzt, außerhalb 24 Zoll der Vindicators.
+Fleet Command abwarten.
+8 Zoll-Netz ab Runde 2 planen.
+OPPONENT TURN.
+Focus of Hatred notieren.
+Deep Strike Obliterators oder Mutilators, dann Heroic Intervention bereit.
+Masters of the Maelstrom nicht an Tyrant-Blöcke lassen.
+MY TURN.
+Vindicators im Nahkampf.
+Rhino töten, wenn Block drin (Emergency Disembark = battle-shocked).
+Rippers auf Cultist-Objective.

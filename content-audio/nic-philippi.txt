@@ -1,0 +1,230 @@
+Gegneranalyse: Nic Philippi (xDorndra) – Chaos Space Marines (Soulforged Warpack).
+
+Liste in Kürze (2000 Punkte, Soulforged Warpack 2 Daemon Prince plus Cabal of Chaos 1 Daemon Prince).
+
+Vashtorr the Arkifane (Warlord); Punkte: 220; Rolle gegen dich: plus 2 S für Daemon Vehicles in 6 Zoll, minus 1 to hit gegen ihn (18 Zoll), Hammer 6 Attacken Stärke 14 D3 Devastating Wounds, Deep Strike.
+Warpsmith (Tempting Addendum: Reroll Hits für Daemon Vehicles in 3 Zoll, die den Contract nutzen); Punkte: 100; Rolle gegen dich: Heilt oder buffed ein Fahrzeug.
+Warpsmith (Soul Harvester: plus 1 Kommandopunkt auf 5 plus, wenn in 12 Zoll etwas stirbt); Punkte: 75; Rolle gegen dich: Kommandopunkte-Motor.
+Defiler, 2 Stück (Ectoplasma, 2 Excruciator, 2 Heavy Reaper Autocannons); Punkte: 710; Rolle gegen dich: Hauptbedrohung – mit Contract plus 1 to wound, mit Vashtorr plus 2 S.
+Havocs, 5 Stück (4 Lascannons); Punkte: 125; Rolle gegen dich: 48 Zoll Stärke 12 AP minus 3 D6 plus 1.
+Helbrute, 2 Stück (Fist plus Hammer, Heavy Flamer); Punkte: 260; Rolle gegen dich: Nahkampf (Devoted: plus 2 A), Dark Ascension (beide Pact-Boni in 6 Zoll).
+Maulerfiend (Lasher Tendrils); Punkte: 130; Rolle gegen dich: Nahkampf Stärke 14, ignoriert Move oder Charge-Modifikatoren.
+Venomcrawler, 2 Stück; Punkte: 240; Rolle gegen dich: Excruciators, Soul Eater ( plus 1 A nach Kill).
+Legionaries, 5 Stück (Lascannon); Punkte: 90; Rolle gegen dich: Battleline, Objective.
+Cultist Mob, 10 Stück; Punkte: 50; Rolle gegen dich: Sticky Objective.
+
+Force Disposition laut Herald: Take and Hold (Soulforged Warpack). Alternative: Disruption (Cabal).
+
+Abschnitt 1: Executive Summary.
+
+Was die Armee will: Eine Daemon-Engine-Walze. Jedes Daemon Vehicle (Defiler, Maulerfiend, Venomcrawler) darf bei jedem Dark Pact seinen Contract einlösen: plus 1 to wound im Fernkampf, plus 2 Attacken im Nahkampf. Vashtorr gibt allen Daemon Vehicles in 6 Zoll plus 2 S. Er walzt mit 5 Daemon Engines plus 2 Helbrutes über die Mitte.
+Wichtigste Bedrohung: Die zwei Defiler im Vashtorr-, Warpsmith-Paket – je etwa 15, mit Feel No Pain 10, Schaden an einem Norn pro Schussphase (Reaper-Autocannons Stärke 11 mit plus 1 to wound). Zusammen: ein Norn pro Runde, auf 48 Zoll.
+Wichtigstes taktisches Problem: Die Buffs hängen an Aurabereichen (Vashtorr 6 Zoll, Tempting Addendum 3 Zoll) – er muss eng stehen. Das ist deine Chance: ein enger Klumpen aus Fahrzeugen, die im Nahkampf sterblich sind.
+Was du vermeiden musst: Einen Norn in offener 48 Zoll-Sicht der gebufften Defiler. Und Tyrant-Blöcke in Charge-Reichweite der Nahkampf-Engines ohne Heroic Intervention-Deckung.
+Strategischer Ansatz: Beide spielen Battlefield Dominance. Runde 1 Norns hinter obscuring Zonen (nicht auf Objectives), dann Nahkampf-Überfall auf den Klumpen (Vashtorr plus Defiler plus Warpsmiths). Vashtorr oder Warpsmith zu töten nimmt ihm plus 2 S und die Rerolls.
+
+Abschnitt 2: Opponent Game Plan.
+
+Dark Pact (beim Schießen oder Kämpfen): Leadership-Test (sonst D3 Mortal Wounds), dann Lethal ODER Sustained.
+Soulforged Warpack – Contract (Daemon Vehicle): Leadership-Test minus 1, dafür Fernkampf plus 1 to wound, Nahkampf plus 2 A.
+Tempting Addendum (Warpsmith in 3 Zoll): Contract-Fahrzeuge rerollen alle Hits (Mortal Wounds beim Pact plus 1).
+Vashtorr (6 Zoll): Daemon Vehicles plus 2 S.
+Helbrute (6 Zoll): Dark Ascension – beide Pact-Boni (Lethal UND Sustained).
+Desperate Pledge (1 Kommandopunkt): Contract, dann AP plus 1.
+
+1: Aufstellung: Kernklumpen: Vashtorr plus Warpsmith (Tempting) plus Defiler, 2 Stück plus Helbrute. Havocs mit 48 Zoll-Lane. Venomcrawler oder Maulerfiend als Vorhut. Cultists oder Legionaries auf Home oder Expansion.
+2: Runde 1 bis 2: Defiler (48 Zoll) und Havocs schießen auf den Norn. Maulerfiend oder Venomcrawler rücken vor (Unstoppable Rampage: durch Gelände).
+3: Runde 2 bis 3: Der Klumpen erreicht die Mitte; Nahkampf-Engines plus Vashtorr (Deep Strike möglich) auf deine Blöcke.
+4: Scoring: Battlefield Dominance, Objectives über Fahrzeug-O-C (Defiler 5, Maulerfiend 3, Venomcrawler 3) plus Cultists (Sticky).
+
+Er gewinnt, wenn seine gebufften Defiler deine Norns in Runde 1 bis 2 aus der Distanz löschen und der Engine-Klumpen dann die Mitte mit O-C und Nahkampf übernimmt.
+
+Abschnitt 3: Major Threats.
+
+Defiler, 2 Stück im Buff-Paket.
+
+Basisprofil: Bewegung 12, Widerstand 11, 3 plus oder 5 plus Invul, 18 Lebenspunkte, O-C 5, Damaged bei 1 bis 6 W. Scuttling Walker: bewegt sich durch Modelle und Gelände. Ectoplasma Destructor 36 Zoll D6 Blast Stärke 12 AP minus 3 D3; 2 mal Excruciator 36 Zoll 6 Attacken Stärke 6 AP minus 1 D2; 2 mal Heavy Reaper Autocannon 48 Zoll 4 Attacken Stärke 9 AP minus 1 D3, Dev Wounds, Sustained Hits 1. Nahkampf Shearing Claws 5 Attacken Stärke 16 AP minus 3 D6 plus 1 Precision. Revel in Desecration: plus 1 to hit gegen Ziele, die nicht unter halber Stärke sind.
+Buffs in dieser Liste: Contract ( plus 1 to wound Fernkampf), Vashtorr ( plus 2 S, dann Reaper Stärke 11, Ectoplasma Stärke 14, Excruciator Stärke 8), Tempting Addendum (Reroll Hits), Dark Pact (Lethal oder Sustained; mit Helbrute in 6 Zoll: beides), Daemonforge (Reroll Wound 1er beim Pact).
+Gegen Norn (Widerstand 11, 2 plus oder 4 plus Invul): Reaper 8 Schuss, dann etwa 8 Treffer ( plus Sustained), dann Stärke 11 gegen Widerstand 11 4 plus, dann plus 1, dann 3 plus, dann etwa 5,5 Wunden (etwa 1,4 Devastating Wounds-Crits à 3 Mortal Wounds), dann etwa 4 normal durch Save (3 plus bei AP minus 1), dann 1,4 mal 3 plus 4,2 Mortal Wounds etwa 8; Ectoplasma etwa 3,7; Excruciators etwa 3,4, dann etwa 15, mit Feel No Pain 10, je Defiler.
+Gegen Tyrant Guard (Widerstand 8): etwa 5 bis 6 Guards je Defiler.
+Reaktion: Kill early – aber realistischer: die Buffs töten. Ohne Vashtorr: Reaper Stärke 9, dann 5 plus ( plus 1 = 4 plus), dann Schaden etwa minus 35 Prozent. Ohne Tempting-Warpsmith: keine Reroll-Hits.
+
+Vashtorr the Arkifane (Warlord).
+
+Widerstand 10, 2 plus oder 4 plus Invul, 14 Lebenspunkte, Bewegung 12, FLY, Deep Strike. Hammer Strike 6 Attacken 2 plus Stärke 14 AP minus 3 D3 Devastating Wounds; Sweep 12 Attacken Stärke 8 AP minus 1 D2 Devastating Wounds. Claw Torrent 12 Zoll. Reorder Reality: Feinde in 18 Zoll, die ihn beschießen, haben minus 1 to hit und ihre Fernkampfwaffen werden Hazardous. Lone Operative in 3 Zoll eines Daemon Vehicle.
+Gegen Norn im Nahkampf: etwa 8 bis 10, mit Feel No Pain 5 bis 7,. Bring It Down plus Assassination (8 Siegpunkte).
+Reaktion: Nicht beschießen (Reorder Reality: minus 1 und Hazardous – deine Zoans würden sich selbst schaden; Psychic ignoriert den minus 1-Modifikator, aber Hazardous bleibt). Im Nahkampf töten (Swarmlord plus Hive Tyrant, Stärke 10 oder Stärke 11 gegen Widerstand 10, dann 4 plus oder 3 plus).
+
+Warpsmiths, 2 Stück.
+
+Widerstand 4, 2 plus, 4 Lebenspunkte, Lone Operative in 3 Zoll eines Fahrzeugs. Master of Mechanisms: heilt D3 plus plus 1 to hit für ein Fahrzeug in 3 Zoll. Tempting Addendum, Soul Harvester.
+Reaktion: System-Ziele. Lone Operative (12 Zoll) macht sie nur für Nahkampf oder Torrents oder Nähe erreichbar. Psychophage (12 Zoll Torrent) oder Nahkampf.
+
+Maulerfiend, Venomcrawler, 2 Stück, Helbrutes, 2 Stück (Nahkampf-Engines).
+
+Maulerfiend: Widerstand 10, 3 plus oder 5 plus Invul, 12 Lebenspunkte, Bewegung 10. Fists 6 Attacken Stärke 14 (Vashtorr plus 2, dann Stärke 16) AP minus 2 D6 plus 1; Tendrils 6 Attacken. Siege Crawler: ignoriert Move-, Charge-Modifikatoren (Tanglestrike minus 2 Zoll wirkt nicht!). Mit Contract plus 2 A, dann 8 Attacken Fists, dann gegen Norn etwa 15, mit Feel No Pain 10,.
+Venomcrawler: Widerstand 9, 3 plus oder 5 plus Invul, 9 Lebenspunkte, Bewegung 12. Excruciators 12 Attacken Stärke 6 D2; Soulflayer 6 Attacken Stärke 6 D2 ( plus 2 Contract, plus 1 nach Kill).
+Helbrutes: Widerstand 9, 2 plus, 8 Lebenspunkte, Bewegung 6. Fist 7 Attacken Stärke 12 AP minus 2 D3 plus Hammer 7 Attacken Stärke 14 AP minus 3 D6 plus 1 (Devoted plus 2 A). Gegen Norn: etwa 10 bis 12, mit Feel No Pain 7 bis 8,. Dark Ascension-Aura.
+Reaktion: Die Helbrutes sind langsam (Bewegung 6). Maulerfiend oder Venomcrawler sind die schnellen Brecher – erste Parasitic-Kills (Venomcrawler 9 Lebenspunkte).
+
+Havocs (4 Lascannons) plus Legionaries (Lascannon).
+
+Havocs: 48 Zoll 4 mal Stärke 12 AP minus 3 D6 plus 1, Stabilisation Talons (ignorieren Hit-Modifikatoren). Gegen Norn: etwa 4 bis 5, mit Feel No Pain 3,.
+Reaktion: Medium; Zoans (Widerstand 5 Infanterie, 2 Lebenspunkte) oder Biovore.
+
+Abschnitt 4: Threat Matrix.
+
+Defiler, 2 Stück (gebufft); Threat: Very High; Primary targets: Norns, Guards, Psychophages; How it threatens them: 48 Zoll Stärke 11 plus 1 wound Devastating Wounds; Recommended response: Norns hinter obscuring Zonen; Buffs töten.
+Vashtorr; Threat: High (System); Primary targets: Norns, Tyrant-Blöcke; How it threatens them: plus 2 S Aura, Nahkampf; Recommended response: Nahkampf, nicht beschießen.
+Warpsmith (Tempting); Threat: High (System); How it threatens them: Reroll Hits; Recommended response: Früh (Torrent oder Nahkampf).
+Maulerfiend; Threat: High; Primary targets: Norns; How it threatens them: 8 Attacken Stärke 16 D6 plus 1; Recommended response: Heroic Intervention-Konter, Parasitic-Kill.
+Helbrutes, 2 Stück; Threat: Medium–High; Primary targets: Norns, Guards; How it threatens them: Fist plus Hammer; Recommended response: Langsam – umgehen.
+Venomcrawler, 2 Stück; Threat: Medium; Primary targets: Pyrovores, Guards; How it threatens them: Excruciators, Soul Eater; Recommended response: Parasitic-Kill.
+Havocs; Threat: Medium; Primary targets: Norns; How it threatens them: 4 Lascannons 48 Zoll; Recommended response: Zoans oder Biovore.
+Cultists, Legionaries; Threat: Low (Scoring); Primary targets: Objectives; How it threatens them: Sticky; Recommended response: O-C.
+
+Abschnitt 5: Target Priority.
+
+Kill early: Warpsmith mit Tempting Addendum und Vashtorr (die Buff-Quelle), dann ein Defiler. Wenn ein Defiler isoliert (außerhalb 6 Zoll Vashtorr) steht: direkt ihn.
+
+Control, avoid: Helbrutes (langsam, stark im Nahkampf – umgehen). Maulerfiend – nicht in Reichweite von 10 Zoll plus 2W6 mit einem Norn stehen, außer ein Tyrant-Block kann Heroic Intervention.
+
+Ignore: Cultists (außer O-C), Legionaries.
+
+Abschnitt 6: Deployment Analysis.
+
+Wahrscheinlich: Enger Klumpen um Vashtorr (Defiler, 2 Stück, Warpsmith, Helbrute), Havocs mit Lane, Maulerfiend oder Venomcrawler vorn, Cultists oder Legionaries auf Objectives. Vashtorr gegebenenfalls in Deep-Strike-Reserve (dann fehlt Runde 1 der plus 2-S-Buff).
+
+Kernfrage: Einen Norn in einem Zyklus? Ja (zwei gebuffte Defiler allein etwa 30, mit Feel No Pain 20,). Beide Norns? Mit Defilern plus Havocs plus Maulerfiend-Charge: an einem guten Tag ja. Das ist eine der gefährlichsten Listen für dich.
+
+Deine Aufstellung:
+Norn-Sichtbarkeit in diesem Matchup (entscheidend): Ein Norn, der ein Objective hält, ist immer sichtbar – seine Base steht in der Objective-Geländezone (deren Obscuring zählt für ihn nicht), er überragt die Ruinen, Monster sind nie hidden. Zwei gebuffte Defiler (etwa 15, mit Feel No Pain 10, je) plus Havocs töten einen Norn auf einem Objective in einem Zug. Verdeckt ist ein Norn nur hinter (nicht in) einer obscuring Zone – dort punktet er nicht. Achtung: Defiler laufen durch Gelände (Scuttling Walker) – plane die Deckung gegen seine nächste Position.
+Norns zuletzt, beide hinter obscuring Zonen, außerhalb der Defiler-Lanes. Lieber ein Objective in Runde 1 nicht mit einem Norn besetzen, als einen Norn zu verlieren.
+Objectives in Runde 1 bis 2: Pyrovores (INFANTRY, dann hidden in der Objective-Zone, nur in 15 Zoll sichtbar, solange sie nicht geschossen haben – auch Overwatch zählt) plus Biovore auf Home. In deiner Command Phase Tyrannoformed (1 Kommandopunkt, Pyrovores sind Harvester), dann das Objective bleibt dein, auch wenn der Trupp weiterzieht oder stirbt.
+Norns treten erst auf Objectives, wenn Vashtorr oder ein Defiler tot ist (dann sinkt der Fernkampfschaden gegen einen Norn unter das, was er mit Feel No Pain 5 plus und Heilung überlebt).
+Overload-Variante: Hive-Tyrant-Block plus Swarmlord-Block plus Assimilator plus Psychophage gegenüber dem Klumpen, aber hinter Gelände. Ziel Runde 2: Klumpen erreichen (Vashtorr, Warpsmith, ein Defiler).
+Swarmlord zentral: Malign Presence verteuert Desperate Pledge, Glut of Souls, Unstoppable Rampage, Predatory Pursuit, Feeding Frenzy, Infernal Vigour, Fleshy Curse, Wreathed in Warpflame.
+Pyrovores hidden in den Objective-Geländezonen (s. o.); sobald die Nahkampf-Engines kommen, als Screens.
+Zoanthropes: Reserve, Einflug gegen Havocs oder einen Defiler außerhalb 18 Zoll von Vashtorr (Reorder Reality). Nicht auf Vashtorr schießen.
+Rippers: Reserve, auf das Cultist-Objective.
+
+Welchen Fehler er sich wünscht: Einen Norn offen in Runde 1.
+
+Klumpen in der Mitte, dann Triangle mit deinen drei sichersten Objectives; Tyrant-Blöcke flankieren den Klumpen Runde 2: in den Klumpen (Charge in Warpsmith oder Vashtorr oder Defiler).
+Vashtorr in Reserve, dann Runde 1 sind die Defiler schwächer (kein plus 2 S). Deine Norns sind in Runde 1 sicherer Ab Runde 2: 8 Zoll-Netz (Vashtorr Deep Strike).
+Defiler getrennt, dann Der ohne Vashtorr ist dein erstes Ziel.
+
+Abschnitt 7: Movement and Positioning.
+
+Defiler oder Maulerfiend oder Venomcrawler: Bewegung 10–Bewegung 12, Unstoppable Rampage (1 Kommandopunkt): Fahrzeuge durch Gelände; Defiler ohnehin Scuttling Walker.
+Predatory Pursuit (1 Kommandopunkt): Endet deine Einheit in 8 Zoll eines seiner Fahrzeuge, darf dieses 6 Zoll auf dich zu, dann es bindet dich oder steht in Charge-Reichweite.
+Maulerfiend Siege Crawler: Keine Move-, Charge-Modifikatoren (Tanglestrike wirkt nicht).
+Safe: Hinter obscuring Geländezonen außerhalb der 48 Zoll-Defiler-Sicht (nicht auf einem Objective – dort ist ein Norn immer sichtbar). Pyrovores in Geländezonen, solange sie nicht schießen.
+Dangerous: 6 Zoll-Blase um Vashtorr (dort sind seine Engines am stärksten), 18 Zoll um Vashtorr für eigenen Beschuss (Reorder Reality).
+Conditional: Mitte – dein Nahkampfterrain, sobald er kommt.
+
+Abschnitt 8: Charge, Fight Phase Analysis.
+
+Dein Überfall auf den Klumpen (Runde 2):
+Ziel 1: Warpsmith (Tempting) – Widerstand 4, 2 plus, 4 Lebenspunkte, Lone Operative (nur in 12 Zoll angreifbar): Psychophage-Torrent (12 Zoll, Auto-Hit, Stärke 6 gegen Widerstand 4, dann 3 plus, AP minus 1 gegen 2 plus), dann etwa 1 W; danach Nahkampf-Kill.
+Ziel 2: Vashtorr (Widerstand 10, 4 plus Invul, 14 Lebenspunkte) mit Swarmlord-Block: Swarmlord 8 Attacken Stärke 10 AP minus 2(minus 3 Bio) gegen Widerstand 10, dann 4 plus twin-linked, dann etwa 5 Wunden, dann 4 plus Invul, dann etwa 2,5 mal 3 = etwa 7,5 Guards 30 Attacken Stärke 6, dann 5 plus, dann etwa 6,7, dann 4 plus Invul (AP irrelevant), dann etwa 3,3 plus Hive Tyrant oder Norn, dann etwa 6 bis 8, dann Vashtorr tot oder fast tot. Er ist 8 Siegpunkte (Bring It Down plus Assassination).
+Ziel 3: Defiler mit Hive-Tyrant-Block plus Assimilator (vorher Psychophage-Torrent für Bio-stimulus, Harpune für plus 2 Charge): Hive Tyrant 6 Attacken Stärke 11 AP minus 3 twin, dann etwa 8; Talons etwa 2; 6 Guards 30 Attacken Stärke 7 AP minus 2, dann etwa 4,5; Assimilator etwa 6, dann etwa 20: Defiler (18 W) tot, Parasitic aktiv, wenn ein Harvester in 6 Zoll steht.
+
+Er chargt dich (Maulerfiend oder Helbrute auf Norn):
+1. Overwatch? Nein (Widerstand 10, 3 plus oder 5 plus Invul).
+2. Heroic Intervention (1 Kommandopunkt) mit Tyrant-Block in 12 Zoll.
+3. Er zuerst (etwa 12 bis 15, mit Feel No Pain 8 bis 10, am Norn). Norn überlebt (16 W; auf einem Objective zusätzlich Feel No Pain 5 plus im Objective-Modus).
+4. Konter: Tyrant-Block plus Norn (Lesser Prey plus 2 S, dann Stärke 12 gegen Widerstand 10 3 plus), dann Maulerfiend (12 W) tot.
+5. Harpoon Barbs, falls er zurückfällt.
+
+Feeding Frenzy (1 Kommandopunkt): Nicht-Monster, die aus Nahkampf mit einer Daemon Engine fallen wollen, dann Desperate Escape. Deine Pyrovores oder Rippers oder Zoans kommen schwer weg; Tyrant-Blöcke (MONSTER-Keyword) sind ausgenommen.
+
+Abschnitt 9: Shooting Analysis.
+
+Defiler, 2 Stück (Reaper, Ecto, Excruciators); Reichweite: 48 Zoll oder 36 Zoll; Gegen Norn (gebufft): etwa 15, mit Feel No Pain 10, je; Gegen Tyrant Guard: etwa 5 bis 6 Guards je.
+Havoc Lascannons, 4 Stück; Reichweite: 48 Zoll; Gegen Norn (gebufft): etwa 4 bis 5, mit Feel No Pain 3,; Gegen Tyrant Guard: etwa 2.
+Legionary Lascannon; Reichweite: 48 Zoll; Gegen Norn (gebufft): etwa 1, mit Feel No Pain 0,7.
+Venomcrawler Excruciators, 4 Stück (24 Attacken Stärke 6 oder Stärke 8); Reichweite: 36 Zoll; Gegen Norn (gebufft): etwa 2 bis 4, mit Feel No Pain 1,3 bis 3,; Gegen Tyrant Guard: etwa 3.
+Helbrute Heavy Flamers; Reichweite: 12 Zoll; Gegen Tyrant Guard: Pyrovores.
+Vashtorr Claw (Torrent); Reichweite: 12 Zoll; Gegen Tyrant Guard: etwa 1.
+
+dann Runde 1 bis 2 gegen einen offenen Norn: etwa 30 bis 35, mit Feel No Pain 20 bis 23,. Ohne Vashtorr-Aura: etwa 22, mit Feel No Pain 15,.
+
+Seine Zielpriorität: Norn, dann Psychophage, dann Tyrant-Block.
+
+Abschnitt 10: Gotchas and Traps.
+
+1: Contract plus Vashtorr plus Tempting – die Defiler-Zahlen gelten nur im Aurabereich (Vashtorr 6 Zoll, Warpsmith 3 Zoll). Lies seine Aufstellung: Wer steht in 6 Zoll um Vashtorr, wer in 3 Zoll um den Warpsmith?
+2: Reorder Reality – Beschuss auf Vashtorr aus 18 Zoll: minus 1 to hit und deine Waffen werden Hazardous (Hazard-Wurf: 1 bis 2, dann 1 Mortal Wounds, 3 Mortal Wounds bei Monster-Einheiten!). Nie mit Norn-Harpune oder Emissary auf Vashtorr schießen (Monster, dann 3 Mortal Wounds bei Fehlschlag).
+3: Dark Ascension (Helbrute 6 Zoll) – beide Pact-Boni (Lethal plus Sustained).
+4: Predatory Pursuit, Feeding Frenzy – Reaktionsbewegung auf dich zu, Fallback-Strafe.
+5: Soul Harvester – jede tote Einheit von dir in 12 Zoll des Warpsmith: plus 1 Kommandopunkt auf 5 plus.
+6: Desperate Pledge (1 Kommandopunkt) – plus 1 AP beim Contract. Malign Presence: 2 Kommandopunkte.
+7: Glut of Souls – Fahrzeuge heilen im Nahkampf pro Kill 1 W auf 5 plus.
+8: Dark Pact kostet ihn – Leadership-Test (mit Contract minus 1): bei Fehlschlag D3 Mortal Wounds (Tempting Addendum: plus 1). Seine Fahrzeuge verwunden sich selbst – über die Runden summiert sich das.
+
+Abschnitt 11: Opponent Decision Tree.
+
+Wo steht Vashtorr?
+Im Klumpen (Tisch), dann Norns außer Sicht; Tyrant-Blöcke Runde 2 in den Klumpen.
+Reserve, dann Runde 1 Defiler schwächer; Runde 2 Deep Strike, dann 8 Zoll-Netz; wenn gelandet: Nahkampf.
+Wo steht der Tempting-Warpsmith?
+In 3 Zoll eines Defilers, dann dieser Defiler rerollt Hits: prioritär (Warpsmith oder Defiler).
+Kommen Maulerfiend oder Venomcrawler allein vor?
+JA, dann Parasitic-Kills.
+
+Abschnitt 12: Player's Game Plan.
+
+Default plan.
+
+1: Runde 1: Kein Norn auf einem Objective in Defiler-Sicht. Home plus sichere Expansion plus Central mit Pyrovores (hidden) beziehungsweise Biovore; Tyrannoformed in deiner Command Phase (Runde 2). Tyrant-Blöcke hinter obscuring Zonen (ihr Hive Tyrant ist MONSTER – nie hidden). Biovore auf Havocs.
+2: Runde 2: Überfall: Swarmlord-Block auf Vashtorr oder Warpsmith, Hive-Tyrant-Block plus Assimilator auf einen Defiler. Zoans auf Havocs oder zweiten Defiler (nicht in 18 Zoll Vashtorr).
+3: Runde 3: Rest-Defiler, Maulerfiend. Norns übernehmen Central oder Expansion.
+4: Runde 4 bis 5: O-C-Dominanz (seine Fahrzeuge sind dann dezimiert).
+
+Adjustment triggers.
+
+Vashtorr tot, dann Defiler verlieren plus 2 S; Norns dürfen in Runde 3 plus offener stehen.
+Maulerfiend chargt früh, dann Heroic Intervention plus Konter = Parasitic-Kill (12 W, Widerstand 10 – mit Lesser Prey auf Norn möglich).
+Er bleibt im Klumpen stehen (kommt nicht), dann Du nimmst deine drei Objectives und wartest; seine Defiler müssen Sicht suchen – und damit aus dem Buff-Klumpen heraus.
+
+Abschnitt 13: Primary Scoring Plan.
+
+Paarung: Beide Take and Hold, dann Battlefield Dominance.
+
+Home plus eigene Expansion plus Central = 13 Siegpunkte pro Runde.
+Seine O-C: Defiler 5 je, Maulerfiend 3, Venomcrawler 3 je, Helbrutes 3 je, Vashtorr 3, Cultists 10 (Sticky), Legionaries 10, Havocs 5.
+Sein O-C ist mittel; er gewinnt Objectives über Töten.
+Winning the fight gegen. mission: Wenn der Klumpen deine Norns in Runde 1 bis 2 nicht sieht, verliert er seinen Vorteil. Ab Runde 3 gewinnt deine O-C plus Regeneration.
+
+Secondaries: Bring It Down (Fixed) – Vashtorr (14 Lebenspunkte), 2 Defiler (18 Lebenspunkte), Maulerfiend (12 Lebenspunkte) = 4 Ziele (Helbrutes 8 Lebenspunkte, Venomcrawler 9 Lebenspunkte zählen nicht). Zweite: Assassination (Vashtorr, 2 Warpsmiths) oder Tactical. Empfehlung: Bring It Down plus Assassination.
+
+Abschnitt 14: First Turn, Second Turn Considerations.
+
+Wenn du zuerst spielst.
+
+Nichts Offenes. Biovore oder Emissary auf Havocs oder Legionaries oder Cultists. Blöcke hinter Gelände vorwärts.
+
+Wenn er zuerst spielt.
+
+Defiler schießen 48 Zoll auf alles Sichtbare – Deployment entscheidet.
+Ablative Carapace (2 Kommandopunkte) für Psychophage oder Assimilator, Catalytic Biofortification (1 Kommandopunkt) gegen Reaper-Devastating Wounds-Mortal Wounds auf den Assimilator.
+
+Abschnitt 15: Practical Round Checklist.
+
+BEFORE DEPLOYMENT.
+Battlefield Dominance.
+Bring It Down plus Assassination.
+Zoans plus Rippers Reserve.
+DEPLOYMENT.
+Beide Norns hinter obscuring Zonen, keine Defiler-Lane; Pyrovores auf die Objectives.
+Klumpen lesen: wer steht in 6 Zoll Vashtorr, 3 Zoll Tempting-Warpsmith?
+Tyrant-Blöcke gegenüber dem Klumpen, hinter Gelände.
+OPPONENT TURN.
+Welcher Defiler hat alle Buffs?
+Heroic Intervention bereit gegen Maulerfiend oder Helbrute.
+Catalytic Biofortification gegen Devastating Wounds-Mortal Wounds.
+MY TURN.
+Nie auf Vashtorr schießen (Reorder Reality: Hazardous!).
+Warpsmith (Tempting), Vashtorr, Defiler im Nahkampf.
+Rippers auf Cultist-Objective.

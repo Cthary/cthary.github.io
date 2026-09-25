@@ -1,0 +1,238 @@
+Gegneranalyse: Maximilian Müller (Thorius) – Astra Militarum (Grizzled Company).
+
+Liste in Kürze (2000 Punkte, Grizzled Company 3 Daemon Prince).
+
+Commissar Yarrick (Warlord) plus Krieg Command Squad (Lord Commissar, Master Vox, Standard, Medic …) plus 20 Death Korps of Krieg; Punkte: 315; Rolle gegen dich: O-C-Wand (27 Modelle), Orders 24 Zoll (Master Vox), Will of Iron.
+Rogal Dorn Commander (Aquilan Eye: Order Target Weak Spot plus 1 AP in 12 Zoll); Punkte: 310; Rolle gegen dich: Oppressor 72 Zoll, Pulveriser, 2 Multi-meltas, 2 Meltaguns; 2( plus 1) Orders an Squadrons.
+Leman Russ Battle Tank, 2 Stück (Lascannon, Battle Cannon, 2 Multi-meltas, HK); Punkte: 350; Rolle gegen dich: 48 Zoll Anti-Monster-Mix.
+Leman Russ Exterminator (Autocannon, Lascannon, 2 Multi-meltas, HK); Punkte: 175; Rolle gegen dich: Withering Hail ( plus 1 AP für alle gegen ein Ziel).
+Hellhound (Inferno Cannon); Punkte: 125; Rolle gegen dich: 18 Zoll Torrent 2D6 Stärke 6 AP minus 2, dann Pyrovores oder Guards.
+Tech-Priest Enginseer; Punkte: 45; Rolle gegen dich: Fahrzeug D3 heilen plus 4 plus Invul.
+Gaunt's Ghosts; Punkte: 95; Rolle gegen dich: Infiltrators, Lone Operative, Stealth, Fights First, Deep-Strike-Rückzug.
+Kasrkin, 10 Stück ( mal 2) (2 Meltas, 2 Plasma, Marksman, Melta Mine); Punkte: 210; Rolle gegen dich: Scouts 6 Zoll, Melta-Trupps.
+Krieg Combat Engineers, 5 Stück; Punkte: 65; Rolle gegen dich: Scouts, Remote Mine, Explosives 0 Kommandopunkte.
+Death Riders, 5 Stück ( mal 2); Punkte: 120; Rolle gegen dich: Screening Line (6 Zoll Ausweichen), Lance.
+Taurox, 2 Stück; Punkte: 130; Rolle gegen dich: Transporte (Kasrkin?), Shock Disembark nach Advance.
+Ratlings, 5 Stück; Punkte: 60; Rolle gegen dich: Infiltrators, Stealth, Snipers.
+
+Force Disposition laut Herald: Priority Assets (Grizzled Company – einzige Option).
+
+Abschnitt 1: Executive Summary.
+
+Was die Armee will: Eine Panzer-Gunline mit Befehlen (Grizzled Company: plus 1 Order pro Officer, Reroll Hit-1er unter Order) plus eine 27-Modell-Krieg-O-C-Wand mit Yarrick. Seine Primary (Secure Asset) zahlt 4 Siegpunkte pro Zug für eine Action auf einem Nicht-Home-Objective und 4 plus 4 Siegpunkte für Objectives – er braucht eine sichere Objective-Stellung und schießt dich von dort weg.
+Wichtigste Bedrohung: Die Fahrzeugbatterie – Rogal Dorn (etwa 9, mit Feel No Pain 6,), 2 Leman Russ (etwa 5, mit Feel No Pain 3, je), Exterminator (etwa 3, mit Feel No Pain 2, plus AP-Buff), Hunter-Killer-Missiles (3 mal Stärke 14 einmalig), Melta-Kasrkin. Zusammen etwa 25 bis 30, mit Feel No Pain 17 bis 20, an einem Norn mit Orders.
+Wichtigstes taktisches Problem: O-C 30 bis 60 im Krieg-Block (Duty and Honour: plus 1 O-C, dann 2 bis 3 je Modell). Du überstimmst ihn nicht; du musst ihn töten oder battle-shocken.
+Was du vermeiden musst: Norns in offenen Lanes (48 bis 72 Zoll) – und ein Norn auf einem Objective steht immer in einer offenen Lane; in Melta-Reichweite (Kasrkin, Multi-meltas: 9 Zoll) ohne Kill-Absicht.
+Strategischer Ansatz: Nahkampf gegen die Panzer. Seine Fahrzeuge (Widerstand 10–Widerstand 12, 2 plus, 11 Lebenspunkte–18 Lebenspunkte, keine Invuln außer Enginseer-4 plus Invul) sind in deinem Nahkampf verwundbar (Norns Stärke 10 plus D3 oder D6 plus 1, Hive Tyrant D3). Seine Infanterie ist Widerstand 3. Deine Mission (Inescapable Dominion) zählt Objectives inklusive Home – halte 3, nimm ihm sein Asset-Objective.
+
+Abschnitt 2: Opponent Game Plan.
+
+Orders (seine Command Phase; Grizzled Company: plus 1 pro Officer; Reroll Hit 1er unter Order):
+Move! Move! Move! ( plus 3 Zoll M) Fix Bayonets (WS plus 1) Take Aim! (BS plus 1) First Rank Fire ( plus 1 A Rapid Fire).
+Take Cover! (Sv plus 1) Duty and Honour! ( plus 1 Leadership, plus 1 O-C) Target Weak Spot (Aquilan Eye: plus 1 AP in 12 Zoll).
+Snap To It (1 Kommandopunkt): Order in beliebiger Phase.
+No Retreat! (1 Kommandopunkt): Duty-and-Honour-Einheit macht Objective sticky.
+Purging Fire (1 Kommandopunkt): Lethal Hits für Order-Einheit auf Objective.
+Additional Armour (1 Kommandopunkt): minus 1 AP gegen deine Schüsse.
+
+1: Aufstellung: Krieg-Block plus Yarrick auf dem Objective, auf dem er Secure Asset machen will (Central oder seine Expansion). Panzer hinten mit 48 bis 72 Zoll-Lanes. Kasrkin in Taurox, Ghosts oder Ratlings infiltriert, Death Riders als Screens.
+2: Runde 1 bis 2: Panzer schießen mit Take Aim!, Target Weak Spot auf deinen größten Block. Kasrkin fahren im Taurox nach vorn (Shock Disembark nach Advance) und meltern.
+3: Scoring: Krieg-Block (O-C 40 plus mit Duty and Honour) hält das Asset-Objective; eine andere Einheit startet die Secure-Asset-Action (sie darf dann nicht schießen).
+
+Er gewinnt, wenn seine Panzer deine Norns aus der Distanz killen, bevor du sie erreichst, und sein Krieg-Block unantastbar das Asset-Objective hält.
+
+Abschnitt 3: Major Threats.
+
+Rogal Dorn Commander.
+
+Widerstand 12, 2 plus, 18 Lebenspunkte, Bewegung 10, OFFICER (2 Orders an SQUADRON plus 1 Grizzled; Vox-net 12 Zoll). Oppressor 72 Zoll D6 plus 3 Blast Stärke 12 AP minus 2 D3; Pulveriser 24 Zoll D6 Blast Stärke 9 AP minus 3 D3; Coax Autocannon 48 Zoll; 2 Multi-meltas 18 Zoll; 2 Meltaguns 12 Zoll. Called Shots: je 1 Reroll Hit oder Wound oder Damage.
+Gegen Norn: etwa 9 bis 10, mit Feel No Pain 6 bis 7, (mit Take Aim etwa 12, mit Feel No Pain 8,).
+Bring It Down (18 Lebenspunkte) plus Assassination (CHARACTER).
+Reaktion: Kill early. Widerstand 12 oder 2 plus ist zäh, aber keine Invuln (außer Enginseer: 4 plus Invul für ein Fahrzeug!). Norn Harpune (Stärke 13 gegen Widerstand 12, dann 3 plus, D6 plus 1) plus Talons (Stärke 10, dann 4 plus D3) plus Hive-Tyrant-Block, dann etwa 20.
+
+Leman Russ Battle Tanks, 2 Stück, Exterminator.
+
+Widerstand 11, 2 plus, 13 Lebenspunkte, Bewegung 10. Battle Tank: Battle Cannon 48 Zoll D6 plus 3 Blast Stärke 10 AP minus 1 D3, Lascannon, 2 Multi-meltas, HK (Stärke 14 1 mal ). Armoured Spearhead: Reroll Hit-1er, alle Hits gegen Ziele auf Objectives, die er nicht kontrolliert. Exterminator: Autocannon 48 Zoll 4 Attacken (RF 4) Stärke 9 AP minus 1 D3 twin; Withering Hail: plus 1 AP für alle AM gegen ein Ziel.
+Gegen Norn: Battle Tank etwa 5, mit Feel No Pain 3, je, Exterminator etwa 3, mit Feel No Pain 2, plus AP-Buff für den Rest.
+Reaktion: Bring It Down (13 Lebenspunkte). Im Nahkampf gut zu töten (Tyrant-Block Stärke 11 gegen Widerstand 11 4 plus, D3).
+
+Kasrkin, 2 Stück (im Taurox).
+
+Widerstand 3, 4 plus, 1 Lebenspunkte, Scouts 6 Zoll. 2 Meltaguns plus 2 Plasma plus Marksman je Trupp. Warrior Elite: eigene Order 1 mal pro Runde. Melta Mine: 1 mal D6, dann Mortal Wounds an eine Einheit in 3 Zoll.
+Gegen Norn (Melta in 6 Zoll): etwa 4 bis 5, mit Feel No Pain 3, je Trupp.
+Reaktion: Weich (Widerstand 3, 1 Lebenspunkte). Torrents und jeder Nahkampf löschen sie.
+
+Yarrick plus Krieg Command Squad plus 20 Death Korps.
+
+O-C 2 je Krieg ( plus 1 mit Duty and Honour), dann etwa 60 O-C. Yarrick: Will of Iron (steht 1 mal mit 3 W auf), Bale Eye (Precision), Power Klaw. Hero of Hades Hive (wählbare Fähigkeit). Lord Commissar plus Medic, Master Vox (Orders 24 Zoll).
+A Grievous Blow: Starting Strength 27, dann 4 Siegpunkte (Fixed) bei Vernichtung.
+Reaktion: Dein Pyrovore-, Psychophage-Torrent (Auto-Hit Stärke 6 gegen Widerstand 3, dann 2 plus, AP minus 1 gegen 5 plus), dann etwa 6 bis 8 Tote pro Torrent. Tyrant-Block im Nahkampf etwa 10 Tote. Battle-shock (Shadow in the Warp: Krieg Leadership 7 plus, mit Commissar oder Officer Leadership 6 plus) nimmt ihm O-C für eine Wertung.
+
+Hellhound.
+
+Widerstand 10, 2 plus, 11 Lebenspunkte. Inferno Cannon 18 Zoll Torrent 2D6 Stärke 6 AP minus 2 D1 Ignores Cover; Heavy Flamer. Flush Them Out: Ziel verliert Cover.
+Gegen Pyrovores oder Guards: etwa 7 Treffer, dann Pyrovores (Widerstand 6) 4 plus, dann etwa 2 W.
+Reaktion: Medium; Bring It Down (11 Lebenspunkte).
+
+Gaunt's Ghosts, Ratlings, Engineers, Death Riders.
+
+Ghosts: Infiltrators, Lone Operative, Stealth, Fights First, Covert Stealth Team (zurück in Reserve, Deep Strike). Larkin's Long-las Precision D4, dann auf deine Characters.
+Ratlings: Infiltrators, Stealth, Snipers (Precision), Shoot and Scarper.
+Engineers: Remote Mine (1 mal : D3 Mortal Wounds), Explosives 0 Kommandopunkte.
+Death Riders: Screening Line (6 Zoll Move, wenn du in 8 Zoll endest), Lance.
+
+Abschnitt 4: Threat Matrix.
+
+Rogal Dorn Commander; Threat: High; Primary targets: Norns, Guards; How it threatens them: 72 Zoll Oppressor, Multi-meltas; Recommended response: Nahkampf (Harpune plus Block).
+Leman Russ, 2 Stück plus Exterminator; Threat: High; Primary targets: Norns, Psychophages; How it threatens them: 48 Zoll Battle Cannon oder Lascannon oder Melta, AP-Buff; Recommended response: Nahkampf.
+Kasrkin, 2 Stück (Taurox); Threat: Medium–High; Primary targets: Norns (Melta); How it threatens them: Shock Disembark plus Melta; Recommended response: Torrent oder Overwatch.
+Krieg-Block plus Yarrick; Threat: High (O-C); Primary targets: Objectives; How it threatens them: O-C etwa 60, sticky; Recommended response: Torrent, Battle-shock, Grievous Blow.
+Hellhound; Threat: Medium; Primary targets: Pyrovores, Guards; How it threatens them: Inferno Torrent; Recommended response: Nahkampf.
+Enginseer; Threat: Medium (System); How it threatens them: 4 plus Invul plus Heilung für ein Fahrzeug; Recommended response: Früh töten (Widerstand 4, 3 Lebenspunkte, Lone Operative in 3 Zoll).
+Gaunt's Ghosts, Ratlings; Threat: Low–Medium; Primary targets: Characters (Precision); How it threatens them: Infiltrate, Stealth; Recommended response: Torrent in 12 Zoll.
+Death Riders; Threat: Low; Primary targets: Screens; How it threatens them: Screening Line; Recommended response: ignorieren.
+
+Abschnitt 5: Target Priority.
+
+Kill early: Rogal Dorn (Hauptschaden plus Officer) und der Panzer, der gerade 4 plus Invul vom Enginseer hat – beziehungsweise den Enginseer selbst. Kasrkin, sobald sie aussteigen.
+
+Control, avoid: Krieg-Block – nicht mit Norns hineinlaufen (zu viel O-C, Lethal durch Purging Fire). Mit Torrents dezimieren, dann O-C-Duell.
+
+Ignore: Death Riders, Ratlings (außer auf Objectives).
+
+Abschnitt 6: Deployment Analysis.
+
+Wahrscheinlich: Krieg-Block auf seinem Asset-Objective (Central oder Expansion), Panzer dahinter mit Lanes, Taurox mit Kasrkin an einer Flanke, Ghosts oder Ratlings infiltriert, Death Riders vorn.
+
+Kernfrage: Kann er einen Norn in einem Zyklus töten? Ja (etwa 25 bis 30, mit Feel No Pain 17 bis 20, mit allem). Beide? Nein.
+
+Deine Aufstellung:
+Norn-Sichtbarkeit in diesem Matchup (entscheidend): Ein Norn, der ein Objective hält, ist immer sichtbar – seine Base steht in der Objective-Geländezone (deren Obscuring zählt für ihn nicht), er überragt die Ruinen, Monster sind nie hidden. Dazu rerollen die Leman Russ (Armoured Spearhead) alle Hits gegen deine Einheiten auf Objectives. Ein Norn auf einem Objective in Runde 1 bis 2 frisst etwa 25 bis 30, mit Feel No Pain 17 bis 20,. Verdeckt ist ein Norn nur hinter (nicht in) einer obscuring Geländezone – dort punktet er nicht.
+Norns zuletzt, hinter obscuring Zonen (Oppressor 72 Zoll deckt sonst alles ab). Assimilator hinter die Zone, von der aus er die Overload-Flanke erreicht.
+Objectives in Runde 1 bis 2: Pyrovores (INFANTRY, dann hidden in der Objective-Zone, nur in 15 Zoll sichtbar, solange sie in diesem oder dem vorigen Zug nicht geschossen haben – auch kein Overwatch) plus Biovore auf Home. In deiner Command Phase Tyrannoformed (1 Kommandopunkt, Pyrovores sind Harvester), dann das Objective bleibt dein, auch wenn der Trupp weiterzieht oder stirbt. Deine Primary (Inescapable Dominion) zählt Objectives, nicht Norns.
+Norns treten erst auf Objectives, wenn Rogal Dorn und ein Leman Russ tot oder im Nahkampf gebunden sind.
+Overload eine Flanke gegen die Panzer: Hive-Tyrant-Block plus Assimilator plus Psychophage. Panzer sind im Nahkampf wehrlos (Armoured Tracks); gebundene Fahrzeuge dürfen Close-Quarters Shooting nur auf die Einheit, mit der sie engaged sind, mit minus 1.
+Swarmlord zentral (verteuert Snap To It, No Retreat!, Veteran Sharpshooters, Purging Fire, Mordian Minute, Additional Armour).
+Psychophage Richtung Krieg-Block (Torrent-Futter); die Pyrovores zuerst als hidden Objective-Halter, später ebenfalls als Torrent gegen den Krieg-Block.
+Zoanthropes: Reserve, Einflug gegen einen Panzer an der Kante (Stärke 12 gegen Widerstand 11, dann 3 plus; etwa 8).
+Rippers: Reserve, auf sein Asset-Objective (O-C-Halbierung).
+
+Welchen Fehler er sich wünscht: Einen Norn offen in Runde 1; deine Blöcke, die sich am Krieg-Block festbeißen, während die Panzer schießen.
+
+Panzer konzentriert auf einer Seite, dann Overload diese Seite; Nahkampf in Runde 2 (Panzer Bewegung 10 – sie fliehen nicht weit).
+Panzer verteilt, dann Den Rogal Dorn zuerst; Zoans auf den Panzer an der Kante.
+Kasrkin im Taurox, dann Taurox töten (Widerstand 8, 3 plus, 10 Lebenspunkte), dann Emergency Disembark: Kasrkin battle-shocked plus Hazard.
+
+Abschnitt 7: Movement and Positioning.
+
+Panzer: Bewegung 10 ( plus 3 Zoll Move! Move! Move!), 48 bis 72 Zoll. Sie müssen nicht zu dir.
+Taurox: Bewegung 12, Rapid Deployment: Shock Disembark nach Advance, dann Kasrkin stehen plötzlich 3 Zoll vor dir.
+Death Riders Screening Line, Ghosts: weichen aus beziehungsweise verschwinden.
+Safe: Hinter obscuring Geländezonen (nicht auf einem Objective – dort ist ein Norn immer sichtbar). Pyrovores in Geländezonen, solange sie nicht schießen.
+Dangerous: Offene Lanes; 18 Zoll Multi-melta-Radius um Panzer.
+Conditional: Sein Asset-Objective – schwer (Krieg), aber dort entscheidet sich seine Primary.
+
+Abschnitt 8: Charge, Fight Phase Analysis.
+
+Dein Charge in den Rogal Dorn (Runde 2 oder 3):
+Shooting: Psychophage-Torrent auf den Dorn (Bio-stimulus). Harpune, dann Harpooned ( plus 2 Charge).
+Charge: Assimilator plus Hive-Tyrant-Block. Crushing Impact (1 Kommandopunkt).
+Fight: Harpune 4 Attacken Stärke 13 (Lesser Prey Stärke 15) AP minus 4 D6 plus 1 gegen Widerstand 12 2 plus, dann 3 plus, dann etwa 2,8, dann 6 plus Save (4 plus Invul nur mit Enginseer), dann etwa 2,3 mal 4,5 = etwa 10 Talons 6 Attacken Stärke 10 oder 12 AP minus 3 D3, dann 4 plus oder 3 plus, dann etwa 3,3, dann etwa 2,8 mal 3 = etwa 8 Hive Tyrant 6 Attacken Stärke 11 AP minus 3, dann 4 plus, dann etwa 3,7, dann etwa 3,1 mal 3 = etwa 9 Guards etwa 2, dann etwa 30: Rogal Dorn (18 W) tot. Parasitic aktiv.
+
+Kasrkin steigen aus und meltern deinen Norn: Overwatch (1 Kommandopunkt) ist Ende seiner Movement Phase – nach dem Aussteigen: Pyrovores oder Psychophage-Torrent auf die Kasrkin (Widerstand 3, 4 plus), dann etwa 5 bis 7 tot, bevor sie schießen.
+
+Nicht chargen: Den Krieg-Block mit einem Norn (Dedication fehlt, aber Masse bindet; Fix Bayonets plus Lethal). Tyrant-Block mit Torrent-Vorbereitung ist okay.
+
+Abschnitt 9: Shooting Analysis.
+
+Rogal Dorn (Oppressor, Pulveriser, Multi-meltas, Meltas); Reichweite: 72 Zoll oder 24 Zoll oder 18 Zoll oder 12 Zoll; Gegen Norn (Widerstand 11, 2 plus, 4 plus Invul): etwa 9 bis 12, mit Feel No Pain 6 bis 8.
+Leman Russ, 2 Stück (Battle Cannon, Lascannon, 2 Multi-meltas); Reichweite: 48 Zoll oder 18 Zoll; Gegen Norn (Widerstand 11, 2 plus, 4 plus Invul): etwa 5, mit Feel No Pain 3, je.
+Exterminator (Autocannon plus AP-Buff); Reichweite: 48 Zoll; Gegen Norn (Widerstand 11, 2 plus, 4 plus Invul): etwa 3, mit Feel No Pain 2, ( plus AP für alle).
+Hunter-Killer, 3 Stück (1 mal ); Reichweite: 48 Zoll; Gegen Norn (Widerstand 11, 2 plus, 4 plus Invul): etwa 1,5, mit Feel No Pain 1, je.
+Kasrkin Meltas, 4 Stück, Plasma, 4 Stück; Reichweite: 12 Zoll oder 24 Zoll; Gegen Norn (Widerstand 11, 2 plus, 4 plus Invul): etwa 4 bis 5, mit Feel No Pain 3, je Trupp in Melta.
+Hellhound Inferno; Reichweite: 18 Zoll; Gegen Norn (Widerstand 11, 2 plus, 4 plus Invul): etwa 1, mit Feel No Pain 0,7, (gegen Guards etwa 2 bis 3).
+Larkin, Ratlings (Precision); Reichweite: 36 Zoll; Gegen Norn (Widerstand 11, 2 plus, 4 plus Invul): Characters: etwa 1 bis 3.
+
+dann Gegen einen offenen Norn: etwa 25 bis 30, mit Feel No Pain 17 bis 20,.
+
+Abschnitt 10: Gotchas and Traps.
+
+1: Enginseer Omnissiah's Blessing – ein Fahrzeug in 3 Zoll bekommt D3 W und 4 plus Invul bis zu seiner nächsten Command Phase. Prüfe vor jedem Nahkampf, welcher Panzer 4 plus Invul hat.
+2: Duty and Honour! plus No Retreat! – Krieg-Block plus 1 O-C und Sticky-Objective.
+3: Armoured Spearhead – Leman Russ rerollen alle Hits gegen deine Einheiten auf Objectives, die er nicht kontrolliert (also deine Objectives).
+4: Withering Hail – Exterminator markiert ein Ziel: plus 1 AP für alle AM-Angriffe darauf.
+5: Shock Disembark (Taurox) – Kasrkin steigen nach Advance aus.
+6: Will of Iron (Yarrick) – steht 1 mal wieder auf.
+7: Gaunt's Ghosts – Lone Operative, Fights First, Rückzug in Reserve (Covert Stealth Team).
+8: Screening Line (Death Riders) – 6 Zoll Ausweichen, wenn du in 8 Zoll endest.
+9: Melta Mine, Remote Mine – je 1 mal Mortal Wounds an eine deiner Einheiten in 3 Zoll oder 9 Zoll.
+10: Secure-Asset-Einheit schießt nicht – die Einheit, die die Action macht, ist in dem Zug passiv. Erkenne sie und töte sie (4 Siegpunkte weniger für ihn).
+
+Abschnitt 11: Opponent Decision Tree.
+
+Welches Objective ist sein Asset-Objective (Krieg-Block)?
+Central, dann Central ist sein; du hältst Home plus beide Expansions (Inescapable Dominion mindestens 3).
+Seine Expansion, dann Du hältst Home plus Central plus deine Expansion.
+Wo stehen die Panzer?
+Konzentriert, dann Overload, Runde 2 Nahkampf.
+Verteilt, dann Rogal Dorn zuerst; Zoans auf den Randpanzer.
+Taurox vorn?
+Taurox töten, bevor er ausladen kann (Emergency Disembark: battle-shocked).
+
+Abschnitt 12: Player's Game Plan.
+
+Default plan.
+
+1: Runde 1: Home plus eigene Expansion plus Central (falls kein Krieg dort) mit Pyrovores (hidden), Biovore; Norns hinter obscuring Zonen, nicht auf Objectives. Runde 2 Command Phase: Tyrannoformed. Biovore auf Ratlings oder Engineers.
+2: Runde 2: Overload-Flanke: Rogal Dorn oder nächster Panzer im Nahkampf. Zoans auf Randpanzer. Kasrkin mit Torrents.
+3: Runde 3 bis 4: Weitere Panzer; Torrents in den Krieg-Block; Rippers auf sein Asset-Objective.
+4: Runde 5: mindestens 3 Objectives plus Mehrheit (Inescapable Dominion); sein Home für plus 5 Siegpunkte am Ende, wenn erreichbar.
+
+Adjustment triggers.
+
+Enginseer gibt einem Panzer 4 plus Invul, dann Diesen Panzer diese Runde NICHT angreifen; einen anderen.
+Krieg-Block unter halber Stärke, dann Er testet Battle-shock in seiner Command Phase (Leadership 6 plus mit Officer) – Shadow in the Warp dazu (minus 1).
+Taurox ausgestiegen, dann Kasrkin sind Widerstand 3 1 Lebenspunkte: Torrent plus Tyrant-Block.
+
+Abschnitt 13: Primary Scoring Plan.
+
+Paarung (Herald): Du, dann Inescapable Dominion; er (Priority Assets), dann Secure Asset.
+
+Du: 4 Siegpunkte ( mindestens 3 Objectives, Zugende), ab Runde 2 5 Siegpunkte ( mindestens 2) plus 4 Siegpunkte (mehr als er), Spielende 5 Siegpunkte (sein Home). Home zählt mit.
+Er: Secure Asset 4 Siegpunkte pro Zug (Action-Einheit schießt nicht), 2 Siegpunkte für Kill auf Central, ab Runde 2 4 Siegpunkte ( mindestens 1 Nicht-Home) plus 4 Siegpunkte ( mindestens 3 Objectives).
+Kern: Er wird ein Objective mit Krieg (O-C etwa 60) halten, eins mit Panzern oder Death Riders. Du hältst drei, dann du hast die Mehrheit, dann 13 Siegpunkte pro Runde.
+Central-Falle: Seine Primary gibt 2 Siegpunkte, wenn deine Einheit stirbt, die auf Central begann. Keine billigen Einheiten auf Central.
+
+Secondaries: Bring It Down (Fixed) – Rogal Dorn (18 Lebenspunkte), 2 Leman Russ (13 Lebenspunkte), Exterminator (13 Lebenspunkte), Hellhound (11 Lebenspunkte), 2 Taurox (10 Lebenspunkte) = 7 Ziele. Zweite: A Grievous Blow (Krieg-Block, Starting Strength 27, dann 4 Siegpunkte) oder Assassination (Yarrick 2 mal, Lord Commissar, Gaunt, Enginseer, Rogal Dorn). Empfehlung: Bring It Down plus Assassination.
+
+Abschnitt 14: First Turn, Second Turn Considerations.
+
+Wenn du zuerst spielst.
+
+Nichts offen. Infiltratoren (Ghosts oder Ratlings) in 12 Zoll mit Torrent töten.
+Overload-Flanke in Position für Runde-2-Nahkampf.
+
+Wenn er zuerst spielt.
+
+Panzer schießen mit Take Aim!, Target Weak Spot; HK-Missiles fliegen. Ablative Carapace (2 Kommandopunkte) auf Assimilator oder Psychophage, wenn sie gezielt werden.
+Dein Zug 1: Vorrücken hinter Gelände, Kasrkin oder Taurox abfangen.
+
+Abschnitt 15: Practical Round Checklist.
+
+BEFORE DEPLOYMENT.
+Inescapable Dominion (Home zählt) gegen Secure Asset.
+Bring It Down plus Assassination.
+Zoans plus Rippers Reserve.
+DEPLOYMENT.
+Norns hinter obscuring Zonen, nicht auf Objectives (Oppressor 72 Zoll).
+Pyrovores hidden auf die Objectives, Tyrannoformed Runde 2.
+Overload-Flanke gegen die Panzer.
+Keine billigen Einheiten auf Central (2 Siegpunkte für ihn bei Kill).
+OPPONENT TURN.
+Welche Orders? Welcher Panzer hat Enginseer-4 plus Invul?
+Overwatch (Torrent) auf ausgestiegene Kasrkin.
+Secure-Asset-Einheit identifizieren.
+MY TURN.
+Rogal Dorn, Panzer im Nahkampf.
+Torrents in den Krieg-Block.
+Rippers auf sein Asset-Objective.

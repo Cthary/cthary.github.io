@@ -1,0 +1,240 @@
+Gegneranalyse: Dennis Fuhrmann (Voydz) – T'au Empire (Kauyon plus Experimental Prototype Cadre).
+
+Liste in Kürze (2000 Punkte, Experimental Prototype Cadre 1 Daemon Prince plus Kauyon 2 Daemon Prince).
+
+Commander Farsight (Warlord) plus 3 Crisis Fireknife (Missile Pods); Punkte: 200; Rolle gegen dich: plus 1 to wound in 9 Zoll, Deep Strike, Stratagem minus 1 Kommandopunkt.
+Commander in Enforcer (Plasma Accelerator Rifle) plus 3 Fireknife (Plasma Rifles); Punkte: 200; Rolle gegen dich: Anti-Elite-Plasma, minus 1 AP gegen Beschuss auf die Einheit.
+Commander in Coldstar (Precision of the Patient Hunter) plus 3 Starscythe; Punkte: 210; Rolle gegen dich: Bewegung 12, Burst oder Flamer, plus 1 Hit (Runde 3 plus: plus 1 Wound).
+Kroot Trail Shaper; Punkte: 50; Rolle gegen dich: Infiltrate, Scouts, Kroot Ambush (Redeploy).
+The Twin Lance; Punkte: 230; Rolle gegen dich: Fusion Eliminator plus Ion Scattercannon, Scouts 8 Zoll, Deep Strike, Retro-thrusters.
+Breacher Team, 10 Stück; Punkte: 90; Rolle gegen dich: Battleline, Objective-Halter.
+Broadsides, 2 Stück (Heavy Rail) ( mal 2); Punkte: 300; Rolle gegen dich: 60 Zoll Stärke 12 AP minus 4 Dev Wounds.
+Ghostkeel (Fusion Collider); Punkte: 150; Rolle gegen dich: Infiltrate, Lone Operative, Stealth.
+Hammerhead Gunship (Railgun); Punkte: 150; Rolle gegen dich: 72 Zoll Stärke 20 AP minus 5 D6 plus 6 Devastating Wounds, plus 1 to hit gegen Monster.
+Pathfinder Team (3 Rail Rifles); Punkte: 85; Rolle gegen dich: Observer, Rail Rifles Devastating Wounds.
+Piranha, 1 Stück; Punkte: 65; Rolle gegen dich: Fusion Melta 4, Seeker, 2 Stück.
+Stealth Battlesuits, 5 Stück ( mal 2); Punkte: 200; Rolle gegen dich: Infiltrate, Observer, Homing Beacon.
+Vespid, 5 Stück; Punkte: 70; Rolle gegen dich: Deep Strike.
+
+Force Disposition laut Herald: Priority Assets (EPC). Alternative: Reconnaissance (Kauyon).
+
+Abschnitt 1: Executive Summary.
+
+Was die Armee will: Ein Kauyon-Hinterhalt: Runde 1 bis 2 vorsichtig positionieren, ab Runde 3 Sustained Hits auf allem und gelenkte Einheiten ignorieren Hit-Modifikatoren. Dazu drei Crisis-Blöcke mit Commandern, die per Deep Strike oder Mobilität dort zuschlagen, wo du schwach bist. Primary Secure Asset: Actions und Objectives.
+Wichtigste Bedrohung: Die Anti-Monster-Linie: Hammerhead-Railgun (Stärke 20 D6 plus 6), 4 Rail-Broadsides, Twin-Lance-Fusion, Piranha-, Ghostkeel-, Stealth-Fusion, alle auf den Norn in Sicht – und ein Norn auf einem Objective ist immer in Sicht. Ab Runde 3 mit Sustained Hits.
+Wichtigstes taktisches Problem: Er wird dich in Runde 1 bis 2 kommen lassen (Kauyon belohnt Warten) und in Runde 3 zuschlagen, wenn deine Monster in seiner Hälfte offen stehen.
+Was du vermeiden musst: In Runde 3 mit Norns offen in seinen Lanes stehen. Kauyon = die Falle schnappt in Runde 3 zu.
+Strategischer Ansatz: Runde 1 bis 2 aggressiv nutzen, solange er schwach ist: Observer und Commander-Blöcke in Reichweite töten, Objectives nehmen. Objectives halten Pyrovores (hidden) plus Tyrannoformed, nicht die Norns; ab Runde 3 Norns hinter obscuring Zonen, Tyrant-Blöcke in seinen Linien.
+
+Abschnitt 2: Opponent Game Plan.
+
+For the Greater Good: Observer (Pathfinders, Stealth, Ghostkeel ...) markiert ein Ziel, dann gelenkte Einheiten.
+gegen dieses Ziel BS plus 1 und Ignores Cover (Ignores Cover ändert nichts an Hidden!).
+Kauyon (Runde 3 bis 5): Sustained Hits 1 auf allen Fernkampfwaffen; gelenkt, dann Hit-Modifikatoren ignorieren.
+A Tempting Trap (1 Kommandopunkt, ab Runde 3): plus 1 to wound gegen Einheiten auf seinem "Trap-Objective" (einmal gewählt).
+Point-Blank Ambush (1 Kommandopunkt, ab Runde 3): plus 1 AP gegen Ziele in 9 Zoll.
+EPC: Battlesuit-Characters plus 6 Zoll Reichweite; Experimental Ammunition ( plus 1 S, oder plus 1 S oder AP Hazardous).
+
+1: Pre-Game: Stealth, Ghostkeel, Kroot Shaper infiltrieren; Twin Lance Scout 8 Zoll; Kroot Ambush (Redeploy von Shaper plus einer Kroot-Einheit, auch in Reserve).
+2: Runde 1 bis 2: Hammerhead plus Broadsides schießen aus 60 bis 72 Zoll; Crisis-Blöcke halten sich zurück oder in Deep-Strike-Reserve (Farsight, Coldstar, Enforcer haben Deep Strike). Breachers halten ein Objective.
+3: Runde 3: Trap-Objective (typisch: Central oder seine Expansion). Alles, was darauf steht, bekommt plus 1 to wound. Deep Strike der Crisis-Blöcke in 9 Zoll (Farsight: plus 1 to wound in 9 Zoll; Point-Blank Ambush plus 1 AP).
+4: Scoring: Secure Asset (4 Siegpunkte Action pro Zug), 2 Siegpunkte für Kill einer Einheit, die auf Central begann, 4 plus 4 Siegpunkte Objectives.
+
+Er gewinnt, wenn deine Monster in Runde 3 auf seinem Trap-Objective stehen und er dort mit Sustained Hits, plus 1 to wound und plus 1 AP abräumt.
+
+Abschnitt 3: Major Threats.
+
+Hammerhead Gunship (Railgun).
+
+Widerstand 10, 3 plus, 14 Lebenspunkte, FLY. Railgun 72 Zoll 1 Attacken Stärke 20 AP minus 5 D6 plus 6 Dev Wounds Heavy, Armour Hunter ( plus 1 to hit gegen Monster), Targeting Array (1 Reroll Hit oder Wound).
+Gegen Norn: etwa 0,85 Treffer, dann Stärke 20 gegen Widerstand 11, dann 2 plus, dann Devastating Wounds auf 6, dann gegen 4 plus Invul, dann etwa 4 bis 5, mit Feel No Pain 3, Schaden pro Runde, aber mit extremer Varianz (ein Treffer = 7 bis 12).
+Bring It Down (14 Lebenspunkte).
+Reaktion: Mittel–hoch. Zoanthropes (Stärke 12 gegen Widerstand 10, dann 3 plus) oder Norn-Harpune plus Charge.
+
+Rail-Broadsides, 4 Stück (2 Trupps).
+
+Widerstand 6, 2 plus, 8 Lebenspunkte je. Heavy Rail Rifle 60 Zoll 2 Attacken Stärke 12 AP minus 4 D6 plus 1 Dev Wounds Heavy, Weapon Support System (ignoriert Hit-Modifikatoren) – 4 Modelle = 8 Schuss. Ab Runde 3 Sustained (Kauyon).
+Im Nahkampf weich: Hive-Tyrant-Block (Stärke 10 oder Stärke 11 gegen Widerstand 6, dann 2 plus) löscht einen Trupp in einem Fight; Zoans Stärke 12 gegen Widerstand 6, dann 2 plus.
+Gegen Norn: etwa 10 bis 12, mit Feel No Pain 7 bis 8, (Runde 3 plus: etwa 14, mit Feel No Pain 9,).
+Reaktion: Kill, sobald erreichbar.
+
+The Twin Lance.
+
+Widerstand 6, 2 plus oder 4 plus Invul, 8 Lebenspunkte je (2 Modelle), Bewegung 10 FLY, Scouts 8 Zoll, Deep Strike. Fusion Eliminator 18 Zoll 2 Attacken Stärke 10 AP minus 4 D6 Melta 2 (BS 2 plus); Ion Scattercannon 18 Zoll 4 Attacken (Rapid Fire 2) Stärke 7 oder Stärke 8 AP minus 2 oder minus 3 D2 oder D3; XV Pulse Pistols. Exemplars of Mont'ka: gegen das nächste Ziel Sustained plus Ignores Cover. Neocapacitor Shields: Start deiner Charge Phase – eine deiner Nicht-Monster-Einheiten in 12 Zoll testet Battle-shock, minus 1 Charge. Retro-thrusters: Ende der Fight Phase 6 Zoll Move oder Fallback.
+Gegen Norn in 9 Zoll: etwa 8, mit Feel No Pain 5,. Gegen Tyrant-Block: etwa 6.
+Reaktion: Mittel–hoch; Assassination 2 mal (2 Characters, 8 Lebenspunkte, dann 8 Siegpunkte).
+
+Crisis-Blöcke mit Commandern ( mal 3).
+
+Farsight plus Fireknife (Missile Pods): Way of the Short Blade ( plus 1 to wound in 9 Zoll), Fireknife (Reroll Hits gegen unbeschädigte Ziele), Puretide's Teachings (minus 1 Kommandopunkt Stratagem 1 mal pro Runde). Farsight: Dawn Blade Nahkampf 4 Attacken Stärke 10 D3.
+Enforcer (Plasma Accelerator: 2 Attacken Stärke 10 AP minus 4 D4, plus 6 Zoll = 24 Zoll) plus Fireknife Plasma (6 Plasma Stärke 8 AP minus 3 D3): Enforcer Commander: minus 1 AP gegen alle Schüsse auf die Einheit. Gegen Norn in 18 Zoll: etwa 6 bis 8, mit Feel No Pain 4 bis 5,.
+Coldstar plus Starscythe: Bewegung 12 (Coldstar Commander gibt der Einheit Bewegung 12), Burst Cannons oder Flamer; Starscythe: plus 1 AP gegen Nicht-Monster, dann Pyrovore-, Rippers-, Zoans-Killer.
+Reaktion: Diese Blöcke (Widerstand 5, 2 plus oder 3 plus, 4 Lebenspunkte–8 Lebenspunkte, 4 plus Invul auf Commandern) sind im Nahkampf weich. Erste Parasitic-Kills.
+
+Observer-Netz (Pathfinders, Stealth, 2 Stück) plus Ghostkeel.
+
+Ghostkeel: Widerstand 8, 2 plus, 12 Lebenspunkte, Lone Operative, Stealth, Infiltrators, Stealth Drones. Ion Raker 36 Zoll 6 Attacken, Twin Fusion 12 Zoll.
+Stealth-Teams: Stealth, Infiltrators, Forward Observers (Reroll 1er Hit oder Wound für gelenkte Einheiten).
+Pathfinders: Grav-inhibitor (minus 2 auf Charges gegen sie); hier mit 3 Rail Rifles (30 Zoll Stärke 10 AP minus 4 D3 Devastating Wounds).
+Ohne Observer verliert seine Feuerbasis BS plus 1 und Ignores Cover.
+Reaktion: System-Ziele.
+
+Abschnitt 4: Threat Matrix.
+
+Rail-Broadsides, 4 Stück; Threat: High; Primary targets: Norns, Psychophages; How it threatens them: 60 Zoll Stärke 12 Devastating Wounds; Recommended response: Norns hinter obscuring Zonen; Runde 2 Nahkampf.
+Hammerhead; Threat: High; Primary targets: Norns; How it threatens them: Stärke 20 D6 plus 6 Devastating Wounds, plus 1 hit; Recommended response: Zoans oder Harpune.
+Twin Lance; Threat: High; Primary targets: Norns, Tyrant-Blöcke; How it threatens them: Fusion, Deep Strike; Recommended response: Nach Landung töten.
+Enforcer plus Plasma-Fireknife; Threat: Medium–High; Primary targets: Norns; How it threatens them: 24 Zoll oder 18 Zoll Plasma; Recommended response: Nahkampf.
+Farsight-Block; Threat: Medium; Primary targets: Guards, Harvester; How it threatens them: plus 1 wound in 9 Zoll; Recommended response: Parasitic-Kill.
+Coldstar plus Starscythe; Threat: Medium; Primary targets: Pyrovores, Zoans, Rippers; How it threatens them: plus 1 AP gegen Nicht-Monster; Recommended response: Screens, Konter.
+Observer (Pathfinder oder Stealth); Threat: High (System); How it threatens them: BS plus 1; Recommended response: Früh.
+Ghostkeel; Threat: Medium; Primary targets: Harvester; How it threatens them: Fusion Collider 18 Zoll; Recommended response: Nahkampf.
+
+Abschnitt 5: Target Priority.
+
+Kill early (Runde 1 bis 2, bevor Kauyon greift):
+1: Observer in Reichweite (Stealth oder Pathfinders).
+2: Der Crisis-Block, der am nächsten steht – guter Parasitic-Kill, und jede Crisis-Einheit weniger ist ein Deep-Strike-Risiko weniger.
+3: Rail-Broadsides, wenn ein Block durchkommt.
+
+Control, avoid: Hammerhead (hinten, zäh) – Zoans oder Harpune nur bei Gelegenheit. Twin Lance – wenn sie per Deep Strike kommt, dann töten.
+
+Ignore: Breachers (außer auf deinem Ziel-Objective), Vespid, Kroot Shaper.
+
+Abschnitt 6: Deployment Analysis.
+
+Wahrscheinlich: Hammerhead plus Broadsides hinten mit Lanes; Breachers auf einem Objective; Stealth oder Ghostkeel oder Shaper infiltriert; Twin Lance per Scout vorn oder in Reserve; mindestens ein Crisis-Block in Deep-Strike-Reserve (Farsight oder Enforcer); Vespid in Reserve.
+
+Kernfrage: Kann er einen Norn töten? Ja – ab Runde 3 mit Sustained plus Trap-Objective sehr zuverlässig; Runde 1 bis 2 mit allem etwa 25, mit Feel No Pain 17,. Beide Norns? Nein.
+
+Deine Aufstellung:
+Norn-Sichtbarkeit in diesem Matchup (entscheidend): Ein Norn, der ein Objective hält, ist immer sichtbar – seine Base steht in der Objective-Geländezone (deren Obscuring zählt für ihn nicht), er überragt die Ruinen, Monster sind nie hidden. Gegen Hammerhead (72 Zoll) plus 4 Rail-Broadsides (60 Zoll) heißt das etwa 15 bis 20, mit Feel No Pain 10 bis 13, Schaden pro Runde, ab Runde 3 mehr. Verdeckt ist ein Norn nur hinter (nicht in) einer obscuring Geländezone – dort punktet er nicht.
+Norns zuletzt, hinter obscuring Zonen.
+Objectives: Pyrovores (INFANTRY, dann hidden in der Objective-Zone, nur in 15 Zoll sichtbar – Observer ändern daran nichts; aber nur, solange der Trupp in diesem oder dem vorigen Zug nicht geschossen hat, auch kein Overwatch) plus Biovore auf Home. In deiner Command Phase Tyrannoformed (1 Kommandopunkt, Pyrovores sind Harvester), dann das Objective bleibt dein, auch wenn der Trupp weiterzieht oder stirbt.
+Aggressive Mitte in Runde 1 bis 2: Der Hive-Tyrant-Block und der Swarmlord-Block sollen in Runde 2 an seinen Crisis-, Observer-Einheiten sein. Kauyon ist in Runde 1 bis 2 schwach – das ist dein Fenster.
+Swarmlord zentral (Malign Presence verteuert A Tempting Trap, Point-Blank Ambush, Coordinate to Engage, Photon Grenades, Wall of Mirrors, Combat Embarkation, Experimental Ammunition; Farsight gleicht 1 mal pro Runde aus).
+Zoanthropes: Reserve, Einflug Runde 2 an der Kante des Hammerheads oder der Broadsides.
+Rippers: Reserve, Runde 2 auf das Breacher-Objective (Breachers O-C 20, dann 10).
+
+Welchen Fehler er sich wünscht: Deine Monster stehen in Runde 3 auf seinem Trap-Objective in offener Sicht.
+
+Er zieht sich zurück (klassisches Kauyon), dann Nimm Central plus beide Expansions in Runde 1 bis 2 (Inescapable Dominion: mindestens 3 = 4 Siegpunkte pro Zug) In Runde 3 NICHT weiter vor in offene Lanes; Blöcke nur in Deckung vor.
+Er kommt mit Crisis-Blöcken nach vorn, dann Geschenk: Parasitic-Kills.
+Trap-Objective gewählt (Runde 3), dann Merken! Dieses Objective nach Möglichkeit per Tyrannoformed halten und VERLASSEN. Wenn du dort physisch stehen musst: hidden Pyrovores (nur in 15 Zoll sichtbar), kein Norn.
+
+Abschnitt 7: Movement and Positioning.
+
+Crisis-Blöcke: Bewegung 10 (Coldstar-Block Bewegung 12), FLY, Deep Strike (Commander). Fireknife rerollt Hits gegen Einheiten auf Starting Strength.
+Twin Lance: Bewegung 10 FLY, Scouts 8 Zoll, Deep Strike, Retro-thrusters (nach dem Fight 6 Zoll weg oder Fallback).
+Safe: Hinter obscuring Geländezonen (nicht auf einem Objective – dort ist ein Norn immer sichtbar); nicht auf dem Trap-Objective ab Runde 3. Pyrovores in Geländezonen, solange sie nicht schießen.
+Dangerous: 9 Zoll um Farsight-Block (Short Blade) und in Point-Blank-Ambush-Reichweite (9 Zoll) ab Runde 3.
+Conditional: Seine Hälfte in Runde 1 bis 2 (er ist noch schwach, aber die Broadsides schießen).
+
+Abschnitt 8: Charge, Fight Phase Analysis.
+
+Du chargst einen Crisis-Block (Runde 2):
+Fight: Hive-Tyrant-Block gegen Fireknife (Widerstand 5, 3 plus, 4 Lebenspunkte; Commander 4 plus Invul):
+Guards 30 Attacken Stärke 7 gegen Widerstand 5, dann 3 plus, dann etwa 13 Wunden, dann 3 plus Save AP minus 1, dann etwa 6 mal D1, dann 1,5 Suits.
+Hive Tyrant 6 Attacken Stärke 11 D3, dann 2 plus, dann etwa 4 durch, dann etwa 3 Suits, dann Block tot. Parasitic aktiv (Harvester in 6 Zoll).
+Achtung: Photon Grenades (1 Kommandopunkt) – nur gegen GRENADES-Einheiten (Breachers, Stealth) als Charge-Ziel:
+minus 2 Charge plus Battle-shock-Test für deine chargende Einheit.
+
+Twin Lance landet und schießt (keine Charge-Einheit): Sie wird nach dem Schießen nicht chargen; im nächsten deiner Züge: Swarmlord-Block drauf (2 Characters, 8 Lebenspunkte je, 2 plus oder 4 plus Invul). Retro-thrusters erlauben ihr, nach deinem Fight 6 Zoll weg zu gehen – aber erst am Ende der Fight Phase, nachdem du zugeschlagen hast.
+
+Er chargt kaum – Farsight kann (Dawn Blade 4 Attacken Stärke 10 D3); die Twin Lance hat Nahkampfwaffen. Standard-Heroic Intervention-Reaktion.
+
+Harpoon Barbs, Battlesuit Support System: Ghostkeel oder Commander fallen zurück und schießen – Harpoon Barbs straft den Fallback vom Assimilator.
+
+Abschnitt 9: Shooting Analysis.
+
+Rail Broadsides, 4 Stück; Reichweite: 60 Zoll; Gegen Norn: etwa 10 bis 12, mit Feel No Pain 7 bis 8, (Runde 3 plus: etwa 14, mit Feel No Pain 9,); Anmerkung: Dev Wounds.
+Hammerhead Railgun; Reichweite: 72 Zoll; Gegen Norn: etwa 4 bis 5, mit Feel No Pain 3, (hohe Varianz); Anmerkung: plus 1 hit gegen Monster.
+Twin Lance Fusion plus Ion; Reichweite: 18 Zoll; Gegen Norn: etwa 8, mit Feel No Pain 5, in Melta; Anmerkung: Scouts oder Deep Strike.
+Enforcer PAR plus 6 Plasma; Reichweite: 24 Zoll oder 18 Zoll; Gegen Norn: etwa 6 bis 8, mit Feel No Pain 4 bis 5.
+Pathfinder Rail Rifles, 3 Stück; Reichweite: 30 Zoll; Gegen Norn: etwa 2, mit Feel No Pain 1,3,; Anmerkung: Devastating Wounds.
+Ghostkeel Fusion Collider; Reichweite: 18 Zoll; Gegen Norn: etwa 3, mit Feel No Pain 2,; Anmerkung: Melta 2.
+Piranha Fusion (Melta 4) plus 2 Seeker; Reichweite: 12 Zoll oder 48 Zoll; Gegen Norn: etwa 4, mit Feel No Pain 3.
+Stealth Fusion, 2 Stück; Reichweite: 12 Zoll; Gegen Norn: etwa 2, mit Feel No Pain 1,3.
+Missile Pods (Farsight-Block); Reichweite: 30 Zoll; Gegen Norn: etwa 2, mit Feel No Pain 1,3,; Anmerkung: plus 1 wound in 9 Zoll.
+
+dann Runde 1 bis 2: etwa 25 bis 30, mit Feel No Pain 17 bis 20, gegen einen Norn in voller Sicht; Runde 3 plus mit Sustained oder Trap: 35 plus [23 plus].
+
+Abschnitt 10: Gotchas and Traps.
+
+1: Kauyon Runde 3 = Falle – sein Schaden steigt in Runde 3 sprunghaft. Plane deine exponierten Züge für Runde 1 bis 2, deine defensiven für Runde 3.
+2: A Tempting Trap – ab Runde 3 wählt er einmal ein Objective (nicht in deiner Aufstellungszone); plus 1 to wound gegen alles darauf (1 Kommandopunkt pro Nutzung).
+3: Kroot Ambush, Deep-Strike-Commander – Redeploy nach deinem Aufstellen; Crisis-Blöcke tauchen unerwartet auf.
+4: Enforcer Commander – minus 1 AP gegen Schüsse auf die Einheit (deine AP minus 2, dann AP minus 1). Im Nahkampf gilt das nicht.
+5: Wall of Mirrors (1 Kommandopunkt) – Stealth oder Ghostkeel am Ende deiner Fight Phase zurück in Reserve.
+6: Neocapacitor Shields (Twin Lance) – Battle-shock plus minus 1 Charge für eine deiner Nicht-Monster-Einheiten (Pyrovores, Zoans, Rippers) – Tyrant-Blöcke sind MONSTER, dann immun.
+7: Stealth Drones (Ghostkeel) – 2 mal Damage 0.
+8: Puretide's Teachings – Farsight-Block: minus 1 Kommandopunkt auf ein Stratagem pro Runde (gleicht Malign Presence aus).
+
+Abschnitt 11: Opponent Decision Tree.
+
+Runde 1 bis 2: Zieht er sich zurück?
+JA, dann Objectives nehmen ( mindestens 3), Blöcke an seine vorderen Einheiten.
+NEIN (kommt vor), dann Crisis-Blöcke im Nahkampf zerschlagen.
+Runde 3: Welches Objective ist die Trap?
+Eines deiner drei, dann Tyrannoformed (Harvester dort) und alles runter; wenn nicht möglich: hidden Pyrovores.
+halten es, kein Norn.
+Keines deiner drei, dann ignorieren.
+Hammerhead in Zoans-Reichweite (24 Zoll) einer Kante?
+JA, dann Runde 2 Zoans.
+
+Abschnitt 12: Player's Game Plan.
+
+Default plan.
+
+1: Runde 1: Home, eigene Expansion, Central-Rand mit Pyrovores (hidden), Biovore besetzen; Norns hinter obscuring Zonen. Biovore auf Observer.
+2: Runde 2: Command Phase: Tyrannoformed auf die gehaltenen Objectives. Dein Angriffsfenster. Tyrant-Blöcke in Crisis-, Observer-Einheiten; Zoans auf Hammerhead oder Broadsides; Rippers auf das Breacher-Objective.
+3: Runde 3: Defensiv: Norns hinter obscuring Zonen, Objectives per Tyrannoformed und hidden Pyrovores; Trap-Objective meiden. Norns erst auf Objectives, wenn Hammerhead und ein Broadside-Trupp tot sind. Blöcke bleiben in seinen Linien gebunden (gebundene Broadsides oder Hammerhead schießen nur Close-Quarters mit minus 1 auf deine Blöcke).
+4: Runde 4 bis 5: Halten, Inescapable Dominion maximieren ( mindestens 3 und mehr als er).
+
+Adjustment triggers.
+
+Twin Lance landet in deiner Hälfte, dann Swarmlord-Block: 2 Characters, je 4 Siegpunkte Assassination.
+Crisis-Block landet per Deep Strike, dann Nächster Tyrant-Block kontert (sie sind weich).
+Er nennt ein Trap-Objective, auf dem dein Norn steht, dann Wenn ein Harvester dort ist: Tyrannoformed und den Norn hinter eine obscuring Zone ziehen Sonst: Objective-Modus (Feel No Pain 5 plus, O-C 15), heilen, Ablative Carapace (nur Assimilator: Feel No Pain 4 plus auf eigenem Objective).
+
+Abschnitt 13: Primary Scoring Plan.
+
+Paarung (Herald): Du, dann Inescapable Dominion; er (Priority Assets), dann Secure Asset. (Falls er Reconnaissance wählt: du Purge and Secure, er Reconnaissance Sweep.).
+
+Du: 4 Siegpunkte ( mindestens 3 Objectives, Zugende), 5 Siegpunkte ( mindestens 2, Command Phase ab Runde 2), 4 Siegpunkte (mehr als er), Spielende 5 Siegpunkte (sein Home). Home zählt.
+Er: Secure-Asset-Action (4 Siegpunkte pro Zug) mit einer nicht schießenden Einheit auf einem Nicht-Home-Objective; ab Runde 2 4 plus 4 Siegpunkte.
+Konter: Die Action-Einheit (Breachers, Pathfinders, Stealth) auf seinem Objective töten oder überstimmen (Rippers!), dann er verliert 4 Siegpunkte pro Runde.
+Winning the mission: In Runde 1 bis 2 drei Objectives etablieren, in Runde 3 per Tyrannoformed plus hidden Pyrovores halten (Norns hinter obscuring Zonen), Runde 4 bis 5 dominieren.
+
+Secondaries: Bring It Down (Fixed) – Hammerhead (14 Lebenspunkte), Ghostkeel (12 Lebenspunkte) = 2 Ziele (schwach). Assassination – Farsight, Enforcer, Coldstar, Twin Lance, 2 Stück, Kroot Shaper = 6 Characters, viele weich. Empfehlung: Assassination plus Tactical oder Assassination plus Bring It Down.
+
+Abschnitt 14: First Turn, Second Turn Considerations.
+
+Wenn du zuerst spielst.
+
+Vorrücken hinter Gelände; Emissary oder Biovore auf infiltrierte Observer.
+Du hast zwei Runden, bevor Kauyon greift – nutze sie.
+
+Wenn er zuerst spielt.
+
+Runde 1: Er schießt mit Broadsides oder Hammerhead; der Rest wartet.
+Dein Zug 1 ist Tempo: an seine vorderen Einheiten heran.
+
+Abschnitt 15: Practical Round Checklist.
+
+BEFORE DEPLOYMENT.
+Welche Disposition wählt er? (PA erwartet).
+Assassination fixed (6 Characters).
+Zoans plus Rippers Reserve.
+DEPLOYMENT.
+Norns hinter obscuring Zonen, nicht auf Objectives; Pyrovores hidden auf Objectives.
+Tyrant-Blöcke so, dass Runde 2 seine vorderen Einheiten erreichbar sind.
+Kroot Ambush oder Redeploy abwarten.
+OPPONENT TURN.
+Welche Crisis-Blöcke sind in Reserve?
+Runde 3: Trap-Objective notieren.
+Secure-Asset-Einheit identifizieren.
+MY TURN.
+Runde 1 bis 2 aggressiv, Runde 3 defensiv.
+Crisis-Blöcke = Parasitic-Kills.
+Rippers auf das Breacher-Objective.

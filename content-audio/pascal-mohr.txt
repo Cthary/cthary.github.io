@@ -1,0 +1,300 @@
+Gegneranalyse: Pascal Mohr (Candy.Trash) – Aeldari.
+
+Status-Warnung: Diese Liste ist auf Herald nicht freigegeben und die Startgebühr ist nicht bezahlt. Ob Pascal morgen spielt, ist unklar. Die Analyse ist trotzdem vollständig.
+
+Liste in Kürze (1985 Punkte, Windrider Host 2 Daemon Prince plus Armoured Warhost 1 Daemon Prince).
+
+Farseer Skyrunner (Firstdrawn Blade = Scouts 9 Zoll) plus 2 Warlock Skyrunners plus 6 Windriders (Shuriken Cannons); Punkte: 330; Rolle gegen dich: Hauptfeuereinheit, Misfortune (minus 1 to wound für ein Ziel).
+1 Warlock Skyrunner plus 6 Windriders (Scatter Laser); Punkte: 215; Rolle gegen dich: Masse an Stärke 5-Schüssen, Screen-, Rippers-Killer.
+Avatar of Khaine; Punkte: 250; Rolle gegen dich: Einzige echte Nahkampfbedrohung für Norns und Tyrant-Blöcke.
+Eldrad Ulthran (Warlord, allein); Punkte: 120; Rolle gegen dich: plus 1 Kommandopunkt pro Runde, Doom ( plus 1 to wound für die ganze Armee gegen ein Ziel).
+Lhykhis (allein); Punkte: 135; Rolle gegen dich: Deep Strike, Torrent 12 Zoll D6 plus 3 Stärke 6 AP minus 2.
+Prince Yriel (allein); Punkte: 95; Rolle gegen dich: Redeploy von bis zu 3 Einheiten nach dem Aufstellen, auch in Reserve.
+Corsair Voidreavers, 5 Stück (Blaster); Punkte: 65; Rolle gegen dich: Scouts 7 Zoll, billiger Objective-, Viertel-Spieler.
+Windriders, 3 Stück (Cannons), Windriders, 3 Stück (Scatter); Punkte: 160; Rolle gegen dich: Viertel-Scorer, Rein-, Rausspringer.
+Rangers, 5 Stück; Punkte: 60; Rolle gegen dich: Infiltrators, Stealth, weichen bei Annäherung D6 Zoll aus.
+Shining Spears, 3 Stück ( mal 2); Punkte: 200; Rolle gegen dich: Anti-Monster-Lanzen (Anti-Monster 3 plus, Lance).
+Shroud Runners, 3 Stück; Punkte: 90; Rolle gegen dich: Scouts 9 Zoll, Viertel-Scorer, nehmen Cover weg.
+War Walkers, 1 Stück (2 Bright Lances) ( mal 2); Punkte: 160; Rolle gegen dich: Einzige echte Fernkampf-Anti-Tank-Waffe: 4 mal Stärke 12 AP minus 3 D6 plus 2, 36 Zoll.
+Warp Spiders, 5 Stück; Punkte: 105; Rolle gegen dich: Deep Strike, Flickerjump 24 Zoll.
+
+Force Disposition laut Herald: Reconnaissance (Armoured Warhost). Alternative am Tisch möglich: Disruption (Windrider Host).
+
+Abschnitt 1: Executive Summary.
+
+Was die Armee will: Nicht dich töten, sondern dich ausmanövrieren. Die Reconnaissance-Sweep-Primary zahlt 3 oder 6 Siegpunkte für Einheiten in 3 oder 4 Spielfeldvierteln, 1 Siegpunkte pro Kill und ab Runde 2 nur 3 Siegpunkte für mindestens 1 Nicht-Home-Objective. Das Heer verteilt sich mit Scouts oder Infiltrators oder Reserve-Bikes über alle Viertel und pickt billige Einheiten.
+Wichtigste Bedrohung: Eldrad plus Doom auf ein Ziel, kombiniert mit den 4 Bright Lances und den Shining Spears. Ohne Doom verwunden fast alle Waffen dieser Liste deine Monster auf 5 plus oder 6 plus.
+Wichtigstes taktisches Problem: Deine billigen Harvester (Rippers, Pyrovores) und die Biovore sind leichte Kill-Punkte (1 Siegpunkte je Kill für ihn, plus Secondaries), und die Aeldari können Overwatch per Flitting Shadows abschalten.
+Was du vermeiden musst: Den Bikes hinterherlaufen. Jede Norn-Runde, die du nicht auf einem Objective stehst, kostet dich 4 Siegpunkte.
+Strategischer Ansatz: Drei Nicht-Home-Objectives halten, dort töten. Deine Primary (Purge and Secure) zahlt 4 Siegpunkte pro Nicht-Home-Objective und 3 Siegpunkte, wenn du auf einem Objective etwas tötest oder etwas stirbt, das auf einem Objective stand. Die Eldar müssen zu dir kommen, um Viertel und Objectives zu erreichen – dann bestrafst du sie.
+
+Abschnitt 2: Opponent Game Plan.
+
+Die Armee funktioniert als Verteilungs- und Tempo-System:
+
+1: Vor dem Spiel: Rangers infiltrieren, Shroud Runners, War Walkers, Voidreavers und der Farseer-Bikeblock machen Scout-Moves. Danach verschiebt Yriel bis zu drei Einheiten (auch in die Reserve), nachdem er deine komplette Aufstellung gesehen hat.
+2: Reserven: Windrider Host erlaubt, ASURYANI MOUNTED in Reserve zu stellen und eine Runde früher einzufliegen – Ankunft bereits in Runde 1 möglich, ab Runde 2 in deiner Deployment Zone (Verified: treat the current battle round number as being one higher). Daring Riders (1 Kommandopunkt): Ankunft überall mehr als 6 Zoll von dir, ohne Charge, wenn näher als 8 Zoll.
+3: Rein und raus: Am Ende deines Zuges darf er 2 MOUNTED-Einheiten vom Feld nehmen und in Reserve stellen (Ride the Wind). Deine Charges und dein Beschuss finden dann kein Ziel.
+4: Scoring: Pro Zug 3 bis 6 Siegpunkte für Viertel, 1 bis 3 Siegpunkte für Kills, 3 Siegpunkte für ein Objective. Realistisch 8 bis 12 Siegpunkte pro Runde, ohne je einen Norn angreifen zu müssen.
+5: Wo Schaden hingeht: Rippers (Widerstand 2), Biovore, Pyrovores (Widerstand 6 5 Lebenspunkte), Zoanthropes (Widerstand 5) – das sind die Kills, die zählen. Norns und Tyrant-Blöcke ignoriert er, solange sie ihn nicht vom Scoring abhalten.
+6: Der Avatar steht als O-C-5-Anker auf Central oder einer Expansion und bindet einen deiner Blöcke. Er ist der einzige Teil der Armee, der eine Stellung halten will.
+
+Der Gegner gewinnt nicht, indem er deine Norns tötet. Er gewinnt, indem deine Norns 5 Runden lang falsch stehen, während er in vier Vierteln punktet und jede Runde eine billige Einheit von dir abräumt.
+
+Abschnitt 3: Major Threats.
+
+Eldrad Ulthran – Systembedrohung.
+
+Doom (Ende seiner Movement Phase, 18 Zoll, sichtbar): plus 1 auf alle Verwundungswürfe der Aeldari gegen ein Ziel. Macht aus Shuriken Cannons (Stärke 6) gegen Tyrant Guard (Widerstand 8) 4 plus statt 5 plus, aus Laser Lances gegen Norns 4 plus statt 5 plus (plus Anti-Monster 3 plus).
+Diviner of Futures: plus 1 Kommandopunkt pro Command Phase.
+Körper: Widerstand 4, 6 plus oder 4 plus Invul, 5 Lebenspunkte, allein unterwegs (nicht attached). Character, dann Assassination 4 Siegpunkte.
+Reaktion: früh töten. Emissary-Precision-Profil (2 Attacken Stärke 8 AP minus 2 D3, 18 Zoll), Zoanthropes, Psychophage-Torrent. Er muss innerhalb 18 Zoll seines Doom-Ziels stehen – er kommt also in deine Reichweite.
+
+War Walkers (2 mal je 2 Bright Lances) – einzige echte Norn-Bedrohung auf Distanz.
+
+4 Schüsse Stärke 12 AP minus 3 D6 plus 2, 36 Zoll, BS 3 plus. Crystalline Targeting: getroffenes Ziel bekommt AP plus 1 für alle Aeldari-Angriffe diese Phase. Armoured Warhost: Assault auf allen Fahrzeugwaffen, Soulsight (Reroll 1 Hit oder 1 Wound oder 1 Damage).
+Gegen Norn (Widerstand 11): 4 Schüsse, dann etwa 2,7 Treffer, dann etwa 1,8 Wunden (4 plus; mit Doom 3 plus, dann etwa 2,2), dann gegen 4 plus Invul etwa 1 ungerettet, dann etwa 5 bis 6, mit Feel No Pain 3 bis 4, Schaden pro Runde. Allein kein Norn-Killer.
+Körper: Widerstand 7, 3 plus oder 5 plus Invul, W6, je 1 Modell, Scouts 9 Zoll. Zoanthrope-Ziel Nr. 1 (fokussiert Stärke 12 verwundet auf 2 plus).
+Reaktion: töten, sobald erreichbar. Sie sind die Voraussetzung dafür, dass der Rest überhaupt Norns beschädigen kann.
+
+Avatar of Khaine – Nahkampfbedrohung und Anker.
+
+Widerstand 11, 2 plus oder 4 plus Invul, 14 Lebenspunkte, Molten Form: jeder zugewiesene Angriff hat halben Damage. O-C 5. Bewegung 10, Aura plus 1 auf Advance oder Charge für Aeldari in 6 Zoll.
+Wailing Doom Strike: 6 Attacken 2 plus Stärke 16 AP minus 4 D6 plus 2, dann gegen Tyrant Guard (Widerstand 8) wird auf 2 plus verwundet, keine Rüstung, dann etwa 4 Guards tot pro Fight. Gegen einen Norn: etwa 3,3 Wunden, dann gegen 4 plus Invul etwa 1,7 durch, dann etwa 9, mit Feel No Pain 6, Schaden.
+Er ist Bring It Down (4 Siegpunkte) plus Assassination (4 Siegpunkte) wert.
+Reaktion: Nicht mit den Tyrant Guard frontal fighten lassen, wenn er zuerst schlägt. Molten Form halbiert deine D3 oder D6 plus 1-Waffen – der Avatar ist ein schlechtes Ziel für die Harpune. Besser: mit einem Norn im Objective-Modus (O-C 15, Feel No Pain 5 plus) einfach das Objective überstimmen und ihn per Bindung neutralisieren, während der Rest punktet. Wenn du ihn tötest, dann mit Swarmlord plus Hive Tyrant (viele D3-Attacken; halbiert, dann D2, Rundung Uncertain) plus Psychophage-Bio-stimulus (AP plus 1).
+
+Shining Spears, 2 Stück – Monster-Jäger.
+
+Laser Lance 3 Attacken Stärke 5 AP minus 2 D3 Anti-Monster 3 plus, Lance ( plus 1 to wound nach Charge). Exarch Star Lance 4 Attacken AP minus 3. Bewegung 14, FLY, Extreme Mobility.
+Pro Einheit gegen Norn: etwa 6,7 Treffer, dann etwa 4,4 Wunden, dann etwa 2,2 durch (2 plus oder 4 plus Invul), dann etwa 4 bis 5, mit Feel No Pain 3, Schaden. Beide Einheiten zusammen plus Doom: etwa 12, mit Feel No Pain 8,. Das ist der Bereich, in dem ein vorgeschädigter Norn fällt.
+Körper: Widerstand 4, 3 plus, 2 Lebenspunkte (Exarch 4 plus Invul). Leicht zu töten, sobald sie gebunden sind – aber Battle Focus (Fade Back, Opportunity Seized) und Overflight lassen sie entkommen.
+Reaktion: Sie wollen den Norn angreifen, der schon beschädigt ist. Regeneriere Norns bevorzugt, wenn Spears in 20 Zoll stehen.
+
+Windrider-Blöcke (2 mal 6er) plus Farseer oder Warlocks.
+
+Cannon-Block: 18 Schüsse Stärke 6 AP minus 1 D2 Lethal Hits, Reroll 1 (Reroll alle, wenn nächstes Ziel). Gegen Pyrovores (Widerstand 6) 4 plus, dann eine 3er-Pyrovore-Einheit pro Runde tot. Gegen Tyrant Guard (Widerstand 8, 3 plus) etwa 3 bis 4 Wunden, dann 1 bis 2 Guards.
+Scatter-Block: 36 Schüsse Stärke 5 AP0 Sustained Hits 1, dann vernichtet Rippers, Biovore, Zoanthropes (Widerstand 5, 5 plus) in einer Salve.
+Destructor (Warlock): Torrent 12 Zoll D6 Stärke 5 AP minus 1, plus 1 A, plus 1 S pro weiterem Psyker in 6 Zoll (max plus 2), dann im Farseer-Block Stärke 7, Ignores Cover.
+Misfortune (Farseer): minus 1 to wound für eine deiner Einheiten beim Angreifen – typischerweise auf den Hive-Tyrant-Block oder den Norn, der gerade chargen will.
+Reaktion: Sie wählen das Gefecht. Du gewinnst nur, wenn sie in 12 Zoll deiner Torrents oder Psychophages kommen müssen – also am Objective.
+
+Yriel, Rangers, Shroud Runners, Voidreavers – Scoring-Motor.
+
+Keine Gefahr für deine großen Einheiten, aber sie sind die Viertel-Punkte. Rangers: Stealth, 5 plus Invuln gegen Fernkampf, weichen D6 Zoll aus, wenn du in 8 Zoll endest.
+Reaktion: Die in deiner Hälfte geparkten Viertel-Einheiten sind Pflicht-Kills, weil sie gleichzeitig 3 bis 6 Siegpunkte pro Zug ermöglichen.
+
+Abschnitt 4: Threat Matrix.
+
+Eldrad; Threat: High (System); Primary targets: alles; How it threatens them: Doom plus 1 to wound, plus 1 Kommandopunkt; Recommended response: Früh töten (Precision oder Zoans oder Torrents).
+War Walkers, 2 Stück; Threat: High; Primary targets: Norns, Psychophages; How it threatens them: 36 Zoll Bright Lances, AP-Buff; Recommended response: Zoanthropes, Harpune, Norn-Charge.
+Avatar; Threat: High; Primary targets: Tyrant Guard, Norn auf Central; How it threatens them: 6 Attacken Stärke 16 D6 plus 2, O-C 5; Recommended response: Mit Norn-O-C überstimmen, nicht in ihn chargen lassen ohne Fights First.
+Shining Spears, 2 Stück; Threat: Medium–High; Primary targets: beschädigte Norns, Psychophages; How it threatens them: Anti-Monster-Lanzen; Recommended response: Norns heilen, Spears nach dem Charge im Nahkampf töten.
+Windriders Cannon plus Farseer; Threat: Medium; Primary targets: Pyrovores, Tyrant Guard, Zoans; How it threatens them: 18 Stärke 6-Schüsse, Misfortune; Recommended response: Pyrovores verstecken (Hidden), Zoans nicht offen stehen lassen.
+Windriders Scatter; Threat: Medium; Primary targets: Rippers, Biovore, Zoans; How it threatens them: 36 Stärke 5-Schüsse; Recommended response: Weiche Einheiten außer Sicht.
+Lhykhis, Warp Spiders; Threat: Medium; Primary targets: Biovore, Home, Pyrovores; How it threatens them: Deep Strike, Torrent; Recommended response: Home nicht nur mit Biovore besetzen.
+Rangers, Shroud Runners, kleine Windrider; Threat: Medium (Scoring); Primary targets: Viertel; How it threatens them: Viertel-Siegpunkte; Recommended response: In deiner Hälfte gezielt töten.
+Voidreavers; Threat: Low; Primary targets: Objectives; How it threatens them: billiger O-C-2-Körper; Recommended response: ignorieren, außer auf Objective.
+
+Abschnitt 5: Target Priority.
+
+Kill early.
+1: Eldrad – Doom ist der Multiplikator, der seine Anti-Monster-Waffen überhaupt erst funktionieren lässt, und er liefert 4 Siegpunkte Assassination.
+2: War Walkers – einzige 36 Zoll-Bedrohung gegen Norns; Zoanthrope-Ziel.
+3: Jede Viertel-Einheit in deiner Hälfte (Rangers, Shroud Runners, 3er-Windrider) – das sind seine 6-Siegpunkte-Konfigurationen.
+
+Control, avoid.
+Avatar: Nicht angreifen, wenn er danach frei zurückschlagen kann. Über O-C 15 neutralisieren. Wenn angreifen, dann mit Swarmlord-Block plus Psychophage-Bio-stimulus als einzige Aktion des Zuges.
+Shining Spears: Nicht jagen. Sie kommen zu deinem beschädigten Norn – sei dann mit dem Hive-Tyrant-Block in Heroic Intervention-Reichweite.
+
+Ignore.
+Voidreavers und Farseer-Bikeblock auf Distanz: Keine davon kann einen Norn oder Tyrant-Block ernsthaft gefährden. Nur töten, wenn sie auf einem Objective stehen (3 Siegpunkte Purge and Secure).
+
+Abschnitt 6: Deployment Analysis.
+
+Wahrscheinliche Gegner-Aufstellung: Er stellt wenig auf. Erwartet: Avatar, War Walkers (mit Scouts nach vorn), Rangers infiltriert (>8 Zoll von dir und deiner Aufstellungszone), Shroud Runners in einer Ecke, der Farseer-Bikeblock mit Scouts 9 Zoll. Mindestens zwei Bike-Einheiten und oder oder Warp Spiders plus Lhykhis in Reserve. Yriel entscheidet nach deiner Aufstellung, was er noch verschiebt.
+
+Will er castlen? Nein. Will er spreizen? Ja – er muss in 4 Viertel. Er priorisiert keine Flanke, sondern die Viertel, in denen du am dünnsten bist.
+
+Dein Deployment:
+Norns zuletzt aufstellen. Hier besonders wichtig, weil Yriel nach dir redeployt: Behalte Information bis zum Ende.
+Norn Assimilator auf oder an Central (Objective-Modus). Norn Emissary auf deine Expansion (Objective-Modus). Beide O-C 15 – kein Aeldari-Element kann das überstimmen, auch der Avatar nicht (O-C 5).
+Norn-Sichtbarkeit in diesem Matchup: Ein Norn, der ein Objective hält, ist immer sichtbar – er steht mit der Base in der Objective-Geländezone (deren Obscuring zählt dann für ihn nicht), überragt die Ruinen, und Monster können nicht hidden sein. Hier ist das akzeptabel: Die Aeldari haben nur 4 Bright Lances plus 2 Shining-Spear-Trupps als echte Norn-Bedrohung (etwa 5 bis 6, mit Feel No Pain 3 bis 4, aus den Walkern pro Runde, mit Doom und beiden Spears im Nahkampf maximal etwa 20, mit Feel No Pain 13, an einem Norn). Der Objective-Modus (Feel No Pain 5 plus) und die Heilung in deiner Command Phase fangen das ab. Voraussetzung: ein Harvester in 6 Zoll und ein Tyrant-Block in 12 Zoll für Heroic Intervention.
+Swarmlord-Block zentral zwischen Home und Central, 12 Zoll-Malign-Presence über die Mitte (verteuert Spiralling Evasion, Daring Riders, Focused Firepower, Death from on High in dieser Zone).
+Hive-Tyrant-Block auf der Seite, auf der die War Walkers oder der Avatar stehen, innerhalb von 6 Zoll eines Harvesters (Psychophage).
+Pyrovores in Geländezonen (INFANTRY, dann Hidden: nur in 15 Zoll sichtbar, solange sie nicht geschossen haben). Das nimmt den Scatter Lasern 36 Zoll-Reichweite weg.
+Biovore nicht allein auf Home. Ein Psychophage oder ein Pyrovore-Trupp mit aufs Home; Warp Spiders oder Lhykhis können per Deep Strike Home angehen.
+Rippers in Reserve (Deep Strike) – auf dem Tisch sind sie ein Gratis-Kill. Später in eine Viertel-Ecke droppen, in der eine seiner Scoring-Einheiten sitzt (halbiert O-C, bindet sie; Harvester vor Ort).
+Zoanthropes: Siehe unten – Empfehlung Reserve.
+
+Welchen Fehler er sich wünscht: Dass du deine Monster nach vorn wirfst, um seine Bikes zu jagen, und damit Central oder Expansion leer lässt – oder dass Rippers oder Biovore oder Zoans offen stehen und ihm pro Runde Kill-Siegpunkte schenken.
+
+Alternativen:
+Er stellt fast alles in Reserve, lässt die Mitte leer, dann Standard-Split. Home plus Central plus Expansion besetzen, Hive-Tyrant-Block Richtung gegnerische Expansion (4 Siegpunkte extra plus Kill-Siegpunkte dort).
+Er stellt Avatar plus Walker konzentriert auf eine Seite, dann Kein Overload nötig, er kann keinen Norn in einem Zug töten Emissary auf die andere Expansion, Assimilator (4 plus Invul) gegen den Avatar-Flügel.
+Er reserviert Warp Spiders plus Lhykhis, dann Home-Wache verdichten; Biovore plus Pyrovore-Trupp auf Home, Rippers bleiben in Reserve als Konter.
+
+Zoanthropes – Reserve oder Tisch?
+Reserve. Reconnaissance Sweep zwingt ihn, Einheiten in deinen beiden Vierteln zu parken – nahe den Seitenkanten. Genau dort erscheinen Zoanthropes per Ingress (Runde 2: nicht in seiner Aufstellungszone, aber in deiner Hälfte völlig frei). 24 Zoll Reichweite, D3-Blast-Profil gegen Bikes (Widerstand 4, Stärke 7, dann 3 plus) oder fokussiert gegen War Walkers. Auf dem Tisch wären sie ein 36 Zoll-Ziel für 36 Scatter-Schüsse.
+
+Abschnitt 7: Movement and Positioning.
+
+Seine Reichweiten: Bikes Bewegung 14 ( plus 2 Zoll Swift as the Wind), dann 16 Zoll Bewegung plus 18 bis 36 Zoll Schuss. Du kannst dich nicht aus der Reichweite halten. Sichtlinie ist deine einzige Verteidigung.
+Avatar-Charge-Bedrohung: 10 Zoll plus 2 Zoll (Swift) plus 2W6 plus 1 (Aura, Ø 8) etwa 20 Zoll. Warp Spiders: Flickerjump 24 Zoll, danach kein Charge (Lhykhis steht laut Liste allein; Empyric Ambush gilt nur, wenn er die Einheit führt – falls er am Tisch doch angeschlossen ist: List parsing warning, dann dürfen sie nach Flickerjump chargen).
+Safe: Innerhalb von Geländezonen mit Dense Terrain für INFANTRY (Pyrovores, Tyrant Guard – aber Achtung: der Character im Block ist kein INFANTRY, der Block ist dadurch nicht hidden).
+Dangerous: Offene Flächen an den Seitenkanten (Daring Riders kann überall mehr als 6 Zoll landen; Shuriken Cannons mit Reroll auf nächstes Ziel).
+Conditional: Central – sicher, solange ein Norn im Objective-Modus darauf steht und ein Tyrant-Block in 12 Zoll für Heroic Intervention bereitsteht.
+Movement Blocking: Deine großen Bases (Norns 100 mm, Psychophages oval) blockieren Bike-Korridore nicht, weil Bikes FLY haben. Stattdessen Geländezonen besetzen, die er für Viertel-Präsenz braucht (Objective-Geländezonen in deiner Hälfte).
+Harpoon Barbs: Wenn ein Aeldari-Trupp aus dem Nahkampf mit dem Assimilator zurückfällt, dann 2 plus: D6 Mortal Wounds. Bikes, die den Assimilator angreifen oder von ihm gebunden werden, zahlen fürs Weglaufen.
+
+Abschnitt 8: Charge, Fight Phase Analysis.
+
+Bevorzugte Charges des Gegners:
+1: Avatar, dann Tyrant Guard (killt etwa 4 Guards) oder, dann Norn auf Central (O-C-Wettbewerb).
+2: Shining Spears, dann beschädigter Norn oder Psychophage.
+3: Warp Spiders oder Lhykhis, dann Biovore oder Pyrovores auf Home.
+
+Sequenz, wenn der Avatar deinen Norn auf Central chargt:
+1. Ende seiner Movement Phase: Overwatch? Nur wenn er KEIN Flitting Shadows (Battle-Focus-Token) auf den Avatar gelegt hat. Pyrovore-Torrent trifft automatisch (Likely), macht aber gegen Widerstand 11 oder 2 plus oder Halbschaden fast nichts, dann Overwatch hier NICHT.
+2. Charge wird durchgeführt; Avatar hat Fights First (Charge).
+3. Ende seiner Charge Phase: Heroic Intervention (1 Kommandopunkt, Leap to Defend) mit dem Swarmlord-Block oder Hive-Tyrant-Block, wenn in 12 Zoll. Der Intervenierende hat dann ebenfalls Fights First.
+4. Fight: Er aktiviert zuerst (aktiver Spieler), dann Avatar schlägt Dann du: die intervenierte Einheit (Fights First), dann der Norn.
+5. Wenn die Tyrant-Block-Einheit NICHT intervenieren konnte: nach der Avatar-Aktivierung Counteroffensive (2 Kommandopunkte) ist nur sinnvoll, wenn noch eine weitere Aeldari-Einheit im selben Nahkampf vor deinem Norn schlagen würde.
+6. Deine nächste Command Phase: Norn heilen (Psychophage oder Pyrovore in 6 Zoll) Guards zurückholen.
+
+Wichtig: Der Avatar halbiert Damage. Der Norn im Objective-Modus hält mit Feel No Pain 5 plus durch und kontrolliert das Objective weiter mit O-C 15 – der Avatar gewinnt das Objective nicht. Du musst ihn nicht töten, um die Runde zu gewinnen.
+
+Köder: Ein Pyrovore-Trupp am Rand einer Objective-Zone ist ein attraktives Ziel für Spears oder Warp Spiders. Steht der Hive-Tyrant-Block 8 bis 10 Zoll dahinter, ist die Heroic Intervention (oder dein eigener Charge im nächsten Zug) ein sicherer erster Kill für Parasitic Biomorphology – Shining Spears (2 Lebenspunkte) und Warp Spiders (1 Lebenspunkte) sind ideale erste Opfer.
+
+Nicht chargen: Den Avatar mit den Tyrant Guard allein. Die Bikes, wenn sie in der nächsten Runde ohnehin per Ride the Wind verschwinden können (nur chargen, wenn du sie tötest).
+
+Abschnitt 9: Shooting Analysis.
+
+Bright Lances (4); Reichweite: 36 Zoll; Reale Wirkung gegen dich: etwa 5 bis 6, mit Feel No Pain 3 bis 4, Schaden pro Runde an einem Norn; das Einzige, was Norns ernsthaft beschädigt.
+Shuriken Cannons (18 plus 6 plus 3 plus 6); Reichweite: 24 Zoll; Reale Wirkung gegen dich: Killen Pyrovores oder Zoans zuverlässig, gegen Norns (Widerstand 11: 6 plus to wound) wirkungslos.
+Scatter Laser (36 plus 18 plus 18); Reichweite: 36 Zoll; Reale Wirkung gegen dich: Rippers, Biovore, Zoanthropes; gegen Widerstand 8 plus kaum Wirkung.
+Destructor-Torrents; Reichweite: 12 Zoll; Reale Wirkung gegen dich: Bis zu Stärke 7, Ignores Cover – Pyrovores oder Guards.
+Eldritch Storm (Farseer); Reichweite: 24 Zoll; Reale Wirkung gegen dich: D6 Blast Stärke 6 AP minus 2 D3 – mäßig.
+Mind War (Eldrad); Reichweite: 18 Zoll; Reale Wirkung gegen dich: Anti-Character 4 plus, Precision, D6 – zielt auf Hive Tyrant oder Swarmlord, aber nur 1 Schuss.
+Lhykhis Brood Twain; Reichweite: 12 Zoll; Reale Wirkung gegen dich: D6 plus 3 Torrent Stärke 6 AP minus 2 – Pyrovore-Killer.
+
+Seine Zielpriorität gegen dich (vermutlich): Rippers, dann Biovore, dann Zoanthropes, dann Pyrovores, dann Psychophages (Feel No Pain 5 plus, Widerstand 9), dann Tyrant Guard. Norns erst, wenn Doom plus Walker plus Spears gemeinsam auf einen beschädigten Norn gehen können.
+
+Scheinbar gefährlich, aber ineffizient: Die schiere Menge an Scatter-Laser-Würfeln. Gegen Widerstand 8–Widerstand 11 verwundet Stärke 5 auf 6 plus.
+
+Abschnitt 10: Gotchas and Traps.
+
+1: Prince Yriel – Redeploy nach deinem Aufstellen.
+Was: Nach beiden Aufstellungen redeployt er bis zu 3 Einheiten, auch in Strategic Reserves (unabhängig vom Reserve-Limit).
+Warum: Deine Konter-Aufstellung (zum Beispiel Hive-Tyrant-Block gegen Avatar-Flügel) kann ins Leere laufen.
+Erkennen: Yriel steht auf dem Tisch nach dem Aufstellen.
+Verhindern: Stelle flexibel auf: Swarmlord zentral, Hive Tyrant nicht auf einer Außenflanke festnageln. Norns auf Objectives, nicht auf Gegner-Einheiten ausgerichtet.
+2: Ride the Wind – Einheiten verschwinden am Ende deines Zuges.
+Was: Bis zu 2 MOUNTED-Einheiten (nicht in Engagement Range) gehen zurück in Reserve.
+Warum: Beschädigte Bikes entkommen deinem nächsten Zug; der Kill-Siegpunkte fällt weg.
+Verhindern: Entweder im selben Zug töten oder binden (Engagement Range verhindert Ride the Wind).
+3: Einflug in Runde 1, deine Aufstellungszone in Runde 2.
+Was: Durch plus 1 Battle Round kommen Bikes oder Spears in Runde 1 an; ab Runde 2 dürfen sie in deiner Aufstellungszone landen. Daring Riders: überall mehr als 6 Zoll.
+Verhindern: Home und Biovore nicht ungeschützt lassen; Rippers oder Zoans nicht offen an deiner Kante.
+4: Flitting Shadows – kein Overwatch.
+Was: Ein Battle-Focus-Token macht eine Einheit für diesen Zug immun gegen Fire Overwatch.
+Verhindern: Plane deine Verteidigung nicht um Overwatch herum. Kommandopunkte lieber für Heroic Intervention oder Counteroffensive oder Ablative Carapace sparen.
+5: Opportunity Seized, Fade Back.
+Was: Wenn du aus einem Nahkampf zurückfällst, darf eine Aeldari-Einheit D6 plus 1 Zoll nachsetzen; nach deinem Beschuss darf die getroffene Einheit D6 plus 1 Zoll weggehen.
+Warum: Deine Charge-Distanz nach Beschuss wird länger. Erst chargen-relevante Einheiten schießen lassen, deren Ziel du nicht chargen willst.
+6: Rangers – Path of the Outcast.
+Was: Wenn eine deiner Einheiten in 8 Zoll der Rangers endet, bewegen sie sich D6 Zoll weg.
+Verhindern: Mit Zoanthropes oder Emissary aus mehr als 8 Zoll schießen statt heranzulaufen.
+7: Doom plus Misfortune gleichzeitig.
+Was: Doom ( plus 1 to wound für ihn gegen dein Ziel), Misfortune (minus 1 to wound für deine Einheit).
+Erkennen: Am Ende seiner Movement Phase benennt er die Ziele – das verrät, wen er diesen Zug töten will und welchen Block er fürchtet.
+8: Strands of Fate.
+Was: Vorher gewürfelte Fate-Würfel ersetzen einmal pro Phase einen Wurf (Charge, Hit, Save, Damage …).
+Warum: Ein unmöglicher 9 Zoll-Charge des Avatars ist mit einer gespeicherten 6 plötzlich möglich. Frag nach Spielbeginn, welche Werte in seinem Fate-Pool liegen – das ist öffentliche Information.
+9: Seine Viertel-Punkte hängen an deiner Hälfte.
+Was: Für 6 Siegpunkte braucht er Einheiten in allen 4 Vierteln, auch in deinen beiden.
+Nutzen: Jede Einheit, die er in deine Hälfte schickt, steht in Reichweite deiner Torrents, Norns und der Reserve-Zoanthropes.
+
+Abschnitt 11: Opponent Decision Tree.
+
+Wie viel stellt er auf?
+Wenig ( mindestens 3 Einheiten in Reserve).
+Home gegen Deep Strike absichern (Pyrovores plus Biovore).
+Norns auf Central plus eigene Expansion (Objective-Modus).
+Rippers plus Zoans in Reserve als Konter an den Kanten.
+Viel, aber verteilt über alle Viertel.
+Sind Scoring-Einheiten in deiner Hälfte in 20 Zoll deiner Monster?
+JA, dann diese Einheiten töten (Kill auf oder nahe Objective = 3 Siegpunkte).
+NEIN, dann nicht jagen; Objectives halten, Zoans für Runde 2 einplanen.
+Avatar plus Walker plus Spears auf einer Seite.
+Kann er einen Norn in einem Zug töten? (Nur mit Doom plus 4 Lances plus beide Spears).
+NEIN (Norn gesund), dann Norn bleibt, Hive-Tyrant-Block als Heroic Intervention-Konter.
+JA (Norn weniger als 8 W), dann Command Phase: Tyrannoformed (1 Kommandopunkt, nur Assimilator oder Harvester) auf das Objective, dann Norn HINTER eine obscuring Geländezone (nicht hinein) zurückziehen und heilen Tyrant-Block übernimmt die Front.
+
+Abschnitt 12: Player's Game Plan.
+
+Default plan.
+
+1: Runde 1: Home, Central, eigene Expansion besetzen. Norns in Objective-Modus (Assimilator Central, Emissary Expansion). Swarmlord zentral. Pyrovores hidden. Rippers und Zoanthropes in Reserve.
+2: Runde 2: Zoanthropes an der Kante mit dem besten Winkel auf War Walkers oder eine Viertel-Einheit. Hive-Tyrant-Block plus Psychophage Richtung gegnerische Expansion – dort steht meist eine billige Scoring-Einheit, dann erster Kill für Parasitic Biomorphology und 3 Siegpunkte Kill auf Objective.
+3: Runde 3 bis 5: Mit dem Swarmlord-Block Central stabilisieren; jede Runde eine Kill-auf-Objective-Aktion (3 Siegpunkte) plus 3 Nicht-Home-Objectives (12 Siegpunkte).
+
+Adjustment triggers.
+
+Eldrad steht in 18 Zoll eines Norns, der Zoans, dann Emissary-Precision oder Zoans auf Eldrad, alles andere nachrangig.
+Beide War Walker auf einer Flanke, dann Zoans an dieser Kante einfliegen; Assimilator-Harpune (12 Zoll) auf den nächsten.
+Avatar geht auf Central, dann Nicht räumen. Assimilator (4 plus Invul, Feel No Pain 5 plus im Objective-Modus) bleibt; Swarmlord-Block in 12 Zoll für Heroic Intervention. Du behältst O-C-Überlegenheit.
+Er nimmt Bikes per Ride the Wind vom Tisch, dann In deiner nächsten Runde die nun leeren Viertel oder Objectives nehmen (3 Siegpunkte "neues Objective").
+Rippers-Zeit (Runde 2 plus), dann In eine Ecke mit Rangers oder Shroud Runners droppen: halbiert deren O-C, bindet sie (verhindert Ride the Wind bei Bikes), dient als Harvester vor Ort.
+Norn unter 8 W, Spears in 20 Zoll, dann Vorher (Command Phase) Tyrannoformed auf das Objective (Assimilator oder Pyrovores als Harvester) dann Norn hinter eine obscuring Geländezone (nicht in sie hinein) – auf dem Objective selbst ist er nie verdeckt. Ein Harvester heilt ihn (jede Einheit nur 1 mal pro Phase regenerierbar) Das Objective hältst du über Tyrannoformed oder einen hidden Pyrovore-Trupp weiter.
+
+Abschnitt 13: Primary Scoring Plan.
+
+Missionspaarung (Herald): Du Take and Hold, dann Purge and Secure. Er Reconnaissance, dann Reconnaissance Sweep.
+
+Winning the fight: Irrelevant. Er muss dich nicht besiegen und du ihn nicht.
+Winning the mission: Du bekommst ab Runde 2 4 Siegpunkte pro Nicht-Home-Objective; Central plus eigene Expansion = 8 Siegpunkte, plus gegnerische Expansion = 12 Siegpunkte. Dazu 3 Siegpunkte, wenn du auf einem Objective tötest beziehungsweise eine Einheit stirbt, die dort stand, und 3 Siegpunkte für ein neu genommenes Objective. Realistisch 14 bis 18 Siegpunkte pro Runde.
+Sein Maximum: 6 (Viertel) plus etwa 2 (Kills) plus 3 (ein Objective) etwa 11 Siegpunkte pro Runde. Er kann dich im Primary nur schlagen, wenn du Objectives verlierst oder er pro Runde 3 plus Kills schafft.
+Objectives: Home (Pflicht, aber für deine Primary irrelevant – er bekommt aber auch nichts dafür), Central (Pflicht), eigene Expansion (Pflicht), gegnerische Expansion (Bonus, Hive-Tyrant-Block).
+Konzentriert gegen. breit: Breit, aber an Objectives gebunden. Nicht in Vierteln denken – in Objective-Geländezonen.
+Trading: Einen Pyrovore-Trupp zu opfern, um eine Viertel-Einheit auf einem Objective zu töten, ist gut (du 3 Siegpunkte, er 1 Siegpunkte).
+Endposition: Zwei Norns plus Swarmlord-Block auf 3 Nicht-Home-Objectives; er darf die Viertel haben.
+
+Secondaries: Assassination (Fixed) ist stark: Eldrad, Farseer, Lhykhis, Yriel, Avatar = 5 Charaktere à 4 Siegpunkte, die meisten Widerstand 3–Widerstand 4. Zweite Wahl: No Prisoners oder Tactical. Er wird vermutlich Tactical spielen; gegen dich funktionieren Bring It Down (6 Ziele) nur mit Mühe.
+
+Abschnitt 14: First Turn, Second Turn Considerations.
+
+Wenn du zuerst spielst.
+
+Nicht weit vorlaufen. Objectives besetzen, Geländezonen für Pyrovores nutzen.
+Emissary-Tendril (18 Zoll) auf alles, was mit Scouts zu nah steht (Voidreavers, War Walker nach Scout-Move) – die Scout-Einheiten stehen Runde 1 oft in 18 Zoll.
+Kommandopunkte für seinen Zug sparen: mind. 2 Kommandopunkte (Heroic Intervention 1 plus Ablative Carapace 2, dann 3 ideal).
+
+Wenn er zuerst spielt.
+
+Er fliegt Bikes in Runde 1 ein (Ride the Wind), schießt auf alles Weiche, das sichtbar ist. Nichts Weiches sichtbar lassen.
+Erwartet: Avatar auf Central oder ein Charge auf einen vorgeschobenen Block.
+Reaktionsressourcen: Heroic Intervention (1 Kommandopunkt), Ablative Carapace (2 Kommandopunkte) auf einen Psychophage, der zu viel Feuer bekommt.
+Dein erster Zug ist dann der Konter: Alles, was er in deiner Hälfte geparkt hat, ist in Reichweite.
+
+Abschnitt 15: Practical Round Checklist.
+
+BEFORE DEPLOYMENT.
+Klären: Spielt Pascal überhaupt? (Liste unbezahlt oder nicht freigegeben).
+Force Disposition bestätigen (Recon erwartet, dann du: Purge and Secure).
+Rippers plus Zoanthropes in Reserve.
+Secondaries: Assassination fixed (5 Charaktere).
+DEPLOYMENT.
+Norns zuletzt, auf Central plus eigene Expansion.
+Pyrovores in Geländezonen (Hidden), Biovore nicht allein auf Home.
+Yriel-Redeploy abwarten, erst dann Zoans-Kante planen.
+OPPONENT TURN.
+Fate-Dice-Pool kennen.
+Doom oder Misfortune-Ziele notieren (verrät seinen Plan).
+1 Kommandopunkt für Heroic Intervention gegen Avatar oder Spears bereithalten.
+Keine Overwatch-Planung (Flitting Shadows).
+MY TURN.
+Command: Norns oder Guards heilen, Tyrannoformed auf Expansion, wenn Truppen weiterziehen.
+Eldrad in 18 Zoll?, dann töten.
+Einen Kill auf oder an einem Objective pro Zug (3 Siegpunkte).
+Bikes nur angreifen, wenn sie sterben oder gebunden bleiben.

@@ -1,0 +1,227 @@
+Gegneranalyse: Jannik Kiesgen (Tawa) – Imperial Agents.
+
+Liste in Kürze (1995 Punkte, Imperialis Fleet 2 Daemon Prince plus Veiled Blade Elimination Force 1 Daemon Prince, 22 Einheiten).
+
+Inquisitor plus Sanctifiers (Miraculist, Missionaries, DCA, Salvationist); Punkte: 155; Rolle gegen dich: Torrent-Flamer, Holy Fire, Medikit (D3 Modelle zurück).
+Inquisitor Coteaz plus Jokaero (Lethal Hits) plus Daemonhost plus 10 Inquisitorial Agents (2 Multi-melta-Servitors); Punkte: 245; Rolle gegen dich: Loyal Henchmen (minus 1 to wound gegen sie), Spy Network (Kommandopunkte).
+Inquisitor Draxus plus Aquila Kill Team; Punkte: 175; Rolle gegen dich: Xenos Hunter: plus 1 to hit gegen dich (kein Imperium oder Chaos), Psychic Tempest.
+Rogue Trader Entourage (Warlord, Fleetmaster) plus Imperial Navy Breachers; Punkte: 185; Rolle gegen dich: Warrant of Trade (Redeploy Battleline), Healing Serum.
+Watch Captain Artemis plus Deathwatch Kill Team, 5 Stück; Punkte: 165; Rolle gegen dich: Lethal Hits, Hellfire Extremis.
+Watch Master plus Deathwatch Kill Team, 10 Stück (4 Thunder Hammers); Punkte: 285; Rolle gegen dich: Nahkampfblock, Advance oder Fallback plus Schießen oder Charge, minus 1 Kommandopunkt.
+Callidus Assassin (Decoy Targets); Punkte: 115; Rolle gegen dich: Fights First, Lone Operative, plus 1 Kommandopunkt auf deine Stratagems in 12 Zoll, Neural Shredder (Anti-Inf 2 plus Precision).
+Navigator (Clandestine Operation: 3 Infanterie-Einheiten Infiltrators); Punkte: 75; Rolle gegen dich: Gaze into the Empyrean, Third Eye.
+Navigator (Combat Landers: 3 Voidfarers-Einheiten Deep Strike); Punkte: 70; Rolle gegen dich: dito.
+Imperial Navy Breachers; Punkte: 90; Rolle gegen dich: Battleline, Objective.
+Grey Knights Terminator Squad (Psycannon); Punkte: 180; Rolle gegen dich: Deep Strike, 2 plus oder 4 plus Invul, Narthecium.
+Subductor Squad, 11 Stück ( mal 3); Punkte: 255; Rolle gegen dich: 4 plus Invul, Dedication to Duty (fight on death 4 plus), Nuncio Aquila (Battle-shock auf Objective).
+
+Force Disposition laut Herald: Reconnaissance (Imperialis Fleet). Alternative: Disruption (Veiled Blade).
+
+Abschnitt 1: Executive Summary.
+
+Was die Armee will: Breite. 22 Einheiten, davon viele Infiltratoren oder Deep-Striker, verteilen sich über alle Viertel (Reconnaissance Sweep: 3 oder 6 Siegpunkte) und Objectives, tauschen billige Einheiten gegen Zeit und picken deine weichen Einheiten (1 Siegpunkte pro Kill). Monster-Schaden hat die Liste wenig.
+Wichtigste Bedrohung: Nicht der Schaden, sondern die Masse und die Störfeuer: Callidus ( plus 1 Kommandopunkt auf deine Stratagems), Navigatoren (Reserve-Sperrzonen, Third Eye, dann Mortal Wounds), Nuncio Aquila (Battle-shock auf Objectives), Draxus ( plus 1 to hit gegen dich). Der gefährlichste Nahkampfblock: Watch Master plus 10 Deathwatch (4 Thunder Hammers) etwa 6 bis 8, mit Feel No Pain 4 bis 5, an einem Norn.
+Wichtigstes taktisches Problem: Du kannst nicht alles töten, und er braucht nicht viel – Viertel plus 1 Objective plus ein paar Kills reichen für seine Primary.
+Was du vermeiden musst: Deine Norns in Jagd auf billige Einheiten zu verschwenden, während er deine Objectives mit Subductors (O-C 11, 4 plus Invul, Fight-on-Death) blockiert.
+Strategischer Ansatz: Purge and Secure ist für dich hier perfekt: 3 Siegpunkte, wenn du auf einem Objective eine Einheit tötest (oder eine Einheit, die dort stand) – er muss auf Objectives stehen, und seine Einheiten sind billig zu töten. Dazu Assassination (Fixed): 10 Characters, fast alle Widerstand 3–Widerstand 4.
+
+Abschnitt 2: Opponent Game Plan.
+
+At All Costs (seine Command Phase):
+Eliminate: plus 1 to hit gegen eine deiner Einheiten.
+Acquire: ein Objective, dann seine Einheiten dort plus 1 Leadership, plus 1 O-C, 5 plus Invul.
+Violent Acquisition (2 Kommandopunkte; Fleetmaster 0 Kommandopunkte 1 mal pro Runde): Sustained plus Lance plus Ignores Cover gegen Ziele auf Objectives.
+Masters of the Void (1 Kommandopunkt): Reserven dürfen in DEINER Aufstellungszone landen.
+Close-Quarters Barrage: Voidfarers plus 1 S, plus 1 AP in 12 Zoll.
+Veiled Blade: Callidus Decoy Targets 2 mal (tauscht Platz mit einer eigenen Infanterie), Hyperstimms, Orbital Oversight.
+
+1: Pre-Game: Bis zu 3 Infanterie-Einheiten infiltrieren (Clandestine Operation), bis zu 3 Voidfarers-Einheiten bekommen Deep Strike (Combat Landers). Warrant of Trade: Battleline-Redeploy. Sanctifiers Scouts 6 Zoll.
+2: Runde 1: Viertel besetzen (Recon: 6 Siegpunkte), Objectives mit Subductors oder Breachers, Beschuss auf Rippers oder Biovore oder Zoans.
+3: Runde 2 plus: Deep Strike (GK Terminators, Voidfarers), Masters of the Void (in deiner Aufstellungszone), Deathwatch oder Watch Master in deine Harvester.
+4: Scoring: Recon Sweep (6 plus Kills plus 3). Mit 22 Einheiten sind 4 Viertel trivial.
+
+Er gewinnt nicht durch Schaden. Er gewinnt, wenn du 5 Runden lang billigen Einheiten hinterherläufst und er dir jede Runde ein, zwei weiche Einheiten abnimmt.
+
+Abschnitt 3: Major Threats.
+
+Watch Master plus 10 Deathwatch (4 Thunder Hammers).
+
+Widerstand 4, 3 plus (Watch Master 2 plus oder 4 plus Invul), 2 Lebenspunkte. Thunder Hammer 3 Attacken WS4 plus Stärke 10 AP minus 2 D3 Dev Wounds; Power Weapons; Frag Cannon. Strategic Knowledge: Advance oder Fallback plus Schießen oder Charge. Rites of Battle: minus 1 Kommandopunkt Stratagem 1 mal pro Runde. Watch Master Vigil Spear Lance.
+Gegen Norn: etwa 6 bis 8, mit Feel No Pain 4 bis 5, (mit Violent Acquisition oder Lance auf Objective mehr).
+Reaktion: Der einzige Block, der deinen Norns ernsthaft wehtut. Kill early – Widerstand 4 oder 2 Lebenspunkte, dann dein Hive-Tyrant-Block löscht ihn (Parasitic-Kill).
+
+Callidus Assassin.
+
+Widerstand 4, 6 plus oder 4 plus Invul, 4 Lebenspunkte, Fights First, Lone Operative, Infiltrators, Deep Strike. Reign of Confusion: 1 mal pro Zug plus 1 Kommandopunkt auf deine Stratagems in 12 Zoll. Neural Shredder: Torrent D6 Anti-Infantry 2 plus Precision (gegen deine Blöcke: INFANTRY-Keyword, dann Crits auf 2 plus, Precision auf den Character). Nahkampf 5 Attacken 2 plus AP minus 4 D2 Lethal Precision. Acrobatic Escape (zurück in Reserve). Decoy Targets (2 mal ): tauscht Position mit einer eigenen Infanterie.
+Reaktion: Lästig (Kommandopunkte-Steuer). Assassination 4 Siegpunkte. Pyrovore-Torrent (Auto-Hit, ignoriert Lone Operative nicht – nur in 12 Zoll sichtbar).
+
+Draxus plus Aquila Kill Team, Artemis plus Kill Team.
+
+Xenos Hunter: Einheit plus 1 to hit gegen Nicht-Imperium oder Chaos, dann gegen dich immer. Psychic Tempest 18 Zoll 6 Attacken Stärke 6 Sustained 2; Dirgesinger Anti-Infantry 4 plus Devastating Wounds.
+Artemis: Lethal Hits für die Einheit, Hellfire Extremis (Anti-Infantry 4 plus Devastating Wounds Torrent).
+Gegen Pyrovores oder Guards: etwa 3 bis 4 W je Einheit.
+Reaktion: Mittel. Assassination-Ziele.
+
+Navigatoren, 2 Stück.
+
+Gaze into the Empyrean: deine Reserven nicht in 12 Zoll von jedem Navigator. Third Eye: Start seiner Shooting Phase – deine Einheit in 12 Zoll testet Battle-shock (minus 2 bei INFANTRY), dann bei Fehlschlag 3 Mortal Wounds.
+Reaktion: Zwei 12 Zoll-Sperrzonen gegen Zoans oder Rippers. Leichte Assassination-Kills (Widerstand 3, 3 Lebenspunkte).
+
+Subductor Squads, 3 Stück (je 11).
+
+Widerstand 3, 3 plus oder 4 plus Invul, 1 Lebenspunkte, O-C 1, dann O-C 11 je. Dedication to Duty: im Nahkampf getötete Modelle schlagen auf 4 plus noch zurück. Nuncio Aquila (1 mal ): alle deine Nicht-Monster auf einem Objective in 6 Zoll testen Battle-shock.
+A Grievous Blow: Starting Strength 11, dann nicht 13 plus.
+Reaktion: O-C-Blöcke. Dein Norn im Objective-Modus (O-C 15) schlägt einen Trupp; gegen zwei brauchst du Rippers oder Kills. Torrents (Auto-Hit) gegen 4 plus Invul-Masse gut.
+
+Grey Knights Terminators, Coteaz-Block, Sanctifiers, Rogue Trader.
+
+GK Terminators: Deep Strike, 2 plus oder 4 plus Invul, Narthecium, Psycannon 24 Zoll. Mittel.
+Coteaz-Block: Loyal Henchmen (minus 1 to wound), Malefic Wardings (4 plus Invul gegen Psychic!), Spy Network (Kommandopunkte, wenn du Kommandopunkte durch Fähigkeiten gewinnst – Hive Commander!). Multi-meltas, 2 Stück.
+Sanctifiers: Holy Fire (1 mal, D6 Torrent Stärke 6 D2), Medikit (D3 Modelle zurück).
+Rogue Trader Entourage: Healing Serum (D3 Modelle zurück), Dartmask (Anti-Infantry 2 plus Precision).
+
+Abschnitt 4: Threat Matrix.
+
+Watch Master plus 10 DW; Threat: High; Primary targets: Norns, Harvester; How it threatens them: Thunder Hammers Devastating Wounds, Lance; Recommended response: Früh töten (Parasitic).
+Callidus; Threat: Medium–High (System); Primary targets: deine Kommandopunkte, Characters; How it threatens them: plus 1 Kommandopunkt-Steuer, Precision; Recommended response: Torrent in 12 Zoll, Assassination.
+Navigatoren, 2 Stück; Threat: Medium (System); Primary targets: deine Reserven, Infanterie; How it threatens them: 12 Zoll-Sperre, Third Eye Mortal Wounds; Recommended response: Früh töten (Widerstand 3).
+Draxus, Artemis-Blöcke; Threat: Medium; Primary targets: Pyrovores, Guards; How it threatens them: plus 1 hit gegen dich, Devastating Wounds; Recommended response: Torrent plus Nahkampf.
+Subductors, 3 Stück; Threat: Medium (O-C); Primary targets: Objectives; How it threatens them: O-C 11, 4 plus Invul, fight on death; Recommended response: O-C-Überstimmung, Torrent.
+GK Terminators; Threat: Medium; Primary targets: Pyrovores, Home; How it threatens them: Deep Strike; Recommended response: Konter.
+Coteaz-Block; Threat: Low–Medium; Primary targets: Norns (Multi-melta); How it threatens them: minus 1 to wound; Recommended response: ignorieren oder Objective-Kill.
+Breachers, Sanctifiers, Rogue Trader; Threat: Low (Scoring); Primary targets: Viertel oder Objectives; How it threatens them: Masse; Recommended response: Kill auf Objective (3 Siegpunkte).
+
+Abschnitt 5: Target Priority.
+
+Kill early: Watch-Master-Block (einziger echter Norn-Schaden), Navigatoren (Reserve-Sperren, 4 Siegpunkte je), Callidus, wenn in Reichweite.
+
+Control, avoid: Subductors – nicht im Nahkampf mit Norns oder Tyrants anfassen (Fight on Death, 4 plus Invul), sondern wegtorrenten oder mit O-C überstimmen.
+
+Ignore: Einheiten in Vierteln, die nicht auf Objectives stehen (bringen dir nichts extra).
+
+Abschnitt 6: Deployment Analysis.
+
+Wahrscheinlich: Infiltratoren (3 Einheiten, zum Beispiel DW-Blöcke, Callidus) weit vorne; Subductors oder Breachers auf Objectives; Navigatoren zentral (Sperrzonen); GK Terminators plus Voidfarers in Reserve (Combat Landers). Warrant of Trade oder Decoy Targets verschieben nach deinem Aufstellen.
+
+Kernfrage: Kann er einen Norn plus Support töten? Kaum – etwa 15, mit Feel No Pain 10, Schaden bei maximaler Konzentration. Deine Norns sind hier Anker, keine Opfer.
+
+Deine Aufstellung:
+Standard-Split, breit (seine Primary lebt von Vierteln – du kannst ihm zwei Viertel schwer machen, indem deine Einheiten dort Objectives halten und Infiltratoren töten).
+Norns auf Central plus eigene Expansion (Objective-Modus).
+Norn-Sichtbarkeit in diesem Matchup: Ein Norn, der ein Objective hält, ist immer sichtbar (Base in der Objective-Geländezone, dann deren Obscuring zählt nicht; er überragt die Ruinen; Monster sind nie hidden). Hier ist das vertretbar: Seine gesamte Armee bringt bei maximaler Konzentration etwa 15, mit Feel No Pain 10, Schaden an einen Norn – das überlebt der Norn (16 W, Feel No Pain 5 plus im Objective-Modus) und heilt in deiner Command Phase mit einem Harvester in Range. Wichtig ist nur: Harvester in 6 Zoll und kein Norn allein, den Infiltratoren plus Deep Strike gleichzeitig erreichen.
+Hive-Tyrant-Block auf die Seite des Watch-Master-Blocks.
+Swarmlord zentral (verteuert Violent Acquisition, Masters of the Void, Emperor's Will, Displacer Field, Selfless Bodyguard, Hyperstimms, Orbital Oversight, Blind Grenades, Ensnaring Trap; Watch Master oder Fleetmaster gleichen je 1 mal aus).
+Zoanthropes: auf den Tisch (zwei Navigator-Sperrzonen machen Reserve schwer). Ziel: Characters (D3-Blast gegen Widerstand 3–Widerstand 4) und Kill Teams.
+Rippers: auf den Tisch als Screen oder Objective-Halbierer, oder Reserve, wenn eine Kante frei von Navigator-Zonen ist.
+Hive Commander und Spy Network: Coteaz' Spy Network gibt ihm auf 2 plus 1 Kommandopunkt, wenn du Kommandopunkte durch eine Fähigkeit gewinnst (Swarmlord Hive Commander!). Rechne pro Runde mit plus 1 Kommandopunkt für ihn.
+
+Welchen Fehler er sich wünscht: Deine Monster jagen Viertel-Einheiten in seiner Hälfte, deine Harvester stehen allein (Infiltratoren oder Deep Strike), deine Reserven haben keinen Landeplatz.
+
+Abschnitt 7: Movement and Positioning.
+
+Infiltrators plus Deep Strike plus Masters of the Void: Er kann in deiner Aufstellungszone auftauchen.
+Decoy Targets (Callidus, 2 mal ): Callidus springt an die Position einer eigenen Infanterie-Einheit (die dafür ein Modell verliert).
+Safe: In Synapse (Third Eye, Nuncio Aquila: Tests auf 3W6), innerhalb deines Netzes.
+Dangerous: 12 Zoll um Callidus (Kommandopunkte-Steuer), 12 Zoll um Navigatoren (Third Eye).
+
+Abschnitt 8: Charge, Fight Phase Analysis.
+
+Dein Standard: Tyrant-Block in einen Kill Team oder Character-Block auf einem Objective, dann Kill = 3 Siegpunkte Purge and Secure plus Assassination plus Parasitic.
+Watch-Master-Block (Widerstand 4, 3 plus, 2 Lebenspunkte) mit Hive-Tyrant-Block:
+Guards 30 Attacken Stärke 7 AP minus 2 gegen Widerstand 4, dann 2 plus, dann etwa 20 Treffer, dann etwa 17 Wunden, dann 5 plus Save, dann etwa 11 W, dann 5 bis 6 Modelle.
+Hive Tyrant 6 Attacken Stärke 11 D3, dann etwa 4 tot; Talons etwa 2 tot, dann Block (11 Modelle) fast weg. Rapacious Hunger (1 Kommandopunkt).
+
+Subductors: Dedication to Duty (4 plus fight on death) plus 4 plus Invul, dann ineffizient im Nahkampf. Torrents (Pyrovores, Psychophage, Swarmlord-Pulse) sind besser.
+
+Callidus Fights First: Wenn er deine Einheit chargt oder gechargt wird, schlägt er zuerst. Gegen Tyrant-Blöcke mit Precision etwa 2 bis 4 am Character.
+
+Ensnaring Trap (1 Kommandopunkt, Ende deiner Charge Phase): Eine seiner Infanterie-Einheiten in 6 Zoll darf nachträglich chargen – plane Charges so, dass keine zweite Einheit in 6 Zoll steht.
+
+Abschnitt 9: Shooting Analysis.
+
+Multi-meltas, 2 Stück (Agents); Reichweite: 18 Zoll; Wirkung: Norn etwa 2 bis 3, mit Feel No Pain 1,3 bis 2, in 9 Zoll.
+GK Psycannon; Reichweite: 24 Zoll; Wirkung: gering.
+Psychic Tempest (Draxus, plus 1 hit gegen dich); Reichweite: 18 Zoll; Wirkung: Pyrovores oder Guards etwa 2 bis 3 W.
+Hellfire Extremis, Dirgesinger (Anti-Inf Devastating Wounds); Reichweite: 12 bis 18 Zoll; Wirkung: Pyrovores, Guards.
+Neural Shredder (Callidus, Anti-Inf 2 plus Precision); Reichweite: 12 Zoll; Wirkung: Character im Tyrant-Block etwa 1 bis 2.
+Holy Fire (1 mal ); Reichweite: 12 Zoll; Wirkung: Pyrovores.
+Third Eye (Navigator); Reichweite: 12 Zoll; Wirkung: 3 Mortal Wounds bei Battle-shock-Fehlschlag.
+
+dann Kaum Norn-Schaden. Sein Beschuss tötet Rippers, Biovore, Zoans, Pyrovores, dann Kill-Siegpunkte.
+
+Abschnitt 10: Gotchas and Traps.
+
+1: Reign of Confusion (Callidus) – deine Stratagems in 12 Zoll von ihm plus 1 Kommandopunkt.
+2: Gaze into the Empyrean, 2 Stück – zwei 12 Zoll-Sperrzonen für Reserven.
+3: Third Eye – Battle-shock-Test (minus 2 bei INFANTRY: Pyrovores, Rippers, Zoans, Tyrant-Blöcke haben INFANTRY-Keyword!), dann 3 Mortal Wounds. In Synapse 3W6: Leadership 8 plus minus 2, dann 10 plus auf 3W6 (etwa 63 Prozent Erfolg); Tyrant-Block Leadership 7 plus (Character) minus 2, dann 9 plus (etwa 74 Prozent). Nicht trivial!
+4: Nuncio Aquila – Battle-shock für alle Nicht-Monster auf einem Objective (1 mal je Trupp, 3 Trupps).
+5: Spy Network (Coteaz) – dein Hive Commander ( plus 1 Kommandopunkt) gibt ihm auf 2 plus auch 1 Kommandopunkt.
+6: Loyal Henchmen, Malefic Wardings – Coteaz-Block minus 1 to wound, 4 plus Invul gegen Psychic (Zoans schlecht).
+7: Healing Serum, Medikit, Narthecium – Einheiten bekommen Modelle zurück, dann ganz töten.
+8: Masters of the Void – Reserven in deiner Aufstellungszone.
+9: Acquire at All Costs – seine Einheiten auf einem gewählten Objective plus 1 O-C und 5 plus Invul.
+
+Abschnitt 11: Opponent Decision Tree.
+
+Wo landet oder infiltriert der Watch-Master-Block?
+Nahe deinen Harvestern, dann Hive-Tyrant-Block plus Heroic Intervention; er ist Kill-Ziel Nr. 1.
+Hinten, dann Er wird per Advance plus Charge kommen; Harvester nicht allein.
+Wo stehen die Navigatoren?
+Blockieren beide deine Reserve-Kanten, dann Zoans oder Rippers auf den Tisch; Navigatoren früh töten.
+Welches Objective ist "Acquire at All Costs"?
+Dort plus 1 O-C oder 5 plus Invul für ihn: mit Norn (O-C 15) plus Kill (3 Siegpunkte) übernehmen.
+
+Abschnitt 12: Player's Game Plan.
+
+Default plan.
+
+1: Runde 1: Home plus Central plus eigene Expansion. Infiltratoren in deiner Hälfte mit Torrent oder Emissary oder Zoans töten (auf Objectives = 3 Siegpunkte).
+2: Runde 2: Watch-Master-Block; Navigatoren; gegnerische Expansion mit Hive-Tyrant-Block (Kill dort = 3 Siegpunkte).
+3: Runde 3 bis 5: Pro Runde ein Kill auf oder an einem Objective plus 3 bis 4 Nicht-Home-Objectives (12 bis 16 Siegpunkte) plus Assassination.
+
+Adjustment triggers.
+
+Callidus in 12 Zoll deiner Blöcke, dann Stratagems teurer; Pyrovore-Torrent auf ihn (Lone Operative: nur in 12 Zoll sichtbar).
+Subductors blockieren dein Objective (O-C 11), dann Norn (15) reicht gegen einen Trupp; gegen zwei: Rippers plus Torrent.
+Er landet GK Terminators in deiner Aufstellungszone, dann Swarmlord-Block kontert; Home ist für Purge and Secure egal, aber für Kill-Siegpunkte bei ihm relevant.
+
+Abschnitt 13: Primary Scoring Plan.
+
+Paarung (Herald): Du, dann Purge and Secure; er (Recon), dann Reconnaissance Sweep.
+
+Du: 4 Siegpunkte pro Nicht-Home-Objective (Runde 2 plus), 3 Siegpunkte für Kill auf oder an Objective (fast jede Runde machbar – er muss Objectives besetzen), 3 Siegpunkte für neues Objective.
+Er: 6 Siegpunkte Viertel (sicher), 1 Siegpunkte pro Kill, 3 Siegpunkte für mindestens 1 Objective. Deckel etwa 10 bis 12 pro Runde.
+Winning the mission: 3 Nicht-Home-Objectives plus Kill-Siegpunkte pro Runde, dann 15 plus Siegpunkte pro Runde. Er kann dich im Primary nur schlagen, wenn er viele Kills macht – gib ihm keine billigen Einheiten (Rippers oder Biovore oder Zoans geschützt).
+
+Secondaries: Assassination (Fixed) – 10 Characters (Inquisitor, Coteaz, Jokaero, Draxus, Rogue Trader, Artemis, Watch Master, Callidus, 2 Navigatoren), fast alle Widerstand 3–Widerstand 4 3 Lebenspunkte–5 Lebenspunkte, dann bis zu 20 Siegpunkte. Klare Wahl. Zweite: No Prisoners (22 Einheiten, max. 5 Siegpunkte pro Zug) oder Tactical. Bring It Down: keine Ziele.
+
+Abschnitt 14: First Turn, Second Turn Considerations.
+
+Wenn du zuerst spielst.
+
+Infiltratoren in deiner Hälfte sofort töten (auf Objectives: 3 Siegpunkte).
+Objectives besetzen, Norns im Objective-Modus.
+
+Wenn er zuerst spielt.
+
+Er besetzt Viertel oder Objectives, schießt auf Weiches. Third Eye oder Nuncio Aquila testen deine Einheiten.
+Dein Zug 1: alles in Reichweite töten; Zoans (auf dem Tisch) auf Characters.
+
+Abschnitt 15: Practical Round Checklist.
+
+BEFORE DEPLOYMENT.
+Purge and Secure (Kill auf Objective = 3 Siegpunkte).
+Assassination fixed (10 Characters!).
+Zoans plus Rippers auf den Tisch (2 Navigator-Sperrzonen).
+DEPLOYMENT.
+Norns auf Central plus eigener Expansion.
+Harvester nicht allein (Infiltratoren oder Deep Strike).
+Hive-Tyrant-Block gegenüber dem Watch-Master-Block.
+OPPONENT TURN.
+Third Eye, Nuncio Aquila: Synapse prüfen.
+Callidus-12 Zoll (Kommandopunkte-Steuer).
+Heroic Intervention gegen Watch-Master-Charge.
+MY TURN.
+Ein Kill auf oder an einem Objective pro Runde.
+Characters für Assassination.
+Einheiten GANZ töten (Medikit oder Serum oder Narthecium).

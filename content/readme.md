@@ -47,6 +47,12 @@ Für die T2S-Ausgabe (Hörmodus) kannst du in
 `18"` → `18 Zoll`. Es werden **nur** exakte, von dir eingetragene Treffer
 ersetzt – das System rät oder erfindet keine Aussprache-Regeln.
 
+## Bereits fertig vorgelesene Analysen (Text + MP3)
+
+Liegt eine Analyse schon als fertiger Sprechtext plus echter Audioaufnahme
+vor (z. B. Export aus einem anderen Tool), gehört sie nicht hierher, sondern
+in `content-audio/` – siehe `content-audio/readme.md`.
+
 ## Bekannte Einschränkungen (Offline/PWA)
 
 - Nur bereits online besuchte Analyse-Seiten sind offline verfügbar

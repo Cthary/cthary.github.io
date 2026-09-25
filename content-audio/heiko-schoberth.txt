@@ -1,0 +1,234 @@
+Gegneranalyse: Heiko Schoberth (Schion) – Chaos Daemons (Daemonic Incursion).
+
+Liste in Kürze (1990 Punkte, Daemonic Incursion 3 Daemon Prince).
+
+Bloodthirster (A'rgath, the King of Blades: plus 1, plus 2 A und S); Punkte: 340; Rolle gegen dich: Norn-Killer im Nahkampf, Relentless Carnage (8W6, dann Mortal Wounds).
+Kairos Fateweaver; Punkte: 305; Rolle gegen dich: Indirect-Psychic-Blast 24 Zoll, plus 1 Kommandopunkt auf deine Stratagems in 12 Zoll, Kommandopunkte-Motor.
+Keeper of Secrets (Warlord, Soulstealer); Punkte: 280; Rolle gegen dich: Bewegung 14, Nahkampf plus Phantasmagoria (Dev Wounds).
+Lord of Change (The Everstave: plus 2 S, plus 6 Zoll im Shadow); Punkte: 345; Rolle gegen dich: Bolt of Change 24 Zoll Stärke 11 D3, Lethal oder Sustained.
+Daemonettes, 10 Stück; Punkte: 100; Rolle gegen dich: Battleline, Fights First, Horrifying Beauty.
+Beasts of Nurgle, 1 Stück; Punkte: 80; Rolle gegen dich: Scouts, heilt sich vollständig, Blocker.
+Bloodcrushers, 6 Stück; Punkte: 200; Rolle gegen dich: Brass Stampede (Mortal Wounds beim Charge), Lance.
+Flamers, 3 Stück; Punkte: 65; Rolle gegen dich: Torrent 12 Zoll Psychic.
+Flesh Hounds, 5 Stück; Punkte: 75; Rolle gegen dich: Bewegung 12, Feel No Pain 3 plus gegen Psychic, Reserve-Springer.
+Skull Cannon, 2 Stück; Punkte: 200; Rolle gegen dich: 48 Zoll Blast Stärke 9, erzwingt Battle-shock-Test.
+
+Force Disposition: Take and Hold.
+
+Abschnitt 1: Executive Summary.
+
+Was die Armee will: Vier Greater Daemons, die per Deep Strike 6 Zoll statt 8 Zoll von dir landen dürfen (Daemonic Incursion, im Shadow of Chaos oder in 6 Zoll eines Greater Daemons), plus Battle-shock-Druck (Skull Cannons, Horrifying Beauty, Daemonic Terror) – Battle-shock-Fehlschläge kosten dir D3 Mortal Wounds und das O-C direkt vor den Wertungen.
+Wichtigste Bedrohung: Bloodthirster mit A'rgath – etwa 15 bis 18, mit Feel No Pain 10 bis 12, an einem Norn in einer Fight Phase (inklusive Relentless Carnage). Dahinter: Lord of Change (Fernkampf etwa 6, mit Feel No Pain 4, an einem Norn), Keeper (etwa 10, mit Feel No Pain 7, Nahkampf).
+Wichtigstes taktisches Problem: Kairos' One Head Looks Back: Deine Stratagems auf Einheiten in 12 Zoll von Kairos kosten plus 1 Kommandopunkt – dein reaktives Kommandopunkte-Spiel (Heroic Intervention, Ablative Carapace) wird teuer. Und 6 Zoll-Deep-Strike hebelt dein 8 Zoll-Netz aus.
+Was du vermeiden musst: Einheiten außerhalb Synapse (Battle-shock auf 2W6 statt 3W6) und einen Norn allein in 18 Zoll eines Greater Daemons.
+Strategischer Ansatz: Synapse ist deine Rüstung. In Synapse testest du auf 3W6 – Daemonic Terror und Skull Cannons werden fast wirkungslos. Die Greater Daemons sind Bring It Down plus Assassination (8 Siegpunkte je) und landen in deiner Nähe – sie kommen zu deinen Konterblöcken.
+
+Abschnitt 2: Opponent Game Plan.
+
+Shadow of Chaos: seine Aufstellungszone; No Man's Land, wenn er mindestens Hälfte der Niemandsland-Objectives hält;
+deine Aufstellungszone, wenn er mindestens Hälfte der Objectives in deiner Aufstellungszone hält; 6 Zoll um Greater Daemons (Aura);
+6 Zoll um "Corrupted" Objectives (Corrupt Realspace, 1 Kommandopunkt).
+Daemonic Terror: deine Einheiten im Shadow, in 6 Zoll eines Greater Daemon: Battle-shock minus 1, Fehlschlag, dann D3 Mortal Wounds.
+Daemonic Manifestation: seine Einheiten im Shadow heilen bei bestandenem Battle-shock (Battleline: Modelle zurück).
+Daemonic Incursion: Deep Strike 6 Zoll (statt 8 Zoll) im Shadow oder in 6 Zoll eines Greater Daemons.
+The Realm of Chaos (1 Kommandopunkt): Ende deines Zuges 1 bis 2 Einheiten zurück in Reserve, neu landen.
+
+1: Aufstellung: Skull Cannons hinten (48 Zoll), Beasts per Scout vor, Daemonettes oder Flamers auf Objectives, mehrere Greater Daemons plus Bloodcrushers oder Hounds in Reserve.
+2: Runde 1 bis 2: Skull Cannons schießen, dann Battle-shock-Tests (Daemonic Terror: minus 1, D3 Mortal Wounds). Lord of Change oder Kairos schießen (Kairos Indirect).
+3: Runde 2: Deep Strike 6 Zoll neben deine Norns: Bloodthirster plus Bloodcrushers (mit Instrument plus 1 Charge), Keeper.
+4: Scoring: Battlefield Dominance, Corrupt Realspace (sticky plus Shadow-Zone um Objectives).
+
+Er gewinnt, wenn deine Einheiten Battle-shock-Tests verlieren (O-C weg plus Mortal Wounds), während seine Greater Daemons die Norns im Nahkampf erschlagen.
+
+Abschnitt 3: Major Threats.
+
+Bloodthirster (A'rgath).
+
+Widerstand 11, 3 plus oder 4 plus Invul, 18 Lebenspunkte, Bewegung 12, FLY, Deep Strike. Great Axe Strike 7 Attacken 2 plus Stärke 16 AP minus 4 D6 plus 2, dann A'rgath: plus 1 A, plus 1 S, im Shadow plus 2, plus 2, dann 9 Attacken Stärke 18. Sweep 14( plus 2)A Stärke 10( plus 2) AP minus 2 D2. Relentless Carnage: Ende der Fight Phase 8W6, 4 plus, dann Mortal Wounds an eine Einheit in Engagement. Daemon Lord of Khorne: plus 1 to hit für Khorne-Daemons in 6 Zoll.
+Gegen Norn: etwa 14, mit Feel No Pain 9, (Strike) plus etwa 4, mit Feel No Pain 3, Mortal Wounds, dann etwa 18, mit Feel No Pain 12, dann Norn tot.
+Reaktion: Kill on arrival. Widerstand 11 oder 4 plus Invul: Norn mit Singular Purpose (Reroll Hit oder Wound) plus Lesser Prey, Hive-Tyrant-Block. Bring It Down plus Assassination.
+
+Kairos Fateweaver.
+
+Widerstand 10, 6 plus oder 4 plus Invul, 20 Lebenspunkte, Bewegung 12, FLY. Infernal Gateway 24 Zoll Indirect Psychic: D6 plus 3 Blast Stärke 9 AP minus 2 D3, fokussiert D3 plus 6 D3 Hazardous. Staff 5 Attacken Stärke 8 D2D3.
+One Head Looks Forward: plus 1 Kommandopunkt auf Leadership-Test. One Head Looks Back: 1 mal pro Zug plus 1 Kommandopunkt auf dein Stratagem auf eine Einheit in 12 Zoll.
+Gegen Tyrant Guard (Widerstand 8, Indirect): etwa 3 bis 4 Guards. Gegen Pyrovores: ein Trupp.
+Reaktion: System-Ziel. Sein Save ist 6 plus – im Nahkampf ist er (trotz 4 plus Invul) für deine Masse an Guard-Attacken zugänglich. Swarmlord-Block, dann etwa 12 bis 15.
+
+Lord of Change (Everstave).
+
+Widerstand 10, 6 plus oder 4 plus Invul, 18 Lebenspunkte. Bolt of Change: 18 Zoll ( plus 6 Zoll im Shadow = 24 Zoll) 9 Attacken Stärke 9 ( plus 2 = Stärke 11) AP minus 1 oder minus 2 D1 oder D3; Master of Magicks: Lethal oder Sustained D3 oder Ignores Cover. Rod of Sorcery 6 Attacken Stärke 8.
+Gegen Norn (fokussiert, Stärke 11, Lethal): etwa 6 bis 7, mit Feel No Pain 4 bis 5,.
+Reaktion: Mittel–hoch; Nahkampf-schwach (Staff 5 Attacken Stärke 6).
+
+Keeper of Secrets (Warlord, Soulstealer).
+
+Widerstand 10, 5 plus oder 4 plus Invul, 18 Lebenspunkte, Bewegung 14. Mesmerising Form: minus 1 to hit gegen ihn. Witstealer 6 Attacken Stärke 8 AP minus 2 D3 plus Snapping Claws 4 Attacken Stärke 6 Devastating Wounds D3. Phantasmagoria fokussiert 9 Attacken Stärke 6 AP minus 2 Devastating Wounds.
+Gegen Norn: etwa 8 bis 10, mit Feel No Pain 5 bis 7,. Gegen Pyrovores: Phantasmagoria etwa 2 Modelle.
+Reaktion: Mittel. Soulstealer heilt ihn bei Kills.
+
+Skull Cannons, 2 Stück.
+
+Widerstand 9, 4 plus oder 4 plus Invul, 9 Lebenspunkte. 48 Zoll D6 plus 2 Blast Stärke 9 AP minus 1 D2. Skulls of the Fallen: getroffene Einheit testet Battle-shock, dann mit Daemonic Terror (wenn im Shadow oder in 6 Zoll eines Greater Daemons) minus 1 und D3 Mortal Wounds.
+Reaktion: Die Battle-shock-Motoren. Zoans (Widerstand 9: Stärke 12, dann 3 plus) oder Biovore.
+
+Bloodcrushers, 6 Stück, Flesh Hounds, Daemonettes, Flamers, Beasts.
+
+Bloodcrushers: Widerstand 7, 3 plus oder 5 plus Invul, 4 Lebenspunkte, Bewegung 10. Brass Stampede nach Charge (je Modell 4 plus, dann D3 Mortal Wounds, dann etwa 6 Mortal Wounds). Horn Lance. Mit Bloodthirster-Aura plus 1 to hit. Gegen Tyrant-Block etwa 2 bis 3 Guards plus Mortal Wounds.
+Flesh Hounds: Feel No Pain 3 plus gegen Psychic (Zoans oder Emissary schlecht), Bewegung 12, Hunters from the Warp (zurück in Reserve).
+Daemonettes: Horrifying Beauty (Battle-shock zu Beginn jeder Fight Phase, in der sie engaged sind).
+Beasts of Nurgle: heilt jeden Phasen-Ende vollständig, dann nur ganz töten.
+
+Abschnitt 4: Threat Matrix.
+
+Bloodthirster (A'rgath); Threat: Very High; Primary targets: Norns, Tyrant-Blöcke; How it threatens them: 9 Attacken Stärke 18 D6 plus 2 plus Mortal Wounds; Recommended response: Bei Landung kontern.
+Kairos; Threat: High (System); Primary targets: Guards, deine Kommandopunkte; How it threatens them: Indirect Blast, plus 1 Kommandopunkt-Steuer; Recommended response: Swarmlord-Block.
+Lord of Change; Threat: High; Primary targets: Norns, Psychophages; How it threatens them: 24 Zoll Stärke 11 D3; Recommended response: Nahkampf.
+Keeper; Threat: Medium–High; Primary targets: Norns, Harvester; How it threatens them: Nahkampf plus Devastating Wounds; Recommended response: Nahkampf (minus 1 to hit beachten).
+Skull Cannons, 2 Stück; Threat: High (System); Primary targets: Battle-shock; How it threatens them: Tests plus Mortal Wounds; Recommended response: Synapse halten; Zoans.
+Bloodcrushers; Threat: Medium–High; Primary targets: Tyrant-Blöcke, Pyrovores; How it threatens them: Brass Stampede; Recommended response: Heroic Intervention-Konter.
+Daemonettes; Threat: Medium; Primary targets: O-C (Battle-shock); How it threatens them: Horrifying Beauty; Recommended response: Torrent.
+Flesh Hounds; Threat: Low; Primary targets: Rippers, Biovore; How it threatens them: Bewegung 12, Reserve; Recommended response: ignorieren oder Torrent.
+Beasts of Nurgle; Threat: Low; Primary targets: Blocker; How it threatens them: Vollheilung; Recommended response: ganz töten oder ignorieren.
+
+Abschnitt 5: Target Priority.
+
+Kill early: Bloodthirster (sobald gelandet), Kairos (Kommandopunkte-Steuer plus Indirect), Skull Cannons (Battle-shock-Motor).
+
+Control, avoid: Keeper (Bewegung 14, minus 1 to hit) – mit O-C überstimmen. Lord of Change – außerhalb 24 Zoll halten oder hinter obscuring Zonen (Kairos' Infernal Gateway ist Indirect – dagegen hilft Sichtschutz nicht, nur Abstand).
+
+Ignore: Beasts of Nurgle, Flesh Hounds (außer auf Objectives).
+
+Abschnitt 6: Deployment Analysis.
+
+Wahrscheinlich: Skull Cannons, Lord of Change, Kairos auf dem Tisch in seiner Aufstellungszone (Shadow). Daemonettes oder Flamers auf Objectives. Bloodthirster, Bloodcrushers, Keeper, Hounds in Reserve – Deep Strike 6 Zoll in Runde 2 in 6 Zoll eines anderen Greater Daemons oder auf Corrupted Objectives.
+
+Kernfrage: Kann er einen Norn in einem Zyklus töten? Ja (Bloodthirster allein). Beide? Bloodthirster plus Keeper plus Lord of Change auf zwei Norns: möglich, wenn beide exponiert sind.
+
+Deine Aufstellung:
+Synapse-Dichte: Jede Einheit in 6 Zoll einer SYNAPSE-Einheit (Swarmlord 9 Zoll). Pyrovores oder Rippers oder Biovore dürfen nicht außerhalb stehen.
+Norns mit Tyrant-Block in 12 Zoll, jeweils mit einem Harvester in 6 Zoll (Heilung plus Ablative Carapace für den Assimilator).
+Norn-Sichtbarkeit in diesem Matchup: Ein Norn, der ein Objective hält, ist immer sichtbar (Base in der Objective-Geländezone, dann deren Obscuring zählt nicht; er überragt die Ruinen; Monster sind nie hidden). Gegen diese Liste ist das vertretbar: Sein Fernkampf gegen Monster ist mäßig (Lord of Change fokussiert etwa 6 bis 7, mit Feel No Pain 4 bis 5, Skull Cannons etwa 1, mit Feel No Pain 0,7, plus Battle-shock-Test, Kairos zielt besser auf Guards oder Pyrovores). Die echte Gefahr ist ein Bloodthirster oder Keeper per 6 Zoll-Deep-Strike neben dem Norn – dagegen helfen nur das 6 Zoll-Netz, Heroic Intervention-Deckung und Synapse, nicht Verstecken. Norns auf Objectives also ja, aber nie ohne Screen-Ring und Tyrant-Block in 12 Zoll.
+6 Zoll-Netz statt 8 Zoll-Netz ab Runde 2 (Daemonic Incursion: 6 Zoll-Landungen in 6 Zoll eines Greater Daemons).
+Swarmlord zentral (Malign Presence gegen Corrupt Realspace, Warp Surge, Draught of Terror, Denizens of the Warp, Realm of Chaos, Daemonic Invulnerability).
+Zoanthropes: auf den Tisch in Synapse-Nähe; Ziel Skull Cannons oder Kairos. Nicht auf Flesh Hounds (Feel No Pain 3 plus gegen Psychic).
+Rippers: Reserve, auf ein Corrupted Objective (brechen: O-C halbieren plus dein Block).
+
+Welchen Fehler er sich wünscht: Einheiten außerhalb Synapse, die an Skull-Cannon-Tests und Daemonic Terror sterben; ein Norn, neben dem 6 Zoll freier Raum für einen Bloodthirster ist.
+
+Greater Daemons auf dem Tisch, dann Sie laufen Bewegung 12–Bewegung 14 FLY – du siehst sie kommen: Norn plus Block empfangen.
+Mehrere in Reserve, dann 6 Zoll-Netz; Heroic Intervention-Kommandopunkte bereithalten (Kairos-Steuer beachten).
+Er corrupted Objectives in Niemandsland, dann Shadow breitet sich aus (6 Zoll um Objectives): deine Units dort testen mit minus 1 und Mortal Wounds bei Fehlschlag Synapse bleibt der Schutz.
+
+Abschnitt 7: Movement and Positioning.
+
+Deep Strike 6 Zoll (Daemonic Incursion), dann 6 Zoll-Charge (Bloodcrushers plus 1 durch Instrument, Bloodthirster-Aura plus 1 to hit).
+Warp Surge (1 Kommandopunkt): Charge nach Advance im Shadow.
+Realm of Chaos (1 Kommandopunkt): Einheiten verschwinden am Ende deines Zuges und landen neu (auch in Runde 1).
+Safe: In Synapse, außerhalb 6 Zoll der Greater Daemons, außerhalb seiner Aufstellungszone.
+Dangerous: Seine Aufstellungszone und Corrupted-Zonen (Daemonic Terror), 12 Zoll um Kairos (Stratagem-Steuer).
+Conditional: No Man's Land – wird Shadow, wenn er mindestens Hälfte der Niemandsland-Objectives hält.
+
+Abschnitt 8: Charge, Fight Phase Analysis.
+
+Bloodthirster landet (6 Zoll) und chargt deinen Norn:
+1. Ende seiner Movement Phase: Overwatch lohnt nicht (Widerstand 11, 4 plus Invul).
+2. Charge 6 Zoll (etwa 72 Prozent). Bloodthirster Fights First.
+3. Heroic Intervention (1 Kommandopunkt; plus 1 Kommandopunkt wenn in 12 Zoll von Kairos; Swarmlord hilft nicht – Malign Presence wirkt nur auf SEINE Stratagems) mit Tyrant-Block.
+4. Er zuerst: etwa 14, mit Feel No Pain 9, am Norn. Relentless Carnage am Ende der Fight Phase ( plus etwa 4, mit Feel No Pain 3, Mortal Wounds), dann Norn fällt meist Ablative Carapace (2 Kommandopunkte, nur Assimilator) VOR seinen Angriffen: Feel No Pain 5 plus oder 4 plus, dann Norn überlebt eher.
+5. Dein Konter: Hive-Tyrant-Block plus Swarmlord (falls in Reichweite), dann Bloodthirster etwa 15 bis 20, dann fast tot.
+6. Deine Runde: finishen (Bring It Down plus Assassination = 8 Siegpunkte).
+
+Dein bester Charge: Kairos (6 plus Save) oder Skull Cannons (4 plus). Oder der gerade gelandete Greater Daemon, bevor er zuerst schlägt.
+
+Horrifying Beauty (Daemonettes): Zu Beginn jeder Fight Phase, in der deine Einheit mit Daemonettes engaged ist: Battle-shock-Test (minus 1 bei unter halber Stärke; Daemonic Terror minus 1 im Shadow plus D3 Mortal Wounds). In Synapse 3W6, dann meist bestanden.
+
+Abschnitt 9: Shooting Analysis.
+
+Kairos Infernal Gateway (Indirect, D6 plus 3 Blast Stärke 9 D3); Reichweite: 24 Zoll; Wirkung: Guards etwa 3 bis 4, Pyrovores 1 Trupp.
+Lord of Change Bolt (9 Attacken Stärke 11 D3 fokussiert); Reichweite: 24 Zoll im Shadow; Wirkung: Norn etwa 6 bis 7, mit Feel No Pain 4 bis 5.
+Keeper Phantasmagoria (9 Attacken Stärke 6 Devastating Wounds); Reichweite: 18 Zoll; Wirkung: Pyrovores oder Zoans.
+Skull Cannons, 2 Stück (D6 plus 2 Blast Stärke 9 D2); Reichweite: 48 Zoll; Wirkung: Guards etwa 2, plus Battle-shock-Test.
+Flamers (Torrent Psychic); Reichweite: 12 Zoll; Wirkung: Pyrovores.
+Bloodthirster Hellfire Breath (Torrent); Reichweite: 12 Zoll; Wirkung: Pyrovores.
+
+dann Gegen einen Norn: etwa 10 bis 12, mit Feel No Pain 7 bis 8, Fernkampf. Das Gefährliche ist die Kombination Battle-shock plus Mortal Wounds plus Nahkampf.
+
+Abschnitt 10: Gotchas and Traps.
+
+1: Daemonic Terror – Battle-shock-Tests mit minus 1 und D3 Mortal Wounds bei Fehlschlag im Shadow oder in 6 Zoll eines Greater Daemons. Synapse (3W6) ist Pflicht.
+2: Skulls of the Fallen – jede Skull-Cannon-Salve = ein Test.
+3: One Head Looks Back (Kairos) – deine Stratagems in 12 Zoll von Kairos kosten plus 1 Kommandopunkt (1 mal pro Zug). Plane Kommandopunkte entsprechend (Heroic Intervention 2 Kommandopunkte, Ablative Carapace 3 Kommandopunkte).
+4: Daemonic Incursion – Deep Strike 6 Zoll in 6 Zoll eines Greater Daemons oder im Shadow.
+5: Corrupt Realspace (1 Kommandopunkt) – sticky Objective plus 6 Zoll-Shadow drum herum.
+6: Daemonic Manifestation – seine Battleline (Daemonettes) im Shadow bringt Modelle zurück.
+7: Beasts of Nurgle – heilen am Ende jeder Phase vollständig (wenn nicht tot).
+8: Flesh Hounds Feel No Pain 3 plus gegen Psychic – Zoans oder Emissary nicht verschwenden.
+9: A'rgath im Shadow – plus 2 A, plus 2 S statt plus 1, plus 1. Der Bloodthirster ist in seiner eigenen Aufstellungszone oder Shadow stärker.
+10: Shadow in the Warp gegen Daemons – deine Fähigkeit trifft seine Einheiten (Leadership 6 bis 7 plus); seine Einheiten im Shadow haben aber plus 1 auf Battle-shock und heilen bei Erfolg. Nutze sie gegen Einheiten außerhalb seines Shadows.
+
+Abschnitt 11: Opponent Decision Tree.
+
+Welche Greater Daemons sind in Reserve?
+Bloodthirster, dann 6 Zoll-Netz um die Norns; Heroic Intervention-Kommandopunkte ( plus Kairos-Steuer) bereit.
+Keine, dann Sie laufen; du empfängst mit Norn plus Block.
+Schießen die Skull Cannons auf Einheiten in seinem Shadow?
+JA, dann Diese Einheiten in Synapse halten oder aus dem Shadow zurückziehen.
+Kairos in 12 Zoll deiner Blöcke?
+JA, dann Stratagems plus 1 Kommandopunkt: Heroic Intervention eher mit einem Block außerhalb 12 Zoll von Kairos.
+
+Abschnitt 12: Player's Game Plan.
+
+Default plan.
+
+1: Runde 1: Home plus eigene Expansion plus Central-Rand, alles in Synapse. Zoans auf Skull Cannons.
+2: Runde 2: Landende Greater Daemons empfangen und kontern. Kairos mit Swarmlord-Block angehen, wenn erreichbar.
+3: Runde 3: Nächster Greater Daemon. Rippers auf ein Corrupted Objective.
+4: Runde 4 bis 5: Objectives halten; Shadow in the Warp auf seine Objective-Halter außerhalb seines Shadows.
+
+Adjustment triggers.
+
+Bloodthirster tot, dann Norns werden deutlich sicherer; aggressiver auf Central.
+Kairos tot, dann Deine Stratagems wieder normal teuer.
+Er hält mindestens Hälfte der Niemandsland-Objectives, dann Niemandsland ist Shadow: Battle-shock-Druck überall; ein Niemandsland-Objective zurücknehmen (Norn O-C 15).
+
+Abschnitt 13: Primary Scoring Plan.
+
+Paarung: Beide Take and Hold, dann Battlefield Dominance.
+
+Home plus eigene Expansion plus Central = 13 Siegpunkte pro Runde.
+Seine O-C: Greater Daemons 5 je, Daemonettes 20 (Battleline O-C 2), Bloodcrushers 12, Skull Cannons 3.
+Battle-shock ist sein O-C-Werkzeug gegen dich (O-C –). Synapse neutralisiert es.
+Winning the fight gegen. mission: Seine Greater Daemons sind 4 Einheiten; wenn zwei davon fallen, kippt sein Angriff.
+
+Secondaries: Bring It Down (Fixed) – 4 Greater Daemons (18 Lebenspunkte bis 20) = 4 Ziele. Assassination (Fixed) – dieselben 4 (alle CHARACTER), dann jeder Greater Daemon = 8 Siegpunkte. Empfehlung: Bring It Down plus Assassination.
+
+Abschnitt 14: First Turn, Second Turn Considerations.
+
+Wenn du zuerst spielst.
+
+Synapse-Netz aufbauen, Zoans oder Biovore auf Skull Cannons. Nicht in seine Aufstellungszone (Shadow).
+
+Wenn er zuerst spielt.
+
+Skull Cannons plus Lord of Change plus Kairos schießen; Battle-shock-Tests. In Synapse: kein Problem.
+Deep Strike ab Runde 2 (Realm of Chaos ermöglicht auch Runde-1-Landungen für Einheiten, die er am Ende deines Zuges hineinnimmt – erst ab deinem ersten Zug relevant).
+
+Abschnitt 15: Practical Round Checklist.
+
+BEFORE DEPLOYMENT.
+Battlefield Dominance.
+Bring It Down plus Assassination (4 Greater Daemons = je 8 Siegpunkte).
+Zoans auf den Tisch; Rippers Reserve.
+DEPLOYMENT.
+Alles in Synapse (6 Zoll, Swarmlord 9 Zoll).
+6 Zoll-Netz um Norns ab Runde 2.
+Norns je mit Tyrant-Block in 12 Zoll.
+OPPONENT TURN.
+Kairos in 12 Zoll?, dann Stratagems plus 1 Kommandopunkt.
+Skull-Cannon-Tests in Synapse (3W6).
+Heroic Intervention plus Ablative Carapace (Assimilator) gegen Bloodthirster.
+MY TURN.
+Gelandete Greater Daemons töten (8 Siegpunkte je).
+Kairos, Skull Cannons.
+Keine Psychic-Waffen auf Flesh Hounds.

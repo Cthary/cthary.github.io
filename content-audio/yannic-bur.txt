@@ -1,0 +1,247 @@
+Gegneranalyse: Yannic Bur (Raven_VII) – Imperial Knights.
+
+Liste in Kürze (2000 Punkte, Questoris Companions 3 Daemon Prince).
+
+Canis Rex (Warlord) plus Sir Hekhtur; Punkte: 415; Rolle gegen dich: Freedom's Hand Stärke 20 AP minus 3 D9, Las-impulsor, minus 1 Kommandopunkt Stratagem 1 mal pro Zug.
+Cerastus Knight Atrapos; Punkte: 405; Rolle gegen dich: plus 1 to hit gegen Monster (Macro-extinction), Lascutter Stärke 14 D4, Graviton-Kanone.
+Cerastus Knight Lancer; Punkte: 415; Rolle gegen dich: Bewegung 14, Shock Lance Stärke 20 AP minus 3 D8 Lance, Crushing Impact 0 Kommandopunkte, 4 plus Invul.
+Knight Crusader (Avenger, Rapid-fire Battle Cannon, Stormspear); Punkte: 410; Rolle gegen dich: 18-Schuss-Gatling, Battle Cannon 72 Zoll.
+Armiger Helverin; Punkte: 140; Rolle gegen dich: 2 Autocannons 48 Zoll, Suppression (minus 1 to hit für Nicht-Monster).
+Armiger Warglaive; Punkte: 140; Rolle gegen dich: Thermal Spear Melta 4, Chain-cleaver.
+Navigator (Agents); Punkte: 75; Rolle gegen dich: Gaze into the Empyrean: deine Reserven nicht in 12 Zoll, Third Eye (Battle-shock, dann 3 Mortal Wounds).
+
+Force Disposition laut Herald: Take and Hold.
+
+List parsing warning: Canis Rex ist als 2x Canis Rex (Canis Rex plus Sir Hekhtur) exportiert. Das Profil von Sir Hekhtur ist im Wahapedia-Auszug nicht enthalten (Rule status: unverified). Die Analyse behandelt ihn als Teil der Canis-Rex-Einheit ohne relevante eigene Kampfkraft.
+
+Abschnitt 1: Executive Summary.
+
+Was die Armee will: Vier Titanic Knights (Widerstand 11, 26 Lebenspunkte bis 28) plus zwei Armiger nehmen mit O-C 10 oder 6 die Objectives und zerschlagen jede deiner großen Einheiten im Nahkampf. Beide spielen Battlefield Dominance.
+Wichtigste Bedrohung: Canis Rex und der Lancer im Nahkampf (je etwa 14, mit Feel No Pain 9, an einem Norn pro Fight; mit Titanic Duel plus 1, plus 1 mehr) und der Atrapos ( plus 1 to hit gegen Monster, Fernkampf plus Nahkampf etwa 15, mit Feel No Pain 10,).
+Wichtigstes taktisches Problem: O-C. Zwei Knights auf einem Objective = O-C 20 > dein Norn (15). Hero's Tread macht ein Objective mit Level of Control 5 sticky.
+Was du vermeiden musst: Einen Norn allein gegen zwei Knights. Und: deine Zoans oder Rippers in 12 Zoll des Navigators einsetzen wollen (verboten).
+Strategischer Ansatz (Overload one Knight with multiple durable threats): Er hat nur 7 Einheiten. Jeder Knight, den du tötest, ist Bring It Down (4) plus Assassination (4) – alle vier Titanics sind CHARACTER. Isoliere einen Knight pro Runde und töte ihn mit Tyrant-Block plus Norn (Singular Purpose auf ihn); deine Regeneration gewinnt den Abnutzungskrieg.
+
+Abschnitt 2: Opponent Game Plan.
+
+Code Chivalric: Oath = Deed plus Quality (vor dem Spiel gewählt oder gewürfelt).
+Deeds: Character töten (dein Swarmlord oder Hive Tyrant!) mehr Objectives am Ende deines Zuges mehr Kills als Rundenzahl.
+Qualities: 1 Reroll Hit plus 1 Reroll Wound plus 2 Zoll Move, plus 1 Advance oder Charge plus 2 O-C, plus 1 Leadership.
+Questoris Companions: nach erfülltem Oath neue Oaths (je plus 1 Kommandopunkt, Qualities stapeln).
+Titanic Duel (1 Kommandopunkt): plus 1 Hit, plus 1 Wound gegen MONSTER oder TITANIC oder WALKER.
+Hero's Tread (1 Kommandopunkt): Objective-Kontrolle Level 5 (sticky).
+Courageous Stand (1 Kommandopunkt): Feel No Pain 6 plus.
+
+1: Aufstellung: Knights breit über seine Hälfte, Armiger als Flanken, Navigator hinter einem Knight (Gaze-Zone gegen deine Reserven).
+2: Runde 1 bis 2: Crusader und Helverin schießen auf Infanterie (Pyrovores, Guards, Zoans); Atrapos auf einen Norn. Knights marschieren (Super-heavy Walker: durch Gelände höchstens 4 Zoll).
+3: Runde 2 bis 3: Lancer (Bewegung 14) plus Canis in deine Norns oder Tyrant-Blöcke. Oath Tyrant: Swarmlord oder Hive Tyrant töten.
+4: Scoring: Home plus Central plus Expansion mit O-C 10 je Knight; Hero's Tread hält sie.
+
+Er gewinnt, wenn seine Knights deine Norns früher im Nahkampf erschlagen, als du seine Knights töten kannst – und seine O-C-Masse Central blockiert.
+
+Abschnitt 3: Major Threats.
+
+Canis Rex (Warlord).
+
+Widerstand 11, 3 plus, 5 plus Invul nur gegen Fernkampf, 26 Lebenspunkte, O-C 10 (Damaged höchstens 9 W: O-C 5, minus 1 to hit), Bewegung 10. Freedom's Hand Strike 5 Attacken 2 plus Stärke 20 AP minus 3 D9 Sustained, Sweep 10 Attacken Stärke 10 AP minus 2 D3. Las-impulsor 24 Zoll D6 Stärke 14 AP minus 3 D4 (hoch), 36 Zoll 2D6 Stärke 7 (niedrig). Legendary Freeblade: minus 1 Kommandopunkt 1 mal pro Zug. Chainbreaker: hebt 1 mal Battle-shock auf.
+Gegen Norn: etwa 14, mit Feel No Pain 9, (Strike). Gegen Tyrant-Block: Sweep etwa 4 Guards oder Strike etwa 3 Guards plus Tyrant.
+Im Nahkampf keine Invuln, dann deine AP minus 2 oder minus 3-Waffen treffen auf 5 plus oder 6 plus Rüstung.
+Reaktion: Kill-Ziel, wenn isoliert. 8 Siegpunkte.
+
+Cerastus Knight Lancer.
+
+Widerstand 11, 3 plus oder 4 plus Invul (alles), 28 Lebenspunkte, Bewegung 14. Shock Lance Strike 5 Attacken 2 plus Stärke 20 AP minus 3 D8 Lance ( plus 1 Wound nach Charge), dann gegen Norn etwa 14, mit Feel No Pain 9,. Shock Charge: Crushing Impact für 0 Kommandopunkte (Widerstand 11, dann 11 W6: 5 plus, dann etwa 3,7 Mortal Wounds). Lancer's Duty (Bondsman): ein Armiger darf nach Advance chargen.
+Reaktion: Schnellster Knight, dann er kommt zuerst. Tanglestrike Rounds (Assimilator, 1 Kommandopunkt): minus 2 Zoll Move. Mit 4 plus Invul im Nahkampf der zäheste.
+
+Cerastus Knight Atrapos.
+
+Widerstand 11, 3 plus oder 5 plus Invul, 28 Lebenspunkte, Bewegung 12. Macro-extinction Protocols: plus 1 to hit gegen MONSTER (bei TITANIC oder TOWERING auch plus 1 Wound). Lascutter hoch 24 Zoll D6 Stärke 14 AP minus 3 D4 Sustained, Melee 6 Attacken Stärke 14 AP minus 3 D4. Graviton Singularity 24 Zoll D3 Stärke 16 AP minus 4 D6 plus 1 (Devastating Wounds, Hazardous im Singularity-Modus). Atrapos' Duty: Armiger rerollt Hit oder Wound gegen TITANIC oder TOWERING (für dich irrelevant).
+Gegen Norn: Fernkampf etwa 7, Nahkampf etwa 8, dann etwa 15, mit Feel No Pain 10, pro Runde.
+Reaktion: Der Monster-Spezialist. Früh binden.
+
+Knight Crusader.
+
+Widerstand 11, 3 plus, 5 plus Invul (Fernkampf), 26 Lebenspunkte. Avenger Gatling 36 Zoll 18 Attacken Stärke 6 AP minus 2 D2; Rapid-fire Battle Cannon 72 Zoll D6 plus 3 Blast Stärke 10 AP minus 1 D3 (Rapid Fire D6 plus 3 in 36 Zoll); Stormspear 48 Zoll 3 Attacken Stärke 8 AP minus 2 D6; Heavy Flamer; 2 Heavy Stubbers. Punishing Salvoes: stationär, dann Sustained Hits. Crusader's Duty: Armiger plus 1 to hit.
+Gegen Tyrant Guard: etwa 3 bis 4 Guards pro Runde. Gegen Pyrovores: ein Trupp tot. Gegen Norn: etwa 6, mit Feel No Pain 4,.
+Reaktion: Die Anti-Infanterie-Plattform – dein Harvester-Netz (Pyrovores) leidet. Nahkampf ist schwach (Titanic Feet 4 Attacken).
+
+Armiger Helverin, Warglaive.
+
+Widerstand 9, 3 plus, 5 plus Invul (Fernkampf), 14 Lebenspunkte, O-C 6, Bewegung 12. Helverin: 2 Autocannons 48 Zoll 4 Attacken Stärke 9 AP minus 1 D3; Suppression (Nicht-Monster-Ziel minus 1 to hit). Warglaive: Thermal Spear 18 Zoll 2 Attacken Stärke 12 AP minus 4 D6 Melta 4; Chain-cleaver 4 Attacken Stärke 10 AP minus 3 D3 ( plus 1 A nach Charge).
+Reaktion: Bring It Down (14 Lebenspunkte) – leichtere 4 Siegpunkte als Titanics. Zoanthropes (Stärke 12 gegen Widerstand 9, dann 3 plus): etwa 9 Schaden, dann Armiger fast tot.
+
+Navigator.
+
+Widerstand 3, 5 plus oder 4 plus Invul, 3 Lebenspunkte. Gaze into the Empyrean: deine Reserve-, Deep-Strike-Einheiten nicht in 12 Zoll. Third Eye: Start seiner Shooting Phase, eine deiner Einheiten in 12 Zoll testet Battle-shock (minus 2 bei INFANTRY), dann bei Fehlschlag 3 Mortal Wounds.
+Reaktion: 4 Siegpunkte Assassination, leicht (Widerstand 3). Wenn er deinen Zoans-Korridor blockiert: Emissary-Precision (18 Zoll) oder Biovore.
+
+Abschnitt 4: Threat Matrix.
+
+Canis Rex; Threat: Very High; Primary targets: Norns, Tyrant-Blöcke; How it threatens them: 5 Attacken Stärke 20 D9; Recommended response: Isolieren, Block plus Norn.
+Lancer; Threat: Very High; Primary targets: Norns; How it threatens them: Bewegung 14, Stärke 20 D8 Lance, Crushing Impact; Recommended response: Tanglestrike, Heroic Intervention-Konter.
+Atrapos; Threat: High; Primary targets: Norns, Psychophages; How it threatens them: plus 1 hit gegen Monster; Recommended response: Früh binden.
+Crusader; Threat: High; Primary targets: Pyrovores, Guards, Zoans; How it threatens them: 18 Gatling plus Battle Cannon; Recommended response: Sicht verweigern, Nahkampf.
+Helverin; Threat: Medium; Primary targets: Pyrovores, Zoans; How it threatens them: 48 Zoll Autocannons, Suppression; Recommended response: Zoans (Bring It Down).
+Warglaive; Threat: Medium; Primary targets: Norns (Melta 4); How it threatens them: Thermal Spear; Recommended response: Nahkampf.
+Navigator; Threat: Medium (System); Primary targets: deine Reserven; How it threatens them: 12 Zoll-Sperrzone, Third Eye; Recommended response: Assassination.
+Hero's Tread, O-C 10; Threat: High (Scoring); Primary targets: Objectives; How it threatens them: Sticky O-C 5; Recommended response: Norn plus Block.
+
+Abschnitt 5: Target Priority.
+
+Kill early: Der Knight, der sich zuerst isoliert (meist Lancer, Bewegung 14). Dann Atrapos (Monster-Spezialist). Armigers, wenn Zoans sie erreichen (Bring It Down, 14 W).
+
+Control, avoid: Crusader – steht hinten, schießt. Später. Canis Rex – nur mit voller Überzahl angreifen.
+
+Ignore: Navigator, außer er blockiert deinen Reserveplan.
+
+Abschnitt 6: Deployment Analysis.
+
+Wahrscheinlich: Crusader hinten (Punishing Salvoes: stationär), Canis oder Atrapos zentral, Lancer auf einer Flanke, Armiger außen, Navigator nahe einem Knight in der Mitte (Gaze-Sperrzone).
+
+Kernfrage: Can the Knight army kill enough of the Tyranid army before the Tyranids establish a Primary advantage?
+Er tötet realistisch einen Norn oder einen Tyrant-Block pro Runde (Nahkampf), dazu Pyrovores oder Guards per Crusader.
+Du tötest realistisch einen Knight pro Runde ab Runde 2 (Block plus Norn plus Bio-stimulus), dazu Armigers mit Zoans.
+Er hat 7 Einheiten, du 13 plus Heilung. Der Abnutzungskrieg ist zu deinen Gunsten, wenn du Norns nicht allein anbietest.
+
+Deine Aufstellung:
+Overload-Prinzip: Nie ein Norn allein – immer Norn plus Tyrant-Block plus Harvester in 6 Zoll. Ein Knight, der den Norn angreift, steht danach in der Reichweite von 3 Einheiten.
+Norns zuletzt, nicht in Lanes des Crusaders oder Atrapos in Runde 1.
+Norn-Sichtbarkeit in diesem Matchup: Ein Norn, der ein Objective hält, ist immer sichtbar (Base in der Objective-Geländezone, dann deren Obscuring zählt nicht; er überragt die Ruinen; Monster sind nie hidden). Aus 36 bis 72 Zoll (Crusader, Helverins) kommen nur etwa 7 bis 8, mit Feel No Pain 5, an einen Norn – tragbar. Die schweren Fernwaffen (Atrapos, Canis) haben 24 Zoll, und das eigentliche Problem ist der Nahkampf. Deshalb: Norn auf einem Objective ja, aber nie allein (Tyrant-Block in 12 Zoll für Heroic Intervention, Harvester in 6 Zoll) und in Runde 1 außerhalb der Lancer-Charge-Reichweite ( mindestens 23 Zoll). Verstecken hilft gegen Knights ohnehin wenig: Super-heavy Walker gehen durch niedriges Gelände und finden den Norn im Nahkampf.
+Swarmlord zentral: Malign Presence verteuert Titanic Duel, Hero's Tread, Courageous Stand, Moment of Glory, Driven by the Past, Unstoppable Warrior (Canis minus 1 Kommandopunkt 1 mal pro Zug gleicht teilweise aus).
+Zoanthropes: Reserve, aber Navigator-Sperrzone (12 Zoll) beachten. Ziel: Armiger an der Kante (Runde 2). Gegen Titanics etwa 8 Schaden – als Finisher.
+Rippers: Reserve (Navigator!), auf ein Knight-Objective: O-C 10, dann 5 (Damaged Knight: 5, dann 3).
+Pyrovores hidden (Crusader-Gatling).
+
+Welchen Fehler er sich wünscht: Deine Norns getrennt, jeder allein gegen zwei Knights. Oder Zoans, die einzeln hereinkommen und nichts töten.
+
+Er konzentriert 3 Knights auf eine Seite, dann Overload-Frage: Überlebt dein Block (2 Norns plus Hive-Tyrant-Block plus Psychophage) seinen ersten Nahkampf? Er kann in einer Runde etwa 2 Einheiten schwer beschädigen, nicht 4., dann JA, dann Overload.
+Er verteilt die Knights, dann Standard-Split mit Paaren: Norn plus Tyrant-Block pro Seite; Knights einzeln isolieren.
+Lancer sprintet allein vor, dann Geschenk: Tanglestrike plus Harpooned-Charge plus Hive-Tyrant-Block, dann Lancer tot (8 Siegpunkte).
+
+Abschnitt 7: Movement and Positioning.
+
+Knights: Bewegung 10–Bewegung 14, Super-heavy Walker: durch Modelle (außer TITANIC) und Gelände höchstens 4 Zoll; höheres Gelände mit Battle-shock-Risiko. Deine Screens halten Knights nicht auf – sie gehen durch.
+Charge-Reichweite: Lancer 14 Zoll plus 2W6 ( plus 1 mit Quality eager) etwa 22 bis 23 Zoll. Canis 10 Zoll plus 2W6 etwa 17 bis 18 Zoll.
+Deine Monster können Knights nicht durchqueren (Monster oder Vehicle blockieren sich gegenseitig beim Normal Move).
+Navigator-Sperrzone (12 Zoll) gegen deine Reserven.
+Safe: Außerhalb 72 Zoll oder 48 Zoll-Lanes (schwer) – realistisch: hinter obscuring Geländezonen (nicht auf einem Objective – dort ist ein Norn immer sichtbar) und außerhalb Knight-Bewegung plus 24 Zoll von Atrapos oder Canis.
+Dangerous: 22 Zoll um den Lancer; 18 Zoll um Canis.
+Conditional: Central – wird ein Knight-gegen-Norn-Duell; entscheide per Überzahl.
+
+Abschnitt 8: Charge, Fight Phase Analysis.
+
+Dein Standardkill: ein isolierter Knight (Runde 2 oder 3).
+Command Phase: Norn Protean Purpose, dann Singular Purpose auf diesen Knight (Reroll Hit plus Wound) (einmal pro Norn; lohnt, wenn du ihn in 1 bis 2 Runden tötest).
+Shooting: Psychophage-Torrent (Bio-stimulus AP plus 1). Assimilator-Harpune, dann Harpooned ( plus 2 Charge) Tanglestrike (1 Kommandopunkt) auf einen ANDEREN Knight (minus 2 Zoll Move für dessen Anmarsch) Zoans fokussiert (etwa 8), wenn in Reichweite.
+Charge: Hive-Tyrant-Block plus Assimilator ( plus Emissary).
+Crushing Impact (1 Kommandopunkt, Norn): etwa 3,7 Mortal Wounds.
+Fight (du bist aktiv, Fights First):
+Hive Tyrant 6 Attacken Stärke 11 AP minus 3 (Bio) gegen Widerstand 11, dann 4 plus twin, dann etwa 3,7, dann 6 plus Save (keine Invuln im Nahkampf bei Canis oder Crusader; Lancer 4 plus Invul, Atrapos 5 plus Invul), dann etwa 3 mal 3 = etwa 9.
+Talons etwa 2; Guards 30 Attacken Stärke 7 AP minus 2, dann 6 plus, dann etwa 3,3, dann 5 plus, dann etwa 2,2.
+Assimilator (Reroll Hit oder Wound durch Singular Purpose, Lesser Prey plus 2 S): Harpune 4 Attacken Stärke 15 AP minus 3 (Stärke 15 gegen Widerstand 11, dann 3 plus, Reroll), dann etwa 3,3, dann 6 plus, dann etwa 2,8 mal 4,5 = etwa 12 Talons 6 Attacken Stärke 12, dann 3 plus (Reroll), dann etwa 5, dann etwa 4 mal 3 = etwa 12, dann etwa 35 bis 40 gegen Canis oder Crusader (26 W): tot. Gegen Lancer (4 plus Invul) etwa 22, gegen Atrapos (5 plus Invul) etwa 27.
+Parasitic Biomorphology aktiv, wenn der Knight stirbt (Harvester in 6 Zoll).
+
+Er chargt deinen Norn mit dem Lancer:
+1. Kein Overwatch (lohnt nicht).
+2. Charge plus Shock Charge (Crushing Impact 0 Kommandopunkte, etwa 3,7 Mortal Wounds; Emissary Feel No Pain 4 plus gegen Mortal Wounds Assimilator: Catalytic Biofortification 1 Kommandopunkt).
+3. Heroic Intervention (1 Kommandopunkt) mit Tyrant-Block (Leap to Defend).
+4. Lancer schlägt (etwa 14, mit Feel No Pain 9, am Norn). Norn überlebt im Objective-Modus sicher, ohne knapp.
+5. Dein Block plus Norn schlagen zurück (etwa 22 an einem 4 plus Invul-Lancer, 28 W), dann Lancer schwer beschädigt (Damaged: O-C 5, minus 1 to hit).
+6. Deine Runde: Lancer finishen.
+
+Titanic Duel (1 Kommandopunkt, mit Swarmlord 2 Kommandopunkte): plus 1 Hit, plus 1 Wound gegen MONSTER – er wird es bei jedem Knight-Charge auf einen Norn spielen. Rechne dann mit etwa 18, mit Feel No Pain 12, statt etwa 14, mit Feel No Pain 9,.
+
+Abschnitt 9: Shooting Analysis.
+
+Atrapos Lascutter (hoch) plus Graviton; Reichweite: 24 Zoll; Gegen Norn: etwa 7, mit Feel No Pain 5,; Gegen Guards oder Pyrovores: etwa 3 Guards.
+Canis Las-impulsor (hoch); Reichweite: 24 Zoll; Gegen Norn: etwa 5, mit Feel No Pain 3,; Gegen Guards oder Pyrovores: etwa 2 Guards.
+Crusader Gatling (18 Attacken); Reichweite: 36 Zoll; Gegen Norn: etwa 2,5, mit Feel No Pain 1,7,; Gegen Guards oder Pyrovores: etwa 3 bis 4 Guards, 1 Pyrovore-Trupp.
+Crusader Battle Cannon (Blast, RF); Reichweite: 72 Zoll; Gegen Norn: etwa 1,5, mit Feel No Pain 1,; Gegen Guards oder Pyrovores: etwa 2 Guards.
+Crusader Stormspear (3 Attacken Stärke 8 D6); Reichweite: 48 Zoll; Gegen Norn: etwa 1, mit Feel No Pain 0,7,; Gegen Guards oder Pyrovores: etwa 1 Guard.
+Helverin Autocannons (8 Attacken Stärke 9 D3); Reichweite: 48 Zoll; Gegen Norn: etwa 3, mit Feel No Pain 2,; Gegen Guards oder Pyrovores: etwa 2 Guards.
+Warglaive Thermal Spear (Melta 4); Reichweite: 18 Zoll; Gegen Norn: etwa 4, mit Feel No Pain 3, in 9 Zoll.
+Lancer Shock Lance (6 Attacken Stärke 6 Sustained 2); Reichweite: 12 Zoll; Gegen Guards oder Pyrovores: Pyrovores.
+
+dann Fernkampf gegen einen Norn: etwa 15 bis 20, mit Feel No Pain 10 bis 13,. Der Nahkampf ist das eigentliche Problem.
+
+Abschnitt 10: Gotchas and Traps.
+
+1: Oath We vow to lay low the tyrant – vor dem Spiel wählt er einen deiner Characters (Swarmlord oder Hive Tyrant). Frag nach dem Oath (öffentlich). Dieser Character wird sein Ziel Nr. 1.
+2: Titanic Duel – plus 1 Hit, plus 1 Wound gegen deine Monster (auch gegen deine Tyrant-Blöcke: MONSTER-Keyword).
+3: Hero's Tread – sticky Level of Control 5 auf einem Objective. Du brauchst mehr als 5 O-C, um es zu übernehmen – dein Norn (15) schafft es allein.
+4: Super-heavy Walker – deine Infanterie-Screens sind keine Hindernisse.
+5: Navigator Gaze into the Empyrean – 12 Zoll-Sperrzone für deine Reserven (Zoans, Rippers).
+6: Third Eye – Battle-shock-Test mit minus 2 für INFANTRY (Pyrovores, Rippers?, Zoans), dann 3 Mortal Wounds bei Fehlschlag. In Synapse (3W6) meist bestanden.
+7: Lancer Crushing Impact 0 Kommandopunkte – zusätzlich zu einem anderen Crushing Impact in derselben Phase.
+8: Damaged-Schwelle – Knights unter 10 W verlieren 5 O-C und treffen schlechter. Beschädigen lohnt sich (O-C-Duell), auch wenn du nicht tötest.
+9: Chainbreaker – Canis hebt 1 mal Battle-shock auf. Shadow in the Warp daher auf Einheiten, die nicht in 12 Zoll von Canis stehen.
+10: Moment of Glory – plus 3 Zoll Consolidate, wenn er dabei in Engagement endet (bindet deine nächste Einheit).
+
+Abschnitt 11: Opponent Decision Tree.
+
+Welches Oath?
+Tyrant (dein Character), dann diesen Block nie allein; Ablative Carapace hilft nicht (kein Harvester).
+Reclaim the realm (Objectives), dann O-C-Duell; Rippers plus Norn.
+Great tally (Kills > Rundenzahl), dann keine billigen Einheiten opfern (Rippers oder Biovore).
+Wo ist der Lancer nach Runde 1?
+Vorne allein, dann Runde 2: Tanglestrike plus Harpooned plus Block, dann tot.
+Bei den anderen, dann Knights einzeln aus dem Verband locken (Köder: Pyrovores am Objective).
+Crusader stationär hinten?
+JA, dann Sustained Hits aktiv; Infanterie außer Sicht, Zoans nicht offen einsetzen.
+
+Abschnitt 12: Player's Game Plan.
+
+Default plan.
+
+1: Runde 1: Home plus eigene Expansion plus Central-Rand, Norns in Paaren mit Tyrant-Blöcken, außerhalb der Lancer-Reichweite ( mindestens 23 Zoll).
+2: Runde 2: Der am weitesten vorgerückte Knight wird isoliert und getötet (Singular Purpose, Lesser Prey, Bio-stimulus). Zoans auf einen Armiger.
+3: Runde 3 bis 4: Nächster Knight. Rippers auf ein Knight-Objective (O-C-Halbierung).
+4: Runde 5: Mit Norn-O-C und seinen geschrumpften Knights (Damaged O-C 5) die Objectives halten.
+
+Adjustment triggers.
+
+Zwei Knights auf einem Norn, dann Norn wird fallen: Harvester-Heilung vorher, Konter mit allem auf den beschädigteren Knight.
+Lancer chargt in Runde 1 oder 2, dann Heroic Intervention plus Konter; er steht danach in deiner Zone.
+Navigator steht vor deiner Reserve-Kante, dann Biovore oder Emissary auf den Navigator (Widerstand 3, 3 Lebenspunkte), dann Zoans.
+Ein Knight Damaged ( höchstens 9 oder 10 W), dann O-C 5: ein Tyrant-Block (O-C 9) überstimmt ihn.
+
+Abschnitt 13: Primary Scoring Plan.
+
+Paarung: Beide Take and Hold, dann Battlefield Dominance.
+
+Home plus eigene Expansion plus Central = 13 Siegpunkte pro Runde.
+O-C-Vergleich: Knight 10 (12 mit Quality legacy), Armiger 6, Damaged minus 5 oder minus 3. Norn 15, Tyrant-Block 9.
+Central: Ein Knight plus Armiger (16) > Norn (15). Norn plus Tyrant-Block (24) gewinnt.
+Winning the fight gegen. mission: Jeder tote Knight ist etwa minus 12 Prozent seiner Armee. Nach zwei toten Knights hat er keine O-C-Überlegenheit mehr.
+
+Secondaries: Bring It Down (Fixed) – 4 Titanics (26 Lebenspunkte bis 28) plus 2 Armiger (14 Lebenspunkte) = 6 Ziele à 4 Siegpunkte. Assassination (Fixed) – Canis, Atrapos, Lancer, Crusader (alle CHARACTER) plus Navigator = 5 Ziele à 4 Siegpunkte (Navigator 3 Lebenspunkte, dann 3 Siegpunkte). Jeder tote Titanic = 8 Siegpunkte. Klare Empfehlung: Bring It Down plus Assassination.
+
+Abschnitt 14: First Turn, Second Turn Considerations.
+
+Wenn du zuerst spielst.
+
+Norns außer Reichweite. Emissary-Tendril (18 Zoll) auf den Navigator, falls möglich. Stellung für Runde-2-Konter.
+
+Wenn er zuerst spielt.
+
+Lancer kann in Runde 1 nicht chargen, wenn du mindestens 23 Zoll Abstand hältst. Crusader oder Atrapos schießen.
+Kommandopunkte: Heroic Intervention (1), Catalytic Biofortification (1) gegen Crushing Impact, Counteroffensive (2).
+
+Abschnitt 15: Practical Round Checklist.
+
+BEFORE DEPLOYMENT.
+Oath erfragen (Deed plus Quality) – welcher Character ist sein "Tyrant"?
+Battlefield Dominance; Bring It Down plus Assassination.
+Navigator-Position: 12 Zoll Sperrzone für Zoans oder Rippers.
+DEPLOYMENT.
+Norns in Paaren mit Tyrant-Blöcken, mindestens 23 Zoll vom Lancer.
+Pyrovores hidden (Crusader).
+Swarmlord zentral (Titanic Duel oder Hero's Tread verteuern).
+OPPONENT TURN.
+Heroic Intervention bereit, Catalytic Biofortification gegen Shock Charge.
+Welcher Knight hat sich isoliert?
+Titanic Duel einkalkulieren.
+MY TURN.
+Protean Purpose: Singular Purpose auf den Ziel-Knight.
+Bio-stimulus, dann Charge, dann Crushing Impact, dann Lesser Prey.
+Zoans auf Armiger (14 W).

@@ -1,0 +1,241 @@
+Gegneranalyse: Philipp Wegener (Scorpat) – Chaos Daemons (Khorne: Blood Legion plus Cavalcade of Chaos).
+
+List parsing warning: Herald-Metadaten nennen nur blood_legion, der Listentext Blood Legion and Cavalcade of Chaos (3 Detachment Points). Die Analyse geht von beiden Detachments aus.
+
+Liste in Kürze (1995 Punkte, Blood Legion 2 Daemon Prince plus Cavalcade of Chaos 1 Daemon Prince).
+
+Skarbrand (Warlord); Punkte: 315; Rolle gegen dich: 8 Attacken Stärke 16 AP minus 4 D6, Charge nach Advance, plus 1 A Aura für Khorne-Daemons.
+Bloodthirster (Fury's Cage: Reroll Hit plus Wound, D3 plus 1 Mortal Wounds an sich); Punkte: 340; Rolle gegen dich: Norn-Killer plus Relentless Carnage.
+Rendmaster on Blood Throne (Slaughterthirst: Lance-Aura); Punkte: 185; Rolle gegen dich: Blood Throne: plus 1 S oder AP oder D für Khorne gegen ein Ziel, Champion Slayer.
+Rendmaster on Blood Throne; Punkte: 160; Rolle gegen dich: dito (zweites Ziel).
+Skullmaster (Brazenmaw: plus 2 Charge) plus 6 Bloodcrushers; Punkte: 300; Rolle gegen dich: Charge-Block, Dev Wounds auf Hörnern, Battle-shock beim Charge.
+Bloodmaster plus 10 Bloodletters; Punkte: 175; Rolle gegen dich: plus 1 to wound, 6 Zoll Consolidate.
+Bloodcrushers, 6 Stück; Punkte: 200; Rolle gegen dich: Brass Stampede.
+Flesh Hounds, 5 Stück; Punkte: 75; Rolle gegen dich: Bewegung 12, Feel No Pain 3 plus gegen Psychic.
+Skull Cannon, 2 Stück; Punkte: 200; Rolle gegen dich: 48 Zoll Blast, Battle-shock-Test.
+Nurglings, 3 Stück; Punkte: 45; Rolle gegen dich: Infiltrate, Blocker, minus 1 to hit.
+
+Force Disposition laut Herald: Purge the Foe (Blood Legion). Alternative: Disruption (Cavalcade).
+
+Abschnitt 1: Executive Summary.
+
+Was die Armee will: Reine Khorne-Nahkampfwalze. Skarbrand und ein Bloodthirster sind je für sich Norn-Killer; zwei Rendmaster geben allen Khorne-Angriffen gegen ein gewähltes Ziel plus 1 S, plus 1 AP, plus 1 D. Cavalcade lässt MOUNTED-Einheiten (Bloodcrushers, Rendmaster, Skull Cannons) schon in Runde 1 aus der Reserve kommen. Primary Unstoppable Force: Kills plus Central.
+Wichtigste Bedrohung: Skarbrand plus Bloodthirster plus Blood Throne auf einen Norn – weit über 20 Schaden. Beide Norns in einer Runde sind möglich.
+Wichtigstes taktisches Problem: Murdercall: Wenn eine deiner Einheiten in deiner Movement Phase in 8 Zoll einer Khorne-Daemon-Einheit endet, surgt eine davon D6 Zoll auf dich zu – deine Positionierung zieht seine Einheiten an.
+Was du vermeiden musst: Isolierte Norns; Einheiten außerhalb Synapse (Skull Cannons plus Daemonic Terror); in deiner Bewegung knapp an seine Einheiten heran (Murdercall).
+Strategischer Ansatz: Konter-Aufstellung in Tiefe: Screens vorn, Norns tief, Tyrant-Blöcke als Heroic Intervention-Konter. Seine Greater Daemons sind 16 Siegpunkte (Bring It Down plus Assassination) und kommen zu dir. Deine Primary (Immovable Object) zahlt 5 Siegpunkte pro Nicht-Home-Objective – du gewinnst die Mission durch Stehenbleiben.
+
+Abschnitt 2: Opponent Game Plan.
+
+Shadow of Chaos: seine Aufstellungszone; No Man's Land, wenn er mindestens Hälfte der Niemandsland-Objectives hält;
+deine Aufstellungszone, wenn er mindestens Hälfte der Objectives in deiner Aufstellungszone hält; 6 Zoll um Greater Daemons (Aura).
+Daemonic Terror: deine Einheiten im Shadow, in 6 Zoll eines Greater Daemon: Battle-shock minus 1, Fehlschlag, dann D3 Mortal Wounds.
+Daemonic Manifestation: seine Einheiten im Shadow heilen bei bestandenem Battle-shock (Battleline: Modelle zurück).
+Daemonic Incursion: Deep Strike 6 Zoll (statt 8 Zoll) im Shadow oder in 6 Zoll eines Greater Daemons.
+Murdercall (Blood Legion): in deiner Movement Phase endet deine Einheit in 8 Zoll von Khorne-Daemons, dann eine davon surgt D6 Zoll auf dich zu.
+Cavalcade: From Beyond the Veil (1 Kommandopunkt): MOUNTED in Reserve, dann Ingress am Ende einer Movement Phase AB SPIELBEGINN (auch Runde 1, auch in deiner Movement Phase!) Unholy Avalanche: MOUNTED fallen zurück und dürfen schießen oder chargen.
+Blood Throne (Rendmaster, Start Fight Phase): Ziel in 18 Zoll, dann Khorne-Angriffe plus 1 S oder AP oder D.
+Skarbrand Rage Embodied: Khorne-Daemons in 6 Zoll plus 1 A.
+Bloodthirster Daemon Lord of Khorne: Khorne-Daemons in 6 Zoll plus 1 to hit (Nahkampf).
+Blood Begets Skulls (1 Kommandopunkt): Charge nach Advance; Skarbrand ohnehin (Murderlust).
+
+1: Aufstellung: Nurglings infiltriert vor dir, Skull Cannons hinten, Bloodletters auf einem Objective, Greater Daemons plus Rendmaster zentral oder in Reserve; mindestens ein Bloodcrusher-Block in Reserve (From Beyond the Veil).
+2: Runde 1: Walze nach vorn (Skarbrand Advance plus Charge), Bloodcrushers per Ingress am Ende einer Movement Phase.
+3: Runde 2: Alles schlägt ein. Blood Throne auf deinen Norn, dann Skarbrand oder Bloodthirster mit plus 1 D.
+4: Scoring: Unstoppable Force (3 Siegpunkte pro Zug mit Kill, 4 Siegpunkte pro Nicht-Home-Objective, 5 Siegpunkte Central am Ende).
+
+Er gewinnt, wenn der erste Einschlag beide Norns oder einen Norn plus einen Tyrant-Block löscht, bevor du kontern kannst.
+
+Abschnitt 3: Major Threats.
+
+Skarbrand (Warlord).
+
+Widerstand 11, 3 plus oder 4 plus Invul, 20 Lebenspunkte, Bewegung 10. Slaughter and Carnage Strike 8 Attacken 2 plus Stärke 16 AP minus 4 D6 (Damaged höchstens 7 W: plus 2 A). Sweep 16 Attacken Stärke 8 AP minus 2 D2. Bellow 12 Zoll Torrent 2D6 Stärke 8. Murderlust: Charge nach Advance. Rage Embodied: plus 1 A für Khorne in 6 Zoll.
+Gegen Norn: etwa 13, mit Feel No Pain 9, ( plus Blood Throne: Stärke 17, AP minus 5, D7, dann etwa 16, mit Feel No Pain 11,).
+Reaktion: Bei Kontakt kontern; Damaged-Skarbrand ist gefährlicher ( plus 2 A) – nicht auf 7 W runterschlagen und stehen lassen, sondern ganz töten.
+
+Bloodthirster (Fury's Cage).
+
+Widerstand 11, 3 plus oder 4 plus Invul, 18 Lebenspunkte, Bewegung 12, FLY. Great Axe Strike 7 Attacken Stärke 16 AP minus 4 D6 plus 2. Fury's Cage: bei jeder Kampfaktivierung D3 plus 1 Mortal Wounds an sich selbst, dafür Reroll Hit und Wound. Relentless Carnage (8W6, dann Mortal Wounds).
+Gegen Norn: etwa 15, mit Feel No Pain 10, plus etwa 4, mit Feel No Pain 3, Mortal Wounds, dann Norn tot.
+Fury's Cage verletzt ihn selbst (etwa 3 pro Kampf) – nach 2 bis 3 Kämpfen ist er deutlich angeschlagen.
+
+Rendmaster on Blood Throne, 2 Stück.
+
+Widerstand 9, 4 plus oder 4 plus Invul, 9 Lebenspunkte, Bewegung 8, Deep Strike, MOUNTED (, dann Cavalcade). Blood Throne: plus 1 S oder AP oder D für alle Khorne-Daemons gegen ein Ziel in 18 Zoll (zwei Rendmaster = zwei Ziele). Champion Slayer: Reroll Wound gegen CHARACTER oder MONSTER, heilt D6 bei Kill. Slaughterthirst (Aura 6 Zoll): Lance für Nicht-Monster-Khorne-Einheiten.
+Reaktion: System-Ziel. Sie machen jeden Angriff plus 1 D – der Unterschied zwischen Norn überlebt und Norn tot. Widerstand 9 oder 4 plus ist für deine Blöcke gut erreichbar; Zoans (Stärke 12 gegen Widerstand 9, dann 3 plus) etwa 9 Schaden, dann tot.
+
+Skullmaster plus 6 Bloodcrushers (Brazenmaw), Bloodcrushers, 6 Stück.
+
+Widerstand 7, 3 plus oder 5 plus Invul, 4 Lebenspunkte. Brass Stampede (je Modell 4 plus, dann D3 Mortal Wounds, dann etwa 6 Mortal Wounds), Horn Lance (Skullmaster: Dev Wounds nach Charge), Devastating Charge: Battle-shock-Test für alles in Engagement. Brazenmaw plus 2 Charge, Instrument plus 1.
+Gegen Tyrant-Block: etwa 6 Mortal Wounds plus etwa 3 Guards.
+Reaktion: Erste Parasitic-Kills (Widerstand 7, 4 Lebenspunkte – D3-Waffen töten pro Wunde fast ein Modell).
+
+Bloodmaster plus 10 Bloodletters.
+
+plus 1 to wound, 6 Zoll Consolidate, Bane of Cowards. Hellblade 2 Attacken Stärke 5 AP minus 2 D2. Battleline, O-C 21.
+Reaktion: Torrent-Futter (Widerstand 4, 7 plus oder 5 plus Invul).
+
+Skull Cannons, Flesh Hounds, Nurglings.
+
+Skull Cannons: Widerstand 9, 4 plus oder 4 plus Invul, 9 Lebenspunkte. 48 Zoll D6 plus 2 Blast Stärke 9 AP minus 1 D2. Skulls of the Fallen: getroffene Einheit testet Battle-shock, dann mit Daemonic Terror (im Shadow oder in 6 Zoll eines Greater Daemons) minus 1 und bei Fehlschlag D3 Mortal Wounds. Deine Einheiten in Synapse (3W6) bestehen fast immer; außerhalb Synapse (2D6) ist es eine echte Gefahr für O-C. Ziel für Zoans (Stärke 12 gegen Widerstand 9, dann 3 plus) oder Biovore.
+Nurglings: minus 1 to hit im Nahkampf für Einheiten, die mit ihnen kämpfen – vor deine Blöcke gestellt.
+
+Abschnitt 4: Threat Matrix.
+
+Skarbrand; Threat: Very High; Primary targets: Norns, Tyrant-Blöcke; How it threatens them: 8 Attacken Stärke 16 D6, Advance plus Charge; Recommended response: Heroic Intervention-Konter, ganz töten.
+Bloodthirster; Threat: Very High; Primary targets: Norns; How it threatens them: Reroll Hit oder Wound, D6 plus 2; Recommended response: Heroic Intervention-Konter.
+Rendmaster, 2 Stück; Threat: High (System); How it threatens them: plus 1 S oder AP oder D auf ein Ziel; Recommended response: Zoans, Nahkampf.
+Bloodcrushers, 2 Stück Blöcke; Threat: High; Primary targets: Tyrant-Blöcke, Pyrovores; How it threatens them: Brass Stampede, Cavalcade Runde 1; Recommended response: Parasitic-Kill.
+Skull Cannons; Threat: Medium (System); Primary targets: Battle-shock; How it threatens them: Tests plus Daemonic Terror; Recommended response: Synapse.
+Bloodletters; Threat: Medium (O-C); Primary targets: Objectives; How it threatens them: O-C 21; Recommended response: Torrent.
+Nurglings; Threat: Low; Primary targets: Deine Charges; How it threatens them: minus 1 to hit; Recommended response: Vorher entfernen.
+Flesh Hounds; Threat: Low; Primary targets: Rippers oder Biovore; How it threatens them: Bewegung 12; Recommended response: Ignorieren.
+
+Abschnitt 5: Target Priority.
+
+Kill early: Rendmaster (Force-Multiplikator; 9 Lebenspunkte, 4 plus) – Zoans oder Nahkampf. Dann der Greater Daemon, der zuerst ankommt.
+
+Control, avoid: Das jeweils zweite Greater-Daemon-Monster – nicht zwei gleichzeitig an einem Norn zulassen.
+
+Ignore: Flesh Hounds, Nurglings (außer als Charge-Hindernis), Skull Cannons nachrangig.
+
+Abschnitt 6: Deployment Analysis.
+
+Wahrscheinlich: Skarbrand oder Bloodthirster oder Rendmaster zentral, Nurglings infiltriert vor dir, Bloodletters auf Objective, Skull Cannons hinten, Bloodcrushers (einer oder beide) in Reserve.
+
+Kernfrage: Kann er das ganze System in einem Zyklus töten? Nicht das ganze – aber zwei Norns, wenn sie in Reichweite von Skarbrand plus Bloodthirster plus Blood Throne stehen.
+
+Deine Aufstellung (Tiefe plus Konter):
+Norns tief und nicht nebeneinander (sonst decken zwei Greater Daemons plus zwei Blood Thrones beide ab).
+Norn-Sichtbarkeit in diesem Matchup: Ein Norn, der ein Objective hält, ist immer sichtbar (Base in der Objective-Geländezone, dann deren Obscuring zählt nicht; er überragt die Ruinen; Monster sind nie hidden). Gegen diese Liste ist Sichtbarkeit fast egal – sein Fernkampf sind zwei Skull Cannons (Stärke 9 gegen Norn, dann 5 plus to wound, 2 plus Save: etwa 1, mit Feel No Pain 0,7, Schaden je Kanone, aber ein Battle-shock-Test). Was den Norn tötet, ist der Nahkampf, und dagegen hilft nur Tiefe plus Heroic Intervention-Konter. Deshalb stehen die Norns in Runde 1 bis 2 nicht vorn auf Central, sondern auf Home oder eigener Expansion hinter den Screens; ab Runde 3 (nach seinem Einschlag) auf Central plus Expansions.
+Tyrant-Blöcke vor den Norns, höchstens 12 Zoll (Heroic Intervention).
+Pyrovores als Screen-Linie vor den Blöcken (Torrent-Overwatch gegen Bloodletters oder Crushers).
+Swarmlord zentral (Malign Presence verteuert Wrath Undeniable, Gore-hungry Onslaught, Skulls Beget Blood, Blood Begets Skulls, Fools' Flight, Sheathed in Brass, From Beyond the Veil, Warp-Riders, Inescapable Manifestations).
+Zoanthropes: auf den Tisch, hinten in Synapse, Ziel Rendmaster (Widerstand 9: Stärke 12, dann 3 plus).
+Rippers: auf den Tisch als Screen oder Reserve.
+Murdercall einplanen: In deiner Movement Phase nicht knapp in 8 Zoll seiner Einheiten enden, außer du willst den Surge (zum Beispiel um ihn in deine Charge-Reichweite zu ziehen).
+
+Welchen Fehler er sich wünscht: Einen Norn vorn auf Central in Runde 1.
+
+Er kommt mit allem in Runde 1 (wenn er beginnt), dann Screens fangen, Heroic Intervention, Counteroffensive; dein Zug 1 ist der große Konter.
+Er hält Bloodcrushers in Reserve, dann From Beyond the Veil: Ingress am Ende EINER Movement Phase (auch DEINER!) mehr als 8 Zoll von dir Sie stehen dann in seinem nächsten Zug für den Charge bereit. Rechne ab Runde 1 damit.
+Greater Daemons gehen auf verschiedene Flanken, dann Je ein Tyrant-Block pro Flanke; die Norns auf die Flanke ohne Blood Throne.
+
+Abschnitt 7: Movement and Positioning.
+
+Skarbrand: Bewegung 10 plus Advance plus Charge, dann etwa 20 bis 23 Zoll.
+Bloodthirster: Bewegung 12 FLY plus Charge, dann etwa 19 Zoll.
+Bloodcrushers (Skullmaster): Bewegung 10 plus Charge plus 2 (Brazenmaw) plus 1 (Instrument), dann etwa 20 Zoll.
+Murdercall: D6 Zoll Surge zu deinen Einheiten, die in 8 Zoll enden (in deiner Movement Phase).
+Gore-hungry Onslaught (1 Kommandopunkt): durch Gelände.
+Safe: Tief hinter Screens, in Synapse.
+Dangerous: 20 Zoll um seine Greater Daemons; seine Aufstellungszone (Shadow).
+Conditional: Central – nach dem ersten Schlagabtausch.
+
+Abschnitt 8: Charge, Fight Phase Analysis.
+
+Skarbrand chargt deinen Tyrant-Block (Blood Throne auf den Block):
+1. Overwatch? Nein (Widerstand 11, 4 plus Invul).
+2. Charge. Skarbrand Fights First.
+3. Heroic Intervention (1 Kommandopunkt) mit Norn oder zweitem Tyrant-Block.
+4. Start Fight Phase: Blood Throne, dann plus 1 S oder AP oder D gegen deinen Block.
+5. Er zuerst: Strike 8 Attacken Stärke 17 AP minus 5 D7, dann gegen Guards (Widerstand 8, 3 plus, dann kein Save): etwa 7 Wunden, dann 6 Guards tot (4 Lebenspunkte, D7), Rest auf den Hive Tyrant. Oder Sweep 16 Attacken Stärke 9 AP minus 3 D3, dann etwa 9 Guards-Wunden, dann Der Block verliert fast alle Guards.
+6. Counteroffensive (2 Kommandopunkte) mit dem Norn, bevor eine zweite Khorne-Einheit schlägt.
+7. Konter: Norn (Singular Purpose auf Skarbrand? Lesser Prey) plus Rest, dann etwa 15 an Skarbrand.
+8. Command Phase: Guards zurückholen (mehrere Harvester).
+
+Nicht zulassen: Beide Greater Daemons plus Blood Throne auf denselben Norn. Norns nie in 20 Zoll von beiden gleichzeitig.
+
+Dein Charge: Rendmaster (Widerstand 9, 4 plus, 9 Lebenspunkte) mit Hive-Tyrant-Block, dann tot, Parasitic aktiv. Bloodcrushers (Widerstand 7, 4 Lebenspunkte), dann Parasitic.
+
+Fools' Flight (2 Kommandopunkte): Fällt deine Einheit aus dem Nahkampf zurück, darf eine Khorne-Einheit in 6 Zoll sie sofort chargen. Nicht zurückfallen, wenn eine weitere Khorne-Einheit in 6 Zoll steht.
+
+Wrath Undeniable (1 Kommandopunkt): Tote Khorne-Modelle schlagen auf 4 plus noch zurück.
+
+Abschnitt 9: Shooting Analysis.
+
+Er hat wenig Fernkampf: Skull Cannons (D6 plus 2 Blast Stärke 9) plus Battle-shock, Skarbrand Bellow (Torrent 2D6 Stärke 8 12 Zoll), Hound Burning Roar, Skulls Beget Blood (1 Kommandopunkt, 6W6 4 plus, dann Mortal Wounds an eine Einheit in 8 Zoll).
+
+Dein Beschuss:
+Zoanthropes fokussiert; Ziel: Rendmaster (Widerstand 9, 4 plus); Hinweis: etwa 9, dann tot.
+Pyrovores oder Psychophage Torrent; Ziel: Bloodletters, Crushers; Hinweis: Auto-Hit, Ignores Cover.
+Emissary Blast; Ziel: Bloodletters, Nurglings.
+Biovore; Ziel: Nurglings, Hounds.
+
+Abschnitt 10: Gotchas and Traps.
+
+1: From Beyond the Veil – MOUNTED-Reserven landen am Ende jeder Movement Phase ab Runde 1 (auch deiner). Bloodcrushers stehen plötzlich 9 Zoll vor dir.
+2: Murdercall – deine Bewegung in 8 Zoll seiner Khorne-Daemons löst einen D6 Zoll-Surge aus.
+3: Blood Throne, 2 Stück – zwei Ziele pro Fight Phase bekommen plus 1 S oder AP oder D von allen Khorne-Angriffen.
+4: Fury's Cage – Bloodthirster rerollt Hit und Wound (schadet sich selbst D3 plus 1 pro Kampf).
+5: Skarbrand Damaged ( höchstens 7 W) – plus 2 Attacken. Ganz töten!
+6: Devastating Charge (Skullmaster) – Battle-shock beim Charge; im Shadow mit Daemonic Terror D3 Mortal Wounds.
+7: Fools' Flight, Bane of Cowards, Inescapable Manifestations – Zurückfallen ist gegen ihn teuer.
+8: Nurglings vor deinen Blöcken – minus 1 to hit im Nahkampf, wenn du sie mitchargen musst.
+9: Sheathed in Brass (1 Kommandopunkt) – eine Khorne-Einheit hat 3 plus Save gegen deinen Beschuss (Bloodletters 7 plus, dann 3 plus!).
+
+Abschnitt 11: Opponent Decision Tree.
+
+Wo stehen Skarbrand und Bloodthirster?
+Zusammen, dann Norns weg von dieser Seite; Tyrant-Blöcke plus Pyrovores als Wall.
+Getrennt, dann Jeder Norn hat einen Tyrant-Block als Heroic Intervention-Partner.
+Bloodcrushers in Reserve?
+JA, dann Ab Runde 1 mit Ingress am Ende jeder Movement Phase rechnen (>8 Zoll).
+Rendmaster in 18 Zoll deiner Einheiten?
+JA, dann Er wählt ein Ziel. Das ist sein Hauptziel dieser Fight Phase.
+
+Abschnitt 12: Player's Game Plan.
+
+Default plan.
+
+1: Runde 1: Tiefe Aufstellung, alles in Synapse, Screens vorn. Zoans auf Rendmaster, wenn erreichbar.
+2: Seine Welle: Overwatch (Torrent gegen Crushers oder Bloodletters), Heroic Intervention, Counteroffensive.
+3: Dein Konter: Alles, was gebunden ist, stirbt – Greater Daemons zuerst (16 Siegpunkte), dann Rendmaster.
+4: Runde 3 bis 5: Norns auf Central plus Expansions; Immovable Object 5 Siegpunkte pro Nicht-Home-Objective.
+
+Adjustment triggers.
+
+Ein Greater Daemon tot, dann Der andere Norn darf nach vorn.
+Beide Rendmaster tot, dann Seine Nahkampfwerte fallen auf Basis – deine Norns halten jeden einzelnen Angriff aus.
+Skarbrand Damaged, dann Sofort finishen (sonst plus 2 A).
+
+Abschnitt 13: Primary Scoring Plan.
+
+Paarung (Herald): Du, dann Immovable Object; er (Purge the Foe), dann Unstoppable Force.
+
+Du: 3 Siegpunkte pro Zug für Central, 5 Siegpunkte pro Nicht-Home-Objective (Runde 2 bis 5).
+Er: 3 Siegpunkte pro Zug mit Kill, 4 Siegpunkte pro Nicht-Home-Objective, 3 Siegpunkte neues Objective, 5 Siegpunkte Central am Ende.
+Kill-Vermeidung: Keine billigen Einheiten allein (Rippers oder Biovore) – jeder seiner Züge mit Kill = 3 Siegpunkte.
+Winning the mission: Nach seinem Einschlag stehen deine Norns oder Blöcke (Regeneration) auf deinen Objectives; seine Walze hat keinen zweiten Einschlag.
+
+Secondaries: Bring It Down (Fixed) – Skarbrand (20 Lebenspunkte), Bloodthirster (18 Lebenspunkte) = 2 Ziele (Rendmaster oder Skull Cannons 9 Lebenspunkte). Assassination (Fixed) – Skarbrand, Bloodthirster, 2 Rendmaster, Skullmaster, Bloodmaster = 6 Characters. Empfehlung: Assassination plus Bring It Down.
+
+Abschnitt 14: First Turn, Second Turn Considerations.
+
+Wenn du zuerst spielst.
+
+Nicht vorrücken (Murdercall, Konterzone). Stellung, Zoans oder Biovore auf Rendmaster oder Nurglings.
+
+Wenn er zuerst spielt.
+
+Runde-1-Charges möglich (Skarbrand Advance plus Charge). Screens plus Heroic Intervention plus Counteroffensive: mind. 3 bis 4 Kommandopunkte bereit (du startest mit wenig – Swarmlord plus 1 hilft ab deiner ersten Command Phase).
+
+Abschnitt 15: Practical Round Checklist.
+
+BEFORE DEPLOYMENT.
+Detachments klären (Cavalcade laut Text).
+Immovable Object; Assassination plus Bring It Down.
+Zoans plus Rippers auf den Tisch (Screen oder Konter).
+DEPLOYMENT.
+Norns tief, nicht nebeneinander.
+Tyrant-Blöcke höchstens 12 Zoll vor den Norns, Pyrovores als Screen.
+Alles in Synapse.
+OPPONENT TURN.
+From Beyond the Veil: Crushers am Ende jeder Movement Phase.
+Blood Throne-Ziele notieren.
+Overwatch, dann Heroic Intervention, dann Counteroffensive.
+MY TURN.
+In deiner Movement Phase nicht versehentlich in 8 Zoll seiner Khorne-Daemons (Murdercall).
+Rendmaster töten (Zoans Stärke 12 gegen Widerstand 9).
+Greater Daemons ganz töten (16 Siegpunkte).

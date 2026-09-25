@@ -219,6 +219,20 @@ th { background: var(--gg-surface-2); }
 
 hr { border: none; border-top: 1px solid var(--gg-border); margin: 1.2rem 0; }
 
+.gg-audio-player {
+  margin: 0 0 1.2rem;
+  padding: 0.8rem;
+  background: var(--gg-surface);
+  border: 1px solid var(--gg-border);
+  border-radius: var(--gg-r);
+}
+.gg-audio-player audio { width: 100%; display: block; }
+.gg-audio-hint {
+  margin: 0.5rem 0 0;
+  color: var(--gg-muted);
+  font-size: 0.85rem;
+}
+
 .gg-footer {
   color: var(--gg-muted);
   font-size: 0.85rem;
