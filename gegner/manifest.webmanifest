@@ -1,0 +1,19 @@
+{
+  "name": "Gegneranalysen",
+  "short_name": "Gegner",
+  "description": "T2S-optimierte Gegneranalysen zum Vorlesen unterwegs.",
+  "lang": "de",
+  "start_url": "/gegner/index.html",
+  "scope": "/gegner/",
+  "display": "standalone",
+  "background_color": "#f5f6f8",
+  "theme_color": "#0b5cad",
+  "icons": [
+    {
+      "src": "../assets/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}

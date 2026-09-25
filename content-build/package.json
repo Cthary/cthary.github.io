@@ -1,0 +1,13 @@
+{
+  "name": "gegner-content-build",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Baut aus content/*.md die T2S-optimierten Seiten unter gegner/. Laeuft nur in GitHub Actions.",
+  "type": "module",
+  "scripts": {
+    "build": "node build.mjs"
+  },
+  "dependencies": {
+    "markdown-it": "^14.1.0"
+  }
+}

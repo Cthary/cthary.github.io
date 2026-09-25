@@ -1,0 +1,10 @@
+{
+  "_comment": "Aussprache-Whitelist fuer den Hoermodus. Nur EXAKTE Treffer werden ersetzt (kein Regex, kein Raten). Bei ueberschneidenden Treffern gewinnt der laengere String. Trage hier eigene, eindeutige Faelle ein, z.B. spezifische Massangaben.",
+  "whitelist": [
+    { "match": "18\"", "say": "18 Zoll" },
+    { "match": "12\"", "say": "12 Zoll" },
+    { "match": "9\"", "say": "9 Zoll" },
+    { "match": "6\"", "say": "6 Zoll" },
+    { "match": "3\"", "say": "3 Zoll" }
+  ]
+}

@@ -1,0 +1,45 @@
+name: Gegner-Analysen bauen
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'content/**'
+      - 'content-build/**'
+  workflow_dispatch: {}
+
+concurrency:
+  group: gegner-build-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    if: "!contains(github.event.head_commit.message, '[skip ci]')"
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+          cache-dependency-path: content-build/package-lock.json
+
+      - name: Install build dependencies
+        working-directory: content-build
+        run: npm ci
+
+      - name: Build gegner/ from content/*.md
+        working-directory: content-build
+        run: node build.mjs
+
+      - name: Commit generated pages
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          file_pattern: 'gegner/*.html'
+          commit_message: 'gegner: auto-build from content/ [skip ci]'
+          commit_user_name: github-actions[bot]
+          commit_user_email: github-actions[bot]@users.noreply.github.com

@@ -272,6 +272,8 @@ def cmd_check():
             continue
         if rel.parts and rel.parts[0] == "tools":
             continue
+        if "node_modules" in rel.parts:
+            continue
         if rel.name in (".nojekyll", ".gitignore"):
             continue
         if not re.fullmatch(r"[a-z0-9._/-]+", rel.as_posix()):
