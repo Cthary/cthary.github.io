@@ -3,34 +3,37 @@ import { escapeHtml } from './html.mjs';
 
 // Baut den kompletten Lesemodus-Bereich: Intro-Knoten + ein <div> je
 // H2-Abschnitt mit "gg-section"-Wrapper (Basis fuer die Fokus-Buttons).
-export function renderLesemodus(md, intro, sections) {
-  const introHtml = renderNodes(md, intro);
+// idPrefix unterscheidet mehrere Lesemodus-Renderings auf derselben Seite
+// (z.B. Hauptanalyse "les" vs. Kurzform-Tab "kf") damit Heading-IDs nicht
+// kollidieren.
+export function renderLesemodus(md, intro, sections, idPrefix = 'les') {
+  const introHtml = renderNodes(md, intro, idPrefix);
   const sectionsHtml = sections
-    .map((section) => renderSection(md, section))
+    .map((section) => renderSection(md, section, idPrefix))
     .join('\n');
   return `${introHtml}\n${sectionsHtml}`;
 }
 
-function renderSection(md, section) {
+function renderSection(md, section, idPrefix) {
   const headingHtml = inlineToHtml(md, section.heading.inline);
-  const bodyHtml = renderNodes(md, section.body);
+  const bodyHtml = renderNodes(md, section.body, idPrefix);
   return (
     `<div class="gg-section" data-section-id="${section.slug}">\n` +
-    `<h2 id="les-h-${section.slug}">${headingHtml}</h2>\n` +
+    `<h2 id="${idPrefix}-h-${section.slug}">${headingHtml}</h2>\n` +
     `${bodyHtml}\n` +
     `</div>`
   );
 }
 
-function renderNodes(md, nodes) {
-  return nodes.map((n) => renderNode(md, n)).join('\n');
+function renderNodes(md, nodes, idPrefix) {
+  return nodes.map((n) => renderNode(md, n, idPrefix)).join('\n');
 }
 
-function renderNode(md, n) {
+function renderNode(md, n, idPrefix) {
   switch (n.type) {
     case 'heading': {
       const level = Math.min(Math.max(n.level, 2), 4);
-      const idAttr = n.slug ? ` id="les-h-${n.slug}"` : '';
+      const idAttr = n.slug ? ` id="${idPrefix}-h-${n.slug}"` : '';
       return `<h${level}${idAttr}>${inlineToHtml(md, n.inline)}</h${level}>`;
     }
     case 'paragraph':
@@ -39,12 +42,12 @@ function renderNode(md, n) {
       const tag = n.ordered ? 'ol' : 'ul';
       const startAttr = n.ordered && n.start !== 1 ? ` start="${n.start}"` : '';
       const items = n.items
-        .map((itemNodes) => `<li>${renderListItem(md, itemNodes)}</li>`)
+        .map((itemNodes) => `<li>${renderListItem(md, itemNodes, idPrefix)}</li>`)
         .join('\n');
       return `<${tag}${startAttr}>\n${items}\n</${tag}>`;
     }
     case 'blockquote':
-      return `<blockquote>\n${renderNodes(md, n.children)}\n</blockquote>`;
+      return `<blockquote>\n${renderNodes(md, n.children, idPrefix)}\n</blockquote>`;
     case 'table':
       return renderTable(md, n);
     case 'fence':
@@ -56,11 +59,11 @@ function renderNode(md, n) {
   }
 }
 
-function renderListItem(md, itemNodes) {
+function renderListItem(md, itemNodes, idPrefix) {
   if (itemNodes.length === 1 && itemNodes[0].type === 'paragraph') {
     return inlineToHtml(md, itemNodes[0].inline);
   }
-  return renderNodes(md, itemNodes);
+  return renderNodes(md, itemNodes, idPrefix);
 }
 
 function renderTable(md, table) {

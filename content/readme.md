@@ -53,6 +53,13 @@ Liegt eine Analyse schon als fertiger Sprechtext plus echter Audioaufnahme
 vor (z. B. Export aus einem anderen Tool), gehört sie nicht hierher, sondern
 in `content-audio/` – siehe `content-audio/readme.md`.
 
+## Kurzform ("Spickzettel")
+
+Eine kurze Checklisten-Version (30-Sekunden-Checkliste, Trigger, Kernaussage)
+gehört in `content-cheatsheet/` – siehe `content-cheatsheet/readme.md`. Bei
+gleichem Slug erscheint sie automatisch als dritter Tab "Kurzform" neben
+Lesen/Hören.
+
 ## Bekannte Einschränkungen (Offline/PWA)
 
 - Nur bereits online besuchte Analyse-Seiten sind offline verfügbar

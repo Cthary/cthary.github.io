@@ -3,8 +3,16 @@ import { escapeHtml, escapeAttr } from './html.mjs';
 // Rendert eine komplette Analyse-Seite (gegner/<slug>.html).
 // Lese- und Hoermodus liegen beide im DOM (fuer Offline-Toggle ohne Refetch),
 // nur die Sichtbarkeit wird per JS/[hidden] umgeschaltet.
-export function renderPage({ title, slug, tocEntries, lesemodusHtml, hoermodusHtml }) {
+export function renderPage({ title, slug, tocEntries, lesemodusHtml, hoermodusHtml, kurzformHtml }) {
   const toc = renderToc(tocEntries);
+  const hasKurzform = Boolean(kurzformHtml);
+
+  const kurzformBtn = hasKurzform
+    ? `\n<button type="button" class="gg-mode-btn" data-mode-btn="kurzform" aria-pressed="false">Kurzform</button>`
+    : '';
+  const kurzformSection = hasKurzform
+    ? `\n<section class="gg-mode-section" data-mode="kurzform" id="mode-kurzform" hidden>\n${kurzformHtml}\n</section>`
+    : '';
 
   return `<!DOCTYPE html>
 <html lang="de">
@@ -26,7 +34,7 @@ export function renderPage({ title, slug, tocEntries, lesemodusHtml, hoermodusHt
 <h1>${escapeHtml(title)}</h1>
 <div class="gg-mode-toggle" role="group" aria-label="Darstellung waehlen">
 <button type="button" class="gg-mode-btn" data-mode-btn="lesen" aria-pressed="true">Lesen</button>
-<button type="button" class="gg-mode-btn" data-mode-btn="hoeren" aria-pressed="false">Hören</button>
+<button type="button" class="gg-mode-btn" data-mode-btn="hoeren" aria-pressed="false">Hören</button>${kurzformBtn}
 </div>
 </header>
 <nav class="gg-toc" id="gg-toc" data-collapsed="true">
@@ -42,7 +50,7 @@ ${lesemodusHtml}
 </section>
 <section class="gg-mode-section" data-mode="hoeren" id="mode-hoeren" hidden>
 ${hoermodusHtml}
-</section>
+</section>${kurzformSection}
 </main>
 <footer class="gg-footer">
 <p>Automatisch erzeugt aus <code>content/gegner-${escapeHtml(slug)}.md</code>. Inhalt unveraendert, nur Darstellung angepasst.</p>

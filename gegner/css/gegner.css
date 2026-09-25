@@ -76,7 +76,7 @@ main,
 }
 .gg-back:hover, .gg-back:focus { text-decoration: underline; }
 
-.gg-mode-toggle { display: flex; gap: 0.5rem; }
+.gg-mode-toggle { display: flex; gap: 0.5rem; flex-wrap: wrap; }
 
 .gg-mode-btn {
   flex: 1 1 auto;

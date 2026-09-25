@@ -18,6 +18,7 @@ const HERE = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.resolve(HERE, '..');
 const CONTENT_DIR = path.join(ROOT, 'content');
 const AUDIO_DIR = path.join(ROOT, 'content-audio');
+const CHEATSHEET_DIR = path.join(ROOT, 'content-cheatsheet');
 const OUTPUT_DIR = path.join(ROOT, 'gegner');
 const SYMBOL_MAP_PATH = path.join(HERE, 'symbol-map.json');
 
@@ -49,9 +50,9 @@ async function loadWhitelist() {
   return parsed.whitelist;
 }
 
-async function listContentFiles() {
-  if (!existsSync(CONTENT_DIR)) return [];
-  const files = await readdir(CONTENT_DIR);
+async function listMarkdownFiles(dir) {
+  if (!existsSync(dir)) return [];
+  const files = await readdir(dir);
   return files
     .filter((f) => f.toLowerCase().endsWith('.md'))
     .filter((f) => f.toLowerCase() !== 'readme.md')
@@ -72,11 +73,14 @@ function extractTitle(tree, fallback) {
   return { title, rest };
 }
 
-// Baut die Bestandteile einer Markdown-Analyse (noch nicht die fertige Seite -
-// falls es eine passende content-audio/<slug>.mp3 gibt, wird deren Player
-// spaeter in main() vor dem finalen renderPage() in hoermodusHtml eingefuegt).
-async function buildOneMarkdown(md, whitelist, filename) {
-  const filePath = path.join(CONTENT_DIR, filename);
+// Baut die Bestandteile einer vollstaendigen Markdown-Analyse (Lese- +
+// Hoermodus, TOC). Wird sowohl fuer content/ als auch - im Standalone-Fall,
+// wenn es keine passende content/-Datei gibt - fuer content-cheatsheet/
+// verwendet. Noch nicht die fertige Seite: falls es ein passendes
+// content-audio/<slug>.mp3 gibt, wird deren Player spaeter in main() vor
+// dem finalen renderPage() in hoermodusHtml eingefuegt.
+async function buildOneMarkdown(md, whitelist, dir, filename) {
+  const filePath = path.join(dir, filename);
   const source = await readFile(filePath, 'utf8');
   const slug = slugify(slugFromFilename(filename));
 
@@ -90,6 +94,24 @@ async function buildOneMarkdown(md, whitelist, filename) {
   const hoermodusHtml = renderHoermodus(md, intro, sections, whitelist);
 
   return { slug, title, tocEntries, lesemodusHtml, hoermodusHtml };
+}
+
+// content-cheatsheet/<slug>.md: kurze Checklisten-Version. Wird als
+// dritter "Kurzform"-Tab an eine bestehende Seite angehaengt (siehe
+// main()) - hier nur der Tab-Inhalt (eigene Lese-Darstellung, kein
+// separater Hoermodus noetig, da der Text ohnehin kurz ist).
+async function buildCheatsheetTab(md, filename) {
+  const filePath = path.join(CHEATSHEET_DIR, filename);
+  const source = await readFile(filePath, 'utf8');
+  const slug = slugify(slugFromFilename(filename));
+
+  const tokens = parseMarkdown(md, source);
+  const tree = buildTree(tokens);
+  const { title, rest } = extractTitle(tree, slug);
+  const { intro, sections } = groupIntoSections(rest, slugify);
+  const kurzformHtml = renderLesemodus(md, intro, sections, 'kf');
+
+  return { slug, title, kurzformHtml };
 }
 
 // content-audio/<slug>.txt + content-audio/<slug>.mp3: bereits fertig
@@ -166,7 +188,8 @@ async function main() {
   await mkdir(OUTPUT_DIR, { recursive: true });
   const whitelist = await loadWhitelist();
   const md = createParser();
-  const filenames = await listContentFiles();
+  const filenames = await listMarkdownFiles(CONTENT_DIR);
+  const cheatsheetFilenames = await listMarkdownFiles(CHEATSHEET_DIR);
   const { pairs: audioSlugs, errors: audioErrors } = await listAudioPairs();
 
   for (const msg of audioErrors) {
@@ -177,16 +200,27 @@ async function main() {
   const mdParts = [];
   for (const filename of filenames) {
     try {
-      mdParts.push(await buildOneMarkdown(md, whitelist, filename));
+      mdParts.push(await buildOneMarkdown(md, whitelist, CONTENT_DIR, filename));
     } catch (err) {
       console.error(`Fehler beim Verarbeiten von content/${filename}:`, err.message);
       process.exitCode = 1;
     }
   }
 
+  const cheatsheetParts = [];
+  for (const filename of cheatsheetFilenames) {
+    try {
+      cheatsheetParts.push(await buildCheatsheetTab(md, filename));
+    } catch (err) {
+      console.error(`Fehler beim Verarbeiten von content-cheatsheet/${filename}:`, err.message);
+      process.exitCode = 1;
+    }
+  }
+
   if (
     reportDuplicates('content/', mdParts.map((p) => p.slug)) ||
-    reportDuplicates('content-audio/', audioSlugs.map((s) => slugify(s)))
+    reportDuplicates('content-audio/', audioSlugs.map((s) => slugify(s))) ||
+    reportDuplicates('content-cheatsheet/', cheatsheetParts.map((p) => p.slug))
   ) {
     process.exitCode = 1;
   }
@@ -197,12 +231,10 @@ async function main() {
   }
 
   const mdBySlug = new Map(mdParts.map((p) => [p.slug, p]));
-  const usedAudioSlugs = new Set();
   const parts = [...mdParts];
 
   for (const slugRaw of audioSlugs) {
     const slug = slugify(slugRaw);
-    usedAudioSlugs.add(slug);
     const mdPart = mdBySlug.get(slug);
     try {
       if (mdPart) {
@@ -216,6 +248,35 @@ async function main() {
       }
     } catch (err) {
       console.error(`Fehler beim Verarbeiten von content-audio/${slugRaw}.txt:`, err.message);
+      process.exitCode = 1;
+    }
+  }
+
+  if (process.exitCode === 1) {
+    console.error('Build abgebrochen wegen Fehlern - es wurde nichts geschrieben.');
+    return;
+  }
+
+  // Kurzform-Tab zuletzt anhaengen, wenn es zum Slug bereits eine Seite
+  // gibt (aus content/ oder content-audio/) - sonst eigenstaendige Seite
+  // aus der Kurzform selbst (voller Lese-/Hoermodus, kein zusaetzlicher
+  // dritter Tab, da hier die Kurzform der einzige Inhalt ist).
+  const partsBySlug = new Map(parts.map((p) => [p.slug, p]));
+  for (const cheatFilename of cheatsheetFilenames) {
+    const slug = slugify(slugFromFilename(cheatFilename));
+    const existing = partsBySlug.get(slug);
+    try {
+      if (existing) {
+        const tab = cheatsheetParts.find((p) => p.slug === slug);
+        existing.kurzformHtml = tab.kurzformHtml;
+        console.log(`Kurzform verknuepft: content-cheatsheet/${cheatFilename} -> gegner/${slug}.html`);
+      } else {
+        const standalone = await buildOneMarkdown(md, whitelist, CHEATSHEET_DIR, cheatFilename);
+        parts.push(standalone);
+        partsBySlug.set(slug, standalone);
+      }
+    } catch (err) {
+      console.error(`Fehler beim Verarbeiten von content-cheatsheet/${cheatFilename}:`, err.message);
       process.exitCode = 1;
     }
   }

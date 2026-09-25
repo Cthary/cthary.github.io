@@ -147,7 +147,10 @@ export function groupIntoSections(nodes, slugify) {
   let current = null;
 
   for (const node of nodes) {
-    if (node.type === 'heading' && node.level === 2) {
+    // Level 1 nach dem Titel wird wie Level 2 behandelt (kommt in kuerzeren
+    // Dokumenten wie den Kurzform-Spickzetteln als zweite grosse
+    // Ueberschrift vor, z.B. eine abschliessende "# Grundannahmen"-Sektion).
+    if (node.type === 'heading' && node.level <= 2) {
       if (current) sections.push(current);
       const title = inlineTextForSlug(node);
       current = {

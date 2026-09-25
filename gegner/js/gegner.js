@@ -29,9 +29,10 @@
     mem[key] = value;
   };
 
-  /* ---- Lesen/Hoeren-Umschalter ---- */
+  /* ---- Lesen/Hoeren/Kurzform-Umschalter ---- */
   var modeButtons = document.querySelectorAll('[data-mode-btn]');
   var modeSections = document.querySelectorAll('[data-mode]');
+  var tocNav = document.getElementById('gg-toc');
 
   function applyMode(mode) {
     modeSections.forEach(function (section) {
@@ -41,11 +42,22 @@
       var active = btn.getAttribute('data-mode-btn') === mode;
       btn.setAttribute('aria-pressed', active ? 'true' : 'false');
     });
+    // Inhaltsverzeichnis/Fokus-Buttons gehoeren zur ausfuehrlichen Analyse
+    // (Lesen/Hoeren) - die Kurzform hat eine eigene, kuerzere Gliederung
+    // ohne diese Navigation.
+    if (tocNav) tocNav.hidden = mode === 'kurzform';
   }
 
   function currentMode() {
     var saved = GG.get('gg:mode');
-    return saved === 'hoeren' ? 'hoeren' : 'lesen';
+    var candidate = saved === 'hoeren' || saved === 'kurzform' ? saved : 'lesen';
+    // Falls diese Seite den gemerkten Modus gar nicht anbietet (z.B. kein
+    // Kurzform-Tab hier), auf Lesen zurueckfallen statt alles auszublenden.
+    var offeredHere = false;
+    modeButtons.forEach(function (btn) {
+      if (btn.getAttribute('data-mode-btn') === candidate) offeredHere = true;
+    });
+    return offeredHere ? candidate : 'lesen';
   }
 
   if (modeButtons.length) {
