@@ -41,12 +41,19 @@
 <p class="lead">Zuerst die Aufgabe, dann die Details. Jede Einheit hat eine typische Frage, die du dir vor dem Einsatz stellst.</p>
 
 <nav class="cluster" aria-label="Zu einer Einheit springen">
+  <a class="btn btn--small" href="#mephiston">Mephiston</a>
   <a class="btn btn--small" href="#dante">Dante + Garde</a>
+  <a class="btn btn--small" href="#lemartes">Lemartes + DC</a>
+  <a class="btn btn--small" href="#captain-jumppack">Captain(JP) + Garde</a>
+  <a class="btn btn--small" href="#captain-foresight">Captain (Foresight)</a>
   <a class="btn btn--small" href="#bladeguard">Bladeguard</a>
   <a class="btn btn--small" href="#priest">Priest</a>
   <a class="btn btn--small" href="#ballistus">Ballistus</a>
   <a class="btn btn--small" href="#intercessors">Intercessors</a>
+  <a class="btn btn--small" href="#assault-intercessors">Assault Intercessors</a>
+  <a class="btn btn--small" href="#scouts">Scouts</a>
   <a class="btn btn--small" href="#inceptors">Inceptors</a>
+  <a class="btn btn--small" href="#infiltrators">Infiltrators</a>
 </nav>
 
 <section class="section" aria-labelledby="h-charge">
@@ -73,9 +80,58 @@
 
   <div id="unit-cards" class="stack">
 
+    <article class="card tone-bad" id="mephiston" aria-labelledby="u-mephiston">
+      <div class="cluster"><h3 id="u-mephiston">Chief Librarian Mephiston</h3><span class="chip chip--bad">Solo-Bedrohung</span></div>
+      <p class="fine">175 Pkt · 1 Modell · operiert allein, kein Anschluss</p>
+      <h4>Aufgabe</h4>
+      <p>Mephiston ist dein gefährlichster Einzelkämpfer: ein extrem zäher Psioniker, der allein in den Nahkampf gegen gefährliche Charaktere, Monster oder Elite-Einheiten geht. Er führt keine Einheit und wird von keiner geführt.</p>
+      <div class="question">
+        <p>„Kann dieses Ziel Mephiston stoppen, bevor er zuschlägt?“</p>
+        <small>Nicht: ihn blind vorschicken. Sondern: erst prüfen, ob gegnerischer Fernkampf ihn vorher abfängt.</small>
+      </div>
+      <details class="layer">
+        <summary><span class="layer-title">Was kann er?</span></summary>
+        <div class="layer-body">
+          <ul>
+            <li>Sehr hoher Nahkampfschaden gegen einzelne, wichtige Ziele.</li>
+            <li>Psionische Kräfte und ein sehr zäher Statblock für einen einzelnen Charakter.</li>
+            <li>Die Reliquie <strong>Fury of the Ancients</strong> und <strong>Vitarus</strong> – genaue Effekte: <span class="badge-verify">In der App prüfen</span>.</li>
+          </ul>
+        </div>
+      </details>
+      <details class="layer">
+        <summary><span class="layer-title">Wann ist er besonders gut?</span></summary>
+        <div class="layer-body">
+          <ul>
+            <li>Gegen gegnerische Charaktere, Monster oder zähe Elite-Infanterie.</li>
+            <li>Als Zugriff auf euer Sekundärziel <a href="missions.html#sekundaerziele">Assassination</a>.</li>
+            <li>Wenn er ein Ziel allein erledigen kann, ohne dass andere Einheiten dafür gebunden werden müssen.</li>
+          </ul>
+        </div>
+      </details>
+      <details class="layer">
+        <summary><span class="layer-title">Was sollte ich vermeiden?</span></summary>
+        <div class="layer-body">
+          <ul>
+            <li>Ihn ungedeckt vor gegnerische Schützentrupps schicken, bevor er im Nahkampf ankommt.</li>
+            <li>Ihn als Objective-Halter einplanen – seine Aufgabe ist Kampf, nicht Punkte sammeln.</li>
+          </ul>
+        </div>
+      </details>
+      <details class="layer">
+        <summary><span class="layer-title">Woran muss ich denken?</span></summary>
+        <div class="layer-body">
+          <ul>
+            <li>Er ist einer von <strong>6 Charakteren</strong> in deiner Liste – ein attraktives Ziel, wenn dein Gegner Assassination als Sekundärziel hat.</li>
+            <li>GRENADES-Status: <span class="badge-verify">In der App prüfen</span>, siehe <a href="stratagems.html#explosives">Explosives</a>.</li>
+          </ul>
+        </div>
+      </details>
+    </article>
+
     <article class="card tone-bad" id="dante" aria-labelledby="u-dante">
       <div class="cluster"><h3 id="u-dante">Commander Dante + Sanguinary Guard</h3><span class="chip chip--bad">Nahkampf-Hammer</span></div>
-      <p class="fine">Commander Dante 125 Pkt (Warlord) · Sanguinary Guard 3 Modelle 120 Pkt · sie bilden zusammen einen Trupp</p>
+      <p class="fine">Commander Dante 140 Pkt · Sanguinary Guard 3 Modelle 135 Pkt · sie bilden zusammen einen Trupp</p>
       <h4>Aufgabe</h4>
       <p>Wichtige gegnerische Einheiten bedrohen, Nahkampf erzwingen und im richtigen Moment zuschlagen. Durch den Charge werden sie besonders gefährlich.</p>
       <div class="question">
@@ -121,7 +177,7 @@
         <summary><span class="layer-title">Woran muss ich denken?</span></summary>
         <div class="layer-body">
           <ul>
-            <li>Dante ist dein Warlord. Stirbt er, fallen seine Boni für den ganzen Trupp weg.</li>
+            <li>Dante ist <strong>nicht mehr</strong> dein Warlord – das ist jetzt Lemartes. Stirbt Dante trotzdem, fallen seine Boni für den ganzen Trupp weg.</li>
             <li>Nach dem Charge stehst du nah am Gegner. Wo willst du nach dem Kampf stehen (bis zu 3 Zoll Consolidate)?</li>
             <li>Gibt die Einheit der Red Thirst nach, ist sie battle-shocked: keine OC und keine Stratagems mehr auf sie.</li>
             <li>Beide Einheiten haben GRENADES, du kannst also <a href="stratagems.html#explosives">Explosives</a> einsetzen.</li>
@@ -141,9 +197,160 @@
       </details>
     </article>
 
+    <article class="card tone-bad" id="lemartes" aria-labelledby="u-lemartes">
+      <div class="cluster"><h3 id="u-lemartes">Lemartes + Death Company Marines</h3><span class="chip chip--bad">Nahkampf-Hammer</span></div>
+      <p class="fine">Lemartes 110 Pkt (Warlord) · Death Company Marines 10 Modelle 260 Pkt · sie bilden zusammen einen Trupp</p>
+      <h4>Aufgabe</h4>
+      <p>Der größte Nahkampf-Hammer deiner Armee: zehn Death-Company-Marines mit Jump Packs, angeführt von deinem Warlord Lemartes. Diese Einheit soll gezielt und geplant eingesetzt werden, nicht reflexartig – wenn sie ankommt, soll sie etwas Wichtiges entscheiden.</p>
+      <div class="question">
+        <p>„Ist das Ziel wichtig genug für meinen größten Charge?“</p>
+        <small>Nicht: sie bei der erstbesten Gelegenheit verheizen. Sondern: sie für den Moment aufheben, der das Spiel entscheidet.</small>
+      </div>
+      <details class="layer">
+        <summary><span class="layer-title">Was kann die Einheit?</span></summary>
+        <div class="layer-body">
+          <ul>
+            <li><strong>Zehn Modelle, gemischte Waffen:</strong> Astartes Chainswords, zwei Eviscerators (schwer, hoher Schaden), zwei Power Fist + Plasma Pistol, ein Power Fist + Inferno Pistol.</li>
+            <li><strong>Schnell:</strong> Jump Packs, 12 Zoll Bewegung.</li>
+            <li>Death-Company-typische Zähigkeit im Nahkampf (z. B. Feel No Pain, bevorzugtes Zuerst-Kämpfen) – genaue Werte: <span class="badge-verify">In der App prüfen</span>.</li>
+            <li>Lemartes verstärkt die Einheit zusätzlich – genauer Effekt seiner Fähigkeiten: <span class="badge-verify">In der App prüfen</span>.</li>
+          </ul>
+        </div>
+      </details>
+      <details class="layer">
+        <summary><span class="layer-title">Wann ist sie besonders gut?</span></summary>
+        <div class="layer-body">
+          <ul>
+            <li>Gegen die wichtigste gegnerische Einheit oder einen Block, der dein Spiel sonst verhindert.</li>
+            <li>Nach dem Charge: Red Thirst (+1 Attacke, +2 Stärke), und wer chargt, kämpft zuerst.</li>
+            <li>Wenn du den Charge vorbereitet hast (Sichtlinien, Distanz, kein vorzeitiger Beschuss).</li>
+          </ul>
+        </div>
+      </details>
+      <details class="layer">
+        <summary><span class="layer-title">Was sollte ich vermeiden?</span></summary>
+        <div class="layer-body">
+          <div class="callout callout--warn">
+            <p>260 Punkte plus Lemartes sind eine der größten Einzelinvestitionen deiner Armee. Ein unnötiger oder zu früher Charge kann diese Investition verschenken.</p>
+          </div>
+          <ul>
+            <li>Zu früh nach vorne laufen und vor dem Charge unter Beschuss geraten.</li>
+            <li>Einen Charge machen, nur weil er gerade möglich ist.</li>
+          </ul>
+        </div>
+      </details>
+      <details class="layer">
+        <summary><span class="layer-title">Woran muss ich denken?</span></summary>
+        <div class="layer-body">
+          <ul>
+            <li>Lemartes ist dein <strong>Warlord</strong>. Stirbt er, verlierst du seine Boni für den Trupp – und je nach Mission kann das auch Punkte für den Gegner bedeuten.</li>
+            <li>GRENADES-Status von Lemartes und den Death Company Marines (unterschiedliche Datasheets): <span class="badge-verify">In der App prüfen</span>, siehe <a href="stratagems.html#explosives">Explosives</a>.</li>
+            <li>Gibt die Einheit der Red Thirst nach, ist sie battle-shocked: keine OC und keine Stratagems mehr auf sie.</li>
+          </ul>
+        </div>
+      </details>
+    </article>
+
+    <article class="card tone-bad" id="captain-jumppack" aria-labelledby="u-captain-jp">
+      <div class="cluster"><h3 id="u-captain-jp">Captain with Jump Pack + Sanguinary Guard</h3><span class="chip chip--bad">Nahkampf-Hammer</span></div>
+      <p class="fine">Captain with Jump Pack 90 Pkt · Sanguinary Guard 3 Modelle 135 Pkt · sie bilden zusammen einen Trupp</p>
+      <h4>Aufgabe</h4>
+      <p>Eine zweite, eigenständige Nahkampf-Hammer-Einheit – funktioniert wie Dante und seine Garde, aber auf der anderen Flanke. Damit kannst du zwei Bedrohungen gleichzeitig aufbauen, statt alles auf einen Punkt zu setzen.</p>
+      <div class="question">
+        <p>„Greife ich mit diesem Trupp ein anderes Ziel an als mit Dantes Trupp?“</p>
+        <small>Nicht: beide auf dasselbe Ziel schicken. Sondern: die Bedrohung auf zwei Flanken verteilen.</small>
+      </div>
+      <details class="layer">
+        <summary><span class="layer-title">Was kann die Einheit?</span></summary>
+        <div class="layer-body">
+          <ul>
+            <li><strong>Sehr schnell:</strong> 12 Zoll Bewegung, Jump Packs.</li>
+            <li>Der Captain trägt Power Fist und Hand Flamer – zusätzliche Fernkampf-Option gegen Infanterie vor dem Charge.</li>
+            <li>Die Sanguinary Guard ist dieselbe Einheit wie bei Dante: Encarmine Spears mit [Lance], ein Sanguinary-Banner-Träger (+1 OC für den Trupp).</li>
+            <li>Genauer Leader-Bonus des Captains für den Trupp: <span class="badge-verify">In der App prüfen</span> (bei Dante ist es +1 Advance/Charge/Treffen – ob der Captain denselben Bonus gibt, ist nicht sicher).</li>
+          </ul>
+        </div>
+      </details>
+      <details class="layer">
+        <summary><span class="layer-title">Wann ist sie besonders gut?</span></summary>
+        <div class="layer-body">
+          <ul>
+            <li>Wenn dein Gegner seine Abwehr auf Dantes Trupp konzentriert – dann schlägt dieser Trupp woanders zu.</li>
+            <li>Nach dem Charge: Red Thirst (+1 Attacke, +2 Stärke), Encarmine-Speere mit [Lance].</li>
+          </ul>
+        </div>
+      </details>
+      <details class="layer">
+        <summary><span class="layer-title">Was sollte ich vermeiden?</span></summary>
+        <div class="layer-body">
+          <ul>
+            <li>Beide Sanguinary-Guard-Trupps auf dasselbe Ziel hetzen – das verschwendet die zweite Bedrohung.</li>
+            <li>Einen Charge nur machen, weil er möglich ist.</li>
+          </ul>
+        </div>
+      </details>
+      <details class="layer">
+        <summary><span class="layer-title">Woran muss ich denken?</span></summary>
+        <div class="layer-body">
+          <ul>
+            <li>Der Captain ist kein Warlord – sein Tod kostet dich „nur“ seine Trupp-Boni, keine Mission-Strafe.</li>
+            <li>GRENADES-Status des Captains: <span class="badge-verify">In der App prüfen</span> (die Sanguinary Guard selbst hat GRENADES, wie bei Dantes Trupp).</li>
+          </ul>
+        </div>
+      </details>
+    </article>
+
+    <article class="card tone-info" id="captain-foresight" aria-labelledby="u-captain-foresight">
+      <div class="cluster"><h3 id="u-captain-foresight">Blood Angels Captain (Gift of Foresight)</h3><span class="chip chip--info">Flexibel</span></div>
+      <p class="fine">120 Pkt (105 + 15 Enhancement) · kein fester Anschluss</p>
+      <h4>Aufgabe</h4>
+      <p>Dieser Captain hat keinen festen Trupp, den er führt. Das ist kein Nachteil, sondern eine Entscheidung, die du vor dem Spiel triffst: Steht er allein, schließt er sich einer Einheit an, oder sichert er ein Objective in der Nähe?</p>
+      <div class="question">
+        <p>„Welcher Einheit oder welchem Ziel hilft er heute am meisten?“</p>
+        <small>Nicht automatisch derselbe Platz wie letztes Spiel. Entscheide nach Mission und Gegner.</small>
+      </div>
+      <details class="layer">
+        <summary><span class="layer-title">Was kann er?</span></summary>
+        <div class="layer-body">
+          <ul>
+            <li>Power Fist und Inferno Pistol – solider Nahkampf gegen Infanterie und mittlere Ziele.</li>
+            <li>Enhancement <strong>Gift of Foresight</strong> (+15 Pkt) – genauer Effekt: <span class="badge-verify">In der App prüfen</span>.</li>
+            <li>Ohne festen Trupp kann er sich flexibel einer Einheit anschließen, wenn die Regeln das erlauben.</li>
+          </ul>
+        </div>
+      </details>
+      <details class="layer">
+        <summary><span class="layer-title">Wann ist er besonders gut?</span></summary>
+        <div class="layer-body">
+          <ul>
+            <li>Wenn eine bestimmte Einheit genau seine Unterstützung braucht (welche, hängt vom Enhancement-Effekt ab).</li>
+            <li>Als zusätzlicher Nahkampf-Körper, um ein Objective zu sichern oder eine Lücke zu schließen.</li>
+          </ul>
+        </div>
+      </details>
+      <details class="layer">
+        <summary><span class="layer-title">Was sollte ich vermeiden?</span></summary>
+        <div class="layer-body">
+          <ul>
+            <li>Ihn allein und ungedeckt in Reichweite gefährlicher gegnerischer Einheiten stehen lassen.</li>
+            <li>Ihn ohne Plan aufstellen, nur weil noch ein Modell übrig ist.</li>
+          </ul>
+        </div>
+      </details>
+      <details class="layer">
+        <summary><span class="layer-title">Woran muss ich denken?</span></summary>
+        <div class="layer-body">
+          <ul>
+            <li>Er ist einer von <strong>6 Charakteren</strong> in deiner Liste – ein mögliches Ziel für ein gegnerisches Assassination-Sekundärziel.</li>
+            <li>GRENADES-Status: <span class="badge-verify">In der App prüfen</span>.</li>
+          </ul>
+        </div>
+      </details>
+    </article>
+
     <article class="card tone-info" id="bladeguard" aria-labelledby="u-blade">
       <div class="cluster"><h3 id="u-blade">Bladeguard Veterans + Sanguinary Priest</h3><span class="chip chip--info">Robuster Block</span></div>
-      <p class="fine">Bladeguard Veteran Squad 6 Modelle 170 Pkt (laut Liste) · Sanguinary Priest 75 Pkt · ein Trupp</p>
+      <p class="fine">Bladeguard Veteran Squad 6 Modelle 170 Pkt (laut Liste) · Sanguinary Priest 60 Pkt · ein Trupp</p>
       <h4>Aufgabe</h4>
       <p>Die Mitte kontrollieren, einen Bereich blockieren, Objectives halten und gegnerische Nahkampfeinheiten abschrecken. Im richtigen Moment können sie auch chargen. Oft sind sie ein <strong>Anker in der Mitte</strong>.</p>
       <div class="question">
@@ -204,7 +411,7 @@
 
     <article class="card tone-info" id="priest" aria-labelledby="u-priest">
       <div class="cluster"><h3 id="u-priest">Sanguinary Priest</h3><span class="chip chip--info">Unterstützer</span></div>
-      <p class="fine">75 Pkt · hängt an der Bladeguard</p>
+      <p class="fine">60 Pkt · hängt an der Bladeguard</p>
       <h4>Aufgabe</h4>
       <p>Der Priester ist kein Charakter, der allein kämpft. Seine wichtigste Funktion ist es, die Bladeguard zu unterstützen.</p>
       <div class="question">
@@ -313,7 +520,7 @@
 
     <article class="card tone-ok" id="intercessors" aria-labelledby="u-inter">
       <div class="cluster"><h3 id="u-inter">Intercessors</h3><span class="chip chip--ok">Objective halten</span></div>
-      <p class="fine">5 Modelle 80 Pkt</p>
+      <p class="fine">5 Modelle 95 Pkt</p>
       <h4>Aufgabe</h4>
       <p>Die Intercessors sind kein glamouröser Teil der Armee. Das ist gut. Ihre Aufgabe kann sehr einfach sein: <strong>Objective halten.</strong> Eine Einheit, die fünf Runden lang zuverlässig Punkte erzeugt, hat ihren Job möglicherweise perfekt gemacht, auch wenn sie keinen spektakulären Nahkampf gewonnen hat.</p>
       <div class="question">
@@ -354,6 +561,101 @@
           <ul>
             <li>Ist sie auf halber Stärke oder darunter, musst du in deiner Command Phase einen Battle-shock-Wurf machen. Ist die Einheit battle-shocked, hält sie kein Objective mehr.</li>
             <li>Sie hat GRENADES: <a href="stratagems.html#explosives">Explosives</a> ist möglich.</li>
+          </ul>
+        </div>
+      </details>
+    </article>
+
+    <article class="card tone-ok" id="assault-intercessors" aria-labelledby="u-assault-inter">
+      <div class="cluster"><h3 id="u-assault-inter">Assault Intercessors mit Jump Packs</h3><span class="chip chip--ok">Objective halten</span></div>
+      <p class="fine">5 Modelle 100 Pkt · Jump Packs</p>
+      <h4>Aufgabe</h4>
+      <p>Eure schnellen Objective-Halter – nicht die Haupt-Schadensquelle der Armee. Sie kommen über Jump Packs schnell dorthin, wo ein Objective gesichert werden muss, und können notfalls auch im Nahkampf mithalten.</p>
+      <div class="question">
+        <p>„Welches Objective brauche ich schnell, und kann diese Einheit es rechtzeitig erreichen?“</p>
+        <small>Nicht: sie wie die Death Company in den großen Charge schicken. Sondern: Tempo für die Mission nutzen.</small>
+      </div>
+      <details class="layer">
+        <summary><span class="layer-title">Was kann die Einheit?</span></summary>
+        <div class="layer-body">
+          <ul>
+            <li><strong>Schnell:</strong> Jump Packs statt normaler Bewegung – deutlich mobiler als normale Intercessors.</li>
+            <li>Astartes Chainswords und Heavy Bolt Pistols: brauchbar im Nahkampf, aber keine Elite-Einheit.</li>
+            <li>Der Sergeant trägt einen Power Fist für härtere Ziele.</li>
+          </ul>
+        </div>
+      </details>
+      <details class="layer">
+        <summary><span class="layer-title">Wann ist sie besonders gut?</span></summary>
+        <div class="layer-body">
+          <ul>
+            <li>Um ein entferntes oder spät wichtiges Objective schnell zu erreichen.</li>
+            <li>Um eine Lücke in der gegnerischen Aufstellung auszunutzen.</li>
+          </ul>
+        </div>
+      </details>
+      <details class="layer">
+        <summary><span class="layer-title">Was sollte ich vermeiden?</span></summary>
+        <div class="layer-body">
+          <ul>
+            <li>Sie gegen eine gegnerische Elite-Nahkampfeinheit chargen lassen – dafür sind sie nicht gebaut.</li>
+            <li>Sie ungedeckt weit vorne stehen lassen, nur weil sie schnell sind.</li>
+          </ul>
+        </div>
+      </details>
+      <details class="layer">
+        <summary><span class="layer-title">Woran muss ich denken?</span></summary>
+        <div class="layer-body">
+          <ul>
+            <li>Ist sie auf halber Stärke oder darunter, musst du in deiner Command Phase einen Battle-shock-Wurf machen. Ist sie battle-shocked, hält sie kein Objective mehr.</li>
+            <li>GRENADES-Status: <span class="badge-verify">In der App prüfen</span>, siehe <a href="stratagems.html#explosives">Explosives</a>.</li>
+          </ul>
+        </div>
+      </details>
+    </article>
+
+    <article class="card tone-ok" id="scouts" aria-labelledby="u-scouts">
+      <div class="cluster"><h3 id="u-scouts">Scout Squad</h3><span class="chip chip--ok">Objective halten</span></div>
+      <p class="fine">5 Modelle 65 Pkt</p>
+      <h4>Aufgabe</h4>
+      <p>Deine günstigste, am ehesten entbehrliche Einheit. Scouts sichern früh ein Objective oder einen Bereich und können notfalls geopfert werden, ohne dass es dich viel kostet.</p>
+      <div class="question">
+        <p>„Welches Objective braucht früh Absicherung, auch wenn die Einheit dafür nicht überlebt?“</p>
+        <small>Nicht automatisch schützen wie eine teure Einheit. Sondern: bewusst als günstigen Baustein einsetzen.</small>
+      </div>
+      <details class="layer">
+        <summary><span class="layer-title">Was kann die Einheit?</span></summary>
+        <div class="layer-body">
+          <ul>
+            <li>Fünf günstige Modelle mit Bolt-Pistolen und Nahkampfwaffen (Combat Knives, der Sergeant mit Chainsword).</li>
+            <li>Scouts haben oft eine Sonderregel für die Aufstellung (z. B. vorgezogene Position oder Bewegung vor Runde 1) – genaue Regel: <span class="badge-verify">In der App prüfen</span>.</li>
+          </ul>
+        </div>
+      </details>
+      <details class="layer">
+        <summary><span class="layer-title">Wann ist sie besonders gut?</span></summary>
+        <div class="layer-body">
+          <ul>
+            <li>Um früh ein Objective zu sichern, das sonst niemand rechtzeitig erreicht.</li>
+            <li>Als günstige Einheit, die ein Objective des Gegners stören oder kontestieren kann.</li>
+          </ul>
+        </div>
+      </details>
+      <details class="layer">
+        <summary><span class="layer-title">Was sollte ich vermeiden?</span></summary>
+        <div class="layer-body">
+          <ul>
+            <li>Sie für wichtiger halten, als sie ist – 65 Punkte sind schnell verschmerzt.</li>
+            <li>Sie gegen eine ernsthafte Nahkampfeinheit verteidigen wollen, statt sie ziehen zu lassen.</li>
+          </ul>
+        </div>
+      </details>
+      <details class="layer">
+        <summary><span class="layer-title">Woran muss ich denken?</span></summary>
+        <div class="layer-body">
+          <ul>
+            <li>Ist sie auf halber Stärke oder darunter, musst du in deiner Command Phase einen Battle-shock-Wurf machen.</li>
+            <li>GRENADES-Status: <span class="badge-verify">In der App prüfen</span>, siehe <a href="stratagems.html#explosives">Explosives</a>.</li>
           </ul>
         </div>
       </details>
@@ -404,6 +706,55 @@
             <li>Sie starten in der Reserve. Das musst du schon beim Aufstellen festlegen.</li>
             <li>Inceptors haben kein GRENADES-Keyword und können <a href="stratagems.html#explosives">Explosives</a> nicht nutzen.</li>
             <li>Die Red Thirst wirkt auch bei ihnen, wenn sie gechargt haben. Mit Meteoric Descent geht das aber nicht im selben Zug.</li>
+          </ul>
+        </div>
+      </details>
+    </article>
+
+    <article class="card tone-info" id="infiltrators" aria-labelledby="u-infiltrators">
+      <div class="cluster"><h3 id="u-infiltrators">Infiltrator Squad</h3><span class="chip chip--info">Screen / Utility</span></div>
+      <p class="fine">5 Modelle 80 Pkt</p>
+      <h4>Aufgabe</h4>
+      <p>Eine Utility-Einheit, kein Haupt-Schadensbringer. Infiltrators sichern früh Kontrolle über einen Bereich, stören die gegnerische Aufstellung und unterstützen mit einem Comms Array und einem Helix Gauntlet.</p>
+      <div class="question">
+        <p>„Welchen Bereich muss ich kontrollieren, bevor mein Gegner ihn nutzen kann?“</p>
+        <small>Nicht: sie wie eine normale Schützeneinheit einsetzen. Sondern: ihre Sonderrolle (Aufstellung, Utility) nutzen.</small>
+      </div>
+      <details class="layer">
+        <summary><span class="layer-title">Was kann die Einheit?</span></summary>
+        <div class="layer-body">
+          <ul>
+            <li>Infiltrators dürfen typischerweise näher und außerhalb der normalen Deployment-Zone aufgestellt werden – genaue Regel: <span class="badge-verify">In der App prüfen</span>.</li>
+            <li>Ein Modell trägt einen <strong>Infiltrator Comms Array</strong> (vermutlich ein Bonus für ankommende Verstärkung in der Nähe) – genauer Effekt: <span class="badge-verify">In der App prüfen</span>.</li>
+            <li>Ein Modell trägt einen <strong>Helix Gauntlet</strong> (vermutlich Heilung für verwundete Modelle in der Nähe) – genauer Effekt: <span class="badge-verify">In der App prüfen</span>.</li>
+            <li>Marksman Bolt Carbines: solide Fernkampfwaffen auf mittlere Distanz.</li>
+          </ul>
+        </div>
+      </details>
+      <details class="layer">
+        <summary><span class="layer-title">Wann ist sie besonders gut?</span></summary>
+        <div class="layer-body">
+          <ul>
+            <li>Früh im Spiel, um einen Bereich zu kontrollieren, bevor der Gegner ihn erreicht.</li>
+            <li>In der Nähe von Einheiten, die von Comms Array oder Helix Gauntlet profitieren.</li>
+          </ul>
+        </div>
+      </details>
+      <details class="layer">
+        <summary><span class="layer-title">Was sollte ich vermeiden?</span></summary>
+        <div class="layer-body">
+          <ul>
+            <li>Sie wie eine normale Kampfeinheit gegen starke gegnerische Einheiten halten wollen.</li>
+            <li>Ihre Aufstellungs-Sonderregel ungenutzt lassen, weil sie „wie immer“ aufgestellt wird.</li>
+          </ul>
+        </div>
+      </details>
+      <details class="layer">
+        <summary><span class="layer-title">Woran muss ich denken?</span></summary>
+        <div class="layer-body">
+          <ul>
+            <li>Ist sie auf halber Stärke oder darunter, musst du in deiner Command Phase einen Battle-shock-Wurf machen.</li>
+            <li>GRENADES-Status: <span class="badge-verify">In der App prüfen</span>, siehe <a href="stratagems.html#explosives">Explosives</a>.</li>
           </ul>
         </div>
       </details>
