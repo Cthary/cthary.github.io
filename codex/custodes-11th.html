@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Custodes 11th Referenz</title>
+<meta name="description" content="Adeptus Custodes 11th Edition Codex (Leak): Detachments, Stratagems, Einheiten und Punkte als KI-optimierte Referenz.">
+<meta name="robots" content="noindex, nofollow">
+<link rel="icon" href="../assets/favicon.svg">
+<style>
+  :root {
+    --bg: #faf8f3;
+    --fg: #1f1b16;
+    --muted: #6b6257;
+    --accent: #8a6d1f;
+    --border: #ddd5c6;
+    --head: #efe8d8;
+    --code: #f1ece1;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #16140f;
+      --fg: #ece6da;
+      --muted: #a89e8e;
+      --accent: #d9b55a;
+      --border: #3a342a;
+      --head: #241f17;
+      --code: #2a251c;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--fg);
+    font: 16px/1.55 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  }
+  .wrap { max-width: 1100px; margin: 0 auto; padding: 16px; }
+  main, nav.toc { overflow-wrap: anywhere; min-width: 0; }
+  td, th { overflow-wrap: normal; word-break: normal; }
+  .bar {
+    display: flex; flex-wrap: wrap; gap: 8px 16px; align-items: center;
+    padding-bottom: 12px; border-bottom: 1px solid var(--border); font-size: 14px;
+  }
+  .bar a { color: var(--accent); }
+  .bar .note { color: var(--muted); }
+  nav.toc {
+    margin: 16px 0; padding: 12px 16px; border: 1px solid var(--border);
+    border-radius: 8px; background: var(--head);
+  }
+  nav.toc summary { cursor: pointer; font-weight: 600; }
+  nav.toc ul { margin: 8px 0 0; padding-left: 20px; columns: 2 260px; }
+  nav.toc li.h2 { font-weight: 600; margin-top: 4px; }
+  nav.toc li.h3 { margin-left: 16px; font-size: 14px; list-style: circle; font-weight: 400; }
+  nav.toc a { color: var(--fg); text-decoration: none; }
+  nav.toc a:hover { color: var(--accent); text-decoration: underline; }
+  h1 { font-size: 1.7rem; line-height: 1.25; margin: 20px 0 8px; }
+  h2 { font-size: 1.35rem; margin: 36px 0 10px; padding-bottom: 4px; border-bottom: 2px solid var(--accent); }
+  h3 { font-size: 1.15rem; margin: 28px 0 8px; color: var(--accent); }
+  h4 { font-size: 1.02rem; margin: 22px 0 6px; }
+  h2, h3, h4 { scroll-margin-top: 12px; }
+  a { color: var(--accent); }
+  code { background: var(--code); padding: 1px 4px; border-radius: 4px; font-size: 0.9em; }
+  .table-scroll { overflow-x: auto; margin: 10px 0 14px; }
+  table { border-collapse: collapse; width: 100%; font-size: 14px; }
+  th, td { border: 1px solid var(--border); padding: 5px 8px; text-align: left; vertical-align: top; }
+  th { background: var(--head); }
+  ul { padding-left: 22px; }
+  .msg { padding: 16px; border: 1px solid var(--border); border-radius: 8px; background: var(--head); }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="bar">
+    <a href="custodes-11th.md">Rohe Markdown-Datei (für KI)</a>
+    <span class="note">Leak und Gerüchte, nicht offiziell. Stand 2026-10-02.</span>
+  </div>
+  <nav class="toc" id="toc" hidden>
+    <details open><summary>Inhalt</summary><ul id="toc-list"></ul></details>
+  </nav>
+  <main id="content"><p class="msg">Lade Referenz …</p></main>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js"></script>
+<script>
+(function () {
+  var content = document.getElementById('content');
+
+  function fail() {
+    content.innerHTML = '<p class="msg">Die Referenz konnte nicht geladen werden. ' +
+      '<a href="custodes-11th.md">Markdown-Datei direkt öffnen</a>.</p>';
+  }
+
+  function slug(text, used) {
+    var base = text.toLowerCase()
+      .replace(/[ä]/g, 'ae').replace(/[ö]/g, 'oe').replace(/[ü]/g, 'ue').replace(/ß/g, 'ss')
+      .replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '') || 'abschnitt';
+    var id = base, n = 2;
+    while (used[id]) id = base + '-' + n++;
+    used[id] = true;
+    return id;
+  }
+
+  fetch('custodes-11th.md', { cache: 'no-cache' })
+    .then(function (r) { if (!r.ok) throw new Error(r.status); return r.text(); })
+    .then(function (md) {
+      if (!window.marked) throw new Error('marked fehlt');
+      content.innerHTML = marked.parse(md, { gfm: true });
+
+      content.querySelectorAll('table').forEach(function (t) {
+        var box = document.createElement('div');
+        box.className = 'table-scroll';
+        t.parentNode.insertBefore(box, t);
+        box.appendChild(t);
+      });
+
+      var used = {};
+      var list = document.getElementById('toc-list');
+      content.querySelectorAll('h2, h3, h4').forEach(function (h) {
+        h.id = slug(h.textContent, used);
+        if (h.tagName === 'H4') return;
+        var li = document.createElement('li');
+        li.className = h.tagName.toLowerCase();
+        var a = document.createElement('a');
+        a.href = '#' + h.id;
+        a.textContent = h.textContent;
+        li.appendChild(a);
+        list.appendChild(li);
+      });
+      document.getElementById('toc').hidden = false;
+
+      if (location.hash) {
+        var target = document.getElementById(decodeURIComponent(location.hash.slice(1)));
+        if (target) target.scrollIntoView();
+      }
+    })
+    .catch(fail);
+})();
+</script>
+</body>
+</html>
