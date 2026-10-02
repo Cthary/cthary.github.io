@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="de">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Custodes 11th Referenz</title>
-<meta name="description" content="Adeptus Custodes 11th Edition Codex (Leak): Detachments, Stratagems, Einheiten und Punkte als KI-optimierte Referenz.">
+<title>Custodes 11th Reference</title>
+<meta name="description" content="Adeptus Custodes 11th Edition Codex (leak): detachments, stratagems, units and points as an AI-optimised reference.">
 <meta name="robots" content="noindex, nofollow">
 <link rel="icon" href="../assets/favicon.svg">
 <style>
@@ -72,13 +72,13 @@
 <body>
 <div class="wrap">
   <div class="bar">
-    <a href="custodes-11th.md">Rohe Markdown-Datei (für KI)</a>
-    <span class="note">Leak und Gerüchte, nicht offiziell. Stand 2026-10-02.</span>
+    <a href="custodes-11th.md">Raw Markdown file (for AI)</a>
+    <span class="note">Leak and rumours, not official. As of 2026-10-02.</span>
   </div>
   <nav class="toc" id="toc" hidden>
-    <details open><summary>Inhalt</summary><ul id="toc-list"></ul></details>
+    <details open><summary>Contents</summary><ul id="toc-list"></ul></details>
   </nav>
-  <main id="content"><p class="msg">Lade Referenz …</p></main>
+  <main id="content"><p class="msg">Loading reference …</p></main>
 </div>
 <script src="https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js"></script>
 <script>
@@ -86,14 +86,14 @@
   var content = document.getElementById('content');
 
   function fail() {
-    content.innerHTML = '<p class="msg">Die Referenz konnte nicht geladen werden. ' +
-      '<a href="custodes-11th.md">Markdown-Datei direkt öffnen</a>.</p>';
+    content.innerHTML = '<p class="msg">The reference could not be loaded. ' +
+      '<a href="custodes-11th.md">Open the Markdown file directly</a>.</p>';
   }
 
   function slug(text, used) {
     var base = text.toLowerCase()
       .replace(/[ä]/g, 'ae').replace(/[ö]/g, 'oe').replace(/[ü]/g, 'ue').replace(/ß/g, 'ss')
-      .replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '') || 'abschnitt';
+      .replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '') || 'section';
     var id = base, n = 2;
     while (used[id]) id = base + '-' + n++;
     used[id] = true;
@@ -103,7 +103,7 @@
   fetch('custodes-11th.md', { cache: 'no-cache' })
     .then(function (r) { if (!r.ok) throw new Error(r.status); return r.text(); })
     .then(function (md) {
-      if (!window.marked) throw new Error('marked fehlt');
+      if (!window.marked) throw new Error('marked missing');
       content.innerHTML = marked.parse(md, { gfm: true });
 
       content.querySelectorAll('table').forEach(function (t) {
