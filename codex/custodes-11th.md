@@ -1,10 +1,10 @@
 # Adeptus Custodes – 11th Edition Codex (Leak), AI Reference
 
-As of: 2026-10-02 · Rules text quoted verbatim from the Codex
+As of: 2026-10-07 · Rules text quoted verbatim from the Codex
 
 ## Notes for AI use
 
-- This document is a **structured transcription** of the leaked Codex: Adeptus Custodes (11th Edition, pp. 91–117). It is supplemented with official Warhammer Community (WHC) previews, rumoured points and the Munitorum Field Manual (MFM).
+- This document is a **structured transcription** of the leaked Codex: Adeptus Custodes (11th Edition, pp. 91–117), cross-checked against a second leak containing the typed detachment rules. It is supplemented with official Warhammer Community (WHC) previews, rumoured points and the Munitorum Field Manual (MFM).
 - It is **not official**. Precedence when sources conflict: printed Codex/official downloads > WHC articles > leak > rumour > MFM v1.5.
 - Terms in **bold** and `[KEYWORDS]` are 11th Edition game terms.
 - `unknown` means no source exists. **Do not estimate or interpolate.**
@@ -16,6 +16,7 @@ As of: 2026-10-02 · Rules text quoted verbatim from the Codex
 | Tag | Meaning |
 |---|---|
 | `[Leak]` | Transcribed from the Codex photos (11th edn - Custodes.pdf) |
+| `[Leak 2]` | From the second leak with typed detachment rules (Custodes_Detachment_Rules_English.pdf). All detachment, enhancement and stratagem texts in this document match it unless noted. |
 | `[confirmed WHC]` | Leak text that also appears word for word in an official WHC article |
 | `[WHC]` | Only from an official WHC article (missing from the leak) |
 | `[Rumour]` | Points from the forwarded Discord list "Rumored Points" |
@@ -25,6 +26,7 @@ As of: 2026-10-02 · Rules text quoted verbatim from the Codex
 ### Sources
 
 - Leak: "11th edn - Custodes.pdf" (30 photographed pages, Codex pp. 91–117)
+- Leak 2: "Custodes_Detachment_Rules_English.pdf" (15 pages, typed rules text for all 13 detachments including Force Dispositions; no background text, no datasheets, no points)
 - Rumour: forwarded Discord message "Rumored Points" (image)
 - MFM: https://mfm.warhammer-community.com/en/adeptus-custodes (v1.5)
 - WHC, 2026-09-18: [The Big Autumn Preview – Custodian Terminators step from the vaults](https://www.warhammer-community.com/en-gb/articles/61ej8fdr/the-big-autumn-preview-custodian-terminators-step-from-the-vaults/)
@@ -46,6 +48,25 @@ As of: 2026-10-02 · Rules text quoted verbatim from the Codex
   - Freely combinable: Auric Champions, Honoured Companions, Lions of the Emperor, Might of the Moritoi, Grav-Assault Force, Null Maiden Vigil.
   - DP costs per WHC "Top Detachment Tips": Shadowkeepers, Honoured Companions, Null Maiden Vigil, Dread Host, Lions of the Emperor and Might of the Moritoi are **1 DP** each. WHC gives no figure for the others, probably also 1 DP (`unknown`). A 2,000-point game has 3 DP.
   - WHC recommendation: pick one Shield Host, then add further 1 DP detachments for your favourite units.
+- Totals per Leak 2: 13 detachments, 29 enhancements/upgrades, 41 stratagem entries. `[Leak 2]`
+
+### Force Dispositions `[Leak 2]`
+
+| Detachment | Force Disposition | DP |
+|---|---|---|
+| Guardians of the Throne | Priority Assets and Purge the Foe | 3 `[WHC]` |
+| Aquilan Shield | Take and Hold | unknown |
+| Emperor's Chosen | Priority Assets | unknown |
+| Emissaries Imperatus | Priority Assets | unknown |
+| Dread Host | Purge the Foe | 1 `[WHC Tips]` |
+| Shadowkeepers | Purge the Foe | 1 `[WHC Tips]` |
+| Solar Watch | Reconnaissance | unknown |
+| Auric Champions | Purge the Foe | unknown |
+| Honoured Companions | Take and Hold | 1 `[WHC Tips]` |
+| Lions of the Emperor | Disruption | 1 `[WHC Tips]` |
+| Might of the Moritoi | Take and Hold | 1 `[WHC Tips]` |
+| Grav-Assault Force | Reconnaissance | unknown |
+| Null Maiden Vigil | Disruption | 1 `[WHC Tips]` |
 
 ## Army rules
 
@@ -101,12 +122,13 @@ Used by: Coronus Grav-Carrier, Anathema Psykana Rhino (Assault Vehicle).
 
 ## Detachments
 
-Template: Role · DP · Detachment rule · Favoured Ka'tah · Enhancements (points: `unknown`, as neither the leak nor the rumour lists them) · Stratagems.
+Template: Role · DP · Force Disposition · Detachment rule · Favoured Ka'tah · Enhancements (points: `unknown`, as neither the leak nor the rumour lists them) · Stratagems.
 
 ### Guardians of the Throne
 
 - Role: Big 3 DP detachment giving balanced bonuses to most units. `[WHC]`
 - DP: 3 `[WHC]`
+- Force Disposition: Priority Assets and Purge the Foe `[Leak 2]`
 - Subtitle: "Few foes can stand against a combined-arms force of Custodians"
 
 **Detachment rule: Martial Mastery** `[Leak]`
@@ -121,7 +143,7 @@ In the Fight phase, when a friendly **ADEPTUS CUSTODES** unit is **selected to f
 | Bane of Abominations | ADEPTUS CUSTODES model only. | This model's attacks that target an enemy CHARACTER/MONSTER/VEHICLE unit have +1 to wound rolls. | unknown |
 | Emperor's Light | ADEPTUS CUSTODES model only. | This model has the following weapon: Emperor's Light [EXTRA ATTACKS] – Melee, A 3, WS 2+, S 5, AP -2, D 2. | unknown |
 | Castellan's Mark | ADEPTUS CUSTODES model only. | When both players have deployed their armies, you can redeploy up to three friendly ADEPTUS CUSTODES units. When doing so, you can set those units up in strategic reserves, regardless of how many units are already in strategic reserves. | unknown |
-| Eagle's Eye | ADEPTUS CUSTODES model only. | This model has +1 W. (Once per battle, per army) When attacks are allocated to this model, you can use this ability. If you do, this model has 3+ InSv. [part of the second sentence obscured; reconstructed from context] | unknown |
+| Eagle's Eye | ADEPTUS CUSTODES model only. | This model has +1 W. (Once per battle, per army) When attacks are allocated to this model, you can use this ability. If you do, this model has 3+ InSv. (confirmed by Leak 2) | unknown |
 
 **Stratagems (6)** `[Leak]`
 
@@ -138,6 +160,7 @@ In the Fight phase, when a friendly **ADEPTUS CUSTODES** unit is **selected to f
 
 - Role: Brawl in close combat and overwhelm your enemy. `[WHC]`
 - DP: 1 `[WHC Tips]`
+- Force Disposition: Purge the Foe `[Leak 2]`
 - Subtitle: "The Shadowkeepers seek to destroy or contain that which should not be"
 
 **Detachment rule: Wardens of the Dark Cells** `[confirmed WHC]`
@@ -159,12 +182,13 @@ Additional Effect: You can select one enemy unit **engaged** with your unit. Tha
 |---|---|---|---|---|
 | Grim Responsibility | 1 | Fight phase, when a friendly ADEPTUS CUSTODES INFANTRY unit is selected to fight. | That ADEPTUS CUSTODES unit. | Your unit's melee attacks have [LETHAL HITS: CHARACTER/MONSTER]. |
 | No Escape | 2 | Your opponent's Movement phase, when an enemy unit ends a fall-back move. | One friendly unengaged ADEPTUS CUSTODES INFANTRY unit that is within 6" of that enemy unit. | Declare a charge with your unit. When selecting charge targets, you can only select enemy units that made a fall-back move this phase and are within the maximum distance. |
-| Indomitable Guardians | 1 | Your opponent's Fight phase, when an enemy unit has fought. | One friendly ADEPTUS CUSTODES unit that is within range of an objective and is eligible to fight. | Your unit has Fights First and must be the next unit you select to fight. [end of sentence hard to read] |
+| Indomitable Guardians | 1 | Your opponent's Fight phase, when an enemy unit has fought. | One friendly ADEPTUS CUSTODES unit that is within range of an objective and is eligible to fight. | Your unit has Fights First and must be the next unit you select to fight. |
 
 ### Solar Watch (Unique: Shield Host)
 
 - Role: Move even quicker than usual, and flow into and out of engagement like water. `[WHC]`
 - DP: unknown (probably 1)
+- Force Disposition: Reconnaissance `[Leak 2]`
 - Subtitle: "Guardians of the Sol System, the Solar Watch favour rapid warfare"
 
 **Detachment rule: Talon Sortie** `[Leak]`
@@ -192,6 +216,7 @@ Additional Effect: Your unit has +2" **M**.
 
 - Role: Defensive. Occupy objectives and whittle down enemies as they are forced to come to you. `[WHC]`
 - DP: unknown (probably 1)
+- Force Disposition: Take and Hold `[Leak 2]`
 - Subtitle: "The Aquilan Shield are an unbreakable fortress of auramite"
 
 **Detachment rule: Gilded Guardians** `[Leak]`
@@ -219,6 +244,7 @@ Additional Effect: Your unit's ranged attacks have +6" **R**.
 
 - Role: Aggressive. Charge forward as fast as possible and brutalise foes in close combat. `[WHC]`
 - DP: 1 `[WHC Tips]`
+- Force Disposition: Purge the Foe `[Leak 2]`
 - Subtitle: "The Dread Host unleashes the Emperor's wrath upon the foe"
 
 **Detachment rule: Instruments of the Emperor's Wrath** `[Leak]`
@@ -247,6 +273,7 @@ Additional Effect: When an enemy unit **engaged** with your unit makes a **pile-
 
 - Role: Prioritise the mission, fight first, and ignore modifiers to hit and wound. `[WHC]`
 - DP: unknown (probably 1)
+- Force Disposition: Priority Assets `[Leak 2]`
 - Subtitle: "The Emissaries Imperatus will go to any lengths to deliver the Emperor's word"
 
 **Detachment rule: Heralds of the Throne** `[Leak]`
@@ -268,12 +295,13 @@ Additional Effect: Until the end of the turn, being selected to make an **advanc
 |---|---|---|---|---|
 | Bearers of His Light | 1 | Fight phase, when a friendly ADEPTUS CUSTODES unit is selected to fight. | That ADEPTUS CUSTODES unit. | Your unit's melee attacks can ignore modifiers to hit rolls and wound rolls. |
 | Slayers of Nightmares | 1 | Fight phase, when a friendly ADEPTUS CUSTODES unit is selected to fight. | That ADEPTUS CUSTODES unit. | Your unit's melee attacks that target a unit with a T greater than this unit's T have +1 to wound rolls. |
-| Selfless Service | 1 | End of your opponent's Charge phase. | One friendly unengaged ADEPTUS CUSTODES unit within 6" of an enemy unit. You can only select a VEHICLE unit if it is a CHARACTER/WALKER unit. | Declare a charge with your unit: When making the charge roll, if the result is greater than 6 (after modifiers), change it to 6. When selecting charge targets, you can only select enemy units that are within 6" of your unit and within the maximum distance. [end of last bullet hard to read] |
+| Selfless Service | 1 | End of your opponent's Charge phase. | One friendly unengaged ADEPTUS CUSTODES unit within 6" of an enemy unit. You can only select a VEHICLE unit if it is a CHARACTER/WALKER unit. | Declare a charge with your unit: When making the charge roll, if the result is greater than 6 (after modifiers), change it to 6. When selecting charge targets, you can only select enemy units that are within 6" of your unit and within the maximum distance. |
 
 ### Emperor's Chosen (Unique: Shield Host)
 
 - Role: Make units more flexible and reliable, and ready a ka'tah mid-round. `[WHC]`
 - DP: unknown (probably 1)
+- Force Disposition: Priority Assets `[Leak 2]`
 - Subtitle: "Most Shield Hosts are temporary, but all play a vital role in the Emperor's service"
 
 **Detachment rule: Magna Imperator** `[Leak]`
@@ -306,6 +334,7 @@ Additional Effect: You can select one enemy **MONSTER/VEHICLE** unit **engaged**
 
 - Role: Character models single out prey and show why they are your army's champions. `[WHC]`
 - DP: unknown (probably 1)
+- Force Disposition: Purge the Foe `[Leak 2]`
 - Subtitle: "The greatest of the Adeptus Custodes' champions seek to slay the mightiest foes"
 
 **Detachment rule: Assemblage of Might** `[Leak]`
@@ -319,7 +348,7 @@ In your Command phase, you can select one enemy unit to be a **dreadful foe** un
 | Inspirational Exemplar | ADEPTUS CUSTODES INFANTRY model only. | (Once per battle round, per army) At the start of any phase, you can select one friendly battle-shocked ADEPTUS CUSTODES unit within 9" of this model. That unit is no longer battle-shocked. | unknown |
 | Superior Creation | ADEPTUS CUSTODES INFANTRY model only. | At the end of a phase in which this model is destroyed, roll one D6: On a 2+, set this model back up on the battlefield as close as possible to where it was destroyed, unengaged, with 3 wounds remaining. | unknown |
 
-**Stratagems (2; no more are shown on the Codex page)** `[Leak]`
+**Stratagems (2; confirmed by Leak 2's total of 41 stratagem entries)** `[Leak]`
 
 | Stratagem | CP | WHEN | TARGET | EFFECT |
 |---|---|---|---|---|
@@ -330,6 +359,7 @@ In your Command phase, you can select one enemy unit to be a **dreadful foe** un
 
 - Role: Custodian Guard, Sentinel Guard and Wardens contest vital objectives. `[WHC]`
 - DP: 1 `[WHC Tips]`
+- Force Disposition: Take and Hold `[Leak 2]`
 - Subtitle: "The Companions are the most vigilant and indefatigable of Custodians"
 
 **Detachment rule: Companion's Watch** `[confirmed WHC]`
@@ -349,12 +379,13 @@ While a friendly **TRUSTED SENTINEL** unit is within range of an **objective**, 
 |---|---|---|---|---|---|
 | Emperor's Domain | 1 | Fight phase, when a friendly TRUSTED SENTINEL unit is selected to make a consolidation move. | That TRUSTED SENTINEL unit. | You can select the objective consolidation mode for that consolidation move, regardless of that consolidation move's Before Moving restrictions. This means your unit can move out of engagement range with enemy units, provided it meets the conditions of the objective consolidation mode. | `[confirmed WHC]` |
 | Avenge the Fallen | 1 | Fight phase, when a friendly TRUSTED SENTINEL unit that is below starting strength is selected to fight. | That TRUSTED SENTINEL unit. | Your unit's melee attacks (excluding those made by CHARACTER models) have +2 A. | `[confirmed WHC]` |
-| Swift as the Eagle | 1 | Your opponent's Movement phase, when an enemy unit ends a move within 8" of a friendly unengaged TRUSTED SENTINEL unit. | That TRUSTED SENTINEL unit. | Your unit can make a normal move of up to D3+3". [D3+3" hard to read; identical to the Guardians of the Throne version] | `[Leak]` |
+| Swift as the Eagle | 1 | Your opponent's Movement phase, when an enemy unit ends a move within 8" of a friendly unengaged TRUSTED SENTINEL unit. | That TRUSTED SENTINEL unit. | Your unit can make a normal move of up to D3+3". | `[Leak 2]` |
 
 ### Lions of the Emperor
 
 - Role: Unleash your Terminators. Deep Strike, charge, cause carnage, and split Terminator units mid-battle. `[WHC]`
 - DP: 1 `[WHC Tips]`
+- Force Disposition: Disruption `[Leak 2]`
 - Subtitle: "The champions of the Tharanatoi order appear in bursts of golden light"
 
 **Detachment rule: On Gilded Wings** `[confirmed WHC]`
@@ -379,6 +410,7 @@ At the end of your opponent's Fight phase, if a friendly **ADEPTUS CUSTODES TERM
 
 - Role: Dreadnoughts get escalating combat bonuses as they take damage. `[WHC]`
 - DP: 1 `[WHC Tips]`
+- Force Disposition: Take and Hold `[Leak 2]`
 - Subtitle: "Striding to war, the Moritoi bring to bear weapons of terrible destruction"
 - Note: Do not confuse this with the index detachment of the same name from May 2026 (March of the Honoured Dead, ARMOURY tag), which the Codex replaces.
 
@@ -392,7 +424,7 @@ At the end of your opponent's Fight phase, if a friendly **ADEPTUS CUSTODES TERM
 | Enhancement | Restriction | Effect | Points | Source |
 |---|---|---|---|---|
 | Memento Moritoi (One per army) (Upgrade) | ADEPTUS CUSTODES DREADNOUGHT model only. | This model's melee attacks have +1 A, S and D. (WHC example: Telemon Dual Caestus Fists become A 8, S 15, D 5) | unknown | `[confirmed WHC]` |
-| Augury Uplink (One per army) (Upgrade) | ADEPTUS CUSTODES DREADNOUGHT model only. | This model has Feel No Pain 5+. ["This model" partly obscured] | unknown | `[Leak]` |
+| Augury Uplink (One per army) (Upgrade) | ADEPTUS CUSTODES DREADNOUGHT model only. | This model has Feel No Pain 5+. | unknown | `[Leak]` |
 
 **Stratagems (3)** `[Leak]`
 
@@ -400,12 +432,13 @@ At the end of your opponent's Fight phase, if a friendly **ADEPTUS CUSTODES TERM
 |---|---|---|---|---|
 | Honoured Interred | 1 | Your Shooting phase or the Fight phase. | One friendly ADEPTUS CUSTODES DREADNOUGHT unit. | Your unit has the following ability: Honoured Interred (Aura): Friendly ADEPTUS CUSTODES units within 6" of this unit can re-roll hit rolls of 1. |
 | Unceasing Onslaught | 1 | Your Movement phase, when a friendly ADEPTUS CUSTODES DREADNOUGHT unit ends an advance move. | That ADEPTUS CUSTODES DREADNOUGHT unit. | Your unit's ranged attacks have [ASSAULT] until the end of the turn. That move does not prevent your unit from being eligible to declare a charge. |
-| Unstoppable Momentum | 1 | Your Movement/Charge phase, when a friendly ADEPTUS CUSTODES DREADNOUGHT unit is selected to move or declares a charge. | That ADEPTUS CUSTODES DREADNOUGHT unit. | Your unit has MOBILE. [bottom of card cut off; there may be more text] |
+| Unstoppable Momentum | 1 | Your Movement/Charge phase, when a friendly ADEPTUS CUSTODES DREADNOUGHT unit is selected to move or declares a charge. | That ADEPTUS CUSTODES DREADNOUGHT unit. | Your unit has MOBILE. (complete per Leak 2) |
 
 ### Grav-Assault Force
 
 - Role: Grav-tanks support your forces and outflank opponents to sneakily secure objectives. `[WHC]`
 - DP: unknown (probably 1)
+- Force Disposition: Reconnaissance `[Leak 2]`
 - Subtitle: "Swift and agile, Adeptus Custodes grav-vehicles can inflict untold destruction"
 
 **Detachment rule: Flare Shields** `[Leak]`
@@ -425,12 +458,13 @@ Friendly **GRAV-ASSAULT** units have 4+ **InSv** against ranged attacks.
 |---|---|---|---|---|
 | Victory Before Death | 1 | Any phase, when a friendly GRAV-ASSAULT unit within range of an objective is destroyed. | That GRAV-ASSAULT unit. You can target that unit with this stratagem even though it is destroyed. | Select one objective that: Your unit was controlling when it was destroyed. Has no enemy units (excluding AIRCRAFT units) within range of it. That objective is secured. |
 | Advanced Stabilisers | 1 | Your Shooting phase, when a friendly GRAV-ASSAULT unit is selected to shoot. | That GRAV-ASSAULT unit. | Your unit's ranged attacks have [ASSAULT]. |
-| Inevitable Annihilation | 1 | Your Shooting phase, when a friendly GRAV-ASSAULT unit is selected to shoot. | That GRAV-ASSAULT unit. | Your unit can ignore modifiers to its: BS. Hit rolls. ["to its" hard to read] |
+| Inevitable Annihilation | 1 | Your Shooting phase, when a friendly GRAV-ASSAULT unit is selected to shoot. | That GRAV-ASSAULT unit. | Your unit can ignore modifiers to: BS. Hit rolls. |
 
 ### Null Maiden Vigil
 
 - Role: The Sisters of Silence. Take one as your WARLORD, and Prosecutor squads become BATTLELINE. `[WHC]`
 - DP: 1 `[WHC Tips]`
+- Force Disposition: Disruption `[Leak 2]`
 - Subtitle: "Null Maidens combine dread powers and martial skill to defeat their foes"
 
 **Detachment rule: Silent Sisterhood** `[confirmed WHC]`
@@ -444,7 +478,7 @@ Friendly **GRAV-ASSAULT** units have 4+ **InSv** against ranged attacks.
 | Enhancement | Restriction | Effect | Points |
 |---|---|---|---|
 | Oblivion Knight | ANATHEMA PSYKANA model only. | This unit's attacks have: +1 to hit rolls. Or: If this unit targets a PSYKER/battle-shocked unit, +1 to hit rolls and wound rolls. | unknown |
-| Huntress' Eye | ANATHEMA PSYKANA model only. | In your Movement phase, you can select one visible enemy unit within 12" of this unit. That unit makes a battle-shock roll, with -1 to that battle-shock roll. ["12"" and "-1" hard to read] | unknown |
+| Huntress' Eye | ANATHEMA PSYKANA model only. | In your Movement phase, you can select one visible enemy unit within 12" of this unit. That unit makes a battle-shock roll, with -1 to that battle-shock roll. | unknown |
 
 **Stratagems (3)** `[Leak]`
 
@@ -1096,6 +1130,7 @@ From "How To Keep Your Custodians Standing Sentinel" (2026-09-29). Custodes are 
 - **Rumour vs. WHC:** The rumour lists "Agamatus Custodians 260 / 390", but according to WHC Agamatus is **not in the Codex**. This weakens the reliability of the rumoured list.
 - **Aquilon points:** The rumour gives 285 / 275 without a clear assignment to Gauntlets or Talons.
 - **MFM v1.5** predates the Codex: different unit sizes, old detachments (Shield Host, Talons of the Emperor, old Auric Champions, old Lions, Solar Spearhead, Silent Hunters, Tharanatoi Hammerblow, old Might of the Moritoi, old Null Maiden Vigil) and Legends units. Its values were only used where the model count matches the Codex.
-- **Photo quality:** hard to read or partly obscured: Eagle's Eye (2nd bullet), Indomitable Guardians (end of sentence), Selfless Service (last bullet), Swift as the Eagle in Honoured Companions (D3+3"), Inevitable Annihilation, Unstoppable Momentum (bottom of card cut off), Augury Uplink, Huntress' Eye (range), Coronus transport capacity, Galatus ranged Warblade, Knight-Centura profile, Witchseeker flamer range.
-- **Auric Champions** shows only 2 stratagems and 3 enhancements on its Codex page. The other detachments have 3 stratagems each.
+- **Photo quality:** all hard-to-read detachment passages from the first leak are resolved by Leak 2. Still hard to read on the datasheets: Coronus transport capacity, Galatus ranged Warblade, Knight-Centura profile, Witchseeker flamer range.
+- **Auric Champions** has only 2 stratagems and 3 enhancements; Leak 2 confirms this (41 stratagem entries in total). The other detachments have 3 stratagems each, Guardians of the Throne has 6.
+- **Leak 2** contains detachment rules only: no datasheets, no points, no DP costs and no general Martial Ka'tah rules.
 - According to the WHC article, the balance updates of 2026-09-30 and 2026-10-01 contain no Custodes-specific changes.
