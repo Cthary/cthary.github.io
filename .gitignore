@@ -1,9 +1,2 @@
 # Briefing bleibt lokal (enthält persönliche Angaben, nicht veröffentlichen)
 /blood_angels_lern_webseite_ki_agent.md
-
-# Python-Cache der Hilfsskripte
-__pycache__/
-*.pyc
-
-# Node-Abhaengigkeiten des Gegner-Content-Builds (werden nur in GitHub Actions installiert)
-content-build/node_modules/
