@@ -414,16 +414,77 @@
 
   function buildToolbar() {
     statusEl = el('span', { class: 'i-status', role: 'status' });
-    var bar = el('div', { class: 'i-toolbar i-screen', role: 'toolbar', 'aria-label': 'Spieltisch' }, [
-      el('span', { class: 'i-tb-title', text: 'Spieltisch' }),
+    var actions = el('span', { class: 'i-actions', role: 'group', 'aria-label': 'Spieltisch' }, [
       el('button', { type: 'button', class: 'i-btn', text: 'Kurze Rast', on: { click: shortRest } }),
       el('button', { type: 'button', class: 'i-btn', text: 'Lange Rast', on: { click: longRest } }),
-      el('button', { type: 'button', class: 'i-btn i-ghost', text: 'Auf Export zurücksetzen', on: { click: resetToExport } }),
-      statusEl
+      el('button', { type: 'button', class: 'i-btn i-ghost', text: 'Auf Export zurücksetzen', on: { click: resetToExport } })
+    ]);
+    var bar = el('div', { class: 'i-toolbar i-screen' }, [
+      el('span', { class: 'i-tb-title', text: 'Spieltisch' }), actions, statusEl
     ]);
     var page = document.querySelector('.page') || document.body;
     page.insertBefore(bar, page.firstChild);
     showStatus();
+    buildTabs(page, bar, actions);
+  }
+
+  // Extra tabs come from <template data-tab="Name"> blocks in the character file.
+  function buildTabs(page, bar, actions) {
+    var templates = Array.prototype.slice.call(document.querySelectorAll('template[data-tab]'));
+    if (!templates.length) return;
+
+    var sheet = el('div', { class: 'i-panel' });
+    Array.prototype.slice.call(page.childNodes).forEach(function (n) {
+      if (n !== bar && n.nodeName !== 'SCRIPT' && n.nodeName !== 'TEMPLATE') sheet.appendChild(n);
+    });
+    page.appendChild(sheet);
+    var panels = [sheet], names = ['Bogen'];
+    templates.forEach(function (t) {
+      var p = el('div', { class: 'i-panel i-extra' });
+      p.appendChild(t.content.cloneNode(true));
+      page.appendChild(p);
+      panels.push(p);
+      names.push(t.getAttribute('data-tab'));
+    });
+
+    var tabs = names.map(function (name, i) {
+      return el('button', {
+        type: 'button', role: 'tab', class: 'i-tab', id: 'i-tab-' + i, 'aria-controls': 'i-panel-' + i, text: name,
+        on: { click: function () { select(i, true); } }
+      });
+    });
+    panels.forEach(function (p, i) {
+      p.id = 'i-panel-' + i;
+      p.setAttribute('role', 'tabpanel');
+      p.setAttribute('aria-labelledby', 'i-tab-' + i);
+    });
+    var list = el('div', { class: 'i-tabs', role: 'tablist', 'aria-label': 'Ansicht' }, tabs);
+    list.addEventListener('keydown', function (e) {
+      var i = tabs.indexOf(document.activeElement);
+      var d = e.key === 'ArrowRight' ? 1 : e.key === 'ArrowLeft' ? -1 : 0;
+      if (i < 0 || !d) return;
+      e.preventDefault();
+      var next = (i + d + tabs.length) % tabs.length;
+      select(next, true);
+      tabs[next].focus();
+    });
+    bar.replaceChild(list, bar.querySelector('.i-tb-title'));
+
+    function select(i, byUser) {
+      tabs.forEach(function (t, j) {
+        t.setAttribute('aria-selected', j === i ? 'true' : 'false');
+        t.tabIndex = j === i ? 0 : -1;
+        panels[j].hidden = j !== i;
+      });
+      actions.hidden = i !== 0;
+      if (byUser) {
+        window.scrollTo(0, 0);
+        try { localStorage.setItem(KEY + ':tab', String(i)); } catch (e) { /* view preference only */ }
+      }
+    }
+    var start = 0;
+    try { start = parseInt(localStorage.getItem(KEY + ':tab'), 10) || 0; } catch (e) { /* default tab */ }
+    select(start < tabs.length ? start : 0, false);
   }
 
   function render() {
